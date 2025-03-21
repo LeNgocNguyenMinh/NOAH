@@ -11,12 +11,22 @@ public class ShopController : MonoBehaviour
     public static bool shopPanelIsOpen = false;
     [SerializeField]private List<ShopItem> listOfItem = new List<ShopItem>();
     [SerializeField]private List<Item> itemForShop = new List<Item>();
+    [SerializeField]private TMP_Text playerCoin;
+    [SerializeField]private PlayerStatus playerStatus;
 
     private void Start()
     {
         AddItemToShop();
     }
-
+    public void UpdateWhenOpen()
+    {
+        playerCoin.text = playerStatus.playerCoin.ToString();
+    }
+    public void CoinTextUpdateAfterBuy(int newValue)
+    {
+        playerStatus.AddCoin(-newValue);
+        playerCoin.text = playerStatus.playerCoin.ToString();
+    }
     private void AddItemToShop()
     {
         for(int i = 0; i < listOfItem.Count; i++)

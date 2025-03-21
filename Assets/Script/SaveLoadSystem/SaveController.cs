@@ -7,7 +7,7 @@ using Cinemachine;
 public class SaveController : MonoBehaviour
 {
     public static SaveController Instance;
-    private string saveLocation = Path.Combine("D:/NOAHGAME/Assets/Script/SaveLoadSystem/", "saveData.json");
+    private string saveLocation = Path.Combine("D:/NOAHGame/NOAH/Assets/Script/SaveLoadSystem/", "saveData.json");
     private UIInventoryPage uiInventoryPage;
     private HotBarManager hotBarManager;
     private TimeManager timeManager;

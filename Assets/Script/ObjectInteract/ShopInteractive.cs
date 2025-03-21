@@ -12,6 +12,7 @@ public class ShopInteractive : MonoBehaviour
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
+    [SerializeField]private PlayerStatus playerStatus;
     private void Update()
     {
         objectInteraction = GetComponent<ObjectInteraction>();
@@ -31,6 +32,8 @@ public class ShopInteractive : MonoBehaviour
                 else 
                 {
                     if(!uiMouseAndPriority.CanOpenThisUI())return;
+                    shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
+                    shopController.UpdateWhenOpen();
                     ShopController.shopPanelIsOpen = true;
                     panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
                     {

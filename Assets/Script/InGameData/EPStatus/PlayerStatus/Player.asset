@@ -19,7 +19,7 @@ MonoBehaviour:
   playerCurrentDamage: 20
   playerWeaponDamage: 3
   playerBullet: 6
-  playerCoin: 14
+  playerCoin: 100
   playerSprite: {fileID: 1028573758, guid: 8dbb52ff946028241861992a9ffdaf42, type: 3}
   maxExp: 40
   currentExp: 0

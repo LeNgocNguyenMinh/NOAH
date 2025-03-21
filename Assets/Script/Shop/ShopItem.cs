@@ -13,6 +13,7 @@ public class ShopItem : MonoBehaviour
     [SerializeField]private TMP_Text itemPrice;
     [SerializeField]private Image itemImage;
     [SerializeField]private PlayerStatus playerStatus; 
+    private ShopController shopController;
     private UIInventoryPage uiInventoryPage;
     public void SetItem(Item newValue)
     {
@@ -31,6 +32,7 @@ public class ShopItem : MonoBehaviour
         if(numberOfItem == 0)
         {
             PopUp.Instance.ShowNotification("Nah, we run out of " + item.itemName);
+            return;
         }
         if(playerStatus.playerCoin >= item.itemPrice)
         {
@@ -39,7 +41,12 @@ public class ShopItem : MonoBehaviour
             {
                 return;
             }
-            playerStatus.SetCoin(-item.itemPrice);
+            PopUp.Instance.ShowNotification("Add 1 " + item.itemName + " to inventory.");
+            numberOfItem--;
+            Debug.Log("Left: " + numberOfItem);
+            SetNumberOfItem(numberOfItem);
+            shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
+            shopController.CoinTextUpdateAfterBuy(item.itemPrice);
         }
         else
         {
