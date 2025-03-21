@@ -1,0 +1,818 @@
+fileFormatVersion: 2
+guid: f5791c4d904b3a54cb2babc41a20dc6f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: HeadRoar_Frame_1
+    originalName: 
+    pivot: {x: 0.48148146, y: -0.631579}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 231
+      width: 162
+      height: 95
+    spriteID: c3135bbc87286c4428e86c5fb979ed43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 231}
+  - name: HeadRoar_Frame_2
+    originalName: 
+    pivot: {x: 0.4909091, y: -0.64835167}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 513
+      y: 231
+      width: 165
+      height: 91
+    spriteID: 841927565a662494d81987a4c5ccca61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 513, y: 231}
+  - name: HeadRoar_Frame_3
+    originalName: 
+    pivot: {x: 0.5058824, y: -0.6666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 428
+      width: 170
+      height: 87
+    spriteID: d5efd7f889f1abd4c86478de277acb1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 428}
+  - name: HeadRoar_Frame_4
+    originalName: 
+    pivot: {x: 0.51445085, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 738
+      y: 335
+      width: 173
+      height: 81
+    spriteID: b2581ea16b6c6594fb232982f2046042
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 738, y: 335}
+  - name: HeadRoar_Frame_5
+    originalName: 
+    pivot: {x: 0.52, y: -0.69135803}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 372
+      y: 335
+      width: 175
+      height: 81
+    spriteID: f80eb173f3b3fa147bd282de383f7175
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 372, y: 335}
+  - name: HeadRoar_Frame_6
+    originalName: 
+    pivot: {x: 0.52840906, y: -0.6352942}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 335
+      width: 176
+      height: 85
+    spriteID: 8baef52face50a94591c9c8378244057
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 335}
+  - name: HeadRoar_Frame_7
+    originalName: 
+    pivot: {x: 0.53672314, y: -0.58426964}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 562
+      y: 124
+      width: 177
+      height: 89
+    spriteID: ed143039811276444b2fd177b211c3a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 562, y: 124}
+  - name: HeadRoar_Frame_8
+    originalName: 
+    pivot: {x: 0.5449438, y: -0.5157895}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 190
+      y: 124
+      width: 178
+      height: 95
+    spriteID: eea4529501c775c449aac702eb17c346
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 190, y: 124}
+  - name: HeadRoar_Frame_9
+    originalName: 
+    pivot: {x: 0.5505618, y: -0.47474745}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 748
+      y: 4
+      width: 178
+      height: 99
+    spriteID: 5a8d3864d6313764ab2d7032fb56511f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 748, y: 4}
+  - name: HeadRoar_Frame_10
+    originalName: 
+    pivot: {x: 0.55617976, y: -0.4230769}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 376
+      y: 4
+      width: 178
+      height: 104
+    spriteID: 6d9e4edd592733f41bdc171df96379cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 376, y: 4}
+  - name: HeadRoar_Frame_11
+    originalName: 
+    pivot: {x: 0.56179774, y: -0.34821427}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 178
+      height: 112
+    spriteID: 863cc16f2aa111547aad784334c70c47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: HeadRoar_Frame_12
+    originalName: 
+    pivot: {x: 0.56179774, y: -0.34821427}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 190
+      y: 4
+      width: 178
+      height: 112
+    spriteID: 1a865f7f7dfdd584caff03c8f734ac3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 190, y: 4}
+  - name: HeadRoar_Frame_13
+    originalName: 
+    pivot: {x: 0.55617976, y: -0.4230769}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 562
+      y: 4
+      width: 178
+      height: 104
+    spriteID: f30d045880d5c9d4a8c95d1c8332d78a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 562, y: 4}
+  - name: HeadRoar_Frame_14
+    originalName: 
+    pivot: {x: 0.5505618, y: -0.47474745}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 124
+      width: 178
+      height: 99
+    spriteID: c2dd0832ad6dcdf4580b1e2ef891e2eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 124}
+  - name: HeadRoar_Frame_15
+    originalName: 
+    pivot: {x: 0.5449438, y: -0.5157895}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 376
+      y: 124
+      width: 178
+      height: 95
+    spriteID: 8fe795c8f0c0ab54786153491ce9826a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 376, y: 124}
+  - name: HeadRoar_Frame_16
+    originalName: 
+    pivot: {x: 0.53672314, y: -0.58426964}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 747
+      y: 124
+      width: 177
+      height: 89
+    spriteID: 340ada7dede97ab4eb13cd57f0f054ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 747, y: 124}
+  - name: HeadRoar_Frame_17
+    originalName: 
+    pivot: {x: 0.52840906, y: -0.6352942}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 335
+      width: 176
+      height: 85
+    spriteID: 35a093558cca92540a3b1ee837de9f26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 188, y: 335}
+  - name: HeadRoar_Frame_18
+    originalName: 
+    pivot: {x: 0.52, y: -0.69135803}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 555
+      y: 335
+      width: 175
+      height: 81
+    spriteID: c5b348b4df3955d468c162762d2e15bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 555, y: 335}
+  - name: HeadRoar_Frame_19
+    originalName: 
+    pivot: {x: 0.51445085, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 428
+      width: 173
+      height: 81
+    spriteID: 23472b92dde9d2f4fbbd43d8155dd81e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 428}
+  - name: HeadRoar_Frame_20
+    originalName: 
+    pivot: {x: 0.5058824, y: -0.6666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 428
+      width: 170
+      height: 87
+    spriteID: f7cf202dd373b084092b10cc4b810bf9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 428}
+  - name: HeadRoar_Frame_21
+    originalName: 
+    pivot: {x: 0.4909091, y: -0.64835167}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 686
+      y: 231
+      width: 165
+      height: 91
+    spriteID: 07927206eceba2b4fbe0e88996b90ebc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 686, y: 231}
+  - name: HeadRoar_Frame_22
+    originalName: 
+    pivot: {x: 0.48148146, y: -0.631579}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 231
+      width: 162
+      height: 95
+    spriteID: 14d1582e0f08ae24e8920e0148bffa84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 231}
+  - name: HeadRoar_Frame_0
+    originalName: 
+    pivot: {x: 0.47204968, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 231
+      width: 161
+      height: 96
+    spriteID: 7e250ff24f1a1524a9daa9c890cd430f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 231}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1938787060
+    name: HeadRoar
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: HeadRoar_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 22
+        y: 60
+        width: 162
+        height: 95
+      spriteId: c3135bbc87286c4428e86c5fb979ed43
+    - name: HeadRoar_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 19
+        y: 59
+        width: 165
+        height: 91
+      spriteId: 841927565a662494d81987a4c5ccca61
+    - name: HeadRoar_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 14
+        y: 58
+        width: 170
+        height: 87
+      spriteId: d5efd7f889f1abd4c86478de277acb1f
+    - name: HeadRoar_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 11
+        y: 57
+        width: 173
+        height: 81
+      spriteId: b2581ea16b6c6594fb232982f2046042
+    - name: HeadRoar_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 9
+        y: 56
+        width: 175
+        height: 81
+      spriteId: f80eb173f3b3fa147bd282de383f7175
+    - name: HeadRoar_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 54
+        width: 176
+        height: 85
+      spriteId: 8baef52face50a94591c9c8378244057
+    - name: HeadRoar_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 52
+        width: 177
+        height: 89
+      spriteId: ed143039811276444b2fd177b211c3a0
+    - name: HeadRoar_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 49
+        width: 178
+        height: 95
+      spriteId: eea4529501c775c449aac702eb17c346
+    - name: HeadRoar_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 2
+        y: 47
+        width: 178
+        height: 99
+      spriteId: 5a8d3864d6313764ab2d7032fb56511f
+    - name: HeadRoar_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 44
+        width: 178
+        height: 104
+      spriteId: 6d9e4edd592733f41bdc171df96379cc
+    - name: HeadRoar_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 39
+        width: 178
+        height: 112
+      spriteId: 863cc16f2aa111547aad784334c70c47
+    - name: HeadRoar_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 39
+        width: 178
+        height: 112
+      spriteId: 1a865f7f7dfdd584caff03c8f734ac3c
+    - name: HeadRoar_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 44
+        width: 178
+        height: 104
+      spriteId: f30d045880d5c9d4a8c95d1c8332d78a
+    - name: HeadRoar_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 2
+        y: 47
+        width: 178
+        height: 99
+      spriteId: c2dd0832ad6dcdf4580b1e2ef891e2eb
+    - name: HeadRoar_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 49
+        width: 178
+        height: 95
+      spriteId: 8fe795c8f0c0ab54786153491ce9826a
+    - name: HeadRoar_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 52
+        width: 177
+        height: 89
+      spriteId: 340ada7dede97ab4eb13cd57f0f054ed
+    - name: HeadRoar_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 54
+        width: 176
+        height: 85
+      spriteId: 35a093558cca92540a3b1ee837de9f26
+    - name: HeadRoar_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 9
+        y: 56
+        width: 175
+        height: 81
+      spriteId: c5b348b4df3955d468c162762d2e15bd
+    - name: HeadRoar_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 11
+        y: 57
+        width: 173
+        height: 81
+      spriteId: 23472b92dde9d2f4fbbd43d8155dd81e
+    - name: HeadRoar_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 14
+        y: 58
+        width: 170
+        height: 87
+      spriteId: f7cf202dd373b084092b10cc4b810bf9
+    - name: HeadRoar_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 19
+        y: 59
+        width: 165
+        height: 91
+      spriteId: 07927206eceba2b4fbe0e88996b90ebc
+    - name: HeadRoar_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 22
+        y: 60
+        width: 162
+        height: 95
+      spriteId: 14d1582e0f08ae24e8920e0148bffa84
+    - name: HeadRoar_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 24
+        y: 60
+        width: 161
+        height: 96
+      spriteId: 7e250ff24f1a1524a9daa9c890cd430f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 200, y: 200}

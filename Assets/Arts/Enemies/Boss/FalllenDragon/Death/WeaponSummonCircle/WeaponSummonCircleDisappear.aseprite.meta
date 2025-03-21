@@ -1,0 +1,1166 @@
+fileFormatVersion: 2
+guid: 373c9b2493d1bf5438f8a57f44d9b680
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: WeaponSummonCircleDisappear_Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 192
+      height: 116
+    spriteID: 02a5cfffd76a35a47a9c9163fdd4a668
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: WeaponSummonCircleDisappear_Frame_1
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 4
+      width: 192
+      height: 116
+    spriteID: c296719344d246549b8adc381b499dfa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 4}
+  - name: WeaponSummonCircleDisappear_Frame_2
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 4
+      width: 192
+      height: 116
+    spriteID: c235d7e563b6edf44a15a7d0a8e2faea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 4}
+  - name: WeaponSummonCircleDisappear_Frame_3
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 4
+      width: 192
+      height: 116
+    spriteID: 571687351283a2140a4ba933d7c250de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 4}
+  - name: WeaponSummonCircleDisappear_Frame_4
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 4
+      width: 192
+      height: 116
+    spriteID: 55cddbefdbd6d654f827342678b92a24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 4}
+  - name: WeaponSummonCircleDisappear_Frame_5
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 128
+      width: 192
+      height: 116
+    spriteID: d31e0b2b1fa97884b9952bea9dfdb637
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 128}
+  - name: WeaponSummonCircleDisappear_Frame_6
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 128
+      width: 192
+      height: 116
+    spriteID: bff434516efe1b74c83d7781195eb00b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 128}
+  - name: WeaponSummonCircleDisappear_Frame_7
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 128
+      width: 192
+      height: 116
+    spriteID: ebc24e2a4a179b84384229d305c187b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 128}
+  - name: WeaponSummonCircleDisappear_Frame_8
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 128
+      width: 192
+      height: 116
+    spriteID: 85a59c2bb28e4f34aa92c1581a0e11a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 128}
+  - name: WeaponSummonCircleDisappear_Frame_9
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 128
+      width: 192
+      height: 116
+    spriteID: d64928685c12ce647b1a31cb2f14b747
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 128}
+  - name: WeaponSummonCircleDisappear_Frame_10
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 252
+      width: 192
+      height: 116
+    spriteID: 3d484bf4e15a8ef4d98dd29992d75ba4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 252}
+  - name: WeaponSummonCircleDisappear_Frame_11
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 252
+      width: 192
+      height: 116
+    spriteID: a4662cb68fef8cb4eabdc504bbaeb480
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 252}
+  - name: WeaponSummonCircleDisappear_Frame_12
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 252
+      width: 192
+      height: 116
+    spriteID: 86c5d22ca1edac3438e6ea40d425d541
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 252}
+  - name: WeaponSummonCircleDisappear_Frame_13
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 252
+      width: 192
+      height: 116
+    spriteID: 8e2953dd63edab845935495cb8dd7011
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 252}
+  - name: WeaponSummonCircleDisappear_Frame_14
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 252
+      width: 192
+      height: 116
+    spriteID: 8c4141f694a83c244a47f707831bfe0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 252}
+  - name: WeaponSummonCircleDisappear_Frame_15
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 376
+      width: 192
+      height: 116
+    spriteID: 6c49307f2712a0443ada9397631b2f12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 376}
+  - name: WeaponSummonCircleDisappear_Frame_16
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 376
+      width: 192
+      height: 116
+    spriteID: 1187b4abb9f0a584597c9c221af5eeac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 376}
+  - name: WeaponSummonCircleDisappear_Frame_17
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 376
+      width: 192
+      height: 116
+    spriteID: a1fc5d4e998e1d042ab5505e5513a5b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 376}
+  - name: WeaponSummonCircleDisappear_Frame_18
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 376
+      width: 192
+      height: 116
+    spriteID: 8778eaf29c284c747b02f06c896cb4c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 376}
+  - name: WeaponSummonCircleDisappear_Frame_19
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 376
+      width: 192
+      height: 116
+    spriteID: 2d2ff6b1013ff7846804444bf0036c69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 376}
+  - name: WeaponSummonCircleDisappear_Frame_20
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 500
+      width: 192
+      height: 116
+    spriteID: 07fb597411dd86545980aaa7f4516f8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 500}
+  - name: WeaponSummonCircleDisappear_Frame_21
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 500
+      width: 192
+      height: 116
+    spriteID: b932f9d054a759042af9a1f9be290c37
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 500}
+  - name: WeaponSummonCircleDisappear_Frame_22
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.42982456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 500
+      width: 192
+      height: 114
+    spriteID: 2b5a98acab129d147871fb681259e0d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 500}
+  - name: WeaponSummonCircleDisappear_Frame_23
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.46846846}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 500
+      width: 192
+      height: 111
+    spriteID: b00fad1d48491394b985690e51ab6825
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 500}
+  - name: WeaponSummonCircleDisappear_Frame_24
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.5233645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 500
+      width: 192
+      height: 107
+    spriteID: a63822ced7cf28043aa1d840e4120e41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 500}
+  - name: WeaponSummonCircleDisappear_Frame_25
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.63}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 624
+      width: 192
+      height: 100
+    spriteID: d6f7048aa9fb69c4ca2ebd750c2e8998
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 624}
+  - name: WeaponSummonCircleDisappear_Frame_26
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.83146065}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 624
+      width: 192
+      height: 89
+    spriteID: dacdb6686b8cfce4896f5b8f16366504
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 624}
+  - name: WeaponSummonCircleDisappear_Frame_27
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.4328357}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 624
+      width: 192
+      height: 67
+    spriteID: a1a0254874987ab4786a2ea173686d22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 624}
+  - name: WeaponSummonCircleDisappear_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: -2.543478}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 624
+      width: 184
+      height: 46
+    spriteID: ca7ea64f24346164abee3761a805b5f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 624}
+  - name: WeaponSummonCircleDisappear_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: -3.075}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 796
+      y: 624
+      width: 164
+      height: 40
+    spriteID: f0c98843f58eda54aadb11342b588601
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 796, y: 624}
+  - name: WeaponSummonCircleDisappear_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: -4.2580647}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 678
+      width: 138
+      height: 31
+    spriteID: 84a79da2602820444a73fcbf700deeba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 678}
+  - name: WeaponSummonCircleDisappear_Frame_31
+    originalName: 
+    pivot: {x: 0.49999997, y: -5.269231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 750
+      y: 678
+      width: 104
+      height: 26
+    spriteID: 0b5cfc55d2bd44b498b4a5a96eb26447
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 750, y: 678}
+  - name: WeaponSummonCircleDisappear_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: -6.4090905}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 862
+      y: 678
+      width: 72
+      height: 22
+    spriteID: 0b6bfbf8969b4c84ca69488bf39d7c9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 862, y: 678}
+  - name: WeaponSummonCircleDisappear_Frame_33
+    originalName: 
+    pivot: {x: 0.50000006, y: -7.1499996}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 968
+      y: 624
+      width: 32
+      height: 20
+    spriteID: ffaa79234369c2849b81db87b0742d32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 968, y: 624}
+  - name: WeaponSummonCircleDisappear_Frame_34
+    originalName: 
+    pivot: {x: 0.49999952, y: -7.1499996}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1008
+      y: 624
+      width: 4
+      height: 20
+    spriteID: 160c4e8d8386d6a4f9b42855b495351b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1008, y: 624}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 814323198
+    name: WeaponSummonCircleDisappear
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: WeaponSummonCircleDisappear_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 02a5cfffd76a35a47a9c9163fdd4a668
+    - name: WeaponSummonCircleDisappear_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: c296719344d246549b8adc381b499dfa
+    - name: WeaponSummonCircleDisappear_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: c235d7e563b6edf44a15a7d0a8e2faea
+    - name: WeaponSummonCircleDisappear_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 571687351283a2140a4ba933d7c250de
+    - name: WeaponSummonCircleDisappear_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 55cddbefdbd6d654f827342678b92a24
+    - name: WeaponSummonCircleDisappear_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: d31e0b2b1fa97884b9952bea9dfdb637
+    - name: WeaponSummonCircleDisappear_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: bff434516efe1b74c83d7781195eb00b
+    - name: WeaponSummonCircleDisappear_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: ebc24e2a4a179b84384229d305c187b7
+    - name: WeaponSummonCircleDisappear_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 85a59c2bb28e4f34aa92c1581a0e11a4
+    - name: WeaponSummonCircleDisappear_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: d64928685c12ce647b1a31cb2f14b747
+    - name: WeaponSummonCircleDisappear_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 3d484bf4e15a8ef4d98dd29992d75ba4
+    - name: WeaponSummonCircleDisappear_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: a4662cb68fef8cb4eabdc504bbaeb480
+    - name: WeaponSummonCircleDisappear_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 86c5d22ca1edac3438e6ea40d425d541
+    - name: WeaponSummonCircleDisappear_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 8e2953dd63edab845935495cb8dd7011
+    - name: WeaponSummonCircleDisappear_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 8c4141f694a83c244a47f707831bfe0b
+    - name: WeaponSummonCircleDisappear_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 6c49307f2712a0443ada9397631b2f12
+    - name: WeaponSummonCircleDisappear_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 1187b4abb9f0a584597c9c221af5eeac
+    - name: WeaponSummonCircleDisappear_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: a1fc5d4e998e1d042ab5505e5513a5b5
+    - name: WeaponSummonCircleDisappear_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 8778eaf29c284c747b02f06c896cb4c3
+    - name: WeaponSummonCircleDisappear_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 2d2ff6b1013ff7846804444bf0036c69
+    - name: WeaponSummonCircleDisappear_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 07fb597411dd86545980aaa7f4516f8f
+    - name: WeaponSummonCircleDisappear_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: b932f9d054a759042af9a1f9be290c37
+    - name: WeaponSummonCircleDisappear_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 49
+        width: 192
+        height: 114
+      spriteId: 2b5a98acab129d147871fb681259e0d9
+    - name: WeaponSummonCircleDisappear_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 52
+        width: 192
+        height: 111
+      spriteId: b00fad1d48491394b985690e51ab6825
+    - name: WeaponSummonCircleDisappear_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 56
+        width: 192
+        height: 107
+      spriteId: a63822ced7cf28043aa1d840e4120e41
+    - name: WeaponSummonCircleDisappear_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 63
+        width: 192
+        height: 100
+      spriteId: d6f7048aa9fb69c4ca2ebd750c2e8998
+    - name: WeaponSummonCircleDisappear_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 74
+        width: 192
+        height: 89
+      spriteId: dacdb6686b8cfce4896f5b8f16366504
+    - name: WeaponSummonCircleDisappear_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 96
+        width: 192
+        height: 67
+      spriteId: a1a0254874987ab4786a2ea173686d22
+    - name: WeaponSummonCircleDisappear_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 8
+        y: 117
+        width: 184
+        height: 46
+      spriteId: ca7ea64f24346164abee3761a805b5f5
+    - name: WeaponSummonCircleDisappear_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 123
+        width: 164
+        height: 40
+      spriteId: f0c98843f58eda54aadb11342b588601
+    - name: WeaponSummonCircleDisappear_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 31
+        y: 132
+        width: 138
+        height: 31
+      spriteId: 84a79da2602820444a73fcbf700deeba
+    - name: WeaponSummonCircleDisappear_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 48
+        y: 137
+        width: 104
+        height: 26
+      spriteId: 0b5cfc55d2bd44b498b4a5a96eb26447
+    - name: WeaponSummonCircleDisappear_Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 141
+        width: 72
+        height: 22
+      spriteId: 0b6bfbf8969b4c84ca69488bf39d7c9b
+    - name: WeaponSummonCircleDisappear_Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 84
+        y: 143
+        width: 32
+        height: 20
+      spriteId: ffaa79234369c2849b81db87b0742d32
+    - name: WeaponSummonCircleDisappear_Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 98
+        y: 143
+        width: 4
+        height: 20
+      spriteId: 160c4e8d8386d6a4f9b42855b495351b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 200, y: 200}

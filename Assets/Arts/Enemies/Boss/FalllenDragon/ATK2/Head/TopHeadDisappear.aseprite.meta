@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: db1e7fd3f06a4fe46b7803e88d1c80eb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: TopHeadDisappear_Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.25925925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 106
+      height: 135
+    spriteID: cb65aa58e5aebd740b0975ea90bd3183
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: TopHeadDisappear_Frame_1
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 147
+      width: 106
+      height: 125
+    spriteID: dbf4d85202faa7f4da44907ab713c562
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 147}
+  - name: TopHeadDisappear_Frame_2
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4615385}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 280
+      width: 106
+      height: 117
+    spriteID: 1b14a8272e81ed942880aebdc7bb8826
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 280}
+  - name: TopHeadDisappear_Frame_3
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.55454546}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 4
+      width: 106
+      height: 110
+    spriteID: 26f637fb65498fe4dbab1eb04cbc50f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 4}
+  - name: TopHeadDisappear_Frame_4
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.66019416}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 405
+      width: 106
+      height: 103
+    spriteID: 6068f2b9320b5894fbdd9f8271ea48fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 405}
+  - name: TopHeadDisappear_Frame_5
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.78125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 122
+      width: 106
+      height: 96
+    spriteID: 96ed0153488cccf46a65a5171e30b289
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 122}
+  - name: TopHeadDisappear_Frame_6
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.90000004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 226
+      width: 106
+      height: 90
+    spriteID: 9145b21b9c04e3f47b599f41a2ed7568
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 226}
+  - name: TopHeadDisappear_Frame_7
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.1375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 324
+      width: 106
+      height: 80
+    spriteID: b7df366b239b9fa4fb6de9b63d5f5f47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 324}
+  - name: TopHeadDisappear_Frame_8
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.4782609}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 412
+      width: 106
+      height: 69
+    spriteID: 9b405f906cab6214f8416bec3279dd81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 412}
+  - name: TopHeadDisappear_Frame_9
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 232
+      y: 4
+      width: 106
+      height: 60
+    spriteID: c73dc10c8d8210643aaed79727e60106
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 232, y: 4}
+  - name: TopHeadDisappear_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -2.3529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 232
+      y: 72
+      width: 88
+      height: 51
+    spriteID: 55ea523923d45994cb020c45eda34277
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 232, y: 72}
+  - name: TopHeadDisappear_Frame_11
+    originalName: 
+    pivot: {x: 0.49999994, y: -3.3846157}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 232
+      y: 131
+      width: 68
+      height: 39
+    spriteID: fcc3e93beeb339742a6df46d55bee425
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 232, y: 131}
+  - name: TopHeadDisappear_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -5.1071424}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 232
+      y: 178
+      width: 48
+      height: 28
+    spriteID: 4e655194154cde245b044985773048b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 232, y: 178}
+  - name: TopHeadDisappear_Frame_13
+    originalName: 
+    pivot: {x: 0.49999994, y: -9.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 489
+      width: 42
+      height: 16
+    spriteID: eeb8cd08ae478d74c838c532ea86b790
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 489}
+  - name: TopHeadDisappear_Frame_14
+    originalName: 
+    pivot: {x: 0.5000001, y: -41.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 131
+      width: 20
+      height: 4
+    spriteID: f95d5f2e19deadf4d95fb6b1c7d1c7d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 131}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1215597784
+    name: TopHeadDisappear
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: TopHeadDisappear_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 35
+        width: 106
+        height: 135
+      spriteId: cb65aa58e5aebd740b0975ea90bd3183
+    - name: TopHeadDisappear_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 46
+        width: 106
+        height: 125
+      spriteId: dbf4d85202faa7f4da44907ab713c562
+    - name: TopHeadDisappear_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 54
+        width: 106
+        height: 117
+      spriteId: 1b14a8272e81ed942880aebdc7bb8826
+    - name: TopHeadDisappear_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 61
+        width: 106
+        height: 110
+      spriteId: 26f637fb65498fe4dbab1eb04cbc50f8
+    - name: TopHeadDisappear_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 68
+        width: 106
+        height: 103
+      spriteId: 6068f2b9320b5894fbdd9f8271ea48fe
+    - name: TopHeadDisappear_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 75
+        width: 106
+        height: 96
+      spriteId: 96ed0153488cccf46a65a5171e30b289
+    - name: TopHeadDisappear_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 81
+        width: 106
+        height: 90
+      spriteId: 9145b21b9c04e3f47b599f41a2ed7568
+    - name: TopHeadDisappear_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 91
+        width: 106
+        height: 80
+      spriteId: b7df366b239b9fa4fb6de9b63d5f5f47
+    - name: TopHeadDisappear_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 102
+        width: 106
+        height: 69
+      spriteId: 9b405f906cab6214f8416bec3279dd81
+    - name: TopHeadDisappear_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 47
+        y: 111
+        width: 106
+        height: 60
+      spriteId: c73dc10c8d8210643aaed79727e60106
+    - name: TopHeadDisappear_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 120
+        width: 88
+        height: 51
+      spriteId: 55ea523923d45994cb020c45eda34277
+    - name: TopHeadDisappear_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 66
+        y: 132
+        width: 68
+        height: 39
+      spriteId: fcc3e93beeb339742a6df46d55bee425
+    - name: TopHeadDisappear_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 76
+        y: 143
+        width: 48
+        height: 28
+      spriteId: 4e655194154cde245b044985773048b1
+    - name: TopHeadDisappear_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 79
+        y: 154
+        width: 42
+        height: 16
+      spriteId: eeb8cd08ae478d74c838c532ea86b790
+    - name: TopHeadDisappear_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 90
+        y: 166
+        width: 20
+        height: 4
+      spriteId: f95d5f2e19deadf4d95fb6b1c7d1c7d9
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 200, y: 200}

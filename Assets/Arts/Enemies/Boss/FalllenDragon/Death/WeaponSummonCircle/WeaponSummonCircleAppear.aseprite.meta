@@ -1,0 +1,1166 @@
+fileFormatVersion: 2
+guid: e23afe1ab1401d245bf4d8c70d6df5af
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: WeaponSummonCircleAppear_Frame_0
+    originalName: 
+    pivot: {x: 0.49999952, y: -7.1499996}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1008
+      y: 624
+      width: 4
+      height: 20
+    spriteID: 3e27b968de334ee458be3273c0031e4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1008, y: 624}
+  - name: WeaponSummonCircleAppear_Frame_1
+    originalName: 
+    pivot: {x: 0.50000006, y: -7.1499996}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 968
+      y: 624
+      width: 32
+      height: 20
+    spriteID: 0a301c98fc5c46f44ade2a7fa8f3064d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 968, y: 624}
+  - name: WeaponSummonCircleAppear_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -6.4090905}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 862
+      y: 678
+      width: 72
+      height: 22
+    spriteID: b1887541778355d42ab71d87428e7801
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 862, y: 678}
+  - name: WeaponSummonCircleAppear_Frame_3
+    originalName: 
+    pivot: {x: 0.49999997, y: -5.269231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 750
+      y: 678
+      width: 104
+      height: 26
+    spriteID: 14a4bc73edf6c7d49a9706fe90221a8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 750, y: 678}
+  - name: WeaponSummonCircleAppear_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -4.2580647}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 678
+      width: 138
+      height: 31
+    spriteID: 7f1b5b2f9d0c4184e92c84bf6015dc08
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 678}
+  - name: WeaponSummonCircleAppear_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -3.075}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 796
+      y: 624
+      width: 164
+      height: 40
+    spriteID: 27f496a3b9f624348a6c2cff1dbad20b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 796, y: 624}
+  - name: WeaponSummonCircleAppear_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: -2.543478}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 624
+      width: 184
+      height: 46
+    spriteID: d8d81100bacffd04ca36c66140e71a17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 624}
+  - name: WeaponSummonCircleAppear_Frame_7
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.4328357}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 624
+      width: 192
+      height: 67
+    spriteID: f9234e3616d837047ae8d57b08810ffe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 624}
+  - name: WeaponSummonCircleAppear_Frame_8
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.83146065}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 624
+      width: 192
+      height: 89
+    spriteID: fce185ee77281354ca9e333cd3fa3611
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 624}
+  - name: WeaponSummonCircleAppear_Frame_9
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.63}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 624
+      width: 192
+      height: 100
+    spriteID: 99940cf1b2c45c044a8361886361d396
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 624}
+  - name: WeaponSummonCircleAppear_Frame_10
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.5233645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 500
+      width: 192
+      height: 107
+    spriteID: 19970028f0e73a14dacc524c44c21017
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 500}
+  - name: WeaponSummonCircleAppear_Frame_11
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.46846846}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 500
+      width: 192
+      height: 111
+    spriteID: 4af7e0e1565c5424a9fb858c6a554fce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 500}
+  - name: WeaponSummonCircleAppear_Frame_12
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.42982456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 500
+      width: 192
+      height: 114
+    spriteID: 5baabb5c30a6dd74c9d928ac8fb2f38a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 500}
+  - name: WeaponSummonCircleAppear_Frame_13
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 192
+      height: 116
+    spriteID: dade5797bf80e2343bf006e9db7cca72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: WeaponSummonCircleAppear_Frame_14
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 4
+      width: 192
+      height: 116
+    spriteID: a3f772b200428e549acedab060748b27
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 4}
+  - name: WeaponSummonCircleAppear_Frame_15
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 4
+      width: 192
+      height: 116
+    spriteID: 415c3c536652a094c913ce2d003531b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 4}
+  - name: WeaponSummonCircleAppear_Frame_16
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 4
+      width: 192
+      height: 116
+    spriteID: 724258422e700bc4ab731b431dba752c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 4}
+  - name: WeaponSummonCircleAppear_Frame_17
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 4
+      width: 192
+      height: 116
+    spriteID: 02a2740229c44654d94223659293e50d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 4}
+  - name: WeaponSummonCircleAppear_Frame_18
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 128
+      width: 192
+      height: 116
+    spriteID: dfe9ef451f52be64582c30dd96e26c3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 128}
+  - name: WeaponSummonCircleAppear_Frame_19
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 128
+      width: 192
+      height: 116
+    spriteID: 57b071fe79ea9044ea98b688b83b3e04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 128}
+  - name: WeaponSummonCircleAppear_Frame_20
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 128
+      width: 192
+      height: 116
+    spriteID: f868ec26c0851ef41a5111c4d6c9f0c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 128}
+  - name: WeaponSummonCircleAppear_Frame_21
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 128
+      width: 192
+      height: 116
+    spriteID: ca29691edd48e584c8e3bc258271ff1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 128}
+  - name: WeaponSummonCircleAppear_Frame_22
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 128
+      width: 192
+      height: 116
+    spriteID: 681c98c8d34de554f9106fd2ab63448d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 128}
+  - name: WeaponSummonCircleAppear_Frame_23
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 252
+      width: 192
+      height: 116
+    spriteID: e51114a085c92264398c477831d911f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 252}
+  - name: WeaponSummonCircleAppear_Frame_24
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 252
+      width: 192
+      height: 116
+    spriteID: ced164e6ec142c5408e9c5923a949479
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 252}
+  - name: WeaponSummonCircleAppear_Frame_25
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 252
+      width: 192
+      height: 116
+    spriteID: 3294da4871179204d9b86d4b3fb11e5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 252}
+  - name: WeaponSummonCircleAppear_Frame_26
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 252
+      width: 192
+      height: 116
+    spriteID: 20a71a26d0baa1b4081e5cf9e13f083d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 252}
+  - name: WeaponSummonCircleAppear_Frame_27
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 252
+      width: 192
+      height: 116
+    spriteID: b0a71e196a32ceb45a48204355429ee7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 252}
+  - name: WeaponSummonCircleAppear_Frame_28
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 376
+      width: 192
+      height: 116
+    spriteID: 04f2f6bae904ccb4c8fd7be8b4ccb7f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 376}
+  - name: WeaponSummonCircleAppear_Frame_29
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 376
+      width: 192
+      height: 116
+    spriteID: 9a85ea15e3802d04ead470a1ca73aa8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 376}
+  - name: WeaponSummonCircleAppear_Frame_30
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 376
+      width: 192
+      height: 116
+    spriteID: 3a9bcb0f79f0e4b41b1474ac8c326cc4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 376}
+  - name: WeaponSummonCircleAppear_Frame_31
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 376
+      width: 192
+      height: 116
+    spriteID: b402cb1a491cafc42b233b802ae3c941
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 376}
+  - name: WeaponSummonCircleAppear_Frame_32
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 376
+      width: 192
+      height: 116
+    spriteID: 99f8981f69626e445a1b8235ea3f8f3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 376}
+  - name: WeaponSummonCircleAppear_Frame_33
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 500
+      width: 192
+      height: 116
+    spriteID: b5e2a1d8738f3a7499b75cb22a655aab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 500}
+  - name: WeaponSummonCircleAppear_Frame_34
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4051724}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 500
+      width: 192
+      height: 116
+    spriteID: 357dde8c83288ba44aa1eeadfbc3c63d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 500}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 886512736
+    name: WeaponSummonCircleAppear
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: WeaponSummonCircleAppear_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 98
+        y: 143
+        width: 4
+        height: 20
+      spriteId: 3e27b968de334ee458be3273c0031e4d
+    - name: WeaponSummonCircleAppear_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 84
+        y: 143
+        width: 32
+        height: 20
+      spriteId: 0a301c98fc5c46f44ade2a7fa8f3064d
+    - name: WeaponSummonCircleAppear_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 141
+        width: 72
+        height: 22
+      spriteId: b1887541778355d42ab71d87428e7801
+    - name: WeaponSummonCircleAppear_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 48
+        y: 137
+        width: 104
+        height: 26
+      spriteId: 14a4bc73edf6c7d49a9706fe90221a8a
+    - name: WeaponSummonCircleAppear_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 31
+        y: 132
+        width: 138
+        height: 31
+      spriteId: 7f1b5b2f9d0c4184e92c84bf6015dc08
+    - name: WeaponSummonCircleAppear_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 123
+        width: 164
+        height: 40
+      spriteId: 27f496a3b9f624348a6c2cff1dbad20b
+    - name: WeaponSummonCircleAppear_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 8
+        y: 117
+        width: 184
+        height: 46
+      spriteId: d8d81100bacffd04ca36c66140e71a17
+    - name: WeaponSummonCircleAppear_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 96
+        width: 192
+        height: 67
+      spriteId: f9234e3616d837047ae8d57b08810ffe
+    - name: WeaponSummonCircleAppear_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 74
+        width: 192
+        height: 89
+      spriteId: fce185ee77281354ca9e333cd3fa3611
+    - name: WeaponSummonCircleAppear_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 63
+        width: 192
+        height: 100
+      spriteId: 99940cf1b2c45c044a8361886361d396
+    - name: WeaponSummonCircleAppear_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 56
+        width: 192
+        height: 107
+      spriteId: 19970028f0e73a14dacc524c44c21017
+    - name: WeaponSummonCircleAppear_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 52
+        width: 192
+        height: 111
+      spriteId: 4af7e0e1565c5424a9fb858c6a554fce
+    - name: WeaponSummonCircleAppear_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 49
+        width: 192
+        height: 114
+      spriteId: 5baabb5c30a6dd74c9d928ac8fb2f38a
+    - name: WeaponSummonCircleAppear_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: dade5797bf80e2343bf006e9db7cca72
+    - name: WeaponSummonCircleAppear_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: a3f772b200428e549acedab060748b27
+    - name: WeaponSummonCircleAppear_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 415c3c536652a094c913ce2d003531b9
+    - name: WeaponSummonCircleAppear_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 724258422e700bc4ab731b431dba752c
+    - name: WeaponSummonCircleAppear_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 02a2740229c44654d94223659293e50d
+    - name: WeaponSummonCircleAppear_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: dfe9ef451f52be64582c30dd96e26c3c
+    - name: WeaponSummonCircleAppear_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 57b071fe79ea9044ea98b688b83b3e04
+    - name: WeaponSummonCircleAppear_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: f868ec26c0851ef41a5111c4d6c9f0c7
+    - name: WeaponSummonCircleAppear_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: ca29691edd48e584c8e3bc258271ff1d
+    - name: WeaponSummonCircleAppear_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 681c98c8d34de554f9106fd2ab63448d
+    - name: WeaponSummonCircleAppear_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: e51114a085c92264398c477831d911f9
+    - name: WeaponSummonCircleAppear_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: ced164e6ec142c5408e9c5923a949479
+    - name: WeaponSummonCircleAppear_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 3294da4871179204d9b86d4b3fb11e5d
+    - name: WeaponSummonCircleAppear_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 20a71a26d0baa1b4081e5cf9e13f083d
+    - name: WeaponSummonCircleAppear_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: b0a71e196a32ceb45a48204355429ee7
+    - name: WeaponSummonCircleAppear_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 04f2f6bae904ccb4c8fd7be8b4ccb7f5
+    - name: WeaponSummonCircleAppear_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 9a85ea15e3802d04ead470a1ca73aa8a
+    - name: WeaponSummonCircleAppear_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 3a9bcb0f79f0e4b41b1474ac8c326cc4
+    - name: WeaponSummonCircleAppear_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: b402cb1a491cafc42b233b802ae3c941
+    - name: WeaponSummonCircleAppear_Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 99f8981f69626e445a1b8235ea3f8f3a
+    - name: WeaponSummonCircleAppear_Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: b5e2a1d8738f3a7499b75cb22a655aab
+    - name: WeaponSummonCircleAppear_Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 47
+        width: 192
+        height: 116
+      spriteId: 357dde8c83288ba44aa1eeadfbc3c63d
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 200, y: 200}

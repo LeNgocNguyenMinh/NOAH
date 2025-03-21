@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ForeGround
+  - BackGround
+  - Slime
+  - Audio
+  - NPC
+  - Item
+  - PlayerWand
+  - PlayerSprite
+  - Inventory
+  - PlayerWeaponParent
+  - LightManager
+  - PlayerHitCollider
+  - Boss
+  - Enemy
+  - FireBullet
+  - WoodBullet
+  - DashCDImage
+  - SFX
+  - Music
+  - BombDemonMini
+  - LightBullet
+  - WaterBullet
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - 
+  - 
+  - Post
+  - Shop
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Water
+    uniqueID: 3419332011
+    locked: 0
+  - name: BackGround
+    uniqueID: 399216309
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1549724067
+    locked: 0
+  - name: Bridge
+    uniqueID: 3216069165
+    locked: 0
+  - name: Construction
+    uniqueID: 1333340177
+    locked: 0
+  - name: Player
+    uniqueID: 2642180123
+    locked: 0
+  - name: Mouse
+    uniqueID: 23295885
+    locked: 0
+  - name: Weather Effect
+    uniqueID: 527545113
+    locked: 0
+  - name: Boss
+    uniqueID: 686130243
+    locked: 0
+  - name: InsideHouse
+    uniqueID: 3548636637
+    locked: 0

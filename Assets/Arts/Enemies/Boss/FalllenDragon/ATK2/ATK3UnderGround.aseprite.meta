@@ -1,0 +1,644 @@
+fileFormatVersion: 2
+guid: b0fd310f85545424a91ef29762c564d4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: ATK3UnderGround_Frame_0
+    originalName: 
+    pivot: {x: -0.24999976, y: -33}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 152
+      width: 4
+      height: 1
+    spriteID: 42d095f7b26cfbe4381961ba03046e29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 188, y: 152}
+  - name: ATK3UnderGround_Frame_1
+    originalName: 
+    pivot: {x: 0.24999975, y: -5.1666665}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 467
+      width: 12
+      height: 6
+    spriteID: f81a641af2028d247bde7382d34069b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 467}
+  - name: ATK3UnderGround_Frame_2
+    originalName: 
+    pivot: {x: 0.28571445, y: -2.8181818}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 448
+      width: 14
+      height: 11
+    spriteID: bd05a0d71823ded43b3b31c4db118462
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 448}
+  - name: ATK3UnderGround_Frame_3
+    originalName: 
+    pivot: {x: 0.37499988, y: -1.6315789}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 184
+      width: 24
+      height: 19
+    spriteID: ada805fb2bf87b94c98d30ea869b952d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 184}
+  - name: ATK3UnderGround_Frame_4
+    originalName: 
+    pivot: {x: 0.38461545, y: -1.2916666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 152
+      width: 26
+      height: 24
+    spriteID: 53b6044d6b7a11e4c81697a13b8115a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 152}
+  - name: ATK3UnderGround_Frame_5
+    originalName: 
+    pivot: {x: 0.38461545, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 113
+      width: 26
+      height: 31
+    spriteID: a397cf741924519428dce5754bf9e5cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 113}
+  - name: ATK3UnderGround_Frame_6
+    originalName: 
+    pivot: {x: 0.42500004, y: -0.7380952}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 63
+      width: 40
+      height: 42
+    spriteID: 092a805c0e8bd124a9de7028a90f7e84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 63}
+  - name: ATK3UnderGround_Frame_7
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.60784316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 4
+      width: 42
+      height: 51
+    spriteID: f816c9a81202ab446a19cb87fcef5f97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 4}
+  - name: ATK3UnderGround_Frame_8
+    originalName: 
+    pivot: {x: 0.43478256, y: -0.51666665}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 448
+      width: 46
+      height: 60
+    spriteID: ab3111dc51f4e904a9b54035425ef52c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 448}
+  - name: ATK3UnderGround_Frame_9
+    originalName: 
+    pivot: {x: 0.43478256, y: -0.42465755}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 433
+      width: 46
+      height: 73
+    spriteID: 17ff26ccd62f9ae458c18d3a209f16bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 433}
+  - name: ATK3UnderGround_Frame_10
+    originalName: 
+    pivot: {x: 0.44444445, y: -0.3690476}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 341
+      width: 54
+      height: 84
+    spriteID: 4b4f75e74cd62e64abbc3d2a0a92cd4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 341}
+  - name: ATK3UnderGround_Frame_11
+    originalName: 
+    pivot: {x: 0.44444445, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 240
+      width: 54
+      height: 93
+    spriteID: c9f986eea4a2aed4988cf5c1fa2c8803
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 240}
+  - name: ATK3UnderGround_Frame_12
+    originalName: 
+    pivot: {x: 0.44999996, y: -0.29807693}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 128
+      width: 60
+      height: 104
+    spriteID: 571f36fcad8499a458964164d4dee5d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 128}
+  - name: ATK3UnderGround_Frame_13
+    originalName: 
+    pivot: {x: 0.45161286, y: -0.2672414}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 4
+      width: 62
+      height: 116
+    spriteID: 62aa098bf3e2eb04f91ac0a64706a1ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 4}
+  - name: ATK3UnderGround_Frame_14
+    originalName: 
+    pivot: {x: 0.45833328, y: -0.23846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 310
+      width: 72
+      height: 130
+    spriteID: a0abae4167bade1498fc9879eb97bcf4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 310}
+  - name: ATK3UnderGround_Frame_15
+    originalName: 
+    pivot: {x: 0.45833328, y: -0.22695035}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 161
+      width: 72
+      height: 141
+    spriteID: 0d8abfdb2fe2efc489890d02151b120b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 161}
+  - name: ATK3UnderGround_Frame_16
+    originalName: 
+    pivot: {x: 0.45833328, y: -0.2147651}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 72
+      height: 149
+    spriteID: a2ecd394c44cc144684c48a74e595c39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -382929134
+    name: ATK3UnderGround
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: ATK3UnderGround_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 101
+        y: 33
+        width: 4
+        height: 1
+      spriteId: 42d095f7b26cfbe4381961ba03046e29
+    - name: ATK3UnderGround_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 97
+        y: 31
+        width: 12
+        height: 6
+      spriteId: f81a641af2028d247bde7382d34069b6
+    - name: ATK3UnderGround_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 96
+        y: 31
+        width: 14
+        height: 11
+      spriteId: bd05a0d71823ded43b3b31c4db118462
+    - name: ATK3UnderGround_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 91
+        y: 31
+        width: 24
+        height: 19
+      spriteId: ada805fb2bf87b94c98d30ea869b952d
+    - name: ATK3UnderGround_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 90
+        y: 31
+        width: 26
+        height: 24
+      spriteId: 53b6044d6b7a11e4c81697a13b8115a2
+    - name: ATK3UnderGround_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 90
+        y: 31
+        width: 26
+        height: 31
+      spriteId: a397cf741924519428dce5754bf9e5cd
+    - name: ATK3UnderGround_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 31
+        width: 40
+        height: 42
+      spriteId: 092a805c0e8bd124a9de7028a90f7e84
+    - name: ATK3UnderGround_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 82
+        y: 31
+        width: 42
+        height: 51
+      spriteId: f816c9a81202ab446a19cb87fcef5f97
+    - name: ATK3UnderGround_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 80
+        y: 31
+        width: 46
+        height: 60
+      spriteId: ab3111dc51f4e904a9b54035425ef52c
+    - name: ATK3UnderGround_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 80
+        y: 31
+        width: 46
+        height: 73
+      spriteId: 17ff26ccd62f9ae458c18d3a209f16bd
+    - name: ATK3UnderGround_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 76
+        y: 31
+        width: 54
+        height: 84
+      spriteId: 4b4f75e74cd62e64abbc3d2a0a92cd4f
+    - name: ATK3UnderGround_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 76
+        y: 31
+        width: 54
+        height: 93
+      spriteId: c9f986eea4a2aed4988cf5c1fa2c8803
+    - name: ATK3UnderGround_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 73
+        y: 31
+        width: 60
+        height: 104
+      spriteId: 571f36fcad8499a458964164d4dee5d3
+    - name: ATK3UnderGround_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 72
+        y: 31
+        width: 62
+        height: 116
+      spriteId: 62aa098bf3e2eb04f91ac0a64706a1ef
+    - name: ATK3UnderGround_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 67
+        y: 31
+        width: 72
+        height: 130
+      spriteId: a0abae4167bade1498fc9879eb97bcf4
+    - name: ATK3UnderGround_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 67
+        y: 32
+        width: 72
+        height: 141
+      spriteId: 0d8abfdb2fe2efc489890d02151b120b
+    - name: ATK3UnderGround_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 67
+        y: 32
+        width: 72
+        height: 149
+      spriteId: a2ecd394c44cc144684c48a74e595c39
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 200, y: 200}
