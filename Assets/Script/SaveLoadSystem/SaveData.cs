@@ -10,6 +10,7 @@ public class SaveData
     public string mapBoundary;
     public List<InventorySaveData> inventorySaveData;
     public List<InventorySaveData> hotBarSaveData;
+    public List<ShopSaveData> shopSaveData; 
     public TimeSaveData timeSaveData;
     public PlayerSaveData playerSaveData;
 }

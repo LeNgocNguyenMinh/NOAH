@@ -893,8 +893,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4561684737359782313}
   m_HandleRect: {fileID: 3236217962904899183}
   m_Direction: 0
-  m_Value: -0.00007259528
-  m_Size: 0.9958591
+  m_Value: -0.00003629764
+  m_Size: 0.9958636
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -974,7 +974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -809.9995, y: 339.215}
+  m_AnchoredPosition: {x: -809.99976, y: 339.215}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1635940829307735167
@@ -1326,7 +1326,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &5036773583245873785
 MonoBehaviour:
@@ -1380,19 +1380,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3d50022599e0b43b9595e398cfeca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopPanelIsOpen: 0
-  listOfItem:
+  listOfItemSlot:
   - {fileID: 6416954190428630002}
   - {fileID: 93576497000188563}
   - {fileID: 4021169790303865479}
   - {fileID: 7138609486632745739}
   - {fileID: 5965777987853032701}
-  itemForShop:
+  listItemForShop:
   - {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
+  - {fileID: 11400000, guid: 42b8902df0126c34d97b41dc1443e951, type: 2}
+  - {fileID: 11400000, guid: aa64a9bf56678fa49ab776ceb4991212, type: 2}
+  - {fileID: 11400000, guid: c3c55875d0c60a94989a26152a918846, type: 2}
+  - {fileID: 11400000, guid: 600af6cdd83bd0844b898b1c9b7c9564, type: 2}
+  - {fileID: 11400000, guid: 13e79388ba5daea4cb5057f1d6a35c90, type: 2}
+  - {fileID: 11400000, guid: 57d68bc0160785443bfb50fcd754f22b, type: 2}
   - {fileID: 11400000, guid: 1b5f98ba02adb1f4d8107bf1eb4b9807, type: 2}
   - {fileID: 11400000, guid: 3f3f5dcaf585a734496b596d48839f08, type: 2}
   - {fileID: 11400000, guid: 8dbd1204e87261a48a0aa64f3649fc62, type: 2}
-  - {fileID: 11400000, guid: b2442586e12b1b54f8ab7d7c5b11fc96, type: 2}
+  playerCoin: {fileID: 5620305281555577484}
+  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
 --- !u!1 &8514687833451977177
 GameObject:
   m_ObjectHideFlags: 0

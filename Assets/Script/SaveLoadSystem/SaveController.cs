@@ -10,6 +10,7 @@ public class SaveController : MonoBehaviour
     private string saveLocation = Path.Combine("D:/NOAHGame/NOAH/Assets/Script/SaveLoadSystem/", "saveData.json");
     private UIInventoryPage uiInventoryPage;
     private HotBarManager hotBarManager;
+    private ShopController shopController;
     private TimeManager timeManager;
     [SerializeField]private PlayerStatus playerStatus;
     void Awake()
@@ -25,12 +26,14 @@ public class SaveController : MonoBehaviour
         uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
         hotBarManager = FindObjectOfType<HotBarManager>().GetComponent<HotBarManager>();
         timeManager = FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
+        shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
         SaveData saveData = new SaveData
         {
             playerPosition = FindObjectOfType<PlayerControl>().transform.position,
             mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name,
             inventorySaveData = uiInventoryPage.GetInventoryItems(),
             hotBarSaveData = hotBarManager.GetHotBarItems(),
+            shopSaveData = shopController?.GetListItemInShop(),
             timeSaveData = timeManager.GetTime(),
             playerSaveData = playerStatus.GetPlayerInfo()
         };
@@ -47,6 +50,7 @@ public class SaveController : MonoBehaviour
             uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
             timeManager = FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
             hotBarManager = FindObjectOfType<HotBarManager>().GetComponent<HotBarManager>();
+            shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
             if(saveData.inventorySaveData!=null)
             {
                 uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
@@ -54,6 +58,10 @@ public class SaveController : MonoBehaviour
             if(saveData.hotBarSaveData!=null)
             {
                 hotBarManager.SetHotBarItems(saveData.hotBarSaveData);
+            }
+            if(saveData.shopSaveData!=null)
+            {
+                shopController.SetListItemInShop(saveData.shopSaveData);
             }
             if(saveData.timeSaveData!=null)
             {

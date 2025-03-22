@@ -8,7 +8,6 @@ public class Item : ScriptableObject
     [Header("----General Item Info----")] 
     public string itemName;
     public string itemDescription;
-    public int itemQuantity;
     public int itemLitmitBuyQuantity;
     public string itemID;
     public int itemPrice;
