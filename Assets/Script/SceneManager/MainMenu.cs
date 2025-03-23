@@ -58,29 +58,40 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadGameSave()
     {
-        StartCoroutine(LoadGameAsync("Level1"));
-        SceneManager.LoadScene("Level1");
+        StartCoroutine(LoadSceneAsync("Level1"));
     }
-    private IEnumerator LoadGameAsync(string sceneName)
+    private IEnumerator LoadSceneAsync(string sceneName)
     {
-        // Bật màn hình loading
-        OnLoading();
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-        asyncLoad.allowSceneActivation = false; // Chưa cho phép scene chuyển ngay lập tức
-        yield return StartCoroutine(LoadData());
-        asyncLoad.allowSceneActivation = true;
-    }
-    
-    private IEnumerator LoadData()
-    {
-        // Đợi 0.5 giây để tránh lag nếu cần
-        yield return new WaitForSeconds(0.5f);
-        
-        // Gọi hàm load dữ liệu từ SaveController
-        SaveController.Instance.LoadSave();
+        yield return null;
+        // Bắt đầu load scene nhưng không active ngay lập tức
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        operation.allowSceneActivation = false;
 
-        // Đợi 1 giây để dữ liệu được xử lý (tùy vào hệ thống)
-        yield return new WaitForSeconds(1f);
+        // Chờ scene load xong
+        while (!operation.isDone)
+        {
+            // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
+            if (operation.progress >= 0.9f)
+            {
+                Debug.Log("Scene Loaded. Now Loading Save Data...");
+                
+                // Gọi hàm load save game tại đây
+                
+                SceneManager.sceneLoaded += OnSceneLoaded;
+                // Sau khi load save xong, active scene
+                operation.allowSceneActivation = true;
+            }
+            yield return null;
+        }
+    }
+     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Xóa sự kiện sceneLoaded sau khi nó đã được gọi một lần
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        // Log thông báo và load dữ liệu save
+        Debug.Log("Scene Activated. Now Loading Save Data...");
+        SaveController.Instance.LoadSave(); // Gọi hàm load save ở đây sau khi scene đã active
     }
 /*     private void UpdateProgressText()
     {

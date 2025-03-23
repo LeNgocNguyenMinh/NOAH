@@ -14,7 +14,7 @@ public class TimeManager : MonoBehaviour
     public TextMeshProUGUI timeDisplay;//Display Minute to check or for who want easier clock
     public TextMeshProUGUI dayDisplay;//Display the date
     public Gradient sunLightGradient;//Create the change of the gradient for sun light
-    private GameObject lightSource;//Create the list of the light such as light from house
+    [SerializeField]private GameObject lightSource = null;//Create the list of the light such as light from house
 
     public Light2D[] sunLight; //List of Sunlight 
     private string[] seasons = {"Spring", "Summer", "Autumn", "Winter"};
@@ -73,10 +73,10 @@ public class TimeManager : MonoBehaviour
         shopInteractive = FindObjectOfType<ShopInteractive>()?.GetComponent<ShopInteractive>();
         if(10 <= hour && hour <= 22)
         {
-            shopInteractive.canOpenShop = false;
+            shopInteractive.canOpenShop = true;
         }
         else{
-            shopInteractive.canOpenShop = true;
+            shopInteractive.canOpenShop = false;
         }
 
         percentage = hour/24*1f;
@@ -85,14 +85,16 @@ public class TimeManager : MonoBehaviour
             light.color = sunLightGradient.Evaluate(percentage);
         }
 
-        lightSource = GameObject.FindWithTag("LightManager");     
-        if((19 <= hour && hour <= 24)||(0<=hour && hour <=3))
+        if(lightSource != null)
         {
-            lightSource.SetActive(true);
-        }
-        else{
-            lightSource.SetActive(false);
-        }
+            if((19 <= hour && hour <= 24)||(0<=hour && hour <=3))
+            {
+                lightSource.SetActive(true);
+            }
+            else{
+                lightSource.SetActive(false);
+            }
+        } 
         float hourAngle = (hour + min / 60f) * (360f / 12f); // Calculate rotate angle for hour stick
         clockHourStick.localEulerAngles = new Vector3(0, 0, -hourAngle);//Rrotate clockwise
         float minuteAngle = min * 6f; // Each minute is 360/60 = 6 degrees

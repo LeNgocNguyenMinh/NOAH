@@ -17,10 +17,6 @@ public class SaveController : MonoBehaviour
     {
         Instance = this;
     }
-    void Start()
-    {
-        LoadSave();
-    }
     public void SaveGame()
     {
         uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
@@ -42,8 +38,10 @@ public class SaveController : MonoBehaviour
     }
     public void LoadSave()
     {
+        Debug.Log(111111111);
         if(File.Exists(saveLocation))
         {
+            Debug.Log(111111111);
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
             FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
             FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
