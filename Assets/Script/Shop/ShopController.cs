@@ -15,10 +15,7 @@ public class ShopController : MonoBehaviour
     [SerializeField]private TMP_Text playerCoin;
     [SerializeField]private PlayerStatus playerStatus;
     private ItemDictionary itemDictionary;
-   /*  private void Start()
-    {
-        AddItemToShop();
-    } */
+   
     public void UpdateWhenOpen()
     {
         playerCoin.text = playerStatus.playerCoin.ToString();
@@ -28,7 +25,7 @@ public class ShopController : MonoBehaviour
         playerStatus.AddCoin(-newValue);
         playerCoin.text = playerStatus.playerCoin.ToString();
     }
-    private void AddItemToShop()
+    public void AddItemToShop()
     {
         int randomStartIndex = Random.Range(0, listItemForShop.Count - 4);
         for(int i = 0; i < listOfItemSlot.Count; i++)

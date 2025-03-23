@@ -10,8 +10,7 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField]private Transform clockHourStick;//Transform of the hour stick, for rotate purpose 
     [SerializeField]private Transform clockMinuteStick;//Transform of the minute stick, for rotate purpose 
-    [SerializeField]private TextMeshProUGUI amAndpmBox;//Show AM or PM
-    [SerializeField]private TimeObjectScriptable timeData;
+    [SerializeField]private TextMeshProUGUI amAndPmBox;//Show AM or PM
     public TextMeshProUGUI timeDisplay;//Display Minute to check or for who want easier clock
     public TextMeshProUGUI dayDisplay;//Display the date
     public Gradient sunLightGradient;//Create the change of the gradient for sun light
@@ -25,6 +24,8 @@ public class TimeManager : MonoBehaviour
     private float hour;
     private int dateIndex;
     private float percentage;
+    private ShopInteractive shopInteractive;
+    private ShopController shopController;
 
     void FixedUpdate() // we used fixed update, since update is frame dependant. 
     {
@@ -36,6 +37,7 @@ public class TimeManager : MonoBehaviour
         }
         CalcTime();
         DisplayTime();
+        
     }
  
     public void CalcTime() // Used to calculate sec, min and hours
@@ -48,7 +50,7 @@ public class TimeManager : MonoBehaviour
             min = 0;
             hour += 1;
         }
- 
+        shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
         if (hour >= 24) //24 hr = 1 day
         {
             hour = 0;
@@ -57,24 +59,33 @@ public class TimeManager : MonoBehaviour
             {
                 dateIndex = 0;
             }
+            shopController.AddItemToShop();
         }
 
-        float hourAngle = (hour + min / 60f) * (360f / 12f); // Calculate rotate angle for hour stick
-        clockHourStick.localEulerAngles = new Vector3(0, 0, -hourAngle);//Rrotate clockwise
-
-        if(hourAngle > 360) // Mean finish a first circle 
+        if(hour > 12) // Mean finish a first circle 
         {
-            amAndpmBox.text = "PM";
+            amAndPmBox.text = "PM";
         }
         else{
-            amAndpmBox.text = "AM";
+            amAndPmBox.text = "AM";
         }
-        float minuteAngle = min * 6f; // Each minute is 360/60 = 6 degrees
-        clockMinuteStick.localEulerAngles = new Vector3(0, 0, -minuteAngle);
-        
-        lightSource = GameObject.FindWithTag("LightManager");
-        if (lightSource == null) return;
-        
+
+        shopInteractive = FindObjectOfType<ShopInteractive>()?.GetComponent<ShopInteractive>();
+        if(10 <= hour && hour <= 22)
+        {
+            shopInteractive.canOpenShop = false;
+        }
+        else{
+            shopInteractive.canOpenShop = true;
+        }
+
+        percentage = hour/24*1f;
+        foreach(Light2D light in sunLight)
+        {
+            light.color = sunLightGradient.Evaluate(percentage);
+        }
+
+        lightSource = GameObject.FindWithTag("LightManager");     
         if((19 <= hour && hour <= 24)||(0<=hour && hour <=3))
         {
             lightSource.SetActive(true);
@@ -82,14 +93,10 @@ public class TimeManager : MonoBehaviour
         else{
             lightSource.SetActive(false);
         }
-        percentage = hour/24*1f;
-        foreach(Light2D light in sunLight)
-        {
-            light.color = sunLightGradient.Evaluate(percentage);
-        }
-        timeData.SetMinutes(min);
-        timeData.SetHours(hour);
-        timeData.SetDays(dateIndex);
+        float hourAngle = (hour + min / 60f) * (360f / 12f); // Calculate rotate angle for hour stick
+        clockHourStick.localEulerAngles = new Vector3(0, 0, -hourAngle);//Rrotate clockwise
+        float minuteAngle = min * 6f; // Each minute is 360/60 = 6 degrees
+        clockMinuteStick.localEulerAngles = new Vector3(0, 0, -minuteAngle);       
     }
     public void DisplayTime() // Shows time and day in ui
     {

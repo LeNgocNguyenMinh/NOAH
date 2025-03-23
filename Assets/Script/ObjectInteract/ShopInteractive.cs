@@ -13,6 +13,7 @@ public class ShopInteractive : MonoBehaviour
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
     [SerializeField]private PlayerStatus playerStatus;
+    public bool canOpenShop = false;
     private void Update()
     {
         objectInteraction = GetComponent<ObjectInteraction>();
@@ -32,6 +33,12 @@ public class ShopInteractive : MonoBehaviour
                 else 
                 {
                     if(!uiMouseAndPriority.CanOpenThisUI())return;
+                    Debug.Log("Can Open shop: " + canOpenShop);
+                    if(!canOpenShop)
+                    {
+                        PopUp.Instance.ShowNotification("Shop open at 10 A.M and close at 10 P.M!!");
+                        return;
+                    }
                     shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
                     shopController.UpdateWhenOpen();
                     ShopController.shopPanelIsOpen = true;

@@ -23,19 +23,19 @@ public class SaveController : MonoBehaviour
     }
     public void SaveGame()
     {
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-        hotBarManager = FindObjectOfType<HotBarManager>().GetComponent<HotBarManager>();
-        timeManager = FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
+        uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
+        hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
+        timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
         shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
         SaveData saveData = new SaveData
         {
             playerPosition = FindObjectOfType<PlayerControl>().transform.position,
             mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name,
-            inventorySaveData = uiInventoryPage.GetInventoryItems(),
-            hotBarSaveData = hotBarManager.GetHotBarItems(),
+            inventorySaveData = uiInventoryPage?.GetInventoryItems(),
+            hotBarSaveData = hotBarManager?.GetHotBarItems(),
             shopSaveData = shopController?.GetListItemInShop(),
-            timeSaveData = timeManager.GetTime(),
-            playerSaveData = playerStatus.GetPlayerInfo()
+            timeSaveData = timeManager?.GetTime(),
+            playerSaveData = playerStatus?.GetPlayerInfo()
         };
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
         PopUp.Instance.ShowNotification("Save success.");
@@ -47,9 +47,9 @@ public class SaveController : MonoBehaviour
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
             FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
             FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
-            uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-            timeManager = FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
-            hotBarManager = FindObjectOfType<HotBarManager>().GetComponent<HotBarManager>();
+            uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
+            timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
+            hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
             shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
             if(saveData.inventorySaveData!=null)
             {

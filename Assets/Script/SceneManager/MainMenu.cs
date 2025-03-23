@@ -60,7 +60,6 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine(LoadGameAsync("Level1"));
         SceneManager.LoadScene("Level1");
-        SaveController.Instance.LoadSave();
     }
     private IEnumerator LoadGameAsync(string sceneName)
     {
