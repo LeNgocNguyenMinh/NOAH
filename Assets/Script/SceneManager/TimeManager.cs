@@ -50,7 +50,6 @@ public class TimeManager : MonoBehaviour
             min = 0;
             hour += 1;
         }
-        shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
         if (hour >= 24) //24 hr = 1 day
         {
             hour = 0;
@@ -59,7 +58,11 @@ public class TimeManager : MonoBehaviour
             {
                 dateIndex = 0;
             }
-            shopController.AddItemToShop();
+            if(FindObjectOfType<ShopController>()!=null)
+            {
+                shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
+                shopController.AddItemToShop();
+            }
         }
 
         if(hour > 12) // Mean finish a first circle 
@@ -70,19 +73,25 @@ public class TimeManager : MonoBehaviour
             amAndPmBox.text = "AM";
         }
 
-        shopInteractive = FindObjectOfType<ShopInteractive>()?.GetComponent<ShopInteractive>();
-        if(10 <= hour && hour <= 22)
+        if(FindObjectOfType<ShopInteractive>()!=null)
         {
-            shopInteractive.canOpenShop = true;
+            shopInteractive = FindObjectOfType<ShopInteractive>().GetComponent<ShopInteractive>();
+            if(10 <= hour && hour <= 22)
+            {
+                shopInteractive.canOpenShop = true;
+            }
+            else{
+                shopInteractive.canOpenShop = false;
+            }
         }
-        else{
-            shopInteractive.canOpenShop = false;
-        }
-
+        
         percentage = hour/24*1f;
-        foreach(Light2D light in sunLight)
+        if(sunLight.Length > 0)
         {
-            light.color = sunLightGradient.Evaluate(percentage);
+            foreach(Light2D light in sunLight)
+            {
+                light.color = sunLightGradient.Evaluate(percentage);
+            }
         }
 
         if(lightSource != null)

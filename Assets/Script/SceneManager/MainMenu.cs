@@ -5,23 +5,23 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
 public class MainMenu : MonoBehaviour
 {
+    private string saveLocation = Path.Combine("D:/NOAHGame/NOAH/Assets/Script/SaveLoadSystem/", "saveData.json");
     [SerializeField]private RectTransform newGameConfirmPanel;
     [SerializeField]private RectTransform quitGameConfirmPanel;
     [SerializeField]private RectTransform settingPanel;
     [SerializeField]private GameObject otherPanel;
-    public GameObject OptionUI;
-    public GameObject LoadingBar;
-    public Slider progressBar;
+    public Slider loadingBar;
     public TMP_Text progressText;
     void Start()
     {
-        if (OptionUI && LoadingBar != null)
+        if (loadingBar != null)
         {
-            OptionUI.SetActive(true);
-            LoadingBar.SetActive(false);
+            loadingBar.value = 0f;
+            loadingBar.gameObject.SetActive(false);
         }        
     }
     public void NewGameAskPanelShow()
@@ -58,7 +58,18 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadGameSave()
     {
-        StartCoroutine(LoadSceneAsync("Level1"));
+        OnLoading();
+        if (File.Exists(saveLocation))
+        {
+            // Đọc nội dung của file save
+            string jsonContent = File.ReadAllText(saveLocation);
+
+            // Chuyển nội dung JSON thành đối tượng SaveData
+            SaveData saveData = JsonUtility.FromJson<SaveData>(jsonContent);
+
+            // Trả về giá trị saveScene
+            StartCoroutine(LoadSceneAsync(saveData.saveScene));
+        }
     }
     private IEnumerator LoadSceneAsync(string sceneName)
     {
@@ -67,40 +78,32 @@ public class MainMenu : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         operation.allowSceneActivation = false;
 
+        float targetProgress = Mathf.Clamp01(operation.progress / 0.9f);
+        loadingBar.value = Mathf.Lerp(loadingBar.value, targetProgress, Time.deltaTime * 5f);
+        progressText.text = "Loading " + targetProgress * 100 + "%";
+
         // Chờ scene load xong
         while (!operation.isDone)
         {
             // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
             if (operation.progress >= 0.9f)
             {
-                Debug.Log("Scene Loaded. Now Loading Save Data...");
-                
-                // Gọi hàm load save game tại đây
-                
-                SceneManager.sceneLoaded += OnSceneLoaded;
-                // Sau khi load save xong, active scene
-                operation.allowSceneActivation = true;
+                progressText.text = "Press F to enter game >> ";
+                if(Input.GetKeyDown(KeyCode.F))
+                {
+                    SceneManager.sceneLoaded += OnSceneLoaded;
+                    operation.allowSceneActivation = true;
+                }
+
             }
             yield return null;
         }
     }
-     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Xóa sự kiện sceneLoaded sau khi nó đã được gọi một lần
         SceneManager.sceneLoaded -= OnSceneLoaded;
-
-        // Log thông báo và load dữ liệu save
-        Debug.Log("Scene Activated. Now Loading Save Data...");
-        SaveController.Instance.LoadSave(); // Gọi hàm load save ở đây sau khi scene đã active
+        SaveController.Instance.LoadSave();
     }
-/*     private void UpdateProgressText()
-    {
-        if (progressText != null)
-        {
-            float currentProgress = progressBar.value; // Get current value of the slider
-            progressText.text = $"Loading: {Mathf.RoundToInt(currentProgress * 100)}%";
-        }
-    } */
     
     public void SettingPanelShow()
     {
@@ -123,8 +126,8 @@ public class MainMenu : MonoBehaviour
 
     public void OnLoading()
     {
-        OptionUI.SetActive(false);
-        LoadingBar.SetActive(true);
+        otherPanel.SetActive(false);
+        loadingBar.gameObject.SetActive(true);
     }
    
 }

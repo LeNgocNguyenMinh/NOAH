@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class SaveController : MonoBehaviour
 {
@@ -22,33 +23,55 @@ public class SaveController : MonoBehaviour
         uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
         hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
         timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
-        shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
         SaveData saveData = new SaveData
         {
+            saveScene = SceneManager.GetActiveScene().name,
             playerPosition = FindObjectOfType<PlayerControl>().transform.position,
-            mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name,
             inventorySaveData = uiInventoryPage?.GetInventoryItems(),
+            mapBoundary = "L1",
             hotBarSaveData = hotBarManager?.GetHotBarItems(),
-            shopSaveData = shopController?.GetListItemInShop(),
             timeSaveData = timeManager?.GetTime(),
             playerSaveData = playerStatus?.GetPlayerInfo()
         };
+        if(FindObjectOfType<CinemachineConfiner>()!=null)
+        {
+            Debug.Log("mapBound: Tìm thấy");
+            if(FindObjectOfType<CinemachineConfiner>()?.m_BoundingShape2D.gameObject.name!=null)
+            {
+                saveData.mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name;
+                Debug.Log("mapBound: " + saveData.mapBoundary);
+            }
+        }
+        if(FindObjectOfType<ShopController>()!=null)
+        {
+            shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
+            saveData.shopSaveData = shopController.GetListItemInShop();
+        }
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
         PopUp.Instance.ShowNotification("Save success.");
     }
-    public void LoadSave()
+    public void LoadSave(Vector3 playerPos = new Vector3())
     {
         Debug.Log(111111111);
         if(File.Exists(saveLocation))
         {
-            Debug.Log(111111111);
+            Debug.Log(222222);
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
-            FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
-            FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
+            Debug.Log(3);
+            if(playerPos != Vector3.zero)
+            {
+                FindObjectOfType<PlayerControl>().transform.position = playerPos;
+            }
+            else{
+                FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
+            }
+            if(FindObjectOfType<CinemachineConfiner>()!=null && saveData.mapBoundary != null)
+            {
+                FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
+            }
             uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
             timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
             hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
-            shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
             if(saveData.inventorySaveData!=null)
             {
                 uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
@@ -57,9 +80,13 @@ public class SaveController : MonoBehaviour
             {
                 hotBarManager.SetHotBarItems(saveData.hotBarSaveData);
             }
-            if(saveData.shopSaveData!=null)
+            if(FindObjectOfType<ShopController>()!=null)
             {
-                shopController.SetListItemInShop(saveData.shopSaveData);
+                if(saveData.shopSaveData!=null)
+                {
+                    shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
+                    shopController.SetListItemInShop(saveData.shopSaveData);
+                }
             }
             if(saveData.timeSaveData!=null)
             {
@@ -69,9 +96,6 @@ public class SaveController : MonoBehaviour
             {
                 playerStatus.SetPlayerInfo(saveData.playerSaveData);
             }
-        }
-        else{
-            SaveGame();
         }
     }
 }

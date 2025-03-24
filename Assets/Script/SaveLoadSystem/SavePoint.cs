@@ -22,8 +22,12 @@ public class SavePoint : MonoBehaviour
             {
                 triggerNearAnimation = true;
                 triggerFarAnimation = false;
-                animator = GetComponent<Animator>();
-                animator.SetTrigger("isNear");
+                if(GetComponent<Animator>() != null)
+                {
+                    animator = GetComponent<Animator>();
+                    animator.SetTrigger("isNear");
+                }
+                
             }
         }
         else
@@ -32,8 +36,11 @@ public class SavePoint : MonoBehaviour
             {
                 triggerNearAnimation = false;
                 triggerFarAnimation = true;
-                animator = GetComponent<Animator>();
-                animator.SetTrigger("isFar");
+                if(GetComponent<Animator>() != null)
+                {
+                    animator = GetComponent<Animator>();
+                    animator.SetTrigger("isFar");
+                }
             }
         }
     }
