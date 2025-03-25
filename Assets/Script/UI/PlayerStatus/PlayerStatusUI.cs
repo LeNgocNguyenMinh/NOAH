@@ -23,12 +23,6 @@ public class PlayerStatusUI : MonoBehaviour
     [SerializeField]private Image playerHat;
     [SerializeField]private Image playerCoat;
     private SpriteRenderer playerSprite;
-
-    private void Start()
-    {
-        /* if (SaveLoadManager.Instance._gameData == null)
-            playerStatus.CreateIntanceGame(); */
-    }
     public void OpenPlayerStatus()
     {
         playerStatusUIOpen = true;

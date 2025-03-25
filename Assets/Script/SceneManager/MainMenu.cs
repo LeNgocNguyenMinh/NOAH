@@ -10,6 +10,7 @@ using System.IO;
 public class MainMenu : MonoBehaviour
 {
     private string saveLocation = Path.Combine("D:/NOAHGame/NOAH/Assets/Script/SaveLoadSystem/", "saveData.json");
+    private string newGameSaveLocation = Path.Combine("D:/NOAHGame/NOAH/Assets/Script/SaveLoadSystem/", "newGameData.json");
     [SerializeField]private RectTransform newGameConfirmPanel;
     [SerializeField]private RectTransform quitGameConfirmPanel;
     [SerializeField]private RectTransform settingPanel;
@@ -55,6 +56,54 @@ public class MainMenu : MonoBehaviour
     }
     public void StartNewGame()
     {
+        OnLoading();
+        newGameConfirmPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            newGameConfirmPanel.gameObject.SetActive(false);
+        });
+        if (File.Exists(newGameSaveLocation))
+        {
+            // Đọc nội dung của file save
+            string jsonContent = File.ReadAllText(newGameSaveLocation);
+
+            // Chuyển nội dung JSON thành đối tượng SaveData
+            SaveData saveData = JsonUtility.FromJson<SaveData>(jsonContent);
+
+            // Trả về giá trị saveScene
+            StartCoroutine(LoadNewGameScene("Level1"));
+        }
+    }
+    private IEnumerator LoadNewGameScene(string sceneName)
+    {
+        yield return null;
+        // Bắt đầu load scene nhưng không active ngay lập tức
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        operation.allowSceneActivation = false;
+
+        // Chờ scene load xong
+        while (!operation.isDone)
+        {
+            float targetProgress = Mathf.Clamp01(operation.progress / 0.9f);
+            loadingBar.value = targetProgress ;
+            progressText.text = "Loading " + targetProgress * 100 + "%";
+            // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
+            if (operation.progress >= 0.9f)
+            {
+                progressText.text = "Press F to enter game >> ";
+                if(Input.GetKeyDown(KeyCode.F))
+                {
+                    SceneManager.sceneLoaded += OnNewGameSceneLoaded;
+                    operation.allowSceneActivation = true;
+                }
+
+            }
+            yield return null;
+        }
+    }
+    private void OnNewGameSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SceneManager.sceneLoaded -= OnNewGameSceneLoaded;
+        SaveController.Instance.LoadNewGame();
     }
     public void LoadGameSave()
     {
@@ -78,13 +127,12 @@ public class MainMenu : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         operation.allowSceneActivation = false;
 
-        float targetProgress = Mathf.Clamp01(operation.progress / 0.9f);
-        loadingBar.value = Mathf.Lerp(loadingBar.value, targetProgress, Time.deltaTime * 5f);
-        progressText.text = "Loading " + targetProgress * 100 + "%";
-
         // Chờ scene load xong
         while (!operation.isDone)
         {
+            float targetProgress = Mathf.Clamp01(operation.progress / 0.9f);
+            loadingBar.value = targetProgress ;
+            progressText.text = "Loading " + targetProgress * 100 + "%";
             // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
             if (operation.progress >= 0.9f)
             {

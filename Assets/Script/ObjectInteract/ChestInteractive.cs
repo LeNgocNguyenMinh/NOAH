@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChestInteractive : MonoBehaviour 
 {
-    [SerializeField]private Item item;
+    [SerializeField]private List<Item> item = new List<Item>();
     private Animator animator;
     private UIInventoryPage uiInventoryPage;
     private bool chestOpen = false;

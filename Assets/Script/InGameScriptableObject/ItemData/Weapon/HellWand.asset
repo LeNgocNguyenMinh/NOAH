@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d27fc1f97eb4c44b52f89818d02dbe, type: 3}
+  m_Name: HellWand
+  m_EditorClassIdentifier: 
+  itemName: HellWand
+  itemDescription: Ha ha ha fear the ... FEAR
+  itemQuantity: 1
+  itemLitmitBuyQuantity: 1
+  itemID: WP_05
+  itemPrice: 300
+  itemSprite: {fileID: 21300000, guid: 20119f1f6cacfea468b7d3bfa5a4338f, type: 3}
+  healthRecover: 0
+  weaponLevel: 1
+  materialNeedToUpgrade: 45
+  weaponDamage: 8
+  weaponBulletType: {fileID: 8780310021059970476, guid: e4c714a76602f034c9273a10123d1861, type: 3}

@@ -24,11 +24,17 @@ public class PlayerStatusController : MonoBehaviour
             if(PlayerStatusUI.playerStatusUIOpen)
             {
                 playerStatusUI.ClosePlayerStatus();
-                panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad);
+                panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+                {
+                    Time.timeScale = 1f;
+                });
             }
             else{
                 if(!uiMouseAndPriority.CanOpenThisUI()) return;
-                panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad);
+                panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+                {
+                    Time.timeScale = 0f;
+                });
                 playerStatusUI.OpenPlayerStatus();
                 addAvailablePoint = FindObjectOfType<AddAvailablePoint>().GetComponent<AddAvailablePoint>();
                 addAvailablePoint.CheckAvailablePoint();
