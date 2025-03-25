@@ -15,6 +15,10 @@ public class CollectableItems : MonoBehaviour
 
         uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
     }
+    /* public string GetItemID()
+    {
+        return item.itemID;
+    } */
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.tag=="Player")

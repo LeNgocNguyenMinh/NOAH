@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: pomegranate
+  - name: Pomegranate
     originalName: 
     pivot: {x: 0.5, y: -0.26027396}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 60
       height: 73
-    spriteID: 0b18228f80f41c1469851835f77b0295
+    spriteID: 8487eb4ed755268498479bc893f40e2c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,13 +144,13 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -183290087
-    name: pomegranate
+    guid: 506816121
+    name: Pomegranate
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: pomegranate
+    - name: Pomegranate
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -158,7 +158,7 @@ ScriptedImporter:
         y: 19
         width: 60
         height: 73
-      spriteId: 0b18228f80f41c1469851835f77b0295
+      spriteId: 8487eb4ed755268498479bc893f40e2c
     linkedCells: []
     parentIndex: -1
   platformSettings:

@@ -15,10 +15,8 @@ public class CoinDrop : MonoBehaviour
     private SoundControl soundControl;
     void Start()
     {
-        soundControl = FindObjectOfType<SoundControl>().GetComponent<SoundControl>();
         rb = GetComponent<Rigidbody2D>(); 
         player = FindObjectOfType<PlayerControl>().transform;
-        coinControl = player.GetComponent<CoinControl>();
         Invoke("StartMoving", delayBeforeMoving); 
     }
     void StartMoving()
@@ -41,7 +39,9 @@ public class CoinDrop : MonoBehaviour
     {
         if(collider.gameObject.tag=="PlayerHitCollider")
         {
+            soundControl = FindObjectOfType<SoundControl>().GetComponent<SoundControl>();
             soundControl.CoinCollectPlay();
+            coinControl = player.GetComponent<CoinControl>();
             coinControl.AddCoin(2);
             Destroy(gameObject);
         }
