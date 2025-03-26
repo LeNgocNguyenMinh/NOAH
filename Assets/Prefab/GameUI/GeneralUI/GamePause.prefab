@@ -809,7 +809,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5801858401580503714}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Resume
+        m_MethodName: PauseMenuPanelOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1486,7 +1486,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &8211874699329220969
 MonoBehaviour:
@@ -1927,6 +1927,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 376b8cafd3c116e45bd1e5259deb4dc0, type: 3}
+    - target: {fileID: 3599190032178460615, guid: 63d182a8532837247b5a26b872914a16, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3599190032178460615, guid: 63d182a8532837247b5a26b872914a16, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3736069803777302072, guid: 63d182a8532837247b5a26b872914a16, type: 3}
       propertyPath: m_Type
       value: 1

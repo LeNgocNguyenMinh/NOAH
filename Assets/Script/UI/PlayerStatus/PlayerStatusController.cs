@@ -7,7 +7,6 @@ public class PlayerStatusController : MonoBehaviour
 {
     private PlayerStatusUI playerStatusUI;
     private UIMouseAndPriority uiMouseAndPriority;
-    public static bool  playerStatusCanOpen = true;
     private AddAvailablePoint addAvailablePoint;
     [Header("---------StatusUI Move---------")] 
     [SerializeField]private RectTransform panel;
@@ -31,13 +30,13 @@ public class PlayerStatusController : MonoBehaviour
             }
             else{
                 if(!uiMouseAndPriority.CanOpenThisUI()) return;
+                playerStatusUI.OpenPlayerStatus();
+                addAvailablePoint = FindObjectOfType<AddAvailablePoint>().GetComponent<AddAvailablePoint>();
+                addAvailablePoint.CheckAvailablePoint();
                 panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
                 {
                     Time.timeScale = 0f;
                 });
-                playerStatusUI.OpenPlayerStatus();
-                addAvailablePoint = FindObjectOfType<AddAvailablePoint>().GetComponent<AddAvailablePoint>();
-                addAvailablePoint.CheckAvailablePoint();
             }
         }
     }

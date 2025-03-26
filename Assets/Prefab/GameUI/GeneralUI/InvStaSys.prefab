@@ -9654,7 +9654,6 @@ GameObject:
   - component: {fileID: 6562577371270205949}
   - component: {fileID: 8550621075624627119}
   - component: {fileID: 7018749488785564305}
-  - component: {fileID: 3319687808934992466}
   m_Layer: 0
   m_Name: PlayerStatus
   m_TagString: Untagged
@@ -9761,29 +9760,6 @@ MonoBehaviour:
   damageButton: {fileID: 6418258380818892749}
   bulletButton: {fileID: 5583831335117309161}
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
---- !u!223 &3319687808934992466
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8767418063290858584}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 10
-  m_TargetDisplay: 0
 --- !u!1 &8910379313003943023
 GameObject:
   m_ObjectHideFlags: 0
