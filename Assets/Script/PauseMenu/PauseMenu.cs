@@ -25,9 +25,10 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private Image resumeButtonImage;
     [SerializeField]private Sprite respawnSprite;
     [SerializeField]private Sprite resumeSprite;
+    private HealthControl healthControl;
 
     public static bool isPaused;
-    private bool isOver;
+    private bool isOver = false;
     private bool panelShow = false;
 
     void Start()
@@ -49,6 +50,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
+            if(isOver)return;
             if(isOver||panelShow)return;
             if(isPaused)
             {
@@ -70,27 +72,29 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         pauseMenuPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true);
     }
-    //Open game over menu
-    public void GameOverMenu()
+    public void GameOverMenuPanelShow()
     {
         isOver = true;
         pauseImage.sprite = gameOverSprite;
         resumeButtonImage.sprite = respawnSprite;
         pauseMenuPanel.gameObject.SetActive(true);
-        resumeButtonImage.sprite = respawnSprite;
         Time.timeScale = 0f;
         isPaused = true;
+        pauseMenuPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true);
     }
+
     //Resume button function
     public void PauseMenuPanelOff()
     {
-        if(isOver)
-        {
-            isOver = false;
-            spawnControl.RespawnAfterDead();
-        }
         pauseMenuPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
+            if(isOver)
+            {
+                isOver = false;
+                SaveController.Instance.LoadSave();
+                healthControl = FindObjectOfType<HealthControl>().GetComponent<HealthControl>();
+                healthControl.PlayerHeatlthAfterRespawn();
+            }
             Time.timeScale = 1f;
             isPaused = false;
             pauseMenuPanel.gameObject.SetActive(false);

@@ -9,6 +9,7 @@ public class SavePoint : MonoBehaviour
     private ObjectInteraction objectInteraction;
     private bool triggerNearAnimation = false;
     private bool triggerFarAnimation = false;
+    [SerializeField]private bool isBed = false;
     private void Update()
     {
         objectInteraction = GetComponent<ObjectInteraction>();
@@ -16,7 +17,14 @@ public class SavePoint : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                SaveController.Instance.SaveGame();
+                if(isBed == true)
+                {
+                    SaveController.Instance.SaveGameByBed();
+                    SaveController.Instance.LoadSave();
+                }
+                else{
+                    SaveController.Instance.SaveGame();
+                }
             }
             if(!triggerNearAnimation)
             {

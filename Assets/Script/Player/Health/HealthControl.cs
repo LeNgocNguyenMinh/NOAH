@@ -12,6 +12,7 @@ public class HealthControl : MonoBehaviour
     [SerializeField]private HealthBar healthBar;// Health bar
     private float healthCurrentValue;// Health current value
     private float healthMaxValue; // Health max value need to achive for level up
+    private Animator animator;
     private void Start()
     {
         //Set Start Value same with data (player status)
@@ -63,7 +64,7 @@ public class HealthControl : MonoBehaviour
     public void GameOverMenuActive()
     {
         pauseMenu = FindObjectOfType<PauseMenu>().GetComponent<PauseMenu>();
-        pauseMenu.GameOverMenu();
+        pauseMenu.GameOverMenuPanelShow();
     }
     public bool HealthRecover(float health)
     {
@@ -87,5 +88,8 @@ public class HealthControl : MonoBehaviour
         healthCurrentValue = healthMaxValue;
         healthBar.SetHealth(healthCurrentValue);
         UpdateHealthText();
+        animator = GetComponent<Animator>();
+        animator.SetTrigger("isRespawn");
+        playerControl.SetIsAlive(true);
     }
 }

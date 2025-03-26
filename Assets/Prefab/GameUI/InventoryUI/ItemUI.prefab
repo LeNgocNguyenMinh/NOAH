@@ -733,7 +733,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5419230547192491895}
         m_TargetAssemblyTypeName: UIInventoryItem, Assembly-CSharp
-        m_MethodName: DeleteQuantity
+        m_MethodName: DeleteOne
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1087,12 +1087,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158f89d50739c19459b508e170a9b912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemID: 
+  itemQuantity: 0
   isEmpty: 0
   quantityText: {fileID: 4133838439866570463}
   itemImage: {fileID: 1432416067884498329}
   choicePanel: {fileID: 8544986383090132598}
   hotBarSlot: 0
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   border: {fileID: 491473666943772121}
 --- !u!1 &7137009604843456475
 GameObject:

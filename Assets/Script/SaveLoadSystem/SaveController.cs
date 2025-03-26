@@ -23,7 +23,6 @@ public class SaveController : MonoBehaviour
     
     public void SaveGame()
     {
-
         existingData = File.Exists(saveLocation) ? 
             JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation)) : 
             new SaveData();
@@ -39,6 +38,43 @@ public class SaveController : MonoBehaviour
             hotBarSaveData = hotBarManager?.GetHotBarItems(),
             shopSaveData = existingData.shopSaveData,
             timeSaveData = timeManager?.GetTime(),
+            playerSaveData = playerStatus?.GetPlayerInfo()
+        };
+        Debug.Log(saveData.saveScene);
+        if(FindObjectOfType<CinemachineConfiner>()!=null)
+        {
+            Debug.Log("mapBound: Tìm thấy");
+            if(FindObjectOfType<CinemachineConfiner>()?.m_BoundingShape2D.gameObject.name!=null)
+            {
+                saveData.mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name;
+                Debug.Log("mapBound: " + saveData.mapBoundary);
+            }
+        }
+        if(FindObjectOfType<ShopController>()!=null)
+        {
+            shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
+            saveData.shopSaveData = shopController.GetListItemInShop();
+        }
+        File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
+        PopUp.Instance.ShowNotification("Save success.");
+    }
+    public void SaveGameByBed()
+    {
+        existingData = File.Exists(saveLocation) ? 
+            JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation)) : 
+            new SaveData();
+        uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
+        hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
+        timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
+        SaveData saveData = new SaveData
+        {
+            saveScene = SceneManager.GetActiveScene().name,
+            playerPosition = FindObjectOfType<PlayerControl>().transform.position,
+            inventorySaveData = uiInventoryPage?.GetInventoryItems(),
+            mapBoundary = existingData.mapBoundary,
+            hotBarSaveData = hotBarManager?.GetHotBarItems(),
+            shopSaveData = existingData.shopSaveData,
+            timeSaveData = timeManager?.GetTimeSkip(),
             playerSaveData = playerStatus?.GetPlayerInfo()
         };
         Debug.Log(saveData.saveScene);
@@ -110,6 +146,43 @@ public class SaveController : MonoBehaviour
         if(File.Exists(newGameSaveLocation))
         {
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(newGameSaveLocation));
+            FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
+            FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
+            uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
+            timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
+            hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
+            if(saveData.inventorySaveData!=null)
+            {
+                uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
+            }
+            if(saveData.hotBarSaveData!=null)
+            {
+                hotBarManager.SetHotBarItems(saveData.hotBarSaveData);
+            }
+            if(FindObjectOfType<ShopController>()!=null)
+            {
+                if(saveData.shopSaveData!=null)
+                {
+                    shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
+                    shopController.SetListItemInShop(saveData.shopSaveData);
+                }
+            }
+            if(saveData.timeSaveData!=null)
+            {
+                timeManager.SetTime(saveData.timeSaveData);
+            }
+            if(saveData.playerSaveData!=null)
+            {
+                playerStatus.SetPlayerInfo(saveData.playerSaveData);
+            }
+        }
+    }
+
+    public void LoadGameAfterDead()
+    {
+        if(File.Exists(saveLocation))
+        {
+            SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
             FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
             FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
             uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();

@@ -7,15 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour
 {
-   [SerializeField]private string sceneBuildIndex;
-   private void OnTriggerEnter2D(Collider2D other)
-   {
-        if(other.tag == "Player")
-        {
-            StartCoroutine(LoadSceneAsync(sceneBuildIndex));
-        }
-   }
-   private IEnumerator LoadSceneAsync(string sceneName)
+    [SerializeField]private string sceneBuildIndex;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+            if(other.tag == "Player")
+            {
+                StartCoroutine(LoadSceneAsync(sceneBuildIndex));
+            }
+    }
+    private IEnumerator LoadSceneAsync(string sceneName)
     {
         yield return null;
         // Bắt đầu load scene nhưng không active ngay lập tức

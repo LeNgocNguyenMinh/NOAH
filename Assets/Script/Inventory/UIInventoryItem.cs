@@ -139,7 +139,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         {
             if(playerHealthControl.HealthRecover(this.item.healthRecover))//this function return: true if health is not full and otherwise
             {
-                DeleteQuantity();//Mean item was used
+                DeleteOne();//Mean item was used
             }
             else{
                 PopUp.Instance.ShowNotification("Health is full.");
@@ -155,11 +155,8 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
             uiInventoryDescription.ItemHideInformation();
             choicePanel.SetActive(false);//hide the select panel
         }
-        else
-        {
-        }
     }
-    public void DeleteQuantity()//Remove quantity of item
+    public void DeleteOne()//Remove quantity of item
     {
         if(itemID.Contains("WP") || itemID.Contains("Cloth"))
         {

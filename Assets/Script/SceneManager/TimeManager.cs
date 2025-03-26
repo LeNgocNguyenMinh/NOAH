@@ -123,6 +123,20 @@ public class TimeManager : MonoBehaviour
             dateData = dateIndex
         };
     }
+    public TimeSaveData GetTimeSkip()
+    {
+        dateIndex +=1;
+        if(dateIndex == 7)
+        {
+            dateIndex = 0;
+        }
+        return new TimeSaveData
+        {
+            minData = 0,
+            hourData = 0,
+            dateData = dateIndex,
+        };
+    }
     public void SetTime(TimeSaveData timeSaveData)
     {
         this.min = timeSaveData.minData;

@@ -8,7 +8,7 @@ public class UIInventoryPage : MonoBehaviour
 {
     [SerializeField]private UIInventoryItem itemPrefab;
     [SerializeField]private RectTransform contentPanel;
-    private static List<UIInventoryItem> listOfUIItems;
+    private List<UIInventoryItem> listOfUIItems;
     private UIInventoryDescription uiInventoryDescription;
     public static bool inventoryOpen = false;
     [SerializeField]private int inventorySize = 10;
@@ -17,6 +17,13 @@ public class UIInventoryPage : MonoBehaviour
     public void InitializeInventoryUI(int size)
     {
         inventorySize = size;
+        if (listOfUIItems != null)
+        {
+            foreach (var item in listOfUIItems)
+            {
+                Destroy(item.gameObject);
+            }
+        }
         listOfUIItems = new List<UIInventoryItem>();
         for (int i = 0; i < inventorySize; i++)
         {
@@ -68,6 +75,16 @@ public class UIInventoryPage : MonoBehaviour
                 }
             }
             return true;
+        }
+    }
+    private void ClearInventory()
+    {
+        for(int i = 0; i < inventorySize; i++)
+        {
+            if(!listOfUIItems[i].isEmpty)
+            {
+                listOfUIItems[i].DeleteItem();
+            }
         }
     }
     public void AddItemPopUp(Item item, int itemQuantity)
@@ -122,6 +139,7 @@ public class UIInventoryPage : MonoBehaviour
     {
         itemDictionary = FindObjectOfType<ItemDictionary>().GetComponent<ItemDictionary>();
         InitializeInventoryUI(inventorySize);
+        Debug.Log("length: " + invData.Count);
         for(int i = 0; i < invData.Count; i++)
         {
             if(invData[i].itemID != null)
