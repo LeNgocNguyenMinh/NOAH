@@ -25,7 +25,7 @@ public class Item : ScriptableObject
     public void SetWeaponLevel()
     {
         weaponLevel ++;
-        weaponDamage += 0.5f;
-        materialNeedToUpgrade *=2;
+        weaponDamage += 2f;
+        materialNeedToUpgrade = (int)(materialNeedToUpgrade * 1.5f);
     }
 }

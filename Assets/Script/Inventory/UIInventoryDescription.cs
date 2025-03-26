@@ -43,6 +43,7 @@ public class UIInventoryDescription : MonoBehaviour
                 weaponLevelBox.SetActive(false);
                 requireForUpgrade.SetActive(false);
                 upgradeButton.SetActive(false);
+                itemFunction.text = null;
             }
             
             itemImageBox.enabled = true;
@@ -62,7 +63,7 @@ public class UIInventoryDescription : MonoBehaviour
             playerStatus.AddCoin(-itemInDescription.materialNeedToUpgrade);//Remove the coin player own
             itemInDescription.SetWeaponLevel(); //Add level weapon by 1 
             this.itemFunction.text = "Damage + " + itemInDescription.weaponDamage;//Update the damage
-            requireForUpgradeText.text = itemInDescription.materialNeedToUpgrade + "/" + playerStatus.playerCoin; //Update the requirement for upgrade
+            requireForUpgradeText.text = playerStatus.playerCoin + "/" + itemInDescription.materialNeedToUpgrade; //Update the requirement for upgrade
             weaponLevelText.text = "Level " + itemInDescription.weaponLevel;// Update the level text
             PopUp.Instance.ShowNotification("Update " + itemInDescription.itemName + " succes to level " + itemInDescription.weaponLevel);
         }

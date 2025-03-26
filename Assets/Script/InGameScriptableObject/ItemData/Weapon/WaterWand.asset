@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Water Wand
   itemDescription: Shoot Water booble
-  itemQuantity: 1
   itemLitmitBuyQuantity: 0
   itemID: WP_04
   itemPrice: 0
   itemSprite: {fileID: 21300000, guid: 9056fb343ca8b004a8c11d1816a647f9, type: 3}
   healthRecover: 0
   weaponLevel: 1
-  materialNeedToUpgrade: 65
-  weaponDamage: 2
+  materialNeedToUpgrade: 50
+  weaponDamage: 9
   weaponBulletType: {fileID: 8780310021059970476, guid: 1cb329e50564e474682beeecde415b5e, type: 3}

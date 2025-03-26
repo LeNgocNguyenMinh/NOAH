@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Paper Note #1
   itemDescription: 22134
-  itemQuantity: 1
   itemLitmitBuyQuantity: 0
   itemID: Note_01
   itemPrice: 0

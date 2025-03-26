@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: LightWand
   itemDescription: 'Can fire light lazer '
-  itemQuantity: 1
+  itemLitmitBuyQuantity: 0
   itemID: WP_02
   itemPrice: 0
   itemSprite: {fileID: 21300000, guid: b94885f45b88818499342fdfa0730cae, type: 3}
   healthRecover: 0
   weaponLevel: 1
-  materialNeedToUpgrade: 45
-  weaponDamage: 8
+  materialNeedToUpgrade: 50
+  weaponDamage: 8.5
   weaponBulletType: {fileID: 8780310021059970476, guid: d96718d8118052049b9759eedb7e13f3, type: 3}

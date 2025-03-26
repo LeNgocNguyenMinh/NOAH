@@ -33,7 +33,6 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        spawnControl = GameObject.FindObjectOfType<SpawnControl>().GetComponent<SpawnControl>();
         uiMouseAndPriority = GameObject.FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
         isOver = false;
         isPaused = false;
@@ -90,10 +89,9 @@ public class PauseMenu : MonoBehaviour
         {
             if(isOver)
             {
+                spawnControl = FindObjectOfType<SpawnControl>().GetComponent<SpawnControl>();
+                spawnControl.RespawnAfterDead();
                 isOver = false;
-                SaveController.Instance.LoadSave();
-                healthControl = FindObjectOfType<HealthControl>().GetComponent<HealthControl>();
-                healthControl.PlayerHeatlthAfterRespawn();
             }
             Time.timeScale = 1f;
             isPaused = false;

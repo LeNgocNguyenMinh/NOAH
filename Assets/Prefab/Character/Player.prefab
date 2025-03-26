@@ -487,8 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e4024101cd4ec4a8a9c7a47eaf48fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hatSprite: {fileID: 5963065023976508311}
-  coatSprite: {fileID: 1716712556281800284}
 --- !u!114 &5044455767876324950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +521,7 @@ MonoBehaviour:
   - {x: 0.5620346, y: -1.4916706, z: 0}
   m_ShapePathHash: 67082805
   m_Mesh: {fileID: 0}
-  m_InstanceId: -4414
+  m_InstanceId: -17136
   m_LocalBounds:
     m_Center: {x: 0.41917038, y: 0.14027977, z: 0}
     m_Extent: {x: 0.9001694, y: 1.6319504, z: 0}
