@@ -15,7 +15,14 @@ public class SpawnControl : MonoBehaviour
     public void RespawnAfterDead()
     {
         SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
-        StartCoroutine(LoadSceneAsync(saveData.saveScene));
+        if(SceneManager.GetActiveScene().name != saveData.saveScene)
+        {
+            StartCoroutine(LoadSceneAsync(saveData.saveScene));
+        } 
+        else{
+            PlayerStatusAfterRespawn();
+            FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
+        }
     }
     private IEnumerator LoadSceneAsync(string sceneName)
     {
@@ -40,6 +47,9 @@ public class SpawnControl : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SaveController.Instance.LoadSave();
+    }
+    private void PlayerStatusAfterRespawn()
+    {
         animator = GetComponent<Animator>();
         playerControl = GetComponent<PlayerControl>();
         playerHealthControl = GetComponent<HealthControl>();

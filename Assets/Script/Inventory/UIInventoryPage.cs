@@ -120,8 +120,13 @@ public class UIInventoryPage : MonoBehaviour
     {
         OnlyClickOneSlot();
         OnlySellectOneSlot();
+        inventoryOpen = true;
         uiInventoryDescription = GetComponentInChildren<UIInventoryDescription>();
         uiInventoryDescription.ItemHideInformation();
+    }
+    public void InventoryClose()
+    {
+        inventoryOpen = false;
     }
     public List<InventorySaveData> GetInventoryItems()
     {

@@ -23,7 +23,7 @@ public class UIInventoryController : MonoBehaviour
             uiMouseAndPriority = GameObject.FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
             if(UIInventoryPage.inventoryOpen)
             {
-                UIInventoryPage.inventoryOpen = false;
+                uiInventoryPage.InventoryClose();
                 panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
                 {
                     Time.timeScale = 1f;
@@ -32,12 +32,11 @@ public class UIInventoryController : MonoBehaviour
             else
             {
                 if(!uiMouseAndPriority.CanOpenThisUI())return;
-                UIInventoryPage.inventoryOpen = true;
+                uiInventoryPage.InventoryOpen();
                 panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
                 {
                     Time.timeScale = 0f;
                 });
-                uiInventoryPage.InventoryOpen();
                 playerLoadout.CheckClothStatus();
             }
         }
