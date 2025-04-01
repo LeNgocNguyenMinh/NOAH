@@ -3,24 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCControl : MonoBehaviour
+public class NPCSpriteControl : MonoBehaviour
 {
     private Transform player;
-    private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer mySpriteRender;
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>(); 
-        mySpriteRender = GetComponent<SpriteRenderer>();
-        player = FindObjectOfType<PlayerControl>().transform;
-    }  
-    public void OnLoadGameRunTime()
-    {
-        player = FindObjectOfType<PlayerControl>().transform;
-    }
+
     private void Update()
     {
+        player = FindObjectOfType<PlayerControl>()?.transform;
         if(player == null) return;
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         if(distanceToPlayer<3)
@@ -30,6 +21,7 @@ public class NPCControl : MonoBehaviour
     }    
     private void FacingDirection()
     {
+        player = FindObjectOfType<PlayerControl>().transform;
         if (transform.position.x < player.transform.position.x && transform.localScale.x < 0)
         {
             Flip();

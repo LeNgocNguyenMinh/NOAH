@@ -198,26 +198,32 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     }
     public void OnRightClick()//Open or close select action panel 
     {
-        uiInventoryPage.OnlyClickOneSlot();
-        uiInventoryPage.OnlySellectOneSlot();
         if(this.isEmpty) return;
         if(choicePanel.activeSelf)
         {
+            border.SetActive(false);
             choicePanel.SetActive(false);
+            isSelect = false;
+            uiInventoryPage.CloseDescriptionPanel();
         }
         else{
             uiInventoryPage.OnlyClickOneSlot();
+            uiInventoryPage.OnlySellectOneSlot();
+            uiInventoryDescription.ItemShowInformation(this.item);
             border.SetActive(true);
             choicePanel.SetActive(true);
+            isSelect = true;
+            uiInventoryPage.OpenDescriptionPanel();
         }
     }
     public void OnLeftClick()//Show this item information 
     {
-        uiInventoryPage.OnlyClickOneSlot();
-        uiInventoryPage.OnlySellectOneSlot();
+    
         if(this.isEmpty) return;
         if(isSelect)
         {
+            choicePanel.SetActive(false);
+            uiInventoryPage.CloseDescriptionPanel();
             border.SetActive(false);
             isSelect = false;
         }
@@ -226,6 +232,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
             uiInventoryPage.OnlySellectOneSlot();
             uiInventoryDescription.ItemShowInformation(this.item);
             border.SetActive(true);
+            uiInventoryPage.OpenDescriptionPanel();
             isSelect = true;
         }
     }

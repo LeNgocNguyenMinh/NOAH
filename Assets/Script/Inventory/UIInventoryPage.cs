@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using DG.Tweening; 
 
 public class UIInventoryPage : MonoBehaviour
 {
     [SerializeField]private UIInventoryItem itemPrefab;
     [SerializeField]private RectTransform contentPanel;
+    [SerializeField]private RectTransform descriptionPanel;
     private List<UIInventoryItem> listOfUIItems;
     private UIInventoryDescription uiInventoryDescription;
+    [SerializeField]private Vector2 hiddenPosition;
+    [SerializeField]private Vector2 visiblePosition;
+    [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
     public static bool inventoryOpen = false;
+    public bool descriptionPanelOpen = false;
     [SerializeField]private int inventorySize = 10;
+    
     ///
     private ItemDictionary itemDictionary;
     public void InitializeInventoryUI(int size)
@@ -44,6 +51,20 @@ public class UIInventoryPage : MonoBehaviour
         }
         PopUp.Instance.ShowNotification("Inventory full");
         return false;
+    }
+    public void OpenDescriptionPanel()
+    {
+        descriptionPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            descriptionPanelOpen = true;
+        });
+    }
+    public void CloseDescriptionPanel()
+    {
+        descriptionPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            descriptionPanelOpen = false;
+        });
     }
     //Find slot for new item
     public bool AddItem(Item item, int amountOfItem)
@@ -127,6 +148,7 @@ public class UIInventoryPage : MonoBehaviour
     public void InventoryClose()
     {
         inventoryOpen = false;
+        CloseDescriptionPanel();
     }
     public List<InventorySaveData> GetInventoryItems()
     {

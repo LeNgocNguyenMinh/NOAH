@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Clock
     originalName: 
-    pivot: {x: 0.52307695, y: -0.2923077}
+    pivot: {x: 0.52238804, y: -0.26865673}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 65
-      height: 65
+      width: 67
+      height: 67
     spriteID: 0f76d28d9129ad74fa51e332b4ca91e2
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 19
-        width: 65
-        height: 65
+        x: 15
+        y: 18
+        width: 67
+        height: 67
       spriteId: 0f76d28d9129ad74fa51e332b4ca91e2
     linkedCells: []
     parentIndex: -1
