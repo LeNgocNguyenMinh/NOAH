@@ -9,10 +9,13 @@ public class NPCDialogueControl : MonoBehaviour
 {
     [SerializeField]private NPCDialogue dialogueData;
     private int dialogueIndex;
-    private bool isTyping, isDialogueActive = false;
+    private bool isTyping = false;
+    public static bool isDialogueActive = false;
     private UIMouseAndPriority uiMouseAndPriority;
     private ObjectInteraction objectInteraction;
     private Tween typewriterTween; 
+    private int i = 0;
+    private DialogueChoice currentChoice;
 
     private void Update()
     {
@@ -20,7 +23,7 @@ public class NPCDialogueControl : MonoBehaviour
         if(objectInteraction.GetCanInteract())
         {
             if(Input.GetKeyDown(KeyCode.F))
-            {
+            {  
                 Interact();
             }
         }
@@ -28,15 +31,21 @@ public class NPCDialogueControl : MonoBehaviour
     private void Interact()
     {
         uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
-        if(dialogueData == null || uiMouseAndPriority.CanOpenThisUI() == false)
+        if(dialogueData == null || (uiMouseAndPriority.CanOpenThisUI() == false && isDialogueActive == false))
+        {
+            return;
+        }
+        if(CheckOptionChoice())
         {
             return;
         }
         if(isDialogueActive)
         {
+            Debug.Log(1);
             NextLine();
         }
         else{
+            Debug.Log(2);
             StartDialogue();
         }
     }
@@ -46,7 +55,6 @@ public class NPCDialogueControl : MonoBehaviour
         isDialogueActive = true;
         DialogueController.Instance.SetDialogue(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueIndex = 0;
-        Time.timeScale = 0f;
         TypeLine();
     }
     private void TypeLine()
@@ -72,9 +80,10 @@ public class NPCDialogueControl : MonoBehaviour
         {
             isTyping = false;
             // Xử lý tự động chuyển dòng
-            if (dialogueData.autoProgressLine.Length > dialogueIndex && dialogueData.autoProgressLine[dialogueIndex])
+            if(CheckOptionChoice())
             {
-                DOVirtual.DelayedCall(dialogueData.autoProgressDelay, () => NextLine());
+                DialogueController.Instance.ClearChoice();
+                DisplayChoice(currentChoice);
             }
         });
     }
@@ -87,20 +96,17 @@ public class NPCDialogueControl : MonoBehaviour
             typewriterTween?.Kill();
             DialogueController.Instance.SetDialogueText(dialogueData.dialogueLine[dialogueIndex]);
             isTyping = false;
-        }
-        DialogueController.Instance.ClearChoice();
+            if(CheckOptionChoice())
+            {
+                DialogueController.Instance.ClearChoice();
+                DisplayChoice(currentChoice);
+            }
+            return;
+        }        
         if(dialogueData.endDialogueLine.Length > dialogueIndex && dialogueData.endDialogueLine[dialogueIndex])
         {
             EndDialogue();
             return;
-        }
-        foreach(DialogueChoice choice in dialogueData.choice)
-        {
-            if(choice.dialogueIndex == dialogueIndex)
-            {
-                DisplayChoice(choice);
-                return;
-            }
         }
         if(++dialogueIndex < dialogueData.dialogueLine.Length)
         {
@@ -111,29 +117,36 @@ public class NPCDialogueControl : MonoBehaviour
             EndDialogue();
         }
     }
-
+    private bool CheckOptionChoice()
+    {
+        foreach(DialogueChoice choice in dialogueData.choice)
+        {
+            if(choice.dialogueIndex == dialogueIndex)
+            {
+                currentChoice = choice;
+                return true;
+            }
+        }
+        return false;
+    }
     private void EndDialogue()
     {
         typewriterTween?.Kill();
         DialogueController.Instance.HideDialogueUI();
         isDialogueActive = false;
-        Time.timeScale = 1f;
     }
     private void DisplayChoice(DialogueChoice dialogueChoice)
     {
         for(int i = 0; i < dialogueChoice.choice.Length; i++)
         {
             int nextIndex = dialogueChoice.nextDialogueIndex[i];
-            DialogueController.Instance.CreateChoiceButton(dialogueChoice.choice[i], );
+            DialogueController.Instance.CreateChoiceButton(dialogueChoice.choice[i], () => ChooseOption(nextIndex));
         }
     }
     private void ChooseOption(int nextIndex)
     {
         dialogueIndex = nextIndex;
         DialogueController.Instance.ClearChoice();
-    }
-    private void DisplayCurrentLine()
-    {
-        
+        TypeLine();
     }
 }

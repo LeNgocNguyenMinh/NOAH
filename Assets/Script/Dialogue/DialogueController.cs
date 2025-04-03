@@ -8,12 +8,12 @@ using DG.Tweening;
 public class DialogueController : MonoBehaviour
 {
     public static DialogueController Instance;
-    [SerializeField]private GameObject dialoguePanel;
+    [SerializeField]private RectTransform dialoguePanel;
     [SerializeField]private TMP_Text dialogueText, nameText;
     [SerializeField]private Image npcPortrait;
-    [SerializeField]private RectTransform panel;
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;
+    [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
     [SerializeField]private Transform choicePanel;
     [SerializeField]private GameObject choiceButtonPrefab;
     void Awake()
@@ -22,11 +22,19 @@ public class DialogueController : MonoBehaviour
     }
     public void ShowDialogueUI()
     { 
-        dialoguePanel.SetActive(true);
+        dialoguePanel.gameObject.SetActive(true);
+        dialoguePanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            Time.timeScale = 0f;
+        });
     }
     public void HideDialogueUI()
     { 
-        dialoguePanel.SetActive(false);
+        dialoguePanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            dialoguePanel.gameObject.SetActive(false);
+            Time.timeScale = 1f;
+        });
     }
     public void SetDialogue(string name, Sprite portrait)
     {
@@ -39,7 +47,7 @@ public class DialogueController : MonoBehaviour
     }
     public void ClearChoice()
     {
-        foreach(Transform child in panel)
+        foreach(Transform child in choicePanel)
         {
             Destroy(child.gameObject);
         }

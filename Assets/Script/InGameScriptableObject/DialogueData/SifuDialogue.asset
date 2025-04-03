@@ -18,10 +18,12 @@ MonoBehaviour:
   - Hello my student!
   - Do you remember your name?
   - Good, and what about why are you here?
-  - When i found you in the moitain, i see a name in your hand was wrote by blood.
+  - Do you know where are you now?
+  - When i found you in the moutain, i see a name in your hand was wrote by blood.
     It's Noah.
-  autoProgressLine: 01000101
-  endDialogueLine: 
+  - Please take a rest.
+  autoProgressLine: 010001000100
+  endDialogueLine: 000000010001
   typingSpeed: 0.05
   autoProgressDelay: 1.5
   choice:
@@ -29,9 +31,4 @@ MonoBehaviour:
     choice:
     - Yes, my name is Noah.
     - No, why i can't remember my name?
-    nextDialogueIndex: 0200000003000000
-  - dialogueIndex: 1
-    choice:
-    - Yes, my name is Noah.
-    - No, i can't even remember my name.
-    nextDialogueIndex: 0200000003000000
+    nextDialogueIndex: 0200000004000000

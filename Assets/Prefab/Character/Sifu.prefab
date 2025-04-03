@@ -59,10 +59,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: 51676d600645c114cba265bf3d6cd2a8, type: 2}
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
-  nameText: {fileID: 0}
-  npcPortrait: {fileID: 2019294524, guid: 774c773e1c1fd4348832f3fecf3aac6f, type: 3}
 --- !u!61 &1219021140597353609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -269,12 +265,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3502258831288314050}
-  - component: {fileID: 300690866682634575}
   - component: {fileID: 7134361662165958843}
   - component: {fileID: 4214548661884359540}
   - component: {fileID: 6450725883799372304}
   - component: {fileID: 6720846361748122183}
   - component: {fileID: 2788741177537900264}
+  - component: {fileID: 9126359345354344674}
   m_Layer: 0
   m_Name: Sifu
   m_TagString: NPC
@@ -299,18 +295,6 @@ Transform:
   - {fileID: 6319458248109047308}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &300690866682634575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7800460582892181634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e2b6edb179e87f468e11aaecb81c178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &7134361662165958843
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -490,7 +474,7 @@ MonoBehaviour:
   - {x: -0.3000493, y: -0.80340576, z: 0}
   m_ShapePathHash: 919392239
   m_Mesh: {fileID: 0}
-  m_InstanceId: -4774
+  m_InstanceId: -7042
   m_LocalBounds:
     m_Center: {x: -0.0683341, y: -0.11908841, z: 0}
     m_Extent: {x: 0.52623177, y: 0.8878803, z: 0}
@@ -515,3 +499,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9126359345354344674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800460582892181634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4f6d9e3e54a4c41bf1f04ca96b0425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
