@@ -77,6 +77,7 @@ public class UIInventoryPage : MonoBehaviour
                 if(listOfUIItems[i].GetItem().itemID == item.itemID)
                 {
                     listOfUIItems[i].AddQuantity(amountOfItem);
+                    MissionManager.Instance.UpdateCollectMission(item.itemID, amountOfItem);
                     return true;
                 }
             }
@@ -92,6 +93,7 @@ public class UIInventoryPage : MonoBehaviour
                 if(listOfUIItems[i].isEmpty)
                 {
                     listOfUIItems[i].AddItem(item, amountOfItem);
+                    MissionManager.Instance.UpdateCollectMission(item.itemID, amountOfItem);
                     break;
                 }
             }

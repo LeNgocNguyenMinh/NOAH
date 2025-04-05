@@ -1,0 +1,4 @@
+-	Các cập nhật chức năng sẽ được thêm vào đây theo ngày
+-	5/4/2025:
++	Demo chức năng đối thoại (dialogue system).
++	Demo chức năng nhiệm vụ (mision system).

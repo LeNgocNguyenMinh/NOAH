@@ -35,7 +35,7 @@ public class NPCDialogueControl : MonoBehaviour
         {
             return;
         }
-        if(CheckOptionChoice())
+        if(CheckOptionChoice() && !isTyping)
         {
             return;
         }

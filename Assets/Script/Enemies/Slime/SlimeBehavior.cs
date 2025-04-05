@@ -43,7 +43,7 @@ public class SlimeBehavior : MonoBehaviour//-------------for Slime Enemy and eve
     {
         player = FindObjectOfType<PlayerControl>().transform;
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if(player == null) return;
         
