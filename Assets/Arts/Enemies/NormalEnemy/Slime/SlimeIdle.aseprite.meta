@@ -129,9 +129,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 71
-      width: 30
-      height: 21
+      y: 50
+      width: 28
+      height: 23
     spriteID: 766dc48d5b0ad3c46a9033efb7ebb17f
     spriteBone: []
     spriteOutline: []
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 71}
+    uvTransform: {x: 4, y: 50}
   - name: SlimeIdle_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -148,8 +148,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 42
-      y: 71
+      x: 40
+      y: 50
       width: 36
       height: 17
     spriteID: 5f47cbc351b5f5a488461afb1cda2caf
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 42, y: 71}
+    uvTransform: {x: 40, y: 50}
   - name: SlimeIdle_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -168,8 +168,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 48
+      x: 62
+      y: 4
       width: 46
       height: 15
     spriteID: 0cc44ab6047611f4d8e6d109c34d48bb
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 48}
+    uvTransform: {x: 62, y: 4}
   - name: SlimeIdle_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -210,8 +210,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 27
-      width: 56
-      height: 13
+      width: 46
+      height: 15
     spriteID: 83fbab1b9cc2df243883a3822eeef052
     spriteBone: []
     spriteOutline: []
@@ -228,10 +228,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 62
-      y: 4
-      width: 50
-      height: 15
+      x: 84
+      y: 50
+      width: 36
+      height: 17
     spriteID: 5de604dc41b62d047b5817fca826e363
     spriteBone: []
     spriteOutline: []
@@ -240,47 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 62, y: 4}
-  - name: SlimeIdle_Frame_6
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 58
-      y: 48
-      width: 46
-      height: 15
-    spriteID: 1eb222928e8c7c34587fcc15235e4fe3
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 58, y: 48}
-  - name: SlimeIdle_Frame_7
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 86
-      y: 71
-      width: 36
-      height: 17
-    spriteID: 1ce7128c9c1cd44448eff674a132ca75
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 86, y: 71}
+    uvTransform: {x: 84, y: 50}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -294,10 +254,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 17
+        x: 18
         y: 0
-        width: 30
-        height: 21
+        width: 28
+        height: 23
       spriteId: 766dc48d5b0ad3c46a9033efb7ebb17f
     - name: SlimeIdle_Frame_1
       frameIndex: 1
@@ -330,38 +290,20 @@ ScriptedImporter:
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 4
-        y: 0
-        width: 56
-        height: 13
-      spriteId: 83fbab1b9cc2df243883a3822eeef052
-    - name: SlimeIdle_Frame_5
-      frameIndex: 5
-      additiveSortOrder: 0
-      cellRect:
-        x: 7
-        y: 0
-        width: 50
-        height: 15
-      spriteId: 5de604dc41b62d047b5817fca826e363
-    - name: SlimeIdle_Frame_6
-      frameIndex: 6
-      additiveSortOrder: 0
-      cellRect:
         x: 9
         y: 0
         width: 46
         height: 15
-      spriteId: 1eb222928e8c7c34587fcc15235e4fe3
-    - name: SlimeIdle_Frame_7
-      frameIndex: 7
+      spriteId: 83fbab1b9cc2df243883a3822eeef052
+    - name: SlimeIdle_Frame_5
+      frameIndex: 5
       additiveSortOrder: 0
       cellRect:
         x: 14
         y: 0
         width: 36
         height: 17
-      spriteId: 1ce7128c9c1cd44448eff674a132ca75
+      spriteId: 5de604dc41b62d047b5817fca826e363
     linkedCells: []
     parentIndex: -1
   platformSettings:

@@ -115,10 +115,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 56
-        height: 21
+        width: 50
+        height: 23
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4961612, y: 0.545899}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: SlimeIdle_1
       rect:
         serializedVersion: 2
-        x: 56
+        x: 50
         y: 0
-        width: 56
-        height: 21
+        width: 50
+        height: 23
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4961612, y: 0.545899}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: SlimeIdle_2
       rect:
         serializedVersion: 2
-        x: 112
+        x: 100
         y: 0
-        width: 56
-        height: 21
+        width: 50
+        height: 23
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4961612, y: 0.545899}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: SlimeIdle_3
       rect:
         serializedVersion: 2
-        x: 168
+        x: 150
         y: 0
-        width: 56
-        height: 21
+        width: 50
+        height: 23
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4961612, y: 0.545899}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: SlimeIdle_4
       rect:
         serializedVersion: 2
-        x: 224
+        x: 200
         y: 0
-        width: 56
-        height: 21
+        width: 50
+        height: 23
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4961612, y: 0.545899}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: SlimeIdle_5
       rect:
         serializedVersion: 2
-        x: 280
+        x: 250
         y: 0
-        width: 56
-        height: 21
+        width: 50
+        height: 23
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4961612, y: 0.545899}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,48 +231,6 @@ TextureImporter:
       bones: []
       spriteID: 1edc55f0113580243b0832ba42644f8e
       internalID: 1050992343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeIdle_6
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 56
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a64f65c37ae80849b9bb23521a664fb
-      internalID: 130279777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeIdle_7
-      rect:
-        serializedVersion: 2
-        x: 392
-        y: 0
-        width: 56
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87955d781bb5e574eba5c402b3740850
-      internalID: 1296928276
       vertices: []
       indices: 
       edges: []
@@ -294,8 +252,6 @@ TextureImporter:
       SlimeIdle_3: 1647475108
       SlimeIdle_4: 720648864
       SlimeIdle_5: 1050992343
-      SlimeIdle_6: 130279777
-      SlimeIdle_7: 1296928276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

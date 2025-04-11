@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyChaseState : EnemyState
+{
+    private Vector3 playerPos;
+    private Vector3 direction;
+    public EnemyChaseState(MovingEnemy enemy, EnemyStateMachine stateMachine) : base(enemy, stateMachine)
+    {
+    }
+    public override void EnterState()
+    {
+        base.EnterState();
+        enemy.Animator.SetTrigger("Walk");
+    }
+    public override void ExitState()
+    {
+        base.ExitState();
+    }
+    public override void FrameUpdate()
+    {
+        base.FrameUpdate();
+        playerPos = UnityEngine.Object.FindObjectOfType<PlayerControl>().GetComponent<PlayerControl>().transform.position;
+        direction = (playerPos - enemy.transform.position).normalized; 
+        enemy.Move(direction, enemy.ChaseSpeed);
+        if(enemy.IsInAttackRange)
+        {
+            enemy.StateMachine.ChangeState(enemy.AttackState);
+        }
+        if(!enemy.IsInChaseRange)
+        {
+            enemy.StateMachine.ChangeState(enemy.WalkState);
+        }
+    }
+    public override void PhysicsUpdate()
+    {
+        base.PhysicsUpdate();
+    }
+}

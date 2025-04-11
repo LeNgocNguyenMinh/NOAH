@@ -47,10 +47,10 @@ public class Bullet : MonoBehaviour
         }
         else if (hitInfo.tag == "Enemy")
         {
-            EnemyHealthControl enemy = hitInfo.GetComponent<EnemyHealthControl>();
-            enemy.EnemyHurt(damageAmount + playerStatus.playerWeaponDamage);//Enemy hurt
-            DamageNumberInEnemy damageNumber = hitInfo.GetComponentInChildren<DamageNumberInEnemy>();//Get the script damage text in enemy head
-            damageNumber.showDamageNumber(damageAmount);
+            EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
+            enemy.HitByBullet(damageAmount + playerStatus.playerWeaponDamage);//Enemy hurt
+           /*  DamageNumberInEnemy damageNumber = hitInfo.GetComponentInChildren<DamageNumberInEnemy>();//Get the script damage text in enemy head
+            damageNumber.showDamageNumber(damageAmount); */
             Instantiate(bulletHitParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);//Bullet destroy
         }

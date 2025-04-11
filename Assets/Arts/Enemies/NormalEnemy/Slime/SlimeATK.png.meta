@@ -115,10 +115,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: SlimeATK_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 44
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: SlimeATK_2
       rect:
         serializedVersion: 2
-        x: 90
+        x: 88
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: SlimeATK_3
       rect:
         serializedVersion: 2
-        x: 135
+        x: 132
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: SlimeATK_4
       rect:
         serializedVersion: 2
-        x: 180
+        x: 176
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: SlimeATK_5
       rect:
         serializedVersion: 2
-        x: 225
+        x: 220
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: SlimeATK_6
       rect:
         serializedVersion: 2
-        x: 270
+        x: 264
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: SlimeATK_7
       rect:
         serializedVersion: 2
-        x: 315
+        x: 308
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,40 +281,19 @@ TextureImporter:
       name: SlimeATK_8
       rect:
         serializedVersion: 2
-        x: 360
+        x: 352
         y: 0
-        width: 45
-        height: 49
+        width: 44
+        height: 43
       alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
+      pivot: {x: 0.5, y: 0.2856565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 833bfd31f047c27408d8946ef16204a6
-      internalID: 2065717616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeATK_9
-      rect:
-        serializedVersion: 2
-        x: 405
-        y: 0
-        width: 45
-        height: 49
-      alignment: 9
-      pivot: {x: 0.3421052, y: 0.01664892}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 825a2ba5673c5e144a39d5c5cf1ed0fe
-      internalID: 917477670
+      spriteID: 86d67805b7f1bf4418fc903752b07607
+      internalID: 887480507
       vertices: []
       indices: 
       edges: []
@@ -338,8 +317,7 @@ TextureImporter:
       SlimeATK_5: 851097404
       SlimeATK_6: -1045276
       SlimeATK_7: 681119817
-      SlimeATK_8: 2065717616
-      SlimeATK_9: 917477670
+      SlimeATK_8: 887480507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

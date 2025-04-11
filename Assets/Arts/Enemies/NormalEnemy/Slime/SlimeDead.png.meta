@@ -115,10 +115,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
+        width: 55
         height: 43
       alignment: 9
-      pivot: {x: 0.55731, y: 0.01924397}
+      pivot: {x: 0.5457637, y: 0.2875209}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: SlimeDead_1
       rect:
         serializedVersion: 2
-        x: 50
+        x: 55
         y: 0
-        width: 50
+        width: 55
         height: 43
       alignment: 9
-      pivot: {x: 0.55731, y: 0.01924397}
+      pivot: {x: 0.5457637, y: 0.2875209}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: SlimeDead_2
       rect:
         serializedVersion: 2
-        x: 100
+        x: 110
         y: 0
-        width: 50
+        width: 55
         height: 43
       alignment: 9
-      pivot: {x: 0.55731, y: 0.01924397}
+      pivot: {x: 0.5457637, y: 0.2875209}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: SlimeDead_3
       rect:
         serializedVersion: 2
-        x: 150
+        x: 165
         y: 0
-        width: 50
+        width: 55
         height: 43
       alignment: 9
-      pivot: {x: 0.55731, y: 0.01924397}
+      pivot: {x: 0.5457637, y: 0.2875209}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: SlimeDead_4
       rect:
         serializedVersion: 2
-        x: 200
+        x: 220
         y: 0
-        width: 50
+        width: 55
         height: 43
       alignment: 9
-      pivot: {x: 0.55731, y: 0.01924397}
+      pivot: {x: 0.5457637, y: 0.2875209}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: SlimeDead_5
       rect:
         serializedVersion: 2
-        x: 250
+        x: 275
         y: 0
-        width: 50
+        width: 55
         height: 43
       alignment: 9
-      pivot: {x: 0.55731, y: 0.01924397}
+      pivot: {x: 0.5457637, y: 0.2875209}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: SlimeDead_6
       rect:
         serializedVersion: 2
-        x: 300
+        x: 330
         y: 0
-        width: 50
+        width: 55
         height: 43
       alignment: 9
-      pivot: {x: 0.55731, y: 0.01924397}
+      pivot: {x: 0.5457637, y: 0.2875209}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,6 +252,27 @@ TextureImporter:
       bones: []
       spriteID: dde7720045f93e840bf931c7ec1f6aa7
       internalID: 1699290283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDead_7
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 55
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5457637, y: 0.2875209}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f222d0dcf32ec4e90660a5fdf48bf5
+      internalID: 1664587321
       vertices: []
       indices: 
       edges: []
@@ -274,6 +295,7 @@ TextureImporter:
       SlimeDead_4: 1080806117
       SlimeDead_5: 1567261230
       SlimeDead_6: 1699290283
+      SlimeDead_7: 1664587321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

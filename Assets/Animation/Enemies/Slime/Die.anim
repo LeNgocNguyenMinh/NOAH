@@ -35,7 +35,7 @@ AnimationClip:
     - time: 0.6
       value: {fileID: 1699290283, guid: f3b4ed05c04798d458bd549603c81d78, type: 3}
     attribute: m_Sprite
-    path: SlimeSprite
+    path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -47,7 +47,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2698192107
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -89,9 +89,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.6
-    functionName: Die
+    functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 1
     messageOptions: 0
