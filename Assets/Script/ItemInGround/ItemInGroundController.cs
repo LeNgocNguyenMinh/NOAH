@@ -9,6 +9,11 @@ public class ItemInGroundController : MonoBehaviour
     public List<ItemInGroundSaveData> tmpList = new List<ItemInGroundSaveData>();
     public List<GameObject> itemInGroudPrefab;
     private ItemDictionary itemDictionary;
+   /*  private void Start()
+    {
+        tmpList = GetGroundItems();
+        Debug.Log(tmpList.Count);
+    } */
     public void SetItemIsCollect(string itemID, Vector3 pos)
     {
         for(int i = 0; i < tmpList.Count; i++)
