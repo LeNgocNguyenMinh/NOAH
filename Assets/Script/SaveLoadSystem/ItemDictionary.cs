@@ -24,14 +24,4 @@ public class ItemDictionary : MonoBehaviour
         Debug.LogWarning($"Không tìm thấy Item ID {itemID} trong dictionary");
         return null; // Trả về null nếu không tìm thấy
     }
-    /* public GameObject GetItemObject(string itemID)
-    {
-        for(int i = 0; i < itemObjectList.Count; i++)
-        {
-            if(itemObjectList[i].GetComponent<CollectableItems>().GetItemID() == itemID)
-            {
-                return itemObjectList[i];
-            }
-        }
-    } */
 }

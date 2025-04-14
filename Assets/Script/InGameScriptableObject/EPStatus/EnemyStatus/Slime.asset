@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLevel: 1
   enemyName: Slime
-  enemyBaseDamage: 7
-  enemyDamage: 0
+  enemyBaseDamage: 1
+  enemyDamage: 8
   enemyBaseHealth: 50
   enemyMaxHealth: 50

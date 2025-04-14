@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 75f5af96d10beb241992282df4caf300, type: 2}
+  itemQuantity: 1
 --- !u!60 &6651740145158865856
 PolygonCollider2D:
   m_ObjectHideFlags: 0

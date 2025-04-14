@@ -11,6 +11,7 @@ public class SaveData
     public List<InventorySaveData> inventorySaveData;
     public List<InventorySaveData> hotBarSaveData;
     public List<ShopSaveData> shopSaveData; 
+    public List<ItemInGroundSaveData> itemInGroundSaveData;
     public TimeSaveData timeSaveData;
     public PlayerSaveData playerSaveData;
 }

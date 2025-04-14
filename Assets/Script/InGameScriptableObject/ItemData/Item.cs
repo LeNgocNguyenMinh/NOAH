@@ -12,6 +12,7 @@ public class Item : ScriptableObject
     public string itemID;
     public int itemPrice;
     public Sprite itemSprite;
+    public GameObject itemPrefab;
     //Those below attributes only use for the HP item.
     [Header("----HP Item Info----")] 
     public float healthRecover;

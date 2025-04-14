@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLevel: 1
   enemyName: Curse Rose
-  enemyBaseDamage: 5
-  enemyDamage: 0
+  enemyBaseDamage: 1
+  enemyDamage: 2
   enemyBaseHealth: 50
   enemyMaxHealth: 50

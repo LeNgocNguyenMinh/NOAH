@@ -282,7 +282,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.022644997, y: 0.18576273}
   serializedVersion: 2
-  m_Radius: 4.1654563
+  m_Radius: 3.6642103
 --- !u!114 &7473727940681068410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,13 +1189,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4f9daf958608f4996433d70b86f6a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <mainObject>k__BackingField: {fileID: 28939735398813955}
   <RB>k__BackingField: {fileID: 8580631396950008050}
-  <WalkSpeed>k__BackingField: 2
+  <WalkSpeed>k__BackingField: 4
   <WalkDuration>k__BackingField: 4
   <IdleDuration>k__BackingField: 3
   <ChaseSpeed>k__BackingField: 3
   <MoveRange>k__BackingField: 3
-  <AttackCoolDown>k__BackingField: 3
+  <AttackCoolDown>k__BackingField: 0
 --- !u!114 &6028046122501504635
 MonoBehaviour:
   m_ObjectHideFlags: 0

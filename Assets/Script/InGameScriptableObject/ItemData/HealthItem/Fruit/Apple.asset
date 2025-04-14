@@ -18,6 +18,7 @@ MonoBehaviour:
   itemID: HPFruit_01
   itemPrice: 5
   itemSprite: {fileID: -7334734619694275694, guid: 867781a64f247944f8249b6712e579c1, type: 3}
+  itemPrefab: {fileID: 7547224070579580989, guid: 028c76e8434f3bc4eb77b76366af6130, type: 3}
   healthRecover: 5
   weaponLevel: 0
   materialNeedToUpgrade: 0

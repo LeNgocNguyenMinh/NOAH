@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
-  itemQuantity: 0
+  itemQuantity: 1
 --- !u!58 &4146677760585892744
 CircleCollider2D:
   m_ObjectHideFlags: 0

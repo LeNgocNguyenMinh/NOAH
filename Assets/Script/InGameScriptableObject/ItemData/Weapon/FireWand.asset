@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Fire Wand
   itemDescription: 'Deal Fire Damage '
-  itemQuantity: 1
+  itemLitmitBuyQuantity: 0
   itemID: WP_01
   itemPrice: 0
   itemSprite: {fileID: 21300000, guid: 55f566a593c7ca946970783bb0dc08aa, type: 3}
+  itemPrefab: {fileID: 8513328375647144578, guid: 27fdf056d33e6524fa3b5014abdedeec, type: 3}
   healthRecover: 0
   weaponLevel: 1
   materialNeedToUpgrade: 50

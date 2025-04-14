@@ -7,7 +7,8 @@ public class EnemyHealthControl : MonoBehaviour
 {
     [SerializeField]private EnemyStatus enemyStatus;
     [SerializeField]private PlayerStatus playerStatus;
-    [SerializeField]private MovingEnemy enemy;
+    [SerializeField]private MovingEnemy moveEnemy;
+    [SerializeField]private StandingEnemy standEnemy;
     private float enemyMaxHealth;
     private float enemyCurrentHealth;
     private EnemyHealthBar enemyHealthBar;
@@ -43,7 +44,14 @@ public class EnemyHealthControl : MonoBehaviour
         if(enemyCurrentHealth <= 0)
         {
             enemyCurrentHealth = 0;
-            enemy.Die();
+            if(moveEnemy != null)
+            {
+                moveEnemy.Die();
+            }
+            if(standEnemy != null)
+            {
+                standEnemy.Die();
+            }
         }
         UpdateHealthText();
         enemyHealthBar.SetHealth(enemyCurrentHealth);

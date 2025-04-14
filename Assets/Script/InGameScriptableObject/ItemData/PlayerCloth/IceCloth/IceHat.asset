@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Ice Hat
   itemDescription: Alway keep a cold head
-  itemQuantity: 1
   itemLitmitBuyQuantity: 1
   itemID: IceCloth_Hat_IceHat
   itemPrice: 0
   itemSprite: {fileID: 1714998394, guid: a86013a6713afec46811c0c772d9aab4, type: 3}
+  itemPrefab: {fileID: 7201876602067210802, guid: 10fbf77303b47c34ea687bfce13ca91c, type: 3}
   healthRecover: 0
   weaponLevel: 0
   materialNeedToUpgrade: 0
