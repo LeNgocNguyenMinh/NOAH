@@ -7,17 +7,15 @@ public class ItemInGroundController : MonoBehaviour
 {
     [SerializeField]private List<CollectableItems> listItemInGround = new List<CollectableItems>();
     public List<ItemInGroundSaveData> tmpList = new List<ItemInGroundSaveData>();
+    public List<GameObject> itemInGroudPrefab;
     private ItemDictionary itemDictionary;
-    private void Start()
-    {
-        tmpList = GetGroundItems();
-    }
     public void SetItemIsCollect(string itemID, Vector3 pos)
     {
         for(int i = 0; i < tmpList.Count; i++)
         {
             if(tmpList[i].itemID == itemID && tmpList[i].itemPos == pos)
             {
+                Debug.Log("CÓ");
                 tmpList[i].isCollect = true;
                 break;
             }
@@ -45,11 +43,16 @@ public class ItemInGroundController : MonoBehaviour
     public void SetItemInGround(List<ItemInGroundSaveData> itemGroundData)
     {
         itemDictionary = FindObjectOfType<ItemDictionary>().GetComponent<ItemDictionary>();
+        tmpList = itemGroundData;
+        for(int i = 0; i < itemInGroudPrefab.Count; i++)
+        {
+            Destroy(itemInGroudPrefab[i]);
+        }
         for(int i = 0; i < itemGroundData.Count; i++)
         {
             if(!itemGroundData[i].isCollect)
             {
-                Instantiate(itemDictionary.GetItemInfo(itemGroundData[i].itemID).itemPrefab, itemGroundData[i].itemPos, Quaternion.identity);
+                itemInGroudPrefab.Add(Instantiate(itemDictionary.GetItemInfo(itemGroundData[i].itemID).itemPrefab, itemGroundData[i].itemPos, Quaternion.identity));
             }
         }
     }

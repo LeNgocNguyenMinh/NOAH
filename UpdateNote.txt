@@ -2,5 +2,6 @@
 -	5/4/2025:
 +	Demo chức năng đối thoại có lựa chọn (dialogue system).
 +	Demo chức năng nhiệm vụ (mision system).
--	15/04/2025:
+-	14/04/2025:
 +	Hoàn thành sửa đổi enemy behavior bằng design pattern.
++	Fix lỗi item save/load khi đã nhặt sẽ không được spawn, fix lỗi item duplicate khi chuyển scene.

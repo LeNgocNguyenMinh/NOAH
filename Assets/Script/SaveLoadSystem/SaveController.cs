@@ -14,6 +14,7 @@ public class SaveController : MonoBehaviour
     private HotBarManager hotBarManager;
     private ShopController shopController;
     private TimeManager timeManager;
+    private ItemInGroundController itemInGroundController;
     [SerializeField]private PlayerStatus playerStatus;
     private SaveData existingData;
     void Awake()
@@ -29,6 +30,7 @@ public class SaveController : MonoBehaviour
         uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
         hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
         timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
+        itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
         SaveData saveData = new SaveData
         {
             saveScene = SceneManager.GetActiveScene().name,
@@ -37,6 +39,7 @@ public class SaveController : MonoBehaviour
             mapBoundary = existingData.mapBoundary,
             hotBarSaveData = hotBarManager?.GetHotBarItems(),
             shopSaveData = existingData.shopSaveData,
+            itemInGroundSaveData = itemInGroundController?.GetListItemInGround(),
             timeSaveData = timeManager?.GetTime(),
             playerSaveData = playerStatus?.GetPlayerInfo()
         };
@@ -114,6 +117,7 @@ public class SaveController : MonoBehaviour
             uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
             timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
             hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
+            itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
             if(saveData.inventorySaveData!=null)
             {
                 uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
@@ -137,6 +141,10 @@ public class SaveController : MonoBehaviour
             if(saveData.playerSaveData!=null)
             {
                 playerStatus.SetPlayerInfo(saveData.playerSaveData);
+            }
+            if(saveData.itemInGroundSaveData!=null)
+            {
+                itemInGroundController.SetItemInGround(saveData.itemInGroundSaveData);
             }
         }
     }
@@ -151,6 +159,7 @@ public class SaveController : MonoBehaviour
             uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
             timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
             hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
+            itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
             if(saveData.inventorySaveData!=null)
             {
                 uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
@@ -174,6 +183,10 @@ public class SaveController : MonoBehaviour
             if(saveData.playerSaveData!=null)
             {
                 playerStatus.SetPlayerInfo(saveData.playerSaveData);
+            }
+            if(saveData.itemInGroundSaveData!=null)
+            {
+                itemInGroundController.SetItemInGround(saveData.itemInGroundSaveData);
             }
         }
     }
