@@ -90,7 +90,10 @@ public class TimeManager : MonoBehaviour
         {
             foreach(Light2D light in sunLight)
             {
-                light.color = sunLightGradient.Evaluate(percentage);
+                if(light != null)
+                {
+                    light.color = sunLightGradient.Evaluate(percentage);
+                } 
             }
         }
 

@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour
 {
+    private TimeManager timeManager; 
+    TimeSaveData tmpTime = new TimeSaveData();
     [SerializeField]private string sceneBuildIndex;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,7 +23,8 @@ public class SceneControl : MonoBehaviour
         // Bắt đầu load scene nhưng không active ngay lập tức
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         operation.allowSceneActivation = false;
-
+        timeManager = FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
+        tmpTime = timeManager.GetTime();
         // Chờ scene load xong
         while (!operation.isDone)
         {
@@ -40,12 +43,12 @@ public class SceneControl : MonoBehaviour
         if(sceneBuildIndex == "Level1")
         {
             Vector3 pos = new Vector3(-25.75f, 10.07f, 0f);
-            SaveController.Instance.LoadSave(pos);
+            SaveController.Instance.LoadSave(pos, tmpTime);
         }  
         if(sceneBuildIndex == "Level2")
         {
             Vector3 pos = new Vector3(-6.4f, -5.55f, 0f);
-            SaveController.Instance.LoadSave(pos);
+            SaveController.Instance.LoadSave(pos, tmpTime);
         }    
     }
 }

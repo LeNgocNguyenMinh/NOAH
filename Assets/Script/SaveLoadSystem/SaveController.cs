@@ -77,6 +77,7 @@ public class SaveController : MonoBehaviour
             mapBoundary = existingData.mapBoundary,
             hotBarSaveData = hotBarManager?.GetHotBarItems(),
             shopSaveData = existingData.shopSaveData,
+            itemInGroundSaveData = existingData.itemInGroundSaveData,
             timeSaveData = timeManager?.GetTimeSkip(),
             playerSaveData = playerStatus?.GetPlayerInfo()
         };
@@ -98,7 +99,7 @@ public class SaveController : MonoBehaviour
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
         PopUp.Instance.ShowNotification("Save success.");
     }
-    public void LoadSave(Vector3 playerPos = new Vector3())
+    public void LoadSave(Vector3 playerPos = new Vector3(), TimeSaveData inputTimeData = null)
     {
         if(File.Exists(saveLocation))
         {
@@ -118,31 +119,36 @@ public class SaveController : MonoBehaviour
             timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
             hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
             itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
-            if(saveData.inventorySaveData!=null)
+            shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
+            if(saveData.inventorySaveData!=null && uiInventoryPage != null)
             {
                 uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
             }
-            if(saveData.hotBarSaveData!=null)
+            if(saveData.hotBarSaveData != null && hotBarManager != null)
             {
                 hotBarManager.SetHotBarItems(saveData.hotBarSaveData);
             }
-            if(FindObjectOfType<ShopController>()!=null)
+            if(saveData.shopSaveData != null && shopController != null)
             {
-                if(saveData.shopSaveData!=null)
-                {
-                    shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
-                    shopController.SetListItemInShop(saveData.shopSaveData);
-                }
+                shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
+                shopController.SetListItemInShop(saveData.shopSaveData);
             }
-            if(saveData.timeSaveData!=null)
+            if(timeManager != null)
             {
-                timeManager.SetTime(saveData.timeSaveData);
+                if(inputTimeData != null)
+                {
+                    timeManager.SetTime(inputTimeData);
+                }
+                else if(saveData.timeSaveData != null)
+                {
+                    timeManager.SetTime(saveData.timeSaveData);
+                }
             }
             if(saveData.playerSaveData!=null)
             {
                 playerStatus.SetPlayerInfo(saveData.playerSaveData);
             }
-            if(saveData.itemInGroundSaveData!=null)
+            if(saveData.itemInGroundSaveData != null && itemInGroundController != null)
             {
                 itemInGroundController.SetItemInGround(saveData.itemInGroundSaveData);
             }
