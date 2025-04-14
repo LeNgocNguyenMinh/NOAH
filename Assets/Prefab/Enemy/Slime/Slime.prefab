@@ -76,7 +76,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStatus: {fileID: 11400000, guid: d742d73e6ef1e814d9fcc5cd6b99f3f0, type: 2}
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
-  enemy: {fileID: 782655299358372623}
+  moveEnemy: {fileID: 782655299358372623}
+  standEnemy: {fileID: 0}
   healthText: {fileID: 4915195903395430916}
   levelText: {fileID: 1413609556309754082}
 --- !u!1 &1254664169945238093
@@ -1276,9 +1277,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02033635, y: 0.2694584}
+  m_Offset: {x: -0.02033635, y: -0.040711325}
   serializedVersion: 2
-  m_Radius: 0.4440745
+  m_Radius: 0.3835535
 --- !u!114 &913402289817611610
 MonoBehaviour:
   m_ObjectHideFlags: 0
