@@ -5,7 +5,7 @@ Step to play the game\
 3.You can choose continue or new game.\
 4.Press F to interact, press Esc for pause menu.\
 Youtube link game demo:\
-https://www.youtube.com/watch?v=Xp0u6GTyPiE
+https://www.youtube.com/watch?v=Xp0u6GTyPiE\
 #Function in game:
 1. Player level: Player when level up gain points and can spend that point to health, damage or bullet in player status panel.
 2. Player status: Check and Change player information or attributes.(press C)
