@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb9b79b6515445444801f54f997fd798
+guid: ee9ea7630904cba47919c1dc33cbe4ee
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BackGround_Frame_0
+  - name: BackGround
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.4989605, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 400
-      height: 200
-    spriteID: cbab74f0d77775445b222b623d453311
+      width: 481
+      height: 270
+    spriteID: 15ecfb1187965fc4884d2bdaaf54cf2f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -156,9 +156,9 @@ ScriptedImporter:
       cellRect:
         x: 0
         y: 0
-        width: 400
-        height: 200
-      spriteId: cbab74f0d77775445b222b623d453311
+        width: 481
+        height: 270
+      spriteId: 15ecfb1187965fc4884d2bdaaf54cf2f
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 400, y: 200}
+  canvasSize: {x: 480, y: 270}

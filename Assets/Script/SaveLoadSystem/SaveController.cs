@@ -99,7 +99,7 @@ public class SaveController : MonoBehaviour
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
         PopUp.Instance.ShowNotification("Save success.");
     }
-    public void LoadSave(Vector3 playerPos = new Vector3(), TimeSaveData inputTimeData = null)
+    public void LoadSave(Vector3 playerPos = new Vector3(), List<InventorySaveData> inventoryItemsTMP = null, List<InventorySaveData> hotBarItemsTMP = null, List<ItemInGroundSaveData> listItemsTMP = null, TimeSaveData timeDataTMP = null, PlayerSaveData playerDataTMP = null)
     {
         if(File.Exists(saveLocation))
         {
@@ -120,37 +120,56 @@ public class SaveController : MonoBehaviour
             hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
             itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
             shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
-            if(saveData.inventorySaveData!=null && uiInventoryPage != null)
+
+            if(inventoryItemsTMP != null && uiInventoryPage != null)
+            {
+                uiInventoryPage.SetInventoryItems(inventoryItemsTMP);
+            }
+            else if(saveData.inventorySaveData!=null && uiInventoryPage != null)
             {
                 uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
             }
-            if(saveData.hotBarSaveData != null && hotBarManager != null)
+
+            if(hotBarItemsTMP != null && hotBarManager != null)
+            {
+                hotBarManager.SetHotBarItems(hotBarItemsTMP);
+            }
+            else if(saveData.hotBarSaveData != null && hotBarManager != null)
             {
                 hotBarManager.SetHotBarItems(saveData.hotBarSaveData);
             }
+
             if(saveData.shopSaveData != null && shopController != null)
             {
                 shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
                 shopController.SetListItemInShop(saveData.shopSaveData);
             }
-            if(timeManager != null)
+
+            if(timeDataTMP != null && timeManager != null)
             {
-                if(inputTimeData != null)
-                {
-                    timeManager.SetTime(inputTimeData);
-                }
-                else if(saveData.timeSaveData != null)
-                {
-                    timeManager.SetTime(saveData.timeSaveData);
-                }
+                timeManager.SetTime(timeDataTMP);
             }
-            if(saveData.playerSaveData!=null)
+            else if(saveData.timeSaveData != null && timeManager != null)
             {
-                playerStatus.SetPlayerInfo(saveData.playerSaveData);
+                timeManager.SetTime(saveData.timeSaveData);
             }
-            if(saveData.itemInGroundSaveData != null && itemInGroundController != null)
+
+            if(listItemsTMP != null && itemInGroundController != null)
+            {
+                itemInGroundController.SetItemInGround(listItemsTMP);
+            }
+            else if(saveData.itemInGroundSaveData != null && itemInGroundController != null)
             {
                 itemInGroundController.SetItemInGround(saveData.itemInGroundSaveData);
+            }
+
+            if(playerDataTMP != null)
+            {
+                playerStatus.SetPlayerInfo(playerDataTMP);
+            }
+            else if(saveData.playerSaveData!=null)
+            {
+                playerStatus.SetPlayerInfo(saveData.playerSaveData);
             }
         }
     }
