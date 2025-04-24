@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Orange
     originalName: 
-    pivot: {x: 0.55172414, y: -0.1594203}
+    pivot: {x: 0.53333336, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 58
-      height: 69
-    spriteID: 56b6df6eca56d5249a78fdbdfa4a8e8f
+      width: 15
+      height: 16
+    spriteID: 9939b54e256c6bb44a7177a3a24a8f6e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,11 +154,11 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 11
-        width: 58
-        height: 69
-      spriteId: 56b6df6eca56d5249a78fdbdfa4a8e8f
+        x: 0
+        y: 0
+        width: 15
+        height: 16
+      spriteId: 9939b54e256c6bb44a7177a3a24a8f6e
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 96, y: 96}
+  canvasSize: {x: 16, y: 16}

@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Pomegranate
     originalName: 
-    pivot: {x: 0.5, y: -0.26027396}
+    pivot: {x: 0.4615385, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 60
-      height: 73
-    spriteID: 8487eb4ed755268498479bc893f40e2c
+      width: 13
+      height: 16
+    spriteID: 3184a3ff5516cac42b07ec5689069f89
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,11 +154,11 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 18
-        y: 19
-        width: 60
-        height: 73
-      spriteId: 8487eb4ed755268498479bc893f40e2c
+        x: 2
+        y: 0
+        width: 13
+        height: 16
+      spriteId: 3184a3ff5516cac42b07ec5689069f89
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 96, y: 96}
+  canvasSize: {x: 16, y: 16}

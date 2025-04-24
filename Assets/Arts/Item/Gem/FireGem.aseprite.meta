@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: FireGem
     originalName: 
-    pivot: {x: 0.5, y: -0.049999997}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 50
-      height: 80
-    spriteID: c7d4ad95862d9fe4b85fecbf3bc0f7ba
+      width: 16
+      height: 16
+    spriteID: c8b457b1bdee43744aa213806e540efd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,11 +154,11 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 25
-        y: 4
-        width: 50
-        height: 80
-      spriteId: c7d4ad95862d9fe4b85fecbf3bc0f7ba
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      spriteId: c8b457b1bdee43744aa213806e540efd
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 16, y: 16}

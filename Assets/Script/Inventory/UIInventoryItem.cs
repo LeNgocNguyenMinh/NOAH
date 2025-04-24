@@ -17,10 +17,8 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     public bool isEmpty = true;//Check if slot is empty    
     private Item item;
     private HealthControl playerHealthControl;
-    private GameObject wand;
     private WeaponParent weaponParent;
     private PlayerLoadout playerLoadout;
-    private SpriteRenderer wandSpriteRenderer;
     [SerializeField]private TMP_Text quantityText;
     [SerializeField]private Image itemImage;
     [SerializeField]private GameObject choicePanel;
@@ -80,7 +78,18 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         }
         else if(itemID.Contains("Gem"))
         {
+            RectTransform rectTransform = this.itemImage.rectTransform;
+            rectTransform.sizeDelta = new Vector2(
+            this.itemImage.sprite.rect.width * 3f,
+            this.itemImage.sprite.rect.height * 3f);
             this.quantityText.enabled = false;
+        }
+        else if(itemID.Contains("Fruit"))
+        {
+            RectTransform rectTransform = this.itemImage.rectTransform;
+            rectTransform.sizeDelta = new Vector2(
+            this.itemImage.sprite.rect.width * 3f,
+            this.itemImage.sprite.rect.height * 3f);
         }
         else{
             RectTransform rectTransform = this.itemImage.rectTransform;

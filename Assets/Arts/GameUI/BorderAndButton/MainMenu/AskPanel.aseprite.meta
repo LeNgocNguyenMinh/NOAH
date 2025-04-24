@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 82e299699d9d552438caf78bcb8f4a64
+guid: c2e621fc4452deb4f82da2ce3796fdda
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638696780191064790
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Option
+  - name: AskPanel
     originalName: 
-    pivot: {x: 0.5060241, y: -1.125}
+    pivot: {x: 0.5, y: -0.027027026}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 83
-      height: 32
-    spriteID: ec2004cfc6e671648807614bd0621c14
+      width: 88
+      height: 74
+    spriteID: 334c70154498c5e49b2c10575af23077
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -2113989777
-    name: Option
+    guid: -1305696077
+    name: AskPanel
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Option
+    - name: AskPanel
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 36
-        width: 83
-        height: 32
-      spriteId: ec2004cfc6e671648807614bd0621c14
+        x: 4
+        y: 2
+        width: 88
+        height: 74
+      spriteId: 334c70154498c5e49b2c10575af23077
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -174,43 +174,7 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: WebGL
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 96, y: 96}

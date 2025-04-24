@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: LightGem
     originalName: 
-    pivot: {x: 0.5, y: -0.09756098}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 62
-      height: 82
-    spriteID: 766c313e135c66b49b544f4feaed19d1
+      width: 16
+      height: 16
+    spriteID: 91d34db87a532fb4e88698aa3e76caf5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,11 +154,11 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 19
-        y: 8
-        width: 62
-        height: 82
-      spriteId: 766c313e135c66b49b544f4feaed19d1
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      spriteId: 91d34db87a532fb4e88698aa3e76caf5
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 16, y: 16}

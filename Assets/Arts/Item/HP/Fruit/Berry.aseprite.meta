@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Berry
     originalName: 
-    pivot: {x: 0.5192308, y: -0.030769233}
+    pivot: {x: 0.4666667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 52
-      height: 65
-    spriteID: b0cbca810b7de1c42a7fd370ef7aae49
+      width: 15
+      height: 14
+    spriteID: e52b7d0496e790740978b2ddd6f75449
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,11 +154,11 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 21
-        y: 2
-        width: 52
-        height: 65
-      spriteId: b0cbca810b7de1c42a7fd370ef7aae49
+        x: 1
+        y: 0
+        width: 15
+        height: 14
+      spriteId: e52b7d0496e790740978b2ddd6f75449
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 96, y: 96}
+  canvasSize: {x: 16, y: 16}

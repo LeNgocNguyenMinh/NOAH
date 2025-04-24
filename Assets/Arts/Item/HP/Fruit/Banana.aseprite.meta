@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Banana
     originalName: 
-    pivot: {x: 0.54285717, y: -0.41071427}
+    pivot: {x: 0.5, y: -0.07692308}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 70
-      height: 56
-    spriteID: c43e9ee152051e942a02d3190e35807b
+      width: 14
+      height: 13
+    spriteID: f361731a3bb9f234eb7a775c9889008b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,11 +154,11 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 23
-        width: 70
-        height: 56
-      spriteId: c43e9ee152051e942a02d3190e35807b
+        x: 1
+        y: 1
+        width: 14
+        height: 13
+      spriteId: f361731a3bb9f234eb7a775c9889008b
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 96, y: 96}
+  canvasSize: {x: 16, y: 16}

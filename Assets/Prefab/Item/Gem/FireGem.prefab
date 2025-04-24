@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6043459917909174621}
   - component: {fileID: 4645788110181891042}
-  - component: {fileID: 9137299475293594054}
   - component: {fileID: 4867515783479753000}
+  - component: {fileID: 1669589121575095862}
   m_Layer: 0
   m_Name: FireGem
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 7201876602067210802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.6, y: 19.7, z: 12174.796}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 17.6, y: 19.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,14 +80,28 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.125, y: 5}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &9137299475293594054
-PolygonCollider2D:
+--- !u!114 &4867515783479753000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7201876602067210802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a17524c225b5a74f8c5b73820e3b1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: ab7f4bc93800961478827dad0e2a3c1e, type: 2}
+  itemQuantity: 0
+--- !u!61 &1669589121575095862
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,35 +136,12 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.71428573, y: 1.1428572}
-    newSize: {x: 3.125, y: 5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.009727478, y: 0.62416077}
-      - {x: -0.26658058, y: 0.20936966}
-      - {x: -0.39718723, y: -0.20463371}
-      - {x: -0.3347454, y: -0.5040016}
-      - {x: -0.026069641, y: -0.634285}
-      - {x: 0.17944336, y: -0.5668564}
-      - {x: 0.40243912, y: -0.59614563}
-      - {x: 0.45285416, y: -0.33856583}
-      - {x: 0.36278152, y: 0.12416077}
-      - {x: 0.048727036, y: 0.6386452}
-  m_UseDelaunayMesh: 0
---- !u!114 &4867515783479753000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7201876602067210802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a17524c225b5a74f8c5b73820e3b1f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ab7f4bc93800961478827dad0e2a3c1e, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

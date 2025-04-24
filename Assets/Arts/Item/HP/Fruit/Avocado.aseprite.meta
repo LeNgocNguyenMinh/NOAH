@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Avocado
     originalName: 
-    pivot: {x: 0.5, y: -0.23188406}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 50
-      height: 69
-    spriteID: 60f868ea114eda045b899c3b7f6372ef
+      width: 14
+      height: 16
+    spriteID: 8054aab086646604ca018122866dd7d5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,11 +154,11 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 23
-        y: 16
-        width: 50
-        height: 69
-      spriteId: 60f868ea114eda045b899c3b7f6372ef
+        x: 1
+        y: 0
+        width: 14
+        height: 16
+      spriteId: 8054aab086646604ca018122866dd7d5
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 96, y: 96}
+  canvasSize: {x: 16, y: 16}
