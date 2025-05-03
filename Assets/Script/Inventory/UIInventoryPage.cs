@@ -21,10 +21,10 @@ public class UIInventoryPage : MonoBehaviour
     
     ///
     private ItemDictionary itemDictionary;
-    private void Start()
+    /* private void Start()
     {
         InitializeInventoryUI(10);
-    }
+    } */
     public void InitializeInventoryUI(int size)
     {
         inventorySize = size;

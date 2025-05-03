@@ -6,19 +6,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
+using Unity.VisualScripting;
 
 public class MainMenu : MonoBehaviour
 {
-    private string saveLocation = Path.Combine("D:/NOAHGame/NOAH/Assets/Script/SaveLoadSystem/", "saveData.json");
-    private string newGameSaveLocation = Path.Combine("D:/NOAHGame/NOAH/Assets/Script/SaveLoadSystem/", "newGameData.json");
+    private string saveLocation;
+    private string newGameSaveLocation;
     [SerializeField]private RectTransform newGameConfirmPanel;
     [SerializeField]private RectTransform quitGameConfirmPanel;
     [SerializeField]private RectTransform settingPanel;
     [SerializeField]private GameObject otherPanel;
     public Slider loadingBar;
     public TMP_Text progressText;
+    private void Awake()
+    {
+        saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
+        newGameSaveLocation = Path.Combine(Application.persistentDataPath, "newGameData.json");   
+    }
     void Start()
     {
+        Debug.Log("Save location: " + saveLocation);
         if (loadingBar != null)
         {
             loadingBar.value = 0f;
@@ -61,17 +68,7 @@ public class MainMenu : MonoBehaviour
         {
             newGameConfirmPanel.gameObject.SetActive(false);
         });
-        if (File.Exists(newGameSaveLocation))
-        {
-            // Đọc nội dung của file save
-            string jsonContent = File.ReadAllText(newGameSaveLocation);
-
-            // Chuyển nội dung JSON thành đối tượng SaveData
-            SaveData saveData = JsonUtility.FromJson<SaveData>(jsonContent);
-
-            // Trả về giá trị saveScene
-            StartCoroutine(LoadNewGameScene("Level1"));
-        }
+        StartCoroutine(LoadNewGameScene("Level1"));
     }
     private IEnumerator LoadNewGameScene(string sceneName)
     {
