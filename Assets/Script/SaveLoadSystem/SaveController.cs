@@ -223,10 +223,7 @@ public class SaveController : MonoBehaviour
                 ""saveScene"":""Level1"",
                 ""playerPosition"":{""x"":2.4404854774475099,""y"":-4.866117000579834,""z"":0.0},
                 ""mapBoundary"":""L1"",
-                ""inventorySaveData"":[
-                    {""itemID"":""FireCloth_Hat_FireHat"",""itemQuantity"":1,""slotIndex"":0},
-                    {""itemID"":""Note_01"",""itemQuantity"":0,""slotIndex"":1}
-                ],
+                ""inventorySaveData"":[],
                 ""hotBarSaveData"":[],
                 ""shopSaveData"":[
                     {""itemID"":""HPFruit_05"",""itemLeftNumber"":5},
@@ -249,19 +246,19 @@ public class SaveController : MonoBehaviour
                     {""itemID"":""WP_04"",""itemPos"":{""x"":-15.0,""y"":9.86,""z"":0.0},""isCollect"":false},
                     {""itemID"":""Note_01"",""itemPos"":{""x"":-1.31,""y"":1.46,""z"":0.0},""isCollect"":false}
                 ],
-                ""timeSaveData"":{""minData"":17.0,""hourData"":13.0,""dateData"":0},
+                ""timeSaveData"":{""minData"":0.0,""hourData"":0.0,""dateData"":0},
                 ""playerSaveData"":{
                     ""playerLevelData"":1,
-                    ""availablePointData"":3,
+                    ""availablePointData"":0,
                     ""playerCurrentDamageData"":20.0,
-                    ""playerWeaponDamageData"":3.0,
+                    ""playerWeaponDamageData"":0.0,
                     ""playerBulletData"":6,
                     ""playerCoinData"":250,
                     ""maxExpData"":40.0,
                     ""currentExpData"":0.0,
                     ""maxHealthData"":200,
                     ""currentHealthData"":200,
-                    ""currentWeaponID"":""WP_03"",
+                    ""currentWeaponID"":""None"",
                     ""currentHatID"":""None"",
                     ""currentCoatID"":""None""
                 }

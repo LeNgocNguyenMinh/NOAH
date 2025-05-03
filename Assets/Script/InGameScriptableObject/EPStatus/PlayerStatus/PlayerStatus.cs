@@ -67,6 +67,7 @@ public class PlayerStatus : ScriptableObject
     }
     public void SetPlayerInfo(PlayerSaveData playerSaveData)
     {
+        SetPlayerNewInfo();
         playerCurrentClothChange = FindObjectOfType<PlayerCurrentClothChange>().GetComponent<PlayerCurrentClothChange>();
         itemDictionary = FindObjectOfType<ItemDictionary>().GetComponent<ItemDictionary>();
         playerLevel = playerSaveData.playerLevelData;

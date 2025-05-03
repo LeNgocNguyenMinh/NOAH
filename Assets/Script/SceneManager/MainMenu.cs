@@ -15,6 +15,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField]private RectTransform newGameConfirmPanel;
     [SerializeField]private RectTransform quitGameConfirmPanel;
     [SerializeField]private RectTransform settingPanel;
+    [SerializeField]private RectTransform popUpRect;
+    [SerializeField]private Vector2 hiddenPos;
+    [SerializeField]private Vector2 visiblePos;
     [SerializeField]private GameObject otherPanel;
     public Slider loadingBar;
     public TMP_Text progressText;
@@ -104,9 +107,9 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadGameSave()
     {
-        OnLoading();
         if (File.Exists(saveLocation))
         {
+            OnLoading();
             // Đọc nội dung của file save
             string jsonContent = File.ReadAllText(saveLocation);
 
@@ -116,6 +119,16 @@ public class MainMenu : MonoBehaviour
             // Trả về giá trị saveScene
             StartCoroutine(LoadSceneAsync(saveData.saveScene));
         }
+        else{
+            PopUp.Instance.ShowNotification("No save file found!");
+        }
+    }
+    private void PopUpShow(string message)
+    {
+        otherPanel.SetActive(false);
+        popUpRect.gameObject.SetActive(true);
+        popUpRect.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
+        popUpRect.GetComponentInChildren<TMP_Text>().text = message;
     }
     private IEnumerator LoadSceneAsync(string sceneName)
     {

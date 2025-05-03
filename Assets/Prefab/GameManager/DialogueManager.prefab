@@ -49,7 +49,7 @@ MonoBehaviour:
   nameText: {fileID: 0}
   npcPortrait: {fileID: 0}
   hiddenPosition: {x: 0, y: -289}
-  visiblePosition: {x: 0, y: 17}
+  visiblePosition: {x: 0, y: 80}
   moveDuration: 0.5
   choicePanel: {fileID: 0}
   choiceButtonPrefab: {fileID: 1861552962570259981, guid: c88d5f94a8d140a4c8e158fda35043c5, type: 3}

@@ -19,18 +19,30 @@ public class TmpDataManager : MonoBehaviour
     public void SetAllTMPData()
     {
         itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
-        tmpListItemsInGround = itemInGroundController.GetListItemInGround();
+        if(itemInGroundController != null)
+        {
+            tmpListItemsInGround = itemInGroundController.GetListItemInGround();
+        }  
         
-
         inventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
-        tmpInventory = inventoryPage.GetInventoryItems();
+        if(inventoryPage != null)
+        {
+            tmpInventory = inventoryPage.GetInventoryItems();
+        }
+        
         
         hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
-        tmpHotBar = hotBarManager.GetHotBarItems();
+        if(hotBarManager != null)
+        {
+            tmpHotBar = hotBarManager.GetHotBarItems();
+        }
 
         tmpPlayer = playerStatus.GetPlayerInfo();
 
         TimeManager timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
-        tmpTime = timeManager.GetTime();
+        if(timeManager != null)
+        {
+            tmpTime = timeManager.GetTime();
+        }
     }
 }
