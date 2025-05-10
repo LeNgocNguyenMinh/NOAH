@@ -116,7 +116,7 @@ public class UIInventoryPage : MonoBehaviour
     }
     public void AddItemPopUp(Item item, int itemQuantity)
     {
-        if(item.itemID.Contains("Cloth")|| item.itemID.Contains("WP"))
+        if(item.itemID.Contains("Cloth")|| item.itemID.Contains("WP") || item.itemID.Contains("Stuff"))
         {
             PopUp.Instance.ShowNotification("Add " + item.itemName + ".");
         }

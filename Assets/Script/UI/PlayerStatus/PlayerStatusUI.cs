@@ -18,11 +18,7 @@ public class PlayerStatusUI : MonoBehaviour
     [SerializeField]private TMP_Text playerBulletNumber;
     [SerializeField]private TMP_Text playerDamage;
     [SerializeField]private TMP_Text playerCoinNumber;
-    [SerializeField]private Image playerCurrentWeaponImage;
-    [SerializeField]private TMP_Text playerCurrentWeaponName;
-    [SerializeField]private Image playerHat;
-    [SerializeField]private Image playerCoat;
-    private SpriteRenderer playerSprite;
+
     public void OpenPlayerStatus()
     {
         playerStatusUIOpen = true;
@@ -42,24 +38,6 @@ public class PlayerStatusUI : MonoBehaviour
         this.playerBulletNumber.text = playerStatus.playerBullet + "";
         this.playerDamage.text = playerStatus.playerCurrentDamage + "";
         this.playerCoinNumber.text = playerStatus.playerCoin + "";
-        this.playerCurrentWeaponImage.sprite = playerStatus.currentWeapon.itemSprite;
-        this.playerCurrentWeaponName.text = playerStatus.currentWeapon.itemName;
-        if(playerStatus.currentHat != null)
-        {
-            playerHat.sprite = playerStatus.currentHat.itemSprite;
-        }
-        else 
-        {
-            playerHat.sprite = playerStatus.defaultHat.itemSprite;
-        }
-        if(playerStatus.currentCoat != null)
-        {
-            playerCoat.sprite = playerStatus.currentCoat.itemSprite;
-        }
-        else 
-        {
-            playerCoat.sprite = playerStatus.defaultCoat.itemSprite;
-        }
     }
     public void UpdateCoin()
     {

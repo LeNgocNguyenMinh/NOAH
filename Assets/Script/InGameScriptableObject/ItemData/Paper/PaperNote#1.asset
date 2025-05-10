@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Paper Note #1
   itemDescription: 22134
   itemLitmitBuyQuantity: 0
-  itemID: Note_01
+  itemID: Stuff_Note_01
   itemPrice: 0
   itemSprite: {fileID: 21300000, guid: fcb6584672a73ca4ab9a68f2df5f8e47, type: 3}
   itemPrefab: {fileID: 7547224070579580989, guid: 8f0655c06d470ba41a621de1b5b5a202, type: 3}

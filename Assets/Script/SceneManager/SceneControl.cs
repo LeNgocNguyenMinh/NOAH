@@ -47,12 +47,12 @@ public class SceneControl : MonoBehaviour
         if(sceneBuildIndex == "Level1")
         {
             Vector3 pos = new Vector3(-25.75f, 10.07f, 0f);
-            SaveController.Instance.LoadSave(pos, TmpDataManager.tmpInventory, TmpDataManager.tmpHotBar, TmpDataManager.tmpListItemsInGround, TmpDataManager.tmpTime, TmpDataManager.tmpPlayer);
+            SaveController.Instance.LoadSave(pos, TmpDataManager.tmpInventory, TmpDataManager.tmpHotBar, TmpDataManager.tmpListItemsInGround, TmpDataManager.tmpTime, TmpDataManager.tmpPlayer, TmpDataManager.tmpMission);
         }  
         if(sceneBuildIndex == "Level2")
         {
             Vector3 pos = new Vector3(-6.4f, -5.55f, 0f);
-            SaveController.Instance.LoadSave(pos, TmpDataManager.tmpInventory, TmpDataManager.tmpHotBar, null, TmpDataManager.tmpTime, TmpDataManager.tmpPlayer);
+            SaveController.Instance.LoadSave(pos, TmpDataManager.tmpInventory, TmpDataManager.tmpHotBar, null, TmpDataManager.tmpTime, TmpDataManager.tmpPlayer, TmpDataManager.tmpMission);
         }    
     }
 }

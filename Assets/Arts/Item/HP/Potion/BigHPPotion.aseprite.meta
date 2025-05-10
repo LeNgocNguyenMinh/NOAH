@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: BigHPPotion
     originalName: 
-    pivot: {x: 0.40909088, y: -0.048192773}
+    pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 66
-      height: 83
+      width: 22
+      height: 30
     spriteID: d160fea742b33e3489d0963fd469fec2
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 23
-        y: 4
-        width: 66
-        height: 83
+        x: 5
+        y: 2
+        width: 22
+        height: 30
       spriteId: d160fea742b33e3489d0963fd469fec2
     linkedCells: []
     parentIndex: -1
@@ -213,4 +213,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 32, y: 32}

@@ -91,6 +91,14 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
             this.itemImage.sprite.rect.width * 3f,
             this.itemImage.sprite.rect.height * 3f);
         }
+        else if(itemID.Contains("Stuff"))
+        {
+            RectTransform rectTransform = this.itemImage.rectTransform;
+            rectTransform.sizeDelta = new Vector2(
+            this.itemImage.sprite.rect.width * 1f,
+            this.itemImage.sprite.rect.height * 1f);
+            this.quantityText.enabled = false;
+        }
         else{
             RectTransform rectTransform = this.itemImage.rectTransform;
             rectTransform.sizeDelta = new Vector2(

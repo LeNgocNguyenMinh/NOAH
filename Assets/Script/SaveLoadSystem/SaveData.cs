@@ -14,4 +14,5 @@ public class SaveData
     public List<ItemInGroundSaveData> itemInGroundSaveData;
     public TimeSaveData timeSaveData;
     public PlayerSaveData playerSaveData;
+    public MissionSaveData missionSaveData;
 }

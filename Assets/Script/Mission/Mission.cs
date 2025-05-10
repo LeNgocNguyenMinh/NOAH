@@ -18,11 +18,8 @@ public class Mission
     public string targetID; // ID vật phẩm hoặc quái
     public Item item;
     public int requiredAmount;
-    public int currentAmount;
     public Vector2 targetPosition;
     public float requiredRadius = 1f; // Bán kính hợp lệ
-    public bool isCompleted;
-    public bool isClaimed;
     
     // Phần thưởng
     public int rewardCoins;

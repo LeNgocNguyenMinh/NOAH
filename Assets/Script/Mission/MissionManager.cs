@@ -2,31 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class MissionManager : MonoBehaviour
 {
     public static MissionManager Instance;
-    public TMP_Text missionName;
-    public TMP_Text missionDescription;
-    public TMP_Text missionProgress;
+    [SerializeField]private MissionScriptable missionList;
+    [SerializeField]private TMP_Text missionName;
+    [SerializeField]private TMP_Text missionDescription;
+    [SerializeField]private TMP_Text missionProgress;
     private int currentMissionIndex = 0;
     [SerializeField]private List<Mission> activeMissions = new List<Mission>();
     [SerializeField]private List<Mission> finishMissions = new List<Mission>();
     [SerializeField]private Transform playerTransform;
+    private Mission currentMission;
+    private int currentAmount = 0;
     
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-    }
-    public void Update()
-    {
-        if (activeMissions.Count > 0)
-        {
-            missionName.text = activeMissions[currentMissionIndex].missionName;
-            missionDescription.text = "Collect " + activeMissions[currentMissionIndex].requiredAmount + " " + activeMissions[currentMissionIndex].item.itemName;
-            missionProgress.text = $"{activeMissions[currentMissionIndex].currentAmount}/{activeMissions[currentMissionIndex].requiredAmount}";
-        }
+        currentMission = missionList.GetMissionByInDex(0);
+        CheckMissionProgress();
     }
     // Thêm nhiệm vụ mới
     public void AddMission(Mission newMission)
@@ -37,76 +34,54 @@ public class MissionManager : MonoBehaviour
     // Cập nhật nhiệm vụ thu thập
     public void UpdateCollectMission(string itemID, int amount)
     {
-        if (activeMissions[currentMissionIndex].missionType == MissionType.CollectMission && 
-            activeMissions[currentMissionIndex].item.itemID == itemID && 
-            !activeMissions[currentMissionIndex].isCompleted)
+        if (currentMission.missionType == MissionType.CollectMission && 
+            currentMission.item.itemID == itemID             )
         {
-            activeMissions[currentMissionIndex].currentAmount += amount;
-            CheckMissionProgress(activeMissions[currentMissionIndex]);
+            currentAmount += amount;
+            CheckMissionProgress();
         }
     }
     
     // Cập nhật nhiệm vụ tiêu diệt
-    public void UpdateDefeatMission(string enemyID, int amount)
-    {
-        foreach (Mission mission in activeMissions)
-        {
-            if (mission.missionType == MissionType.KillMonsterMission && 
-                mission.targetID == enemyID && 
-                !mission.isCompleted)
-            {
-                mission.currentAmount += amount;
-                CheckMissionProgress(mission);
-            }
-        }
-    }
-    void CheckMovementMissions()
-    {
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
-        foreach (Mission mission in activeMissions)
-        {
-            if (mission.missionType == MissionType.MoveMission && 
-                !mission.isCompleted)
-            {
-                float distance = Vector2.Distance(
-                    playerTransform.position, 
-                    mission.targetPosition
-                );
 
-                mission.currentAmount = distance <= mission.requiredRadius ? 1 : 0;
-                
-                if (distance <= mission.requiredRadius)
-                {
-                    mission.isCompleted = true;
-                    /* UIManager.Instance.UpdateMissionUI(); */
-                }
-            }
-        }
-    }
-    private void CheckMissionProgress(Mission mission)
+
+    private void CheckMissionProgress()
     {
-        if (mission.currentAmount >= mission.requiredAmount)
+        if (currentAmount >= currentMission.requiredAmount)
         {
-            mission.isCompleted = true;
-            Debug.Log("Hoàn thành");
-            // Kích hoạt sự kiện cập nhật UI
-            /* UIManager.Instance.UpdateMissionUI(); */
-            finishMissions.Add(mission);
+            finishMissions.Add(currentMission);
             currentMissionIndex++;
+            PopUp.Instance.ShowNotification("Finish mission: " + currentMission.missionName);
+            if(missionList.GetMissionByInDex(currentMissionIndex)!= null)
+            {
+                currentMission = missionList.GetMissionByInDex(currentMissionIndex);
+            }
+            else return;
+            currentAmount = 0;
         }
+        missionName.text = currentMission.missionName;
+        missionDescription.text = "Collect " + currentMission.requiredAmount + " " + currentMission.item.itemName;
+        missionProgress.text = $"{currentAmount}/{currentMission.requiredAmount}";
     }
     
     // Nhận thưởng
     public void ClaimReward(Mission mission)
     {
-        if (mission.isCompleted && !mission.isClaimed)
+    }
+    public MissionSaveData GetCurrentMission()
+    {
+        return new MissionSaveData
         {
-            // Thêm phần thưởng
-            /* InventoryManager.Instance.AddCoins(mission.rewardCoins);
-            InventoryManager.Instance.AddItem(mission.rewardItemID, mission.rewardItemAmount); */
-            
-            mission.isClaimed = true;
-            activeMissions.Remove(mission);
-        }
+            currentAmount = this.currentAmount,
+            missionIndex = this.currentMissionIndex,
+            currentMission = this.currentMission
+        };
+    }
+    public void SetCurrentMission(MissionSaveData saveData)
+    {
+        currentMissionIndex = saveData.missionIndex;
+        currentMission = saveData.currentMission;
+        currentAmount = saveData.currentAmount;
+        CheckMissionProgress();
     }
 }

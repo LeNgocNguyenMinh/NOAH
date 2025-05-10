@@ -15,6 +15,7 @@ public class SaveController : MonoBehaviour
     private ShopController shopController;
     private TimeManager timeManager;
     private ItemInGroundController itemInGroundController;
+    private MissionManager missionManager;
     [SerializeField]private PlayerStatus playerStatus;
     private SaveData existingData;
     void Awake()
@@ -33,6 +34,7 @@ public class SaveController : MonoBehaviour
         hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
         timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
         itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
+        missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
         SaveData saveData = new SaveData
         {
             saveScene = SceneManager.GetActiveScene().name,
@@ -43,7 +45,8 @@ public class SaveController : MonoBehaviour
             shopSaveData = existingData.shopSaveData,
             itemInGroundSaveData = itemInGroundController?.GetListItemInGround(),
             timeSaveData = timeManager?.GetTime(),
-            playerSaveData = playerStatus?.GetPlayerInfo()
+            playerSaveData = playerStatus?.GetPlayerInfo(),
+            missionSaveData = missionManager?.GetCurrentMission()
         };
         Debug.Log(saveData.saveScene);
         if(FindObjectOfType<CinemachineConfiner>()!=null)
@@ -71,6 +74,7 @@ public class SaveController : MonoBehaviour
         uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
         hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
         timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
+        missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
         SaveData saveData = new SaveData
         {
             saveScene = SceneManager.GetActiveScene().name,
@@ -81,7 +85,8 @@ public class SaveController : MonoBehaviour
             shopSaveData = existingData.shopSaveData,
             itemInGroundSaveData = existingData.itemInGroundSaveData,
             timeSaveData = timeManager?.GetTimeSkip(),
-            playerSaveData = playerStatus?.GetPlayerInfo()
+            playerSaveData = playerStatus?.GetPlayerInfo(),
+            missionSaveData = missionManager?.GetCurrentMission()
         };
         Debug.Log(saveData.saveScene);
         if(FindObjectOfType<CinemachineConfiner>()!=null)
@@ -101,7 +106,7 @@ public class SaveController : MonoBehaviour
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
         PopUp.Instance.ShowNotification("Save success.");
     }
-    public void LoadSave(Vector3 playerPos = new Vector3(), List<InventorySaveData> inventoryItemsTMP = null, List<InventorySaveData> hotBarItemsTMP = null, List<ItemInGroundSaveData> listItemsTMP = null, TimeSaveData timeDataTMP = null, PlayerSaveData playerDataTMP = null)
+    public void LoadSave(Vector3 playerPos = new Vector3(), List<InventorySaveData> inventoryItemsTMP = null, List<InventorySaveData> hotBarItemsTMP = null, List<ItemInGroundSaveData> listItemsTMP = null, TimeSaveData timeDataTMP = null, PlayerSaveData playerDataTMP = null, MissionSaveData missionSaveDataTMP = null)
     {
         if(File.Exists(saveLocation))
         {
@@ -122,6 +127,7 @@ public class SaveController : MonoBehaviour
             hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
             itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
             shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
+            missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
 
             if(inventoryItemsTMP != null && uiInventoryPage != null)
             {
@@ -172,6 +178,14 @@ public class SaveController : MonoBehaviour
             else if(saveData.playerSaveData!=null)
             {
                 playerStatus.SetPlayerInfo(saveData.playerSaveData);
+            }
+            if(missionSaveDataTMP != null)
+            {
+                missionManager.SetCurrentMission(missionSaveDataTMP);
+            }
+            else if(saveData.missionSaveData != null && missionManager != null)
+            {
+                missionManager.SetCurrentMission(saveData.missionSaveData);
             }
         }
     }

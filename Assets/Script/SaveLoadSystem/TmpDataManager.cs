@@ -14,6 +14,7 @@ public class TmpDataManager : MonoBehaviour
     public static List<InventorySaveData> tmpInventory = new List<InventorySaveData>();
     public static List<InventorySaveData> tmpHotBar = new List<InventorySaveData>();
     public static PlayerSaveData tmpPlayer = new PlayerSaveData();
+    public static MissionSaveData tmpMission = new MissionSaveData();
 
 
     public void SetAllTMPData()
@@ -43,6 +44,12 @@ public class TmpDataManager : MonoBehaviour
         if(timeManager != null)
         {
             tmpTime = timeManager.GetTime();
+        }
+
+        MissionManager missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
+        if(missionManager != null)
+        {
+            tmpMission = missionManager.GetCurrentMission();
         }
     }
 }
