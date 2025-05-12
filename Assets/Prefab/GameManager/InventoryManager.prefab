@@ -10,6 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6632375608436568067}
   - component: {fileID: 3747642974348335927}
+  - component: {fileID: 2345024472703989225}
+  - component: {fileID: 1588026988894970244}
+  - component: {fileID: 3513687205678737470}
+  - component: {fileID: 8244060339391216765}
+  - component: {fileID: 1288026079390606258}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -46,7 +51,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLoadout: {fileID: 0}
   panel: {fileID: 0}
-  hiddenPosition: {x: 0, y: -1011}
-  visiblePosition: {x: 0, y: -14}
+  hiddenPosition: {x: 0, y: -872}
+  visiblePosition: {x: 0, y: 29}
   moveDuration: 0.5
+  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
+  inventoryPanel: {fileID: 0}
+--- !u!114 &2345024472703989225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263014105550959646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74916f12c0ef0b843a0bba478fed1646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 0}
+  hiddenPosition: {x: 0, y: 29}
+  visiblePosition: {x: 0, y: -872}
+  moveDuration: 0.5
+--- !u!114 &1588026988894970244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263014105550959646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7643dc14d58b0164d94fdfd6553855a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 5419230547192491895, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
+  contentPanel: {fileID: 0}
+  descriptionPanel: {fileID: 0}
+  hiddenPosition: {x: 325, y: -440}
+  visiblePosition: {x: 325, y: 800}
+  moveDuration: 0.5
+  descriptionPanelOpen: 1
+  inventorySize: 10
+--- !u!114 &3513687205678737470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263014105550959646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f371a2f317ee1a548baa4e0d19fb4b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
+  itemNameBox: {fileID: 0}
+  itemDescriptionBox: {fileID: 0}
+  itemFunction: {fileID: 0}
+  itemImageBox: {fileID: 0}
+  requireForUpgrade: {fileID: 0}
+  requireForUpgradeText: {fileID: 0}
+  weaponLevelBox: {fileID: 0}
+  weaponLevelText: {fileID: 0}
+  upgradeButton: {fileID: 0}
+--- !u!114 &8244060339391216765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263014105550959646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812b2c8c6fe359d45a3aa47db7029f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
+  playerAvailablePoint: {fileID: 0}
+  playerLevel: {fileID: 0}
+  playerName: {fileID: 0}
+  playerAge: {fileID: 0}
+  playerHealth: {fileID: 0}
+  playerBulletNumber: {fileID: 0}
+  playerDamage: {fileID: 0}
+  playerCoinNumber: {fileID: 0}
+--- !u!114 &1288026079390606258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263014105550959646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa881d9ded51a54e943e55489fa6ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthButton: {fileID: 0}
+  damageButton: {fileID: 0}
+  bulletButton: {fileID: 0}
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}

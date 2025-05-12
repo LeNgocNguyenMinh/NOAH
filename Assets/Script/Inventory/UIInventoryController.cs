@@ -14,15 +14,18 @@ public class UIInventoryController : MonoBehaviour
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
     [SerializeField]private PlayerStatus playerStatus;
+    [SerializeField]private GameObject inventoryPanel;
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
-            uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-            uiMouseAndPriority = GameObject.FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
+            uiInventoryPage = GetComponent<UIInventoryPage>();
+            uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
+            Debug.Log(UIInventoryPage.inventoryOpen);
             if(UIInventoryPage.inventoryOpen)
             {
+                Debug.Log("Close inv");
                 uiInventoryPage.InventoryClose();
                 panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
                 {
@@ -33,10 +36,13 @@ public class UIInventoryController : MonoBehaviour
             {
                 if(!uiMouseAndPriority.CanOpenThisUI())return;
                 uiInventoryPage.InventoryOpen();
+                
+                inventoryPanel.transform.SetAsLastSibling();
                 panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
                 {
                     Time.timeScale = 0f;
                 });
+                Debug.Log("Open inv");
                 playerLoadout.CheckClothStatus();
             }
         }

@@ -18,7 +18,7 @@ MonoBehaviour:
   itemID: WP_02
   itemPrice: 0
   itemSprite: {fileID: 21300000, guid: b94885f45b88818499342fdfa0730cae, type: 3}
-  itemPrefab: {fileID: 6570388555785072779, guid: b5dd8217f2592084683bdeba8ae1f7b8, type: 3}
+  itemPrefab: {fileID: 6570388555785072779, guid: ba07c8aa42e5c0d4aa6bab460eac95f7, type: 3}
   healthRecover: 0
   weaponLevel: 1
   materialNeedToUpgrade: 50

@@ -21,10 +21,13 @@ public class UIInventoryPage : MonoBehaviour
     
     ///
     private ItemDictionary itemDictionary;
-    /* private void Start()
+    private void Start()
     {
-        InitializeInventoryUI(10);
-    } */
+        if(listOfUIItems == null)
+        {
+            InitializeInventoryUI(10);
+        }
+    }
     public void InitializeInventoryUI(int size)
     {
         inventorySize = size;
@@ -148,8 +151,9 @@ public class UIInventoryPage : MonoBehaviour
         OnlyClickOneSlot();
         OnlySellectOneSlot();
         inventoryOpen = true;
-        uiInventoryDescription = GetComponentInChildren<UIInventoryDescription>();
+        uiInventoryDescription = GetComponent<UIInventoryDescription>();
         uiInventoryDescription.ItemHideInformation();
+        Debug.Log("23232323");
     }
     public void InventoryClose()
     {
