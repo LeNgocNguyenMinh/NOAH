@@ -51,8 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLoadout: {fileID: 0}
   panel: {fileID: 0}
-  hiddenPosition: {x: 0, y: -872}
-  visiblePosition: {x: 0, y: 29}
+  hiddenPosition: {x: -129, y: -946}
+  visiblePosition: {x: -129, y: -78}
   moveDuration: 0.5
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   inventoryPanel: {fileID: 0}
@@ -69,9 +69,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 0}
-  hiddenPosition: {x: 0, y: 29}
-  visiblePosition: {x: 0, y: -872}
+  statusPanel: {fileID: 0}
+  hiddenPosition: {x: 20, y: -1043}
+  visiblePosition: {x: 20, y: -67}
   moveDuration: 0.5
+  statusImage: {fileID: 0}
+  handOpen: {fileID: 1502098254, guid: 45cae8443c876194d8da5cafc13a014d, type: 3}
+  handClose: {fileID: 1046923492, guid: 45cae8443c876194d8da5cafc13a014d, type: 3}
+  listMask2D:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1588026988894970244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,8 +98,8 @@ MonoBehaviour:
   itemPrefab: {fileID: 5419230547192491895, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
   contentPanel: {fileID: 0}
   descriptionPanel: {fileID: 0}
-  hiddenPosition: {x: 325, y: -440}
-  visiblePosition: {x: 325, y: 800}
+  hiddenPosition: {x: 318, y: 0}
+  visiblePosition: {x: 803, y: 0}
   moveDuration: 0.5
   descriptionPanelOpen: 1
   inventorySize: 10
@@ -129,8 +140,6 @@ MonoBehaviour:
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   playerAvailablePoint: {fileID: 0}
   playerLevel: {fileID: 0}
-  playerName: {fileID: 0}
-  playerAge: {fileID: 0}
   playerHealth: {fileID: 0}
   playerBulletNumber: {fileID: 0}
   playerDamage: {fileID: 0}

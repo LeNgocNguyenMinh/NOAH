@@ -22,11 +22,32 @@ public class Item : ScriptableObject
     public int materialNeedToUpgrade;
     public float weaponDamage;
     public GameObject weaponBulletType;
-    
+    public DefaultWeaponData defaultWeaponValue;
+    public WeaponData weaponData;
     public void SetWeaponLevel()
     {
         weaponLevel ++;
         weaponDamage += 2f;
         materialNeedToUpgrade = (int)(materialNeedToUpgrade * 1.5f);
+    }
+    public void SetWeaponDefaultData()
+    {
+        weaponLevel = 1;
+        materialNeedToUpgrade = defaultWeaponValue.materialNeedToUpgrade;
+        weaponDamage = defaultWeaponValue.weaponDamage;
+    }
+    public WeaponData GetWeaponData()
+    {
+        weaponData.weaponID = itemID;
+        weaponData.weaponLevel = weaponLevel;
+        weaponData.materialNeedToUpgrade = materialNeedToUpgrade;
+        weaponData.weaponDamage = weaponDamage;
+        return weaponData;
+    }
+    public void SetWeaponData(WeaponData weaponData)
+    {
+        weaponLevel = weaponData.weaponLevel;
+        materialNeedToUpgrade = weaponData.materialNeedToUpgrade;
+        weaponDamage = weaponData.weaponDamage;
     }
 }

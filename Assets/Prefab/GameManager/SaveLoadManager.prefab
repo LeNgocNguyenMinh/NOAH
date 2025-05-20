@@ -45,3 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
+  weaponList:
+  - {fileID: 11400000, guid: 56151d52f84e8fd4b86ef60e4554b68d, type: 2}
+  - {fileID: 11400000, guid: b2442586e12b1b54f8ab7d7c5b11fc96, type: 2}
+  - {fileID: 11400000, guid: 7799c7487af384a41966094d08479dca, type: 2}
+  - {fileID: 11400000, guid: 91e67880eff7e444494193c6c07a4614, type: 2}
+  - {fileID: 11400000, guid: 936f99e7a6062d84982a54d0b3a2027d, type: 2}

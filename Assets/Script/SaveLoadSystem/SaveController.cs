@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using Cinemachine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class SaveController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class SaveController : MonoBehaviour
     private MissionManager missionManager;
     [SerializeField]private PlayerStatus playerStatus;
     private SaveData existingData;
+    [SerializeField]private List<Item> weaponList;
     void Awake()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
@@ -49,6 +51,10 @@ public class SaveController : MonoBehaviour
             missionSaveData = missionManager?.GetCurrentMission()
         };
         Debug.Log(saveData.saveScene);
+        for(int i = 0; i < weaponList.Count; i++)
+        {
+            saveData.weaponListData.Add(weaponList[i].GetWeaponData());
+        }
         if(FindObjectOfType<CinemachineConfiner>()!=null)
         {
             Debug.Log("mapBound: Tìm thấy");
@@ -187,6 +193,10 @@ public class SaveController : MonoBehaviour
             {
                 missionManager.SetCurrentMission(saveData.missionSaveData);
             }
+            for(int i = 0; i < weaponList.Count; i++)
+            {
+                weaponList[i].SetWeaponData(saveData.weaponListData[i]);
+            }
         }
     }
 
@@ -230,53 +240,83 @@ public class SaveController : MonoBehaviour
             {
                 itemInGroundController.SetItemInGround(saveData.itemInGroundSaveData);
             }
+            for(int i = 0; i < weaponList.Count; i++)
+            {
+                weaponList[i].SetWeaponDefaultData();
+            }
         }
         else{
             Debug.Log("khong co file new game");
                 string defaultNewGameJson = @"{
-                ""saveScene"":""Level1"",
-                ""playerPosition"":{""x"":2.4404854774475099,""y"":-4.866117000579834,""z"":0.0},
-                ""mapBoundary"":""L1"",
-                ""inventorySaveData"":[],
-                ""hotBarSaveData"":[],
-                ""shopSaveData"":[
-                    {""itemID"":""HPFruit_05"",""itemLeftNumber"":5},
-                    {""itemID"":""HPFruit_06"",""itemLeftNumber"":5},
-                    {""itemID"":""HPFruit_07"",""itemLeftNumber"":5},
-                    {""itemID"":""HPPotion_03"",""itemLeftNumber"":5},
-                    {""itemID"":""HPPotion_02"",""itemLeftNumber"":5}
+                ""saveScene"": ""Level1"",
+                ""playerPosition"": { ""x"": 1.7463607, ""y"": -4.6992025, ""z"": 0.0 },
+                ""mapBoundary"": ""L1"",
+                ""inventorySaveData"": [
+                    { ""itemID"": ""HPFruit_01"", ""itemQuantity"": 1, ""slotIndex"": 0 },
+                    { ""itemID"": ""WP_04"", ""itemQuantity"": 1, ""slotIndex"": 1 }
                 ],
-                ""itemInGroundSaveData"":[
-                    {""itemID"":""HPFruit_01"",""itemPos"":{""x"":-15.3,""y"":3.2,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""HPFruit_01"",""itemPos"":{""x"":-23.05,""y"":-2.18,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""HPFruit_01"",""itemPos"":{""x"":-22.03,""y"":-2.16,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""HPFruit_01"",""itemPos"":{""x"":-3.53,""y"":-8.92,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""HPPotion_03"",""itemPos"":{""x"":-2.29,""y"":-8.72,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""HPPotion_01"",""itemPos"":{""x"":-23.83,""y"":-1.7,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""FireCloth_Hat_FireHat"",""itemPos"":{""x"":7.02,""y"":-7.23,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""FireCloth_Coat_FireCoat"",""itemPos"":{""x"":11.57,""y"":-7.08,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""IceCloth_Coat_IceCoat"",""itemPos"":{""x"":10.64,""y"":-10.47,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""IceCloth_Hat_IceHat"",""itemPos"":{""x"":5.42,""y"":-10.25,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""WP_04"",""itemPos"":{""x"":-15.0,""y"":9.86,""z"":0.0},""isCollect"":false},
-                    {""itemID"":""Note_01"",""itemPos"":{""x"":-1.31,""y"":1.46,""z"":0.0},""isCollect"":false}
+                ""hotBarSaveData"": [],
+                ""shopSaveData"": [
+                    { ""itemID"": ""HPFruit_05"", ""itemLeftNumber"": 5 },
+                    { ""itemID"": ""HPFruit_06"", ""itemLeftNumber"": 5 },
+                    { ""itemID"": ""HPFruit_07"", ""itemLeftNumber"": 5 },
+                    { ""itemID"": ""HPPotion_03"", ""itemLeftNumber"": 5 },
+                    { ""itemID"": ""HPPotion_02"", ""itemLeftNumber"": 5 }
                 ],
-                ""timeSaveData"":{""minData"":0.0,""hourData"":0.0,""dateData"":0},
-                ""playerSaveData"":{
-                    ""playerLevelData"":1,
-                    ""availablePointData"":0,
-                    ""playerCurrentDamageData"":20.0,
-                    ""playerWeaponDamageData"":0.0,
-                    ""playerBulletData"":6,
-                    ""playerCoinData"":250,
-                    ""maxExpData"":40.0,
-                    ""currentExpData"":0.0,
-                    ""maxHealthData"":200,
-                    ""currentHealthData"":200,
-                    ""currentWeaponID"":""None"",
-                    ""currentHatID"":""None"",
-                    ""currentCoatID"":""None""
-                }
+                ""itemInGroundSaveData"": [
+                    { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -15.3, ""y"": 3.2, ""z"": 0.0 }, ""isCollect"": true },
+                    { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -23.05, ""y"": -2.18, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -22.03, ""y"": -2.16, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -3.53, ""y"": -8.92, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""HPPotion_03"", ""itemPos"": { ""x"": -2.29, ""y"": -8.72, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""HPPotion_01"", ""itemPos"": { ""x"": -23.83, ""y"": -1.7, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""FireCloth_Hat_FireHat"", ""itemPos"": { ""x"": 7.02, ""y"": -7.23, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""FireCloth_Coat_FireCoat"", ""itemPos"": { ""x"": 11.57, ""y"": -7.08, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""IceCloth_Coat_IceCoat"", ""itemPos"": { ""x"": 10.64, ""y"": -10.47, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""IceCloth_Hat_IceHat"", ""itemPos"": { ""x"": 5.42, ""y"": -10.25, ""z"": 0.0 }, ""isCollect"": false },
+                    { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": -15.0, ""y"": 9.86, ""z"": 0.0 }, ""isCollect"": true },
+                    { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": -1.31, ""y"": 1.46, ""z"": 0.0 }, ""isCollect"": false }
+                ],
+                ""timeSaveData"": { ""minData"": 17.0, ""hourData"": 21.0, ""dateData"": 0 },
+                ""playerSaveData"": {
+                    ""playerLevelData"": 1,
+                    ""availablePointData"": 3,
+                    ""playerCurrentDamageData"": 20.0,
+                    ""playerWeaponDamageData"": 3.0,
+                    ""playerBulletData"": 6,
+                    ""playerCoinData"": 250,
+                    ""maxExpData"": 40.0,
+                    ""currentExpData"": 0.0,
+                    ""maxHealthData"": 200.0,
+                    ""currentHealthData"": 200.0,
+                    ""currentWeaponID"": ""WP_03"",
+                    ""currentHatID"": ""None"",
+                    ""currentCoatID"": ""None""
+                },
+                ""missionSaveData"": {
+                    ""currentAmount"": 1,
+                    ""missionIndex"": 0,
+                    ""currentMission"": {
+                        ""missionID"": ""MS_01"",
+                        ""missionName"": ""Get Something To Eat"",
+                        ""missionType"": 0,
+                        ""targetID"": """",
+                        ""item"": { ""instanceID"": 30838 },
+                        ""requiredAmount"": 2,
+                        ""targetPosition"": { ""x"": 0.0, ""y"": 0.0 },
+                        ""requiredRadius"": 0.0,
+                        ""rewardCoins"": 20
+                    }
+                },
+                ""weaponListData"": [
+                    { ""weaponID"": ""WP_01"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 10.0 },
+                    { ""weaponID"": ""WP_05"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 45, ""weaponDamage"": 8.0 },
+                    { ""weaponID"": ""WP_02"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 8.0 },
+                    { ""weaponID"": ""WP_04"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 9.0 },
+                    { ""weaponID"": ""WP_03"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 75, ""weaponDamage"": 3.0 }
+                ]
             }";
+
             File.WriteAllText(newGameSaveLocation, defaultNewGameJson);
             LoadNewGame();
         }

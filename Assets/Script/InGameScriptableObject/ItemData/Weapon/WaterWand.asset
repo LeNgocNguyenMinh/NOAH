@@ -24,3 +24,11 @@ MonoBehaviour:
   materialNeedToUpgrade: 50
   weaponDamage: 9
   weaponBulletType: {fileID: 8780310021059970476, guid: 1cb329e50564e474682beeecde415b5e, type: 3}
+  defaultWeaponValue:
+    materialNeedToUpgrade: 50
+    weaponDamage: 9
+  weaponData:
+    weaponID: WP_04
+    weaponLevel: 0
+    materialNeedToUpgrade: 0
+    weaponDamage: 0

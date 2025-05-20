@@ -12,8 +12,6 @@ public class PlayerStatusUI : MonoBehaviour
     [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private TMP_Text playerAvailablePoint;
     [SerializeField]private TMP_Text playerLevel;
-    [SerializeField]private TMP_Text playerName;
-    [SerializeField]private TMP_Text playerAge;
     [SerializeField]private TMP_Text playerHealth;
     [SerializeField]private TMP_Text playerBulletNumber;
     [SerializeField]private TMP_Text playerDamage;
@@ -32,8 +30,6 @@ public class PlayerStatusUI : MonoBehaviour
     {
         this.playerAvailablePoint.text = playerStatus.availablePoint + "";
         this.playerLevel.text = playerStatus.playerLevel + "";
-        this.playerName.text = playerStatus.playerName + "";
-        this.playerAge.text = playerStatus.playerAge + "";
         this.playerHealth.text = playerStatus.maxHealth + "";
         this.playerBulletNumber.text = playerStatus.playerBullet + "";
         this.playerDamage.text = playerStatus.playerCurrentDamage + "";

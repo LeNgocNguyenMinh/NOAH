@@ -36,8 +36,6 @@ public class UIInventoryController : MonoBehaviour
             {
                 if(!uiMouseAndPriority.CanOpenThisUI())return;
                 uiInventoryPage.InventoryOpen();
-                
-                inventoryPanel.transform.SetAsLastSibling();
                 panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
                 {
                     Time.timeScale = 0f;

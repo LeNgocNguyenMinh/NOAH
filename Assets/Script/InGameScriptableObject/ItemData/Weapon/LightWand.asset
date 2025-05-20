@@ -22,5 +22,13 @@ MonoBehaviour:
   healthRecover: 0
   weaponLevel: 1
   materialNeedToUpgrade: 50
-  weaponDamage: 8.5
+  weaponDamage: 8
   weaponBulletType: {fileID: 8780310021059970476, guid: d96718d8118052049b9759eedb7e13f3, type: 3}
+  defaultWeaponValue:
+    materialNeedToUpgrade: 50
+    weaponDamage: 8
+  weaponData:
+    weaponID: WP_02
+    weaponLevel: 0
+    materialNeedToUpgrade: 0
+    weaponDamage: 0

@@ -1,24 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening; // Nhớ import DOTween
 
 public class FloatTextEffect : MonoBehaviour
 {
-
     public float amplitude = 10f;       // Biên độ dao động (độ cao trôi nổi)
-    public float frequency = 2f;        // Tần số dao động (tốc độ trôi)
-    public float phaseOffset = 0f;      // Độ trễ pha
+    public float duration = 1f;         // Thời gian một chu kỳ đi lên/đi xuống
+    public float phaseOffset = 0f;      // Độ trễ pha (nếu cần dùng cho nhiều text khác nhau)
 
     private Vector3 startPos;
 
     void Start()
     {
         startPos = transform.localPosition;
+
+        // Bắt đầu hiệu ứng với độ trễ phaseOffset (nếu có)
+        transform.DOLocalMoveY(startPos.y + amplitude, duration)
+                 .SetEase(Ease.InOutSine)
+                 .SetLoops(-1, LoopType.Yoyo)
+                 .SetDelay(phaseOffset)
+                 .SetUpdate(true);
     }
 
-    void Update()
+    void OnDisable()
     {
-        float yOffset = Mathf.Sin(Time.time * frequency + phaseOffset) * amplitude;
-        transform.localPosition = startPos + new Vector3(0, yOffset, 0);
+        // Hủy tween khi object bị disable để tránh lỗi hoặc memory leak
+        transform.DOKill();
     }
 }

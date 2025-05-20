@@ -15,4 +15,5 @@ public class SaveData
     public TimeSaveData timeSaveData;
     public PlayerSaveData playerSaveData;
     public MissionSaveData missionSaveData;
+    public List<WeaponData> weaponListData = new List<WeaponData>();
 }

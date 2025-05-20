@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -24,6 +22,7 @@ public class UIInventoryDescription : MonoBehaviour
         {
             if(item.itemID.Contains("WP"))//Mean only weapon has upgrade function available
             {
+                itemFunction.gameObject.SetActive(true);
                 weaponLevelBox.SetActive(true);
                 requireForUpgrade.SetActive(true);
                 upgradeButton.SetActive(true);
@@ -33,6 +32,7 @@ public class UIInventoryDescription : MonoBehaviour
             }
             else if(item.itemID.Contains("HP"))//else then show the item information
             {
+                itemFunction.gameObject.SetActive(true);
                 weaponLevelBox.SetActive(false);
                 requireForUpgrade.SetActive(false);
                 upgradeButton.SetActive(false);
@@ -44,6 +44,7 @@ public class UIInventoryDescription : MonoBehaviour
                 requireForUpgrade.SetActive(false);
                 upgradeButton.SetActive(false);
                 itemFunction.text = null;
+                itemFunction.gameObject.SetActive(false);
             }
             
             itemImageBox.enabled = true;
@@ -62,7 +63,7 @@ public class UIInventoryDescription : MonoBehaviour
         {
             playerStatus.AddCoin(-itemInDescription.materialNeedToUpgrade);//Remove the coin player own
             itemInDescription.SetWeaponLevel(); //Add level weapon by 1 
-            this.itemFunction.text = "Damage + " + itemInDescription.weaponDamage;//Update the damage
+            itemFunction.text = "Damage + " + itemInDescription.weaponDamage;//Update the damage
             requireForUpgradeText.text = playerStatus.playerCoin + "/" + itemInDescription.materialNeedToUpgrade; //Update the requirement for upgrade
             weaponLevelText.text = "Level " + itemInDescription.weaponLevel;// Update the level text
             PopUp.Instance.ShowNotification("Update " + itemInDescription.itemName + " succes to level " + itemInDescription.weaponLevel);

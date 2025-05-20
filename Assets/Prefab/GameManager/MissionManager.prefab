@@ -56,11 +56,8 @@ MonoBehaviour:
     targetID: 
     item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
     requiredAmount: 5
-    currentAmount: 0
     targetPosition: {x: 0, y: 0}
     requiredRadius: 1
-    isCompleted: 0
-    isClaimed: 0
     rewardCoins: 100
   - missionID: Cl01
     missionName: Buy Item
@@ -68,11 +65,8 @@ MonoBehaviour:
     targetID: 
     item: {fileID: 11400000, guid: aa64a9bf56678fa49ab776ceb4991212, type: 2}
     requiredAmount: 8
-    currentAmount: 0
     targetPosition: {x: 0, y: 0}
     requiredRadius: 1
-    isCompleted: 0
-    isClaimed: 0
     rewardCoins: 100
   finishMissions: []
   playerTransform: {fileID: 0}
