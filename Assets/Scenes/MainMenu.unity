@@ -932,7 +932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 10
-  frequency: 2
+  duration: 1
   phaseOffset: 0
 --- !u!1 &128793776
 GameObject:
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 10
-  frequency: 2
+  duration: 1
   phaseOffset: 1.5
 --- !u!114 &267998153
 MonoBehaviour:
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 10
-  frequency: 2
+  duration: 1
   phaseOffset: 0.5
 --- !u!114 &293556739
 MonoBehaviour:
@@ -2964,7 +2964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 15
-  frequency: 4
+  duration: 1
   phaseOffset: 0
 --- !u!1 &632752703
 GameObject:
@@ -4042,7 +4042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 15
-  frequency: 4
+  duration: 1
   phaseOffset: 1
 --- !u!1 &966208409
 GameObject:
@@ -4352,7 +4352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 15
-  frequency: 4
+  duration: 1
   phaseOffset: 2
 --- !u!1 &1039007778
 GameObject:
@@ -4792,8 +4792,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newGameConfirmPanel: {fileID: 455124601}
   quitGameConfirmPanel: {fileID: 40876311}
-  settingPanel: {fileID: 0}
-  popUpRect: {fileID: 0}
+  settingPanel: {fileID: 755392363}
+  popUpRect: {fileID: 338852472}
   hiddenPos: {x: 0, y: 0}
   visiblePos: {x: 0, y: 0}
   otherPanel: {fileID: 1487247821}
@@ -6373,7 +6373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 10
-  frequency: 2
+  duration: 1
   phaseOffset: 1
 --- !u!114 &1976139583
 MonoBehaviour:

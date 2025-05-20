@@ -29,6 +29,6 @@ MonoBehaviour:
     weaponDamage: 9
   weaponData:
     weaponID: WP_04
-    weaponLevel: 0
-    materialNeedToUpgrade: 0
-    weaponDamage: 0
+    weaponLevel: 1
+    materialNeedToUpgrade: 50
+    weaponDamage: 9

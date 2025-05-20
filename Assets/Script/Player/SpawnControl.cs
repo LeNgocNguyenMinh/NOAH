@@ -7,11 +7,16 @@ using System.IO;
 public class SpawnControl : MonoBehaviour
 {
     [SerializeField]private PlayerStatus playerStatus;
-    private string saveLocation = Path.Combine("D:/NOAHGame/NOAH/Assets/Script/SaveLoadSystem/", "saveData.json");
+    private string saveLocation;
+    
     private Vector3 reSpawnPoint;
     private PlayerControl playerControl;
     private HealthControl playerHealthControl;
     private Animator animator;
+    void Awake()
+    {
+        saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
+    }
     public void RespawnAfterDead()
     {
         SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));

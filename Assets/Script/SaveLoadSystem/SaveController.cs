@@ -109,10 +109,14 @@ public class SaveController : MonoBehaviour
             shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
             saveData.shopSaveData = shopController.GetListItemInShop();
         }
+        for(int i = 0; i < weaponList.Count; i++)
+        {
+            saveData.weaponListData.Add(weaponList[i].GetWeaponData());
+        }
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
         PopUp.Instance.ShowNotification("Save success.");
     }
-    public void LoadSave(Vector3 playerPos = new Vector3(), List<InventorySaveData> inventoryItemsTMP = null, List<InventorySaveData> hotBarItemsTMP = null, List<ItemInGroundSaveData> listItemsTMP = null, TimeSaveData timeDataTMP = null, PlayerSaveData playerDataTMP = null, MissionSaveData missionSaveDataTMP = null)
+    public void LoadSave(Vector3 playerPos = new Vector3(), List<InventorySaveData> inventoryItemsTMP = null, List<InventorySaveData> hotBarItemsTMP = null, List<ItemInGroundSaveData> listItemsTMP = null, TimeSaveData timeDataTMP = null, PlayerSaveData playerDataTMP = null, MissionSaveData missionSaveDataTMP = null, bool loadWeaponData = true)
     {
         if(File.Exists(saveLocation))
         {
@@ -193,10 +197,13 @@ public class SaveController : MonoBehaviour
             {
                 missionManager.SetCurrentMission(saveData.missionSaveData);
             }
-            for(int i = 0; i < weaponList.Count; i++)
+            if(loadWeaponData == true)
             {
-                weaponList[i].SetWeaponData(saveData.weaponListData[i]);
-            }
+                for(int i = 0; i < weaponList.Count; i++)
+                {
+                    weaponList[i].SetWeaponData(saveData.weaponListData[i]);
+                }
+            }            
         }
     }
 
@@ -244,6 +251,7 @@ public class SaveController : MonoBehaviour
             {
                 weaponList[i].SetWeaponDefaultData();
             }
+            SaveGame();
         }
         else{
             Debug.Log("khong co file new game");
@@ -318,6 +326,7 @@ public class SaveController : MonoBehaviour
             }";
 
             File.WriteAllText(newGameSaveLocation, defaultNewGameJson);
+            SaveGame();
             LoadNewGame();
         }
     }

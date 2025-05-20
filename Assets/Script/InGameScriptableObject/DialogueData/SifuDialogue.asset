@@ -19,12 +19,12 @@ MonoBehaviour:
   - Do you remember your name?
   - Good, and what about why are you here? Do you know where are you now?
   - When i found you in the moutain, i see a name in your hand was wrote by blood.
-    It's Noah.
+    You should check it by yourself (press C).
   - Well, that was a long story. Please sit first.
   - So you not lost all your memmory.
   - Please take a rest.
-  autoProgressLine: 010001000100
-  endDialogueLine: 000000010001
+  autoProgressLine: 01000100010000
+  endDialogueLine: 00000000010100
   typingSpeed: 0.05
   autoProgressDelay: 1.5
   choice:
@@ -32,9 +32,9 @@ MonoBehaviour:
     choice:
     - Yes, my name is Noah.
     - No, why i can't remember my name?
-    nextDialogueIndex: 0200000004000000
-  - dialogueIndex: 3
+    nextDialogueIndex: 0200000003000000
+  - dialogueIndex: 2
     choice:
     - No, I can't, but why this place look so old?
     - Yes, this place was abandoned for so long.
-    nextDialogueIndex: 0200000004000000
+    nextDialogueIndex: 0400000005000000

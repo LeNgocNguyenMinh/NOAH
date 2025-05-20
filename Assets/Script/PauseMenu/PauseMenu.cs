@@ -33,7 +33,7 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        uiMouseAndPriority = GameObject.FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
+        uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
         isOver = false;
         isPaused = false;
         pauseMenuPanel.gameObject.SetActive(false);   
@@ -98,6 +98,7 @@ public class PauseMenu : MonoBehaviour
             pauseMenuPanel.gameObject.SetActive(false);
         });
     }
+  
     public void SettingPanelShow()
     {
         panelShow = true;
