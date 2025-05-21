@@ -1,3 +1,5 @@
+# Game demo
+https://lengocnguyenminh.itch.io/noah
 # NOAH
 Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collect all 5 stones to revive the god HAON - the god of protection!!!
 <p align="center">
