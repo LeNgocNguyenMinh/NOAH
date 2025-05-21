@@ -1,5 +1,5 @@
 # NOAH
-Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collect all 5 stones to revive the god HAON - the god of protection!!!\
+Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collect all 5 stones to revive the god HAON - the god of protection!!!
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7864f6be-1d57-41f9-b0be-bac1c2b01150" alt="GameImage" width="420" height="402"/>
 </p>
@@ -17,7 +17,7 @@ Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collec
 ![AOBoss](https://github.com/user-attachments/assets/aed79d0a-b24d-4baf-b884-68c5bfb3e5d4)
 ![FDBoss](https://github.com/user-attachments/assets/ef11f537-2e67-4bcb-871e-9f7c04f0f345)
 
-Step to play the game\
+# Step to play the game\
 1.Download the file.
 2.Run the game from main menu scene.\
 3.You can choose continue or new game.\
@@ -25,7 +25,7 @@ Step to play the game\
 Youtube link game demo:\
 https://www.youtube.com/watch?v=Xp0u6GTyPiE
 \
-Function in game:
+# Function in game:
 1. Player level: Player when level up gain points and can spend that point to health, damage or bullet in player status panel.
 2. Player status: Check and Change player information or attributes.(press C)
 3. Inventory: Collect items and they will be here. you can also check item information or add they to hot bar.(press I)
