@@ -1,10 +1,11 @@
 # NOAH
 Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collect all 5 stones to revive the god HAON - the god of protection!!!\
-<p align="center">
-  <img width="420" height="402" src="https://github.com/user-attachments/assets/5ab710f6-0893-4a3e-ba00-a5c53f6aa3bf">
-</p>
-# Let see some image in Game\
-![StartMenu](https://github.com/user-attachments/assets/b360b9ac-6dc1-4215-a4dd-b204165efa5c)
+
+# Let see some image in Game
+![StartMenu](https://github.com/user-attachments/assets/7f2b8b28-1529-4b8d-9c57-40057abf9d6a)
+![Inv](https://github.com/user-attachments/assets/39befa71-95cb-414b-bcae-2cd521443481)
+![Status](https://github.com/user-attachments/assets/260df366-0a6a-4c8d-b92d-aa4b20417f71)
+![Shop](https://github.com/user-attachments/assets/31740fa5-fa1e-492c-a668-964d28e54511)
 
 Step to play the game\
 1.Download the file.
