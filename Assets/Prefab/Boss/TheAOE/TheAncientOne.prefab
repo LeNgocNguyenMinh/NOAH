@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54a9c8a56bf5984a96407f41155701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponDrop: {fileID: 6570388555785072779, guid: b5dd8217f2592084683bdeba8ae1f7b8, type: 3}
+  weaponDrop: {fileID: 6570388555785072779, guid: ba07c8aa42e5c0d4aa6bab460eac95f7, type: 3}
   gemDrop: {fileID: 7201876602067210802, guid: 73ba0a86a0fd47d44858b11945e2ac39, type: 3}
   expPrefab: {fileID: 3192577251028670781, guid: 7eb29ef071e86b64098fc19bf79e5b33, type: 3}
   coinPrefab: {fileID: 2226808372654750378, guid: 7ef5462f482b7fd45af094ccc773212d, type: 3}
