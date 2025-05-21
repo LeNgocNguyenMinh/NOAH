@@ -4,16 +4,7 @@ Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collec
   <img width="420" height="402" src="https://github.com/user-attachments/assets/5ab710f6-0893-4a3e-ba00-a5c53f6aa3bf">
 </p>
 # Let see some image in Game
-![Status](https://github.com/user-attachments/assets/68cdaf77-e4ea-459d-a066-a1b3ca5da6bf)
-![StartMenu](https://github.com/user-attachments/assets/4f36ee2b-9ec5-4ca2-9441-5637969e9c7a)
-![Slime](https://github.com/user-attachments/assets/e9950abb-8753-41f4-af92-4ac656f6bf74)
-![Shop](https://github.com/user-attachments/assets/07369ebd-57bf-436b-b912-049c24a7b354)
-![Inv](https://github.com/user-attachments/assets/d4b70046-8c0a-47ba-9954-6844195f02e5)
-![HomeScene](https://github.com/user-attachments/assets/c4070cef-5cd5-47f3-9dea-03becd6b02ee)
-![FDBoss](https://github.com/user-attachments/assets/eeadaba4-4698-4af1-9521-8fd676321c38)
-![Env](https://github.com/user-attachments/assets/b6d52969-5349-4a04-ab47-0ee5394a7dc8)
-![Dia](https://github.com/user-attachments/assets/e4527e44-e18e-4a4d-8330-9929cd99ac9e)
-![AOBoss](https://github.com/user-attachments/assets/b534fa8c-8fec-4b25-a04e-4db2fff52227)
+![StartMenu](https://github.com/user-attachments/assets/b360b9ac-6dc1-4215-a4dd-b204165efa5c)
 
 Step to play the game\
 1.Download the file.
