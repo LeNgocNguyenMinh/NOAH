@@ -23,8 +23,8 @@ MonoBehaviour:
   - Well, that was a long story. Please sit first.
   - So you not lost all your memmory.
   - Please take a rest.
-  autoProgressLine: 01000100010000
-  endDialogueLine: 00000000010100
+  autoProgressLine: 00000000000000
+  endDialogueLine: 00000000000100
   typingSpeed: 0.05
   autoProgressDelay: 1.5
   choice:
