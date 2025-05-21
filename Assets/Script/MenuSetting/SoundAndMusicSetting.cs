@@ -15,11 +15,6 @@ public class SoundAndMusicSetting : MonoBehaviour
     private static bool hasPlayedMusic = false;
     private void Start()
     {
-        if(hasPlayedMusic)
-        {
-            return;
-        } 
-        hasPlayedMusic = true;
         musicSrc = GameObject.FindWithTag("Music").GetComponent<AudioSource>();
         sfxSrc = GameObject.FindWithTag("SFX").GetComponent<AudioSource>();
         audioMixer.SetFloat("musicPara", Mathf.Log10(1)*20);

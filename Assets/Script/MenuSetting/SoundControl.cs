@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoundControl : MonoBehaviour
 {
+    public static SoundControl instance;
     private AudioSource musicSrc;
     private AudioSource sfxSrc;
     [Header("----------Player Audio Clips----------")]

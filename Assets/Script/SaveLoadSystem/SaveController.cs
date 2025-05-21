@@ -259,10 +259,7 @@ public class SaveController : MonoBehaviour
                 ""saveScene"": ""Level1"",
                 ""playerPosition"": { ""x"": 1.7463607, ""y"": -4.6992025, ""z"": 0.0 },
                 ""mapBoundary"": ""L1"",
-                ""inventorySaveData"": [
-                    { ""itemID"": ""HPFruit_01"", ""itemQuantity"": 1, ""slotIndex"": 0 },
-                    { ""itemID"": ""WP_04"", ""itemQuantity"": 1, ""slotIndex"": 1 }
-                ],
+                ""inventorySaveData"": [],
                 ""hotBarSaveData"": [],
                 ""shopSaveData"": [
                     { ""itemID"": ""HPFruit_05"", ""itemLeftNumber"": 5 },
@@ -272,7 +269,7 @@ public class SaveController : MonoBehaviour
                     { ""itemID"": ""HPPotion_02"", ""itemLeftNumber"": 5 }
                 ],
                 ""itemInGroundSaveData"": [
-                    { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -15.3, ""y"": 3.2, ""z"": 0.0 }, ""isCollect"": true },
+                    { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -15.3, ""y"": 3.2, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -23.05, ""y"": -2.18, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -22.03, ""y"": -2.16, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -3.53, ""y"": -8.92, ""z"": 0.0 }, ""isCollect"": false },
@@ -282,10 +279,10 @@ public class SaveController : MonoBehaviour
                     { ""itemID"": ""FireCloth_Coat_FireCoat"", ""itemPos"": { ""x"": 11.57, ""y"": -7.08, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""IceCloth_Coat_IceCoat"", ""itemPos"": { ""x"": 10.64, ""y"": -10.47, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""IceCloth_Hat_IceHat"", ""itemPos"": { ""x"": 5.42, ""y"": -10.25, ""z"": 0.0 }, ""isCollect"": false },
-                    { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": -15.0, ""y"": 9.86, ""z"": 0.0 }, ""isCollect"": true },
+                    { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": -15.0, ""y"": 9.86, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": -1.31, ""y"": 1.46, ""z"": 0.0 }, ""isCollect"": false }
                 ],
-                ""timeSaveData"": { ""minData"": 17.0, ""hourData"": 21.0, ""dateData"": 0 },
+                ""timeSaveData"": { ""minData"": 0.0, ""hourData"": 0.0, ""dateData"": 0 },
                 ""playerSaveData"": {
                     ""playerLevelData"": 1,
                     ""availablePointData"": 3,
@@ -326,8 +323,8 @@ public class SaveController : MonoBehaviour
             }";
 
             File.WriteAllText(newGameSaveLocation, defaultNewGameJson);
-            SaveGame();
             LoadNewGame();
+            SaveGame();
         }
     }
 }
