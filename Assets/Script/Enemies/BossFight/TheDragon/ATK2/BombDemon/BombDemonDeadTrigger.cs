@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BombDemonDeadTrigger : MonoBehaviour
 {
-    private HealthControl playerHealthControl;
     [SerializeField] private BossStatus bossStatus;
     [SerializeField]private Animator animator;
     private void OnTriggerEnter2D(Collider2D collider)
@@ -13,8 +12,7 @@ public class BombDemonDeadTrigger : MonoBehaviour
         {
             if(collider.tag == "PlayerHitCollider")
             {
-                playerHealthControl = GameObject.FindObjectOfType<PlayerControl>().GetComponent<HealthControl>();
-                playerHealthControl.PlayerHurt(bossStatus.bossDamage);
+                HealthControl.Instance.PlayerHurt(bossStatus.bossDamage);
             }
             animator.SetTrigger("isDead");
         }

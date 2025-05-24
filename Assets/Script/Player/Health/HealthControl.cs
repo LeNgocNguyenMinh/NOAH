@@ -5,6 +5,7 @@ using TMPro;
 
 public class HealthControl : MonoBehaviour
 {
+    public static HealthControl Instance;
     private PauseMenu pauseMenu;
     [SerializeField]private TextMeshProUGUI healthText;
     [SerializeField]private PlayerStatus playerStatus;
@@ -13,6 +14,10 @@ public class HealthControl : MonoBehaviour
     private float healthCurrentValue;// Health current value
     private float healthMaxValue; // Health max value need to achive for level up
     private Animator animator;
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         //Set Start Value same with data (player status)

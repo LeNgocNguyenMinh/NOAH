@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ChargeShotATK1 : MonoBehaviour
 {
-    private HealthControl playerHealthControl;
     [SerializeField] private BossStatus bossStatus;
     private Transform playerTransform;
     private Rigidbody2D rb;
@@ -84,8 +83,7 @@ public class ChargeShotATK1 : MonoBehaviour
 
                 if(collider.tag == "PlayerHitCollider")
                 {
-                    playerHealthControl = GameObject.FindObjectOfType<PlayerControl>().GetComponent<HealthControl>();
-                    playerHealthControl.PlayerHurt(bossStatus.bossDamage);
+                    HealthControl.Instance.PlayerHurt(bossStatus.bossDamage);
                 }
                 
                 Animator animator = GetComponent<Animator>();

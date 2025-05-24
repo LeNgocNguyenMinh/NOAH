@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerStatusUI : MonoBehaviour
 {
+    public static PlayerStatusUI Instance;
     public static bool playerStatusUIOpen = false;
     [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private TMP_Text playerAvailablePoint;
@@ -17,6 +18,10 @@ public class PlayerStatusUI : MonoBehaviour
     [SerializeField]private TMP_Text playerDamage;
     [SerializeField]private TMP_Text playerCoinNumber;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     public void OpenPlayerStatus()
     {
         playerStatusUIOpen = true;

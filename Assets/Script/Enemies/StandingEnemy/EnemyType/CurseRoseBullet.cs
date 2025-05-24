@@ -6,7 +6,6 @@ public class CurseRoseBullet : MonoBehaviour
 {
     [SerializeField]private EnemyStatus enemyStatus;
     private Transform playerTransform;
-    private HealthControl playerHealth;
     private Vector3 direction;
     private bool bulletBreak = false;
     [SerializeField]private float chaseTime = 0.0f;
@@ -20,7 +19,6 @@ public class CurseRoseBullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerTransform = FindObjectOfType<HealthControl>().transform;
         timeCount = chaseTime;
-        playerHealth = FindObjectOfType<HealthControl>().GetComponent<HealthControl>();
     }
     public void FixedUpdate()
     {
@@ -44,7 +42,7 @@ public class CurseRoseBullet : MonoBehaviour
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
-            playerHealth.PlayerHurt(enemyStatus.enemyDamage);
+            HealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
             rb.velocity = Vector2.zero;
             bulletBreak = true;
             animator.SetTrigger("break");

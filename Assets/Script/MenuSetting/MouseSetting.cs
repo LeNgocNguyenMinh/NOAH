@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class MouseSetting : MonoBehaviour
 {
+    public static MouseSetting Instance;
     Vector2 targetPos;
     float rotateSpeed;
     private bool mouseShouldVisible;
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         Cursor.visible = false;

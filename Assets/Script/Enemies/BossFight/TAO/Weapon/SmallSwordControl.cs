@@ -10,14 +10,12 @@ public class SmallSwordControl : MonoBehaviour
     private Transform playerTransform;
     private bool changeDirect;
     [SerializeField] private BossStatus bossStatus;
-    private HealthControl playerHealthControl;
     [SerializeField]private float smallSwordSpeed;
     [SerializeField]private float maxDistanceOfSmallSword;
     private void Start()
     {
         playerTransform = FindObjectOfType<PlayerControl>().transform;
         startPosition = transform.position;
-        playerHealthControl = GameObject.FindObjectOfType<PlayerControl>().GetComponent<HealthControl>();
         rb = GetComponent<Rigidbody2D>();
         changeDirect = false;
         StartCoroutine(ToPlayer());
@@ -48,7 +46,7 @@ public class SmallSwordControl : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("PlayerHitCollider"))
         {
-           playerHealthControl.PlayerHurt(bossStatus.bossDamage/2);
+           HealthControl.Instance.PlayerHurt(bossStatus.bossDamage/2);
            Destroy(gameObject);
         }
         if(collider.gameObject.tag == "ForeGround")

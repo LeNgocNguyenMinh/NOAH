@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SmallShotATK1 : MonoBehaviour
 {
-    private HealthControl playerHealthControl;
     [SerializeField] private BossStatus bossStatus;
     private float speed; 
     private Transform playerTransform;
@@ -43,8 +42,7 @@ public class SmallShotATK1 : MonoBehaviour
 
                 if(collider.tag == "PlayerHitCollider")
                 {
-                    playerHealthControl = GameObject.FindObjectOfType<PlayerControl>().GetComponent<HealthControl>();
-                    playerHealthControl.PlayerHurt(bossStatus.bossDamage/4f);
+                    HealthControl.Instance.PlayerHurt(bossStatus.bossDamage/4f);
                 }
 
                 animator = GetComponent<Animator>();

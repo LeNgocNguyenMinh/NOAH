@@ -5,20 +5,15 @@ using UnityEngine.EventSystems;
 
 public class CheckCursorIsOverUI : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
 {
-    private MouseSetting mouseSetting;
-    private void Start()
-    {
-        mouseSetting = FindObjectOfType<MouseSetting>().GetComponent<MouseSetting>();
-    }
      public void OnPointerEnter(PointerEventData eventData)
     {
-        mouseSetting.SetMouseShouldVisible(true);
+        MouseSetting.Instance.SetMouseShouldVisible(true);
         WeaponParent.playerCanShoot = false;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        mouseSetting.SetMouseShouldVisible(false);
+        MouseSetting.Instance.SetMouseShouldVisible(false);
         WeaponParent.playerCanShoot = true;
     }
 

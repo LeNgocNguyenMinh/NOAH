@@ -16,7 +16,6 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     private string itemDescription;
     public bool isEmpty = true;//Check if slot is empty    
     private Item item;
-    private HealthControl playerHealthControl;
     private WeaponParent weaponParent;
     private PlayerLoadout playerLoadout;
     [SerializeField]private TMP_Text quantityText;
@@ -35,7 +34,6 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
             playerLoadout = FindObjectOfType<PlayerLoadout>().GetComponent<PlayerLoadout>();
         }
         uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-        playerHealthControl = FindObjectOfType<PlayerControl>().GetComponent<HealthControl>();
         weaponParent = FindObjectOfType<WeaponParent>().GetComponent<WeaponParent>();
     }
     private void Awake()
@@ -154,7 +152,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         }
         else if(itemID.Contains("HP"))//If HP item is equip
         {
-            if(playerHealthControl.HealthRecover(this.item.healthRecover))//this function return: true if health is not full and otherwise
+            if(HealthControl.Instance.HealthRecover(this.item.healthRecover))//this function return: true if health is not full and otherwise
             {
                 DeleteOne();//Mean item was used
             }

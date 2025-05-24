@@ -7,7 +7,6 @@ public class HeavySwordControl : MonoBehaviour
     [SerializeField]private GameObject smallSwordObject;
     [SerializeField]private float speed;
     [SerializeField] private BossStatus bossStatus;
-    private HealthControl playerHealthControl;
     private Animator animator;
     private Rigidbody2D rb;
     private Vector3 direction;
@@ -53,8 +52,7 @@ public class HeavySwordControl : MonoBehaviour
         {
             rb = GetComponent<Rigidbody2D>();
             rb.velocity = Vector3.zero;
-            playerHealthControl = GameObject.FindObjectOfType<PlayerControl>().GetComponent<HealthControl>();
-            playerHealthControl.PlayerHurt(bossStatus.bossDamage);
+            HealthControl.Instance.PlayerHurt(bossStatus.bossDamage);
             split = false;
             animator = GetComponent<Animator>();
             animator.SetTrigger("isHit");

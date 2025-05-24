@@ -8,7 +8,6 @@ public class EDSBehavior : MonoBehaviour
     [SerializeField]private EnemyStatus enemyStatus;
     private Transform player;
     [SerializeField]private GameObject enemySprite;
-    private HealthControl playerHealthControl;
     private Rigidbody2D rb;
     [SerializeField]private float speed;
     private float changeDirectionCoolDown=0f;
@@ -19,7 +18,6 @@ public class EDSBehavior : MonoBehaviour
     private Animator animator;
     private bool isAlive;   
     private bool isAttack;
-    private bool isFollow;
     private Vector2 directionToWaypoint;
     private float distanceToPlayer;
 
@@ -36,7 +34,6 @@ public class EDSBehavior : MonoBehaviour
     public void Awake()
     {
         player = FindObjectOfType<PlayerControl>().transform;
-        playerHealthControl = player.GetComponent<HealthControl>();
     }
 
     private void FixedUpdate()
@@ -122,7 +119,7 @@ public class EDSBehavior : MonoBehaviour
         float distanceToTakedamage = Vector2.Distance(transform.position, player.transform.position);
         if(distanceToTakedamage <=2f)
         {
-            playerHealthControl.PlayerHurt(enemyStatus.enemyDamage);
+            HealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
         } 
     } 
     private void SetNewDestination()

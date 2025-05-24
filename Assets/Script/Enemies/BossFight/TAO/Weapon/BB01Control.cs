@@ -4,7 +4,6 @@ using UnityEngine;
 public class BB01Control : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private HealthControl playerHealthControl;
     private Vector3 thisTarget;
     private Vector3 startPosition;
     [SerializeField] private float bulletSpeed;
@@ -15,7 +14,6 @@ public class BB01Control : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
-        playerHealthControl = GameObject.FindObjectOfType<PlayerControl>().GetComponent<HealthControl>();
     }
     private void Update()
     {
@@ -40,7 +38,7 @@ public class BB01Control : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("PlayerHitCollider"))
         {
-            playerHealthControl.PlayerHurt(bossStatus.bossDamage);
+           HealthControl.Instance.PlayerHurt(bossStatus.bossDamage);
             Destroy(gameObject);
         }
         if(collider.gameObject.CompareTag("ForeGround"))

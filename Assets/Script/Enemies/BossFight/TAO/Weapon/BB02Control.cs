@@ -7,14 +7,12 @@ public class BB02Control : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 startPosition;
     [SerializeField]private GameObject smallBulletPrefab;
-    private HealthControl playerHealthControl;
     private float maxDistanceOfBigBullet;
     [SerializeField] private BossStatus bossStatus;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
-        playerHealthControl = GameObject.FindObjectOfType<PlayerControl>().GetComponent<HealthControl>();
     }
     private void Update()
     {
@@ -46,7 +44,7 @@ public class BB02Control : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("PlayerHitCollider"))
         {
-           playerHealthControl.PlayerHurt(bossStatus.bossDamage);
+           HealthControl.Instance.PlayerHurt(bossStatus.bossDamage);
            Destroy(gameObject);
         }
         if(collider.gameObject.CompareTag("ForeGround"))

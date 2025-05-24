@@ -8,10 +8,7 @@ public class SpawnControl : MonoBehaviour
 {
     [SerializeField]private PlayerStatus playerStatus;
     private string saveLocation;
-    
-    private Vector3 reSpawnPoint;
     private PlayerControl playerControl;
-    private HealthControl playerHealthControl;
     private Animator animator;
     void Awake()
     {
@@ -57,11 +54,10 @@ public class SpawnControl : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerControl = GetComponent<PlayerControl>();
-        playerHealthControl = GetComponent<HealthControl>();
 
         playerControl.SetIsAlive(true);// do this so player can move
         animator.SetTrigger("isRespawn");
         playerStatus.RespawnPlayerAfterDead();//Player Status after dead and was respawn
-        playerHealthControl.PlayerHeatlthAfterRespawn(); //Player Health UI
+        HealthControl.Instance.PlayerHeatlthAfterRespawn(); //Player Health UI
     }
 }
