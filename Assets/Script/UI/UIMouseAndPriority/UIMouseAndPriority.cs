@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class UIMouseAndPriority : MonoBehaviour
 {
+    public static UIMouseAndPriority Instance;
+    private void Awake()
+    {
+        Instance = this;   
+    }
     public bool CanOpenThisUI()//return false if one of the UI is Open
     {
         if(UIInventoryPage.inventoryOpen || PlayerStatusUI.playerStatusUIOpen 

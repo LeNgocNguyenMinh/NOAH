@@ -7,7 +7,6 @@ public class ShopInteractive : MonoBehaviour
     // Start is called before the first frame update
     private ObjectInteraction objectInteraction;
     private ShopController shopController;
-    private UIMouseAndPriority uiMouseAndPriority;
     [SerializeField]private RectTransform panel;
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;
@@ -19,7 +18,6 @@ public class ShopInteractive : MonoBehaviour
         objectInteraction = GetComponent<ObjectInteraction>();
         if(objectInteraction.GetCanInteract())
         {
-            uiMouseAndPriority = GameObject.FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
             if (Input.GetKeyDown(KeyCode.F))
             {
                 if(ShopController.shopPanelIsOpen)
@@ -32,7 +30,7 @@ public class ShopInteractive : MonoBehaviour
                 }
                 else 
                 {
-                    if(!uiMouseAndPriority.CanOpenThisUI())return;
+                    if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
                     Debug.Log("Can Open shop: " + canOpenShop);
                     if(!canOpenShop)
                     {

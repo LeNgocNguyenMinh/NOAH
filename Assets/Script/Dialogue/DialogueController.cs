@@ -22,18 +22,21 @@ public class DialogueController : MonoBehaviour
     }
     public void ShowDialogueUI()
     { 
+        NPCDialogueControl.isDialogueActive = true;
         dialoguePanel.gameObject.SetActive(true);
+        Time.timeScale = 0f;
         dialoguePanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
-            Time.timeScale = 0f;
+            
         });
     }
     public void HideDialogueUI()
     { 
         dialoguePanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
-            dialoguePanel.gameObject.SetActive(false);
             Time.timeScale = 1f;
+            NPCDialogueControl.isDialogueActive = false;
+            dialoguePanel.gameObject.SetActive(false);
         });
     }
     public void SetDialogue(string name, Sprite portrait)

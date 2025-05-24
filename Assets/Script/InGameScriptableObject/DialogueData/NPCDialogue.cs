@@ -8,10 +8,8 @@ public class NPCDialogue : ScriptableObject
     public string npcName;
     public Sprite npcPortrait;
     public string[] dialogueLine;
-    public bool[] autoProgressLine;
     public bool[] endDialogueLine;
     public float typingSpeed;
-    public float autoProgressDelay;
     public DialogueChoice[] choice;
 }
 [System.Serializable]

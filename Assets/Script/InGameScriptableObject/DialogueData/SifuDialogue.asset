@@ -22,11 +22,8 @@ MonoBehaviour:
     You should check it by yourself (press C).
   - Well, that was a long story. Please sit first.
   - So you not lost all your memmory.
-  - Please take a rest.
-  autoProgressLine: 00000000000000
-  endDialogueLine: 00000000000100
+  endDialogueLine: 000000000101
   typingSpeed: 0.05
-  autoProgressDelay: 1.5
   choice:
   - dialogueIndex: 1
     choice:

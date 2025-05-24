@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class WeaponParent : MonoBehaviour
 {
-    private UIMouseAndPriority uiMouseAndPriority;
     [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private MagazineText magazineText;
     SoundControl audioManager; // Source sound when shoot
@@ -24,7 +23,6 @@ public class WeaponParent : MonoBehaviour
     void Start()
     { 
         playerCanShoot = true;
-        uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
         magazine = playerStatus.playerBullet;//Get the max magazine
         currentBullet = magazine;
         if(playerStatus.currentWeapon == null)
@@ -37,7 +35,7 @@ public class WeaponParent : MonoBehaviour
     }
     void Update()
     {
-        if(!uiMouseAndPriority.CanOpenThisUI()) return;
+        if(!UIMouseAndPriority.Instance.CanOpenThisUI()) return;
         Reload();
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 rotation = mousePos - transform.position;

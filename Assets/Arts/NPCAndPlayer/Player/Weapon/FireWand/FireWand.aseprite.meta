@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: FireWand
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5625, y: -0.049999997}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 35
-      height: 96
+      width: 32
+      height: 80
     spriteID: a267aa3f7387d0c41993567755ff045e
     spriteBone: []
     spriteOutline: []
@@ -156,8 +156,8 @@ ScriptedImporter:
       cellRect:
         x: 32
         y: 4
-        width: 35
-        height: 96
+        width: 32
+        height: 80
       spriteId: a267aa3f7387d0c41993567755ff045e
     linkedCells: []
     parentIndex: -1

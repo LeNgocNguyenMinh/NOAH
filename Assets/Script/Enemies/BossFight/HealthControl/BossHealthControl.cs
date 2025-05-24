@@ -46,9 +46,6 @@ public class BossHealthControl : MonoBehaviour
     public void BossHurt(float damage)
     {
         currentHealth -= damage;
-        bossStatus.SetCurrentHealth(currentHealth);
-        UpdateHealthText();
-        bossHealthBar.SetHealth(currentHealth);
         if(currentHealth <=0)
         {
             if(bossStatus.bossName == "The Ancient One")
@@ -61,7 +58,11 @@ public class BossHealthControl : MonoBehaviour
                 FDManager fdManager = GetComponent<FDManager>();
                 fdManager.DeathTrigger(); 
             }
+            currentHealth = 0;
         }
+        bossStatus.SetCurrentHealth(currentHealth);
+        UpdateHealthText();
+        bossHealthBar.SetHealth(currentHealth);
     }
     public float GetCurrentHealth()
     {

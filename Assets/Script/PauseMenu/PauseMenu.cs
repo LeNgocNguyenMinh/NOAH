@@ -9,7 +9,6 @@ using DG.Tweening;
 
 public class PauseMenu : MonoBehaviour
 {
-    private UIMouseAndPriority uiMouseAndPriority;
     private SpawnControl spawnControl;
     [SerializeField]private RectTransform pauseMenuPanel;
     [SerializeField]private Vector2 hiddenPosition;
@@ -25,7 +24,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private Image resumeButtonImage;
     [SerializeField]private Sprite respawnSprite;
     [SerializeField]private Sprite resumeSprite;
-    private HealthControl healthControl;
 
     public static bool isPaused;
     private bool isOver = false;
@@ -33,7 +31,6 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
         isOver = false;
         isPaused = false;
         pauseMenuPanel.gameObject.SetActive(false);   
@@ -56,7 +53,7 @@ public class PauseMenu : MonoBehaviour
                 PauseMenuPanelOff();
             }
             else{
-                if(!uiMouseAndPriority.CanOpenThisUI()) return;
+                if(!UIMouseAndPriority.Instance.CanOpenThisUI()) return;
                 PauseMenuPanelShow();
             }
         }

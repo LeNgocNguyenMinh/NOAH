@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class PlayerStatusController : MonoBehaviour
 {
     private PlayerStatusUI playerStatusUI;
-    private UIMouseAndPriority uiMouseAndPriority;
     private AddAvailablePoint addAvailablePoint;
     [Header("---------StatusUI Move---------")] 
     [SerializeField]private RectTransform panel;
@@ -25,7 +24,6 @@ public class PlayerStatusController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             playerStatusUI = GetComponent<PlayerStatusUI>();
-            uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
             if(PlayerStatusUI.playerStatusUIOpen)
             {
                 playerStatusUI.ClosePlayerStatus();
@@ -37,7 +35,7 @@ public class PlayerStatusController : MonoBehaviour
                 });
             }
             else{
-                if(!uiMouseAndPriority.CanOpenThisUI()) return;
+                if(!UIMouseAndPriority.Instance.CanOpenThisUI()) return;
                 playerStatusUI.OpenPlayerStatus();
                 addAvailablePoint = GetComponent<AddAvailablePoint>();
                 addAvailablePoint.CheckAvailablePoint();                

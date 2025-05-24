@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
-    private UIMouseAndPriority uiMouseAndPriority;
-
     //Normal move
     [SerializeField] private float dashSpeed;
     [SerializeField] private float moveSpeed;
@@ -25,7 +23,6 @@ public class PlayerControl : MonoBehaviour
     private Vector2 moveDirect;
     private void Start()
     {
-        uiMouseAndPriority = GameObject.FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
         Time.timeScale = 1f;
         dashSkill.fillAmount = 0;
         isAlive = true;
@@ -37,7 +34,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
-        if (!uiMouseAndPriority.CanOpenThisUI()) return;
+        if (!UIMouseAndPriority.Instance.CanOpenThisUI()) return;
         speedX = Input.GetAxisRaw("Horizontal");
         speedY = Input.GetAxisRaw("Vertical");
         moveDirect = new Vector2(speedX, speedY).normalized;

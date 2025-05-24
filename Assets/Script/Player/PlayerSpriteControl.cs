@@ -5,11 +5,9 @@ using UnityEngine;
 public class PlayerSpriteControl : MonoBehaviour
 {
     private Vector3 mousePos;
-    private UIMouseAndPriority uiMouseAndPriority;
     void Update()
     {
-        uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
-        if(uiMouseAndPriority.CanOpenThisUI()==false)return;
+        if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         FacingDirection();
     }

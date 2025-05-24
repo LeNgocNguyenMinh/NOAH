@@ -6,7 +6,6 @@ using DG.Tweening;
 public class UIInventoryController : MonoBehaviour
 {
     private UIInventoryPage uiInventoryPage;
-    private UIMouseAndPriority uiMouseAndPriority;
     [SerializeField]private PlayerLoadout playerLoadout;
     [Header("---------InventoryUI Move---------")] 
     [SerializeField]private RectTransform panel;
@@ -21,7 +20,6 @@ public class UIInventoryController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.I))
         {
             uiInventoryPage = GetComponent<UIInventoryPage>();
-            uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
             Debug.Log(UIInventoryPage.inventoryOpen);
             if(UIInventoryPage.inventoryOpen)
             {
@@ -34,7 +32,7 @@ public class UIInventoryController : MonoBehaviour
             }
             else
             {
-                if(!uiMouseAndPriority.CanOpenThisUI())return;
+                if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
                 uiInventoryPage.InventoryOpen();
                 panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
                 {

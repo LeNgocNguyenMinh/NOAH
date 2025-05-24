@@ -11,14 +11,14 @@ public class NPCDialogueControl : MonoBehaviour
     private int dialogueIndex;
     private bool isTyping = false;
     public static bool isDialogueActive = false;
-    private UIMouseAndPriority uiMouseAndPriority;
+    public bool test;
     private ObjectInteraction objectInteraction;
     private Tween typewriterTween; 
-    private int i = 0;
     private DialogueChoice currentChoice;
 
     private void Update()
     {
+        test = isDialogueActive;
         objectInteraction = GetComponent<ObjectInteraction>();
         if(objectInteraction.GetCanInteract())
         {
@@ -30,20 +30,22 @@ public class NPCDialogueControl : MonoBehaviour
     }
     private void Interact()
     {
-        uiMouseAndPriority = FindObjectOfType<UIMouseAndPriority>().GetComponent<UIMouseAndPriority>();
-        if(dialogueData == null || (uiMouseAndPriority.CanOpenThisUI() == false && isDialogueActive == false))
+        //Some UI panel í active
+        if(dialogueData == null || (UIMouseAndPriority.Instance.CanOpenThisUI() == false && isDialogueActive == false))
         {
             return;
         }
+        //in option choice line
         if(CheckOptionChoice() && !isTyping)
         {
             return;
         }
+        //in normal line
         if(isDialogueActive)
         {
             Debug.Log(1);
             NextLine();
-        }
+        }//in first line
         else{
             Debug.Log(2);
             StartDialogue();
@@ -52,13 +54,14 @@ public class NPCDialogueControl : MonoBehaviour
     private void StartDialogue()
     {
         DialogueController.Instance.ShowDialogueUI();
-        isDialogueActive = true;
         DialogueController.Instance.SetDialogue(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueIndex = 0;
         TypeLine();
     }
+    //function for write line and actione when line finish 
     private void TypeLine()
     {
+        //Check if last line
         if (dialogueData.dialogueLine.Length <= dialogueIndex) return;
 
         isTyping = true;
@@ -79,7 +82,7 @@ public class NPCDialogueControl : MonoBehaviour
         .OnComplete(() => 
         {
             isTyping = false;
-            // Xử lý tự động chuyển dòng
+            // check if current line is option choice line
             if(CheckOptionChoice())
             {
                 DialogueController.Instance.ClearChoice();
@@ -90,9 +93,9 @@ public class NPCDialogueControl : MonoBehaviour
 
     private void NextLine()
     {
+        // if typing,show the full line
         if(isTyping)
         {
-            // Nếu đang gõ, hủy Tween và hiển thị toàn bộ text
             typewriterTween?.Kill();
             DialogueController.Instance.SetDialogueText(dialogueData.dialogueLine[dialogueIndex]);
             isTyping = false;
@@ -102,21 +105,24 @@ public class NPCDialogueControl : MonoBehaviour
                 DisplayChoice(currentChoice);
             }
             return;
-        }        
+        }       
+        //if this is the finish line then end the dialogue 
         if(dialogueData.endDialogueLine.Length > dialogueIndex && dialogueData.endDialogueLine[dialogueIndex])
         {
             EndDialogue();
             return;
         }
+        //if this this not the last line then continue
         if(++dialogueIndex < dialogueData.dialogueLine.Length)
         {
             TypeLine();
-        }
+        }//else end dialogue
         else
         {
             EndDialogue();
         }
     }
+    //check if current line is option choice line
     private bool CheckOptionChoice()
     {
         foreach(DialogueChoice choice in dialogueData.choice)
@@ -129,12 +135,13 @@ public class NPCDialogueControl : MonoBehaviour
         }
         return false;
     }
+    //hide dialogue UI
     private void EndDialogue()
     {
         typewriterTween?.Kill();
         DialogueController.Instance.HideDialogueUI();
-        isDialogueActive = false;
     }
+    //create option choice button
     private void DisplayChoice(DialogueChoice dialogueChoice)
     {
         for(int i = 0; i < dialogueChoice.choice.Length; i++)
@@ -143,6 +150,7 @@ public class NPCDialogueControl : MonoBehaviour
             DialogueController.Instance.CreateChoiceButton(dialogueChoice.choice[i], () => ChooseOption(nextIndex));
         }
     }
+    //choose option choice and process next line
     private void ChooseOption(int nextIndex)
     {
         dialogueIndex = nextIndex;

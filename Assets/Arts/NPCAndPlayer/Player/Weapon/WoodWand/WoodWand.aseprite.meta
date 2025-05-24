@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: WoodWand
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5625, y: -0.049999997}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 48
-      height: 97
+      width: 32
+      height: 80
     spriteID: 4fd2444660ff11c4e893ad58bdc4d214
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 26
-        y: 3
-        width: 48
-        height: 97
+        x: 32
+        y: 4
+        width: 32
+        height: 80
       spriteId: 4fd2444660ff11c4e893ad58bdc4d214
     linkedCells: []
     parentIndex: -1
