@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Sifu_Idle_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.20289855}
+    pivot: {x: 0.5, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -151,7 +151,7 @@ ScriptedImporter:
       x: 4
       y: 82
       width: 68
-      height: 69
+      height: 70
     spriteID: 4b9d3625c16f5824aab9a06302f5d2cc
     spriteBone: []
     spriteOutline: []
@@ -163,15 +163,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 82}
   - name: Sifu_Idle_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.20588236}
+    pivot: {x: 0.5, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 236
+      y: 160
       width: 68
-      height: 68
+      height: 70
     spriteID: ba3bb55957f4a8b4ebbe4478bacc8105
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 236}
+    uvTransform: {x: 4, y: 160}
   - name: Sifu_Idle_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.20895521}
+    pivot: {x: 0.5, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 388
+      y: 238
       width: 68
-      height: 67
+      height: 70
     spriteID: c04931553497ffc409de19888df013cd
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 388}
+    uvTransform: {x: 4, y: 238}
   - name: Sifu_Idle_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.21212122}
+    pivot: {x: 0.5, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 80
-      y: 79
+      x: 4
+      y: 316
       width: 68
-      height: 66
+      height: 70
     spriteID: 0b1b9355314cf924ebfd677db4f02062
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 80, y: 79}
+    uvTransform: {x: 4, y: 316}
   - name: Sifu_Idle_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: -0.21538462}
+    pivot: {x: 0.5, y: -0.20588236}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 80
-      y: 227
+      y: 160
       width: 68
-      height: 65
+      height: 68
     spriteID: 48dc3dd4ea7eb6547872cf029d6f049f
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 80, y: 227}
+    uvTransform: {x: 80, y: 160}
   - name: Sifu_Idle_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: -0.21212122}
+    pivot: {x: 0.5, y: -0.20588236}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 80
-      y: 153
+      y: 236
       width: 68
-      height: 66
+      height: 68
     spriteID: 4c23f0ade124c9e41ba2c7481690bef3
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 80, y: 153}
+    uvTransform: {x: 80, y: 236}
   - name: Sifu_Idle_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: -0.20895521}
+    pivot: {x: 0.5, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 80
-      y: 4
+      x: 4
+      y: 394
       width: 68
-      height: 67
+      height: 70
     spriteID: e9dd01206f897fa438ff3f11bfb1f5fe
     spriteBone: []
     spriteOutline: []
@@ -280,18 +280,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 80, y: 4}
+    uvTransform: {x: 4, y: 394}
   - name: Sifu_Idle_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: -0.20588236}
+    pivot: {x: 0.5, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 312
+      x: 80
+      y: 4
       width: 68
-      height: 68
+      height: 70
     spriteID: 0fff71138c5f64f4591edde6c3a635ca
     spriteBone: []
     spriteOutline: []
@@ -300,18 +300,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 312}
+    uvTransform: {x: 80, y: 4}
   - name: Sifu_Idle_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: -0.20289855}
+    pivot: {x: 0.5, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 159
+      x: 80
+      y: 82
       width: 68
-      height: 69
+      height: 70
     spriteID: dbac7c8124d904c468f5af61e7907116
     spriteBone: []
     spriteOutline: []
@@ -320,7 +320,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 159}
+    uvTransform: {x: 80, y: 82}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -346,7 +346,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 69
+        height: 70
       spriteId: 4b9d3625c16f5824aab9a06302f5d2cc
     - name: Sifu_Idle_Frame_2
       frameIndex: 2
@@ -355,7 +355,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 68
+        height: 70
       spriteId: ba3bb55957f4a8b4ebbe4478bacc8105
     - name: Sifu_Idle_Frame_3
       frameIndex: 3
@@ -364,7 +364,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 67
+        height: 70
       spriteId: c04931553497ffc409de19888df013cd
     - name: Sifu_Idle_Frame_4
       frameIndex: 4
@@ -373,7 +373,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 66
+        height: 70
       spriteId: 0b1b9355314cf924ebfd677db4f02062
     - name: Sifu_Idle_Frame_5
       frameIndex: 5
@@ -382,7 +382,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 65
+        height: 68
       spriteId: 48dc3dd4ea7eb6547872cf029d6f049f
     - name: Sifu_Idle_Frame_6
       frameIndex: 6
@@ -391,7 +391,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 66
+        height: 68
       spriteId: 4c23f0ade124c9e41ba2c7481690bef3
     - name: Sifu_Idle_Frame_7
       frameIndex: 7
@@ -400,7 +400,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 67
+        height: 70
       spriteId: e9dd01206f897fa438ff3f11bfb1f5fe
     - name: Sifu_Idle_Frame_8
       frameIndex: 8
@@ -409,7 +409,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 68
+        height: 70
       spriteId: 0fff71138c5f64f4591edde6c3a635ca
     - name: Sifu_Idle_Frame_9
       frameIndex: 9
@@ -418,7 +418,7 @@ ScriptedImporter:
         x: 16
         y: 14
         width: 68
-        height: 69
+        height: 70
       spriteId: dbac7c8124d904c468f5af61e7907116
     linkedCells: []
     parentIndex: -1

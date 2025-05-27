@@ -9,12 +9,15 @@ public class NPCDialogueControl : MonoBehaviour
 {
     [SerializeField]private NPCDialogue dialogueData;
     private int dialogueIndex;
-    private bool isTyping = false;
+    private bool mainLineIsTyping = false;
     public static bool isDialogueActive = false;
     public bool test;
     private ObjectInteraction objectInteraction;
     private Tween typewriterTween; 
     private DialogueChoice currentChoice;
+    private string currentRespondLine;
+    private bool respondLineIsTyping = false;
+    private bool isChoosen = false;
 
     private void Update()
     {
@@ -24,19 +27,20 @@ public class NPCDialogueControl : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.F))
             {  
+                Debug.Log(dialogueIndex+"," + CheckOptionChoice() + "," + mainLineIsTyping + "," + respondLineIsTyping);
                 Interact();
             }
         }
     }
     private void Interact()
     {
-        //Some UI panel í active
+        //Some UI panel is active
         if(dialogueData == null || (UIMouseAndPriority.Instance.CanOpenThisUI() == false && isDialogueActive == false))
         {
             return;
         }
         //in option choice line
-        if(CheckOptionChoice() && !isTyping)
+        if(CheckOptionChoice() && !mainLineIsTyping && !respondLineIsTyping && !isChoosen)
         {
             return;
         }
@@ -61,10 +65,11 @@ public class NPCDialogueControl : MonoBehaviour
     //function for write line and actione when line finish 
     private void TypeLine()
     {
+        
         //Check if last line
         if (dialogueData.dialogueLine.Length <= dialogueIndex) return;
 
-        isTyping = true;
+        mainLineIsTyping = true;
         string fullText = dialogueData.dialogueLine[dialogueIndex];
         DialogueController.Instance.SetDialogueText("");
         // Tạo hiệu ứng typewriter bằng DOTween và DOVirtual
@@ -81,7 +86,7 @@ public class NPCDialogueControl : MonoBehaviour
         .SetUpdate(true)
         .OnComplete(() => 
         {
-            isTyping = false;
+            mainLineIsTyping = false;
             // check if current line is option choice line
             if(CheckOptionChoice())
             {
@@ -94,11 +99,18 @@ public class NPCDialogueControl : MonoBehaviour
     private void NextLine()
     {
         // if typing,show the full line
-        if(isTyping)
+        if(respondLineIsTyping)
+        {
+            typewriterTween?.Kill();
+            respondLineIsTyping = false;
+            DialogueController.Instance.SetDialogueText(currentRespondLine);
+            return;
+        }
+        if(mainLineIsTyping)
         {
             typewriterTween?.Kill();
             DialogueController.Instance.SetDialogueText(dialogueData.dialogueLine[dialogueIndex]);
-            isTyping = false;
+            mainLineIsTyping = false;
             if(CheckOptionChoice())
             {
                 DialogueController.Instance.ClearChoice();
@@ -144,17 +156,42 @@ public class NPCDialogueControl : MonoBehaviour
     //create option choice button
     private void DisplayChoice(DialogueChoice dialogueChoice)
     {
+        isChoosen = false;
         for(int i = 0; i < dialogueChoice.choice.Length; i++)
         {
-            int nextIndex = dialogueChoice.nextDialogueIndex[i];
-            DialogueController.Instance.CreateChoiceButton(dialogueChoice.choice[i], () => ChooseOption(nextIndex));
+            int index = i;
+            DialogueController.Instance.CreateChoiceButton(dialogueChoice.choice[i], () => ChooseOption(index));
         }
     }
     //choose option choice and process next line
-    private void ChooseOption(int nextIndex)
+    private void ChooseOption(int i)
     {
-        dialogueIndex = nextIndex;
+        isChoosen = true;
+        currentRespondLine = currentChoice.respond[i];
+        RespondLine(currentChoice.respond[i]);
+        dialogueIndex ++;
         DialogueController.Instance.ClearChoice();
-        TypeLine();
+    }
+    private void RespondLine(string line)
+    {
+        respondLineIsTyping = true;
+        string fullText = line;
+        DialogueController.Instance.SetDialogueText("");
+        // Tạo hiệu ứng typewriter bằng DOTween và DOVirtual
+        typewriterTween = DOTween.To(
+            () => 0, // Giá trị bắt đầu
+            (currentIndex) => 
+            {
+                DialogueController.Instance.SetDialogueText(fullText.Substring(0, currentIndex));
+            },
+            fullText.Length, // Giá trị kết thúc
+            fullText.Length * dialogueData.typingSpeed // Thời gian dựa trên số ký tự và tốc độ
+        )
+        .SetEase(Ease.Linear)
+        .SetUpdate(true)
+        .OnComplete(() => 
+        {
+            respondLineIsTyping = false;
+        });
     }
 }

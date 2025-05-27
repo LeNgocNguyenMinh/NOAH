@@ -17,5 +17,5 @@ public class DialogueChoice
 {
     public int dialogueIndex;
     public string[] choice;
-    public int[] nextDialogueIndex;
+    public string[] respond;
 }
