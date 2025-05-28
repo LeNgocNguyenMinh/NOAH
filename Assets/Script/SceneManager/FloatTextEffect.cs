@@ -11,7 +11,7 @@ public class FloatTextEffect : MonoBehaviour
 
     private Vector3 startPos;
 
-    void Start()
+    void OnEnable()
     {
         startPos = transform.localPosition;
 

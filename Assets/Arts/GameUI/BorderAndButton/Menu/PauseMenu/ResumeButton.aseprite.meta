@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: ResumeButton
     originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
+    pivot: {x: 0.5625, y: -1.125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 38
-      height: 38
+      width: 16
+      height: 16
     spriteID: cce61a53ec9fea240967b92c797f772f
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 6
-        y: 6
-        width: 38
-        height: 38
+        x: 16
+        y: 18
+        width: 16
+        height: 16
       spriteId: cce61a53ec9fea240967b92c797f772f
     linkedCells: []
     parentIndex: -1

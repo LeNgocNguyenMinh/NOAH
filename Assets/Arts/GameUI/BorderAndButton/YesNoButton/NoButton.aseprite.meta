@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: NoButton
     originalName: 
-    pivot: {x: 0.5106383, y: -0.25925925}
+    pivot: {x: 0.78125, y: -1.2727273}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 47
-      height: 27
+      width: 32
+      height: 22
     spriteID: 52f8dea414113974f9e3f7a546fab948
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: 7
-        width: 47
-        height: 27
+        x: 0
+        y: 28
+        width: 32
+        height: 22
       spriteId: 52f8dea414113974f9e3f7a546fab948
     linkedCells: []
     parentIndex: -1

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838801163645040934}
   - component: {fileID: 6098173182112064330}
+  - component: {fileID: 3569652315441583608}
   m_Layer: 0
   m_Name: PauseManager
   m_TagString: Untagged
@@ -58,3 +59,17 @@ MonoBehaviour:
   resumeButtonImage: {fileID: 0}
   respawnSprite: {fileID: 21300000, guid: aceaa0773e9d25241ac1ad3a3a9903c3, type: 3}
   resumeSprite: {fileID: 21300000, guid: eb79cd72f8dc61e46a8c8bb5b1b4beb6, type: 3}
+--- !u!114 &3569652315441583608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4194915309109777521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ac421b40a24c145a5e1d4b0826a256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullScreenTog: {fileID: 0}
+  vsyncTog: {fileID: 0}

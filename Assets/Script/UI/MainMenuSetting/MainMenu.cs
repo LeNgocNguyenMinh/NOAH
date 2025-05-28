@@ -19,7 +19,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField]private Vector2 hiddenPos;
     [SerializeField]private Vector2 visiblePos;
     [SerializeField]private GameObject otherPanel;
-    public Slider loadingBar;
     public TMP_Text progressText;
     private void Awake()
     {
@@ -28,12 +27,7 @@ public class MainMenu : MonoBehaviour
     }
     void Start()
     {
-        Debug.Log("Save location: " + saveLocation);
-        if (loadingBar != null)
-        {
-            loadingBar.value = 0f;
-            loadingBar.gameObject.SetActive(false);
-        }        
+        Debug.Log("Save location: " + saveLocation);      
     }
     public void NewGameBtn()
     {
@@ -71,20 +65,20 @@ public class MainMenu : MonoBehaviour
         {
             newGameConfirmPanel.gameObject.SetActive(false);
         });
+        SceneTransition.Instance.SceneOut();
         StartCoroutine(LoadNewGameScene("Level1"));
     }
     private IEnumerator LoadNewGameScene(string sceneName)
     {
         yield return null;
-        // Bắt đầu load scene nhưng không active ngay lập tức
+        // Start to load but not activate the scene immediately
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         operation.allowSceneActivation = false;
 
-        // Chờ scene load xong
+        // wait for the scene to load
         while (!operation.isDone)
         {
             float targetProgress = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBar.value = targetProgress ;
             progressText.text = "Loading " + targetProgress * 100 + "%";
             // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
             if (operation.progress >= 0.9f)
@@ -104,6 +98,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnNewGameSceneLoaded;
         SaveController.Instance.LoadNewGame();
+        SceneTransition.Instance.SceneIn();
     }
     public void LoadGameBtn()
     {
@@ -115,7 +110,7 @@ public class MainMenu : MonoBehaviour
 
             // Chuyển nội dung JSON thành đối tượng SaveData
             SaveData saveData = JsonUtility.FromJson<SaveData>(jsonContent);
-
+            SceneTransition.Instance.SceneOut();
             // Trả về giá trị saveScene
             StartCoroutine(LoadSceneAsync(saveData.saveScene));
         }
@@ -141,7 +136,6 @@ public class MainMenu : MonoBehaviour
         while (!operation.isDone)
         {
             float targetProgress = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBar.value = targetProgress ;
             progressText.text = "Loading " + targetProgress * 100 + "%";
             // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
             if (operation.progress >= 0.9f)
@@ -161,7 +155,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SaveController.Instance.LoadSave();
-    }
+        SceneTransition.Instance.SceneIn();    }
     
     public void SettingBtn()
     {
@@ -185,7 +179,6 @@ public class MainMenu : MonoBehaviour
     public void OnLoading()
     {
         otherPanel.SetActive(false);
-        loadingBar.gameObject.SetActive(true);
     }
    
 }
