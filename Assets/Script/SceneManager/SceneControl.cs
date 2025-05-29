@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour
 {
-    private TimeManager timeManager; 
-    private TimeSaveData tmpTime = new TimeSaveData();
     private TmpDataManager tmpDataManager;
     [SerializeField]private string sceneBuildIndex;
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,12 +21,11 @@ public class SceneControl : MonoBehaviour
     }
     private IEnumerator LoadSceneAsync(string sceneName)
     {
-        yield return null;
+        SceneTransition.Instance.SceneOut();
+        yield return new WaitForSeconds(2f);
         // Bắt đầu load scene nhưng không active ngay lập tức
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         operation.allowSceneActivation = false;
-        timeManager = FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
-        tmpTime = timeManager.GetTime();
         // Chờ scene load xong
         while (!operation.isDone)
         {
@@ -53,6 +50,7 @@ public class SceneControl : MonoBehaviour
         {
             Vector3 pos = new Vector3(-6.4f, -5.55f, 0f);
             SaveController.Instance.LoadSave(pos, TmpDataManager.tmpInventory, TmpDataManager.tmpHotBar, null, TmpDataManager.tmpTime, TmpDataManager.tmpPlayer, TmpDataManager.tmpMission, false);
-        }    
+        } 
+        SceneTransition.Instance.SceneIn();   
     }
 }

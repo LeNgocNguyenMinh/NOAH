@@ -127,8 +127,31 @@ public class PauseMenu : MonoBehaviour
     //To main menu
     public void ToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(ToMainMenuCoroutine());
+    }
+    IEnumerator ToMainMenuCoroutine()
+    {
         Time.timeScale = 1f;
+        SceneTransition.Instance.SceneOut();
+        yield return new WaitForSeconds(2f);
+        AsyncOperation operation = SceneManager.LoadSceneAsync("MainMenu");
+        operation.allowSceneActivation = false;
+
+        // Chờ scene load xong
+        while (!operation.isDone)
+        {
+            if (operation.progress >= 0.9f)
+            {
+                SceneManager.sceneLoaded += OnSceneLoaded;
+                operation.allowSceneActivation = true;
+            }
+            yield return null;
+        }
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneTransition.Instance.SceneIn();    
     }
     //Ask panel active for quit game button function
     public void QuitAskPanelShow()

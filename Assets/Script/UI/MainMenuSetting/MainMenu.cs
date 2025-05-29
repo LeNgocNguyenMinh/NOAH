@@ -11,7 +11,6 @@ using Unity.VisualScripting;
 public class MainMenu : MonoBehaviour
 {
     private string saveLocation;
-    private string newGameSaveLocation;
     [SerializeField]private RectTransform newGameConfirmPanel;
     [SerializeField]private RectTransform quitGameConfirmPanel;
     [SerializeField]private RectTransform settingPanel;
@@ -23,7 +22,6 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
-        newGameSaveLocation = Path.Combine(Application.persistentDataPath, "newGameData.json");   
     }
     void Start()
     {
@@ -66,6 +64,7 @@ public class MainMenu : MonoBehaviour
             newGameConfirmPanel.gameObject.SetActive(false);
         });
         SceneTransition.Instance.SceneOut();
+        progressText.gameObject.SetActive(true);
         StartCoroutine(LoadNewGameScene("Level1"));
     }
     private IEnumerator LoadNewGameScene(string sceneName)
@@ -86,6 +85,7 @@ public class MainMenu : MonoBehaviour
                 progressText.text = "Press F to enter game >> ";
                 if(Input.GetKeyDown(KeyCode.F))
                 {
+                    progressText.gameObject.SetActive(false);
                     SceneManager.sceneLoaded += OnNewGameSceneLoaded;
                     operation.allowSceneActivation = true;
                 }
@@ -112,6 +112,7 @@ public class MainMenu : MonoBehaviour
             SaveData saveData = JsonUtility.FromJson<SaveData>(jsonContent);
             SceneTransition.Instance.SceneOut();
             // Trả về giá trị saveScene
+            progressText.gameObject.SetActive(true);
             StartCoroutine(LoadSceneAsync(saveData.saveScene));
         }
         else{
@@ -143,6 +144,7 @@ public class MainMenu : MonoBehaviour
                 progressText.text = "Press F to enter game >> ";
                 if(Input.GetKeyDown(KeyCode.F))
                 {
+                    progressText.gameObject.SetActive(false);
                     SceneManager.sceneLoaded += OnSceneLoaded;
                     operation.allowSceneActivation = true;
                 }

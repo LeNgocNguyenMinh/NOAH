@@ -20,4 +20,14 @@ public class SceneTransition : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetTrigger("sceneIn");
     }
+    public bool SceneTransFinish()
+    {
+        animator = GetComponent<Animator>();
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.length > 0f)
+        {
+           return false;
+        }
+        return true;
+    }
 }

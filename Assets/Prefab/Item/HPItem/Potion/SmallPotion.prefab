@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 8dbd1204e87261a48a0aa64f3649fc62, type: 2}
-  itemQuantity: 0
+  itemQuantity: 1
 --- !u!212 &7327598957097958363
 SpriteRenderer:
   m_ObjectHideFlags: 0

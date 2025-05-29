@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 838801163645040934}
   - component: {fileID: 6098173182112064330}
   - component: {fileID: 3569652315441583608}
+  - component: {fileID: 3285657798127977723}
+  - component: {fileID: 4955233768697654269}
   m_Layer: 0
   m_Name: PauseManager
   m_TagString: Untagged
@@ -73,3 +75,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullScreenTog: {fileID: 0}
   vsyncTog: {fileID: 0}
+--- !u!114 &3285657798127977723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4194915309109777521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ae47351c9601143b2809d44d3b7543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSettingPanel: {fileID: 0}
+  controlSettingPanel: {fileID: 0}
+--- !u!114 &4955233768697654269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4194915309109777521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59efdecfd7963f742a3ed70ccdc104f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionDropdown: {fileID: 0}
