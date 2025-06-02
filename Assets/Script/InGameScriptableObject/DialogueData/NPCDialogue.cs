@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class NPCDialogue : ScriptableObject
     public float typingSpeed;
     public DialogueChoice[] choice;
     public MissionLine[] missionLine;
+    public string[] inQuestDialogue;
 }
 [System.Serializable]
 public class DialogueChoice

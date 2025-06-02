@@ -13,7 +13,6 @@ public class CollectableItems : MonoBehaviour
     private Animator animator;
     void Start()
     {
-        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = item.itemSprite;
         itemInGroundController = FindObjectOfType<ItemInGroundController>().GetComponent<ItemInGroundController>();
@@ -27,11 +26,16 @@ public class CollectableItems : MonoBehaviour
     {
         return transform.position;
     }
+    public void SetItemQuantity(int quantity)
+    {
+        itemQuantity = quantity;
+    }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(isCollected == true) return;
         if(collider.gameObject.tag=="Player")
         {
+            animator = GetComponent<Animator>();
             animator.SetTrigger("Collect");
             if(uiInventoryPage.AddItem(item, itemQuantity))
             {
@@ -41,5 +45,10 @@ public class CollectableItems : MonoBehaviour
                 Destroy(gameObject, .5f);
             }
         }
+    }
+    public void DropItemAnim()
+    {
+        animator = GetComponent<Animator>();
+        animator.SetTrigger("Drop");
     }
 }

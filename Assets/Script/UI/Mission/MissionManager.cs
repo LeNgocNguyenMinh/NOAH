@@ -41,6 +41,7 @@ public class MissionManager : MonoBehaviour
     // Update Collect Mission
     public void UpdateCollectMission(string itemID, int amount)
     {
+        if(currentMission==null)return;
         if (currentMission.missionType == MissionType.CollectMission && 
             currentMission.item.itemID == itemID)
         {

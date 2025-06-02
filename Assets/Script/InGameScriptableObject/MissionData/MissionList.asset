@@ -16,7 +16,7 @@ MonoBehaviour:
   - missionName: Get Something To Eat
     missionType: 0
     targetID: 
-    missionDes: Collect some 2 apple, to... eat.
+    missionDes: Collect 2 apple, to... eat.
     item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
     requiredAmount: 2
     keyCode: 0

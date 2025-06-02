@@ -17,7 +17,7 @@ MonoBehaviour:
   dialogueLine:
   - Hello my student!
   - Do you remember your name?
-  - Check your hand (press C), you can see everything you need.
+  - Now, can y help me to get 2 apples so i  make a potion for you?
   - Please rest first.
   endDialogueLine: 000000000101
   typingSpeed: 0.05
@@ -29,14 +29,25 @@ MonoBehaviour:
     respond:
     - Oke, i see.
     - May be your head was effect by the dark magic.
+  - dialogueIndex: 2
+    choice:
+    - Oke.
+    - Let me rest a moment.
+    respond:
+    - Good, please do it fast.
+    - Oke i understand that.
   missionLine:
   - dialogueIndex: 2
     mission:
       missionName: Collect apple
       missionType: 0
       targetID: 
-      missionDes: 
+      missionDes: Collect 2 Apple to make a potion
       item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
       requiredAmount: 2
       keyCode: 99
       rewardCoins: 0
+  inQuestDialogue:
+  - Oh dude, try to finish the mission.
+  - You are doing great, keep up.
+  - Something wrong.

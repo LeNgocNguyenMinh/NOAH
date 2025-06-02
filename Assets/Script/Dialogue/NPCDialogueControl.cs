@@ -87,7 +87,6 @@ public class NPCDialogueControl : MonoBehaviour
         .OnComplete(() => 
         {
             mainLineIsTyping = false;
-            CheckMissionLine();
             // check if current line is option choice line
             if(CheckOptionChoice())
             {
@@ -113,7 +112,6 @@ public class NPCDialogueControl : MonoBehaviour
             typewriterTween?.Kill();
             DialogueController.Instance.SetDialogueText(dialogueData.dialogueLine[dialogueIndex]);
             mainLineIsTyping = false;
-            CheckMissionLine();
             if(CheckOptionChoice())
             {
                 DialogueController.Instance.ClearChoice();
@@ -179,6 +177,10 @@ public class NPCDialogueControl : MonoBehaviour
     //choose option choice and process next line
     private void ChooseOption(int i)
     {
+        if(i == 0)
+        {
+            CheckMissionLine();
+        }
         isChoosen = true;
         currentRespondLine = currentChoice.respond[i];
         RespondLine(currentChoice.respond[i]);
