@@ -8,5 +8,4 @@ public class MissionSaveData
 {
     public int currentAmount;
     public int missionIndex;
-    public Mission currentMission;
 }

@@ -52,7 +52,6 @@ public class FDATK2 : MonoBehaviour
         {
             PrepareATK2();
         }
-        Debug.Log(atk2LineIndex + "-" + positions.Length);
         Vector3 targetPosition = positions[atk2LineIndex];
         direction = targetPosition - head.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 public class MissionManager : MonoBehaviour
 {
     public static MissionManager Instance;
-    [SerializeField]private MissionScriptable missionList;
+    [SerializeField]private MissionScriptable missionScriptObject;
     [SerializeField]private TMP_Text missionName;
     [SerializeField]private TMP_Text missionDescription;
     [SerializeField]private TMP_Text missionProgress;
@@ -17,13 +17,12 @@ public class MissionManager : MonoBehaviour
     [SerializeField]private Transform playerTransform;
     private Mission currentMission;
     private int currentAmount = 0;
+    private bool inLineMission = false;
     
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-        currentMission = missionList.GetMissionByInDex(0);
-        CheckMissionProgress();
     }
     // Thêm nhiệm vụ mới
     public void AddMission(Mission newMission)
@@ -31,37 +30,72 @@ public class MissionManager : MonoBehaviour
         activeMissions.Add(newMission);
     }
     
-    // Cập nhật nhiệm vụ thu thập
+    public void UpdateNewMission(Mission mission)
+    {
+        currentMission = mission;
+        currentAmount = 0;
+        missionName.text = currentMission.missionName;
+        missionDescription.text = currentMission.missionDes;
+        missionProgress.text = $"{currentAmount}/{currentMission.requiredAmount}";
+    }
+    // Update Collect Mission
     public void UpdateCollectMission(string itemID, int amount)
     {
         if (currentMission.missionType == MissionType.CollectMission && 
-            currentMission.item.itemID == itemID             )
+            currentMission.item.itemID == itemID)
         {
             currentAmount += amount;
             CheckMissionProgress();
         }
     }
-    
-    // Cập nhật nhiệm vụ tiêu diệt
-
+    public void UpdatePressBtnMission(KeyCode btn)
+    {
+        if (currentMission.missionType == MissionType.ButtonMission && 
+            currentMission.keyCode == btn)
+        {
+            
+        }
+    }
+    public void SetLineMission(Mission mission)
+    {
+        inLineMission = true;
+        currentMission = mission;
+        currentAmount = 0;
+        CheckMissionProgress();
+    }
 
     private void CheckMissionProgress()
     {
-        if (currentAmount >= currentMission.requiredAmount)
+        if(currentMission.missionType == MissionType.CollectMission)
         {
-            finishMissions.Add(currentMission);
-            currentMissionIndex++;
-            PopUp.Instance.ShowNotification("Finish mission: " + currentMission.missionName);
-            if(missionList.GetMissionByInDex(currentMissionIndex)!= null)
+            if (currentAmount >= currentMission.requiredAmount)
             {
-                currentMission = missionList.GetMissionByInDex(currentMissionIndex);
+                PopUp.Instance.ShowNotification("Finish mission: " + currentMission.missionName);
+                MissionFinish();
+                return;
             }
-            else return;
-            currentAmount = 0;
         }
         missionName.text = currentMission.missionName;
-        missionDescription.text = "Collect " + currentMission.requiredAmount + " " + currentMission.item.itemName;
+        missionDescription.text = currentMission.missionDes;
         missionProgress.text = $"{currentAmount}/{currentMission.requiredAmount}";
+    }
+    private void MissionFinish()
+    {
+        finishMissions.Add(currentMission);
+        if(!inLineMission)
+        {
+            currentMissionIndex++;
+            if(missionScriptObject.missionList.Count < currentMissionIndex)
+            {
+                return;
+            }
+        }
+        else
+        {
+            inLineMission = false;
+        }
+        currentMission = missionScriptObject.GetMissionByInDex(currentMissionIndex);
+        UpdateNewMission(currentMission);
     }
     
     // Nhận thưởng
@@ -73,15 +107,14 @@ public class MissionManager : MonoBehaviour
         return new MissionSaveData
         {
             currentAmount = this.currentAmount,
-            missionIndex = this.currentMissionIndex,
-            currentMission = this.currentMission
+            missionIndex = this.currentMissionIndex
         };
     }
     public void SetCurrentMission(MissionSaveData saveData)
     {
-        currentMissionIndex = saveData.missionIndex;
-        currentMission = saveData.currentMission;
         currentAmount = saveData.currentAmount;
+        currentMissionIndex = saveData.missionIndex;
+        currentMission = missionScriptObject.GetMissionByInDex(currentMissionIndex);
         CheckMissionProgress();
     }
 }

@@ -219,6 +219,7 @@ public class SaveController : MonoBehaviour
             timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
             hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
             itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
+            missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
             if(saveData.inventorySaveData!=null)
             {
                 uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
@@ -250,6 +251,10 @@ public class SaveController : MonoBehaviour
             for(int i = 0; i < weaponList.Count; i++)
             {
                 weaponList[i].SetWeaponDefaultData();
+            }
+            if(missionManager != null)
+            {
+                missionManager.SetCurrentMission(saveData.missionSaveData);
             }
             SaveGame();
         }
@@ -299,19 +304,8 @@ public class SaveController : MonoBehaviour
                     ""currentCoatID"": ""None""
                 },
                 ""missionSaveData"": {
-                    ""currentAmount"": 1,
-                    ""missionIndex"": 0,
-                    ""currentMission"": {
-                        ""missionID"": ""MS_01"",
-                        ""missionName"": ""Get Something To Eat"",
-                        ""missionType"": 0,
-                        ""targetID"": """",
-                        ""item"": { ""instanceID"": 30838 },
-                        ""requiredAmount"": 2,
-                        ""targetPosition"": { ""x"": 0.0, ""y"": 0.0 },
-                        ""requiredRadius"": 0.0,
-                        ""rewardCoins"": 20
-                    }
+                    ""currentAmount"": 0,
+                    ""missionIndex"": 0
                 },
                 ""weaponListData"": [
                     { ""weaponID"": ""WP_01"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 10.0 },
@@ -324,7 +318,6 @@ public class SaveController : MonoBehaviour
 
             File.WriteAllText(newGameSaveLocation, defaultNewGameJson);
             LoadNewGame();
-            SaveGame();
         }
     }
 }

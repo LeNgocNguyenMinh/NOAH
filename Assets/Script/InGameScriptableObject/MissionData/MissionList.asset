@@ -13,33 +13,27 @@ MonoBehaviour:
   m_Name: MissionList
   m_EditorClassIdentifier: 
   missionList:
-  - missionID: MS_01
-    missionIndex: 0
-    missionName: Get Something To Eat
+  - missionName: Get Something To Eat
     missionType: 0
     targetID: 
+    missionDes: Collect some 2 apple, to... eat.
     item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
     requiredAmount: 2
-    targetPosition: {x: 0, y: 0}
-    requiredRadius: 0
+    keyCode: 0
     rewardCoins: 20
-  - missionID: MS_02
-    missionIndex: 1
-    missionName: Prepare
+  - missionName: Prepare
     missionType: 0
-    targetID: 
+    targetID: Collect 4 watermelon. Do not steal ?!
+    missionDes: 
     item: {fileID: 11400000, guid: 57d68bc0160785443bfb50fcd754f22b, type: 2}
     requiredAmount: 4
-    targetPosition: {x: 0, y: 0}
-    requiredRadius: 0
+    keyCode: 0
     rewardCoins: 10
-  - missionID: MS_03
-    missionIndex: 2
-    missionName: The Prices
+  - missionName: The Prices
     missionType: 0
     targetID: 
+    missionDes: Buy 4 Orange from the shop. It CHEAP!!!
     item: {fileID: 11400000, guid: 600af6cdd83bd0844b898b1c9b7c9564, type: 2}
     requiredAmount: 4
-    targetPosition: {x: 0, y: 0}
-    requiredRadius: 0
+    keyCode: 0
     rewardCoins: 10

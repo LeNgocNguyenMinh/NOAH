@@ -25,10 +25,7 @@ public class DialogueController : MonoBehaviour
         NPCDialogueControl.isDialogueActive = true;
         dialoguePanel.gameObject.SetActive(true);
         Time.timeScale = 0f;
-        dialoguePanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
-        {
-            
-        });
+        dialoguePanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true);
     }
     public void HideDialogueUI()
     { 

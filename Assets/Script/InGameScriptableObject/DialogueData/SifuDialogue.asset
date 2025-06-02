@@ -17,7 +17,7 @@ MonoBehaviour:
   dialogueLine:
   - Hello my student!
   - Do you remember your name?
-  - And do you know where are you now?
+  - Check your hand (press C), you can see everything you need.
   - Please rest first.
   endDialogueLine: 000000000101
   typingSpeed: 0.05
@@ -28,11 +28,15 @@ MonoBehaviour:
     - No, why i can't remember my name?
     respond:
     - Oke, i see.
-    - Check your hand (press C). I think your name was write in it.
+    - May be your head was effect by the dark magic.
+  missionLine:
   - dialogueIndex: 2
-    choice:
-    - No, I can't, but why this place look so old?
-    - Yes, this place was abandoned for so long.
-    respond:
-    - 555555
-    - 3333
+    mission:
+      missionName: Collect apple
+      missionType: 0
+      targetID: 
+      missionDes: 
+      item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
+      requiredAmount: 2
+      keyCode: 99
+      rewardCoins: 0

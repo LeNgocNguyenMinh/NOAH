@@ -15,8 +15,8 @@ MonoBehaviour:
   bossLevel: 1
   bossName: The Fallen Dragon
   bossBaseDamage: 10
-  bossDamage: 6
+  bossDamage: 11
   bossBaseHealth: 200
-  bossCurrentHealth: 1000
-  bossMaxHealth: 1000
+  bossCurrentHealth: 0
+  bossMaxHealth: 0
   isAlive: 0

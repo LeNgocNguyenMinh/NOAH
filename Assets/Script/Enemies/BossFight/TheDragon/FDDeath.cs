@@ -10,22 +10,13 @@ public class FDDeath : MonoBehaviour
     [SerializeField]private GameObject gemDrop;
     [SerializeField]private GameObject expPrefab;
     [SerializeField]private GameObject coinPrefab;
-    private Animator animator;
-    public void WPCircleSummonApear()
-    {
-        animator = GetComponent<Animator>();
-        animator.SetTrigger("circleAppear");
-    }
     public void WPInstantiate()
     {
-        Animator weaponAnimator = Instantiate(weapon, weaponInsTrans.position, Quaternion.identity).GetComponent<Animator>();
-        weaponAnimator.SetTrigger("weaponAppear"); 
-        animator = GetComponent<Animator>();
-        animator.SetTrigger("circleDisappear");
-        animator.SetTrigger("headMouthClose");
+        Instantiate(weapon, weaponInsTrans.position, Quaternion.identity);
     }
     public void DropOEC()
     {
+        WPInstantiate();
         Vector3 gemOffset = new Vector3(2, 0, 2);
         Instantiate(gemDrop, weaponInsTrans.position + gemOffset, Quaternion.identity);
         int expPoint = 15;

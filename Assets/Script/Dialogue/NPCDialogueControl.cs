@@ -87,12 +87,14 @@ public class NPCDialogueControl : MonoBehaviour
         .OnComplete(() => 
         {
             mainLineIsTyping = false;
+            CheckMissionLine();
             // check if current line is option choice line
             if(CheckOptionChoice())
             {
                 DialogueController.Instance.ClearChoice();
                 DisplayChoice(currentChoice);
             }
+            
         });
     }
 
@@ -111,6 +113,7 @@ public class NPCDialogueControl : MonoBehaviour
             typewriterTween?.Kill();
             DialogueController.Instance.SetDialogueText(dialogueData.dialogueLine[dialogueIndex]);
             mainLineIsTyping = false;
+            CheckMissionLine();
             if(CheckOptionChoice())
             {
                 DialogueController.Instance.ClearChoice();
@@ -147,6 +150,16 @@ public class NPCDialogueControl : MonoBehaviour
         }
         return false;
     }
+    private void CheckMissionLine()
+    {
+        foreach(MissionLine missionLine in dialogueData.missionLine)
+        {
+            if(missionLine.dialogueIndex == dialogueIndex)
+            {
+                MissionManager.Instance.SetLineMission(missionLine.mission);
+            }
+        }
+    }
     //hide dialogue UI
     private void EndDialogue()
     {
@@ -169,7 +182,6 @@ public class NPCDialogueControl : MonoBehaviour
         isChoosen = true;
         currentRespondLine = currentChoice.respond[i];
         RespondLine(currentChoice.respond[i]);
-        dialogueIndex ++;
         DialogueController.Instance.ClearChoice();
     }
     private void RespondLine(string line)

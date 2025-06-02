@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ItemDictionary : MonoBehaviour
 {
+    public static ItemDictionary Instance;
     [SerializeField]private List<Item> itemList;
-    /* [SerializeField]private List<GameObject> itemObjectList; */
     private Dictionary<string, Item> itemDictionary;
     private void Awake()
     {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
         itemDictionary = new Dictionary<string, Item>();
         foreach(Item item in itemList)
         {

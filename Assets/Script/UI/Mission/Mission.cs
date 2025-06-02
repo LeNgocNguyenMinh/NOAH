@@ -5,21 +5,23 @@ using UnityEngine;
 public enum MissionType
 {
     CollectMission,
-    MoveMission,
-    KillMonsterMission
+    KillMonsterMission,
+    ButtonMission
 }
 
 [System.Serializable]
 public class Mission
 {
-    public string missionID;
     public string missionName;
     public MissionType missionType;
-    public string targetID; // ID vật phẩm hoặc quái
+    public string targetID; 
+    public string missionDes;
+     [Header("-------For Item collect mission------")]
     public Item item;
     public int requiredAmount;
-    public Vector2 targetPosition;
-    public float requiredRadius = 1f; // Bán kính hợp lệ
+    [Header("-------For Btn mission------")]
+    public KeyCode keyCode;
+
     
     // Phần thưởng
     public int rewardCoins;

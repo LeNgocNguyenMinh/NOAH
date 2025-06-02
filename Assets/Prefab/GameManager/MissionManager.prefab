@@ -45,28 +45,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46300a694059c894c9bc0a11553f032e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missionList: {fileID: 11400000, guid: 8629e65a8d1708143a2aa82239c83224, type: 2}
+  missionScriptObject: {fileID: 11400000, guid: 8629e65a8d1708143a2aa82239c83224, type: 2}
   missionName: {fileID: 0}
   missionDescription: {fileID: 0}
   missionProgress: {fileID: 0}
   activeMissions:
-  - missionID: Cl01
-    missionName: Buy Item
+  - missionName: Buy Item
     missionType: 0
     targetID: 
+    missionDes: 
     item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
     requiredAmount: 5
-    targetPosition: {x: 0, y: 0}
-    requiredRadius: 1
+    keyCode: 0
     rewardCoins: 100
-  - missionID: Cl01
-    missionName: Buy Item
+  - missionName: Buy Item
     missionType: 0
     targetID: 
+    missionDes: 
     item: {fileID: 11400000, guid: aa64a9bf56678fa49ab776ceb4991212, type: 2}
     requiredAmount: 8
-    targetPosition: {x: 0, y: 0}
-    requiredRadius: 1
+    keyCode: 0
     rewardCoins: 100
   finishMissions: []
   playerTransform: {fileID: 0}

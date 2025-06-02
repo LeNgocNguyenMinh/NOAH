@@ -141,8 +141,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: Shop_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 141
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: Shop_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 282
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: Shop_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 423
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: Shop_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 564
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: Shop_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 705
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: Shop_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 846
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: Shop_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 987
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: Shop_8
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1128
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: Shop_9
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 1269
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: Shop_10
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1410
         y: 0
-        width: 128
-        height: 134
+        width: 141
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -9,7 +9,7 @@ public class MissionUIController : MonoBehaviour
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
-    private bool isShown = false;
+    private bool isShown = true;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
