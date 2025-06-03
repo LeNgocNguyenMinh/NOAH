@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class CoinControl : MonoBehaviour
 {   
+    public static CoinControl Instance;
     [SerializeField]private PlayerStatus playerStatus;
-    private PlayerStatusUI playerStatusUI;
-
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
     public void AddCoin(int newCoin)
     {
-        playerStatusUI = FindObjectOfType<PlayerStatusUI>().GetComponent<PlayerStatusUI>();
         playerStatus.AddCoin(newCoin);
-        playerStatusUI.UpdateCoin();
+        PlayerStatusUI.Instance.UpdateCoin();
     }
 }

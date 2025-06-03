@@ -24,5 +24,17 @@ public class Mission
 
     
     // Phần thưởng
-    public int rewardCoins;
+    public MissionReward missionReward;
+}
+[System.Serializable]
+public class MissionReward
+{
+    public int coin;
+    public ItemAmount[] items;
+}
+[System.Serializable]
+public class ItemAmount
+{
+    public Item item;
+    public int itemQuantity;
 }

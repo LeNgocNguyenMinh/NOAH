@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a3a442bc95e3324088394331048fdcd
+guid: 0e883406652edb34e9a3ed5bfb93a2b6
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,78 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: SavePoint_Frame_0
+  - name: FireAttack_Frame_0
     originalName: 
-    pivot: {x: 0.32258064, y: -0.111111104}
+    pivot: {x: 5.3333335, y: -0.939394}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 44
+      width: 3
+      height: 33
+    spriteID: 3559bab1736b1e442a3d495a72fd2cca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 44}
+  - name: FireAttack_Frame_1
+    originalName: 
+    pivot: {x: 5.3333335, y: -0.939394}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 59
+      width: 3
+      height: 33
+    spriteID: ece657a15e982cf4ebe705c7dc8997a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 41, y: 59}
+  - name: FireAttack_Frame_2
+    originalName: 
+    pivot: {x: 0.9333334, y: -0.939394}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 15
+      height: 33
+    spriteID: bd969034cc26c5041be2c1986587937b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
+  - name: FireAttack_Frame_3
+    originalName: 
+    pivot: {x: 0.3448276, y: -0.84375}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 31
-      height: 54
-    spriteID: 3b3f266e7a812f04ebb0aff3f30acdaa
+      width: 29
+      height: 32
+    spriteID: 0dc08c2f6c92f72418167786fed04478
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +201,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: SavePoint_Frame_1
+  - name: FireAttack_Frame_4
     originalName: 
-    pivot: {x: 0.32258064, y: -0.111111104}
+    pivot: {x: 0.2647059, y: -0.88}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
+      x: 41
       y: 4
-      width: 31
-      height: 54
-    spriteID: 35fe0b5d088b06842b041f15ce7085b4
+      width: 34
+      height: 25
+    spriteID: b4cf2faa821cb9344a81db6a1b8006b1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 4}
-  - name: SavePoint_Frame_2
+    uvTransform: {x: 41, y: 4}
+  - name: FireAttack_Frame_5
     originalName: 
-    pivot: {x: 0.32258064, y: -0.111111104}
+    pivot: {x: 0.2857143, y: -1}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 82
+      x: 83
       y: 4
-      width: 31
-      height: 54
-    spriteID: 9e2843e9c3daee844bb63ff87752be9b
+      width: 35
+      height: 13
+    spriteID: 0e0bcbb8e3a4f2f4dad18604b4cc900b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,19 +240,59 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 82, y: 4}
-  - name: SavePoint_Frame_3
+    uvTransform: {x: 83, y: 4}
+  - name: FireAttack_Frame_6
     originalName: 
-    pivot: {x: 0.32258064, y: -0.111111104}
+    pivot: {x: 0.41666666, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 25
+      width: 36
+      height: 12
+    spriteID: a937617fd9cfab844892d1642627283a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 25}
+  - name: FireAttack_Frame_7
+    originalName: 
+    pivot: {x: 0.61290324, y: -0.21428573}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 37
+      width: 31
+      height: 14
+    spriteID: b9eafcb4ffb1aaa479bc6ebbae9baf8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 41, y: 37}
+  - name: FireAttack_Frame_8
+    originalName: 
+    pivot: {x: 0.67857146, y: -0.21428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 66
-      width: 31
-      height: 54
-    spriteID: 94c1ca3705708184984b9dfe6cebc1d5
+      y: 85
+      width: 28
+      height: 14
+    spriteID: cef6589f57eca814fa59c26ab5461ece
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,52 +300,97 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 66}
+    uvTransform: {x: 4, y: 85}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1254602377
-    name: SavePoint
+    guid: -291953134
+    name: FireAttack
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SavePoint_Frame_0
+    - name: FireAttack_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 65
-        y: 6
-        width: 31
-        height: 54
-      spriteId: 3b3f266e7a812f04ebb0aff3f30acdaa
-    - name: SavePoint_Frame_1
+        x: 16
+        y: 31
+        width: 3
+        height: 33
+      spriteId: 3559bab1736b1e442a3d495a72fd2cca
+    - name: FireAttack_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 65
-        y: 6
-        width: 31
-        height: 54
-      spriteId: 35fe0b5d088b06842b041f15ce7085b4
-    - name: SavePoint_Frame_2
+        x: 16
+        y: 31
+        width: 3
+        height: 33
+      spriteId: ece657a15e982cf4ebe705c7dc8997a2
+    - name: FireAttack_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 65
-        y: 6
-        width: 31
-        height: 54
-      spriteId: 9e2843e9c3daee844bb63ff87752be9b
-    - name: SavePoint_Frame_3
+        x: 18
+        y: 31
+        width: 15
+        height: 33
+      spriteId: bd969034cc26c5041be2c1986587937b
+    - name: FireAttack_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 65
+        x: 22
+        y: 27
+        width: 29
+        height: 32
+      spriteId: 0dc08c2f6c92f72418167786fed04478
+    - name: FireAttack_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 22
+        width: 34
+        height: 25
+      spriteId: b4cf2faa821cb9344a81db6a1b8006b1
+    - name: FireAttack_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 22
+        y: 13
+        width: 35
+        height: 13
+      spriteId: 0e0bcbb8e3a4f2f4dad18604b4cc900b
+    - name: FireAttack_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 17
         y: 6
+        width: 36
+        height: 12
+      spriteId: a937617fd9cfab844892d1642627283a
+    - name: FireAttack_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 13
+        y: 3
         width: 31
-        height: 54
-      spriteId: 94c1ca3705708184984b9dfe6cebc1d5
+        height: 14
+      spriteId: b9eafcb4ffb1aaa479bc6ebbae9baf8f
+    - name: FireAttack_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 13
+        y: 3
+        width: 28
+        height: 14
+      spriteId: cef6589f57eca814fa59c26ab5461ece
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -264,4 +409,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 150, y: 150}
+  canvasSize: {x: 64, y: 64}

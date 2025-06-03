@@ -7,6 +7,7 @@ using DG.Tweening;
 
 public class UIInventoryPage : MonoBehaviour
 {
+    public static UIInventoryPage Instance;
     [SerializeField]private UIInventoryItem itemPrefab;
     [SerializeField]private RectTransform contentPanel;
     [SerializeField]private RectTransform descriptionPanel;
@@ -21,6 +22,11 @@ public class UIInventoryPage : MonoBehaviour
     
     ///
     private ItemDictionary itemDictionary;
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
     private void Start()
     {
         if(listOfUIItems == null)

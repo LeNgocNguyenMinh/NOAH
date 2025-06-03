@@ -11,17 +11,22 @@ public class NPCDialogueControl : MonoBehaviour
     private int dialogueIndex;
     private bool mainLineIsTyping = false;
     public static bool isDialogueActive = false;
-    public bool test;
     private ObjectInteraction objectInteraction;
     private Tween typewriterTween; 
     private DialogueChoice currentChoice;
     private string currentRespondLine;
     private bool respondLineIsTyping = false;
     private bool isChoosen = false;
-
+    
+    private enum DialogueState
+    {
+        isChossen,
+        mainLineTyping,
+        respondLineTyping,
+        typingFinish
+    }
     private void Update()
     {
-        test = isDialogueActive;
         objectInteraction = GetComponent<ObjectInteraction>();
         if(objectInteraction.GetCanInteract())
         {

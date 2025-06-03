@@ -25,21 +25,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private Sprite respawnSprite;
     [SerializeField]private Sprite resumeSprite;
 
-    public static bool isPaused;
+    public static bool isPaused = false;
     private bool isOver = false;
     private bool panelShow = false;
-
-    void Start()
-    {
-        isOver = false;
-        isPaused = false;
-        pauseMenuPanel.gameObject.SetActive(false);   
-        quitAskPanel.SetActive(false);
-        mainMenuAskPanel.SetActive(false);
-        settingPanel.gameObject.SetActive(true);
-        pauseImage.sprite = pauseSprite;
-        resumeButtonImage.sprite = resumeSprite;
-    }
 
     // Update is called once per frame
     void Update()

@@ -82,12 +82,12 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
             this.itemImage.sprite.rect.height * 3f);
             this.quantityText.enabled = false;
         }
-        else if(itemID.Contains("Fruit"))
+        else if(itemID.Contains("HP"))
         {
             RectTransform rectTransform = this.itemImage.rectTransform;
             rectTransform.sizeDelta = new Vector2(
-            this.itemImage.sprite.rect.width * 3f,
-            this.itemImage.sprite.rect.height * 3f);
+            this.itemImage.sprite.rect.width * 5f,
+            this.itemImage.sprite.rect.height * 5f);
         }
         else if(itemID.Contains("Stuff"))
         {

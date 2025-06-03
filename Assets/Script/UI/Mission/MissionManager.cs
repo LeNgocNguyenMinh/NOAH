@@ -82,6 +82,7 @@ public class MissionManager : MonoBehaviour
     }
     private void MissionFinish()
     {
+        ClaimReward();
         finishMissions.Add(currentMission);
         if(!inLineMission)
         {
@@ -100,8 +101,21 @@ public class MissionManager : MonoBehaviour
     }
     
     // Nhận thưởng
-    public void ClaimReward(Mission mission)
+    public void ClaimReward()
     {
+        if(currentMission.missionReward.coin > 0)
+        {
+            CoinControl.Instance.AddCoin(currentMission.missionReward.coin);
+            PopUp.Instance.ShowNotification("Add " + currentMission.missionReward.coin + " coins.");
+        }
+        foreach(ItemAmount itemAmount in currentMission.missionReward.items)
+        {
+            if(itemAmount != null)
+            {
+                UIInventoryPage.Instance.AddItem(itemAmount.item, itemAmount.itemQuantity);
+                PopUp.Instance.ShowNotification("Add " + itemAmount.itemQuantity + " " + itemAmount.item.itemName + ".");
+            }
+        }
     }
     public MissionSaveData GetCurrentMission()
     {

@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: MediumHPPotion
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: -0.06666667, y: -1}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 26
-      height: 31
+      width: 15
+      height: 16
     spriteID: 30a56c5ce08be3c4b8c73c14e6a12d44
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 1
-        width: 26
-        height: 31
+        x: 17
+        y: 16
+        width: 15
+        height: 16
       spriteId: 30a56c5ce08be3c4b8c73c14e6a12d44
     linkedCells: []
     parentIndex: -1
