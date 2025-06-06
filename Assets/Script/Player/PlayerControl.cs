@@ -24,7 +24,6 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1f;
-        dashSkill.fillAmount = 0;
         isAlive = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();

@@ -17,7 +17,7 @@ public class SlimeBulletMove : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        playerTransform = FindObjectOfType<HealthControl>().transform;
+        playerTransform = FindObjectOfType<PlayerControl>().transform;
         timeCount = chaseTime;
     }
     public void FixedUpdate()

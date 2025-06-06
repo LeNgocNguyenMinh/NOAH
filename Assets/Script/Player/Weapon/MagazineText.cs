@@ -7,12 +7,8 @@ public class MagazineText : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public WeaponParent weapon;
-    void Start()
+    public void UpdateAmmorText(int currentBullet, int magazine)
     {
-        UpdateAmmorText();
-    }
-    public void UpdateAmmorText()
-    {
-        text.text = $"{weapon.currentBullet} / {weapon.magazine}";
+        text.text = $"{currentBullet}/{magazine}";
     }
 }

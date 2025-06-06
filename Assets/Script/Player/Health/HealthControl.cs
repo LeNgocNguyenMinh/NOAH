@@ -2,24 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Microsoft.Unity.VisualStudio.Editor;
 
 public class HealthControl : MonoBehaviour
 {
     public static HealthControl Instance;
     private PauseMenu pauseMenu;
-    [SerializeField]private TextMeshProUGUI healthText;
     [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private PlayerControl playerControl;
-    [SerializeField]private HealthBar healthBar;// Health bar
+    private HealthBar healthBar;// Health bar
     private float healthCurrentValue;// Health current value
     private float healthMaxValue; // Health max value need to achive for level up
     private Animator animator;
+
     private void Awake()
     {
         Instance = this;
     }
     private void Start()
     {
+        healthBar = GetComponent<HealthBar>();
         //Set Start Value same with data (player status)
         healthCurrentValue = playerStatus.currentHealth;
         healthMaxValue = playerStatus.maxHealth;
@@ -27,17 +29,13 @@ public class HealthControl : MonoBehaviour
         healthBar.SetMaxHealth(healthMaxValue);
         healthBar.SetHealth(healthCurrentValue); 
         
-        UpdateHealthText();
+        healthBar.UpdateHealthText();
     }
     public void UpdateMaxHealth() //Update max Health when player Add point to Health 
     {
         healthMaxValue = playerStatus.maxHealth;
         healthBar.SetMaxHealth(healthMaxValue);
-        UpdateHealthText();
-    }
-    private void UpdateHealthText() //Update Health Text only when something change
-    {
-        healthText.text = $"{(int)healthCurrentValue} / {(int)healthMaxValue}";
+        healthBar.UpdateHealthText();
     }
     public void PlayerHurt(float damageAmount) //Player hurt by enemy
     {
@@ -64,7 +62,7 @@ public class HealthControl : MonoBehaviour
         //Update Current Health and Health Text
         healthBar.SetHealth(healthCurrentValue);
         playerStatus.SetCurrentHealth(healthCurrentValue);
-        UpdateHealthText();
+        healthBar.UpdateHealthText();
     }
     public void GameOverMenuActive()
     {
@@ -85,14 +83,14 @@ public class HealthControl : MonoBehaviour
         }
         healthBar.SetHealth(healthCurrentValue);
         playerStatus.SetCurrentHealth(healthCurrentValue);
-        UpdateHealthText();
+        healthBar.UpdateHealthText();
         return true;
     }
     public void PlayerHeatlthAfterRespawn()
     {
         healthCurrentValue = healthMaxValue;
         healthBar.SetHealth(healthCurrentValue);
-        UpdateHealthText();
+        healthBar.UpdateHealthText();
         animator = GetComponent<Animator>();
         animator.SetTrigger("isRespawn");
         playerControl.SetIsAlive(true);

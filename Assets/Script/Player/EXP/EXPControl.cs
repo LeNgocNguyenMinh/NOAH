@@ -7,17 +7,15 @@ using TMPro;
 // This class control each EXP point come to player
 public class EXPControl : MonoBehaviour
 {
-    private LevelControl levelControl; //Script for level
-    [SerializeField]private TextMeshProUGUI EXPText;
     [SerializeField]private PlayerStatus playerStatus;
-    [SerializeField]private EXPBar expBar;// EXP bar
+    private EXPBar expBar;// EXP bar
     private float expCurrentValue;// EXP current value
     private float expMaxValue; // EXP max value need to achive for level up
     private int currentLevel = 1; //start level
     
     void Start()
     {
-        levelControl = GetComponentInChildren<LevelControl>();
+        expBar = GetComponent<EXPBar>();
         
         //Set Start Value 
         currentLevel = playerStatus.playerLevel;
@@ -27,14 +25,8 @@ public class EXPControl : MonoBehaviour
         expBar.SetMaxEXP(expMaxValue); //Important, alway set SetMaxEXP before setEXP, cause the default value Unity use is 1, mean may cause the Wrong logic
         expBar.SetEXP(expCurrentValue); 
 
-        levelControl.UpdateLevelText(currentLevel);
-        UpdateEXPText();
-    }
-   
-
-    private void UpdateEXPText()
-    {
-        EXPText.text = $"{(int)expCurrentValue} / {(int)expMaxValue}";
+        expBar.UpdateLevelText(currentLevel);
+        expBar.UpdateEXPText();
     }
     public void AddEXP(float expValue)
     {
@@ -47,7 +39,7 @@ public class EXPControl : MonoBehaviour
             expBar.SetEXP(expCurrentValue);
 
             currentLevel++;//Level Up
-            levelControl.UpdateLevelText(currentLevel);//Update text box in level box
+            expBar.UpdateLevelText(currentLevel);//Update text box in level box
             playerStatus.SetLevel(currentLevel);//Set new level in player Status (scriptObjectable)
 
             if(currentLevel % 2 == 0) //only level 2,4,6, ...
@@ -65,6 +57,6 @@ public class EXPControl : MonoBehaviour
             playerStatus.SetCurrentEXP(expCurrentValue);
             expBar.SetEXP(expCurrentValue);
         }
-        UpdateEXPText();
+        expBar.UpdateEXPText();
     }
 }

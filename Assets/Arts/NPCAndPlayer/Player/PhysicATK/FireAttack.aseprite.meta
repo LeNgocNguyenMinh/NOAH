@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: FireAttack_Frame_0
     originalName: 
-    pivot: {x: 5.3333335, y: -0.939394}
+    pivot: {x: 80, y: -2.8846154}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 27
-      y: 44
-      width: 3
-      height: 33
+      x: 59
+      y: 72
+      width: 1
+      height: 26
     spriteID: 3559bab1736b1e442a3d495a72fd2cca
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 27, y: 44}
+    uvTransform: {x: 59, y: 72}
   - name: FireAttack_Frame_1
     originalName: 
-    pivot: {x: 5.3333335, y: -0.939394}
+    pivot: {x: 13.333333, y: -2.8846154}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 41
-      y: 59
-      width: 3
-      height: 33
+      x: 38
+      y: 71
+      width: 6
+      height: 26
     spriteID: ece657a15e982cf4ebe705c7dc8997a2
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 41, y: 59}
+    uvTransform: {x: 38, y: 71}
   - name: FireAttack_Frame_2
     originalName: 
-    pivot: {x: 0.9333334, y: -0.939394}
+    pivot: {x: 6.0000005, y: -3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 44
-      width: 15
-      height: 33
+      x: 38
+      y: 38
+      width: 13
+      height: 25
     spriteID: bd969034cc26c5041be2c1986587937b
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
+    uvTransform: {x: 38, y: 38}
   - name: FireAttack_Frame_3
     originalName: 
-    pivot: {x: 0.3448276, y: -0.84375}
+    pivot: {x: 3.3636365, y: -2.8799999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 29
-      height: 32
+      y: 42
+      width: 22
+      height: 25
     spriteID: 0dc08c2f6c92f72418167786fed04478
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 42}
   - name: FireAttack_Frame_4
     originalName: 
-    pivot: {x: 0.2647059, y: -0.88}
+    pivot: {x: 2.5357144, y: -3.1904762}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 41
+      x: 73
       y: 4
-      width: 34
-      height: 25
+      width: 28
+      height: 21
     spriteID: b4cf2faa821cb9344a81db6a1b8006b1
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 41, y: 4}
+    uvTransform: {x: 73, y: 4}
   - name: FireAttack_Frame_5
     originalName: 
-    pivot: {x: 0.2857143, y: -1}
+    pivot: {x: 2.6538463, y: -1.6333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 83
+      x: 4
       y: 4
-      width: 35
-      height: 13
+      width: 26
+      height: 30
     spriteID: 0e0bcbb8e3a4f2f4dad18604b4cc900b
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 83, y: 4}
+    uvTransform: {x: 4, y: 4}
   - name: FireAttack_Frame_6
     originalName: 
-    pivot: {x: 0.41666666, y: -0.5}
+    pivot: {x: 2.6296296, y: -1.3846154}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 83
-      y: 25
-      width: 36
-      height: 12
+      x: 38
+      y: 4
+      width: 27
+      height: 26
     spriteID: a937617fd9cfab844892d1642627283a
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 83, y: 25}
+    uvTransform: {x: 38, y: 4}
   - name: FireAttack_Frame_7
     originalName: 
-    pivot: {x: 0.61290324, y: -0.21428573}
+    pivot: {x: 3.8, y: -1.1153847}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 41
-      y: 37
-      width: 31
-      height: 14
+      x: 4
+      y: 75
+      width: 20
+      height: 26
     spriteID: b9eafcb4ffb1aaa479bc6ebbae9baf8f
     spriteBone: []
     spriteOutline: []
@@ -280,18 +280,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 41, y: 37}
+    uvTransform: {x: 4, y: 75}
   - name: FireAttack_Frame_8
     originalName: 
-    pivot: {x: 0.67857146, y: -0.21428573}
+    pivot: {x: 16, y: -1.0769231}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 85
-      width: 28
-      height: 14
+      x: 59
+      y: 38
+      width: 5
+      height: 26
     spriteID: cef6589f57eca814fa59c26ab5461ece
     spriteBone: []
     spriteOutline: []
@@ -300,7 +300,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 85}
+    uvTransform: {x: 59, y: 38}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -314,82 +314,82 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 31
-        width: 3
-        height: 33
+        x: 0
+        y: 75
+        width: 1
+        height: 26
       spriteId: 3559bab1736b1e442a3d495a72fd2cca
     - name: FireAttack_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 31
-        width: 3
-        height: 33
+        x: 0
+        y: 75
+        width: 6
+        height: 26
       spriteId: ece657a15e982cf4ebe705c7dc8997a2
     - name: FireAttack_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 18
-        y: 31
-        width: 15
-        height: 33
+        x: 2
+        y: 75
+        width: 13
+        height: 25
       spriteId: bd969034cc26c5041be2c1986587937b
     - name: FireAttack_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 22
-        y: 27
-        width: 29
-        height: 32
+        x: 6
+        y: 72
+        width: 22
+        height: 25
       spriteId: 0dc08c2f6c92f72418167786fed04478
     - name: FireAttack_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 23
-        y: 22
-        width: 34
-        height: 25
+        x: 9
+        y: 67
+        width: 28
+        height: 21
       spriteId: b4cf2faa821cb9344a81db6a1b8006b1
     - name: FireAttack_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 22
-        y: 13
-        width: 35
-        height: 13
+        x: 11
+        y: 49
+        width: 26
+        height: 30
       spriteId: 0e0bcbb8e3a4f2f4dad18604b4cc900b
     - name: FireAttack_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 6
-        width: 36
-        height: 12
+        x: 9
+        y: 36
+        width: 27
+        height: 26
       spriteId: a937617fd9cfab844892d1642627283a
     - name: FireAttack_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 13
-        y: 3
-        width: 31
-        height: 14
+        x: 4
+        y: 29
+        width: 20
+        height: 26
       spriteId: b9eafcb4ffb1aaa479bc6ebbae9baf8f
     - name: FireAttack_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 13
-        y: 3
-        width: 28
-        height: 14
+        x: 0
+        y: 28
+        width: 5
+        height: 26
       spriteId: cef6589f57eca814fa59c26ab5461ece
     linkedCells: []
     parentIndex: -1
@@ -409,4 +409,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 160, y: 160}

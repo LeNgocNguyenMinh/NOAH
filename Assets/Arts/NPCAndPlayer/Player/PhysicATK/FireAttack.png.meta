@@ -128,8 +128,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: FireAttack_1
       rect:
         serializedVersion: 2
-        x: 44
+        x: 37
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: FireAttack_2
       rect:
         serializedVersion: 2
-        x: 88
+        x: 74
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: FireAttack_3
       rect:
         serializedVersion: 2
-        x: 132
+        x: 111
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: FireAttack_4
       rect:
         serializedVersion: 2
-        x: 176
+        x: 148
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: FireAttack_5
       rect:
         serializedVersion: 2
-        x: 220
+        x: 185
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: FireAttack_6
       rect:
         serializedVersion: 2
-        x: 264
+        x: 222
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: FireAttack_7
       rect:
         serializedVersion: 2
-        x: 308
+        x: 259
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: FireAttack_8
       rect:
         serializedVersion: 2
-        x: 352
+        x: 296
         y: 0
-        width: 44
-        height: 61
+        width: 37
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

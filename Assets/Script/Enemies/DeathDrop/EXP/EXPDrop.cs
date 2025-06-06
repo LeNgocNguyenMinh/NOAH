@@ -19,7 +19,7 @@ public class EXPDrop : MonoBehaviour
         soundControl = FindObjectOfType<SoundControl>().GetComponent<SoundControl>();
         rb = GetComponent<Rigidbody2D>(); 
         player = FindObjectOfType<PlayerControl>().transform;
-        expControl = player.GetComponent<EXPControl>();
+        expControl = player.GetComponentInChildren<EXPControl>();
         Invoke("StartMoving", delayBeforeMoving); 
     }
     void StartMoving()
