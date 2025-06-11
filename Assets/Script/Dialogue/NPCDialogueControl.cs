@@ -9,30 +9,44 @@ public class NPCDialogueControl : MonoBehaviour
 {
     [SerializeField]private NPCDialogue dialogueData;
     private int dialogueIndex;
-    private bool mainLineIsTyping = false;
     public static bool isDialogueActive = false;
     private ObjectInteraction objectInteraction;
     private Tween typewriterTween; 
     private DialogueChoice currentChoice;
     private string currentRespondLine;
-    private bool respondLineIsTyping = false;
+    private bool mainLineIsTyping = false;
+    private bool mainLineRespondIsTyping = false;
+    private bool questLineRespondIsTyping = false;
     private bool isChoosen = false;
+    private Mission currentDialogueMission = null;
+    private MissionLine currentMissionLine;
     
+    private enum DialogueMissionState
+    {
+        NoMission,
+        InMission,
+        FinishMission
+    }
     private enum DialogueState
     {
-        isChossen,
-        mainLineTyping,
-        respondLineTyping,
-        typingFinish
+        InMainLine,
+        InMainLineRespond,
+        InQuestLineStart,
+        InQuestLineFinish
     }
+    private DialogueMissionState missionState;
     private void Update()
     {
+        if(missionState == DialogueMissionState.InMission && currentDialogueMission.isFinish == true)
+        {
+            missionState = DialogueMissionState.FinishMission;
+        }
         objectInteraction = GetComponent<ObjectInteraction>();
         if(objectInteraction.GetCanInteract())
         {
             if(Input.GetKeyDown(KeyCode.F))
             {  
-                Debug.Log(dialogueIndex+"," + CheckOptionChoice() + "," + mainLineIsTyping + "," + respondLineIsTyping);
+                Debug.Log(dialogueIndex+"," + CheckOptionChoice() + "," + mainLineIsTyping + "," + mainLineRespondIsTyping + "," + isChoosen);
                 Interact();
             }
         }
@@ -45,18 +59,16 @@ public class NPCDialogueControl : MonoBehaviour
             return;
         }
         //in option choice line
-        if(CheckOptionChoice() && !mainLineIsTyping && !respondLineIsTyping && !isChoosen)
+        if(CheckOptionChoice() && !mainLineIsTyping && !mainLineRespondIsTyping && !isChoosen)
         {
             return;
         }
         //in normal line
         if(isDialogueActive)
         {
-            Debug.Log(1);
             NextLine();
         }//in first line
         else{
-            Debug.Log(2);
             StartDialogue();
         }
     }
@@ -65,17 +77,48 @@ public class NPCDialogueControl : MonoBehaviour
         DialogueController.Instance.ShowDialogueUI();
         DialogueController.Instance.SetDialogue(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueIndex = 0;
-        TypeLine();
+        if(missionState == DialogueMissionState.InMission)
+        {
+            TypeLine(DialogueState.InQuestLineStart, "");
+        }
+        else if(missionState == DialogueMissionState.FinishMission)
+        {
+            TypeLine(DialogueState.InQuestLineFinish, "");
+        }
+        else
+        {
+            TypeLine(DialogueState.InMainLine, "");
+        }
     }
     //function for write line and actione when line finish 
-    private void TypeLine()
+    private void TypeLine(DialogueState dialogueState, string fullText = "")
     {
-        
         //Check if last line
-        if (dialogueData.dialogueLine.Length <= dialogueIndex) return;
-
-        mainLineIsTyping = true;
-        string fullText = dialogueData.dialogueLine[dialogueIndex];
+        if(dialogueState == DialogueState.InMainLine)
+        {
+            if(dialogueData.dialogueLine.Length <= dialogueIndex)
+            {
+                return;
+            }
+            else{
+                mainLineIsTyping = true;
+                fullText = dialogueData.dialogueLine[dialogueIndex];
+            }
+        }
+        else if(dialogueState == DialogueState.InMainLineRespond)
+        {
+            mainLineRespondIsTyping = true;
+        }
+        else if(dialogueState == DialogueState.InQuestLineStart)
+        {
+            fullText = currentMissionLine.inQuestDialogue;
+            questLineRespondIsTyping = true;
+        }
+        else{
+            fullText = currentMissionLine.finishQuestDialogue;
+            questLineRespondIsTyping = true;
+        }
+        
         DialogueController.Instance.SetDialogueText("");
         // Tạo hiệu ứng typewriter bằng DOTween và DOVirtual
         typewriterTween = DOTween.To(
@@ -91,24 +134,39 @@ public class NPCDialogueControl : MonoBehaviour
         .SetUpdate(true)
         .OnComplete(() => 
         {
-            mainLineIsTyping = false;
-            // check if current line is option choice line
-            if(CheckOptionChoice())
+            if(dialogueState == DialogueState.InMainLine)
             {
-                DialogueController.Instance.ClearChoice();
-                DisplayChoice(currentChoice);
+                mainLineIsTyping = false;
+            // check if current line is option choice line
+                if(CheckOptionChoice())
+                {
+                    DialogueController.Instance.ClearChoice();
+                    DisplayChoice(currentChoice);
+                }
+            } 
+            else if(dialogueState == DialogueState.InMainLineRespond)
+            {
+                mainLineRespondIsTyping = false;
+            }     
+            else if(dialogueState == DialogueState.InQuestLineStart)
+            {
+                questLineRespondIsTyping = false;
             }
-            
+            else if(dialogueState == DialogueState.InQuestLineFinish)
+            {
+                questLineRespondIsTyping = false;
+                missionState = DialogueMissionState.NoMission;
+            }      
         });
     }
 
     private void NextLine()
     {
         // if typing,show the full line
-        if(respondLineIsTyping)
+        if(mainLineRespondIsTyping)
         {
             typewriterTween?.Kill();
-            respondLineIsTyping = false;
+            mainLineRespondIsTyping = false;
             DialogueController.Instance.SetDialogueText(currentRespondLine);
             return;
         }
@@ -123,7 +181,33 @@ public class NPCDialogueControl : MonoBehaviour
                 DisplayChoice(currentChoice);
             }
             return;
-        }       
+        }  
+        if(questLineRespondIsTyping)
+        {
+            typewriterTween?.Kill();
+            questLineRespondIsTyping = false;
+            if(missionState == DialogueMissionState.InMission)
+            {
+                DialogueController.Instance.SetDialogueText(currentMissionLine.inQuestDialogue);
+                return;
+            }
+            else if(missionState == DialogueMissionState.FinishMission)
+            {
+                DialogueController.Instance.SetDialogueText(currentMissionLine.finishQuestDialogue);
+                return;
+            }
+        }  
+        if(!questLineRespondIsTyping && missionState == DialogueMissionState.InMission)
+        {
+            EndDialogue();
+            return;
+        }
+        if(!questLineRespondIsTyping && missionState == DialogueMissionState.FinishMission)
+        {
+            missionState = DialogueMissionState.NoMission;
+            EndDialogue();
+            return;
+        }
         //if this is the finish line then end the dialogue 
         if(dialogueData.endDialogueLine.Length > dialogueIndex && dialogueData.endDialogueLine[dialogueIndex])
         {
@@ -133,7 +217,7 @@ public class NPCDialogueControl : MonoBehaviour
         //if this this not the last line then continue
         if(++dialogueIndex < dialogueData.dialogueLine.Length)
         {
-            TypeLine();
+            TypeLine(DialogueState.InMainLine, "");
         }//else end dialogue
         else
         {
@@ -159,7 +243,11 @@ public class NPCDialogueControl : MonoBehaviour
         {
             if(missionLine.dialogueIndex == dialogueIndex)
             {
+                missionState = DialogueMissionState.InMission;
+                currentMissionLine = missionLine;
+                currentDialogueMission = missionLine.mission;
                 MissionManager.Instance.SetLineMission(missionLine.mission);
+                missionState = DialogueMissionState.InMission;
             }
         }
     }
@@ -188,29 +276,13 @@ public class NPCDialogueControl : MonoBehaviour
         }
         isChoosen = true;
         currentRespondLine = currentChoice.respond[i];
-        RespondLine(currentChoice.respond[i]);
+        TypeLine(DialogueState.InMainLineRespond, currentChoice.respond[i]);
         DialogueController.Instance.ClearChoice();
     }
-    private void RespondLine(string line)
+
+    public void MissionFinish()
     {
-        respondLineIsTyping = true;
-        string fullText = line;
-        DialogueController.Instance.SetDialogueText("");
-        // Tạo hiệu ứng typewriter bằng DOTween và DOVirtual
-        typewriterTween = DOTween.To(
-            () => 0, // Giá trị bắt đầu
-            (currentIndex) => 
-            {
-                DialogueController.Instance.SetDialogueText(fullText.Substring(0, currentIndex));
-            },
-            fullText.Length, // Giá trị kết thúc
-            fullText.Length * dialogueData.typingSpeed // Thời gian dựa trên số ký tự và tốc độ
-        )
-        .SetEase(Ease.Linear)
-        .SetUpdate(true)
-        .OnComplete(() => 
-        {
-            respondLineIsTyping = false;
-        });
+        missionState = DialogueMissionState.FinishMission;
     }
+
 }

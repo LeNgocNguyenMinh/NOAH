@@ -21,7 +21,7 @@ public class Mission
     public int requiredAmount;
     [Header("-------For Btn mission------")]
     public KeyCode keyCode;
-
+    public bool isFinish = false;
     
     // Phần thưởng
     public MissionReward missionReward;

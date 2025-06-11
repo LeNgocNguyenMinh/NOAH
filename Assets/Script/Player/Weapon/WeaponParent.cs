@@ -22,8 +22,12 @@ public class WeaponParent : MonoBehaviour
     [SerializeField]private PlayerSound playerSound;
     [SerializeField]private Image bulletEnergyFront;
     [SerializeField]private Image bulletEnergyBack;
+    [SerializeField]private Image hitEnergyFront;
+    [SerializeField]private Image hitEnergyBack;
     [SerializeField]private float energyMainTime;
     [SerializeField]private float energySlowerTime;
+    [SerializeField]private float hitMainTime;
+    [SerializeField]private float hitSlowerTime;
     [SerializeField]private int requireHit;
     private int hitCount = 0;//Hit count
     private GameObject bulletPrefap;
@@ -61,7 +65,7 @@ public class WeaponParent : MonoBehaviour
     void Update()
     {
         if(!UIMouseAndPriority.Instance.CanOpenThisUI()) return;
-        CheckEnergyBar();
+        CheckEnergyBarLeft();
         /* Reload(); */
         WeaponRotate();
         CheckPhysicATK();
@@ -123,21 +127,6 @@ public class WeaponParent : MonoBehaviour
         magazine = playerStatus.playerBullet;
         magazineText.UpdateAmmorText(currentBullet, magazine);
     }
-    /* private void Reload()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            StartCoroutine(BulletReload());
-        }
-    } */
-    /* private IEnumerator BulletReload()
-    {
-        reloadIcon.SetActive(true);
-        yield return new WaitForSeconds(0.4f);
-        reloadIcon.SetActive(false);
-        currentBullet = magazine;
-        magazineText.UpdateAmmorText(currentBullet, magazine);
-    } */
     private void Shoot()
     {
         wandSprite.enabled = true;
@@ -145,7 +134,7 @@ public class WeaponParent : MonoBehaviour
         if(currentBullet<=0)return;
         wandATKAnimator.SetTrigger("Shoot");
         currentBullet--;
-        CheckEnergyBar();
+        CheckEnergyBarLeft();
         magazineText.UpdateAmmorText(currentBullet, magazine);
         Instantiate(bulletPrefap, firePoint.position, firePoint.rotation);
     }
@@ -155,27 +144,31 @@ public class WeaponParent : MonoBehaviour
         physicATKSprite.enabled = true;
         physicATKAnimator.SetTrigger("Attack");
     }
-    private void CheckEnergyBar()
+    private void CheckEnergyBarLeft()
     {
         float target = currentBullet / (float)magazine;
-        /* if(bulletEnergyFront.fillAmount > bulletEnergyBack.fillAmount)
-        {
-            bulletEnergyBack.fillAmount = bulletEnergyFront.fillAmount;
-        }
-        if (Mathf.Abs(bulletEnergyFront.fillAmount - target) > 0.001f)
-        {
-            bulletEnergyFront.fillAmount = Mathf.MoveTowards(bulletEnergyFront.fillAmount, target, energyMainSpeed * Time.deltaTime);
-        }
-        if (Mathf.Abs(bulletEnergyBack.fillAmount - target) > 0.001f)
-        {
-            bulletEnergyBack.fillAmount = Mathf.MoveTowards(bulletEnergyBack.fillAmount, target, energySlowerSpeed * Time.deltaTime);
-        } */
         if(bulletEnergyFront.fillAmount > bulletEnergyBack.fillAmount)
         {
             bulletEnergyBack.fillAmount = bulletEnergyFront.fillAmount;
         }
         bulletEnergyFront.DOFillAmount(target, energyMainTime).SetEase(Ease.Linear);
         bulletEnergyBack.DOFillAmount(target, energySlowerTime).SetEase(Ease.Linear);
+    }
+    private void CheckEnergyBarRight()
+    {
+        float target = hitCount / (float)requireHit;
+        if(hitEnergyFront.fillAmount > hitEnergyBack.fillAmount)
+        {
+            hitEnergyBack.fillAmount = hitEnergyFront.fillAmount;
+        }
+        hitEnergyFront.DOFillAmount(target, hitMainTime).SetEase(Ease.Linear);
+        hitEnergyBack.DOFillAmount(target, hitSlowerTime).SetEase(Ease.Linear);
+        if(hitCount >= requireHit)
+        {
+            EnergyCharge();
+            hitCount = 0; // Reset hit count after charging energy
+            CheckEnergyBarRight();
+        }
     }
     public void PhysicHitAnim()
     {
@@ -186,18 +179,14 @@ public class WeaponParent : MonoBehaviour
         if(currentBullet < magazine)
         {
             currentBullet++;
-            CheckEnergyBar();
+            CheckEnergyBarLeft();
             magazineText.UpdateAmmorText(currentBullet, magazine);
         }
     }
     public void HitCountIncrease()
     {
         hitCount++;
-        if(hitCount >= requireHit)
-        {
-            EnergyCharge();
-            hitCount = 0; // Reset hit count after charging energy
-        }
+        CheckEnergyBarRight();
     }
 }
 

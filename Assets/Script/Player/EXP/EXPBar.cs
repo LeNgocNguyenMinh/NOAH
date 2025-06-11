@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
@@ -21,11 +19,11 @@ public class EXPBar : MonoBehaviour
     {
         currentEXP = exp;
         target = currentEXP / maxEXP;
-        expBarImage.DOFillAmount(target, .3f).SetEase(Ease.Linear);
+        expBarImage.DOFillAmount(target, .3f).SetEase(Ease.Linear).SetUpdate(true);
     }
     public void UpdateEXPText()
     {
-        expText.text = $"-{(int)currentEXP}/{(int)maxEXP}-";
+        expText.text = $"-={(int)currentEXP}/{(int)maxEXP}=-";
     }
     public void UpdateLevelText(int level)
     {

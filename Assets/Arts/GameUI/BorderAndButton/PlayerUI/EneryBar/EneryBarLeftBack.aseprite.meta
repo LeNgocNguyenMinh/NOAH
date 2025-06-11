@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df8398169f0f7474290ba6af033cbc3e
+guid: b044dcd7e78f46c4392dfbf8f3b834c8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: EneryBarHandle
+  - name: EneryBarLeftBack
     originalName: 
-    pivot: {x: -2, y: -1.1}
+    pivot: {x: 1.2, y: -0.25}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 5
-      height: 10
-    spriteID: b88da808c48e57843a8c67a90dbc85e5
+      width: 20
+      height: 48
+    spriteID: fad9f842b8b8e404eba040ef000abc17
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -788098956
-    name: EneryBarHandle
+    guid: 1189998768
+    name: EneryBarLeftBack
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: EneryBarHandle
+    - name: EneryBarLeftBack
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 26
-        y: 11
-        width: 5
-        height: 10
-      spriteId: b88da808c48e57843a8c67a90dbc85e5
+        x: 8
+        y: 12
+        width: 20
+        height: 48
+      spriteId: fad9f842b8b8e404eba040ef000abc17
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 64, y: 64}

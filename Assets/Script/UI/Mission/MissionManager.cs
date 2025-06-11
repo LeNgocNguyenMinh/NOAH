@@ -32,6 +32,7 @@ public class MissionManager : MonoBehaviour
     
     public void UpdateNewMission(Mission mission)
     {
+        if(mission ==null)return;
         currentMission = mission;
         currentAmount = 0;
         missionName.text = currentMission.missionName;
@@ -95,8 +96,9 @@ public class MissionManager : MonoBehaviour
         else
         {
             inLineMission = false;
+            currentMission.isFinish = true;
         }
-        currentMission = missionScriptObject.GetMissionByInDex(currentMissionIndex);
+        currentMission = missionScriptObject.GetMissionByIndex(currentMissionIndex);
         UpdateNewMission(currentMission);
     }
     
@@ -129,7 +131,7 @@ public class MissionManager : MonoBehaviour
     {
         currentAmount = saveData.currentAmount;
         currentMissionIndex = saveData.missionIndex;
-        currentMission = missionScriptObject.GetMissionByInDex(currentMissionIndex);
+        currentMission = missionScriptObject.GetMissionByIndex(currentMissionIndex);
         CheckMissionProgress();
     }
 }

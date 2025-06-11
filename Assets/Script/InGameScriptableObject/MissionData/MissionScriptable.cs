@@ -6,11 +6,24 @@ using UnityEngine;
 public class MissionScriptable : ScriptableObject
 {
     public List<Mission> missionList;
-    public Mission GetMissionByInDex(int index)
+    public List<Mission> npcMissionList;
+    public Mission GetMissionByIndex(int index)
     {
         if (index >= 0 && index < missionList.Count)
         {
             return missionList[index];
+        }
+        else
+        {
+            Debug.LogError("Index out of range");
+            return null;
+        }
+    }
+    public Mission GetNPCMissionBuyIndex(int index)
+    {
+        if (index >= 0 && index < npcMissionList.Count)
+        {
+            return npcMissionList[index];
         }
         else
         {

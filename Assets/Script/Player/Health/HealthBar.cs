@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -29,11 +27,11 @@ public class HealthBar : MonoBehaviour
         {
             healthBarBackImage.fillAmount = healthBarFrontImage.fillAmount;
         }
-        healthBarFrontImage.DOFillAmount(target, .3f).SetEase(Ease.Linear);
-        healthBarBackImage.DOFillAmount(target, .5f).SetEase(Ease.Linear);
+        healthBarFrontImage.DOFillAmount(target, .1f).SetEase(Ease.Linear).SetUpdate(true);
+        healthBarBackImage.DOFillAmount(target, .5f).SetEase(Ease.Linear).SetUpdate(true);
     }
     public void UpdateHealthText()
     {
-        healthText.text = $"-{(int)currentHealth}/{(int)maxHealth}-";
+        healthText.text = $"-={(int)currentHealth}/{(int)maxHealth}=-";
     }
 }

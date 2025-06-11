@@ -13,7 +13,6 @@ public class NPCDialogue : ScriptableObject
     public float typingSpeed;
     public DialogueChoice[] choice;
     public MissionLine[] missionLine;
-    public string[] inQuestDialogue;
 }
 [System.Serializable]
 public class DialogueChoice
@@ -27,4 +26,6 @@ public class MissionLine
 {
     public int dialogueIndex;
     public Mission mission;
+    public string inQuestDialogue;
+    public string finishQuestDialogue;
 }
