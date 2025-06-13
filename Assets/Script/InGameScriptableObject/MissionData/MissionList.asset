@@ -14,32 +14,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionList:
   - missionName: Get Something To Eat
+    missionID: MS01
     missionType: 0
     targetID: 
     missionDes: Collect 2 apple, to... eat.
     item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
     requiredAmount: 2
     keyCode: 0
+    isFinish: 0
     missionReward:
       coin: 0
       items: []
   - missionName: Prepare
+    missionID: MS02
     missionType: 0
     targetID: 
     missionDes: Buy 4 watermelon. Do not steal ?!
     item: {fileID: 11400000, guid: 57d68bc0160785443bfb50fcd754f22b, type: 2}
     requiredAmount: 4
     keyCode: 0
+    isFinish: 0
     missionReward:
       coin: 0
       items: []
   - missionName: The Prices
+    missionID: MS03
     missionType: 0
     targetID: 
     missionDes: Buy 4 Orange from the shop. It CHEAP!!!
     item: {fileID: 11400000, guid: 600af6cdd83bd0844b898b1c9b7c9564, type: 2}
     requiredAmount: 4
     keyCode: 0
+    isFinish: 0
+    missionReward:
+      coin: 0
+      items: []
+  npcMissionList:
+  - missionName: Healing
+    missionID: NPC_MS01
+    missionType: 0
+    targetID: 
+    missionDes: Collect 2 apples so Sifu can make a potion.
+    item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
+    requiredAmount: 2
+    keyCode: 0
+    isFinish: 0
     missionReward:
       coin: 0
       items: []

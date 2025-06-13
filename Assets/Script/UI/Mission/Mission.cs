@@ -13,6 +13,7 @@ public enum MissionType
 public class Mission
 {
     public string missionName;
+    public string missionID;
     public MissionType missionType;
     public string targetID; 
     public string missionDes;

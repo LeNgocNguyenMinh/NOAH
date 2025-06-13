@@ -93,6 +93,7 @@ public class NPCDialogueControl : MonoBehaviour
     //function for write line and actione when line finish 
     private void TypeLine(DialogueState dialogueState, string fullText = "")
     {
+        /* if(CheckIsMissionFinish())return; */
         //Check if last line
         if(dialogueState == DialogueState.InMainLine)
         {
@@ -245,11 +246,22 @@ public class NPCDialogueControl : MonoBehaviour
             {
                 missionState = DialogueMissionState.InMission;
                 currentMissionLine = missionLine;
-                currentDialogueMission = missionLine.mission;
-                MissionManager.Instance.SetLineMission(missionLine.mission);
+                currentDialogueMission = MissionManager.Instance.GetNPCMissionByID(missionLine.missionID);
+                MissionManager.Instance.SetLineMission(currentDialogueMission);
                 missionState = DialogueMissionState.InMission;
             }
         }
+    }
+    private bool CheckIsMissionFinish()
+    {
+        foreach(MissionLine missionLine in dialogueData.missionLine)
+        {
+            if(missionLine.dialogueIndex == dialogueIndex)
+            {
+                return MissionManager.Instance.GetNPCMissionByID(missionLine.missionID).isFinish;
+            }
+        }
+        return false;
     }
     //hide dialogue UI
     private void EndDialogue()

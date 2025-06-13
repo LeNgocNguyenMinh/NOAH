@@ -11,6 +11,7 @@ public class SaveController : MonoBehaviour
     public static SaveController Instance;
     private string saveLocation;
     private string newGameSaveLocation;
+    private SaveData existingData;
     private UIInventoryPage uiInventoryPage;
     private HotBarManager hotBarManager;
     private ShopController shopController;
@@ -18,8 +19,8 @@ public class SaveController : MonoBehaviour
     private ItemInGroundController itemInGroundController;
     private MissionManager missionManager;
     [SerializeField]private PlayerStatus playerStatus;
-    private SaveData existingData;
     [SerializeField]private List<Item> weaponList;
+    [SerializeField]private MissionScriptable missionScriptable;
     void Awake()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
@@ -50,18 +51,15 @@ public class SaveController : MonoBehaviour
             playerSaveData = playerStatus?.GetPlayerInfo(),
             missionSaveData = missionManager?.GetCurrentMission()
         };
-        Debug.Log(saveData.saveScene);
         for(int i = 0; i < weaponList.Count; i++)
         {
             saveData.weaponListData.Add(weaponList[i].GetWeaponData());
         }
         if(FindObjectOfType<CinemachineConfiner>()!=null)
         {
-            Debug.Log("mapBound: Tìm thấy");
             if(FindObjectOfType<CinemachineConfiner>()?.m_BoundingShape2D.gameObject.name!=null)
             {
                 saveData.mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name;
-                Debug.Log("mapBound: " + saveData.mapBoundary);
             }
         }
         if(FindObjectOfType<ShopController>()!=null)
@@ -94,14 +92,11 @@ public class SaveController : MonoBehaviour
             playerSaveData = playerStatus?.GetPlayerInfo(),
             missionSaveData = missionManager?.GetCurrentMission()
         };
-        Debug.Log(saveData.saveScene);
         if(FindObjectOfType<CinemachineConfiner>()!=null)
         {
-            Debug.Log("mapBound: Tìm thấy");
             if(FindObjectOfType<CinemachineConfiner>()?.m_BoundingShape2D.gameObject.name!=null)
             {
                 saveData.mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name;
-                Debug.Log("mapBound: " + saveData.mapBoundary);
             }
         }
         if(FindObjectOfType<ShopController>()!=null)

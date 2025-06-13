@@ -195,7 +195,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4504821550340922509}
         m_TargetAssemblyTypeName: AddAvailablePoint, Assembly-CSharp
         m_MethodName: AddPointToDamage
         m_Mode: 1
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2276767891842701057}
         m_TargetAssemblyTypeName: UIInventoryDescription, Assembly-CSharp
         m_MethodName: UpgradeThisWeapon
         m_Mode: 1
@@ -721,7 +721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2838073237681233121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1242275116355873783}
+      - m_Target: {fileID: 3528074024703970602}
         m_TargetAssemblyTypeName: PlayerLoadout, Assembly-CSharp
         m_MethodName: UnequipHat
         m_Mode: 1
@@ -1704,7 +1704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7050912265366153324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1242275116355873783}
+      - m_Target: {fileID: 3528074024703970602}
         m_TargetAssemblyTypeName: PlayerLoadout, Assembly-CSharp
         m_MethodName: UnequipCoat
         m_Mode: 1
@@ -1837,7 +1837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8331348039966256323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1242275116355873783}
+      - m_Target: {fileID: 3528074024703970602}
         m_TargetAssemblyTypeName: PlayerLoadout, Assembly-CSharp
         m_MethodName: UnequipWeapon
         m_Mode: 1
@@ -2281,7 +2281,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4504821550340922509}
         m_TargetAssemblyTypeName: AddAvailablePoint, Assembly-CSharp
         m_MethodName: AddPointToHealth
         m_Mode: 1
@@ -4427,7 +4427,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4504821550340922509}
         m_TargetAssemblyTypeName: AddAvailablePoint, Assembly-CSharp
         m_MethodName: AddPointToBullet
         m_Mode: 1
@@ -5112,6 +5112,7 @@ RectTransform:
   m_Children:
   - {fileID: 2042781956660265261}
   - {fileID: 3396370755561953803}
+  - {fileID: 8309499520737070908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5701,7 +5702,6 @@ GameObject:
   - component: {fileID: 2426442365631058642}
   - component: {fileID: 2755472241098570248}
   - component: {fileID: 3885629190236938244}
-  - component: {fileID: 1242275116355873783}
   m_Layer: 5
   m_Name: PlayerCustomize
   m_TagString: Untagged
@@ -5795,27 +5795,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1242275116355873783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8518621820428158339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edfcc0a2bc82ce74a8ea5287ae019428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hatSlotImage: {fileID: 5419407350029268708}
-  coatSlotImage: {fileID: 2867899503070061800}
-  hatImage: {fileID: 8095119879210567666}
-  coatImage: {fileID: 1087584602547038844}
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
-  weaponSlotImage: {fileID: 3149418953813554024}
-  unequipHat: {fileID: 791607847245568265}
-  unequipCoat: {fileID: 1820434759089629664}
-  unequipWeapon: {fileID: 1927025952025506024}
 --- !u!1 &8606319664637492582
 GameObject:
   m_ObjectHideFlags: 0
@@ -6479,3 +6458,254 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!1001 &3412509915185184575
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3661561423283892308}
+    m_Modifications:
+    - target: {fileID: 1288026079390606258, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: bulletButton
+      value: 
+      objectReference: {fileID: 6078676321813431365}
+    - target: {fileID: 1288026079390606258, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: damageButton
+      value: 
+      objectReference: {fileID: 85609791012367679}
+    - target: {fileID: 1288026079390606258, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: healthButton
+      value: 
+      objectReference: {fileID: 2382259973230763670}
+    - target: {fileID: 1588026988894970244, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: contentPanel
+      value: 
+      objectReference: {fileID: 3837684797153672487}
+    - target: {fileID: 1588026988894970244, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: inventorySize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588026988894970244, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: descriptionPanel
+      value: 
+      objectReference: {fileID: 5905011919168994296}
+    - target: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: hatImage
+      value: 
+      objectReference: {fileID: 8095119879210567666}
+    - target: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: coatImage
+      value: 
+      objectReference: {fileID: 1087584602547038844}
+    - target: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: unequipHat
+      value: 
+      objectReference: {fileID: 791607847245568265}
+    - target: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: unequipCoat
+      value: 
+      objectReference: {fileID: 1820434759089629664}
+    - target: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: hatSlotImage
+      value: 
+      objectReference: {fileID: 5419407350029268708}
+    - target: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: coatSlotImage
+      value: 
+      objectReference: {fileID: 2867899503070061800}
+    - target: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: unequipWeapon
+      value: 
+      objectReference: {fileID: 1927025952025506024}
+    - target: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: weaponSlotImage
+      value: 
+      objectReference: {fileID: 3149418953813554024}
+    - target: {fileID: 2345024472703989225, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 3396370755561953803}
+    - target: {fileID: 2345024472703989225, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: statusImage
+      value: 
+      objectReference: {fileID: 805355651901487646}
+    - target: {fileID: 2345024472703989225, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: statusPanel
+      value: 
+      objectReference: {fileID: 3256241716315176920}
+    - target: {fileID: 2345024472703989225, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: listMask2D.Array.data[0]
+      value: 
+      objectReference: {fileID: 6187205354012979233}
+    - target: {fileID: 2345024472703989225, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: listMask2D.Array.data[3]
+      value: 
+      objectReference: {fileID: 8600765336586117518}
+    - target: {fileID: 2345024472703989225, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: listMask2D.Array.data[4]
+      value: 
+      objectReference: {fileID: 4905255088649991788}
+    - target: {fileID: 2345024472703989225, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: listMask2D.Array.data[5]
+      value: 
+      objectReference: {fileID: 294927083056816771}
+    - target: {fileID: 3263014105550959646, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_Name
+      value: InventoryStatusManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: itemNameBox
+      value: 
+      objectReference: {fileID: 4616398210376849681}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: itemFunction
+      value: 
+      objectReference: {fileID: 3207204046837439416}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: itemImageBox
+      value: 
+      objectReference: {fileID: 7610594016738367820}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: upgradeButton
+      value: 
+      objectReference: {fileID: 181974470556192627}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: weaponLevelBox
+      value: 
+      objectReference: {fileID: 8125808908933162062}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: weaponLevelText
+      value: 
+      objectReference: {fileID: 2178853884629378189}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: requireForUpgrade
+      value: 
+      objectReference: {fileID: 4065534304952654495}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: itemDescriptionBox
+      value: 
+      objectReference: {fileID: 3192061327700237389}
+    - target: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: requireForUpgradeText
+      value: 
+      objectReference: {fileID: 4711819829588895190}
+    - target: {fileID: 3747642974348335927, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 2042781956660265261}
+    - target: {fileID: 3747642974348335927, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: playerLoadout
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3747642974348335927, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: inventoryPanel
+      value: 
+      objectReference: {fileID: 2461709183389296090}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -968.36487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -540.2129
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244060339391216765, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: playerLevel
+      value: 
+      objectReference: {fileID: 2221259088389321609}
+    - target: {fileID: 8244060339391216765, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: playerDamage
+      value: 
+      objectReference: {fileID: 5484846576419646537}
+    - target: {fileID: 8244060339391216765, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 4552590252442683016}
+    - target: {fileID: 8244060339391216765, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: playerCoinNumber
+      value: 
+      objectReference: {fileID: 8945822625392475339}
+    - target: {fileID: 8244060339391216765, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: playerBulletNumber
+      value: 
+      objectReference: {fileID: 6267092489182580839}
+    - target: {fileID: 8244060339391216765, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+      propertyPath: playerAvailablePoint
+      value: 
+      objectReference: {fileID: 7556748880451648046}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+--- !u!114 &2276767891842701057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3513687205678737470, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+  m_PrefabInstance: {fileID: 3412509915185184575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f371a2f317ee1a548baa4e0d19fb4b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3528074024703970602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2282646689726542357, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+  m_PrefabInstance: {fileID: 3412509915185184575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfcc0a2bc82ce74a8ea5287ae019428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4504821550340922509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1288026079390606258, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+  m_PrefabInstance: {fileID: 3412509915185184575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa881d9ded51a54e943e55489fa6ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8309499520737070908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6632375608436568067, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
+  m_PrefabInstance: {fileID: 3412509915185184575}
+  m_PrefabAsset: {fileID: 0}

@@ -38,19 +38,6 @@ MonoBehaviour:
     - Oke i understand that.
   missionLine:
   - dialogueIndex: 2
-    mission:
-      missionName: Collect apple
-      missionType: 0
-      targetID: 
-      missionDes: Collect 2 Apple to make a potion
-      item: {fileID: 11400000, guid: 0e91f464f93d7614087adec526b6dc9a, type: 2}
-      requiredAmount: 2
-      keyCode: 99
-      isFinish: 0
-      missionReward:
-        coin: 20
-        items:
-        - item: {fileID: 11400000, guid: 8dbd1204e87261a48a0aa64f3649fc62, type: 2}
-          itemQuantity: 1
+    missionID: NPC_MS01
     inQuestDialogue: Go and collect my apple.
     finishQuestDialogue: Well done.

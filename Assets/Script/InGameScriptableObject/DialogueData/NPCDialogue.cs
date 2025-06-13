@@ -25,7 +25,7 @@ public class DialogueChoice
 public class MissionLine
 {
     public int dialogueIndex;
-    public Mission mission;
+    public string missionID;
     public string inQuestDialogue;
     public string finishQuestDialogue;
 }

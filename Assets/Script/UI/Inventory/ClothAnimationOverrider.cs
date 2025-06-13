@@ -6,7 +6,6 @@ public class ClothAnimationOverrider : MonoBehaviour
 {
     private Animator animator;
     private AnimatorOverrideController animatorOverrideController;
-    private AnimationClip testNewOutFit;
     void Awake()
     {
         animator = FindObjectOfType<PlayerControl>().GetComponent<Animator>();

@@ -147,3 +147,10 @@ public class TimeManager : MonoBehaviour
         this.dateIndex = timeSaveData.dateData;
     }
 }
+[System.Serializable]
+public class TimeSaveData
+{
+    public float minData;
+    public float hourData;
+    public int dateData;
+}

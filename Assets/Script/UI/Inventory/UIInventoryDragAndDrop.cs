@@ -93,7 +93,11 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
             if(eventData.pointerEnter == null)//mean you drop it outside inv
             {
                 Transform playerTrans = FindObjectOfType<PlayerControl>().transform;
-                Vector2 dropOffset = Random.insideUnitCircle.normalized * 2f; // Random offset to avoid items stacking on each other
+                // Random góc
+                float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+
+                // Vị trí trên vòng tròn bán kính 2f quanh player
+                Vector2 dropOffset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * 4f;
                 Vector2 dropPosition = (Vector2)playerTrans.position + dropOffset;
                 CollectableItems dropItem = Instantiate(previousSlot.GetItem().itemPrefab, dropPosition, Quaternion.identity).GetComponentInChildren<CollectableItems>();
                 dropItem.SetItemQuantity(previousSlot.GetItemQuantity());

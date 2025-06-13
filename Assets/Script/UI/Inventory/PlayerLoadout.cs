@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using System;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
 public class PlayerLoadout : MonoBehaviour
 {
-    private ClothAnimationOverrider animationOverrider;
+    public static PlayerLoadout Instance;
     [SerializeField]private Image hatSlotImage;
     [SerializeField]private Image coatSlotImage;
     [SerializeField]private Image hatImage;
@@ -21,14 +16,18 @@ public class PlayerLoadout : MonoBehaviour
     private Item currentEquipHat;
     private Item currentEquipCoat;
     private Item currentEquipWeapon;
-    private UIInventoryPage uiInventoryPage;
     private WeaponParent weaponParent;
     private PlayerCurrentClothChange playerCurrentClothChange;
-    public void Start()
+    private void Awake()
     {
-        unequipHat.SetActive(false);
-        unequipCoat.SetActive(false);
-        unequipWeapon.SetActive(false);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     public void CheckClothStatus()
     {
@@ -40,8 +39,8 @@ public class PlayerLoadout : MonoBehaviour
             hatSlotImage.sprite = playerStatus.defaultHat.itemSprite; //update image in hat slot 
             RectTransform hatRect = hatSlotImage.rectTransform;
             hatRect.sizeDelta = new Vector2(
-            this.hatSlotImage.sprite.rect.width * 3f,
-            this.hatSlotImage.sprite.rect.height * 3f);
+            hatSlotImage.sprite.rect.width * 3f,
+            hatSlotImage.sprite.rect.height * 3f);
         }
         if(playerStatus.currentCoat != null)
         {
@@ -52,8 +51,8 @@ public class PlayerLoadout : MonoBehaviour
             coatSlotImage.sprite = playerStatus.defaultCoat.itemSprite;
             RectTransform coatRect = coatSlotImage.rectTransform;
             coatRect.sizeDelta = new Vector2(
-            this.coatSlotImage.sprite.rect.width * 3f,
-            this.coatSlotImage .sprite.rect.height * 3f);
+            coatSlotImage.sprite.rect.width * 3f,
+            coatSlotImage.sprite.rect.height * 3f);
         }
         EquipWeapon(playerStatus.currentWeapon);
     }
@@ -63,34 +62,41 @@ public class PlayerLoadout : MonoBehaviour
         playerCurrentClothChange.ChangeCloth(newCloth);
         if(newCloth.itemID.Contains("Hat"))//newCloth is hat
         {
+            if(currentEquipHat != null  && currentEquipHat != playerStatus.defaultHat)
+            {
+                UIInventoryPage.Instance.AddItem(currentEquipHat, 1); //add current hat to inventory
+            }
             hatSlotImage.sprite = newCloth.itemSprite; //enable image in hat slot
             currentEquipHat = newCloth; //update current hat variable
             hatImage.sprite = newCloth.itemSprite; //update image in head in inventory
             hatSlotImage.sprite = newCloth.itemSprite; //update image in hat slot 
             RectTransform hatRect = hatSlotImage.rectTransform;
             hatRect.sizeDelta = new Vector2(
-            this.hatSlotImage.sprite.rect.width * 3f,
-            this.hatSlotImage.sprite.rect.height * 3f);
+            hatSlotImage.sprite.rect.width * 3f,
+            hatSlotImage.sprite.rect.height * 3f);
             playerStatus.SetCurrentHat(newCloth);//update current hat in player status
             unequipHat.SetActive(true);//enable for unequip hat
         }
         else{
+            if(currentEquipCoat != null && currentEquipCoat != playerStatus.defaultCoat)
+            {
+                UIInventoryPage.Instance.AddItem(currentEquipCoat, 1);
+            }
             coatSlotImage.sprite = newCloth.itemSprite;
             currentEquipCoat = newCloth;
             coatImage.sprite = newCloth.itemSprite;
             coatSlotImage.sprite = newCloth.itemSprite;
             RectTransform coatRect = coatSlotImage.rectTransform;
             coatRect.sizeDelta = new Vector2(
-            this.coatSlotImage.sprite.rect.width * 3f,
-            this.coatSlotImage .sprite.rect.height * 3f);
+            coatSlotImage.sprite.rect.width * 3f,
+            coatSlotImage .sprite.rect.height * 3f);
             playerStatus.SetCurrentCoat(newCloth);
             unequipCoat.SetActive(true);
         }
     }
     public void UnequipHat()
     {
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-        if(!uiInventoryPage.AddItem(currentEquipHat, 1))
+        if(!UIInventoryPage.Instance.AddItem(currentEquipHat, 1))
         {
             return;
         }       
@@ -98,14 +104,13 @@ public class PlayerLoadout : MonoBehaviour
         playerCurrentClothChange.ChangeCloth(playerStatus.defaultHat);
         hatSlotImage.sprite = playerStatus.defaultHat.itemSprite;
         hatImage.sprite = playerStatus.defaultHat.itemSprite;
-        playerStatus.SetCurrentHat(null);
-        currentEquipHat = null;
+        playerStatus.SetCurrentHat(playerStatus.defaultHat);
+        currentEquipHat = playerStatus.defaultHat;
         unequipHat.SetActive(false);
     }
     public void UnequipCoat()
     {
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-        if(!uiInventoryPage.AddItem(currentEquipCoat, 1))
+        if(!UIInventoryPage.Instance.AddItem(currentEquipCoat, 1))
         {
             return;
         } 
@@ -113,8 +118,8 @@ public class PlayerLoadout : MonoBehaviour
         playerCurrentClothChange.ChangeCloth(playerStatus.defaultCoat);;
         coatSlotImage.sprite = playerStatus.defaultCoat.itemSprite;
         coatImage.sprite = playerStatus.defaultCoat.itemSprite;
-        playerStatus.SetCurrentCoat(null);
-        currentEquipCoat = null;
+        playerStatus.SetCurrentCoat(playerStatus.defaultCoat);
+        currentEquipCoat = playerStatus.defaultCoat;
         unequipCoat.SetActive(false);
     }
     public void EquipWeapon(Item newWeapon)
@@ -127,13 +132,12 @@ public class PlayerLoadout : MonoBehaviour
         weaponSlotImage.sprite = newWeapon.itemSprite; 
         RectTransform rectTransform = weaponSlotImage.rectTransform;
             rectTransform.sizeDelta = new Vector2(
-            this.weaponSlotImage.sprite.rect.width * 3f,
-            this.weaponSlotImage.sprite.rect.height * 3f);
+            weaponSlotImage.sprite.rect.width * 3f,
+            weaponSlotImage.sprite.rect.height * 3f);
     }
     public void UnequipWeapon()
     {
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-        if(!uiInventoryPage.AddItem(currentEquipWeapon, 1))
+        if(!UIInventoryPage.Instance.AddItem(currentEquipWeapon, 1))
         {
             return;
         }
@@ -142,5 +146,32 @@ public class PlayerLoadout : MonoBehaviour
         weaponParent.EquipNewWeapon(playerStatus.defaultWeapon);
         playerStatus.SetCurrentWeapon(playerStatus.defaultWeapon);
         unequipWeapon.SetActive(false);
+    }
+    public void CheckUnequipButton()
+    {
+        if(currentEquipCoat == null || currentEquipCoat == playerStatus.defaultCoat)
+        {
+            unequipCoat.SetActive(false);
+        }
+        else
+        {
+            unequipCoat.SetActive(true);
+        }
+        if(currentEquipHat == null || currentEquipHat == playerStatus.defaultHat)
+        {
+            unequipHat.SetActive(false);
+        }
+        else
+        {
+            unequipHat.SetActive(true);
+        }
+        if(currentEquipWeapon == null || currentEquipWeapon == playerStatus.defaultWeapon)
+        {
+            unequipWeapon.SetActive(false);
+        }
+        else
+        {
+            unequipWeapon.SetActive(true);
+        }
     }
 }

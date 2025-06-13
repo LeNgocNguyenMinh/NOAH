@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3513687205678737470}
   - component: {fileID: 8244060339391216765}
   - component: {fileID: 1288026079390606258}
+  - component: {fileID: 2282646689726542357}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -160,3 +161,24 @@ MonoBehaviour:
   damageButton: {fileID: 0}
   bulletButton: {fileID: 0}
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
+--- !u!114 &2282646689726542357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263014105550959646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfcc0a2bc82ce74a8ea5287ae019428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hatSlotImage: {fileID: 0}
+  coatSlotImage: {fileID: 0}
+  hatImage: {fileID: 0}
+  coatImage: {fileID: 0}
+  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
+  weaponSlotImage: {fileID: 0}
+  unequipHat: {fileID: 0}
+  unequipCoat: {fileID: 0}
+  unequipWeapon: {fileID: 0}

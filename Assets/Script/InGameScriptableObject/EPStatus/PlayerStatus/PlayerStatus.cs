@@ -21,6 +21,7 @@ public class PlayerStatus : ScriptableObject
     public float currentExp;
     public float maxHealth = 100;
     public float currentHealth = 100;
+    [Header("---------Player Weapon---------")]
     public Item defaultWeapon;
     public Item currentWeapon;
     [Header("---------Player Cloth---------")]

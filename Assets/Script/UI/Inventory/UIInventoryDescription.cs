@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class UIInventoryDescription : MonoBehaviour
 {
+    public static UIInventoryDescription Instance;
     [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private TMP_Text itemNameBox;
     [SerializeField]private TMP_Text itemDescriptionBox;
@@ -15,6 +16,11 @@ public class UIInventoryDescription : MonoBehaviour
     [SerializeField]private TMP_Text weaponLevelText;
     [SerializeField]private GameObject upgradeButton;
     private Item itemInDescription;
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
     public void ItemShowInformation(Item item)
     {
         itemInDescription = item;

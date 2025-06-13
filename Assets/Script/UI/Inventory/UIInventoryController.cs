@@ -6,7 +6,7 @@ using DG.Tweening;
 public class UIInventoryController : MonoBehaviour
 {
     private UIInventoryPage uiInventoryPage;
-    [SerializeField]private PlayerLoadout playerLoadout;
+    private PlayerLoadout playerLoadout;
     [Header("---------InventoryUI Move---------")] 
     [SerializeField]private RectTransform panel;
     [SerializeField]private Vector2 hiddenPosition;
@@ -20,27 +20,33 @@ public class UIInventoryController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.I))
         {
             uiInventoryPage = GetComponent<UIInventoryPage>();
-            Debug.Log(UIInventoryPage.inventoryOpen);
             if(UIInventoryPage.inventoryOpen)
             {
-                Debug.Log("Close inv");
-                uiInventoryPage.InventoryClose();
-                panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
-                {
-                    Time.timeScale = 1f;
-                });
+                uiInventoryPage.InventoryUpdateClose();
+                InventoryClose();
             }
             else
             {
                 if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
-                uiInventoryPage.InventoryOpen();
-                panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
-                {
-                    Time.timeScale = 0f;
-                });
-                Debug.Log("Open inv");
+                uiInventoryPage.InventoryUpdateOpen();
+                playerLoadout = GetComponent<PlayerLoadout>();
                 playerLoadout.CheckClothStatus();
+                InventoryOpen();
             }
         }
     }  
+    private void InventoryOpen()
+    {
+        panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            Time.timeScale = 0f;
+        });
+    }
+    private void InventoryClose()
+    {
+        panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            Time.timeScale = 1f;
+        });
+    }
 }

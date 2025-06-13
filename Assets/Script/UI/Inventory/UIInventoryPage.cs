@@ -18,7 +18,7 @@ public class UIInventoryPage : MonoBehaviour
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
     public static bool inventoryOpen = false;
     public bool descriptionPanelOpen = false;
-    [SerializeField]private int inventorySize = 10;
+    [SerializeField]private int inventorySize;
     
     ///
     private ItemDictionary itemDictionary;
@@ -31,12 +31,11 @@ public class UIInventoryPage : MonoBehaviour
     {
         if(listOfUIItems == null)
         {
-            InitializeInventoryUI(10);
+            InitializeInventoryUI();
         }
     }
-    public void InitializeInventoryUI(int size)
+    public void InitializeInventoryUI()
     {
-        inventorySize = size;
         if (listOfUIItems != null)
         {
             foreach (var item in listOfUIItems)
@@ -152,16 +151,16 @@ public class UIInventoryPage : MonoBehaviour
         }
     }
     //Some event when open inventory
-    public void InventoryOpen()
+    public void InventoryUpdateOpen()
     {
+        PlayerLoadout.Instance.CheckUnequipButton();
         OnlyClickOneSlot();
         OnlySellectOneSlot();
         inventoryOpen = true;
         uiInventoryDescription = GetComponent<UIInventoryDescription>();
         uiInventoryDescription.ItemHideInformation();
-        Debug.Log("23232323");
     }
-    public void InventoryClose()
+    public void InventoryUpdateClose()
     {
         inventoryOpen = false;
         CloseDescriptionPanel();
@@ -181,15 +180,20 @@ public class UIInventoryPage : MonoBehaviour
     public void SetInventoryItems(List<InventorySaveData> invData)
     {
         itemDictionary = FindObjectOfType<ItemDictionary>().GetComponent<ItemDictionary>();
-        InitializeInventoryUI(inventorySize);
-        Debug.Log("length: " + invData.Count);
+        InitializeInventoryUI();
         for(int i = 0; i < invData.Count; i++)
         {
             if(invData[i].itemID != null)
             {
-                Debug.Log(invData[i].slotIndex + ", " + invData[i].itemID + ", " + invData[i].itemQuantity);
                 listOfUIItems[invData[i].slotIndex].AddItem(itemDictionary.GetItemInfo(invData[i].itemID), invData[i].itemQuantity);
             }
         }
     }
+}
+[System.Serializable]
+public class InventorySaveData 
+{
+    public string itemID;
+    public int itemQuantity;
+    public int slotIndex;
 }

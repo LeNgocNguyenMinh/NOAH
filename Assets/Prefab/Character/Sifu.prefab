@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: 51676d600645c114cba265bf3d6cd2a8, type: 2}
+  missionScriptable: {fileID: 11400000, guid: 8629e65a8d1708143a2aa82239c83224, type: 2}
 --- !u!61 &1219021140597353609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -474,7 +475,7 @@ MonoBehaviour:
   - {x: -0.3000493, y: -0.80340576, z: 0}
   m_ShapePathHash: 919392239
   m_Mesh: {fileID: 0}
-  m_InstanceId: -7042
+  m_InstanceId: -110672
   m_LocalBounds:
     m_Center: {x: -0.0683341, y: -0.11908841, z: 0}
     m_Extent: {x: 0.52623177, y: 0.8878803, z: 0}

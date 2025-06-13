@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8939221483318913207}
         m_TargetAssemblyTypeName: SettingBtnFunction, Assembly-CSharp
         m_MethodName: ActiveGameSettingPanel
         m_Mode: 1
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: SettingPanelShow
         m_Mode: 1
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitAskPanelOff
         m_Mode: 1
@@ -2151,7 +2151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenuAskPanelShow
         m_Mode: 1
@@ -3353,7 +3353,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: PauseMenuPanelOff
         m_Mode: 1
@@ -4119,6 +4119,7 @@ RectTransform:
   m_Children:
   - {fileID: 5363753539429366096}
   - {fileID: 4349932045349244668}
+  - {fileID: 6499675020679550314}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4246,7 +4247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ToMainMenu
         m_Mode: 1
@@ -4799,7 +4800,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: SettingPanelOff
         m_Mode: 1
@@ -5264,7 +5265,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6926128404561492404}
         m_TargetAssemblyTypeName: GraphicManager, Assembly-CSharp
         m_MethodName: ApplyGraphics
         m_Mode: 1
@@ -6403,7 +6404,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8939221483318913207}
         m_TargetAssemblyTypeName: SettingBtnFunction, Assembly-CSharp
         m_MethodName: ActiveControlSettingPanel
         m_Mode: 1
@@ -6535,7 +6536,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenuAskPanelOff
         m_Mode: 1
@@ -7011,7 +7012,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375609644685512454}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitAskPanelShow
         m_Mode: 1
@@ -9047,3 +9048,146 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &5879307237342227532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2873851722122497735}
+    m_Modifications:
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -299.17957
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 39.161804
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.779052
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285657798127977723, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: gameSettingPanel
+      value: 
+      objectReference: {fileID: 3373839645678530894}
+    - target: {fileID: 3285657798127977723, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: controlSettingPanel
+      value: 
+      objectReference: {fileID: 5921263494462023739}
+    - target: {fileID: 3569652315441583608, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: vsyncTog
+      value: 
+      objectReference: {fileID: 7117633156204064248}
+    - target: {fileID: 3569652315441583608, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: fullScreenTog
+      value: 
+      objectReference: {fileID: 7927721745779816321}
+    - target: {fileID: 4194915309109777521, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: m_Name
+      value: PauseManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955233768697654269, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: resolutionDropdown
+      value: 
+      objectReference: {fileID: 2247994503501171952}
+    - target: {fileID: 6098173182112064330, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: otherPanel
+      value: 
+      objectReference: {fileID: 1499815719467919111}
+    - target: {fileID: 6098173182112064330, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: pauseImage
+      value: 
+      objectReference: {fileID: 878461796867564880}
+    - target: {fileID: 6098173182112064330, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: quitAskPanel
+      value: 
+      objectReference: {fileID: 1632495034898864600}
+    - target: {fileID: 6098173182112064330, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: settingPanel
+      value: 
+      objectReference: {fileID: 4349932045349244668}
+    - target: {fileID: 6098173182112064330, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 5363753539429366096}
+    - target: {fileID: 6098173182112064330, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: mainMenuAskPanel
+      value: 
+      objectReference: {fileID: 4554619136293875439}
+    - target: {fileID: 6098173182112064330, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+      propertyPath: resumeButtonImage
+      value: 
+      objectReference: {fileID: 134656737890878657}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+--- !u!114 &375609644685512454 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6098173182112064330, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+  m_PrefabInstance: {fileID: 5879307237342227532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3491ee808ba7a241abe25adb619326f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &6499675020679550314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 838801163645040934, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+  m_PrefabInstance: {fileID: 5879307237342227532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6926128404561492404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3569652315441583608, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+  m_PrefabInstance: {fileID: 5879307237342227532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ac421b40a24c145a5e1d4b0826a256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8939221483318913207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3285657798127977723, guid: a1f48c28e93aa464388c010a8c89a20e, type: 3}
+  m_PrefabInstance: {fileID: 5879307237342227532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ae47351c9601143b2809d44d3b7543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

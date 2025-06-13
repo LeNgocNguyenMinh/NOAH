@@ -639,6 +639,7 @@ RectTransform:
   - {fileID: 3042201414661663273}
   - {fileID: 585888664436528973}
   - {fileID: 7748879007270807108}
+  - {fileID: 910070211307792795}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -856,3 +857,85 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &2268779324950513172
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5914802857073306674}
+    m_Modifications:
+    - target: {fileID: 732863434986260984, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_Name
+      value: TimeManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -968.36487
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -540.2129
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692694041740097088, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: amAndPmBox
+      value: 
+      objectReference: {fileID: 7495718454765952441}
+    - target: {fileID: 5692694041740097088, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: dayDisplay
+      value: 
+      objectReference: {fileID: 7001275956661478662}
+    - target: {fileID: 5692694041740097088, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: timeDisplay
+      value: 
+      objectReference: {fileID: 7749936240393071241}
+    - target: {fileID: 5692694041740097088, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: clockHourStick
+      value: 
+      objectReference: {fileID: 8892472127358057039}
+    - target: {fileID: 5692694041740097088, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+      propertyPath: clockMinuteStick
+      value: 
+      objectReference: {fileID: 1711846230061094962}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+--- !u!4 &910070211307792795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1431417696427667343, guid: a97c604dcd5adf348baf653b9dcf79e0, type: 3}
+  m_PrefabInstance: {fileID: 2268779324950513172}
+  m_PrefabAsset: {fileID: 0}

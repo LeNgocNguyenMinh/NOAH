@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class ShopController : MonoBehaviour
@@ -53,4 +49,10 @@ public class ShopController : MonoBehaviour
             listOfItemSlot[i].SetNumberOfItem(shopData[i].itemLeftNumber);
         }
     }
+}
+[System.Serializable]
+public class ShopSaveData 
+{
+    public string itemID;
+    public int itemLeftNumber;
 }

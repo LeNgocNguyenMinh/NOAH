@@ -11,7 +11,7 @@ public class MissionManager : MonoBehaviour
     [SerializeField]private TMP_Text missionName;
     [SerializeField]private TMP_Text missionDescription;
     [SerializeField]private TMP_Text missionProgress;
-    private int currentMissionIndex = 0;
+    private string currentMissionID;
     [SerializeField]private List<Mission> activeMissions = new List<Mission>();
     [SerializeField]private List<Mission> finishMissions = new List<Mission>();
     [SerializeField]private Transform playerTransform;
@@ -87,19 +87,14 @@ public class MissionManager : MonoBehaviour
         finishMissions.Add(currentMission);
         if(!inLineMission)
         {
-            currentMissionIndex++;
-            if(missionScriptObject.missionList.Count < currentMissionIndex)
-            {
+            
                 return;
-            }
         }
         else
         {
             inLineMission = false;
             currentMission.isFinish = true;
         }
-        currentMission = missionScriptObject.GetMissionByIndex(currentMissionIndex);
-        UpdateNewMission(currentMission);
     }
     
     // Nhận thưởng
@@ -124,14 +119,42 @@ public class MissionManager : MonoBehaviour
         return new MissionSaveData
         {
             currentAmount = this.currentAmount,
-            missionIndex = this.currentMissionIndex
+            missionID = this.currentMissionID
         };
     }
     public void SetCurrentMission(MissionSaveData saveData)
     {
         currentAmount = saveData.currentAmount;
-        currentMissionIndex = saveData.missionIndex;
-        currentMission = missionScriptObject.GetMissionByIndex(currentMissionIndex);
+        currentMissionID = saveData.missionID;
+        currentMission = GetMissionByID(currentMissionID);
         CheckMissionProgress();
     }
+    public Mission GetMissionByID(string missionID)
+    {
+        foreach(Mission mission in missionScriptObject.missionList)
+        {
+            if (mission.missionID == missionID)
+            {
+                return mission;
+            }
+        }
+        return null;
+    }
+    public Mission GetNPCMissionByID(string missionID)
+    {
+        foreach(Mission mission in missionScriptObject.npcMissionList)
+        {
+            if (mission.missionID == missionID)
+            {
+                return mission;
+            }
+        }
+        return null;
+    }
+}
+[System.Serializable]
+public class MissionSaveData
+{
+    public int currentAmount;
+    public string missionID;
 }

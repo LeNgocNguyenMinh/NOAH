@@ -56,3 +56,10 @@ public class ItemInGroundController : MonoBehaviour
         }
     }
 }
+[System.Serializable]
+public class ItemInGroundSaveData
+{
+    public string itemID;
+    public Vector3 itemPos;
+    public bool isCollect = false;
+}
