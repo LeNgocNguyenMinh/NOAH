@@ -246,8 +246,8 @@ public class NPCDialogueControl : MonoBehaviour
             {
                 missionState = DialogueMissionState.InMission;
                 currentMissionLine = missionLine;
-                currentDialogueMission = MissionManager.Instance.GetNPCMissionByID(missionLine.missionID);
-                MissionManager.Instance.SetLineMission(currentDialogueMission);
+                currentDialogueMission = MissionManager.Instance.GetMissionByID(missionLine.missionID);
+                MissionManager.Instance.SetLineMission(missionLine.missionID);
                 missionState = DialogueMissionState.InMission;
             }
         }
@@ -258,7 +258,7 @@ public class NPCDialogueControl : MonoBehaviour
         {
             if(missionLine.dialogueIndex == dialogueIndex)
             {
-                return MissionManager.Instance.GetNPCMissionByID(missionLine.missionID).isFinish;
+                return MissionManager.Instance.GetMissionByID(missionLine.missionID).isFinish;
             }
         }
         return false;

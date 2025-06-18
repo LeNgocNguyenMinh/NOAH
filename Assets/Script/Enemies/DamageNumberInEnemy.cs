@@ -33,7 +33,7 @@ public class DamageNumberInEnemy : MonoBehaviour
         float startFade = 0f;
         while(startFade < fadeTime)
         {
-            if(PauseMenu.isPaused || UIInventoryPage.inventoryOpen)
+            if(PauseMenu.isPaused || UIInventoryController.inventoryOpen)
             {
                 yield return null; 
                 continue;

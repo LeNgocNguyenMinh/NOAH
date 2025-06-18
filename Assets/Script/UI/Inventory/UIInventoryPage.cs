@@ -16,7 +16,6 @@ public class UIInventoryPage : MonoBehaviour
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
-    public static bool inventoryOpen = false;
     public bool descriptionPanelOpen = false;
     [SerializeField]private int inventorySize;
     
@@ -156,13 +155,11 @@ public class UIInventoryPage : MonoBehaviour
         PlayerLoadout.Instance.CheckUnequipButton();
         OnlyClickOneSlot();
         OnlySellectOneSlot();
-        inventoryOpen = true;
         uiInventoryDescription = GetComponent<UIInventoryDescription>();
         uiInventoryDescription.ItemHideInformation();
     }
     public void InventoryUpdateClose()
     {
-        inventoryOpen = false;
         CloseDescriptionPanel();
     }
     public List<InventorySaveData> GetInventoryItems()

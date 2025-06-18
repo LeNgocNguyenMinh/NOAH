@@ -49,7 +49,7 @@ public class SaveController : MonoBehaviour
             itemInGroundSaveData = itemInGroundController?.GetListItemInGround(),
             timeSaveData = timeManager?.GetTime(),
             playerSaveData = playerStatus?.GetPlayerInfo(),
-            missionSaveData = missionManager?.GetCurrentMission()
+            missionSaveData = missionManager?.GetMissionList()
         };
         for(int i = 0; i < weaponList.Count; i++)
         {
@@ -67,7 +67,7 @@ public class SaveController : MonoBehaviour
             shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
             saveData.shopSaveData = shopController.GetListItemInShop();
         }
-        File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
+        File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
         PopUp.Instance.ShowNotification("Save success.");
     }
     public void SaveGameByBed()
@@ -90,7 +90,7 @@ public class SaveController : MonoBehaviour
             itemInGroundSaveData = existingData.itemInGroundSaveData,
             timeSaveData = timeManager?.GetTimeSkip(),
             playerSaveData = playerStatus?.GetPlayerInfo(),
-            missionSaveData = missionManager?.GetCurrentMission()
+            missionSaveData = missionManager?.GetMissionList()
         };
         if(FindObjectOfType<CinemachineConfiner>()!=null)
         {
@@ -108,7 +108,7 @@ public class SaveController : MonoBehaviour
         {
             saveData.weaponListData.Add(weaponList[i].GetWeaponData());
         }
-        File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
+        File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
         PopUp.Instance.ShowNotification("Save success.");
     }
     public void LoadSave(Vector3 playerPos = new Vector3(), List<InventorySaveData> inventoryItemsTMP = null, List<InventorySaveData> hotBarItemsTMP = null, List<ItemInGroundSaveData> listItemsTMP = null, TimeSaveData timeDataTMP = null, PlayerSaveData playerDataTMP = null, MissionSaveData missionSaveDataTMP = null, bool loadWeaponData = true)
@@ -186,11 +186,11 @@ public class SaveController : MonoBehaviour
             }
             if(missionSaveDataTMP != null)
             {
-                missionManager.SetCurrentMission(missionSaveDataTMP);
+                missionManager.SetMissionList(missionSaveDataTMP);
             }
             else if(saveData.missionSaveData != null && missionManager != null)
             {
-                missionManager.SetCurrentMission(saveData.missionSaveData);
+                missionManager.SetMissionList(saveData.missionSaveData);
             }
             if(loadWeaponData == true)
             {
@@ -249,7 +249,7 @@ public class SaveController : MonoBehaviour
             }
             if(missionManager != null)
             {
-                missionManager.SetCurrentMission(saveData.missionSaveData);
+                missionManager.SetMissionList(saveData.missionSaveData);
             }
             SaveGame();
         }
@@ -299,8 +299,29 @@ public class SaveController : MonoBehaviour
                     ""currentCoatID"": ""None""
                 },
                 ""missionSaveData"": {
-                    ""currentAmount"": 0,
-                    ""missionIndex"": 0
+                    ""missionList"": [
+                        {
+                            ""currentAmount"": 0,
+                            ""isFinish"": false,
+                            ""missionID"": ""MS01""
+                        },
+                        {
+                            ""currentAmount"": 0,
+                            ""isFinish"": false,
+                            ""missionID"": ""MS02""
+                        },
+                        {
+                            ""currentAmount"": 0,
+                            ""isFinish"": false,
+                            ""missionID"": ""MS03""
+                        },
+                        {
+                            ""currentAmount"": 1,
+                            ""isFinish"": false,
+                            ""missionID"": ""NPC_MS01""
+                        }
+                    ],
+                    ""currentMissionID"": ""NPC_MS01""
                 },
                 ""weaponListData"": [
                     { ""weaponID"": ""WP_01"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 10.0 },

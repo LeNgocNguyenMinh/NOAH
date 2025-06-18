@@ -5,48 +5,48 @@ using DG.Tweening;
 
 public class MissionUIController : MonoBehaviour
 {
-    [SerializeField]private RectTransform panel;
-    [SerializeField]private Vector2 hiddenPosition;
-    [SerializeField]private Vector2 visiblePosition;
+    [SerializeField]private RectTransform smallPanel;
+    [SerializeField]private Vector2 hiddenPositionSmall;
+    [SerializeField]private Vector2 visiblePositionSmall;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
-    private bool isShown = true;
+    private bool isMissSmallShown = true;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-           if(isShown)
+           if(isMissSmallShown)
             {
-                HideMissionUI();
+                HideSmallMissionUI();
             }
             else
             {
-                ShowMissionUI();
+                ShowSmallMissionUI();
             }
         }
     }
-    private void ShowMissionUI()
+    private void ShowSmallMissionUI()
     {
-        panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        smallPanel.DOAnchorPos(visiblePositionSmall, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
-            isShown = true;
+            isMissSmallShown = true;
         });
     }
-    private void HideMissionUI()
+    private void HideSmallMissionUI()
     {
-        panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        smallPanel.DOAnchorPos(hiddenPositionSmall, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
-            isShown = false;
+            isMissSmallShown = false;
         });
     }
     public void HideButtonInteract()
     {
-        if (isShown)
+        if (isMissSmallShown)
         {
-            HideMissionUI();
+            HideSmallMissionUI();
         }
         else
         {
-            ShowMissionUI();
+            ShowSmallMissionUI();
         }
     }
 }
