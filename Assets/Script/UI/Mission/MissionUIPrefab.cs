@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using Newtonsoft.Json;
+
 
 public class MissionUIPrefab : MonoBehaviour
 {
@@ -12,8 +9,8 @@ public class MissionUIPrefab : MonoBehaviour
     [SerializeField]private TextMeshProUGUI missionDescription;
     [SerializeField]private TextMeshProUGUI missionProgress;
     [SerializeField]private Toggle missionToggle;
-    private string missionID;
-    public void AddMission(MissionStatus missionStatus)
+    public string missionID;
+    public void SetMissionInfo(MissionStatus missionStatus)
     {
         missionID = missionStatus.missionID;
         if(MissionManager.Instance.IsCurrentMissionID(missionID))
@@ -29,6 +26,11 @@ public class MissionUIPrefab : MonoBehaviour
         missionDescription.text = currentMiss.missionDes;
         missionProgress.text = $"{missionStatus.currentAmount}/{currentMiss.requiredAmount}";
     }
+    public void UpdateMission(MissionStatus missionStatus)
+    {
+        Mission currentMiss = MissionManager.Instance.GetMissionByID(missionStatus.missionID);
+        missionProgress.text = $"{missionStatus.currentAmount}/{currentMiss.requiredAmount}";
+    }
     void OnEnable()
     {
         missionToggle.onValueChanged.AddListener(OnToggleChanged);
@@ -37,11 +39,24 @@ public class MissionUIPrefab : MonoBehaviour
     {
         if (isOn)
         {
+            MissionPageUI.Instance.UnCheckOther(missionID);
             MissionManager.Instance.SetCurrentMission(missionID);
         }
         else
         {
-            MissionManager.Instance.SetCurrentMission(null);
+            MissionManager.Instance.SetCurrentMission("");
         }
+    }
+    public void ToggleUncheck()
+    {
+        missionToggle.isOn = false;
+    }
+    public void Togglecheck()
+    {
+        missionToggle.isOn = true;
+    }
+    public void HideToggle()
+    {
+        missionToggle.gameObject.SetActive(false);
     }
 }

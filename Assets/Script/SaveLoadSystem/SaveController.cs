@@ -316,12 +316,12 @@ public class SaveController : MonoBehaviour
                             ""missionID"": ""MS03""
                         },
                         {
-                            ""currentAmount"": 1,
+                            ""currentAmount"": 0,
                             ""isFinish"": false,
                             ""missionID"": ""NPC_MS01""
                         }
                     ],
-                    ""currentMissionID"": ""NPC_MS01""
+                    ""currentMissionID"": """"
                 },
                 ""weaponListData"": [
                     { ""weaponID"": ""WP_01"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 10.0 },

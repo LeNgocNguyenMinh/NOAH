@@ -11,8 +11,7 @@ public class MissionManager : MonoBehaviour
     [SerializeField]private TMP_Text missionName;
     [SerializeField]private TMP_Text missionDescription;
     [SerializeField]private TMP_Text missionProgress;
-    public List<MissionStatus> activeMissions = new List<MissionStatus>();
-    public List<MissionStatus> finishMissions = new List<MissionStatus>();
+    public List<MissionStatus> listOfMission = new List<MissionStatus>();
     [SerializeField]private Transform playerTransform;
     private string currentMissionID;
     private MissionStatus currentMissionStatus;
@@ -26,35 +25,6 @@ public class MissionManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
-    /* private void Start()
-    {
-        foreach (Mission mission in missionScriptObject.missionList)
-        {
-            MissionStatus missionSaveData = new MissionStatus
-            {
-                missionID = mission.missionID,
-                currentAmount = 0,
-                isFinish = false
-            };
-            activeMissions.Add(missionSaveData);
-        }
-        foreach (Mission mission in missionScriptObject.npcMissionList)
-        {
-            MissionStatus missionSaveData = new MissionStatus
-            {
-                missionID = mission.missionID,
-                currentAmount = 0,
-                isFinish = false
-            };
-            activeMissions.Add(missionSaveData);
-        }
-    }  */
-    // Thêm nhiệm vụ mới
-    public void AddMission(MissionStatus newMission)
-    {
-        activeMissions.Add(newMission);
-    }
-    
     // Update Collect Mission
     public void UpdateCollectMission(string itemID, int amount)
     {
@@ -85,7 +55,7 @@ public class MissionManager : MonoBehaviour
 
     private void CheckMissionProgress()
     {
-        if(currentMission.missionType == MissionType.CollectMission)
+        if(currentMission.missionType == MissionType.CollectMission && currentMissionStatus.isFinish == false)
         {
             if (currentMissionStatus.currentAmount >= currentMission.requiredAmount)
             {
@@ -97,21 +67,22 @@ public class MissionManager : MonoBehaviour
         missionName.text = currentMission.missionName;
         missionDescription.text = currentMission.missionDes;
         missionProgress.text = $"{currentMissionStatus.currentAmount}/{currentMission.requiredAmount}";
+        MissionPageUI.Instance.UpdateMission(currentMissionStatus);
     }
     private void MissionFinish()
     {
         ClaimReward();
-        finishMissions.Add(currentMissionStatus);
         if(!inLineMission)
         {
-            
-                return;
+            currentMissionStatus.isFinish = true;
         }
         else
         {
             inLineMission = false;
             currentMissionStatus.isFinish = true;
         }
+        MissionPageUI.Instance.InitializeMissionBoard(listOfMission);
+        SetCurrentMission("");
     }
     
     // Nhận thưởng
@@ -134,7 +105,7 @@ public class MissionManager : MonoBehaviour
     public List<MissionStatus> GetCurrentMission()
     {
         List<MissionStatus> missionSaveDataList = new List<MissionStatus>();
-        foreach(MissionStatus mission in activeMissions)
+        foreach(MissionStatus mission in listOfMission)
         {
             MissionStatus saveData = new MissionStatus
             {
@@ -148,25 +119,27 @@ public class MissionManager : MonoBehaviour
     }
     public void SetCurrentMission(string missionID)
     {
-        if(missionID == null)
+        if(missionID == "")
         {
             currentMissionID = null;
             currentMission = null;
             currentMissionStatus = null;
-            missionName.text = "No Mission is selected";
+            missionName.text = "-No mission is selected-";
             missionDescription.text = "Please open Mission board(J) and select a mission";
-            missionProgress.text = "La la la";
+            missionProgress.text = "--------";
             return;
         }
         currentMissionID = missionID;
         currentMission = GetMissionByID(missionID);
         currentMissionStatus = GetMissionStatusFromList(missionID);
+        Debug.Log("dfdf: " + currentMissionStatus.missionID);
         
         currentAmount = currentMissionStatus.currentAmount;
         CheckMissionProgress();
     }
     public Mission GetMissionByID(string missionID)
     {
+        Debug.Log("dfsdfsdfsdfsdfs: " + missionID);
         foreach(Mission mission in missionScriptObject.missionList)
         {
             if (mission.missionID == missionID)
@@ -185,7 +158,7 @@ public class MissionManager : MonoBehaviour
     }
     public MissionStatus GetMissionStatusFromList(string missionID)
     {
-        foreach (MissionStatus missionSaveData in activeMissions)
+        foreach (MissionStatus missionSaveData in listOfMission)
         {
             if (missionSaveData.missionID == missionID)
             {
@@ -197,15 +170,15 @@ public class MissionManager : MonoBehaviour
     public void SetMissionList(MissionSaveData missionSaveData)
     {
         missionPageUI = GetComponent<MissionPageUI>();
-        activeMissions.Clear();
-        activeMissions = missionSaveData.missionList;
-        missionPageUI.InitializeActiveMission(activeMissions);
+        listOfMission.Clear();
+        listOfMission = missionSaveData.missionList;
+        missionPageUI.InitializeMissionBoard(listOfMission);
         SetCurrentMission(missionSaveData.currentMissionID);
     }
     public MissionSaveData GetMissionList()
     {
         MissionSaveData missionSaveData = new MissionSaveData();
-        missionSaveData.missionList = activeMissions;
+        missionSaveData.missionList = listOfMission;
         missionSaveData.currentMissionID = currentMissionID;
         return missionSaveData;
     }
