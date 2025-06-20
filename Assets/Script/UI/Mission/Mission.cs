@@ -15,6 +15,7 @@ public class Mission
     public string missionName;
     public string missionID;
     public MissionType missionType;
+    public bool isNPCMission;
     public string targetID; 
     public string missionDes;
      [Header("-------For Item collect mission------")]

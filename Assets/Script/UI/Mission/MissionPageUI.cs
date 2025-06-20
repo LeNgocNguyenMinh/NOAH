@@ -7,6 +7,7 @@ public class MissionPageUI : MonoBehaviour
 {
     public static MissionPageUI Instance;
     [SerializeField]private MissionUIPrefab missionUIPrefab;
+    [SerializeField]private RectTransform currentMissionContent;
     [SerializeField]private RectTransform activeMissContent;
     [SerializeField]private RectTransform finishMissContent;
     private List<MissionUIPrefab> listOfMissionPrefab = new List<MissionUIPrefab>();

@@ -41,6 +41,7 @@ public class MissionUIPrefab : MonoBehaviour
         {
             MissionPageUI.Instance.UnCheckOther(missionID);
             MissionManager.Instance.SetCurrentMission(missionID);
+            transform.SetAsFirstSibling();
         }
         else
         {
@@ -54,6 +55,7 @@ public class MissionUIPrefab : MonoBehaviour
     public void Togglecheck()
     {
         missionToggle.isOn = true;
+        transform.SetAsFirstSibling();
     }
     public void HideToggle()
     {

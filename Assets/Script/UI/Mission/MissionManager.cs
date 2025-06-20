@@ -36,20 +36,24 @@ public class MissionManager : MonoBehaviour
             CheckMissionProgress();
         }
     }
-/*     public void UpdatePressBtnMission(KeyCode btn)
-    {
-        if (currentMissionStatus.mission.missionType == MissionType.ButtonMission && 
-            currentMissionStatus.mission.keyCode == btn)
-        {
-            
-        }
-    } */
+
     public void SetLineMission(string missionID)
     {
         currentMissionID = missionID;
         inLineMission = true;
         currentMission = GetMissionByID(missionID);
         currentMissionStatus = GetMissionStatusFromList(missionID);
+        if(currentMissionStatus == null)
+        {
+            currentMissionStatus = new MissionStatus
+            {
+                missionID = currentMissionID,
+                currentAmount = 0,
+                isFinish = false
+            };
+            listOfMission.Add(currentMissionStatus);
+            MissionPageUI.Instance.InitializeMissionBoard(listOfMission);
+        }
         CheckMissionProgress();
     }
 
@@ -132,14 +136,12 @@ public class MissionManager : MonoBehaviour
         currentMissionID = missionID;
         currentMission = GetMissionByID(missionID);
         currentMissionStatus = GetMissionStatusFromList(missionID);
-        Debug.Log("dfdf: " + currentMissionStatus.missionID);
         
         currentAmount = currentMissionStatus.currentAmount;
         CheckMissionProgress();
     }
     public Mission GetMissionByID(string missionID)
     {
-        Debug.Log("dfsdfsdfsdfsdfs: " + missionID);
         foreach(Mission mission in missionScriptObject.missionList)
         {
             if (mission.missionID == missionID)
