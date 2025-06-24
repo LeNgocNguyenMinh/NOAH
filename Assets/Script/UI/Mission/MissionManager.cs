@@ -71,7 +71,6 @@ public class MissionManager : MonoBehaviour
         missionName.text = currentMission.missionName;
         missionDescription.text = currentMission.missionDes;
         missionProgress.text = $"{currentMissionStatus.currentAmount}/{currentMission.requiredAmount}";
-        MissionPageUI.Instance.UpdateMission(currentMissionStatus);
     }
     private void MissionFinish()
     {

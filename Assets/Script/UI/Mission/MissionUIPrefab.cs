@@ -1,15 +1,16 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
-public class MissionUIPrefab : MonoBehaviour
+
+public class MissionUIPrefab : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField]private TextMeshProUGUI missionName;
-    [SerializeField]private TextMeshProUGUI missionDescription;
-    [SerializeField]private TextMeshProUGUI missionProgress;
     [SerializeField]private Toggle missionToggle;
     public string missionID;
+    public bool isSelect = false;
     public void SetMissionInfo(MissionStatus missionStatus)
     {
         missionID = missionStatus.missionID;
@@ -23,13 +24,6 @@ public class MissionUIPrefab : MonoBehaviour
         }
         Mission currentMiss = MissionManager.Instance.GetMissionByID(missionStatus.missionID);
         missionName.text = currentMiss.missionName;
-        missionDescription.text = currentMiss.missionDes;
-        missionProgress.text = $"{missionStatus.currentAmount}/{currentMiss.requiredAmount}";
-    }
-    public void UpdateMission(MissionStatus missionStatus)
-    {
-        Mission currentMiss = MissionManager.Instance.GetMissionByID(missionStatus.missionID);
-        missionProgress.text = $"{missionStatus.currentAmount}/{currentMiss.requiredAmount}";
     }
     void OnEnable()
     {
@@ -60,5 +54,25 @@ public class MissionUIPrefab : MonoBehaviour
     public void HideToggle()
     {
         missionToggle.gameObject.SetActive(false);
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        isSelect = true;
+        ShowMissionInfo();
+    }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        ShowMissionInfo();
+    }
+    public void ShowMissionInfo()
+    {
+        MissionStatus missionStatus = MissionManager.Instance.GetMissionStatusFromList(missionID);
+        MissionPageUI.Instance.ShowMissionInfo(missionStatus);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if(isSelect) return;
+        MissionPageUI.Instance.HideMissionInfo();
     }
 }

@@ -21,9 +21,10 @@ public class UIInventoryController : MonoBehaviour
     [Header("---------MissionUI---------")] 
     [SerializeField]private RectTransform missionPanel;
     [SerializeField]private Button missionBtn;
-    
+    [SerializeField]private CanvasGroup invCanvasGroup;
+    [SerializeField]private CanvasGroup missionCanvasGroup;
     public static bool missionBoardOpen = false;
-
+    
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.J))
@@ -53,6 +54,8 @@ public class UIInventoryController : MonoBehaviour
     private void MissionBoardOpen()
     {
         if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
+        invCanvasGroup.alpha = 0f;
+        missionCanvasGroup.alpha = 1f;
         missionPanel.SetAsLastSibling();
         missionBoardOpen = true;
         MoveUp();
@@ -65,10 +68,13 @@ public class UIInventoryController : MonoBehaviour
         }
         missionBoardOpen = false;
         MoveDown();
+        MissionPageUI.Instance.HideMissionInfo();
     }
     private void InventoryOpen()
     {
         if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
+        invCanvasGroup.alpha = 1f;
+        missionCanvasGroup.alpha = 0f;
         inventoryOpen = true;
         uiInventoryPage = GetComponent<UIInventoryPage>();
         uiInventoryPage.InventoryUpdateOpen();
@@ -113,12 +119,16 @@ public class UIInventoryController : MonoBehaviour
     }
     private void OnMissButtonClicked()
     {   
+        invCanvasGroup.alpha = 0f;
+        missionCanvasGroup.alpha = 1f;
         missionBoardOpen = true;
         inventoryOpen = false;
         missionPanel.SetAsLastSibling();
     }
     private void OnInvButtonClicked()
     {
+        invCanvasGroup.alpha = 1f;
+        missionCanvasGroup.alpha = 0f;
         inventoryOpen = true;
         missionBoardOpen = false;
         invPanel.SetAsLastSibling();

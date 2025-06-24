@@ -111,7 +111,7 @@ public class UIInventoryPage : MonoBehaviour
             return true;
         }
     }
-    private void ClearInventory()
+    public void ClearInventory()
     {
         for(int i = 0; i < inventorySize; i++)
         {
@@ -146,7 +146,7 @@ public class UIInventoryPage : MonoBehaviour
         if(listOfUIItems.Count < 0) return;
         for (int i = 0; i < inventorySize; i++)
         {
-            listOfUIItems[i].SetChoicePanel();
+            listOfUIItems[i].SetChoicePanel(false);
         }
     }
     //Some event when open inventory

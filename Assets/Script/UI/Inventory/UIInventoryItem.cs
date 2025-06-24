@@ -16,26 +16,12 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     private string itemDescription;
     public bool isEmpty = true;//Check if slot is empty    
     private Item item;
-    private WeaponParent weaponParent;
-    private PlayerLoadout playerLoadout;
     [SerializeField]private TMP_Text quantityText;
     [SerializeField]private Image itemImage;
     [SerializeField]private GameObject choicePanel;
-    public bool hotBarSlot;
+    public bool isHotBarSlot;
     public GameObject border;
     private bool isSelect;
-    private UIInventoryPage uiInventoryPage;
-    private UIInventoryDescription uiInventoryDescription;
-    private void Start()
-    {
-        if(!hotBarSlot)
-        {
-            uiInventoryDescription = FindObjectOfType<UIInventoryDescription>().GetComponent<UIInventoryDescription>();
-            playerLoadout = FindObjectOfType<PlayerLoadout>().GetComponent<PlayerLoadout>();
-        }
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-        weaponParent = FindObjectOfType<WeaponParent>().GetComponent<WeaponParent>();
-    }
     private void Awake()
     {
         choicePanel.SetActive(false);
@@ -126,19 +112,19 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         if(isEmpty) return;
         if(itemID.Contains("WP"))//If weapon is equip
         {
-            Item usingWeapon = weaponParent.EquipNewWeapon(this.item);//Switch equipped weapon
-            if(!hotBarSlot)
+            Item usingWeapon = WeaponParent.Instance.EquipNewWeapon(this.item);//Switch equipped weapon
+            if(!isHotBarSlot)
             {
-                playerLoadout.EquipWeapon(this.item);
+                PlayerLoadout.Instance.EquipWeapon(this.item);
                 DeleteItem();//Remove this weapon out of slot
                 if(usingWeapon!=null )
                 {
                     AddItem(usingWeapon, 1);//Add equipped weapon to this slot
-                    uiInventoryDescription.ItemShowInformation(this.item);//Show the right information 
+                    UIInventoryDescription.Instance.ItemShowInformation(this.item);//Show the right information 
                 }
                 else
                 {
-                    uiInventoryDescription.ItemHideInformation();
+                    UIInventoryDescription.Instance.ItemHideInformation();
                 }
                 choicePanel.SetActive(false);//hide the select panel
             }
@@ -162,12 +148,12 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         }
         else if(itemID.Contains("Cloth"))
         {
-            if(!hotBarSlot)
+            if(!isHotBarSlot)
             {
-                playerLoadout.EquipCloth(this.item);
+                PlayerLoadout.Instance.EquipCloth(this.item);
             }
             DeleteItem();
-            uiInventoryDescription.ItemHideInformation();
+            UIInventoryDescription.Instance.ItemHideInformation();
             choicePanel.SetActive(false);//hide the select panel
         }
     }
@@ -182,9 +168,9 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         if(this.itemQuantity == 0)//Mean run out of this item
         {
             DeleteItem();
-            if(hotBarSlot)return;
+            if(isHotBarSlot)return;
             choicePanel.SetActive(false); //Cause there is no more item to select in this slot
-            uiInventoryDescription.ItemHideInformation();
+            UIInventoryDescription.Instance.ItemHideInformation();
         }
     }
     public void RemoveAll() //Remove all
@@ -195,13 +181,13 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         }
         quantityText.text = "0";
         DeleteItem();
-        if(hotBarSlot)return;
+        if(isHotBarSlot)return;
         choicePanel.SetActive(false);
-        uiInventoryDescription.ItemHideInformation();
+        UIInventoryDescription.Instance.ItemHideInformation();
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(hotBarSlot)return;
+        if(isHotBarSlot)return;
         if(eventData.button == PointerEventData.InputButton.Left)
         {
             OnLeftClick();
@@ -219,60 +205,60 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
             border.SetActive(false);
             choicePanel.SetActive(false);
             isSelect = false;
-            uiInventoryPage.CloseDescriptionPanel();
+            UIInventoryPage.Instance.CloseDescriptionPanel();
         }
         else{
-            uiInventoryPage.OnlyClickOneSlot();
-            uiInventoryPage.OnlySellectOneSlot();
-            uiInventoryDescription.ItemShowInformation(this.item);
+            UIInventoryPage.Instance.OnlyClickOneSlot();
+            UIInventoryPage.Instance.OnlySellectOneSlot();
+            UIInventoryDescription.Instance.ItemShowInformation(this.item);
             border.SetActive(true);
             choicePanel.SetActive(true);
             isSelect = true;
-            uiInventoryPage.OpenDescriptionPanel();
+            UIInventoryPage.Instance.OpenDescriptionPanel();
         }
     }
     public void OnLeftClick()//Show this item information 
     {
-    
+        if(isHotBarSlot)return;
         if(this.isEmpty) return;
         if(isSelect)
         {
             choicePanel.SetActive(false);
-            uiInventoryPage.CloseDescriptionPanel();
+            UIInventoryPage.Instance.CloseDescriptionPanel();
             border.SetActive(false);
             isSelect = false;
         }
         else{
-            uiInventoryPage.OnlyClickOneSlot();
-            uiInventoryPage.OnlySellectOneSlot();
-            uiInventoryDescription.ItemShowInformation(this.item);
+            UIInventoryPage.Instance.OnlyClickOneSlot();
+            UIInventoryPage.Instance.OnlySellectOneSlot();
+            UIInventoryDescription.Instance.ItemShowInformation(this.item);
             border.SetActive(true);
-            uiInventoryPage.OpenDescriptionPanel();
+            UIInventoryPage.Instance.OpenDescriptionPanel();
             isSelect = true;
         }
     }
     ///Get
     public bool GetIsSelect()
     {
-        return this.isSelect;
+        return isSelect;
     }
     public string GetItemID()
     {
-        return this.itemID;
+        return itemID;
     }
     public int GetItemQuantity()
     {
-        return this.itemQuantity;
+        return itemQuantity;
     }
     public Item GetItem()
     {
-        return this.item;
+        return item;
     }
 
     ///Set
-    public void SetChoicePanel()
+    public void SetChoicePanel(bool isActive)
     {
-        choicePanel.SetActive(false);
+        choicePanel.SetActive(isActive);
     }
     public void SetIsSelect(bool isSelect)
     {

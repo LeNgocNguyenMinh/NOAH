@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private UIInventoryItem uiInventoryItem;
-    private UIInventoryPage uiInventoryPage;
     private Transform originalParent;
     private CanvasGroup canvasGroup;
     private Canvas canvasParent;
@@ -20,9 +19,9 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
     
     public void OnBeginDrag(PointerEventData eventData)
     {
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-        uiInventoryPage.OnlyClickOneSlot();
-        uiInventoryPage.OnlySellectOneSlot();
+        UIInventoryPage.Instance.OnlyClickOneSlot();
+        UIInventoryPage.Instance.OnlySellectOneSlot();
+        UIInventoryPage.Instance.CloseDescriptionPanel();
         if(uiInventoryItem == null || uiInventoryItem.isEmpty) return;
         originalLocalPosition = transform.localPosition;
         transform.SetParent(canvasParent.transform, true);
@@ -41,17 +40,19 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
         canvasGroup.alpha = 1f;
         UIInventoryItem newSlot = eventData.pointerEnter?.GetComponentInParent<UIInventoryItem>();
         UIInventoryItem previousSlot = originalParent.GetComponent<UIInventoryItem>();
+        
+        if(previousSlot.isHotBarSlot && UIInventoryController.inventoryOpen == false)return;
 
         if(newSlot!=null && newSlot != previousSlot)//If there is a slot under drop point
         {
-            if(newSlot.hotBarSlot && previousSlot.GetItemID().Contains("Cloth"))
+            if(newSlot.isHotBarSlot && previousSlot.GetItemID().Contains("Cloth"))
             {
                 PopUp.Instance.ShowNotification("Can't add cloth to hot bar");
                 transform.SetParent(originalParent, true);
                 transform.localPosition = originalLocalPosition;
                 return;
             }
-            if(newSlot.hotBarSlot && previousSlot.GetItemID().Contains("Note"))
+            if(newSlot.isHotBarSlot && previousSlot.GetItemID().Contains("Note"))
             {
                 PopUp.Instance.ShowNotification("Can't add paper to hot bar");
                 transform.SetParent(originalParent, true);
@@ -88,7 +89,7 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
                 }
             }
         }
-        else//Deliver the item back to its slot
+        else
         {
             if(eventData.pointerEnter == null)//mean you drop it outside inv
             {
@@ -106,7 +107,7 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
                 transform.localPosition = Vector3.zero;
                 previousSlot.DeleteItem();
                 return;
-            }
+            }//Deliver the item back to its slot
             transform.SetParent(originalParent, true);
             transform.localPosition = originalLocalPosition;
         } 
