@@ -8,6 +8,8 @@ public class MapTransition : MonoBehaviour
     [SerializeField]private PolygonCollider2D mapBoundry;
     CinemachineConfiner confiner;
     [SerializeField]private Direction direction;
+    [SerializeField]private Transform teleportTransform;
+    [SerializeField]private bool teleportPoint;
     enum Direction { Up, Down, Left, Right}
     [SerializeField]private float additivePos;
     private GameObject playerObject;
@@ -31,6 +33,10 @@ public class MapTransition : MonoBehaviour
     private void UpdatePlayerPosition(GameObject player)
     {
         Vector3 newPos = player.transform.position;
+        if(teleportPoint == true)
+        {
+            newPos = teleportTransform.position;
+        }
         switch (direction)
         {
             case Direction.Up:
@@ -45,6 +51,10 @@ public class MapTransition : MonoBehaviour
             case Direction.Right:
                 newPos.x += additivePos;
                 break;
+        }
+        if(teleportPoint == true)
+        { 
+            SceneTransition.Instance.SceneIn();
         }
         player.transform.position = newPos;
     }

@@ -25,6 +25,8 @@ public class MainMenu : MonoBehaviour
     }
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Debug.Log("Save location: " + saveLocation);      
     }
     public void NewGameBtn()
@@ -118,13 +120,6 @@ public class MainMenu : MonoBehaviour
         else{
             PopUp.Instance.ShowNotification("No save file found!");
         }
-    }
-    private void PopUpShow(string message)
-    {
-        otherPanel.SetActive(false);
-        popUpRect.gameObject.SetActive(true);
-        popUpRect.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
-        popUpRect.GetComponentInChildren<TMP_Text>().text = message;
     }
     private IEnumerator LoadSceneAsync(string sceneName)
     {

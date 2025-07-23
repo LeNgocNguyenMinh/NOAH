@@ -70,6 +70,7 @@ public class PauseMenu : MonoBehaviour
     //Resume button function
     public void PauseMenuPanelOff()
     {
+        Time.timeScale = 1f;
         pauseMenuPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             if(isOver)
@@ -78,7 +79,6 @@ public class PauseMenu : MonoBehaviour
                 spawnControl.RespawnAfterDead();
                 isOver = false;
             }
-            Time.timeScale = 1f;
             isPaused = false;
             pauseMenuPanel.gameObject.SetActive(false);
         });
@@ -115,6 +115,7 @@ public class PauseMenu : MonoBehaviour
     //To main menu
     public void ToMainMenu()
     {
+        PauseMenuPanelOff();
         StartCoroutine(ToMainMenuCoroutine());
     }
     IEnumerator ToMainMenuCoroutine()
@@ -158,7 +159,7 @@ public class PauseMenu : MonoBehaviour
     //quit game
     public void QuitGame()
     {
+        PauseMenuPanelOff();
         Application.Quit();
-        Time.timeScale = 1f;
     }
 }

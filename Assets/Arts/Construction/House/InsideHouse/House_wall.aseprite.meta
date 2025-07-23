@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: House_wall
     originalName: 
-    pivot: {x: 1, y: -0.25}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 80
-      height: 128
+      width: 16
+      height: 16
     spriteID: fa588740fc09e744caa30ea251ac9c17
     spriteBone: []
     spriteOutline: []
@@ -155,9 +155,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
-        width: 80
-        height: 128
+        y: 0
+        width: 16
+        height: 16
       spriteId: fa588740fc09e744caa30ea251ac9c17
     linkedCells: []
     parentIndex: -1
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 160, y: 160}
+  canvasSize: {x: 16, y: 16}

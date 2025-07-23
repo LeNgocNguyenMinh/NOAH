@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
 
 public class MissionManager : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class MissionManager : MonoBehaviour
     private string currentMissionID;
     private MissionStatus currentMissionStatus;
     private Mission currentMission;
-    private int currentAmount = 0;
     private bool inLineMission = false;
     private MissionPageUI missionPageUI;
     
@@ -33,12 +33,12 @@ public class MissionManager : MonoBehaviour
             currentMission.item.itemID == itemID)
         {
             currentMissionStatus.currentAmount += amount;
-            CheckMissionProgress();
+            UpdateMissionProgress();
         }
     }
-
+    //Add mission from NPC
     public void SetLineMission(string missionID)
-    {
+    {   
         currentMissionID = missionID;
         inLineMission = true;
         currentMission = GetMissionByID(missionID);
@@ -54,11 +54,12 @@ public class MissionManager : MonoBehaviour
             listOfMission.Add(currentMissionStatus);
             MissionPageUI.Instance.InitializeMissionBoard(listOfMission);
         }
-        CheckMissionProgress();
+        UpdateMissionProgress();
     }
-
-    private void CheckMissionProgress()
+    // Update the current mission progress
+    private void UpdateMissionProgress()
     {
+        // Check if the current mission is finish
         if(currentMission.missionType == MissionType.CollectMission && currentMissionStatus.isFinish == false)
         {
             if (currentMissionStatus.currentAmount >= currentMission.requiredAmount)
@@ -68,13 +69,16 @@ public class MissionManager : MonoBehaviour
                 return;
             }
         }
+        //else update the mission progress text
         missionName.text = currentMission.missionName;
         missionDescription.text = currentMission.missionDes;
         missionProgress.text = $"{currentMissionStatus.currentAmount}/{currentMission.requiredAmount}";
     }
     private void MissionFinish()
     {
+        //TakeReward
         ClaimReward();
+        //Set "Mission Status" is Finish = true
         if(!inLineMission)
         {
             currentMissionStatus.isFinish = true;
@@ -84,7 +88,9 @@ public class MissionManager : MonoBehaviour
             inLineMission = false;
             currentMissionStatus.isFinish = true;
         }
+        //Reload all mission in mission board
         MissionPageUI.Instance.InitializeMissionBoard(listOfMission);
+        //Set current mission to null
         SetCurrentMission("");
     }
     
@@ -105,21 +111,6 @@ public class MissionManager : MonoBehaviour
             }
         }
     }
-    public List<MissionStatus> GetCurrentMission()
-    {
-        List<MissionStatus> missionSaveDataList = new List<MissionStatus>();
-        foreach(MissionStatus mission in listOfMission)
-        {
-            MissionStatus saveData = new MissionStatus
-            {
-                currentAmount = mission.currentAmount, // Reset current amount for each mission
-                missionID = mission.missionID,
-                isFinish = mission.isFinish
-            };
-            missionSaveDataList.Add(saveData);
-        }
-        return missionSaveDataList;
-    }
     public void SetCurrentMission(string missionID)
     {
         if(missionID == "")
@@ -135,10 +126,9 @@ public class MissionManager : MonoBehaviour
         currentMissionID = missionID;
         currentMission = GetMissionByID(missionID);
         currentMissionStatus = GetMissionStatusFromList(missionID);
-        
-        currentAmount = currentMissionStatus.currentAmount;
-        CheckMissionProgress();
+        UpdateMissionProgress();
     }
+    // Get Mission by ID
     public Mission GetMissionByID(string missionID)
     {
         foreach(Mission mission in missionScriptObject.missionList)
@@ -157,8 +147,9 @@ public class MissionManager : MonoBehaviour
         }
         return null;
     }
+    // Get Mission Status from List
     public MissionStatus GetMissionStatusFromList(string missionID)
-    {
+    { 
         foreach (MissionStatus missionSaveData in listOfMission)
         {
             if (missionSaveData.missionID == missionID)
@@ -168,14 +159,16 @@ public class MissionManager : MonoBehaviour
         }
         return null;
     }
+    // Set Mission List from Save Data
     public void SetMissionList(MissionSaveData missionSaveData)
     {
         missionPageUI = GetComponent<MissionPageUI>();
         listOfMission.Clear();
         listOfMission = missionSaveData.missionList;
-        missionPageUI.InitializeMissionBoard(listOfMission);
         SetCurrentMission(missionSaveData.currentMissionID);
+        missionPageUI.InitializeMissionBoard(listOfMission);
     }
+    // Get Mission List for Save Data
     public MissionSaveData GetMissionList()
     {
         MissionSaveData missionSaveData = new MissionSaveData();
@@ -183,6 +176,7 @@ public class MissionManager : MonoBehaviour
         missionSaveData.currentMissionID = currentMissionID;
         return missionSaveData;
     }
+    // Check if the current mission ID is the same as the given mission ID
     public bool IsCurrentMissionID(string missionID)
     {
         if(missionID != currentMissionID || currentMissionID == null)

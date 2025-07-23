@@ -72,6 +72,9 @@ TagManager:
   - name: ForeGround
     uniqueID: 1549724067
     locked: 0
+  - name: HouseWall
+    uniqueID: 2712834573
+    locked: 0
   - name: HouseDecor
     uniqueID: 553636171
     locked: 0
@@ -87,12 +90,6 @@ TagManager:
   - name: Mouse
     uniqueID: 23295885
     locked: 0
-  - name: Weather Effect
-    uniqueID: 527545113
-    locked: 0
   - name: Boss
     uniqueID: 686130243
-    locked: 0
-  - name: InsideHouse
-    uniqueID: 3548636637
     locked: 0

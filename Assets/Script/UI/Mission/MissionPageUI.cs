@@ -12,22 +12,9 @@ public class MissionPageUI : MonoBehaviour
     [SerializeField]private RectTransform currentMissionContent;
     [SerializeField]private RectTransform activeMissContent;
     [SerializeField]private RectTransform finishMissContent;
-    [SerializeField]private RectTransform missionNamePanel;
-    [SerializeField]private RectTransform missionDesPanel;
-    [SerializeField]private RectTransform missionProgPanel;
     [SerializeField]private TextMeshProUGUI missionName;
     [SerializeField]private TextMeshProUGUI missionDescription;
     [SerializeField]private TextMeshProUGUI missionProgress;
-    [SerializeField]private float delay1;
-    [SerializeField]private float delay2;
-    [SerializeField]private float delay3;
-    [SerializeField]private Vector2 visiblePos1;
-    [SerializeField]private Vector2 visiblePos2;
-    [SerializeField]private Vector2 visiblePos3;
-    [SerializeField] private Vector2 hiddenPos1;
-    [SerializeField] private Vector2 hiddenPos2;
-    [SerializeField] private Vector2 hiddenPos3;
-    [SerializeField] float moveDuration;
     private List<MissionUIPrefab> listOfMissionPrefab = new List<MissionUIPrefab>();
     
     private void Awake()
@@ -90,5 +77,4 @@ public class MissionPageUI : MonoBehaviour
         missionDescription.text = "-Select a mission-";
         missionProgress.text = "-NaN-";
     }
-    
 }

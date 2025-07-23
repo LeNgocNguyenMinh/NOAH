@@ -7,19 +7,21 @@ public class ConstrucEnter : MonoBehaviour
 {
     private TmpDataManager tmpDataManager;
     [SerializeField]private string sceneBuildIndex;
+    [SerializeField]private Transform moveTo;
     private void OnTriggerEnter2D(Collider2D other)
     {
             if(other.tag == "Player")
             {
-                tmpDataManager = FindObjectOfType<TmpDataManager>()?.GetComponent<TmpDataManager>();
+                /* tmpDataManager = FindObjectOfType<TmpDataManager>()?.GetComponent<TmpDataManager>();
                 if(tmpDataManager != null)
                 {
                     tmpDataManager.SetAllTMPData();
                 }
-                StartCoroutine(LoadSceneAsync(sceneBuildIndex));
+                StartCoroutine(LoadSceneAsync(sceneBuildIndex)); */
+                
             }
     }
-    private IEnumerator LoadSceneAsync(string sceneName)
+  /*   private IEnumerator LoadSceneAsync(string sceneName)
     {
         SceneTransition.Instance.SceneOut();
         yield return new WaitForSeconds(2f);
@@ -52,5 +54,5 @@ public class ConstrucEnter : MonoBehaviour
             SaveController.Instance.LoadSave(pos, TmpDataManager.tmpInventory, TmpDataManager.tmpHotBar, null, TmpDataManager.tmpTime, TmpDataManager.tmpPlayer, TmpDataManager.tmpMission, false);
         } 
         SceneTransition.Instance.SceneIn();   
-    }
+    } */
 }

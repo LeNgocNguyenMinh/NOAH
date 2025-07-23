@@ -45,11 +45,5 @@ public class TmpDataManager : MonoBehaviour
         {
             tmpTime = timeManager.GetTime();
         }
-
-        /* MissionManager missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
-        if(missionManager != null)
-        {
-            tmpMission = missionManager.GetCurrentMission();
-        } */
     }
 }

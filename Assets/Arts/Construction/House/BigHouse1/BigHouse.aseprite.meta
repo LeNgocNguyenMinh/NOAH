@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: BigHouse
     originalName: 
-    pivot: {x: 0.4725275, y: -0.4642857}
+    pivot: {x: 0.48837212, y: -0.44642857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 91
+      width: 86
       height: 56
     spriteID: 12283746006343841a88f006b3bacd24
     spriteBone: []
@@ -154,9 +154,9 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 7
-        y: 26
-        width: 91
+        x: 6
+        y: 25
+        width: 86
         height: 56
       spriteId: 12283746006343841a88f006b3bacd24
     linkedCells: []
@@ -213,4 +213,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 96, y: 96}

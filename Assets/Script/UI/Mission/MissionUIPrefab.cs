@@ -22,6 +22,7 @@ public class MissionUIPrefab : MonoBehaviour, IPointerEnterHandler,IPointerExitH
         {
             missionToggle.isOn = false;
         }
+        
         Mission currentMiss = MissionManager.Instance.GetMissionByID(missionStatus.missionID);
         missionName.text = currentMiss.missionName;
     }
@@ -35,7 +36,6 @@ public class MissionUIPrefab : MonoBehaviour, IPointerEnterHandler,IPointerExitH
         {
             MissionPageUI.Instance.UnCheckOther(missionID);
             MissionManager.Instance.SetCurrentMission(missionID);
-            transform.SetAsFirstSibling();
         }
         else
         {
@@ -49,7 +49,6 @@ public class MissionUIPrefab : MonoBehaviour, IPointerEnterHandler,IPointerExitH
     public void Togglecheck()
     {
         missionToggle.isOn = true;
-        transform.SetAsFirstSibling();
     }
     public void HideToggle()
     {
