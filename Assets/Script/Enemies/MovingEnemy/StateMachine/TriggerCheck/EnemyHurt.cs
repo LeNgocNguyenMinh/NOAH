@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHurt : MonoBehaviour
 {
     [SerializeField] private EnemyHealthControl healthControl;
-    public void HitByBullet(float damage)
+    public void DamageReceive(float damage)
     {
         healthControl.EnemyHurt(damage);
     }

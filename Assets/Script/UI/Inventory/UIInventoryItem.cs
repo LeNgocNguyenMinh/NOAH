@@ -112,7 +112,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         if(isEmpty) return;
         if(itemID.Contains("WP"))//If weapon is equip
         {
-            Item usingWeapon = WeaponParent.Instance.EquipNewWeapon(this.item);//Switch equipped weapon
+            Item usingWeapon = PlayerWeaponParent.Instance.EquipNewWeapon(this.item);//Switch equipped weapon
             if(!isHotBarSlot)
             {
                 PlayerLoadout.Instance.EquipWeapon(this.item);

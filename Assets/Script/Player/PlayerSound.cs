@@ -4,7 +4,19 @@ using UnityEngine;
 
 public class PlayerSound : MonoBehaviour
 {
+    public static PlayerSound Instance;
     private SoundControl soundControl;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Start()
     {
         soundControl = FindObjectOfType<SoundControl>().GetComponent<SoundControl>();

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class AddAvailablePoint : MonoBehaviour
 {
     private HealthControl playerHealthControl;//Add player Health Script
-    private WeaponParent weaponParent;
+    private PlayerWeaponParent weaponParent;
     [SerializeField]private GameObject healthButton;//Add 'Add' button point in Health
     [SerializeField]private GameObject damageButton;//Add 'Add' button point in Damage
     [SerializeField]private GameObject bulletButton;//Add 'Add' button point in Bullet
@@ -50,7 +50,7 @@ public class AddAvailablePoint : MonoBehaviour
     }
     public void AddPointToBullet()
     {
-        weaponParent = FindObjectOfType<PlayerControl>().GetComponentInChildren<WeaponParent>();
+        weaponParent = FindObjectOfType<PlayerControl>().GetComponentInChildren<PlayerWeaponParent>();
         playerStatus.SetBullet();
         PlayerStatusUI.Instance.UpdateMaxBullet();
         weaponParent.UpdateMagazine();

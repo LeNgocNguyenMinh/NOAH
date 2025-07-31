@@ -16,7 +16,7 @@ public class PlayerLoadout : MonoBehaviour
     private Item currentEquipHat;
     private Item currentEquipCoat;
     private Item currentEquipWeapon;
-    private WeaponParent weaponParent;
+    private PlayerWeaponParent weaponParent;
     private PlayerCurrentClothChange playerCurrentClothChange;
     private void Awake()
     {
@@ -142,7 +142,7 @@ public class PlayerLoadout : MonoBehaviour
             return;
         }
         EquipWeapon(playerStatus.defaultWeapon);
-        weaponParent = FindObjectOfType<WeaponParent>().GetComponent<WeaponParent>();
+        weaponParent = FindObjectOfType<PlayerWeaponParent>().GetComponent<PlayerWeaponParent>();
         weaponParent.EquipNewWeapon(playerStatus.defaultWeapon);
         playerStatus.SetCurrentWeapon(playerStatus.defaultWeapon);
         unequipWeapon.SetActive(false);

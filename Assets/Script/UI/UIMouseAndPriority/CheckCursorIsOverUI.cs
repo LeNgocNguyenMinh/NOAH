@@ -8,13 +8,13 @@ public class CheckCursorIsOverUI : MonoBehaviour, IPointerEnterHandler,IPointerE
      public void OnPointerEnter(PointerEventData eventData)
     {
         MouseSetting.Instance.SetMouseShouldVisible(true);
-        WeaponParent.playerCanShoot = false;
+        PlayerWeaponParent.Instance.playerCanATK = false;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         MouseSetting.Instance.SetMouseShouldVisible(false);
-        WeaponParent.playerCanShoot = true;
+        PlayerWeaponParent.Instance.playerCanATK = true;
     }
 
 }

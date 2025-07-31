@@ -139,7 +139,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016695023, y: -1.1874261}
+  m_Offset: {x: 0, y: -1.2896464}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -150,7 +150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0119677, y: 0.5346317}
+  m_Size: {x: 1, y: 0.393937}
   m_EdgeRadius: 0
 --- !u!1 &608996696982073589
 GameObject:
@@ -452,7 +452,7 @@ MonoBehaviour:
   - {x: 0.5620346, y: -1.4916706, z: 0}
   m_ShapePathHash: 67082805
   m_Mesh: {fileID: 0}
-  m_InstanceId: -2370
+  m_InstanceId: -1704
   m_LocalBounds:
     m_Center: {x: 0.41917038, y: 0.14027977, z: 0}
     m_Extent: {x: 0.9001694, y: 1.6319504, z: 0}
@@ -532,7 +532,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -551,7 +551,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1652787173
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 50
   m_Sprite: {fileID: -1039474641, guid: 22d30d05eb4369941af36bb7251e5b32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -576,7 +576,6 @@ GameObject:
   - component: {fileID: 5175880138675440854}
   - component: {fileID: 16491148591462491}
   - component: {fileID: 6473656834444599815}
-  - component: {fileID: 6522139381679823261}
   m_Layer: 5
   m_Name: Magazine
   m_TagString: Untagged
@@ -671,20 +670,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6522139381679823261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707420842626193942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7032c1a319b95ed4aac6885a893ce392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 4495481093596426698}
-  weapon: {fileID: 6093137392262755821}
 --- !u!1 &2004277329088834466
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +722,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -756,7 +741,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1652787173
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 50
   m_Sprite: {fileID: -2036479984, guid: 7b730cfe05100534997c7fd85133c0aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -817,16 +802,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
-  magazineText: {fileID: 6522139381679823261}
   wandSprite: {fileID: 272388184679947372}
   physicATKSprite: {fileID: 4894745358226231263}
-  reloadIcon: {fileID: 0}
-  firePoint: {fileID: 1616526034875243648}
-  physicATKAnimator: {fileID: 7174763027849699301}
-  wandATKAnimator: {fileID: 3128833513397604991}
-  delayWandATK: 0.5
-  delayPhysicATK: 0.5
-  playerSound: {fileID: 7795985824901675536}
+  delayWandCount: 0
   bulletEnergyFront: {fileID: 3889855876155482240}
   bulletEnergyBack: {fileID: 558010161536381063}
   hitEnergyFront: {fileID: 6954834508820051917}
@@ -836,7 +814,10 @@ MonoBehaviour:
   hitMainTime: 0.1
   hitSlowerTime: 0.3
   requireHit: 3
---- !u!1 &2664959177526929460
+  text: {fileID: 4495481093596426698}
+  currentBullet: 0
+  playerCanATK: 1
+--- !u!1 &2781196189683914338
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -844,23 +825,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6980137760016125332}
-  - component: {fileID: 1134586750212877352}
-  - component: {fileID: 9036024879768290123}
+  - component: {fileID: 5555739916717662871}
+  - component: {fileID: 2903592453795436062}
+  - component: {fileID: 8401338789853527106}
   m_Layer: 6
-  m_Name: PhysicATKCollider
+  m_Name: MeleeHitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6980137760016125332
+--- !u!4 &5555739916717662871
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2664959177526929460}
+  m_GameObject: {fileID: 2781196189683914338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -869,14 +850,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3473589523961898901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1134586750212877352
-CapsuleCollider2D:
+--- !u!58 &2903592453795436062
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2664959177526929460}
-  m_Enabled: 0
+  m_GameObject: {fileID: 2781196189683914338}
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -898,25 +879,24 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
---- !u!114 &9036024879768290123
+  serializedVersion: 2
+  m_Radius: 0.46174315
+--- !u!114 &8401338789853527106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2664959177526929460}
+  m_GameObject: {fileID: 2781196189683914338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 814b69818d36eb642aa4d98fb9f6a9c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7210985d0e45569488c2dc91afbbf1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitParticlePrefab: {fileID: 6327989095721312782, guid: 69125d2b709f170418257c4dea070250, type: 3}
 --- !u!1 &2828759920035105045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,8 +1066,9 @@ GameObject:
   - component: {fileID: 2898318391121279503}
   - component: {fileID: 272388184679947372}
   - component: {fileID: 3128833513397604991}
+  - component: {fileID: 4340426658622895907}
   m_Layer: 0
-  m_Name: Wand
+  m_Name: WandATK
   m_TagString: PlayerWand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1181,6 +1162,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4340426658622895907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185582970882447335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7032c1a319b95ed4aac6885a893ce392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayWandATK: 0.5
+  firePoint: {fileID: 1616526034875243648}
 --- !u!1 &3255289146521034263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1569,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1593,7 +1588,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1652787173
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 100
   m_Sprite: {fileID: -1918259071, guid: bc22e968408e7bd4fac91e296b179fc6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1789,8 +1784,9 @@ GameObject:
   - component: {fileID: 3473589523961898901}
   - component: {fileID: 7174763027849699301}
   - component: {fileID: 4894745358226231263}
+  - component: {fileID: 2039614898298277861}
   m_Layer: 6
-  m_Name: PhysicAttack
+  m_Name: MeleeAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1809,7 +1805,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6980137760016125332}
+  - {fileID: 5555739916717662871}
   m_Father: {fileID: 1691768245154544631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7174763027849699301
@@ -1872,19 +1868,34 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1652787173
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.3125, y: 4.5625}
+  m_Size: {x: 3.0625, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2039614898298277861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368803173298936163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814b69818d36eb642aa4d98fb9f6a9c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitParticlePrefab: {fileID: 6327989095721312782, guid: 69125d2b709f170418257c4dea070250, type: 3}
+  delayMelee: 1.5
+  delayMeleeCount: 0
 --- !u!1 &5505032959526211068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,7 +2325,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2333,7 +2344,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1652787173
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 100
   m_Sprite: {fileID: 836119943, guid: d8175ff2a767f0d43a0badd10906ab25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
