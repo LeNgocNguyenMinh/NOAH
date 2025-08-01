@@ -18,7 +18,6 @@ public class SmallShotATK1 : MonoBehaviour
         {
             rb = GetComponent<Rigidbody2D>();
             rb.velocity = direct * speed;
-            Debug.Log("Shoot");
         } 
     }
     public void SetShootSpeed(float newValue)

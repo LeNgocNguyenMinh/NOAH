@@ -19,7 +19,6 @@ public class BossAOShoot : MonoBehaviour
 
     public void StartAttack()
     {
-        Debug.Log("1");
         isSummon = false;
         isAlive = true;
         animator = GetComponent<Animator>();
@@ -27,7 +26,6 @@ public class BossAOShoot : MonoBehaviour
         bossAttackStyle2 = GetComponent<BossAttackStyle2>();
         bossAttackStyle3 = GetComponent<BossAttackStyle3>();
         movementStyle2.enabled = false;
-        Debug.Log("2");
         StartCoroutine(AttackSequence());
     }
     public void BossDeath()
@@ -35,7 +33,6 @@ public class BossAOShoot : MonoBehaviour
         if(isAlive)
         {
             StopAllCoroutines();
-            Debug.Log("BossDeath");
             isAlive = false;
             bossDropAfterDead.DropOEC(bossBodyTransform.position);
             animator.SetTrigger("isDead");

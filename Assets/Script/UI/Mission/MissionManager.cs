@@ -147,6 +147,18 @@ public class MissionManager : MonoBehaviour
         }
         return null;
     }
+    public bool GetMissionStatus(string missionID)
+    {
+        bool returnValue = false;
+        foreach(MissionStatus missionStatus in listOfMission)
+        {
+            if (missionStatus.missionID == missionID)
+            {
+                returnValue = missionStatus.isFinish;
+            }
+        }
+        return returnValue;
+    }
     // Get Mission Status from List
     public MissionStatus GetMissionStatusFromList(string missionID)
     { 

@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: SmallTreeLog_01
     originalName: 
-    pivot: {x: 0.4210527, y: -0.27777776}
+    pivot: {x: 0.39130434, y: -0.06779661}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 19
-      height: 18
+      width: 23
+      height: 59
     spriteID: 0a14664e34705df4baf05b144b590a8a
     spriteBone: []
     spriteOutline: []
@@ -163,10 +163,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 42
-        y: 5
-        width: 19
-        height: 18
+        x: 41
+        y: 4
+        width: 23
+        height: 59
       spriteId: 0a14664e34705df4baf05b144b590a8a
     linkedCells: []
     parentIndex: -1

@@ -37,16 +37,11 @@ public class NPCDialogueControl : MonoBehaviour
     private DialogueMissionState missionState;
     private void Update()
     {
-        if(missionState == DialogueMissionState.InMission && currentDialogueMission.isFinish == true)
-        {
-            missionState = DialogueMissionState.FinishMission;
-        }
         objectInteraction = GetComponent<ObjectInteraction>();
         if(objectInteraction.GetCanInteract())
         {
             if(Input.GetKeyDown(KeyCode.F))
             {  
-                Debug.Log(dialogueIndex+"," + CheckOptionChoice() + "," + mainLineIsTyping + "," + mainLineRespondIsTyping + "," + isChoosen);
                 Interact();
             }
         }
@@ -77,13 +72,19 @@ public class NPCDialogueControl : MonoBehaviour
         DialogueController.Instance.ShowDialogueUI();
         DialogueController.Instance.SetDialogue(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueIndex = 0;
+        Debug.Log("Mission State: " + missionState);
         if(missionState == DialogueMissionState.InMission)
         {
-            TypeLine(DialogueState.InQuestLineStart, "");
-        }
-        else if(missionState == DialogueMissionState.FinishMission)
-        {
-            TypeLine(DialogueState.InQuestLineFinish, "");
+            if(CheckIsMissionFinish())
+            {
+                Debug.Log(0111111);
+                TypeLine(DialogueState.InQuestLineFinish, currentMissionLine.finishQuestDialogue);
+            }
+            else 
+            {
+                Debug.Log(02222);
+                TypeLine(DialogueState.InQuestLineStart, "");
+            }
         }
         else
         {
@@ -115,7 +116,8 @@ public class NPCDialogueControl : MonoBehaviour
             fullText = currentMissionLine.inQuestDialogue;
             questLineRespondIsTyping = true;
         }
-        else{
+        else if(dialogueState == DialogueState.InQuestLineFinish)
+        {
             fullText = currentMissionLine.finishQuestDialogue;
             questLineRespondIsTyping = true;
         }
@@ -254,14 +256,15 @@ public class NPCDialogueControl : MonoBehaviour
     }
     private bool CheckIsMissionFinish()
     {
+        bool returnValue = false;
         foreach(MissionLine missionLine in dialogueData.missionLine)
         {
             if(missionLine.dialogueIndex == dialogueIndex)
             {
-                return MissionManager.Instance.GetMissionByID(missionLine.missionID).isFinish;
+                returnValue = MissionManager.Instance.GetMissionStatus(missionLine.missionID);
             }
         }
-        return false;
+        return returnValue;
     }
     //hide dialogue UI
     private void EndDialogue()

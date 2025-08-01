@@ -15,7 +15,6 @@ public class BossStateMachine : MonoBehaviour
     {
         CurrentBossState.ExitState();
         CurrentBossState = newState;
-        Debug.Log("State changed to: " + CurrentBossState.GetType().Name);
         CurrentBossState.EnterState();
     }
 }
