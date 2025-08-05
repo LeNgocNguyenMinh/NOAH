@@ -19,7 +19,7 @@ public class NPCDialogueControl : MonoBehaviour
     private bool questLineRespondIsTyping = false;
     private bool isChoosen = false;
     private Mission currentDialogueMission = null;
-    private MissionLine currentMissionLine;
+    private MissionLine currentMissionLine = null;
     
     private enum DialogueMissionState
     {
@@ -257,12 +257,9 @@ public class NPCDialogueControl : MonoBehaviour
     private bool CheckIsMissionFinish()
     {
         bool returnValue = false;
-        foreach(MissionLine missionLine in dialogueData.missionLine)
+        if(currentMissionLine != null)
         {
-            if(missionLine.dialogueIndex == dialogueIndex)
-            {
-                returnValue = MissionManager.Instance.GetMissionStatus(missionLine.missionID);
-            }
+            returnValue = MissionManager.Instance.GetMissionStatus(currentMissionLine.missionID);
         }
         return returnValue;
     }
