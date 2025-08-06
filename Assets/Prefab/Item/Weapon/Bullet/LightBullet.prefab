@@ -627,3 +627,4 @@ MonoBehaviour:
   bulletHitParticle: {fileID: 9066319972189040534, guid: ddb73b1ac1d52ca43b6dacb80bab1644, type: 3}
   bulletSpeed: 20
   maxDistance: 10
+  color: {r: 0.9960785, g: 0.95294124, b: 0, a: 1}

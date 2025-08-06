@@ -1065,6 +1065,7 @@ GameObject:
   - component: {fileID: 2521368930600493747}
   - component: {fileID: 782655299358372623}
   - component: {fileID: 6028046122501504635}
+  - component: {fileID: 4289366522790956879}
   m_Layer: 0
   m_Name: SlimeSprite
   m_TagString: Untagged
@@ -1132,7 +1133,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1212,6 +1213,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slimeBullet: {fileID: 771724941929772602, guid: 0a5ce893eacd95c4a86ea662bd0052d6, type: 3}
   bulletSpawnPoint: {fileID: 386869493500471128}
+--- !u!114 &4289366522790956879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8948891771955275171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f083c8f76747cd419931b2bf20ce776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4aa70327bcf82a044b2ef5e42e433f28, type: 2}
+  duration: 0.05
+  splashDistance: 0.3
+  hitEffectPrefab: {fileID: 5851200870473605464, guid: 1a19b705ab3539641b3d7887f02f001d, type: 3}
 --- !u!1 &8971548217084106164
 GameObject:
   m_ObjectHideFlags: 0
