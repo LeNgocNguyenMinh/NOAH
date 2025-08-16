@@ -59,7 +59,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: 51676d600645c114cba265bf3d6cd2a8, type: 2}
-  missionScriptable: {fileID: 11400000, guid: 8629e65a8d1708143a2aa82239c83224, type: 2}
 --- !u!61 &1219021140597353609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -316,7 +315,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f758165c725e624894a5dff8d2f4e05, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -334,8 +333,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 399216309
-  m_SortingLayer: 2
+  m_SortingLayerID: 1549724067
+  m_SortingLayer: 3
   m_SortingOrder: 100
   m_Sprite: {fileID: 2019294524, guid: 774c773e1c1fd4348832f3fecf3aac6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -475,7 +474,7 @@ MonoBehaviour:
   - {x: -0.3000493, y: -0.80340576, z: 0}
   m_ShapePathHash: 919392239
   m_Mesh: {fileID: 0}
-  m_InstanceId: -110672
+  m_InstanceId: -4968
   m_LocalBounds:
     m_Center: {x: -0.0683341, y: -0.11908841, z: 0}
     m_Extent: {x: 0.52623177, y: 0.8878803, z: 0}

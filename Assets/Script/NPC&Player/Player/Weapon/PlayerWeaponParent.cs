@@ -15,10 +15,10 @@ public class PlayerWeaponParent : MonoBehaviour
     [SerializeField]private Image bulletEnergyBack;
     [SerializeField]private Image hitEnergyFront;
     [SerializeField]private Image hitEnergyBack;
-    [SerializeField]private float energyMainTime;
-    [SerializeField]private float energySlowerTime;
-    [SerializeField]private float hitMainTime;
-    [SerializeField]private float hitSlowerTime;
+    private float energyMainTime = 0.3f;
+    private float energySlowerTime = 1f;
+    private float hitMainTime = 0.1f;
+    private float hitSlowerTime = 0.3f;
     [SerializeField]private int requireHit;
     [SerializeField]private TextMeshProUGUI text;
     private int hitCount = 0;//Hit count
