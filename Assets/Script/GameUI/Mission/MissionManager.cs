@@ -64,7 +64,7 @@ public class MissionManager : MonoBehaviour
         {
             if (currentMissionStatus.currentAmount >= currentMission.requiredAmount)
             {
-                PopUp.Instance.ShowNotification("Finish mission: " + currentMission.missionName);
+                NotifPopUp.Instance.ShowNotification("Finish mission: " + currentMission.missionName);
                 MissionFinish();
                 return;
             }
@@ -100,14 +100,14 @@ public class MissionManager : MonoBehaviour
         if(currentMission.missionReward.coin > 0)
         {
             CoinControl.Instance.AddCoin(currentMission.missionReward.coin);
-            PopUp.Instance.ShowNotification("Add " + currentMission.missionReward.coin + " coins.");
+            NotifPopUp.Instance.ShowNotification("Add " + currentMission.missionReward.coin + " coins.");
         }
         foreach(ItemAmount itemAmount in currentMission.missionReward.items)
         {
             if(itemAmount != null)
             {
                 UIInventoryPage.Instance.AddItem(itemAmount.item, itemAmount.itemQuantity);
-                PopUp.Instance.ShowNotification("Add " + itemAmount.itemQuantity + " " + itemAmount.item.itemName + ".");
+                NotifPopUp.Instance.ShowNotification("Add " + itemAmount.itemQuantity + " " + itemAmount.item.itemName + ".");
             }
         }
     }

@@ -41,7 +41,7 @@ public class ShopItemSlot : MonoBehaviour
     {
         if(numberOfItem == 0)
         {
-            PopUp.Instance.ShowNotification("Nah, we run out of " + item.itemName);
+            NotifPopUp.Instance.ShowNotification("Nah, we run out of " + item.itemName);
             return;
         }
         if(playerStatus.playerCoin >= item.itemPrice)
@@ -51,7 +51,7 @@ public class ShopItemSlot : MonoBehaviour
             {
                 return;
             }
-            PopUp.Instance.ShowNotification("Add 1 " + item.itemName + " to inventory.");
+            NotifPopUp.Instance.ShowNotification("Add 1 " + item.itemName + " to inventory.");
             numberOfItem--;
             Debug.Log("Left: " + numberOfItem);
             SetNumberOfItem(numberOfItem);
@@ -60,7 +60,7 @@ public class ShopItemSlot : MonoBehaviour
         }
         else
         {
-            PopUp.Instance.ShowNotification("Ha ha poor guy!!!");
+            NotifPopUp.Instance.ShowNotification("Ha ha poor guy!!!");
         }
     }
 }

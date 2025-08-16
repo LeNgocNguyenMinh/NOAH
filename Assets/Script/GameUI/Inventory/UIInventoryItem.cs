@@ -143,7 +143,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
                 DeleteOne();//Mean item was used
             }
             else{
-                PopUp.Instance.ShowNotification("Health is full.");
+                NotifPopUp.Instance.ShowNotification("Health is full.");
             }
         }
         else if(itemID.Contains("Cloth"))

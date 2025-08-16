@@ -34,7 +34,7 @@ public class ShopInteractive : MonoBehaviour
                     Debug.Log("Can Open shop: " + canOpenShop);
                     if(!canOpenShop)
                     {
-                        PopUp.Instance.ShowNotification("Shop open at 10 A.M and close at 10 P.M!!");
+                        NotifPopUp.Instance.ShowNotification("Shop open at 10 A.M and close at 10 P.M!!");
                         return;
                     }
                     shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();

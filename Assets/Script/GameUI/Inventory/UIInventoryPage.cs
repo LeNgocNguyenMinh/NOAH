@@ -60,7 +60,7 @@ public class UIInventoryPage : MonoBehaviour
                 return true;
             }
         }
-        PopUp.Instance.ShowNotification("Inventory full");
+        NotifPopUp.Instance.ShowNotification("Inventory full");
         return false;
     }
     public void OpenDescriptionPanel()
@@ -125,10 +125,10 @@ public class UIInventoryPage : MonoBehaviour
     {
         if(item.itemID.Contains("Cloth")|| item.itemID.Contains("WP") || item.itemID.Contains("Stuff"))
         {
-            PopUp.Instance.ShowNotification("Add " + item.itemName + ".");
+            NotifPopUp.Instance.ShowNotification("Add " + item.itemName + ".");
         }
         else{
-            PopUp.Instance.ShowNotification("Add " + itemQuantity + " " + item.itemName + ".");
+            NotifPopUp.Instance.ShowNotification("Add " + itemQuantity + " " + item.itemName + ".");
         }
     }
     //event when left click

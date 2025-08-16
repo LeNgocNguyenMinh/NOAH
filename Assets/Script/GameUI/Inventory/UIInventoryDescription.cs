@@ -72,10 +72,10 @@ public class UIInventoryDescription : MonoBehaviour
             itemFunction.text = "Damage + " + itemInDescription.weaponDamage;//Update the damage
             requireForUpgradeText.text = playerStatus.playerCoin + "/" + itemInDescription.materialNeedToUpgrade; //Update the requirement for upgrade
             weaponLevelText.text = "Level " + itemInDescription.weaponLevel;// Update the level text
-            PopUp.Instance.ShowNotification("Update " + itemInDescription.itemName + " succes to level " + itemInDescription.weaponLevel);
+            NotifPopUp.Instance.ShowNotification("Update " + itemInDescription.itemName + " succes to level " + itemInDescription.weaponLevel);
         }
         else{
-            PopUp.Instance.ShowNotification("Not enough material!!");
+            NotifPopUp.Instance.ShowNotification("Not enough material!!");
         }
     }
     public void ItemHideInformation()// Hide the information of the item slot

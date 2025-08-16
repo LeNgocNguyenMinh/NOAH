@@ -47,14 +47,14 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
         {
             if(newSlot.isHotBarSlot && previousSlot.GetItemID().Contains("Cloth"))
             {
-                PopUp.Instance.ShowNotification("Can't add cloth to hot bar");
+                NotifPopUp.Instance.ShowNotification("Can't add cloth to hot bar");
                 transform.SetParent(originalParent, true);
                 transform.localPosition = originalLocalPosition;
                 return;
             }
             if(newSlot.isHotBarSlot && previousSlot.GetItemID().Contains("Note"))
             {
-                PopUp.Instance.ShowNotification("Can't add paper to hot bar");
+                NotifPopUp.Instance.ShowNotification("Can't add paper to hot bar");
                 transform.SetParent(originalParent, true);
                 transform.localPosition = originalLocalPosition;
                 return;

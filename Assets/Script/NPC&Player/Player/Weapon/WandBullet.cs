@@ -53,16 +53,7 @@ public class WandBullet : MonoBehaviour
         else if (hitInfo.tag == "Enemy")
         {
             EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
-            EnemyHitEffect enemyHitEffect = hitInfo.GetComponentInParent<EnemyHitEffect>();
-            if(enemyHitEffect != null)
-            {
-                Debug.Log("dfsfnsjdkhfsdbjfsdgfsdgfkjsdfkjsdh");
-                enemyHitEffect.Flash(color);
-                enemyHitEffect.SplashAfterEffectInit( transform.position, (Vector2) direction);
-            }
-            enemy.DamageReceive(damageAmount + playerStatus.playerWeaponDamage);//Enemy hurt
-           /*  DamageNumberInEnemy damageNumber = hitInfo.GetComponentInChildren<DamageNumberInEnemy>();//Get the script damage text in enemy head
-            damageNumber.showDamageNumber(damageAmount); */
+            enemy.DamageReceive(damageAmount + playerStatus.playerWeaponDamage, direction);//Enemy hurt
             Instantiate(bulletHitParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);//Bullet destroy
         }

@@ -68,7 +68,7 @@ public class SaveController : MonoBehaviour
             saveData.shopSaveData = shopController.GetListItemInShop();
         }
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
-        PopUp.Instance.ShowNotification("Save success.");
+        NotifPopUp.Instance.ShowNotification("Save success.");
     }
     public void SaveGameByBed()
     {
@@ -109,7 +109,7 @@ public class SaveController : MonoBehaviour
             saveData.weaponListData.Add(weaponList[i].GetWeaponData());
         }
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
-        PopUp.Instance.ShowNotification("Save success.");
+        NotifPopUp.Instance.ShowNotification("Save success.");
     }
     public void LoadSave(Vector3 playerPos = new Vector3(), List<InventorySaveData> inventoryItemsTMP = null, List<InventorySaveData> hotBarItemsTMP = null, List<ItemInGroundSaveData> listItemsTMP = null, TimeSaveData timeDataTMP = null, PlayerSaveData playerDataTMP = null, MissionSaveData missionSaveDataTMP = null, bool loadWeaponData = true)
     {

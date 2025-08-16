@@ -118,7 +118,7 @@ public class MainMenu : MonoBehaviour
             StartCoroutine(LoadSceneAsync(saveData.saveScene));
         }
         else{
-            PopUp.Instance.ShowNotification("No save file found!");
+            NotifPopUp.Instance.ShowNotification("No save file found!");
         }
     }
     private IEnumerator LoadSceneAsync(string sceneName)
