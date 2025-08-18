@@ -12,7 +12,6 @@ public class EnemyHealthControl : MonoBehaviour
     private float enemyMaxHealth;
     private float enemyCurrentHealth;
     private EnemyHealthBar enemyHealthBar;
-    [SerializeField]private TextMeshProUGUI healthText;
     [SerializeField]private TextMeshProUGUI levelText;
     private void Start()
     {
@@ -31,13 +30,9 @@ public class EnemyHealthControl : MonoBehaviour
         enemyCurrentHealth = enemyMaxHealth;
 
         enemyHealthBar.SetMaxHealth(enemyMaxHealth);
-        enemyHealthBar.SetHealth(enemyCurrentHealth);
-        UpdateHealthText();
+        /* enemyHealthBar.UpdateHealthText(); */
     }
-    private void UpdateHealthText() //Update Health Text only when something change
-    {
-        healthText.text = $"{enemyCurrentHealth} / {enemyMaxHealth}";
-    }
+    
     public void EnemyHurt(float damage)
     {
         enemyCurrentHealth -= damage;
@@ -53,11 +48,7 @@ public class EnemyHealthControl : MonoBehaviour
                 standEnemy.Die();
             }
         }
-        UpdateHealthText();
+        enemyHealthBar.UpdateHealthText();
         enemyHealthBar.SetHealth(enemyCurrentHealth);
-    }
-    public float GetCurrentHealth()
-    {
-        return enemyCurrentHealth;
     }
 }

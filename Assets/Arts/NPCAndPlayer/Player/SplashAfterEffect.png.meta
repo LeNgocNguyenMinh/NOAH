@@ -128,8 +128,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 54
-        height: 62
+        width: 49
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: SplashAfterEffect_1
       rect:
         serializedVersion: 2
-        x: 54
+        x: 49
         y: 0
-        width: 54
-        height: 62
+        width: 49
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: SplashAfterEffect_2
       rect:
         serializedVersion: 2
-        x: 108
+        x: 98
         y: 0
-        width: 54
-        height: 62
+        width: 49
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: SplashAfterEffect_3
       rect:
         serializedVersion: 2
-        x: 162
+        x: 147
         y: 0
-        width: 54
-        height: 62
+        width: 49
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: SplashAfterEffect_4
       rect:
         serializedVersion: 2
-        x: 216
+        x: 196
         y: 0
-        width: 54
-        height: 62
+        width: 49
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc3e6511b2cc13b4bae34600e68d5795
+      spriteID: 0d647d446114d9a449ab1fd6acf5fed2
       internalID: 20635101
       vertices: []
       indices: 

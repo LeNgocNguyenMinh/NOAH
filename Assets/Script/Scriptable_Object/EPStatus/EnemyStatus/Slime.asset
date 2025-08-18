@@ -15,6 +15,6 @@ MonoBehaviour:
   enemyLevel: 1
   enemyName: Slime
   enemyBaseDamage: 1
-  enemyDamage: 8
-  enemyBaseHealth: 50
-  enemyMaxHealth: 50
+  enemyDamage: 2
+  enemyBaseHealth: 800
+  enemyMaxHealth: 800

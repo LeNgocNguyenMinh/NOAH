@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: BigTreeLog_04
     originalName: 
-    pivot: {x: 0.5425532, y: -0.010309277}
+    pivot: {x: 0.5604396, y: -0.010309277}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 94
+      width: 91
       height: 97
     spriteID: 792e568bd0a24bd40a1649977e96efe4
     spriteBone: []
@@ -156,7 +156,7 @@ ScriptedImporter:
       cellRect:
         x: -1
         y: 1
-        width: 94
+        width: 91
         height: 97
       spriteId: 792e568bd0a24bd40a1649977e96efe4
     linkedCells: []

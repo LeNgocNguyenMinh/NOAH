@@ -15,7 +15,9 @@ public class EnemyHurt : MonoBehaviour
             enemyHitEffect.Flash(color);
             enemyHitEffect.SplashAfterEffectInit( transform.position, (Vector2) direction);
         }
-        DamagePopUp damagePopUp = Instantiate(damagePopUpPref, dmgPopUpTrans.position, Quaternion.identity).GetComponent<DamagePopUp>();
+        int offSet = Random.Range(-1, 1);
+        Vector3 spawnPos = dmgPopUpTrans.position + new Vector3(offSet, 0, 0);
+        DamagePopUp damagePopUp = Instantiate(damagePopUpPref, spawnPos, Quaternion.identity).GetComponent<DamagePopUp>();
         damagePopUp.ShowDamage(damage);
         damagePopUp.ShowDamage(damage);
         healthControl.EnemyHurt(damage);
