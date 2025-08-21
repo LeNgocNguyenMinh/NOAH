@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,9 +129,9 @@ TextureImporter:
         x: 0
         y: 0
         width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,9 +150,9 @@ TextureImporter:
         x: 44
         y: 0
         width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,9 +171,9 @@ TextureImporter:
         x: 88
         y: 0
         width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,9 +192,9 @@ TextureImporter:
         x: 132
         y: 0
         width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,9 +213,9 @@ TextureImporter:
         x: 176
         y: 0
         width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,9 +234,9 @@ TextureImporter:
         x: 220
         y: 0
         width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,9 +255,9 @@ TextureImporter:
         x: 264
         y: 0
         width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,9 +276,9 @@ TextureImporter:
         x: 308
         y: 0
         width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,27 +286,6 @@ TextureImporter:
       bones: []
       spriteID: f6608423f8939944091a2530574ca749
       internalID: 681119817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeATK_8
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 44
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2856565}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86d67805b7f1bf4418fc903752b07607
-      internalID: 887480507
       vertices: []
       indices: 
       edges: []
@@ -330,7 +309,6 @@ TextureImporter:
       SlimeATK_5: 851097404
       SlimeATK_6: -1045276
       SlimeATK_7: 681119817
-      SlimeATK_8: 887480507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

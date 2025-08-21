@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,9 +129,9 @@ TextureImporter:
         x: 0
         y: 0
         width: 34
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5427222}
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,9 +150,9 @@ TextureImporter:
         x: 34
         y: 0
         width: 34
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5427222}
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,9 +171,9 @@ TextureImporter:
         x: 68
         y: 0
         width: 34
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5427222}
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,9 +192,9 @@ TextureImporter:
         x: 102
         y: 0
         width: 34
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5427222}
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,9 +213,9 @@ TextureImporter:
         x: 136
         y: 0
         width: 34
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5427222}
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,9 +234,9 @@ TextureImporter:
         x: 170
         y: 0
         width: 34
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5427222}
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,9 +255,9 @@ TextureImporter:
         x: 204
         y: 0
         width: 34
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5427222}
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,9 +276,9 @@ TextureImporter:
         x: 238
         y: 0
         width: 34
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5427222}
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,6 +286,48 @@ TextureImporter:
       bones: []
       spriteID: 897d7851ed6f4f345a159d3f37f05924
       internalID: -922001996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeMove_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa5f9b07f89996489ea8e2462455c18
+      internalID: -420726320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeMove_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a196670b95ff6e41a5db2cf9ae4776f
+      internalID: 804510575
       vertices: []
       indices: 
       edges: []
@@ -309,6 +351,8 @@ TextureImporter:
       SlimeMove_5: -145215911
       SlimeMove_6: 734630102
       SlimeMove_7: -922001996
+      SlimeMove_8: -420726320
+      SlimeMove_9: 804510575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

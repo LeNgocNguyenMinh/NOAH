@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,9 +129,9 @@ TextureImporter:
         x: 0
         y: 0
         width: 50
-        height: 23
-      alignment: 9
-      pivot: {x: 0.4961612, y: 0.545899}
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,9 +150,9 @@ TextureImporter:
         x: 50
         y: 0
         width: 50
-        height: 23
-      alignment: 9
-      pivot: {x: 0.4961612, y: 0.545899}
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,9 +171,9 @@ TextureImporter:
         x: 100
         y: 0
         width: 50
-        height: 23
-      alignment: 9
-      pivot: {x: 0.4961612, y: 0.545899}
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,9 +192,9 @@ TextureImporter:
         x: 150
         y: 0
         width: 50
-        height: 23
-      alignment: 9
-      pivot: {x: 0.4961612, y: 0.545899}
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,9 +213,9 @@ TextureImporter:
         x: 200
         y: 0
         width: 50
-        height: 23
-      alignment: 9
-      pivot: {x: 0.4961612, y: 0.545899}
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,27 +223,6 @@ TextureImporter:
       bones: []
       spriteID: 0bc2a37426e6f984ca22dbe9ea3e3d28
       internalID: 720648864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeIdle_5
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 0
-        width: 50
-        height: 23
-      alignment: 9
-      pivot: {x: 0.4961612, y: 0.545899}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1edc55f0113580243b0832ba42644f8e
-      internalID: 1050992343
       vertices: []
       indices: 
       edges: []
@@ -264,7 +243,6 @@ TextureImporter:
       SlimeIdle_2: 1794669956
       SlimeIdle_3: 1647475108
       SlimeIdle_4: 720648864
-      SlimeIdle_5: 1050992343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: House01_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.05479452}
+    pivot: {x: 0.5, y: -0.04054054}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,7 +131,7 @@ ScriptedImporter:
       x: 72
       y: 4
       width: 52
-      height: 73
+      height: 74
     spriteID: 123cd4f45559d8b4a864b1f5ae090888
     spriteBone: []
     spriteOutline: []
@@ -143,15 +143,15 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 4}
   - name: House01_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.05479452}
+    pivot: {x: 0.5, y: -0.04054054}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 69
-      y: 87
+      y: 88
       width: 52
-      height: 73
+      height: 74
     spriteID: 30aa609b6bc318840b1c56546984c5ad
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 69, y: 87}
+    uvTransform: {x: 69, y: 88}
   - name: House01_Frame_2
     originalName: 
-    pivot: {x: 0.49056602, y: -0.05479452}
+    pivot: {x: 0.49056602, y: -0.04054054}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 169
+      y: 171
       width: 53
-      height: 73
+      height: 74
     spriteID: 8b1b7f0b3e4074141937dea176253b09
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 169}
+    uvTransform: {x: 4, y: 171}
   - name: House01_Frame_3
     originalName: 
-    pivot: {x: 0.45614034, y: -0.05405405}
+    pivot: {x: 0.45614034, y: -0.040000003}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 87
+      y: 88
       width: 57
-      height: 74
+      height: 75
     spriteID: cc55c1c4f49fbc74591614a4e54090e0
     spriteBone: []
     spriteOutline: []
@@ -200,10 +200,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 87}
+    uvTransform: {x: 4, y: 88}
   - name: House01_Frame_4
     originalName: 
-    pivot: {x: 0.43333334, y: -0.05333334}
+    pivot: {x: 0.43333334, y: -0.039473686}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -211,7 +211,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 60
-      height: 75
+      height: 76
     spriteID: 083a431630ded144fac9955410c728d1
     spriteBone: []
     spriteOutline: []
@@ -235,45 +235,45 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 14
-        y: 4
+        y: 3
         width: 52
-        height: 73
+        height: 74
       spriteId: 123cd4f45559d8b4a864b1f5ae090888
     - name: House01_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 14
-        y: 4
+        y: 3
         width: 52
-        height: 73
+        height: 74
       spriteId: 30aa609b6bc318840b1c56546984c5ad
     - name: House01_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 14
-        y: 4
+        y: 3
         width: 53
-        height: 73
+        height: 74
       spriteId: 8b1b7f0b3e4074141937dea176253b09
     - name: House01_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 14
-        y: 4
+        y: 3
         width: 57
-        height: 74
+        height: 75
       spriteId: cc55c1c4f49fbc74591614a4e54090e0
     - name: House01_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
         x: 14
-        y: 4
+        y: 3
         width: 60
-        height: 75
+        height: 76
       spriteId: 083a431630ded144fac9955410c728d1
     linkedCells: []
     parentIndex: -1

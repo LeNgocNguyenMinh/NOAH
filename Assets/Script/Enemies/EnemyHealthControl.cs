@@ -24,7 +24,7 @@ public class EnemyHealthControl : MonoBehaviour
         }
         enemyStatus.SetDamage(enemyStatus.enemyBaseDamage + enemyStatus.enemyLevel);
         levelText.text = enemyStatus.enemyLevel + "";
-        enemyHealthBar = GetComponentInChildren<EnemyHealthBar>();
+        enemyHealthBar = GetComponent<EnemyHealthBar>();
 
         enemyMaxHealth = enemyStatus.enemyMaxHealth;
         enemyCurrentHealth = enemyMaxHealth;

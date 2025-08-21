@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: SlimeATK_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.5217391}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 92
-      y: 55
-      width: 28
+      x: 40
+      y: 32
+      width: 36
       height: 23
     spriteID: 53a619e9ae61d714591067a8fe00c1ee
     spriteBone: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 92, y: 55}
+    uvTransform: {x: 40, y: 32}
   - name: SlimeATK_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 89
-      width: 36
-      height: 19
+      x: 40
+      y: 4
+      width: 44
+      height: 20
     spriteID: c1b29b1c80697e34d9de5d52b9b778cd
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 89}
+    uvTransform: {x: 40, y: 4}
   - name: SlimeATK_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.54545456}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 40
-      y: 55
-      width: 44
-      height: 16
+      y: 63
+      width: 34
+      height: 22
     spriteID: fbfc2efdaf1df3745bb37f5967db0e82
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 55}
+    uvTransform: {x: 40, y: 63}
   - name: SlimeATK_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.40000004}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 48
-      y: 89
-      width: 34
-      height: 18
+      x: 4
+      y: 156
+      width: 28
+      height: 30
     spriteID: 30c2bd6c61c106a47a55e0f4a9f1c8bb
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 89}
+    uvTransform: {x: 4, y: 156}
   - name: SlimeATK_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 55
-      width: 28
-      height: 26
+      y: 112
+      width: 24
+      height: 36
     spriteID: 1a14013195e51b1479ed94da05046af6
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 55}
+    uvTransform: {x: 4, y: 112}
   - name: SlimeATK_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.27906978}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 72
-      y: 4
-      width: 24
-      height: 32
+      x: 4
+      y: 194
+      width: 18
+      height: 43
     spriteID: 17f925d9315302f469b953df311e974b
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 72, y: 4}
+    uvTransform: {x: 4, y: 194}
   - name: SlimeATK_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.26666668}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 104
-      y: 4
-      width: 18
-      height: 39
+      x: 4
+      y: 59
+      width: 24
+      height: 45
     spriteID: ce7d0e4fde3b03f4c82dfbd16268c0ac
     spriteBone: []
     spriteOutline: []
@@ -260,30 +260,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 104, y: 4}
+    uvTransform: {x: 4, y: 59}
   - name: SlimeATK_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 40
-      y: 4
-      width: 24
-      height: 41
-    spriteID: d0256ae7c072453409ae7de941b5811f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 40, y: 4}
-  - name: SlimeATK_Frame_8
-    originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.25531915}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -291,8 +271,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 28
-      height: 43
-    spriteID: 595945cae094ebb46bd87a53e415c80a
+      height: 47
+    spriteID: d0256ae7c072453409ae7de941b5811f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -314,83 +294,74 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 18
-        y: 0
-        width: 28
+        x: 14
+        y: 12
+        width: 36
         height: 23
       spriteId: 53a619e9ae61d714591067a8fe00c1ee
     - name: SlimeATK_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 0
-        width: 36
-        height: 19
+        x: 10
+        y: 12
+        width: 44
+        height: 20
       spriteId: c1b29b1c80697e34d9de5d52b9b778cd
     - name: SlimeATK_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 0
-        width: 44
-        height: 16
+        x: 15
+        y: 12
+        width: 34
+        height: 22
       spriteId: fbfc2efdaf1df3745bb37f5967db0e82
     - name: SlimeATK_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 15
-        y: 0
-        width: 34
-        height: 18
+        x: 18
+        y: 12
+        width: 28
+        height: 30
       spriteId: 30c2bd6c61c106a47a55e0f4a9f1c8bb
     - name: SlimeATK_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 18
-        y: 0
-        width: 28
-        height: 26
+        x: 20
+        y: 12
+        width: 24
+        height: 36
       spriteId: 1a14013195e51b1479ed94da05046af6
     - name: SlimeATK_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 0
-        width: 24
-        height: 32
+        x: 23
+        y: 12
+        width: 18
+        height: 43
       spriteId: 17f925d9315302f469b953df311e974b
     - name: SlimeATK_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 23
-        y: 0
-        width: 18
-        height: 39
+        x: 20
+        y: 12
+        width: 24
+        height: 45
       spriteId: ce7d0e4fde3b03f4c82dfbd16268c0ac
     - name: SlimeATK_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 0
-        width: 24
-        height: 41
-      spriteId: d0256ae7c072453409ae7de941b5811f
-    - name: SlimeATK_Frame_8
-      frameIndex: 8
-      additiveSortOrder: 0
-      cellRect:
         x: 18
-        y: 0
+        y: 12
         width: 28
-        height: 43
-      spriteId: 595945cae094ebb46bd87a53e415c80a
+        height: 47
+      spriteId: d0256ae7c072453409ae7de941b5811f
     linkedCells: []
     parentIndex: -1
   platformSettings:

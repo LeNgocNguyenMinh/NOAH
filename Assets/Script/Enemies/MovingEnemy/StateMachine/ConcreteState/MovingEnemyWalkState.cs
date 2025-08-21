@@ -32,7 +32,7 @@ public class MovingEnemyWalkState : MovingEnemyState
         direction = (targetPos - enemy.transform.position).normalized; 
         enemy.Move(direction, enemy.WalkSpeed);
         walkCount -= Time.deltaTime;
-        if((targetPos - enemy.transform.position).magnitude < 0.1f)
+        if((targetPos - enemy.transform.position).magnitude < 0.1f || walkCount <= 0f)
         {
             targetPos = GetRandomPointInCircle();
             walkCount = enemy.WalkDuration;
