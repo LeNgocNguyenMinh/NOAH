@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84081a8e44b0b1a4b934000152e29f14
-      internalID: -1704142946
+      spriteID: c7268976dc4d0cc45b61d7abe400fc93
+      internalID: 233948438
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3336b6f46fe334c4e8fa92ceea59904e
-      internalID: -63128279
+      spriteID: 9bdd4b482f5dbc14b8996885ebcd2038
+      internalID: 544037150
       vertices: []
       indices: 
       edges: []
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e5dd5457e440084e8bb87afc5acac79
-      internalID: 865979991
+      spriteID: fec1b37f1389e684ab0f24fd36e4865a
+      internalID: 652971251
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4861b39113f6bd4482255727a74decd
-      internalID: -1091878482
+      spriteID: 5fc2d7bf63788ab48b96b7619c5f6adc
+      internalID: 1999563406
       vertices: []
       indices: 
       edges: []
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53447388d6f42ba40b56c850c0cbb094
-      internalID: 688579936
+      spriteID: b37a003fd60a6f44d897e59b051b383d
+      internalID: 138956523
       vertices: []
       indices: 
       edges: []
@@ -242,50 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d21fa32a7c371c74abe3b6a676342d17
-      internalID: 1406717435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TallGrass_04_Grow_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca3fe551c767dbe4da563af9fa3503b4
-      internalID: -1727335002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TallGrass_04_Grow_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5473bb8515bb4bd4abfd1a8da35cb920
-      internalID: -745210728
+      spriteID: 8ddd4a75d39b572409644d893a3bdb05
+      internalID: -683326210
       vertices: []
       indices: 
       edges: []
@@ -301,14 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TallGrass_04_Grow_0: -1704142946
-      TallGrass_04_Grow_1: -63128279
-      TallGrass_04_Grow_2: 865979991
-      TallGrass_04_Grow_3: -1091878482
-      TallGrass_04_Grow_4: 688579936
-      TallGrass_04_Grow_5: 1406717435
-      TallGrass_04_Grow_6: -1727335002
-      TallGrass_04_Grow_7: -745210728
+      TallGrass_04_Grow_0: 233948438
+      TallGrass_04_Grow_1: 544037150
+      TallGrass_04_Grow_2: 652971251
+      TallGrass_04_Grow_3: 1999563406
+      TallGrass_04_Grow_4: 138956523
+      TallGrass_04_Grow_5: -683326210
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

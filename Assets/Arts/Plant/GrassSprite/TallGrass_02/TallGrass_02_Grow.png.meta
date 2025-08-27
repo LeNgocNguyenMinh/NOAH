@@ -248,27 +248,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: TallGrass_02_Grow_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 178b30269108d8c4b91240b4f44110a0
-      internalID: -1796340276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -286,7 +265,6 @@ TextureImporter:
       TallGrass_02_Grow_3: -1536541084
       TallGrass_02_Grow_4: 2021510450
       TallGrass_02_Grow_5: 1122342414
-      TallGrass_02_Grow_6: -1796340276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -60,8 +60,7 @@ public class TimeManager : MonoBehaviour
             }
             if(FindObjectOfType<ShopController>()!=null)
             {
-                shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
-                shopController.AddItemToShop();
+                ShopController.Instance.AddItemToShop();
             }
         }
 
@@ -75,13 +74,12 @@ public class TimeManager : MonoBehaviour
 
         if(FindObjectOfType<ShopInteractive>()!=null)
         {
-            shopInteractive = FindObjectOfType<ShopInteractive>().GetComponent<ShopInteractive>();
             if(10 <= hour && hour <= 22)
             {
-                shopInteractive.canOpenShop = true;
+                ShopController.Instance.canOpenShop = true;
             }
             else{
-                shopInteractive.canOpenShop = false;
+                ShopController.Instance.canOpenShop = false;
             }
         }
         

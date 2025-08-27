@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Fences
     originalName: 
-    pivot: {x: 0.6481481, y: -0.33898306}
+    pivot: {x: 0.6481481, y: -0.31666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,7 +131,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 54
-      height: 59
+      height: 60
     spriteID: 2b63f99f75cf9e7429383d95fa641d30
     spriteBone: []
     spriteOutline: []
@@ -155,9 +155,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 5
-        y: 20
+        y: 19
         width: 54
-        height: 59
+        height: 60
       spriteId: 2b63f99f75cf9e7429383d95fa641d30
     linkedCells: []
     parentIndex: -1

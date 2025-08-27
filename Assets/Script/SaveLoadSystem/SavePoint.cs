@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SavePoint : MonoBehaviour
@@ -26,7 +24,7 @@ public class SavePoint : MonoBehaviour
                     SaveController.Instance.SaveGame();
                 }
             }
-            if(!triggerNearAnimation)
+            /* if(!triggerNearAnimation)
             {
                 triggerNearAnimation = true;
                 triggerFarAnimation = false;
@@ -36,9 +34,9 @@ public class SavePoint : MonoBehaviour
                     animator.SetTrigger("isNear");
                 }
                 
-            }
+            } */
         }
-        else
+        /* else
         {
             if(!triggerFarAnimation)
             {
@@ -50,6 +48,6 @@ public class SavePoint : MonoBehaviour
                     animator.SetTrigger("isFar");
                 }
             }
-        }
+        } */
     }
 }

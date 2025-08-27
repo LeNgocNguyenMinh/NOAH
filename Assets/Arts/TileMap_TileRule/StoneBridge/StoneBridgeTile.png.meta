@@ -620,8 +620,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f7657fabc322d64887ce6a90b0ded4c
-      internalID: 205700388
+      spriteID: 524bc174792d58945b1219202c8a216a
+      internalID: 1479610125
       vertices: []
       indices: 
       edges: []
@@ -641,8 +641,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 212e6c5f963824d47ab51ace718a7d21
-      internalID: -900826985
+      spriteID: 2f5acecc336d7ef41893568a4bffc9dc
+      internalID: -2112249760
       vertices: []
       indices: 
       edges: []
@@ -674,8 +674,8 @@ TextureImporter:
       StoneBridgeTile_20: 735182598
       StoneBridgeTile_21: -1189899259
       StoneBridgeTile_22: -702302734
-      StoneBridgeTile_23: 205700388
-      StoneBridgeTile_24: -900826985
+      StoneBridgeTile_23: 1479610125
+      StoneBridgeTile_24: -2112249760
       StoneBridgeTile_3: -1207794928
       StoneBridgeTile_4: -1174878540
       StoneBridgeTile_5: -2125724070

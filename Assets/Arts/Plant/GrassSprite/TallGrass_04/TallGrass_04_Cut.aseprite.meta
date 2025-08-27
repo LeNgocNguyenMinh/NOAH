@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: TallGrass_04_Cut
     originalName: 
-    pivot: {x: 1.0714287, y: -1.1851852}
+    pivot: {x: 1.0344827, y: -1.1}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 28
-      height: 27
+      width: 29
+      height: 30
     spriteID: 0235096fb53332d47b4d3c20ea451292
     spriteBone: []
     spriteOutline: []
@@ -143,15 +143,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: TallGrass_04_Cut_Frame_1
     originalName: 
-    pivot: {x: 1.1666667, y: -4.571429}
+    pivot: {x: 1.4705882, y: -2.75}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 39
-      width: 24
-      height: 7
+      y: 42
+      width: 17
+      height: 12
     spriteID: 5df109bd082a97b4e8ef069f58445e4f
     spriteBone: []
     spriteOutline: []
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 39}
+    uvTransform: {x: 4, y: 42}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -175,18 +175,18 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 2
-        y: 32
-        width: 28
-        height: 27
+        y: 33
+        width: 29
+        height: 30
       spriteId: 0235096fb53332d47b4d3c20ea451292
     - name: TallGrass_04_Cut_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 4
-        y: 32
-        width: 24
-        height: 7
+        x: 7
+        y: 33
+        width: 17
+        height: 12
       spriteId: 5df109bd082a97b4e8ef069f58445e4f
     linkedCells: []
     parentIndex: -1
