@@ -79,7 +79,7 @@ public class UIInventoryController : MonoBehaviour
         uiInventoryPage = GetComponent<UIInventoryPage>();
         uiInventoryPage.InventoryUpdateOpen();
         playerLoadout = GetComponent<PlayerLoadout>();
-        playerLoadout.CheckClothStatus();
+        /* playerLoadout.CheckClothStatus(); */
         invPanel.SetAsLastSibling();
         MoveUp();
     }

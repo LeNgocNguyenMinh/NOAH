@@ -275,10 +275,6 @@ public class SaveController : MonoBehaviour
                     { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -3.53, ""y"": -8.92, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""HPPotion_03"", ""itemPos"": { ""x"": -2.29, ""y"": -8.72, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""HPPotion_01"", ""itemPos"": { ""x"": -23.83, ""y"": -1.7, ""z"": 0.0 }, ""isCollect"": false },
-                    { ""itemID"": ""FireCloth_Hat_FireHat"", ""itemPos"": { ""x"": 7.02, ""y"": -7.23, ""z"": 0.0 }, ""isCollect"": false },
-                    { ""itemID"": ""FireCloth_Coat_FireCoat"", ""itemPos"": { ""x"": 11.57, ""y"": -7.08, ""z"": 0.0 }, ""isCollect"": false },
-                    { ""itemID"": ""IceCloth_Coat_IceCoat"", ""itemPos"": { ""x"": 10.64, ""y"": -10.47, ""z"": 0.0 }, ""isCollect"": false },
-                    { ""itemID"": ""IceCloth_Hat_IceHat"", ""itemPos"": { ""x"": 5.42, ""y"": -10.25, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": -15.0, ""y"": 9.86, ""z"": 0.0 }, ""isCollect"": false },
                     { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": -1.31, ""y"": 1.46, ""z"": 0.0 }, ""isCollect"": false }
                 ],

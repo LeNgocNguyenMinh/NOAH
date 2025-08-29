@@ -146,7 +146,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
                 NotifPopUp.Instance.ShowNotification("Health is full.");
             }
         }
-        else if(itemID.Contains("Cloth"))
+        /* else if(itemID.Contains("Cloth"))
         {
             if(!isHotBarSlot)
             {
@@ -155,7 +155,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
             DeleteItem();
             UIInventoryDescription.Instance.ItemHideInformation();
             choicePanel.SetActive(false);//hide the select panel
-        }
+        } */
     }
     public void DeleteOne()//Remove quantity of item
     {
