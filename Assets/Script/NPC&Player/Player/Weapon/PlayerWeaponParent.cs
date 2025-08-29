@@ -11,6 +11,7 @@ public class PlayerWeaponParent : MonoBehaviour
     public SpriteRenderer wandSprite;
     public SpriteRenderer physicATKSprite;
     public float delayWandCount = 0f; // Delay count for wand attack, used to prevent multiple attacks in a short time
+    [Header("----EnergyBar----")]
     [SerializeField]private Image bulletEnergyFront;
     [SerializeField]private Image bulletEnergyBack;
     [SerializeField]private Image hitEnergyFront;
@@ -27,6 +28,10 @@ public class PlayerWeaponParent : MonoBehaviour
     public int currentBullet; 
     public bool playerCanATK = true; // Can player shoot or not, set to false when player is reloading or something else
     private GameObject bulletPrefap;
+/*     [Header("----TestBullet----")]
+    [SerializeField]private GameObject testBullet;
+    [SerializeField]private Vector2 groundDispenseVelocity;
+    [SerializeField]private Vector2 verticalDispenseVelocity; */
     private void Awake()
     {
         if (Instance == null)
@@ -57,6 +62,13 @@ public class PlayerWeaponParent : MonoBehaviour
         WeaponRotate();
         PlayerWandATK.Instance.CheckWandATK();  
         PlayerMeleeATK.Instance.CheckMeleeATK();
+        /* if(Input.GetKeyDown(KeyCode.Q))
+        {
+            FakeHeightObject tmpBullet = Instantiate(testBullet, transform.position, Quaternion.identity).GetComponent<FakeHeightObject>();
+            tmpBullet.Initialize(transform.right * Random.Range(groundDispenseVelocity.x, groundDispenseVelocity.y), 
+            Random.Range(verticalDispenseVelocity.x, verticalDispenseVelocity.y));
+            
+        } */
     }
     public void ActiveWandATK()
     {

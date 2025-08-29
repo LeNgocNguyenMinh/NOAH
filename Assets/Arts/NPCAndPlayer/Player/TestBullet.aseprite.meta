@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e9c5fe92ab2691a429c3f5ed7ce58cc4
+guid: b980930527d2c334fba8bc903bb81bee
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,78 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: PhysicATKPartical_Frame_0
+  - name: TestBullet
     originalName: 
-    pivot: {x: 0.33333334, y: -2.3333335}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 37
-      y: 80
-      width: 6
-      height: 6
-    spriteID: cee4445fae29a574bab35845bc5d7c0b
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 37, y: 80}
-  - name: PhysicATKPartical_Frame_1
-    originalName: 
-    pivot: {x: 0.42105263, y: -0.42105263}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 39
-      y: 43
-      width: 19
-      height: 19
-    spriteID: 1def325097aedd24fa23b8292c43c8b2
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 39, y: 43}
-  - name: PhysicATKPartical_Frame_2
-    originalName: 
-    pivot: {x: 0.48, y: -0.11111111}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 80
-      width: 25
-      height: 27
-    spriteID: a348f3d3f5ea60940a6352b78356130b
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 80}
-  - name: PhysicATKPartical_Frame_3
-    originalName: 
-    pivot: {x: 0.51724136, y: -0.032258064}
+    pivot: {x: 0.5, y: -0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 29
-      height: 31
-    spriteID: bf9100fb3d0d7284d8c3e31c7405d3e6
+      width: 28
+      height: 28
+    spriteID: be88c707ea439d74db98aeb8f5bf3742
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,80 +141,24 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: PhysicATKPartical_Frame_4
-    originalName: 
-    pivot: {x: 0.5185185, y: -0.06896552}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 43
-      width: 27
-      height: 29
-    spriteID: 9d024017e9fa3c84ca4df0ede78467c3
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -612586924
-    name: PhysicATKPartical
+    guid: -792805042
+    name: TestBullet
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: PhysicATKPartical_Frame_0
+    - name: TestBullet
       frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 14
-        y: 14
-        width: 6
-        height: 6
-      spriteId: cee4445fae29a574bab35845bc5d7c0b
-    - name: PhysicATKPartical_Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 8
-        y: 8
-        width: 19
-        height: 19
-      spriteId: 1def325097aedd24fa23b8292c43c8b2
-    - name: PhysicATKPartical_Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 4
-        y: 3
-        width: 25
-        height: 27
-      spriteId: a348f3d3f5ea60940a6352b78356130b
-    - name: PhysicATKPartical_Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 1
-        y: 1
-        width: 29
-        height: 31
-      spriteId: bf9100fb3d0d7284d8c3e31c7405d3e6
-    - name: PhysicATKPartical_Frame_4
-      frameIndex: 4
       additiveSortOrder: 0
       cellRect:
         x: 2
         y: 2
-        width: 27
-        height: 29
-      spriteId: 9d024017e9fa3c84ca4df0ede78467c3
+        width: 28
+        height: 28
+      spriteId: be88c707ea439d74db98aeb8f5bf3742
     linkedCells: []
     parentIndex: -1
   platformSettings:
