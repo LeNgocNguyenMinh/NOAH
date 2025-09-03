@@ -21,7 +21,7 @@ public class MapTransition : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Player"))
         {
-            playerObject = FindObjectOfType<PlayerControl>().gameObject;
+            playerObject = FindObjectOfType<Player>().gameObject;
             confiner.m_BoundingShape2D = mapBoundry;
             UpdatePlayerPosition(playerObject);
         }

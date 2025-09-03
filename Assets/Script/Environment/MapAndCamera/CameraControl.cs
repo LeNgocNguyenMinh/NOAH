@@ -38,10 +38,10 @@ public class CameraControl : MonoBehaviour
     }
     /* private CinemachineVirtualCamera _cinemachineVirtual;
 
-    private PlayerControl _playerControl;
+    private Player _playerControl;
     private void Start()
     {
-        _playerControl = GameObject.FindObjectOfType<PlayerControl>();
+        _playerControl = GameObject.FindObjectOfType<Player>();
         _cinemachineVirtual = gameObject.GetComponent<CinemachineVirtualCamera>();
         _cinemachineVirtual.Follow = _playerControl.transform;
         StartCoroutine(OnSetCamera());
@@ -50,7 +50,7 @@ public class CameraControl : MonoBehaviour
     public IEnumerator OnSetCamera()
     {
         yield return new WaitForSeconds(0.2f);
-        _playerControl = GameObject.FindObjectOfType<PlayerControl>();
+        _playerControl = GameObject.FindObjectOfType<Player>();
         _cinemachineVirtual = gameObject.GetComponent<CinemachineVirtualCamera>();
         _cinemachineVirtual.Follow = _playerControl.transform;
     } */

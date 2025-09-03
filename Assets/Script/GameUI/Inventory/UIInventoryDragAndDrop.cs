@@ -93,7 +93,7 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
         {
             if(eventData.pointerEnter == null)//mean you drop it outside inv
             {
-                Transform playerTrans = FindObjectOfType<PlayerControl>().transform;
+                Transform playerTrans = FindObjectOfType<Player>().transform;
                 // Random góc
                 float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
 

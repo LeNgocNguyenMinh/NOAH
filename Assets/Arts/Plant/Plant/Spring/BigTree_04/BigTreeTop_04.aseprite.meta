@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: BigTreeTop_04
     originalName: 
-    pivot: {x: 0.5050505, y: -0.33333334}
+    pivot: {x: 0.53535354, y: -0.46666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -154,8 +154,8 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 25
+        x: 3
+        y: 35
         width: 99
         height: 75
       spriteId: f5769eea89bbc944eb727469044c06a3
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 112, y: 112}

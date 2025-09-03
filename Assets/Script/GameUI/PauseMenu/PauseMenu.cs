@@ -9,6 +9,7 @@ using DG.Tweening;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static PauseMenu Instance;
     private SpawnControl spawnControl;
     [SerializeField]private RectTransform pauseMenuPanel;
     [SerializeField]private Vector2 hiddenPosition;
@@ -29,6 +30,17 @@ public class PauseMenu : MonoBehaviour
     private bool isOver = false;
     private bool panelShow = false;
 
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Update is called once per frame
     void Update()
     {

@@ -14,7 +14,7 @@ public class FDDetectStartBattle : MonoBehaviour
     [SerializeField]private GameObject gateLRPrefab;
     [SerializeField]private GameObject fdBossTimeLine;
     [SerializeField]private BoxCollider2D boxCollider2D;
-    private PlayerControl playerControl;
+    private Player playerControl;
     private List<GameObject> listOfGate = new List<GameObject>();
     private GameObject bossObject;
     private bool isSummon = false;
@@ -24,7 +24,7 @@ public class FDDetectStartBattle : MonoBehaviour
         if(collider.tag == "Player" && !isSummon)
         {
             isSummon = true;
-            playerControl = FindObjectOfType<PlayerControl>();
+            playerControl = FindObjectOfType<Player>();
             playerControl.transform.position = moveTo.position;
             fdBossTimeLine.SetActive(true);
             boxCollider2D.enabled = false;

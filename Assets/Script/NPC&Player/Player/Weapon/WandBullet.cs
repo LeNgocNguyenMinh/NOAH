@@ -26,7 +26,7 @@ public class WandBullet : MonoBehaviour
     }
     public void Awake()
     {
-        player = FindObjectOfType<PlayerControl>().transform;
+        player = FindObjectOfType<Player>().transform;
     }
 
     private void Update()

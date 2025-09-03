@@ -3,7 +3,7 @@ using UnityEngine;
 public class SavePoint : MonoBehaviour
 {
     private Animator animator;
-    private PlayerControl playerControl;
+    private Player playerControl;
     private ObjectInteraction objectInteraction;
     private bool triggerNearAnimation = false;
     private bool triggerFarAnimation = false;

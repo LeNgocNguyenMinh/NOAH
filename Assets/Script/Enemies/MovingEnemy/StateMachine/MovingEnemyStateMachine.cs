@@ -12,7 +12,6 @@ public class MovingEnemyStateMachine
     {
         CurrentEnemyState.ExitState();
         CurrentEnemyState = newState;
-        Debug.Log("State changed to: " + CurrentEnemyState.GetType().Name);
         CurrentEnemyState.EnterState();
     }
 }

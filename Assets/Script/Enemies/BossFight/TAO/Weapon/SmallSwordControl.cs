@@ -14,7 +14,7 @@ public class SmallSwordControl : MonoBehaviour
     [SerializeField]private float maxDistanceOfSmallSword;
     private void Start()
     {
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
         startPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
         changeDirect = false;

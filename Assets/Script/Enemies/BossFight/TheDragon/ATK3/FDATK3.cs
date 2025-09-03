@@ -15,7 +15,7 @@ public class FDATK3 : MonoBehaviour
     [SerializeField]private float spawnRadius = 5f; 
     private int spawnTimeCount = 0; 
     private Transform playerTransform;
-    private PlayerControl playerControl;
+    private Player playerControl;
     private Vector3 spawnPosition;
     ////////////////
     private Vector3[] positions;
@@ -37,7 +37,7 @@ public class FDATK3 : MonoBehaviour
             CancelInvoke("CreateSpawnPoints");
             return;
         }
-        playerControl = FindObjectOfType<PlayerControl>().GetComponent<PlayerControl>();
+        playerControl = FindObjectOfType<Player>().GetComponent<Player>();
         Transform playerTrans = playerControl.transform;
         spawnPoints.Clear();
         spawnPoints.Add(playerTrans.position);

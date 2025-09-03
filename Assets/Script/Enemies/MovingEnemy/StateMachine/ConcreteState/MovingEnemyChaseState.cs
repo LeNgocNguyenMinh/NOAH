@@ -21,7 +21,7 @@ public class MovingEnemyChaseState : MovingEnemyState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        playerPos = UnityEngine.Object.FindObjectOfType<PlayerControl>().GetComponent<PlayerControl>().transform.position;
+        playerPos = UnityEngine.Object.FindObjectOfType<Player>().GetComponent<Player>().transform.position;
         direction = (playerPos - enemy.transform.position).normalized; 
         enemy.Move(direction, enemy.ChaseSpeed);
         if(enemy.IsInAttackRange)

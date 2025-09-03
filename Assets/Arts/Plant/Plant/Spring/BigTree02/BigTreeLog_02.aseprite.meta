@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: BigTreeLog_02
     originalName: 
-    pivot: {x: 0.4042553, y: -0.39999998}
+    pivot: {x: 0.46808508, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -154,8 +154,8 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 31
-        y: 24
+        x: 26
+        y: 0
         width: 47
         height: 60
       spriteId: deb6cc7dc72246442a95fa3416d5bfff
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 96, y: 96}

@@ -62,7 +62,7 @@ public class ChargeShotATK1 : MonoBehaviour
         transform.parent = null;
         Animator animator = GetComponent<Animator>();
         animator.SetTrigger("shotShootATK1");
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
         direct = (playerTransform.position - transform.position).normalized;
         float angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);

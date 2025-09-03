@@ -9,7 +9,7 @@ public class HealthControl : MonoBehaviour
     public static HealthControl Instance;
     private PauseMenu pauseMenu;
     [SerializeField]private PlayerStatus playerStatus;
-    [SerializeField]private PlayerControl playerControl;
+    [SerializeField]private Player playerControl;
     private HealthBar healthBar;// Health bar
     private float healthCurrentValue;// Health current value
     private float healthMaxValue; // Health max value need to achive for level up
@@ -93,6 +93,6 @@ public class HealthControl : MonoBehaviour
         healthBar.UpdateHealthText();
         animator = GetComponent<Animator>();
         animator.SetTrigger("isRespawn");
-        playerControl.SetIsAlive(true);
+        /* playerControl.SetIsAlive(true); */
     }
 }

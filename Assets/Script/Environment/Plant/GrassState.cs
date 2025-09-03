@@ -25,6 +25,9 @@ public class GrassState : MonoBehaviour
             animator.SetTrigger("Cut");
             canGrow = true;
         }
+        else{
+            return;
+        }
         StartCoroutine(AnimationCount());
     }
     private IEnumerator AnimationCount()
@@ -35,7 +38,9 @@ public class GrassState : MonoBehaviour
             animator.SetTrigger("Grow");
             canGrow = false;
         }
-        yield return new WaitForSeconds(5f);
+    }
+    public void SetCanCut()
+    {
         canCut = true;
     }
 }

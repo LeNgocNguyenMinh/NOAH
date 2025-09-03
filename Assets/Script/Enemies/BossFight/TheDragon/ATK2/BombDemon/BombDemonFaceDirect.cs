@@ -11,7 +11,7 @@ public class BombDemonFaceDirect : MonoBehaviour
     }
     private void FaceDirect()
     {
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
         if(playerTransform.position.x > transform.position.x && transform.localScale.x < 0)
         {
             transform.localScale = new Vector3(transform.localScale.x *-1, transform.localScale.y, transform.localScale.z);

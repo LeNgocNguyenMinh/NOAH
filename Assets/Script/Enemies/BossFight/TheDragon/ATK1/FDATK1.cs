@@ -76,7 +76,7 @@ public class FDATK1 : MonoBehaviour
     }
     private void HeadRotate()
     {
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
         direction = playerTransform.position - head.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);

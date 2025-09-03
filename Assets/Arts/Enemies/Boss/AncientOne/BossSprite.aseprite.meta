@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: BossSprite
     originalName: 
-    pivot: {x: 0.50000006, y: -0.79591835}
+    pivot: {x: 0.5, y: -0.10465117}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 82
-      height: 98
+      width: 60
+      height: 86
     spriteID: 13608455595134a4db7934d4fd68a7e0
     spriteBone: []
     spriteOutline: []
@@ -141,6 +141,106 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: BossSprite_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.10465117}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 98
+      width: 60
+      height: 86
+    spriteID: 7f334d7688b2b134da2026f7c5a77744
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 98}
+  - name: BossSprite_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.10465117}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 60
+      height: 86
+    spriteID: 1e3f37773a5efc546875f24db3efb0ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: BossSprite_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.10465117}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 98
+      width: 60
+      height: 86
+    spriteID: e0f1a6e2301ab2c4287b64380d51dcdf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 98}
+  - name: BossSprite_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.10588236}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 98
+      width: 60
+      height: 85
+    spriteID: 35dee746f12190e499940461570bfc9c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 98}
+  - name: BossSprite_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.10465117}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 4
+      width: 60
+      height: 86
+    spriteID: a3f4039b28e4e4942acab47d8d0e7085
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,15 +250,60 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: BossSprite
+    - name: BossSprite_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 59
-        y: 78
-        width: 82
-        height: 98
+        x: 18
+        y: 9
+        width: 60
+        height: 86
       spriteId: 13608455595134a4db7934d4fd68a7e0
+    - name: BossSprite_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 9
+        width: 60
+        height: 86
+      spriteId: 7f334d7688b2b134da2026f7c5a77744
+    - name: BossSprite_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 9
+        width: 60
+        height: 86
+      spriteId: 1e3f37773a5efc546875f24db3efb0ba
+    - name: BossSprite_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 9
+        width: 60
+        height: 86
+      spriteId: e0f1a6e2301ab2c4287b64380d51dcdf
+    - name: BossSprite_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 9
+        width: 60
+        height: 85
+      spriteId: 35dee746f12190e499940461570bfc9c
+    - name: BossSprite_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 9
+        width: 60
+        height: 86
+      spriteId: a3f4039b28e4e4942acab47d8d0e7085
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +322,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 200, y: 200}
+  canvasSize: {x: 96, y: 96}

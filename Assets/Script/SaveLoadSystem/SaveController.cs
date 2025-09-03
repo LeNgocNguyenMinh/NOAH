@@ -41,7 +41,7 @@ public class SaveController : MonoBehaviour
         SaveData saveData = new SaveData
         {
             saveScene = SceneManager.GetActiveScene().name,
-            playerPosition = FindObjectOfType<PlayerControl>().transform.position,
+            playerPosition = FindObjectOfType<Player>().transform.position,
             inventorySaveData = uiInventoryPage?.GetInventoryItems(),
             mapBoundary = existingData.mapBoundary,
             hotBarSaveData = hotBarManager?.GetHotBarItems(),
@@ -82,7 +82,7 @@ public class SaveController : MonoBehaviour
         SaveData saveData = new SaveData
         {
             saveScene = SceneManager.GetActiveScene().name,
-            playerPosition = FindObjectOfType<PlayerControl>().transform.position,
+            playerPosition = FindObjectOfType<Player>().transform.position,
             inventorySaveData = uiInventoryPage?.GetInventoryItems(),
             mapBoundary = existingData.mapBoundary,
             hotBarSaveData = hotBarManager?.GetHotBarItems(),
@@ -118,10 +118,10 @@ public class SaveController : MonoBehaviour
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
             if(playerPos != Vector3.zero)
             {
-                FindObjectOfType<PlayerControl>().transform.position = playerPos;
+                FindObjectOfType<Player>().transform.position = playerPos;
             }
             else{
-                FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
+                FindObjectOfType<Player>().transform.position = saveData.playerPosition;
             }
             if(FindObjectOfType<CinemachineConfiner>()!=null && saveData.mapBoundary != null)
             {
@@ -208,7 +208,7 @@ public class SaveController : MonoBehaviour
         {
             Debug.Log("Co file new game");
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(newGameSaveLocation));
-            FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
+            FindObjectOfType<Player>().transform.position = saveData.playerPosition;
             FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
             uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
             timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();

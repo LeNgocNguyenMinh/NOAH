@@ -12,7 +12,7 @@ public class CameraTransition : MonoBehaviour
     void Start()
     {
         currentCollider = allColliders[0];
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
     }
     void Update()
     {

@@ -12,7 +12,7 @@ public class BossAttackStyle1 : MonoBehaviour
     private Transform playerTransform;
     private void Start()
     {
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
     }
     public void ShootBulletTo()
     {

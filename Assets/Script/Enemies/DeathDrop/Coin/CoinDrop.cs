@@ -16,7 +16,7 @@ public class CoinDrop : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); 
-        player = FindObjectOfType<PlayerControl>().transform;
+        player = FindObjectOfType<Player>().transform;
         Invoke("StartMoving", delayBeforeMoving); 
     }
     void StartMoving()

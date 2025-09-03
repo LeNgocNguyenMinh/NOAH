@@ -30,7 +30,7 @@ public class BombDemonMovementControl : MonoBehaviour
     }
     public void StartToRun()
     {
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
         rb = GetComponent<Rigidbody2D>();
         direct = (playerTransform.position - transform.position).normalized;
         startRun = true;

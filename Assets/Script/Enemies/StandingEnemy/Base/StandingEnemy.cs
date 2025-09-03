@@ -52,7 +52,7 @@ public class StandingEnemy : MonoBehaviour, IEnemyStandable, ITriggerCheckable, 
 
     public void FlipSprite()
     {
-        Transform playerTransform = FindObjectOfType<PlayerControl>().transform;
+        Transform playerTransform = FindObjectOfType<Player>().transform;
         Vector2 direct = (playerTransform.position - transform.position).normalized;
         if(IsFacingRight && direct.x < 0)
         {

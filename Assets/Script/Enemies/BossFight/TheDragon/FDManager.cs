@@ -8,7 +8,7 @@ public class FDManager : MonoBehaviour
     [SerializeField]private GameObject atk;
     [SerializeField]private GameObject death;
     [SerializeField]private Animator fdAnimator;
-    private PlayerControl playerControl;
+    private Player playerControl;
     public void DeathTrigger()
     {
         PlayerSpawnAfterWin();
@@ -18,7 +18,7 @@ public class FDManager : MonoBehaviour
     }
     private void PlayerSpawnAfterWin()
     {
-        playerControl = FindObjectOfType<PlayerControl>();
+        playerControl = FindObjectOfType<Player>();
         playerControl.transform.position = moveTo.position;
     }    
 }

@@ -17,7 +17,7 @@ public class CurseRoseBullet : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
         timeCount = chaseTime;
     }
     public void FixedUpdate()

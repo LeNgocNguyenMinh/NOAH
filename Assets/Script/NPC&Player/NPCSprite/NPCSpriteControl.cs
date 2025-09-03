@@ -11,7 +11,7 @@ public class NPCSpriteControl : MonoBehaviour
 
     private void Update()
     {
-        player = FindObjectOfType<PlayerControl>()?.transform;
+        player = FindObjectOfType<Player>()?.transform;
         if(player == null) return;
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         if(distanceToPlayer<3)
@@ -21,7 +21,7 @@ public class NPCSpriteControl : MonoBehaviour
     }    
     private void FacingDirection()
     {
-        player = FindObjectOfType<PlayerControl>().transform;
+        player = FindObjectOfType<Player>().transform;
         if (transform.position.x < player.transform.position.x && transform.localScale.x < 0)
         {
             Flip();

@@ -22,7 +22,7 @@ public class SmallShotATK1 : MonoBehaviour
     }
     public void SetShootSpeed(float newValue)
     {
-        playerTransform = FindObjectOfType<PlayerControl>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
         direct = (playerTransform.position - transform.position).normalized;
         speed = newValue;
     }

@@ -8,7 +8,7 @@ public class SpawnControl : MonoBehaviour
 {
     [SerializeField]private PlayerStatus playerStatus;
     private string saveLocation;
-    private PlayerControl playerControl;
+    private Player playerControl;
     private Animator animator;
     void Awake()
     {
@@ -23,7 +23,7 @@ public class SpawnControl : MonoBehaviour
         } 
         else{
             PlayerStatusAfterRespawn();
-            FindObjectOfType<PlayerControl>().transform.position = saveData.playerPosition;
+            FindObjectOfType<Player>().transform.position = saveData.playerPosition;
         }
     }
     private IEnumerator LoadSceneAsync(string sceneName)
@@ -53,9 +53,9 @@ public class SpawnControl : MonoBehaviour
     private void PlayerStatusAfterRespawn()
     {
         animator = GetComponent<Animator>();
-        playerControl = GetComponent<PlayerControl>();
+        playerControl = GetComponent<Player>();
 
-        playerControl.SetIsAlive(true);// do this so player can move
+       /*  playerControl.SetIsAlive(true);// do this so player can move */
         animator.SetTrigger("isRespawn");
         playerStatus.RespawnPlayerAfterDead();//Player Status after dead and was respawn
         HealthControl.Instance.PlayerHeatlthAfterRespawn(); //Player Health UI

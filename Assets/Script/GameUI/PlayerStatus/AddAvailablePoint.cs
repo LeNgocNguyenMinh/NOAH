@@ -50,7 +50,7 @@ public class AddAvailablePoint : MonoBehaviour
     }
     public void AddPointToBullet()
     {
-        weaponParent = FindObjectOfType<PlayerControl>().GetComponentInChildren<PlayerWeaponParent>();
+        weaponParent = FindObjectOfType<Player>().GetComponentInChildren<PlayerWeaponParent>();
         playerStatus.SetBullet();
         PlayerStatusUI.Instance.UpdateMaxBullet();
         weaponParent.UpdateMagazine();

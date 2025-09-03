@@ -27,7 +27,7 @@ public class ParticleController : MonoBehaviour
     }
     public void Awake()
     {
-        player = FindObjectOfType<PlayerControl>().transform;
+        player = FindObjectOfType<Player>().transform;
         playerRb = player.GetComponent<Rigidbody2D>();
     }
 }

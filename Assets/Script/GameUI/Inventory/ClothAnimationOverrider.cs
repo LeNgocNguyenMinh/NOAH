@@ -8,7 +8,7 @@ public class ClothAnimationOverrider : MonoBehaviour
     private AnimatorOverrideController animatorOverrideController;
     void Awake()
     {
-        animator = FindObjectOfType<PlayerControl>().GetComponent<Animator>();
+        animator = FindObjectOfType<Player>().GetComponent<Animator>();
         animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverrideController;
     }

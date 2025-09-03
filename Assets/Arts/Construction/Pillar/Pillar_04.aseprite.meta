@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Pillar_04
     originalName: 
-    pivot: {x: 0.54838705, y: -0.049382713}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 31
-      height: 81
+      width: 32
+      height: 57
     spriteID: 3d45c0cdd5122344c84dcafe2efbc8d3
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 33
-        y: 4
-        width: 31
-        height: 81
+        x: 16
+        y: 0
+        width: 32
+        height: 57
       spriteId: 3d45c0cdd5122344c84dcafe2efbc8d3
     linkedCells: []
     parentIndex: -1
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 64, y: 96}

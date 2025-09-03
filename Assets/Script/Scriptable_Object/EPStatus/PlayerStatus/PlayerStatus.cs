@@ -83,7 +83,7 @@ public class PlayerStatus : ScriptableObject
         currentHealth = playerSaveData.currentHealthData;
         Debug.Log("CurrentHealth: " + currentHealth);
         currentWeapon = playerSaveData.currentWeaponID != "None" ? itemDictionary.GetItemInfo(playerSaveData.currentWeaponID) : null;
-        if(playerSaveData.currentHatID != "None")
+        /* if(playerSaveData.currentHatID != "None")
         {
             currentHat = itemDictionary.GetItemInfo(playerSaveData.currentHatID);
             playerCurrentClothChange.ChangeCloth(currentHat);
@@ -92,7 +92,7 @@ public class PlayerStatus : ScriptableObject
         {
             currentCoat = itemDictionary.GetItemInfo(playerSaveData.currentCoatID);
             playerCurrentClothChange.ChangeCloth(currentCoat);
-        }
+        } */
     }
     public void SetLevel(int playerLevel)
     {

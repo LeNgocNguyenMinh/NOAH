@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: SmallTreeTop_01
     originalName: 
-    pivot: {x: 0.44444445, y: -0.1686747}
+    pivot: {x: 0.53333336, y: -0.33734939}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -154,8 +154,8 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 30
-        y: 14
+        x: 24
+        y: 28
         width: 45
         height: 83
       spriteId: af5da473bb7a34944a2ab53ec7040d12
@@ -213,4 +213,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 96, y: 112}
