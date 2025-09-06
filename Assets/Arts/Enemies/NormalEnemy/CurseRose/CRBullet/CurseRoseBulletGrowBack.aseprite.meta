@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0eca2d93d189c3e488bbf2331ac217ce
+guid: 765bdc3bc98c1964cb175068b3b52026
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,98 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: HealthEXPBarBorder
+  - name: CurseRoseBulletGrowBack_Frame_0
     originalName: 
-    pivot: {x: 0.609375, y: -0.8387096}
+    pivot: {x: 0.7222222, y: -0.3548387}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 52
+      width: 18
+      height: 31
+    spriteID: 8cbc9b6397fc0624cac660b0f7666ca3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 52}
+  - name: CurseRoseBulletGrowBack_Frame_1
+    originalName: 
+    pivot: {x: 0.6818182, y: -0.3030303}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 52
+      width: 22
+      height: 33
+    spriteID: 545095d78ade0504a8a27400563a6920
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 52}
+  - name: CurseRoseBulletGrowBack_Frame_2
+    originalName: 
+    pivot: {x: 0.6538462, y: -0.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 86
+      y: 4
+      width: 26
+      height: 34
+    spriteID: 08020a2e8a7acab4b9a9865a586b153d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 86, y: 4}
+  - name: CurseRoseBulletGrowBack_Frame_3
+    originalName: 
+    pivot: {x: 0.6333334, y: -0.2162162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 4
+      width: 30
+      height: 37
+    spriteID: dd89edd950de7254eb450487b286a269
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 4}
+  - name: CurseRoseBulletGrowBack_Frame_4
+    originalName: 
+    pivot: {x: 0.6111111, y: -0.15}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 64
-      height: 31
-    spriteID: 9f7bcc8fd3d5ed54f88e4df5d5d11135
+      width: 36
+      height: 40
+    spriteID: 80305189f509ac44fb96d15d287e8e04
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +224,57 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 615590298
-    name: HealthEXPBarBorder
+    guid: 1895145989
+    name: CurseRoseBulletGrowBack
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: HealthEXPBarBorder
+    - name: CurseRoseBulletGrowBack_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: 26
-        width: 64
+        x: 19
+        y: 11
+        width: 18
         height: 31
-      spriteId: 9f7bcc8fd3d5ed54f88e4df5d5d11135
+      spriteId: 8cbc9b6397fc0624cac660b0f7666ca3
+    - name: CurseRoseBulletGrowBack_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 17
+        y: 10
+        width: 22
+        height: 33
+      spriteId: 545095d78ade0504a8a27400563a6920
+    - name: CurseRoseBulletGrowBack_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 9
+        width: 26
+        height: 34
+      spriteId: 08020a2e8a7acab4b9a9865a586b153d
+    - name: CurseRoseBulletGrowBack_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 13
+        y: 8
+        width: 30
+        height: 37
+      spriteId: dd89edd950de7254eb450487b286a269
+    - name: CurseRoseBulletGrowBack_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 10
+        y: 6
+        width: 36
+        height: 40
+      spriteId: 80305189f509ac44fb96d15d287e8e04
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +293,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 80}
+  canvasSize: {x: 64, y: 80}

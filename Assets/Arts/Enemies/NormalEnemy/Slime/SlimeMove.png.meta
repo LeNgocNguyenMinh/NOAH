@@ -128,10 +128,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: SlimeMove_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: SlimeMove_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 64
         y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: SlimeMove_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 96
         y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: SlimeMove_4
       rect:
         serializedVersion: 2
-        x: 136
+        x: 128
         y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: SlimeMove_5
       rect:
         serializedVersion: 2
-        x: 170
+        x: 160
         y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: SlimeMove_6
       rect:
         serializedVersion: 2
-        x: 204
+        x: 192
         y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,69 +265,6 @@ TextureImporter:
       bones: []
       spriteID: de56ed238c2a1ca4db881b52a00d5294
       internalID: 734630102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeMove_7
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 897d7851ed6f4f345a159d3f37f05924
-      internalID: -922001996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeMove_8
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfa5f9b07f89996489ea8e2462455c18
-      internalID: -420726320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeMove_9
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 0
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a196670b95ff6e41a5db2cf9ae4776f
-      internalID: 804510575
       vertices: []
       indices: 
       edges: []
@@ -350,9 +287,6 @@ TextureImporter:
       SlimeMove_4: -2113306982
       SlimeMove_5: -145215911
       SlimeMove_6: 734630102
-      SlimeMove_7: -922001996
-      SlimeMove_8: -420726320
-      SlimeMove_9: 804510575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

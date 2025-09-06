@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,10 +128,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 62
+        width: 64
         height: 80
-      alignment: 9
-      pivot: {x: 0.4876828, y: 0.4504302}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: CurseRoseDead_1
       rect:
         serializedVersion: 2
-        x: 62
+        x: 64
         y: 0
-        width: 62
+        width: 64
         height: 80
-      alignment: 9
-      pivot: {x: 0.4876828, y: 0.4504302}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: CurseRoseDead_2
       rect:
         serializedVersion: 2
-        x: 124
+        x: 128
         y: 0
-        width: 62
+        width: 64
         height: 80
-      alignment: 9
-      pivot: {x: 0.4876828, y: 0.4504302}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: CurseRoseDead_3
       rect:
         serializedVersion: 2
-        x: 186
+        x: 192
         y: 0
-        width: 62
+        width: 64
         height: 80
-      alignment: 9
-      pivot: {x: 0.4876828, y: 0.4504302}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: CurseRoseDead_4
       rect:
         serializedVersion: 2
-        x: 248
+        x: 256
         y: 0
-        width: 62
+        width: 64
         height: 80
-      alignment: 9
-      pivot: {x: 0.4876828, y: 0.4504302}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,6 +223,48 @@ TextureImporter:
       bones: []
       spriteID: b1ca725d0a072da42b3b5d8aabeefd43
       internalID: 1990622327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurseRoseDead_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b4bf51638410644ab8a9d646248cd2
+      internalID: -475795156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurseRoseDead_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6ab993f4759304cb36eebf5deb9f7a
+      internalID: 1905455821
       vertices: []
       indices: 
       edges: []
@@ -243,6 +285,8 @@ TextureImporter:
       CurseRoseDead_2: 497273174
       CurseRoseDead_3: -1004985730
       CurseRoseDead_4: 1990622327
+      CurseRoseDead_5: -475795156
+      CurseRoseDead_6: 1905455821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,10 +128,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 59
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: CursePlantIdle_1
       rect:
         serializedVersion: 2
-        x: 59
+        x: 64
         y: 0
-        width: 59
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: CursePlantIdle_2
       rect:
         serializedVersion: 2
-        x: 118
+        x: 128
         y: 0
-        width: 59
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: CursePlantIdle_3
       rect:
         serializedVersion: 2
-        x: 177
+        x: 192
         y: 0
-        width: 59
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: CursePlantIdle_4
       rect:
         serializedVersion: 2
-        x: 236
+        x: 256
         y: 0
-        width: 59
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: CursePlantIdle_5
       rect:
         serializedVersion: 2
-        x: 295
+        x: 320
         y: 0
-        width: 59
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: CursePlantIdle_6
       rect:
         serializedVersion: 2
-        x: 354
+        x: 384
         y: 0
-        width: 59
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: CursePlantIdle_7
       rect:
         serializedVersion: 2
-        x: 413
+        x: 448
         y: 0
-        width: 59
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,6 +286,27 @@ TextureImporter:
       bones: []
       spriteID: a53d33494cb68f44c8204a1bdc09a2fc
       internalID: -2057933465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CursePlantIdle_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e5dab415e08104f84f3ea7f42e8eb2
+      internalID: -1354727638
       vertices: []
       indices: 
       edges: []
@@ -309,6 +330,7 @@ TextureImporter:
       CursePlantIdle_5: 2011584224
       CursePlantIdle_6: 1831560408
       CursePlantIdle_7: -2057933465
+      CursePlantIdle_8: -1354727638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

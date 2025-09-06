@@ -143,15 +143,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: SlimeDead_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.516129}
+    pivot: {x: 0.5714286, y: -0.5925926}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 75
       y: 43
-      width: 32
-      height: 31
+      width: 28
+      height: 27
     spriteID: 1e9a9e3e2cc2585468510e5b2e4de691
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
+    uvTransform: {x: 75, y: 43}
   - name: SlimeDead_Frame_2
     originalName: 
-    pivot: {x: 0.5714286, y: -0.5925926}
+    pivot: {x: 0.5925926, y: -0.55172414}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 4
-      width: 28
-      height: 27
+      x: 40
+      y: 43
+      width: 27
+      height: 29
     spriteID: d5a473d30e67d7646876d081af9679ab
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 4}
+    uvTransform: {x: 40, y: 43}
   - name: SlimeDead_Frame_3
     originalName: 
-    pivot: {x: 0.5925926, y: -0.55172414}
+    pivot: {x: 0.64, y: -0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 195
-      width: 27
-      height: 29
+      y: 81
+      width: 25
+      height: 30
     spriteID: 98746da81bfbe0644a1d6e9824b12447
     spriteBone: []
     spriteOutline: []
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 195}
+    uvTransform: {x: 4, y: 81}
   - name: SlimeDead_Frame_4
     originalName: 
     pivot: {x: 0.64, y: -0.53333336}
@@ -208,8 +208,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 39
+      x: 37
+      y: 81
       width: 25
       height: 30
     spriteID: 565c282e4d2c14f408efad930ff25590
@@ -220,17 +220,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 39}
+    uvTransform: {x: 37, y: 81}
   - name: SlimeDead_Frame_5
     originalName: 
-    pivot: {x: 0.64, y: -0.53333336}
+    pivot: {x: 0.5714286, y: -0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 77
-      width: 25
+      x: 81
+      y: 4
+      width: 28
       height: 30
     spriteID: d2eb661e459c65545967e89f20273837
     spriteBone: []
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 77}
+    uvTransform: {x: 81, y: 4}
   - name: SlimeDead_Frame_6
     originalName: 
     pivot: {x: 0.5714286, y: -0.53333336}
@@ -249,7 +249,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 119
+      y: 43
       width: 28
       height: 30
     spriteID: 981633d6c60f45f488d1f47945c8166f
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 119}
+    uvTransform: {x: 4, y: 43}
   - name: SlimeDead_Frame_7
     originalName: 
-    pivot: {x: 0.5714286, y: -0.53333336}
+    pivot: {x: 0.51724136, y: -0.55172414}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 157
-      width: 28
-      height: 30
+      x: 44
+      y: 4
+      width: 29
+      height: 29
     spriteID: fb7ee8aa9f53f2d489178b2f6dbab677
     spriteBone: []
     spriteOutline: []
@@ -280,18 +280,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 157}
+    uvTransform: {x: 44, y: 4}
   - name: SlimeDead_Frame_8
     originalName: 
-    pivot: {x: 0.51724136, y: -0.55172414}
+    pivot: {x: 0.53333336, y: -0.64}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 82
-      width: 29
-      height: 29
+      x: 70
+      y: 81
+      width: 30
+      height: 25
     spriteID: 917517f636cebed4aaa8af6b38d23c55
     spriteBone: []
     spriteOutline: []
@@ -300,18 +300,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 82}
+    uvTransform: {x: 70, y: 81}
   - name: SlimeDead_Frame_9
     originalName: 
-    pivot: {x: 0.53333336, y: -0.64}
+    pivot: {x: 0.53333336, y: -8}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 80
-      y: 4
+      x: 70
+      y: 114
       width: 30
-      height: 25
+      height: 2
     spriteID: de91ff2c6ee5f5343b92a23698725225
     spriteBone: []
     spriteOutline: []
@@ -320,27 +320,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 80, y: 4}
-  - name: SlimeDead_Frame_10
-    originalName: 
-    pivot: {x: 0.53333336, y: -8}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 232
-      width: 30
-      height: 2
-    spriteID: 7ff8ae317f4408841a0973dc3bdc8a9e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 232}
+    uvTransform: {x: 70, y: 114}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -365,8 +345,8 @@ ScriptedImporter:
       cellRect:
         x: 16
         y: 16
-        width: 32
-        height: 31
+        width: 28
+        height: 27
       spriteId: 1e9a9e3e2cc2585468510e5b2e4de691
     - name: SlimeDead_Frame_2
       frameIndex: 2
@@ -374,8 +354,8 @@ ScriptedImporter:
       cellRect:
         x: 16
         y: 16
-        width: 28
-        height: 27
+        width: 27
+        height: 29
       spriteId: d5a473d30e67d7646876d081af9679ab
     - name: SlimeDead_Frame_3
       frameIndex: 3
@@ -383,8 +363,8 @@ ScriptedImporter:
       cellRect:
         x: 16
         y: 16
-        width: 27
-        height: 29
+        width: 25
+        height: 30
       spriteId: 98746da81bfbe0644a1d6e9824b12447
     - name: SlimeDead_Frame_4
       frameIndex: 4
@@ -401,7 +381,7 @@ ScriptedImporter:
       cellRect:
         x: 16
         y: 16
-        width: 25
+        width: 28
         height: 30
       spriteId: d2eb661e459c65545967e89f20273837
     - name: SlimeDead_Frame_6
@@ -417,19 +397,19 @@ ScriptedImporter:
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 17
         y: 16
-        width: 28
-        height: 30
+        width: 29
+        height: 29
       spriteId: fb7ee8aa9f53f2d489178b2f6dbab677
     - name: SlimeDead_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 17
+        x: 16
         y: 16
-        width: 29
-        height: 29
+        width: 30
+        height: 25
       spriteId: 917517f636cebed4aaa8af6b38d23c55
     - name: SlimeDead_Frame_9
       frameIndex: 9
@@ -438,17 +418,8 @@ ScriptedImporter:
         x: 16
         y: 16
         width: 30
-        height: 25
-      spriteId: de91ff2c6ee5f5343b92a23698725225
-    - name: SlimeDead_Frame_10
-      frameIndex: 10
-      additiveSortOrder: 0
-      cellRect:
-        x: 16
-        y: 16
-        width: 30
         height: 2
-      spriteId: 7ff8ae317f4408841a0973dc3bdc8a9e
+      spriteId: de91ff2c6ee5f5343b92a23698725225
     linkedCells: []
     parentIndex: -1
   platformSettings:

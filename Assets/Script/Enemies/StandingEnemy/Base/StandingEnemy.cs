@@ -43,7 +43,9 @@ public class StandingEnemy : MonoBehaviour, IEnemyStandable, ITriggerCheckable, 
     }
     public void Die()
     {
-        StateMachine.ChangeState(DieState);
+        if(StateMachine.CurrentEnemyState.GetType().Name != "StandingEnemyDieState") { 
+            StateMachine.ChangeState(DieState);
+        }
     }
     public void DestroyAfterDead()
     {
@@ -79,8 +81,7 @@ public class StandingEnemy : MonoBehaviour, IEnemyStandable, ITriggerCheckable, 
     {
         IdleAnimFinish,
         DeadAnimFinish,
-        AttackAnimFinish,
-        PlayerHurt  
+        AttackAnimFinish
     }
     public void AnimationTriggerEvent(AnimationTriggerType triggerType)
     {

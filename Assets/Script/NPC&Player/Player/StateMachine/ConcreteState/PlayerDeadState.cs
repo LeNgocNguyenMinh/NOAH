@@ -27,7 +27,7 @@ public class PlayerDeadState : PlayerState
     {
         base.AnimationTriggerEvent(triggerType);
         if (triggerType == Player.AnimationTriggerType.DeadAnimFinish) {
-            /* PauseMenu.Instance.GameOverMenuPanelShow(); */
+            PauseMenu.Instance.GameOverMenuPanelShow();
         }
     }
 }

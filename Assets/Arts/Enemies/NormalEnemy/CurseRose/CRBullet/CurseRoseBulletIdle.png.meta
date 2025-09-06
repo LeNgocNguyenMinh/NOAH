@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f88c6f62fb4e92b4a9afea68ec0b234d
+guid: eae4eb6279e0d6b4a96208bb92125562
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,85 +123,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CurseRoseBullet02Break_0
+      name: CurseRoseBulletIdle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3977b39dfe6e33949ba86c8a71bdfdf5
-      internalID: 1786378266
+      spriteID: a41f362a81249484ca482ec5ae14f114
+      internalID: -645285812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CurseRoseBullet02Break_1
+      name: CurseRoseBulletIdle_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 64
         y: 0
-        width: 19
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e787059a1ded710499fa31e9d903c955
-      internalID: -1698634057
+      spriteID: 23779ea64b273cd4688a6a4d31d82328
+      internalID: 389158707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CurseRoseBullet02Break_2
+      name: CurseRoseBulletIdle_2
       rect:
         serializedVersion: 2
-        x: 38
+        x: 128
         y: 0
-        width: 19
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 642c16337d199ec4a8f08b665412e708
-      internalID: -74535290
+      spriteID: e135619e65f6b5a4eba5fcd4c5a866ea
+      internalID: 373245706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CurseRoseBullet02Break_3
+      name: CurseRoseBulletIdle_3
       rect:
         serializedVersion: 2
-        x: 57
+        x: 192
         y: 0
-        width: 19
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ddea8b833b07f54a8ff455a952779e5
-      internalID: -1610863532
+      spriteID: 5e5b58bc3b6942b4cb4d7e48090284c6
+      internalID: -1696599218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurseRoseBulletIdle_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bd5f55594d3bb4097df682c97d6a03
+      internalID: -983797889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurseRoseBulletIdle_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87f98417d84a9441a238e0bc9be1427
+      internalID: -2077985526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurseRoseBulletIdle_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb87c56c27a1c7469c499f6784ee131
+      internalID: 168985612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurseRoseBulletIdle_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb9c2aa3a8b56f40ac351a024a9e00e
+      internalID: 1226555442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurseRoseBulletIdle_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f9582835bbb544ab2a4d5378f31e42
+      internalID: -184794121
       vertices: []
       indices: 
       edges: []
@@ -217,10 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CurseRoseBullet02Break_0: 1786378266
-      CurseRoseBullet02Break_1: -1698634057
-      CurseRoseBullet02Break_2: -74535290
-      CurseRoseBullet02Break_3: -1610863532
+      CurseRoseBulletIdle_0: -645285812
+      CurseRoseBulletIdle_1: 389158707
+      CurseRoseBulletIdle_2: 373245706
+      CurseRoseBulletIdle_3: -1696599218
+      CurseRoseBulletIdle_4: -983797889
+      CurseRoseBulletIdle_5: -2077985526
+      CurseRoseBulletIdle_6: 168985612
+      CurseRoseBulletIdle_7: 1226555442
+      CurseRoseBulletIdle_8: -184794121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: CursePlantATK_Frame_0
     originalName: 
-    pivot: {x: 0.62711865, y: 0}
+    pivot: {x: 0.6111111, y: -0.15}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 73
-      y: 4
-      width: 59
-      height: 69
+      x: 69
+      y: 51
+      width: 36
+      height: 40
     spriteID: ab0db57b3cec5cd41990bfe9f471b4ca
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 73, y: 4}
+    uvTransform: {x: 69, y: 51}
   - name: CursePlantATK_Frame_1
     originalName: 
-    pivot: {x: 0.62711865, y: 0}
+    pivot: {x: 0.61538464, y: -0.23684211}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 73
-      y: 81
-      width: 59
-      height: 69
+      x: 4
+      y: 191
+      width: 39
+      height: 38
     spriteID: 0666fe8d1391cac4f924ce2226d48a87
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 73, y: 81}
+    uvTransform: {x: 4, y: 191}
   - name: CursePlantATK_Frame_2
     originalName: 
-    pivot: {x: 0.62711865, y: 0}
+    pivot: {x: 0.6136364, y: -0.23076923}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 73
-      y: 158
-      width: 59
-      height: 69
+      x: 4
+      y: 144
+      width: 44
+      height: 39
     spriteID: dc3413047d39ebf44bd59af0f30b05b2
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 73, y: 158}
+    uvTransform: {x: 4, y: 144}
   - name: CursePlantATK_Frame_3
     originalName: 
-    pivot: {x: 0.62711865, y: 0}
+    pivot: {x: 0.61702126, y: -0.23076923}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 140
-      y: 4
-      width: 59
-      height: 69
+      x: 4
+      y: 97
+      width: 47
+      height: 39
     spriteID: cf5bfe570dbfa4a469ff2ec5db523d27
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 140, y: 4}
+    uvTransform: {x: 4, y: 97}
   - name: CursePlantATK_Frame_4
     originalName: 
-    pivot: {x: 0.6333333, y: 0}
+    pivot: {x: 0.5849057, y: -0.23684211}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 81
-      width: 60
-      height: 69
+      x: 69
+      y: 4
+      width: 53
+      height: 38
     spriteID: e3ffe4af024c0154c9a287736ce374da
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 81}
+    uvTransform: {x: 69, y: 4}
   - name: CursePlantATK_Frame_5
     originalName: 
-    pivot: {x: 0.6393443, y: 0}
+    pivot: {x: 0.5614035, y: -0.23684211}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 61
-      height: 69
+      y: 51
+      width: 57
+      height: 38
     spriteID: 76040ab638159ea4f8b7ffcfbbef1b9b
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 51}
   - name: CursePlantATK_Frame_6
     originalName: 
-    pivot: {x: 0.6333333, y: 0}
+    pivot: {x: 0.5614035, y: -0.20512822}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 158
-      width: 60
-      height: 69
+      y: 4
+      width: 57
+      height: 39
     spriteID: 8e2d77d309fdb4840a283027d1756a3f
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 158}
+    uvTransform: {x: 4, y: 4}
   - name: CursePlantATK_Frame_7
     originalName: 
-    pivot: {x: 0.62711865, y: 0}
+    pivot: {x: 0.6111111, y: -0.15}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 140
-      y: 81
-      width: 59
-      height: 69
+      x: 69
+      y: 99
+      width: 36
+      height: 40
     spriteID: 609fb300c2e28304c9de273c02b5c2b9
     spriteBone: []
     spriteOutline: []
@@ -280,7 +280,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 140, y: 81}
+    uvTransform: {x: 69, y: 99}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -294,73 +294,73 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 0
-        width: 59
-        height: 69
+        x: 10
+        y: 6
+        width: 36
+        height: 40
       spriteId: ab0db57b3cec5cd41990bfe9f471b4ca
     - name: CursePlantATK_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 0
-        width: 59
-        height: 69
+        x: 8
+        y: 9
+        width: 39
+        height: 38
       spriteId: 0666fe8d1391cac4f924ce2226d48a87
     - name: CursePlantATK_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 0
-        width: 59
-        height: 69
+        x: 5
+        y: 9
+        width: 44
+        height: 39
       spriteId: dc3413047d39ebf44bd59af0f30b05b2
     - name: CursePlantATK_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 3
-        y: 0
-        width: 59
-        height: 69
+        y: 9
+        width: 47
+        height: 39
       spriteId: cf5bfe570dbfa4a469ff2ec5db523d27
     - name: CursePlantATK_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: 0
-        width: 60
-        height: 69
+        x: 1
+        y: 9
+        width: 53
+        height: 38
       spriteId: e3ffe4af024c0154c9a287736ce374da
     - name: CursePlantATK_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: 0
-        width: 61
-        height: 69
+        x: 0
+        y: 9
+        width: 57
+        height: 38
       spriteId: 76040ab638159ea4f8b7ffcfbbef1b9b
     - name: CursePlantATK_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: 0
-        width: 60
-        height: 69
+        x: 0
+        y: 8
+        width: 57
+        height: 39
       spriteId: 8e2d77d309fdb4840a283027d1756a3f
     - name: CursePlantATK_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 0
-        width: 59
-        height: 69
+        x: 10
+        y: 6
+        width: 36
+        height: 40
       spriteId: 609fb300c2e28304c9de273c02b5c2b9
     linkedCells: []
     parentIndex: -1
@@ -380,4 +380,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 80}
+  canvasSize: {x: 64, y: 80}

@@ -88,12 +88,13 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
         WalkAnimFinish,
         DeadAnimFinish,
         AttackAnimFinish,
-        IdleAnimFinish,
-        PlayerHurt  
+        IdleAnimFinish
     }
     public void Die()
     {
-        StateMachine.ChangeState(DieState);
+        if(StateMachine.CurrentEnemyState.GetType().Name != "MovingEnemyDieState") { 
+            StateMachine.ChangeState(DieState);
+        }
     }
     public void DestroyAfterDead()
     {

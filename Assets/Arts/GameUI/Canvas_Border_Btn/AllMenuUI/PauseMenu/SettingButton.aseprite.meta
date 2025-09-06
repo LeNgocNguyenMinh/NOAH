@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: SettingButton
     originalName: 
-    pivot: {x: 0.5625, y: -1.125}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -154,8 +154,8 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 18
+        x: 0
+        y: 0
         width: 16
         height: 16
       spriteId: e0b140214a4929e4fb28aabd375e89f7
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 50, y: 50}
+  canvasSize: {x: 16, y: 16}

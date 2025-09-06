@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 003208c40ff98844bb0a2b7d27c4ef30
+guid: 0eca2d93d189c3e488bbf2331ac217ce
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,78 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: CurseRoseBullet02Break_Frame_0
+  - name: HealthBorder
     originalName: 
-    pivot: {x: 0.5, y: -3.6666667}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 53
-      width: 6
-      height: 6
-    spriteID: aa5ee08de2636f3418505db008eb0c45
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 53}
-  - name: CurseRoseBullet02Break_Frame_1
-    originalName: 
-    pivot: {x: 0.4444445, y: -2.625}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 31
-      y: 4
-      width: 9
-      height: 8
-    spriteID: deef4d2ae78e6b0408574cf22ea2030d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 31, y: 4}
-  - name: CurseRoseBullet02Break_Frame_2
-    originalName: 
-    pivot: {x: 0.42857143, y: -1.5833334}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 33
-      width: 14
-      height: 12
-    spriteID: 1ea7a016cd5939c43b82dbcd44525cc2
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 33}
-  - name: CurseRoseBullet02Break_Frame_3
-    originalName: 
-    pivot: {x: 0.4736842, y: -0.6666667}
+    pivot: {x: 0.49206352, y: -0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 19
-      height: 21
-    spriteID: 2d9c825537a6e684cae684203154bdb7
+      width: 63
+      height: 10
+    spriteID: 37db92df5ba8f6e4388763e6d2b7e6be
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -204,48 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1793866368
-    name: CurseRoseBullet02Break
+    guid: -2057782522
+    name: HealthBorder
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CurseRoseBullet02Break_Frame_0
+    - name: HealthBorder
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 21
-        y: 22
-        width: 6
-        height: 6
-      spriteId: aa5ee08de2636f3418505db008eb0c45
-    - name: CurseRoseBullet02Break_Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 20
-        y: 21
-        width: 9
-        height: 8
-      spriteId: deef4d2ae78e6b0408574cf22ea2030d
-    - name: CurseRoseBullet02Break_Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 18
-        y: 19
-        width: 14
-        height: 12
-      spriteId: 1ea7a016cd5939c43b82dbcd44525cc2
-    - name: CurseRoseBullet02Break_Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 15
-        y: 14
-        width: 19
-        height: 21
-      spriteId: 2d9c825537a6e684cae684203154bdb7
+        x: 1
+        y: 3
+        width: 63
+        height: 10
+      spriteId: 37db92df5ba8f6e4388763e6d2b7e6be
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -264,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 48, y: 48}
+  canvasSize: {x: 64, y: 16}
