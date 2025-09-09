@@ -19,7 +19,6 @@ public class EnemyHurt : MonoBehaviour
         Vector3 spawnPos = dmgPopUpTrans.position + new Vector3(offSet, 0, 0);
         DamagePopUp damagePopUp = Instantiate(damagePopUpPref, spawnPos, Quaternion.identity).GetComponent<DamagePopUp>();
         damagePopUp.ShowDamage(damage);
-        damagePopUp.ShowDamage(damage);
         healthControl.EnemyHurt(damage);
     }
 }

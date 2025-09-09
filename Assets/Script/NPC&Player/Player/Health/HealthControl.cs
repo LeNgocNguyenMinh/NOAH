@@ -43,8 +43,8 @@ public class HealthControl : MonoBehaviour
         if(healthCurrentValue <= 0)
         {
             healthCurrentValue = 0;
-            BossAOShoot ancientBoss = FindObjectOfType<BossAOShoot>();
-            FDManager dragonBoss = FindObjectOfType<FDManager>();
+            /* BossAOShoot ancientBoss = FindObjectOfType<BossAOShoot>(); */
+            /* FDManager dragonBoss = FindObjectOfType<FDManager>();
 
             if (ancientBoss != null)
             {
@@ -56,7 +56,7 @@ public class HealthControl : MonoBehaviour
             {
                 FDDetectStartBattle fdDetectStartBattle = FindObjectOfType<FDDetectStartBattle>().GetComponent<FDDetectStartBattle>();
                 fdDetectStartBattle.PlayerDeadInBossBattle();
-            }
+            } */
             playerControl.PlayerDead();// Mean player Dead
         }
         //Update Current Health and Health Text

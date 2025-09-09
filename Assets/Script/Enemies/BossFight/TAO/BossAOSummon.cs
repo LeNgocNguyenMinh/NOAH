@@ -41,9 +41,9 @@ public class BossAOSummon : MonoBehaviour
         }
         
         cmCamera.SetActive(true);
-        BossAOShoot bossShoot = Instantiate(bossPrefab, bossSummonPoint.position, Quaternion.identity).GetComponent<BossAOShoot>();
-        bossObject = bossShoot.gameObject;
-        bossShoot.StartAttack(); 
+        /* BossAOShoot bossShoot = Instantiate(bossPrefab, bossSummonPoint.position, Quaternion.identity).GetComponent<BossAOShoot>(); */
+  /*       bossObject = bossShoot.gameObject;
+        bossShoot.StartAttack();  */
     }
     public void PlayerDeadInBossBattle()
     {

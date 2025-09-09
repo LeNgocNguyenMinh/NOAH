@@ -63,4 +63,12 @@ public class WandBullet : MonoBehaviour
             Destroy(gameObject);//Destroy too because hit solid thing
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "ForeGround" || collision.gameObject.tag == "NPC")
+        {
+            Instantiate(bulletHitParticle, transform.position, Quaternion.identity);
+            Destroy(gameObject);//Destroy too because hit solid thing
+        }
+    }
 }
