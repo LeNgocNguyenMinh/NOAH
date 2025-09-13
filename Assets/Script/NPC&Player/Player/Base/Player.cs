@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IPlayerMoveable
 {
+    public static Player Instance; 
     public Vector3 MousePos { get; set; }
     public bool CanChangeState { get; set; }
     public Animator PlayerAnimator { get; set; }
@@ -34,6 +35,14 @@ public class Player : MonoBehaviour, IPlayerMoveable
 
     private void Awake()
     {
+        if(Instance == null) 
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine);
         WalkState = new PlayerWalkState(this, StateMachine);

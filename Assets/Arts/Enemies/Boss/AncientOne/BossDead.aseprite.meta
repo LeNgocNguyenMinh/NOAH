@@ -403,15 +403,15 @@ ScriptedImporter:
     uvTransform: {x: 84, y: 144}
   - name: BossDead_Frame_14
     originalName: 
-    pivot: {x: 1.3846154, y: 0}
+    pivot: {x: 1.4285715, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 162
       y: 144
-      width: 65
-      height: 14
+      width: 63
+      height: 8
     spriteID: fd8d1c8de36eea04cba7892cc606a36f
     spriteBone: []
     spriteOutline: []
@@ -423,15 +423,15 @@ ScriptedImporter:
     uvTransform: {x: 162, y: 144}
   - name: BossDead_Frame_15
     originalName: 
-    pivot: {x: 1.3846154, y: 0}
+    pivot: {x: 1.4285715, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 173
-      width: 65
-      height: 14
+      x: 162
+      y: 160
+      width: 63
+      height: 4
     spriteID: f407e0657b7188840a4923397c8b8c4b
     spriteBone: []
     spriteOutline: []
@@ -440,7 +440,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 173}
+    uvTransform: {x: 162, y: 160}
   - name: BossDead_Frame_16
     originalName: 
     pivot: {x: 1.7837837, y: 0}
@@ -448,7 +448,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 77
+      x: 4
       y: 173
       width: 37
       height: 3
@@ -460,7 +460,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 77, y: 173}
+    uvTransform: {x: 4, y: 173}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -602,8 +602,8 @@ ScriptedImporter:
       cellRect:
         x: 6
         y: 0
-        width: 65
-        height: 14
+        width: 63
+        height: 8
       spriteId: fd8d1c8de36eea04cba7892cc606a36f
     - name: BossDead_Frame_15
       frameIndex: 15
@@ -611,8 +611,8 @@ ScriptedImporter:
       cellRect:
         x: 6
         y: 0
-        width: 65
-        height: 14
+        width: 63
+        height: 4
       spriteId: f407e0657b7188840a4923397c8b8c4b
     - name: BossDead_Frame_16
       frameIndex: 16

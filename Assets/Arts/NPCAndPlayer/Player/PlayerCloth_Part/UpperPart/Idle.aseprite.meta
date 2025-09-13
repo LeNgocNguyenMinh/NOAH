@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Idle_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.4054054}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 50
+      x: 84
+      y: 4
       width: 32
-      height: 37
+      height: 52
     spriteID: d25ab9154eaa8294091cdf15dd201d40
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 50}
+    uvTransform: {x: 84, y: 4}
   - name: Idle_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.3783784}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 44
-      y: 50
+      y: 65
       width: 32
-      height: 37
+      height: 51
     spriteID: 42a248ffb6f3f8e46b47ce9efb708e39
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 50}
+    uvTransform: {x: 44, y: 65}
   - name: Idle_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.36842105}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 65
       width: 32
-      height: 38
+      height: 52
     spriteID: 7c878e0142022dc49a7af508425a21ee
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 65}
   - name: Idle_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.39473686}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
+      x: 4
       y: 4
       width: 32
-      height: 38
+      height: 53
     spriteID: 8c2c87f5b5733e94ca88a7ad5f24e8c9
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 4}
+    uvTransform: {x: 4, y: 4}
   - name: Idle_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.39473686}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
+      x: 44
       y: 4
       width: 32
-      height: 38
+      height: 53
     spriteID: adac5d599a9d3a04680efbda920f013e
     spriteBone: []
     spriteOutline: []
@@ -220,7 +220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 4}
+    uvTransform: {x: 44, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -235,45 +235,45 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 16
-        y: 15
+        y: 0
         width: 32
-        height: 37
+        height: 52
       spriteId: d25ab9154eaa8294091cdf15dd201d40
     - name: Idle_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 16
-        y: 14
+        y: 0
         width: 32
-        height: 37
+        height: 51
       spriteId: 42a248ffb6f3f8e46b47ce9efb708e39
     - name: Idle_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 16
-        y: 14
+        y: 0
         width: 32
-        height: 38
+        height: 52
       spriteId: 7c878e0142022dc49a7af508425a21ee
     - name: Idle_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 16
-        y: 15
+        y: 0
         width: 32
-        height: 38
+        height: 53
       spriteId: 8c2c87f5b5733e94ca88a7ad5f24e8c9
     - name: Idle_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
         x: 16
-        y: 15
+        y: 0
         width: 32
-        height: 38
+        height: 53
       spriteId: adac5d599a9d3a04680efbda920f013e
     linkedCells: []
     parentIndex: -1

@@ -17,6 +17,6 @@ MonoBehaviour:
   bossBaseDamage: 10
   bossDamage: 11
   bossBaseHealth: 200
-  bossCurrentHealth: 1400
   bossMaxHealth: 1400
+  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   isAlive: 0

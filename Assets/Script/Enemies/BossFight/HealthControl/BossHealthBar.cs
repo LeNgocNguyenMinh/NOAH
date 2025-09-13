@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BossHealthBar : MonoBehaviour
 {
+    [SerializeField]private GameObject healthBarObj;
     [SerializeField]private Image healthBarFrontImage;
     [SerializeField]private Image healthBarBackImage;
     [SerializeField]private TextMeshProUGUI healthText;
@@ -31,5 +32,13 @@ public class BossHealthBar : MonoBehaviour
     public void UpdateHealthText()
     {
         healthText.text = $"{(int)currentHealth}/{(int)maxHealth}";
+    }
+    public void HideHealthBar()
+    {
+        healthBarObj.SetActive(false);
+    }
+    public void ShowHealthBar()
+    {
+        healthBarObj.SetActive(true);
     }
 }

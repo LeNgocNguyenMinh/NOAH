@@ -10,6 +10,7 @@ public class PlayerMeleeATK : MonoBehaviour
     private int comboCount = 1;
     private bool canComBo = false;
     private bool canAttack = true;
+    private bool inMeleeATK = false;
     public float delayMeleeCount = 0f;
     private void Awake()
     {
