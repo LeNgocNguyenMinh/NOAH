@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerStep : MonoBehaviour
 {
     private float timeBtwSpawn;
-    public float startTimeBtwSpawn;
-    public GameObject echo;
+    [SerializeField]private float startTimeBtwSpawn;
+    [SerializeField]private float destroyTime;
+    [SerializeField]private GameObject echo;
     void Update()
     {
         if(Player.Instance.MoveDirect != Vector2.zero)
@@ -17,7 +18,7 @@ public class PlayerStep : MonoBehaviour
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                 Quaternion rot = Quaternion.Euler(0, 0, angle);
                 GameObject clone = Instantiate(echo, transform.position, rot);
-                Destroy(clone, 6f);
+                Destroy(clone, destroyTime);
                 timeBtwSpawn = startTimeBtwSpawn;
             }
             else

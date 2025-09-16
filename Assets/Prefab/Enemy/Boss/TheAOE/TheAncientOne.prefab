@@ -357,6 +357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 93033944577037013}
   - {fileID: 2535275078249216255}
   - {fileID: 8770755758799849464}
   m_Father: {fileID: 7515365976192848355}
@@ -548,6 +549,7 @@ Transform:
   m_Children:
   - {fileID: 6968899789170482789}
   - {fileID: 305912711991783756}
+  - {fileID: 2570956926415527685}
   - {fileID: 8019376924730301115}
   m_Father: {fileID: 5053323810401007805}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -701,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8019376924730301115}
   m_Layer: 0
-  m_Name: ShootPos_02
+  m_Name: ATK1_ShootPos_LH_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -732,7 +734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 305912711991783756}
   m_Layer: 0
-  m_Name: ShootPos_01
+  m_Name: ATK1_ShootPos_LH_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1201,6 +1203,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6767785632612090800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93033944577037013}
+  m_Layer: 0
+  m_Name: ATK2_ShootPos_RH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93033944577037013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767785632612090800}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5, y: 2.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2647690485999298322}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7669869676042543480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,16 +1495,25 @@ MonoBehaviour:
   <RHandRB>k__BackingField: {fileID: 3234374968259930056}
   <LHandRB>k__BackingField: {fileID: 4223958608492417837}
   <ATK1SitePref>k__BackingField: {fileID: 1964090138540030929, guid: 5003ceaa61a2cbb42b0758fb38c1c7bf, type: 3}
-  <ATK1ShootTime>k__BackingField: 4
-  <ATK1RHShootPos>k__BackingField: {fileID: 8770755758799849464}
-  <ATK1RHBulletPref>k__BackingField: {fileID: 6977596845214558048, guid: e873926ae97ea9f488496f0be7aa6566, type: 3}
-  <ATK1RHBulletSpeed>k__BackingField: 10
+  <ATK1RHReadyTime>k__BackingField: 2
+  <ATK1RHFlySpeed>k__BackingField: 10
+  <ATK1RHFallSpeed>k__BackingField: 15
+  <ATK1RHStayTime>k__BackingField: 2
+  ATK1RHDirect: {x: 0, y: 0, z: 0}
   <ATK1LHShootPos>k__BackingField:
   - {fileID: 305912711991783756}
   - {fileID: 8019376924730301115}
   <ATK1LHBulletPref>k__BackingField: {fileID: 1281206392688637662, guid: c8574c2e3bfda13449d235dc43b90dee, type: 3}
   <ATK1LHBulletTime>k__BackingField: 4
   <ATK1LHBulletSpeed>k__BackingField: 8
+  <ATK2RHBulletPref>k__BackingField: {fileID: 6977596845214558048, guid: 097f568096fb11145964684621e7e64f, type: 3}
+  <ATK2RHBulletSpeed>k__BackingField: 10
+  <ATK2RHBoundLimit>k__BackingField: 3
+  <ATK2RHShootPos>k__BackingField: {fileID: 93033944577037013}
+  <ATK2LHBulletPref>k__BackingField: {fileID: 6977596845214558048, guid: de75c4302ad6ab64e82083b75e477c8c, type: 3}
+  <ATK2LHBulletSpeed>k__BackingField: 10
+  <ATK2LHBoundLimit>k__BackingField: 3
+  <ATK2LHShootPos>k__BackingField: {fileID: 2570956926415527685}
   ATK1Direct: {x: 0, y: 0, z: 0}
   <HealthBar>k__BackingField: {fileID: 5601213393671280259}
 --- !u!210 &2615655959968479055
@@ -1496,7 +1538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8770755758799849464}
   m_Layer: 0
-  m_Name: ShootPos
+  m_Name: ATK1_HittPos_RH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1511,7 +1553,7 @@ Transform:
   m_GameObject: {fileID: 8577957589259770324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.35, y: 1.06, z: 0}
+  m_LocalPosition: {x: -1.54, y: -1.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1623,6 +1665,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &8965790560160633924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2570956926415527685}
+  m_Layer: 0
+  m_Name: ATK2_ShootPos_LH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2570956926415527685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965790560160633924}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.48, y: 1.96, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3967416504445873582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9153389069315793297
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class AOBossIdleState : AOBossState
     {
         if (triggerType == AOBoss.AnimationTriggerType.IdleAnimFinish)
         {
-            aoBoss.StateMachine.ChangeState(aoBoss.ATK1State);
+            aoBoss.StateMachine.ChangeState(aoBoss.ATK1ReadyState);
         }
     }
 }
