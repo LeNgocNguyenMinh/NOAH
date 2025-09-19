@@ -81,7 +81,6 @@ public class PlayerStatus : ScriptableObject
         currentExp = playerSaveData.currentExpData;
         maxHealth = playerSaveData.maxHealthData;
         currentHealth = playerSaveData.currentHealthData;
-        Debug.Log("CurrentHealth: " + currentHealth);
         currentWeapon = playerSaveData.currentWeaponID != "None" ? itemDictionary.GetItemInfo(playerSaveData.currentWeaponID) : null;
         /* if(playerSaveData.currentHatID != "None")
         {

@@ -10,7 +10,6 @@ public class PlayerWalkState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Enter Walk State");
         player.PlayerAnimator.SetTrigger("Walk");
     }
     public override void FrameUpdate()
@@ -28,7 +27,6 @@ public class PlayerWalkState : PlayerState
     public override void ExitState()
     {
         base.ExitState();
-        Debug.Log("Exit Walk State");
     }
     public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
     {

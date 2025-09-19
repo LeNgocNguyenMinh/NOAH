@@ -15,7 +15,6 @@ public class ItemInGroundController : MonoBehaviour
         {
             if(listItems[i].itemID == itemID && listItems[i].itemPos == pos)
             {
-                Debug.Log("CÓ");
                 listItems[i].isCollect = true;
                 break;
             }

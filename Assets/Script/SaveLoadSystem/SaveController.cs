@@ -206,7 +206,6 @@ public class SaveController : MonoBehaviour
     {
         if(File.Exists(newGameSaveLocation))
         {
-            Debug.Log("Co file new game");
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(newGameSaveLocation));
             FindObjectOfType<Player>().transform.position = saveData.playerPosition;
             FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
@@ -254,7 +253,6 @@ public class SaveController : MonoBehaviour
             SaveGame();
         }
         else{
-            Debug.Log("khong co file new game");
                 string defaultNewGameJson = @"{
                 ""saveScene"": ""Level1"",
                 ""playerPosition"": { ""x"": 1.7463607, ""y"": -4.6992025, ""z"": 0.0 },

@@ -10,7 +10,6 @@ public class PlayerDeadState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Enter Dead State");
         player.PlayerAnimator.SetTrigger("Dead");
     }
     public override void FrameUpdate()
@@ -21,7 +20,6 @@ public class PlayerDeadState : PlayerState
     public override void ExitState()
     {
         base.ExitState();
-        Debug.Log("Exit Dead State");
     }
     public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
     {

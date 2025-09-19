@@ -403,12 +403,12 @@ SpriteRenderer:
   m_SortingLayerID: 686130243
   m_SortingLayer: 10
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1237020158, guid: 807b5d79339046344af134a49271bfa7, type: 3}
+  m_Sprite: {fileID: -622027142, guid: 55ec4534d69971141a8f4120e46f594e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 3}
+  m_Size: {x: 5, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -449,9 +449,9 @@ BoxCollider2D:
   m_Offset: {x: 0.3, y: 0.8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 5, y: 2}
-    newSize: {x: 5, y: 3}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -594,12 +594,12 @@ SpriteRenderer:
   m_SortingLayerID: 686130243
   m_SortingLayer: 10
   m_SortingOrder: 2
-  m_Sprite: {fileID: 1567981987, guid: 7b01234f7bd9c76498aa01d082d58bc1, type: 3}
+  m_Sprite: {fileID: -649534387, guid: 23aef7b5ab906bd4f943c69f91dde8d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 3}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -640,9 +640,9 @@ BoxCollider2D:
   m_Offset: {x: -0.3, y: 0.8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 5, y: 2}
-    newSize: {x: 5, y: 3}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -784,7 +784,7 @@ Transform:
   m_GameObject: {fileID: 4384806998288403773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -832,12 +832,12 @@ SpriteRenderer:
   m_SortingLayerID: 686130243
   m_SortingLayer: 10
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1653299528, guid: 26051ca687f95df438154c3b75835286, type: 3}
+  m_Sprite: {fileID: 1820104447, guid: 4a7b8c99af8aa94479f7013eb3af89f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.875, y: 5.5}
+  m_Size: {x: 5, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -878,9 +878,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 2.8337257}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 6, y: 6}
-    newSize: {x: 3.875, y: 5.5}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 6}
+    newSize: {x: 5, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1228,7 +1228,7 @@ Transform:
   m_GameObject: {fileID: 6767785632612090800}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 2.05, z: 0}
+  m_LocalPosition: {x: -1.5, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1494,6 +1494,7 @@ MonoBehaviour:
   <LeftHand>k__BackingField: {fileID: 5053323810401007805}
   <RHandRB>k__BackingField: {fileID: 3234374968259930056}
   <LHandRB>k__BackingField: {fileID: 4223958608492417837}
+  <ATK1MaxAtk>k__BackingField: 3
   <ATK1SitePref>k__BackingField: {fileID: 1964090138540030929, guid: 5003ceaa61a2cbb42b0758fb38c1c7bf, type: 3}
   <ATK1RHReadyTime>k__BackingField: 2
   <ATK1RHFlySpeed>k__BackingField: 10
@@ -1506,13 +1507,15 @@ MonoBehaviour:
   <ATK1LHBulletPref>k__BackingField: {fileID: 1281206392688637662, guid: c8574c2e3bfda13449d235dc43b90dee, type: 3}
   <ATK1LHBulletTime>k__BackingField: 4
   <ATK1LHBulletSpeed>k__BackingField: 8
+  <ATK2MaxAtk>k__BackingField: 3
+  <ATK2AtkDelay>k__BackingField: 2
   <ATK2RHBulletPref>k__BackingField: {fileID: 6977596845214558048, guid: 097f568096fb11145964684621e7e64f, type: 3}
   <ATK2RHBulletSpeed>k__BackingField: 10
   <ATK2RHBoundLimit>k__BackingField: 3
   <ATK2RHShootPos>k__BackingField: {fileID: 93033944577037013}
   <ATK2LHBulletPref>k__BackingField: {fileID: 6977596845214558048, guid: de75c4302ad6ab64e82083b75e477c8c, type: 3}
-  <ATK2LHBulletSpeed>k__BackingField: 10
-  <ATK2LHBoundLimit>k__BackingField: 3
+  <ATK2LHBulletSpeed>k__BackingField: 20
+  <ATK2LHBoundLimit>k__BackingField: 4
   <ATK2LHShootPos>k__BackingField: {fileID: 2570956926415527685}
   ATK1Direct: {x: 0, y: 0, z: 0}
   <HealthBar>k__BackingField: {fileID: 5601213393671280259}
@@ -1690,7 +1693,7 @@ Transform:
   m_GameObject: {fileID: 8965790560160633924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.48, y: 1.96, z: 0}
+  m_LocalPosition: {x: 1.5, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

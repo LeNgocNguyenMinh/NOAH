@@ -79,7 +79,6 @@ public class Player : MonoBehaviour, IPlayerMoveable
     }
     public void PlayerDead()
     {
-        Debug.Log("Player Dead:--- "  + StateMachine.CurrentState.GetType().Name);
         if(StateMachine.CurrentState.GetType().Name != "PlayerDeadState") { 
             StateMachine.ChangeState(DeadState);
         }

@@ -17,12 +17,10 @@ public class BombDemonMovementControl : MonoBehaviour
         {
             if(Vector3.Distance(playerTransform.position, transform.position) > maxDistance && !runStraight)
             {
-                Debug.Log("Distance: " + Vector3.Distance(playerTransform.position, transform.position));
                 direct = (playerTransform.position - transform.position).normalized;
             }
             else
             {
-                Debug.Log("reach limit");
                 runStraight = true;
             } 
             rb.velocity = direct * speed;

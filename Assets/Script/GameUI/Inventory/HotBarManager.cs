@@ -14,7 +14,6 @@ public class HotBarManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("Equip slot 1");
             slot1.Equip();
         }
         if(Input.GetKeyDown(KeyCode.Alpha2))

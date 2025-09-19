@@ -8,9 +8,11 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public Transform LeftHand { get; set; }
     [field: SerializeField]public Rigidbody2D RHandRB { get; set; }
     [field: SerializeField]public Rigidbody2D LHandRB { get; set; }
-    public Transform RightHandOriginTrans { get; set; }
-    public Transform LeftHandOriginTrans { get; set; }
+    public Vector3 RightHandOriginTrans { get; set; }
+    public Vector3 LeftHandOriginTrans { get; set; }
     [field: Header("ATK1 Setting")]
+    [field: SerializeField]public int ATK1MaxAtk { get; set; }
+    public int AttackCount { get; set; }
     [field: Header("----Right Hand")]
     [field: SerializeField]public GameObject ATK1SitePref { get; set; }
     [field: SerializeField]public float ATK1RHReadyTime { get; set; }
@@ -24,6 +26,8 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public float ATK1LHBulletTime { get; set; }
     [field: SerializeField]public float ATK1LHBulletSpeed { get; set; }
     [field: Header("ATK2 Setting")]
+    [field: SerializeField]public int ATK2MaxAtk { get; set; }
+    [field: SerializeField]public int ATK2AtkDelay { get; set; }
     [field: Header("----Right Hand")]
     [field: SerializeField]public GameObject ATK2RHBulletPref { get; set; }
     [field: SerializeField]public float ATK2RHBulletSpeed { get; set; }
@@ -41,17 +45,23 @@ public class AOBoss : MonoBehaviour
     public AOBossDeadState DeadState { get; private set; }
     public AOBossIdleState IdleState { get; private set; }
     public AOBossATK1ReadyState ATK1ReadyState { get; private set; }
-    public AOBossATK1State ATK1State { get; private set; }
-    public AOBossATK2State ATK2State { get; private set; }
+    public AOBossATK1IdleState ATK1IdleState { get; private set; }
+    public AOBossATK1AttackState ATK1AttackState { get; private set; }
+    public AOBossATK1EndState ATK1EndState { get; private set; }
+    public AOBossATK2ReadyState ATK2ReadyState { get; private set; }
+    public AOBossATK2IdleState ATK2IdleState { get; private set; }
+    public AOBossATK2EndState ATK2EndState { get; private set; }
     public Rigidbody2D RB { get; set; }
     [field: SerializeField]public BossHealthBar HealthBar{ get; set; }
 
     public enum AnimationTriggerType
     {
         RestAnimFinish,
-        DeadAnimFinish,
         AwakeAnimFinish, 
-        IdleAnimFinish
+        IdleAnimFinish,
+        ATK1ReadyAnimFinish,
+        ATK2ReadyAnimFinish,
+        DeadAnimFinish,
     }
 
     private void Awake()
@@ -62,14 +72,19 @@ public class AOBoss : MonoBehaviour
         DeadState = new AOBossDeadState(this, StateMachine);
         IdleState = new AOBossIdleState(this, StateMachine);
         ATK1ReadyState = new AOBossATK1ReadyState(this, StateMachine);
-        ATK1State = new AOBossATK1State(this, StateMachine);       
-        ATK2State = new AOBossATK2State(this, StateMachine);   
+        ATK1IdleState = new AOBossATK1IdleState(this, StateMachine);  
+        ATK1AttackState = new AOBossATK1AttackState(this, StateMachine);  
+        ATK1EndState = new AOBossATK1EndState(this, StateMachine);      
+        ATK2ReadyState = new AOBossATK2ReadyState(this, StateMachine);
+        ATK2IdleState = new AOBossATK2IdleState(this, StateMachine);
+        ATK2EndState = new AOBossATK2EndState(this, StateMachine);   
     }
     private void Start()
     {
-        RightHandOriginTrans = RightHand;
-        LeftHandOriginTrans = LeftHand;
+        RightHandOriginTrans = RightHand.position;
+        LeftHandOriginTrans = LeftHand.position;
         RB = GetComponent<Rigidbody2D>();
+        AttackCount = 0;
         StateMachine.Initialize(RestState);
     }
     private void Update()

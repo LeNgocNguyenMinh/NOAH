@@ -53,7 +53,6 @@ public class ShopItemSlot : MonoBehaviour
             }
             NotifPopUp.Instance.ShowNotification("Add 1 " + item.itemName + " to inventory.");
             numberOfItem--;
-            Debug.Log("Left: " + numberOfItem);
             SetNumberOfItem(numberOfItem);
             shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
             shopController.CoinTextUpdateAfterBuy(item.itemPrice);

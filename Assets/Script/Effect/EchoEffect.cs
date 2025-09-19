@@ -7,7 +7,7 @@ public class EchoEffect : MonoBehaviour
     private float timeBtwSpawn;
     [SerializeField]private float startTimeBtwSpawn;
     [SerializeField]private GameObject echo;
-    [SerializeField]private float duration;
+    private float duration = 1.5f;
     [SerializeField]private Color color;
     void Update()
     {

@@ -10,7 +10,6 @@ public class PlayerDashState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Enter Dash State");
         player.GetMoveDirect();
         player.FacingDirection();
         player.PlayerAnimator.SetTrigger("Dash");
@@ -23,7 +22,6 @@ public class PlayerDashState : PlayerState
     public override void ExitState()
     {
         base.ExitState();
-        Debug.Log("Exit Dash State");
     }
     public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
     {

@@ -10,7 +10,6 @@ public class PlayerIdleState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Enter Idle State");
         player.PlayerAnimator.SetTrigger("Idle");
     }
     public override void FrameUpdate()
@@ -27,7 +26,6 @@ public class PlayerIdleState : PlayerState
     public override void ExitState()
     {
         base.ExitState();
-        Debug.Log("Exit Idle State");
     }
     public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
     {

@@ -13,7 +13,6 @@ public class BossHurt : MonoBehaviour
         EnemyHitEffect enemyHitEffect = GetComponentInParent<EnemyHitEffect>();
         if(enemyHitEffect != null && direction != default)
         {
-            Debug.Log("dfsfnsjdkhfsdbjfsdgfsdgfkjsdfkjsdh");
             enemyHitEffect.Flash(color);
             enemyHitEffect.SplashAfterEffectInit( transform.position, (Vector2) direction);
         }
