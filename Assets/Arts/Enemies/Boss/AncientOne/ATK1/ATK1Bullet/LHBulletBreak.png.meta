@@ -128,10 +128,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: LHBulletBreak_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 0
-        width: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: LHBulletBreak_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 64
         y: 0
-        width: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: LHBulletBreak_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 96
         y: 0
-        width: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,27 +202,6 @@ TextureImporter:
       bones: []
       spriteID: 2da4dfac74e5b004dbe1521519849b68
       internalID: -1098253771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LHBulletBreak_4
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 96
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ba3ad7877915af4c8e50e1eb2e80183
-      internalID: 1526905721
       vertices: []
       indices: 
       edges: []
@@ -242,7 +221,6 @@ TextureImporter:
       LHBulletBreak_1: 763935355
       LHBulletBreak_2: -711390066
       LHBulletBreak_3: -1098253771
-      LHBulletBreak_4: 1526905721
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

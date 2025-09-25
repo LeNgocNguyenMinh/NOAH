@@ -7,12 +7,16 @@ public class AOBossATK2LHBullet : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private int flyTime;
-    public void SetValue(Vector3 direct, float speed, int flyTime)
+    private bool animTrigger = false;
+    private float damage;
+    public void SetValue(Vector3 direct, float speed, int flyTime, float damage)
     {
         this.direct = direct;
         this.speed = speed;
         this.flyTime = flyTime;
+        this.damage = damage;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         Shoot();
     }
     public void Shoot()
@@ -22,9 +26,21 @@ public class AOBossATK2LHBullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         flyTime--;
-        if(flyTime < 0)
+        if(collision.gameObject.tag == "PlayerHitCollider" && !animTrigger)
         {
-            Destroy(gameObject);
+            PlayerEffect.Instance.PushBack(direct);
+            PlayerEffect.Instance.HitFlash();
+            animTrigger = true;
+            rb.velocity = Vector2.zero;
+            HealthControl.Instance.PlayerHurt(damage);
+            animator.SetTrigger("Break");
+            return;
+        }
+        if(flyTime < 0 && !animTrigger)
+        {
+            rb.velocity = Vector2.zero;
+            animTrigger = true;
+            animator.SetTrigger("Break");
             return;
         }
         var firstContact = collision.contacts[0];

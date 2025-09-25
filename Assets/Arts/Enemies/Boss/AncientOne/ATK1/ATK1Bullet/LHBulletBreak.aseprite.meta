@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: LHBulletBreak_Frame_0
     originalName: 
-    pivot: {x: 0.7272727, y: -2.6000001}
+    pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 91
-      width: 22
-      height: 5
+      y: 76
+      width: 16
+      height: 16
     spriteID: 57e066ee4b971f048964d36891e78a0d
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 91}
+    uvTransform: {x: 4, y: 76}
   - name: LHBulletBreak_Frame_1
     originalName: 
-    pivot: {x: 0.7272727, y: -2.6000001}
+    pivot: {x: 0.5625, y: -0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 34
-      y: 91
-      width: 22
-      height: 5
+      x: 40
+      y: 4
+      width: 16
+      height: 20
     spriteID: adbcc504ff3bd2b41b572ea76a14c211
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 34, y: 91}
+    uvTransform: {x: 40, y: 4}
   - name: LHBulletBreak_Frame_2
     originalName: 
-    pivot: {x: 0.7037037, y: -0.6}
+    pivot: {x: 0.56, y: -0.11111111}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 68
-      width: 27
-      height: 15
+      y: 41
+      width: 25
+      height: 27
     spriteID: 10e83b53344bbab4fad782493efac409
     spriteBone: []
     spriteOutline: []
@@ -180,39 +180,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 68}
+    uvTransform: {x: 4, y: 41}
   - name: LHBulletBreak_Frame_3
     originalName: 
-    pivot: {x: 0.6571429, y: -0.30434784}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 37
-      width: 35
-      height: 23
-    spriteID: a79003065116d1348b83438cca12c14d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 37}
-  - name: LHBulletBreak_Frame_4
-    originalName: 
-    pivot: {x: 0.6486486, y: -0.24}
+    pivot: {x: 0.5357143, y: -0.06896552}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 37
-      height: 25
-    spriteID: 8518005ae5b23a74c97f3d46275f65d2
+      width: 28
+      height: 29
+    spriteID: a79003065116d1348b83438cca12c14d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -234,47 +214,38 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 32
-        y: 13
-        width: 22
-        height: 5
+        x: 8
+        y: 8
+        width: 16
+        height: 16
       spriteId: 57e066ee4b971f048964d36891e78a0d
     - name: LHBulletBreak_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 32
-        y: 13
-        width: 22
-        height: 5
+        x: 7
+        y: 6
+        width: 16
+        height: 20
       spriteId: adbcc504ff3bd2b41b572ea76a14c211
     - name: LHBulletBreak_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 29
-        y: 9
-        width: 27
-        height: 15
+        x: 2
+        y: 3
+        width: 25
+        height: 27
       spriteId: 10e83b53344bbab4fad782493efac409
     - name: LHBulletBreak_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 25
-        y: 7
-        width: 35
-        height: 23
+        x: 1
+        y: 2
+        width: 28
+        height: 29
       spriteId: a79003065116d1348b83438cca12c14d
-    - name: LHBulletBreak_Frame_4
-      frameIndex: 4
-      additiveSortOrder: 0
-      cellRect:
-        x: 24
-        y: 6
-        width: 37
-        height: 25
-      spriteId: 8518005ae5b23a74c97f3d46275f65d2
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -293,4 +264,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 96, y: 32}
+  canvasSize: {x: 32, y: 32}

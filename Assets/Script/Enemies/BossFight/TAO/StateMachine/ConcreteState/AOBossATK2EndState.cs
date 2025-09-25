@@ -24,5 +24,9 @@ public class AOBossATK2EndState : AOBossState
     }
     public override void AnimationTriggerEvent(AOBoss.AnimationTriggerType triggerType)
     {
+        if(triggerType == AOBoss.AnimationTriggerType.ATK2EndAnimFinish)
+        {
+            aoBoss.StateMachine.ChangeState(aoBoss.IdleState);
+        }
     }
 }

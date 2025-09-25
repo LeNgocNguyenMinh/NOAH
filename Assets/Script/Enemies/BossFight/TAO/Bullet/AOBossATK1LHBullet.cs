@@ -7,37 +7,37 @@ public class AOBossATK1LHBullet : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private float flyTime;
-    private bool startFly = false;
     private bool breaking = false;
+    private float damage;
     
 
-    public void SetValue(float speed, float flyTime)
+    public void SetValue(float speed, float flyTime, float damage)
     {
         this.speed = speed;
         this.flyTime = flyTime;
+        this.damage = damage;
+        breaking = false;
         Shoot();
     }
     public void Update()
     {
-        if(startFly)
+        flyTime -= Time.deltaTime;
+        if(!breaking)
         {
-            flyTime -= Time.deltaTime;
             direct = (Player.Instance.transform.position - transform.position).normalized;
             float angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, angle - 180f);
             rb.velocity = direct * speed;
         } 
+        else{
+            rb.velocity = Vector2.zero;
+        }
         if(flyTime <= 0f && !breaking)
         {
             breaking = true;
-            startFly = false;
             flyTime = 0f;
             rb.velocity = Vector2.zero;
             animator.SetTrigger("Break");  
-        }
-        if(breaking)
-        {
-            rb.velocity = Vector2.zero;
         }
     }
     public void Shoot()
@@ -45,19 +45,16 @@ public class AOBossATK1LHBullet : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         animator.SetTrigger("Fly");
-        startFly = true;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         animator = GetComponent<Animator>();
-        if(collision.CompareTag("PlayerHitCollider") && !breaking)
+        if(collider.CompareTag("PlayerHitCollider") && !breaking)
         {
             breaking = true;
-            animator.SetTrigger("Break");
-        }
-        if(collision.CompareTag("ForeGround") && !breaking)
-        {
-            breaking = true;
+            HealthControl.Instance.PlayerHurt(damage);
+            PlayerEffect.Instance.PushBack(direct);
+            PlayerEffect.Instance.HitFlash();
             animator.SetTrigger("Break");
         }
     }

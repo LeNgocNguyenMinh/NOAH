@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,16 +128,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 38
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da87dcdf2142e314ca9ba124b779ecc6
+      spriteID: 842ecfe437076dd4593c3f90e127427e
       internalID: 12005100
       vertices: []
       indices: 
@@ -147,18 +147,18 @@ TextureImporter:
       name: Chest_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 48
         y: 0
-        width: 38
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17bbc8bed7761744c89dac2d0347f1d9
+      spriteID: 8470c57793dcbe740912e3fb6df8600c
       internalID: 863436140
       vertices: []
       indices: 
@@ -168,18 +168,18 @@ TextureImporter:
       name: Chest_2
       rect:
         serializedVersion: 2
-        x: 76
+        x: 96
         y: 0
-        width: 38
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fc1b5a143ed7ce428fc22ccce3897b9
+      spriteID: 1d9812507b52c1a429c8d9381be6d641
       internalID: 961346762
       vertices: []
       indices: 
@@ -189,18 +189,18 @@ TextureImporter:
       name: Chest_3
       rect:
         serializedVersion: 2
-        x: 114
+        x: 144
         y: 0
-        width: 38
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e628b0b5a00f8054193e837774000052
+      spriteID: 9c34460e686f384449e17edda83a5fed
       internalID: 1202143134
       vertices: []
       indices: 

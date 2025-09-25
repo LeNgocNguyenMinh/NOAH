@@ -6,7 +6,9 @@ public class ItemDictionary : MonoBehaviour
 {
     public static ItemDictionary Instance;
     [SerializeField]private List<Item> itemList;
+    [SerializeField]private List<BossStatus> boss;
     private Dictionary<string, Item> itemDictionary;
+    private Dictionary<string, BossStatus> bossDictionary;
     private void Awake()
     {
         if (Instance == null) Instance = this;

@@ -6,6 +6,7 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
 {
     public bool IsInChaseRange { get; set; } = false;
     public bool IsInAttackRange { get; set; } = false;
+    [field: Header("Moving Enemy Setting")]
     [field: SerializeField]public GameObject mainObject { get; set; }
     [field: SerializeField]public Rigidbody2D RB { get; set; }
     [field: SerializeField]public float WalkSpeed { get; set;}

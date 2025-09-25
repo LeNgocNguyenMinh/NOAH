@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4175152759230104108}
   - component: {fileID: 3320600019963012635}
   m_Layer: 0
-  m_Name: LHandBullet
+  m_Name: ATK1LHBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,5 +230,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwSpawn: 0.05
   echo: {fileID: 6369019551968125540, guid: 318602bb6dea5d041ba18b32f632d1f1, type: 3}
-  duration: 5
-  color: {r: 0.909804, g: 0.30588236, b: 0.2509804, a: 1}
+  duration: 0.5
+  color: {r: 0, g: 0, b: 0, a: 1}

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwSpawn: 0.05
   echo: {fileID: 6369019551968125540, guid: 318602bb6dea5d041ba18b32f632d1f1, type: 3}
-  duration: 5
+  duration: 0.5
   color: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 1}
 --- !u!1 &6977596845214558048
 GameObject:
@@ -59,8 +59,9 @@ GameObject:
   - component: {fileID: 5831477188045792623}
   - component: {fileID: 8281460087728436913}
   - component: {fileID: 1999662039692919892}
-  - component: {fileID: 5617595596519260443}
   - component: {fileID: 6678945175462588513}
+  - component: {fileID: 6296793144623672591}
+  - component: {fileID: 5746429418443775033}
   m_Layer: 0
   m_Name: ATK2LHandBullet
   m_TagString: Untagged
@@ -146,18 +147,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &5617595596519260443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6977596845214558048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ce5b8e37fc8ef544ae84889bbb5932c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &6678945175462588513
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -210,3 +199,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &6296793144623672591
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977596845214558048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3d92b5dbb1f9384b8ad7a0e1ef2b354, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5746429418443775033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977596845214558048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e478e86fc763dd4e80ac1c1240b2940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

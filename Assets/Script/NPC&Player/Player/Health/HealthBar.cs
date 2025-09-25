@@ -32,6 +32,6 @@ public class HealthBar : MonoBehaviour
     }
     public void UpdateHealthText()
     {
-        healthText.text = $"-={(int)currentHealth}/{(int)maxHealth}=-";
+        healthText.text = $"{(int)currentHealth}/{(int)maxHealth}";
     }
 }

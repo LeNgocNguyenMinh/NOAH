@@ -9,7 +9,6 @@ public class HealthControl : MonoBehaviour
     public static HealthControl Instance;
     private PauseMenu pauseMenu;
     [SerializeField]private PlayerStatus playerStatus;
-    [SerializeField]private Player playerControl;
     private HealthBar healthBar;// Health bar
     private float healthCurrentValue;// Health current value
     private float healthMaxValue; // Health max value need to achive for level up
@@ -43,21 +42,7 @@ public class HealthControl : MonoBehaviour
         if(healthCurrentValue <= 0)
         {
             healthCurrentValue = 0;
-            /* BossAOShoot ancientBoss = FindObjectOfType<BossAOShoot>(); */
-            /* FDManager dragonBoss = FindObjectOfType<FDManager>();
-
-            if (ancientBoss != null)
-            {
-                BossAOSummon bossAOSummon = FindObjectOfType<BossAOSummon>().GetComponent<BossAOSummon>();
-                bossAOSummon.PlayerDeadInBossBattle();
-            }
-
-            if (dragonBoss != null)
-            {
-                FDDetectStartBattle fdDetectStartBattle = FindObjectOfType<FDDetectStartBattle>().GetComponent<FDDetectStartBattle>();
-                fdDetectStartBattle.PlayerDeadInBossBattle();
-            } */
-            playerControl.PlayerDead();// Mean player Dead
+            Player.Instance.PlayerDead();// Mean player Dead
         }
         //Update Current Health and Health Text
         healthBar.SetHealth(healthCurrentValue);

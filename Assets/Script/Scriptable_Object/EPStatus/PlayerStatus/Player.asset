@@ -19,12 +19,12 @@ MonoBehaviour:
   playerCurrentDamage: 20
   playerWeaponDamage: 3
   playerBullet: 6
-  playerCoin: 290
+  playerCoin: 250
   playerSprite: {fileID: 1028573758, guid: 8dbb52ff946028241861992a9ffdaf42, type: 3}
   maxExp: 40
-  currentExp: 26
+  currentExp: 0
   maxHealth: 200
-  currentHealth: 134
+  currentHealth: 200
   defaultWeapon: {fileID: 11400000, guid: 936f99e7a6062d84982a54d0b3a2027d, type: 2}
   currentWeapon: {fileID: 11400000, guid: 936f99e7a6062d84982a54d0b3a2027d, type: 2}
   defaultHat: {fileID: 11400000, guid: b97c59e6fb5b1d44fa5409de59353bbe, type: 2}

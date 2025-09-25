@@ -1,24 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SlimeBulletMove : MonoBehaviour
 {
     [SerializeField]private EnemyStatus enemyStatus;
-    private Transform playerTransform;
-    private Vector3 direction;
+    [SerializeField]private Rigidbody2D rb;
+    [SerializeField]private Animator animator;
+    private Vector2 direction;
     private bool bulletBreak = false;
-    [SerializeField]private float chaseTime = 0.0f;
-    [SerializeField]private float speed = 5.0f;
+    private float speed = 5.0f;
     private float timeCount;
-    private Rigidbody2D rb;
-    private Animator animator;
-    private void Start()
+    
+    public void SetInitValue(float speed, float chaseTime)
     {
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-        playerTransform = FindObjectOfType<Player>().transform;
+        this.speed = speed;
         timeCount = chaseTime;
+        bulletBreak = false;
     }
     public void FixedUpdate()
     {
@@ -35,13 +34,15 @@ public class SlimeBulletMove : MonoBehaviour
             rb.velocity = Vector2.zero;
             return;
         }
-        direction = (playerTransform.position - transform.position).normalized;
+        direction = (Player.Instance.transform.position - transform.position).normalized;
         rb.velocity = direction * speed;
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
+            collider.GetComponent<PlayerEffect>().PushBack(direction);
+            collider.GetComponent<PlayerEffect>().HitFlash();   
             HealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
             rb.velocity = Vector2.zero;
             bulletBreak = true;

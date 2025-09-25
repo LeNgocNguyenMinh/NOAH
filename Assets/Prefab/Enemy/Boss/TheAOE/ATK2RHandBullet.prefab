@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwSpawn: 0.05
   echo: {fileID: 6369019551968125540, guid: 318602bb6dea5d041ba18b32f632d1f1, type: 3}
-  duration: 5
+  duration: 0.5
   color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &6977596845214558048
 GameObject:
@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 1999662039692919892}
   - component: {fileID: 5617595596519260443}
   - component: {fileID: 6678945175462588513}
+  - component: {fileID: 776592656045443216}
   m_Layer: 0
   m_Name: ATK2RHandBullet
   m_TagString: Untagged
@@ -210,3 +211,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &776592656045443216
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977596845214558048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 02580651f926a9841b06f741c8340fa9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -23,7 +23,7 @@ public class EXPBar : MonoBehaviour
     }
     public void UpdateEXPText()
     {
-        expText.text = $"-={(int)currentEXP}/{(int)maxEXP}=-";
+        expText.text = $"{(int)currentEXP}/{(int)maxEXP}";
     }
     public void UpdateLevelText(int level)
     {

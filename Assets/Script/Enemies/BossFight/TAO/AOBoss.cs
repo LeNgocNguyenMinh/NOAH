@@ -3,11 +3,16 @@ using UnityEngine;
 public class AOBoss : MonoBehaviour
 {
     [field: Header("General attribute")]
+    [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public Animator AOBossAnimator { get; set; }
     [field: SerializeField]public Transform RightHand { get; set; }
     [field: SerializeField]public Transform LeftHand { get; set; }
     [field: SerializeField]public Rigidbody2D RHandRB { get; set; }
     [field: SerializeField]public Rigidbody2D LHandRB { get; set; }
+    [field: SerializeField]public Rigidbody2D HeadRB { get; set; }
+    [field: SerializeField]public BoxCollider2D LHandCld { get; set; }
+    [field: SerializeField]public BoxCollider2D RHandCld { get; set; }
+    [field: SerializeField]public BoxCollider2D HeadCld { get; set; }
     public Vector3 RightHandOriginTrans { get; set; }
     public Vector3 LeftHandOriginTrans { get; set; }
     [field: Header("ATK1 Setting")]
@@ -21,7 +26,7 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public float ATK1RHStayTime { get; set; }
     public Vector3 ATK1RHDirect;
     [field: Header("----Left Hand")]
-    [field: SerializeField]public Transform[] ATK1LHShootPos { get; set; }
+    [field: SerializeField]public Transform ATK1LHShootPos { get; set; }
     [field: SerializeField]public GameObject ATK1LHBulletPref { get; set; }
     [field: SerializeField]public float ATK1LHBulletTime { get; set; }
     [field: SerializeField]public float ATK1LHBulletSpeed { get; set; }
@@ -51,7 +56,7 @@ public class AOBoss : MonoBehaviour
     public AOBossATK2ReadyState ATK2ReadyState { get; private set; }
     public AOBossATK2IdleState ATK2IdleState { get; private set; }
     public AOBossATK2EndState ATK2EndState { get; private set; }
-    public Rigidbody2D RB { get; set; }
+    public bool BossIsAwake { get; set; }
     [field: SerializeField]public BossHealthBar HealthBar{ get; set; }
 
     public enum AnimationTriggerType
@@ -61,6 +66,7 @@ public class AOBoss : MonoBehaviour
         IdleAnimFinish,
         ATK1ReadyAnimFinish,
         ATK2ReadyAnimFinish,
+        ATK2EndAnimFinish,
         DeadAnimFinish,
     }
 
@@ -83,7 +89,6 @@ public class AOBoss : MonoBehaviour
     {
         RightHandOriginTrans = RightHand.position;
         LeftHandOriginTrans = LeftHand.position;
-        RB = GetComponent<Rigidbody2D>();
         AttackCount = 0;
         StateMachine.Initialize(RestState);
     }

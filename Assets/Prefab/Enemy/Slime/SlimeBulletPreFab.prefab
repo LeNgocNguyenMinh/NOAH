@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStatus: {fileID: 11400000, guid: d742d73e6ef1e814d9fcc5cd6b99f3f0, type: 2}
-  chaseTime: 1
-  speed: 10
+  rb: {fileID: 105371480870097560}
+  animator: {fileID: 7758460727134094341}
 --- !u!1 &5775475873540181844
 GameObject:
   m_ObjectHideFlags: 0

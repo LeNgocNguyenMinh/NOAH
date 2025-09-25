@@ -14,16 +14,8 @@ public class EnemyHitEffect : MonoBehaviour
     
     void Start()
     {
-        // Get the SpriteRenderer to be used,
-        // alternatively you could set it from the inspector.
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // Get the material that the SpriteRenderer uses, 
-        // so we can switch back to it after the flash ended.
         originalMaterial = spriteRenderer.material;
-
-        // Copy the flashMaterial material, this is needed, 
-        // so it can be modified without any side effects.
         flashMaterial = new Material(flashMaterial);
     }
 

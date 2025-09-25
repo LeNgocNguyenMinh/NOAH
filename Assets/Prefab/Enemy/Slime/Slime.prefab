@@ -352,9 +352,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022644997, y: 0.18576273}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.6642103
+  m_Radius: 7.87
 --- !u!114 &7473727940681068410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,9 +680,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043683372, y: 0.29251894}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.7729893
+  m_Radius: 10.49
 --- !u!114 &9148137280165414646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,9 +1117,11 @@ MonoBehaviour:
   <WalkSpeed>k__BackingField: 4
   <WalkDuration>k__BackingField: 2
   <IdleDuration>k__BackingField: 3
-  <ChaseSpeed>k__BackingField: 3
+  <ChaseSpeed>k__BackingField: 5
   <MoveRange>k__BackingField: 3
   <AttackCoolDown>k__BackingField: 0
+  bulletChaseTime: 1
+  bulletSpeed: 10
 --- !u!114 &6028046122501504635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,6 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce9a8673453f2a44a0ae972c5dd9bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slime: {fileID: 782655299358372623}
   slimeBullet: {fileID: 771724941929772602, guid: 0a5ce893eacd95c4a86ea662bd0052d6, type: 3}
   bulletSpawnPoint: {fileID: 386869493500471128}
 --- !u!114 &4289366522790956879

@@ -21,17 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1458761356, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
+      value: {fileID: 840858390, guid: 190e442f28408a44c8c7478f75cca3df, type: 3}
     - time: 0.1
-      value: {fileID: 724370801, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
+      value: {fileID: -343850162, guid: 190e442f28408a44c8c7478f75cca3df, type: 3}
     - time: 0.2
-      value: {fileID: 1557010603, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
-    - time: 0.3
-      value: {fileID: -714440507, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
-    - time: 0.4
-      value: {fileID: -2036770852, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
-    - time: 0.5
-      value: {fileID: 777109352, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
+      value: {fileID: -1094566880, guid: 190e442f28408a44c8c7478f75cca3df, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -54,18 +48,15 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1458761356, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
-    - {fileID: 724370801, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
-    - {fileID: 1557010603, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
-    - {fileID: -714440507, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
-    - {fileID: -2036770852, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
-    - {fileID: 777109352, guid: 0dc0e802fe0ce624b95b65195f8a223d, type: 3}
+    - {fileID: 840858390, guid: 190e442f28408a44c8c7478f75cca3df, type: 3}
+    - {fileID: -343850162, guid: 190e442f28408a44c8c7478f75cca3df, type: 3}
+    - {fileID: -1094566880, guid: 190e442f28408a44c8c7478f75cca3df, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6
+    m_StopTime: 0.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,7 +76,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.6
+  - time: 0.3
     functionName: DestroyBullet
     data: 
     objectReferenceParameter: {fileID: 0}

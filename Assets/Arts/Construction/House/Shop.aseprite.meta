@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Shop
     originalName: 
-    pivot: {x: 0.5081968, y: -0.13043478}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 61
+      width: 60
       height: 69
     spriteID: a27570a32d33ac8449656a60b47351b5
     spriteBone: []
@@ -143,14 +143,14 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Shop_Frame_1
     originalName: 
-    pivot: {x: 0.5081968, y: -0.13043478}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 81
-      width: 61
+      width: 60
       height: 69
     spriteID: 33134601c8eaeb7438da7a31b5a62f8d
     spriteBone: []
@@ -163,14 +163,14 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 81}
   - name: Shop_Frame_2
     originalName: 
-    pivot: {x: 0.5081968, y: -0.13043478}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 158
-      width: 61
+      width: 60
       height: 69
     spriteID: d995dc63e0a328f4c838825924f29384
     spriteBone: []
@@ -183,14 +183,14 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 158}
   - name: Shop_Frame_3
     originalName: 
-    pivot: {x: 0.5081968, y: -0.13043478}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 73
+      x: 72
       y: 4
-      width: 61
+      width: 60
       height: 69
     spriteID: 9fe733ca6979dd045872bd6bd91d1391
     spriteBone: []
@@ -200,17 +200,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 73, y: 4}
+    uvTransform: {x: 72, y: 4}
   - name: Shop_Frame_4
     originalName: 
-    pivot: {x: 0.5081968, y: -0.13043478}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 73
+      x: 72
       y: 81
-      width: 61
+      width: 60
       height: 69
     spriteID: 2662d6206f22ed649958cfd351ccbcb9
     spriteBone: []
@@ -220,17 +220,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 73, y: 81}
+    uvTransform: {x: 72, y: 81}
   - name: Shop_Frame_5
     originalName: 
-    pivot: {x: 0.5081968, y: -0.13043478}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 73
+      x: 72
       y: 158
-      width: 61
+      width: 60
       height: 69
     spriteID: d025a45c541ddc645b3bb7de14683c42
     spriteBone: []
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 73, y: 158}
+    uvTransform: {x: 72, y: 158}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -254,54 +254,54 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 9
-        width: 61
+        x: 18
+        y: 0
+        width: 60
         height: 69
       spriteId: a27570a32d33ac8449656a60b47351b5
     - name: Shop_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 9
-        width: 61
+        x: 18
+        y: 0
+        width: 60
         height: 69
       spriteId: 33134601c8eaeb7438da7a31b5a62f8d
     - name: Shop_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 9
-        width: 61
+        x: 18
+        y: 0
+        width: 60
         height: 69
       spriteId: d995dc63e0a328f4c838825924f29384
     - name: Shop_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 9
-        width: 61
+        x: 18
+        y: 0
+        width: 60
         height: 69
       spriteId: 9fe733ca6979dd045872bd6bd91d1391
     - name: Shop_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 9
-        width: 61
+        x: 18
+        y: 0
+        width: 60
         height: 69
       spriteId: 2662d6206f22ed649958cfd351ccbcb9
     - name: Shop_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 9
-        width: 61
+        x: 18
+        y: 0
+        width: 60
         height: 69
       spriteId: d025a45c541ddc645b3bb7de14683c42
     linkedCells: []

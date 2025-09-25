@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf83b04472de2a54c829cfdc160b3236, type: 3}
+  m_Name: ListObjects
+  m_EditorClassIdentifier: 
+  objects:
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: 028c76e8434f3bc4eb77b76366af6130, type: 3}
+  - objectID: HPFruit_02
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: bddd75ea71426f14bb68f62f6c2a7812, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: 353ff091a7599874ab6d630a3df914b5, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: 40e61171d7b9a714190621d33d82f310, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: 6c783306a827e194297c756efda6490b, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: ed6ed4ad9a7db0043b3c6178b30f95a6, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: 429ed331dd512a24d8eaac6bc4108273, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: c3e121e655f113546b2cb6e036eb39c1, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: 9a36d95a2dfb13e40bb39c06fc153806, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7547224070579580989, guid: 2f30e9455b87d4846a0241433eea9f9b, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 7669869676042543480, guid: 476ba4a0985d78443aa461d3ba7d3976, type: 3}
+  - objectID: HPFruit_01
+    initPos: []
+    objectPrefab: {fileID: 5757221238128967508, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}

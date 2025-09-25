@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovingEnemyIdleState : MovingEnemyState
 {
     private float idleTimer;
-    private bool finishIdleAnim = false;
     public MovingEnemyIdleState(MovingEnemy enemy, MovingEnemyStateMachine stateMachine) : base(enemy, stateMachine)
     {
     }
@@ -14,7 +13,6 @@ public class MovingEnemyIdleState : MovingEnemyState
         base.EnterState();
         enemy.Stop();
         enemy.Animator.SetTrigger("Idle");
-        finishIdleAnim = false;
         idleTimer = enemy.IdleDuration;
     }
     public override void ExitState()

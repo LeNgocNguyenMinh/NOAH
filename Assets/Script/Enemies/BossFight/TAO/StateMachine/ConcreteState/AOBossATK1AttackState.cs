@@ -48,9 +48,7 @@ public class AOBossATK1AttackState : AOBossState
     public void LHandBulletSpawn()
     {
         Debug.Log("dfdfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsd");
-        Instantiate(aoBoss.ATK1LHBulletPref, aoBoss.ATK1LHShootPos[0].position, Quaternion.identity)
-        .GetComponent<AOBossATK1LHBullet>().SetValue(aoBoss.ATK1LHBulletSpeed, aoBoss.ATK1LHBulletTime);
-        Instantiate(aoBoss.ATK1LHBulletPref, aoBoss.ATK1LHShootPos[1].position, Quaternion.identity)
-        .GetComponent<AOBossATK1LHBullet>().SetValue(aoBoss.ATK1LHBulletSpeed, aoBoss.ATK1LHBulletTime);
+        Instantiate(aoBoss.ATK1LHBulletPref, aoBoss.ATK1LHShootPos.position, Quaternion.identity)
+        .GetComponent<AOBossATK1LHBullet>().SetValue(aoBoss.ATK1LHBulletSpeed, aoBoss.ATK1LHBulletTime, aoBoss.BossStatus.bossDamage);
     }
 }

@@ -23,7 +23,7 @@ public class SpawnControl : MonoBehaviour
         } 
         else{
             PlayerStatusAfterRespawn();
-            FindObjectOfType<Player>().transform.position = saveData.playerPosition;
+            Player.Instance.transform.position = saveData.playerPosition;
         }
     }
     private IEnumerator LoadSceneAsync(string sceneName)
@@ -53,10 +53,7 @@ public class SpawnControl : MonoBehaviour
     private void PlayerStatusAfterRespawn()
     {
         animator = GetComponent<Animator>();
-        playerControl = GetComponent<Player>();
-
-       /*  playerControl.SetIsAlive(true);// do this so player can move */
-        animator.SetTrigger("isRespawn");
+        Player.Instance.PlayerRespawn();
         playerStatus.RespawnPlayerAfterDead();//Player Status after dead and was respawn
         HealthControl.Instance.PlayerHeatlthAfterRespawn(); //Player Health UI
     }

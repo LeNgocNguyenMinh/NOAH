@@ -21,7 +21,10 @@ public class PlayerWalkState : PlayerState
         }
         player.FacingDirection();
         player.CheckDashCoolDown();
-        player.RB.velocity = player.MoveDirect * player.WalkSpeed;
+        if(!player.GotHit)
+        {
+            player.RB.velocity = player.MoveDirect * player.WalkSpeed;
+        }
         player.CheckDashButton();
     }
     public override void ExitState()

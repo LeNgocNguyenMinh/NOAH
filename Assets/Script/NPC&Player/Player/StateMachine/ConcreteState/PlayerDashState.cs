@@ -17,7 +17,11 @@ public class PlayerDashState : PlayerState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        player.RB.velocity = player.MoveDirect * player.DashSpeed;
+        if(!player.GotHit)
+        {
+            player.RB.velocity = player.MoveDirect * player.DashSpeed;
+        }
+        
     }
     public override void ExitState()
     {

@@ -13,7 +13,6 @@ public class MovingEnemyAttackState : MovingEnemyState
         base.EnterState();
         enemy.Animator.SetTrigger("Attack");
         enemy.Stop();
-        finishATKAnim = false;
     }
     public override void ExitState()
     {
@@ -22,11 +21,6 @@ public class MovingEnemyAttackState : MovingEnemyState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-
-        if(!enemy.IsInAttackRange && finishATKAnim)
-        {
-            enemy.StateMachine.ChangeState(enemy.ChaseState);
-        }
     }
     public override void PhysicsUpdate()
     {
@@ -37,8 +31,16 @@ public class MovingEnemyAttackState : MovingEnemyState
         base.AnimationTriggerEvent(triggerType);
         if(triggerType == MovingEnemy.AnimationTriggerType.AttackAnimFinish)
         {
-            finishATKAnim = true;
-            enemy.StateMachine.ChangeState(enemy.IdleState);
+            if(enemy.IsInChaseRange)
+            {
+                if(!enemy.IsInAttackRange)
+                {
+                    enemy.StateMachine.ChangeState(enemy.ChaseState);
+                }
+            }
+            else{
+                enemy.StateMachine.ChangeState(enemy.IdleState);
+            }
         }
     }
 }

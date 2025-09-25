@@ -24,6 +24,12 @@ public class AOBossIdleState : AOBossState
     {
         if (triggerType == AOBoss.AnimationTriggerType.IdleAnimFinish)
         {
+            aoBoss.LHandRB.bodyType = RigidbodyType2D.Dynamic;
+            aoBoss.RHandRB.bodyType = RigidbodyType2D.Dynamic;
+            aoBoss.HeadRB.bodyType = RigidbodyType2D.Dynamic;
+            aoBoss.LHandCld.isTrigger = true;
+            aoBoss.RHandCld.isTrigger = true;
+            aoBoss.HeadCld.isTrigger = true;
             aoBoss.StateMachine.ChangeState(aoBoss.ATK1ReadyState);
         }
     }

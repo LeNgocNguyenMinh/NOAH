@@ -24,7 +24,7 @@ public class Player : MonoBehaviour, IPlayerMoveable
     public Vector2 MoveDirect { get; set; }
     [field: SerializeField]public float DashCoolDown { get; set; } = 0f;
     public float DashCoolCounter { get; set; } = 0f;
-
+    public bool GotHit { get; set; }
     public enum AnimationTriggerType
     {
         WalkAnimFinish,
@@ -51,6 +51,7 @@ public class Player : MonoBehaviour, IPlayerMoveable
     }
     private void Start()
     {
+        GotHit = false;
         RB = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponent<Animator>();
         StateMachine.Initialize(IdleState);
@@ -83,6 +84,10 @@ public class Player : MonoBehaviour, IPlayerMoveable
             StateMachine.ChangeState(DeadState);
         }
         
+    }
+    public void PlayerRespawn()
+    {
+        StateMachine.ChangeState(IdleState);   
     }
     public Vector2 GetMoveDirect()
     {

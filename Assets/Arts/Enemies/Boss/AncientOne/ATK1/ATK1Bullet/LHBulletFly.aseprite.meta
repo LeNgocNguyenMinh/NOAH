@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: LHBulletFly_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -1.3529412}
+    pivot: {x: 0.5, y: -0.4117647}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 66, y: 29}
   - name: LHBulletFly_Frame_1
     originalName: 
-    pivot: {x: 0.57894737, y: -1.15}
+    pivot: {x: 0.57894737, y: -0.35}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -163,7 +163,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 60}
   - name: LHBulletFly_Frame_2
     originalName: 
-    pivot: {x: 0.57894737, y: -1.2}
+    pivot: {x: 0.57894737, y: -0.4}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -183,7 +183,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 88}
   - name: LHBulletFly_Frame_3
     originalName: 
-    pivot: {x: 0.52380955, y: -1.3333334}
+    pivot: {x: 0.52380955, y: -0.44444445}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 85}
   - name: LHBulletFly_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -1.2631578}
+    pivot: {x: 0.5, y: -0.42105263}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -223,7 +223,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 33}
   - name: LHBulletFly_Frame_5
     originalName: 
-    pivot: {x: 0.40909094, y: -1.1428572}
+    pivot: {x: 0.40909094, y: -0.3809524}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -243,7 +243,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: LHBulletFly_Frame_6
     originalName: 
-    pivot: {x: 0.42105263, y: -1.2}
+    pivot: {x: 0.42105263, y: -0.4}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -263,7 +263,7 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 57}
   - name: LHBulletFly_Frame_7
     originalName: 
-    pivot: {x: 0.33333334, y: -1.2631578}
+    pivot: {x: 0.33333334, y: -0.42105263}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -283,7 +283,7 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 4}
   - name: LHBulletFly_Frame_8
     originalName: 
-    pivot: {x: 0.43478262, y: -1.3333334}
+    pivot: {x: 0.43478262, y: -0.44444445}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -303,7 +303,7 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 31}
   - name: LHBulletFly_Frame_9
     originalName: 
-    pivot: {x: 0.54545456, y: -1.3529412}
+    pivot: {x: 0.54545456, y: -0.4117647}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -334,8 +334,8 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 24
-        y: 23
+        x: 8
+        y: 7
         width: 16
         height: 17
       spriteId: 532eb7365ebc91d49b635b8a816d48fb
@@ -343,8 +343,8 @@ ScriptedImporter:
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 21
-        y: 23
+        x: 5
+        y: 7
         width: 19
         height: 20
       spriteId: 26ddbbdf3f93a214c97d01368c388bde
@@ -352,8 +352,8 @@ ScriptedImporter:
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 21
-        y: 24
+        x: 5
+        y: 8
         width: 19
         height: 20
       spriteId: 00b13930b95e6cc429bd6230d71f79a5
@@ -361,8 +361,8 @@ ScriptedImporter:
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 21
-        y: 24
+        x: 5
+        y: 8
         width: 21
         height: 18
       spriteId: 074dc78a6dd8b29469a691b9a6e15918
@@ -370,8 +370,8 @@ ScriptedImporter:
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 21
-        y: 24
+        x: 5
+        y: 8
         width: 22
         height: 19
       spriteId: 675782ce784b7484eb218e3492a5941b
@@ -379,8 +379,8 @@ ScriptedImporter:
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 23
-        y: 24
+        x: 7
+        y: 8
         width: 22
         height: 21
       spriteId: c275fdf030ef1cb4abe0c05140ee173b
@@ -388,8 +388,8 @@ ScriptedImporter:
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 24
-        y: 24
+        x: 8
+        y: 8
         width: 19
         height: 20
       spriteId: dabbd1760f8f4404dae2cb4ecbe7bd96
@@ -397,8 +397,8 @@ ScriptedImporter:
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 24
-        y: 24
+        x: 8
+        y: 8
         width: 24
         height: 19
       spriteId: a14a4abd16550ba4b9fbad96ceafdcef
@@ -406,8 +406,8 @@ ScriptedImporter:
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 22
-        y: 24
+        x: 6
+        y: 8
         width: 23
         height: 18
       spriteId: 767ad1e4d99f30149ac0acd06ceda489
@@ -415,8 +415,8 @@ ScriptedImporter:
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 23
+        x: 4
+        y: 7
         width: 22
         height: 17
       spriteId: 25c0c0c45d23b954cbcf2acb30ba47e4
@@ -438,4 +438,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 32, y: 32}

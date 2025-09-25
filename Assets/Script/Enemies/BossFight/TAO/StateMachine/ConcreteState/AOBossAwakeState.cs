@@ -25,6 +25,7 @@ public class AOBossAwakeState : AOBossState
     {
         if (triggerType == AOBoss.AnimationTriggerType.AwakeAnimFinish)
         {
+            aoBoss.BossIsAwake = true;
             aoBoss.StateMachine.ChangeState(aoBoss.IdleState);
         }
     }

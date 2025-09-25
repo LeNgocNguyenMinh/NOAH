@@ -12,7 +12,6 @@ public class WandBullet : MonoBehaviour
     private Vector3 mousePos;//Bullet Goal
     private Vector3 startPosition;//Bullet Spawn point
     private Rigidbody2D rb;
-    private Transform player;
     private Vector3 direction;//Vector way of bullet
     private float damageAmount;//Damage each Bullet
 
@@ -21,12 +20,8 @@ public class WandBullet : MonoBehaviour
         startPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = mousePos - player.transform.position;
+        direction = mousePos - Player.Instance.transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
-    }
-    public void Awake()
-    {
-        player = FindObjectOfType<Player>().transform;
     }
 
     private void Update()
@@ -45,8 +40,8 @@ public class WandBullet : MonoBehaviour
         damageAmount = (Random.Range(0, 5) == 0) ? 0 : (int)Random.Range(playerStatus.playerCurrentDamage, playerStatus.playerCurrentDamage + playerStatus.playerWeaponDamage);
         if(hitInfo.tag == "Boss")
         {
-            EnemyReceiveDamage boss = hitInfo.GetComponent<EnemyReceiveDamage>();
-            boss.ReceiveDamage(damageAmount + playerStatus.playerWeaponDamage);
+            BossHurt bossHurt = hitInfo.GetComponent<BossHurt>();
+            bossHurt.DamageReceive(damageAmount + playerStatus.playerWeaponDamage);
             Instantiate(bulletHitParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
