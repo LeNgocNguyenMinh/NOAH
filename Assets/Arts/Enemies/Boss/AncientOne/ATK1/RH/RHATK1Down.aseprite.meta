@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: RHATK1Down_Frame_0
     originalName: 
-    pivot: {x: 0.375, y: 0}
+    pivot: {x: 0.3846154, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 146
-      width: 64
+      width: 65
       height: 59
     spriteID: c885eef73c856b245a80cae881e82056
     spriteBone: []
@@ -143,14 +143,14 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 146}
   - name: RHATK1Down_Frame_1
     originalName: 
-    pivot: {x: 0.375, y: 0}
+    pivot: {x: 0.3846154, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 76
-      width: 64
+      width: 65
       height: 62
     spriteID: 6fe64278d4938754090b70f12e56364f
     spriteBone: []
@@ -163,14 +163,14 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 76}
   - name: RHATK1Down_Frame_2
     originalName: 
-    pivot: {x: 0.375, y: 0}
+    pivot: {x: 0.3846154, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 64
+      width: 65
       height: 64
     spriteID: a6df902ebc045e04d885f6a2e1371335
     spriteBone: []
@@ -194,27 +194,27 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 15
         y: 0
-        width: 64
+        width: 65
         height: 59
       spriteId: c885eef73c856b245a80cae881e82056
     - name: RHATK1Down_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 15
         y: 0
-        width: 64
+        width: 65
         height: 62
       spriteId: 6fe64278d4938754090b70f12e56364f
     - name: RHATK1Down_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 15
         y: 0
-        width: 64
+        width: 65
         height: 64
       spriteId: a6df902ebc045e04d885f6a2e1371335
     linkedCells: []

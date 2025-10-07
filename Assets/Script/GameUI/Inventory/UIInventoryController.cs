@@ -8,6 +8,7 @@ public class UIInventoryController : MonoBehaviour
 {
     private UIInventoryPage uiInventoryPage;
     private PlayerLoadout playerLoadout;
+    [SerializeField]private Animator animator;
     [Header("---------GeneralUI---------")] 
     [SerializeField]private RectTransform ismPanel;
     [Header("---------InventoryUI---------")] 
@@ -79,8 +80,9 @@ public class UIInventoryController : MonoBehaviour
         uiInventoryPage = GetComponent<UIInventoryPage>();
         uiInventoryPage.InventoryUpdateOpen();
         playerLoadout = GetComponent<PlayerLoadout>();
-        /* playerLoadout.CheckClothStatus(); */
         invPanel.SetAsLastSibling();
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        animator.SetTrigger("Idle");
         MoveUp();
     }
     private void InventoryClose()
@@ -92,6 +94,7 @@ public class UIInventoryController : MonoBehaviour
         inventoryOpen = false;
         uiInventoryPage = GetComponent<UIInventoryPage>();
         uiInventoryPage.InventoryUpdateClose();
+        animator.SetTrigger("Stop");
         MoveDown();
     }
     private void MoveUp()

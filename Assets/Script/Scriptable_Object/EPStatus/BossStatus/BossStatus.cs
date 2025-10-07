@@ -7,13 +7,13 @@ public class BossStatus : ScriptableObject
 {
     public int bossLevel;
     public string bossName;
+    public string bossID;
     public float bossBaseDamage;
     public float bossDamage;
     public float bossBaseHealth;
 
     public float bossMaxHealth;
     public PlayerStatus playerStatus;
-    public bool isAlive;
     public void UpdateLevel()
     {
         this.bossLevel = playerStatus.playerLevel + 2;
@@ -29,9 +29,5 @@ public class BossStatus : ScriptableObject
     public void UpdateMaxHealth()
     {
         this.bossMaxHealth = bossBaseHealth * (1 + 0.5f * (bossLevel - 1));
-    }
-    public void SetIsAlive(bool newValue)
-    {
-        this.isAlive = newValue;
     }
 }

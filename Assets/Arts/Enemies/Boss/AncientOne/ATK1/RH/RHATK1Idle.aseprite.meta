@@ -131,7 +131,7 @@ ScriptedImporter:
       x: 76
       y: 4
       width: 64
-      height: 58
+      height: 59
     spriteID: 6fb3a0b92dc20a340a70b980a37b3dd2
     spriteBone: []
     spriteOutline: []
@@ -151,7 +151,7 @@ ScriptedImporter:
       x: 148
       y: 4
       width: 64
-      height: 58
+      height: 59
     spriteID: 72414f38bc586194a8b04873dbfca02c
     spriteBone: []
     spriteOutline: []
@@ -171,7 +171,7 @@ ScriptedImporter:
       x: 4
       y: 72
       width: 64
-      height: 58
+      height: 59
     spriteID: 58cd1ac0377c7fd459d5038a1ddddcfc
     spriteBone: []
     spriteOutline: []
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: RHATK1Idle_Frame_4
     originalName: 
-    pivot: {x: 0.375, y: -0.01724138}
+    pivot: {x: 0.375, y: -0.016949153}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -211,7 +211,7 @@ ScriptedImporter:
       x: 76
       y: 72
       width: 64
-      height: 58
+      height: 59
     spriteID: e3561e3e99526f14dbada3c4fa844f9c
     spriteBone: []
     spriteOutline: []
@@ -223,7 +223,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 72}
   - name: RHATK1Idle_Frame_5
     originalName: 
-    pivot: {x: 0.375, y: -0.01724138}
+    pivot: {x: 0.375, y: -0.016949153}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -231,7 +231,7 @@ ScriptedImporter:
       x: 148
       y: 72
       width: 64
-      height: 58
+      height: 59
     spriteID: 5cb3346eb0e18ae4b89d58fe2d5cfa50
     spriteBone: []
     spriteOutline: []
@@ -257,7 +257,7 @@ ScriptedImporter:
         x: 16
         y: 0
         width: 64
-        height: 58
+        height: 59
       spriteId: 6fb3a0b92dc20a340a70b980a37b3dd2
     - name: RHATK1Idle_Frame_1
       frameIndex: 1
@@ -266,7 +266,7 @@ ScriptedImporter:
         x: 16
         y: 0
         width: 64
-        height: 58
+        height: 59
       spriteId: 72414f38bc586194a8b04873dbfca02c
     - name: RHATK1Idle_Frame_2
       frameIndex: 2
@@ -275,7 +275,7 @@ ScriptedImporter:
         x: 16
         y: 0
         width: 64
-        height: 58
+        height: 59
       spriteId: 58cd1ac0377c7fd459d5038a1ddddcfc
     - name: RHATK1Idle_Frame_3
       frameIndex: 3
@@ -293,7 +293,7 @@ ScriptedImporter:
         x: 16
         y: 1
         width: 64
-        height: 58
+        height: 59
       spriteId: e3561e3e99526f14dbada3c4fa844f9c
     - name: RHATK1Idle_Frame_5
       frameIndex: 5
@@ -302,7 +302,7 @@ ScriptedImporter:
         x: 16
         y: 1
         width: 64
-        height: 58
+        height: 59
       spriteId: 5cb3346eb0e18ae4b89d58fe2d5cfa50
     linkedCells: []
     parentIndex: -1

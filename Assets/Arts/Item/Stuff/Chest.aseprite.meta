@@ -129,9 +129,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 43
+      y: 84
       width: 38
-      height: 30
+      height: 31
     spriteID: 1bd9d9c890c0d1147b35533407418f52
     spriteBone: []
     spriteOutline: []
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
+    uvTransform: {x: 4, y: 84}
   - name: Chest_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -149,9 +149,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 50
-      y: 43
+      y: 4
       width: 38
-      height: 30
+      height: 31
     spriteID: befcf0c4b13a3034a9d9ef2bcf358d0f
     spriteBone: []
     spriteOutline: []
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 50, y: 43}
+    uvTransform: {x: 50, y: 4}
   - name: Chest_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -171,7 +171,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 38
-      height: 31
+      height: 32
     spriteID: 7a9aeb8f73169fc4299492a767ea6847
     spriteBone: []
     spriteOutline: []
@@ -188,10 +188,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 50
-      y: 4
+      x: 4
+      y: 44
       width: 38
-      height: 31
+      height: 32
     spriteID: f4c005fb5e30cde4fac1508fec14d5a0
     spriteBone: []
     spriteOutline: []
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 50, y: 4}
+    uvTransform: {x: 4, y: 44}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -217,7 +217,7 @@ ScriptedImporter:
         x: 5
         y: 0
         width: 38
-        height: 30
+        height: 31
       spriteId: 1bd9d9c890c0d1147b35533407418f52
     - name: Chest_Frame_1
       frameIndex: 1
@@ -226,7 +226,7 @@ ScriptedImporter:
         x: 5
         y: 0
         width: 38
-        height: 30
+        height: 31
       spriteId: befcf0c4b13a3034a9d9ef2bcf358d0f
     - name: Chest_Frame_2
       frameIndex: 2
@@ -235,7 +235,7 @@ ScriptedImporter:
         x: 5
         y: 0
         width: 38
-        height: 31
+        height: 32
       spriteId: 7a9aeb8f73169fc4299492a767ea6847
     - name: Chest_Frame_3
       frameIndex: 3
@@ -244,7 +244,7 @@ ScriptedImporter:
         x: 5
         y: 0
         width: 38
-        height: 31
+        height: 32
       spriteId: f4c005fb5e30cde4fac1508fec14d5a0
     linkedCells: []
     parentIndex: -1

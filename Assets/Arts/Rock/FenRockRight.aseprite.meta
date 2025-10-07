@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: FenRockRight
     originalName: 
-    pivot: {x: 0.516129, y: -0.09756097}
+    pivot: {x: 0.5, y: -0.09876543}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 31
-      height: 82
+      width: 30
+      height: 81
     spriteID: 20edae0b27993634688f0c33c2116b80
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 1
         y: 8
-        width: 31
-        height: 82
+        width: 30
+        height: 81
       spriteId: 20edae0b27993634688f0c33c2116b80
     linkedCells: []
     parentIndex: -1

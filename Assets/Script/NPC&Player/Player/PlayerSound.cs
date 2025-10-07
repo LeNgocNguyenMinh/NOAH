@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerSound : MonoBehaviour
 {
     public static PlayerSound Instance;
-    private SoundControl soundControl;
     private void Awake()
     {
         if (Instance == null)
@@ -17,24 +16,20 @@ public class PlayerSound : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void Start()
-    {
-        soundControl = FindObjectOfType<SoundControl>().GetComponent<SoundControl>();
-    }
     public void PlayShootSound()
     {
-        soundControl.PlayerShootSoundPlay();
+        SoundControl.Instance.PlayerShootSoundPlay();
     }
     public void PlayDashSound()
     {
-        soundControl.PlayerDashSoundPlay();
+        SoundControl.Instance.PlayerDashSoundPlay();
     }
     public void PlayWalkSound()
     {
-        soundControl.PlayerWalkSoundPlay();
+        SoundControl.Instance.PlayerWalkSoundPlay();
     }
     public void PlayDeathSound()
     {
-        soundControl.PlayerDeathSoundPlay();
+        SoundControl.Instance.PlayerDeathSoundPlay();
     }
 }

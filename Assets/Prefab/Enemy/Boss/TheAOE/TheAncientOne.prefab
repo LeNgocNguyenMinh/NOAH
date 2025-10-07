@@ -179,7 +179,6 @@ GameObject:
   - component: {fileID: 5595521706983103875}
   - component: {fileID: 8546079636946162697}
   - component: {fileID: 5601213393671280259}
-  - component: {fileID: 2834694386044144679}
   m_Layer: 0
   m_Name: BossManager
   m_TagString: Untagged
@@ -231,23 +230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bf2009fb440e241aed779dce33a59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarObj: {fileID: 8805862295533745288}
   healthBarFrontImage: {fileID: 5397096870911559715}
   healthBarBackImage: {fileID: 8876386136146658184}
   healthText: {fileID: 1972475778441401778}
---- !u!114 &2834694386044144679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106490401752348805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea3edd039fd4a0746bbc6cfd0cff50b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aoBoss: {fileID: 5668795890356766764}
 --- !u!1 &1403474762764564630
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,11 +939,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3305145799269737744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380, y: 445.9}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -8}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8265187046687951153
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1468,6 +1453,7 @@ MonoBehaviour:
   <ATK1RHFlySpeed>k__BackingField: 10
   <ATK1RHFallSpeed>k__BackingField: 15
   <ATK1RHStayTime>k__BackingField: 2
+  <ATK1RHBox>k__BackingField: {fileID: 7181066574333079870}
   ATK1RHDirect: {x: 0, y: 0, z: 0}
   <ATK1LHShootPos>k__BackingField: {fileID: 305912711991783756}
   <ATK1LHBulletPref>k__BackingField: {fileID: 1281206392688637662, guid: c8574c2e3bfda13449d235dc43b90dee, type: 3}
@@ -1484,7 +1470,7 @@ MonoBehaviour:
   <ATK2LHBoundLimit>k__BackingField: 4
   <ATK2LHShootPos>k__BackingField: {fileID: 2570956926415527685}
   ATK1Direct: {x: 0, y: 0, z: 0}
-  <HealthBar>k__BackingField: {fileID: 5601213393671280259}
+  <HealthBarCV>k__BackingField: {fileID: 8805862295533745288}
 --- !u!210 &2615655959968479055
 SortingGroup:
   m_ObjectHideFlags: 0

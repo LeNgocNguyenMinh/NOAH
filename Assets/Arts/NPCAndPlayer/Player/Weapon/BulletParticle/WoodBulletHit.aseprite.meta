@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: WoodBulletHit_Frame_0
     originalName: 
-    pivot: {x: 0.83333325, y: -3.0666666}
+    pivot: {x: 0.5, y: -3.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 109
-      width: 12
-      height: 15
+      x: 53
+      y: 106
+      width: 8
+      height: 8
     spriteID: 64df063b326b89542916a41388e982b8
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 109}
+    uvTransform: {x: 53, y: 106}
   - name: WoodBulletHit_Frame_1
     originalName: 
-    pivot: {x: 0.631579, y: -1.28125}
+    pivot: {x: 0.47368422, y: -1.1}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 69
+      x: 90
+      y: 70
       width: 19
-      height: 32
+      height: 20
     spriteID: 157e36862bc116c4db72d6a411ec6d39
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 69}
+    uvTransform: {x: 90, y: 70}
   - name: WoodBulletHit_Frame_2
     originalName: 
-    pivot: {x: 0.6, y: -0.85714287}
+    pivot: {x: 0.44827586, y: -0.6428572}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 48
-      y: 69
-      width: 30
-      height: 42
+      x: 53
+      y: 70
+      width: 29
+      height: 28
     spriteID: c483671282cfa3a4281cf816a2a0b550
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 69}
+    uvTransform: {x: 53, y: 70}
   - name: WoodBulletHit_Frame_3
     originalName: 
-    pivot: {x: 0.6111111, y: -0.7234042}
+    pivot: {x: 0.48780486, y: -0.20930232}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 69
-      width: 36
-      height: 47
+      y: 70
+      width: 41
+      height: 43
     spriteID: 250fc19bae1fcde4c804f84f30797f45
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 69}
+    uvTransform: {x: 4, y: 70}
   - name: WoodBulletHit_Frame_4
     originalName: 
-    pivot: {x: 0.6, y: -0.62745094}
+    pivot: {x: 0.48979592, y: -0.099999994}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 59
+      x: 69
       y: 4
-      width: 40
-      height: 51
+      width: 49
+      height: 50
     spriteID: 1ff72b738e16cbf4482ea352812eef56
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 59, y: 4}
+    uvTransform: {x: 69, y: 4}
   - name: WoodBulletHit_Frame_5
     originalName: 
-    pivot: {x: 0.574468, y: -0.5087719}
+    pivot: {x: 0.49122807, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 47
-      height: 57
+      width: 57
+      height: 58
     spriteID: f338f3498264b5b4c99b509ab3f6ac46
     spriteBone: []
     spriteOutline: []
@@ -254,55 +254,55 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 40
-        y: 46
-        width: 12
-        height: 15
+        x: 28
+        y: 28
+        width: 8
+        height: 8
       spriteId: 64df063b326b89542916a41388e982b8
     - name: WoodBulletHit_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 38
-        y: 41
+        x: 23
+        y: 22
         width: 19
-        height: 32
+        height: 20
       spriteId: 157e36862bc116c4db72d6a411ec6d39
     - name: WoodBulletHit_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 32
-        y: 36
-        width: 30
-        height: 42
+        x: 19
+        y: 18
+        width: 29
+        height: 28
       spriteId: c483671282cfa3a4281cf816a2a0b550
     - name: WoodBulletHit_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 28
-        y: 34
-        width: 36
-        height: 47
+        x: 12
+        y: 9
+        width: 41
+        height: 43
       spriteId: 250fc19bae1fcde4c804f84f30797f45
     - name: WoodBulletHit_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 26
-        y: 32
-        width: 40
-        height: 51
+        x: 8
+        y: 5
+        width: 49
+        height: 50
       spriteId: 1ff72b738e16cbf4482ea352812eef56
     - name: WoodBulletHit_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 23
-        y: 29
-        width: 47
-        height: 57
+        x: 4
+        y: 2
+        width: 57
+        height: 58
       spriteId: f338f3498264b5b4c99b509ab3f6ac46
     linkedCells: []
     parentIndex: -1
@@ -322,4 +322,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 100, y: 100}
+  canvasSize: {x: 64, y: 64}

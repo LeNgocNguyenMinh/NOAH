@@ -146,16 +146,6 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
                 NotifPopUp.Instance.ShowNotification("Health is full.");
             }
         }
-        /* else if(itemID.Contains("Cloth"))
-        {
-            if(!isHotBarSlot)
-            {
-                PlayerLoadout.Instance.EquipCloth(this.item);
-            }
-            DeleteItem();
-            UIInventoryDescription.Instance.ItemHideInformation();
-            choicePanel.SetActive(false);//hide the select panel
-        } */
     }
     public void DeleteOne()//Remove quantity of item
     {

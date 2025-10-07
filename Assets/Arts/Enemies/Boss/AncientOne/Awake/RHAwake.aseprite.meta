@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: RHAwake
     originalName: 
-    pivot: {x: 0.43661973, y: -1.2307693}
+    pivot: {x: 0.44444448, y: -1.1071428}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 71
-      height: 26
+      width: 72
+      height: 28
     spriteID: a63f2f84a24a40b43bdb53718345ef34
     spriteBone: []
     spriteOutline: []
@@ -143,15 +143,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: RHAwake_Frame_1
     originalName: 
-    pivot: {x: 0.43661973, y: -1.2307693}
+    pivot: {x: 0.44444448, y: -1.1071428}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 38
-      width: 71
-      height: 26
+      y: 40
+      width: 72
+      height: 28
     spriteID: ceebf71d7a1eb5741968000b36ab67e1
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 38}
+    uvTransform: {x: 4, y: 40}
   - name: RHAwake_Frame_2
     originalName: 
-    pivot: {x: 0.43661973, y: -1.2800001}
+    pivot: {x: 0.44444448, y: -1.1481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 72
-      width: 71
-      height: 25
+      y: 76
+      width: 72
+      height: 27
     spriteID: e1ae850a2f67b894fb0309abb71a9fb5
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 72}
+    uvTransform: {x: 4, y: 76}
   - name: RHAwake_Frame_3
     originalName: 
-    pivot: {x: 0.43661973, y: -1.2800001}
+    pivot: {x: 0.44444448, y: -1.1481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 105
-      width: 71
-      height: 25
+      y: 111
+      width: 72
+      height: 27
     spriteID: c1c1108de56f9064286300b43c79fa46
     spriteBone: []
     spriteOutline: []
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 105}
+    uvTransform: {x: 4, y: 111}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -214,37 +214,37 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 32
-        width: 71
-        height: 26
+        x: 8
+        y: 31
+        width: 72
+        height: 28
       spriteId: a63f2f84a24a40b43bdb53718345ef34
     - name: RHAwake_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 32
-        width: 71
-        height: 26
+        x: 8
+        y: 31
+        width: 72
+        height: 28
       spriteId: ceebf71d7a1eb5741968000b36ab67e1
     - name: RHAwake_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 32
-        width: 71
-        height: 25
+        x: 8
+        y: 31
+        width: 72
+        height: 27
       spriteId: e1ae850a2f67b894fb0309abb71a9fb5
     - name: RHAwake_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 32
-        width: 71
-        height: 25
+        x: 8
+        y: 31
+        width: 72
+        height: 27
       spriteId: c1c1108de56f9064286300b43c79fa46
     linkedCells: []
     parentIndex: -1

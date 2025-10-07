@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: LHATK2Idle_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.8205129}
+    pivot: {x: 0.5, y: -0.75609756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 92
-      y: 111
+      y: 116
       width: 80
-      height: 39
+      height: 41
     spriteID: 627954ea600f0174ba3173dc0be36373
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 92, y: 111}
+    uvTransform: {x: 92, y: 116}
   - name: LHATK2Idle_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.8}
+    pivot: {x: 0.5, y: -0.69767445}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 111
+      y: 116
       width: 80
-      height: 40
+      height: 43
     spriteID: 8d09f7adf6794c846aa2642887a0986f
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 111}
+    uvTransform: {x: 4, y: 116}
   - name: LHATK2Idle_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.7441861}
+    pivot: {x: 0.5, y: -0.6521739}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 60
+      y: 62
       width: 80
-      height: 43
+      height: 46
     spriteID: 8799bc9d64f324c408afc81dfc61bef9
     spriteBone: []
     spriteOutline: []
@@ -180,10 +180,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 60}
+    uvTransform: {x: 4, y: 62}
   - name: LHATK2Idle_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.6956522}
+    pivot: {x: 0.5, y: -0.6122449}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -191,7 +191,7 @@ ScriptedImporter:
       x: 92
       y: 4
       width: 80
-      height: 46
+      height: 49
     spriteID: 13dcabd6858488948a704123d2375232
     spriteBone: []
     spriteOutline: []
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 92, y: 4}
   - name: LHATK2Idle_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.6666667}
+    pivot: {x: 0.5, y: -0.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -211,7 +211,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 80
-      height: 48
+      height: 50
     spriteID: 7c31dcf7a4bb1054abca7e54b7e6a77a
     spriteBone: []
     spriteOutline: []
@@ -223,15 +223,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: LHATK2Idle_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: -0.7619048}
+    pivot: {x: 0.5, y: -0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 92
-      y: 60
+      y: 62
       width: 80
-      height: 42
+      height: 45
     spriteID: 60148b3583c9dc54289abd14c10165da
     spriteBone: []
     spriteOutline: []
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 92, y: 60}
+    uvTransform: {x: 92, y: 62}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -255,54 +255,54 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 31
         width: 80
-        height: 39
+        height: 41
       spriteId: 627954ea600f0174ba3173dc0be36373
     - name: LHATK2Idle_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 30
         width: 80
-        height: 40
+        height: 43
       spriteId: 8d09f7adf6794c846aa2642887a0986f
     - name: LHATK2Idle_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 30
         width: 80
-        height: 43
+        height: 46
       spriteId: 8799bc9d64f324c408afc81dfc61bef9
     - name: LHATK2Idle_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 30
         width: 80
-        height: 46
+        height: 49
       spriteId: 13dcabd6858488948a704123d2375232
     - name: LHATK2Idle_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 30
         width: 80
-        height: 48
+        height: 50
       spriteId: 7c31dcf7a4bb1054abca7e54b7e6a77a
     - name: LHATK2Idle_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 30
         width: 80
-        height: 42
+        height: 45
       spriteId: 60148b3583c9dc54289abd14c10165da
     linkedCells: []
     parentIndex: -1

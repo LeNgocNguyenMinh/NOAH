@@ -141,8 +141,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 47
-        height: 57
+        width: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: WoodBulletHit_1
       rect:
         serializedVersion: 2
-        x: 47
+        x: 57
         y: 0
-        width: 47
-        height: 57
+        width: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: WoodBulletHit_2
       rect:
         serializedVersion: 2
-        x: 94
+        x: 114
         y: 0
-        width: 47
-        height: 57
+        width: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: WoodBulletHit_3
       rect:
         serializedVersion: 2
-        x: 141
+        x: 171
         y: 0
-        width: 47
-        height: 57
+        width: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: WoodBulletHit_4
       rect:
         serializedVersion: 2
-        x: 188
+        x: 228
         y: 0
-        width: 47
-        height: 57
+        width: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: WoodBulletHit_5
       rect:
         serializedVersion: 2
-        x: 235
+        x: 285
         y: 0
-        width: 47
-        height: 57
+        width: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

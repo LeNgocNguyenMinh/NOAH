@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: rock_03
     originalName: 
-    pivot: {x: 0.4528302, y: -0.17999999}
+    pivot: {x: 0.4528302, y: 0.02}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -155,7 +155,7 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 8
-        y: 9
+        y: -1
         width: 53
         height: 50
       spriteId: b53e85973ffef3e4eaa2e7385ea96e63

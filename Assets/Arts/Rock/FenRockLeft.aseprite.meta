@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: FenRockLeft
     originalName: 
-    pivot: {x: 0.51724136, y: -0.44230768}
+    pivot: {x: 0.44827586, y: -0.44230768}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -154,7 +154,7 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
+        x: 3
         y: 23
         width: 29
         height: 52

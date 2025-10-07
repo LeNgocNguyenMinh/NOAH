@@ -14,6 +14,7 @@ public class AOBossATK1IdleState : AOBossState
         base.EnterState();
         timer = aoBoss.ATK1RHReadyTime;
         aoBoss.AOBossAnimator.SetTrigger("ATK1Idle");
+        aoBoss.ATK1RHBox.enabled = false;
     }
     public override void FrameUpdate()
     {

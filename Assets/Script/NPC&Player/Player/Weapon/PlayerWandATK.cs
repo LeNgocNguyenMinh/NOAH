@@ -10,6 +10,9 @@ public class PlayerWandATK : MonoBehaviour
     [SerializeField]private float delayWandATK = 0.5f;
     [SerializeField]private Transform firePoint;
     private GameObject bulletPrefap;
+    [SerializeField] private float projectileMaxMoveSpeed;
+    [SerializeField] private float projectileMaxHeight;
+    private Vector3 target;
     private void Awake()
     {
         if (Instance == null)
@@ -25,17 +28,18 @@ public class PlayerWandATK : MonoBehaviour
     {
         bulletPrefap = PlayerWeaponParent.Instance.playerStatus.currentWeapon.weaponBulletType;
         if(PlayerWeaponParent.Instance.delayWandCount > 0) PlayerWeaponParent.Instance.delayWandCount-=Time.deltaTime;
-        if(!PlayerWeaponParent.Instance.playerCanATK)return;
+        if(!PlayerWeaponParent.Instance.playerCanATK)return;   
+
         if(Input.GetMouseButtonDown(0) && PlayerWeaponParent.Instance.delayWandCount <= 0)
         {
-            PlayerWeaponParent.Instance.delayWandCount = delayWandATK;//Set up delay time between each shoot
-            PlayerWeaponParent.Instance.wandSprite.enabled = true;
-            PlayerWeaponParent.Instance.physicATKSprite.enabled = false;
             WandShoot();
         }
     }
     private void WandShoot()
     {
+        PlayerWeaponParent.Instance.delayWandCount = delayWandATK;//Set up delay time between each shoot
+        PlayerWeaponParent.Instance.wandSprite.enabled = true;
+        PlayerWeaponParent.Instance.physicATKSprite.enabled = false;
         if(PlayerWeaponParent.Instance.currentBullet<=0)return;
         PlayerSound.Instance.PlayShootSound();//play the shoot sound
         wandATKAnimator = GetComponent<Animator>();
@@ -43,7 +47,10 @@ public class PlayerWandATK : MonoBehaviour
         PlayerWeaponParent.Instance.currentBullet--;
         PlayerWeaponParent.Instance.CheckEnergyBarLeft();
         PlayerWeaponParent.Instance.UpdateMagazine();
-        Instantiate(bulletPrefap, firePoint.position, firePoint.rotation);
+        Projectile projectile = Instantiate(bulletPrefap, firePoint.position, Quaternion.identity).GetComponent<Projectile>();
+        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = 0f;
+        projectile.InitializeProjectile(target, projectileMaxMoveSpeed, projectileMaxHeight);
     }
     
 }

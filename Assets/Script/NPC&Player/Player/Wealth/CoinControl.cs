@@ -14,6 +14,5 @@ public class CoinControl : MonoBehaviour
     public void AddCoin(int newCoin)
     {
         playerStatus.AddCoin(newCoin);
-        PlayerStatusUI.Instance.UpdateCoin();
     }
 }

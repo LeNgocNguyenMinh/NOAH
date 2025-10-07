@@ -1,69 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-public class WandBullet : MonoBehaviour
-{
-    [SerializeField]private PlayerStatus playerStatus;
-    [SerializeField]private GameObject bulletHitParticle;
-    [SerializeField]private float bulletSpeed = 20f;//Bullet max Speed
-    [SerializeField]private float maxDistance = 3f;//Max distance bullet go before disappear
-    [SerializeField]private Color color;
-    private Vector3 mousePos;//Bullet Goal
-    private Vector3 startPosition;//Bullet Spawn point
-    private Rigidbody2D rb;
-    private Vector3 direction;//Vector way of bullet
-    private float damageAmount;//Damage each Bullet
-
-    private void Start()
+    public class WandBullet : MonoBehaviour
     {
-        startPosition = transform.position;
-        rb = GetComponent<Rigidbody2D>();
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = mousePos - Player.Instance.transform.position;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
-    }
+        [SerializeField]private PlayerStatus playerStatus;
+        [SerializeField]private GameObject bulletHitParticle;
+        private float maxDistance = 15f;//Max distance bullet go before disappear
+        private Vector3 startPosition;//Bullet Spawn point
+        private float damageAmount;//Damage each Bullet
+        private Projectile projectile;
+        private Vector3 target;
+        private Vector3 direction;
+        private bool isDestroy = false;
 
-    private void Update()
-    {
-        if(Vector3.Distance(startPosition, transform.position)>=maxDistance)
+        private void Start()
+        {
+            projectile = GetComponent<Projectile>();
+            startPosition = transform.position;
+            target = projectile.target;
+        }
+
+        private void FixedUpdate()
+        {
+            if((Vector3.Distance(startPosition, transform.position)>=maxDistance || (Vector3.Distance(transform.position, target) <= 0.3f)) && !isDestroy)
+            {
+                BulletDestroy();
+            }
+        }
+        public void BulletHitParticleDestroy()
         {
             Destroy(gameObject);
         }
-    }
-    public void BulletHitParticleDestroy()
-    {
-        Destroy(gameObject);
-    }
-    private void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        damageAmount = (Random.Range(0, 5) == 0) ? 0 : (int)Random.Range(playerStatus.playerCurrentDamage, playerStatus.playerCurrentDamage + playerStatus.playerWeaponDamage);
-        if(hitInfo.tag == "Boss")
+        public void BulletDestroy()
         {
-            BossHurt bossHurt = hitInfo.GetComponent<BossHurt>();
-            bossHurt.DamageReceive(damageAmount + playerStatus.playerWeaponDamage);
+            isDestroy = true;
             Instantiate(bulletHitParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
-        }
-        else if (hitInfo.tag == "Enemy")
+        } 
+        private void OnTriggerEnter2D(Collider2D hitInfo)
         {
-            EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
-            enemy.DamageReceive(damageAmount + playerStatus.playerWeaponDamage, direction);//Enemy hurt
-            Instantiate(bulletHitParticle, transform.position, Quaternion.identity);
-            Destroy(gameObject);//Bullet destroy
+            damageAmount = (Random.Range(0, 5) == 0) ? 0 : (int)Random.Range(playerStatus.playerCurrentDamage, playerStatus.playerCurrentDamage + playerStatus.playerWeaponDamage);
+            if(hitInfo.tag == "Boss")
+            {
+                BossHurt bossHurt = hitInfo.GetComponent<BossHurt>();
+                bossHurt.DamageReceive(damageAmount + playerStatus.playerWeaponDamage);
+                BulletDestroy();
+            }
+            else if (hitInfo.tag == "Enemy")
+            {
+                EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
+                enemy.DamageReceive(damageAmount + playerStatus.playerWeaponDamage, direction);//Enemy hurt
+                BulletDestroy();
+            }
+            else if(hitInfo.tag == "ForeGround" || hitInfo.tag == "NPC")
+            {
+                BulletDestroy();
+            }
         }
-        else if(hitInfo.tag == "ForeGround" || hitInfo.tag == "NPC")
-        {
-            Instantiate(bulletHitParticle, transform.position, Quaternion.identity);
-            Destroy(gameObject);//Destroy too because hit solid thing
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "ForeGround" || collision.gameObject.tag == "NPC")
-        {
-            Instantiate(bulletHitParticle, transform.position, Quaternion.identity);
-            Destroy(gameObject);//Destroy too because hit solid thing
-        }
-    }
-}
+    } 

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac46b774ef156794b91fe794fa4f82aa, type: 3}
   m_Name: TheAncientOne
   m_EditorClassIdentifier: 
-  bossLevel: 1
+  bossLevel: 3
   bossName: The Ancient One
+  bossID: B_01
   bossBaseDamage: 10
-  bossDamage: 11
+  bossDamage: 10
   bossBaseHealth: 200
-  bossMaxHealth: 1400
+  bossMaxHealth: 400
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
-  isAlive: 0

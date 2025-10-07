@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: RHATK2End_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.8205129}
+    pivot: {x: 0.5, y: -0.775}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 107
+      y: 109
       width: 80
-      height: 39
+      height: 40
     spriteID: 4db6f437c9491d240b45afbf349414ff
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 107}
+    uvTransform: {x: 4, y: 109}
   - name: RHATK2End_Frame_1
     originalName: 
-    pivot: {x: 0.48717952, y: -0.78048784}
+    pivot: {x: 0.5, y: -0.7380952}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 58
-      width: 78
-      height: 41
+      y: 59
+      width: 80
+      height: 42
     spriteID: 3468d948e03517947b53bcb1bc79be75
     spriteBone: []
     spriteOutline: []
@@ -160,10 +160,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 58}
+    uvTransform: {x: 4, y: 59}
   - name: RHATK2End_Frame_2
     originalName: 
-    pivot: {x: 0.4936709, y: -0.6956522}
+    pivot: {x: 0.4936709, y: -0.65957445}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -171,7 +171,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 79
-      height: 46
+      height: 47
     spriteID: c3a179bf8f21a4b459d3715f7a337083
     spriteBone: []
     spriteOutline: []
@@ -183,15 +183,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: RHATK2End_Frame_3
     originalName: 
-    pivot: {x: 0.44444448, y: -0.7619048}
+    pivot: {x: 0.45945945, y: -0.7209302}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 154
-      width: 72
-      height: 42
+      y: 157
+      width: 74
+      height: 43
     spriteID: 272217403b107f14b9e2c6c8a9b997c7
     spriteBone: []
     spriteOutline: []
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 154}
+    uvTransform: {x: 4, y: 157}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -215,36 +215,36 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 31
         width: 80
-        height: 39
+        height: 40
       spriteId: 4db6f437c9491d240b45afbf349414ff
     - name: RHATK2End_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: 32
-        width: 78
-        height: 41
+        x: 0
+        y: 31
+        width: 80
+        height: 42
       spriteId: 3468d948e03517947b53bcb1bc79be75
     - name: RHATK2End_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 1
-        y: 32
+        y: 31
         width: 79
-        height: 46
+        height: 47
       spriteId: c3a179bf8f21a4b459d3715f7a337083
     - name: RHATK2End_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 32
-        width: 72
-        height: 42
+        x: 6
+        y: 31
+        width: 74
+        height: 43
       spriteId: 272217403b107f14b9e2c6c8a9b997c7
     linkedCells: []
     parentIndex: -1

@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: RHATK2Ready_Frame_0
     originalName: 
-    pivot: {x: 0.44444448, y: -0.969697}
+    pivot: {x: 0.45945945, y: -0.91176474}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 194
-      width: 72
-      height: 33
+      y: 198
+      width: 74
+      height: 34
     spriteID: 6bcce1f88d24d6d4b93d6acd076a8c7d
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 194}
+    uvTransform: {x: 4, y: 198}
   - name: RHATK2Ready_Frame_1
     originalName: 
-    pivot: {x: 0.47368422, y: -0.8205129}
+    pivot: {x: 0.47368422, y: -0.775}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 147
+      y: 150
       width: 76
-      height: 39
+      height: 40
     spriteID: d61397b351beb354db403ec657ba43c8
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 147}
+    uvTransform: {x: 4, y: 150}
   - name: RHATK2Ready_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.8421053}
+    pivot: {x: 0.5, y: -0.7948718}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 101
+      y: 103
       width: 80
-      height: 38
+      height: 39
     spriteID: 47b6bac44e16ac84993f4ca37d58e71d
     spriteBone: []
     spriteOutline: []
@@ -180,10 +180,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 101}
+    uvTransform: {x: 4, y: 103}
   - name: RHATK2Ready_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.7619048}
+    pivot: {x: 0.5, y: -0.7209302}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -191,7 +191,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 80
-      height: 42
+      height: 43
     spriteID: 1d1ee19ba8f318946972df8370d71a87
     spriteBone: []
     spriteOutline: []
@@ -203,15 +203,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: RHATK2Ready_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.8205129}
+    pivot: {x: 0.5, y: -0.775}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 54
+      y: 55
       width: 80
-      height: 39
+      height: 40
     spriteID: bdb59e4b4cc8c574a8c276e90cb3f8ad
     spriteBone: []
     spriteOutline: []
@@ -220,7 +220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 54}
+    uvTransform: {x: 4, y: 55}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -234,46 +234,46 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 32
-        width: 72
-        height: 33
+        x: 6
+        y: 31
+        width: 74
+        height: 34
       spriteId: 6bcce1f88d24d6d4b93d6acd076a8c7d
     - name: RHATK2Ready_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 4
-        y: 32
+        y: 31
         width: 76
-        height: 39
+        height: 40
       spriteId: d61397b351beb354db403ec657ba43c8
     - name: RHATK2Ready_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 31
         width: 80
-        height: 38
+        height: 39
       spriteId: 47b6bac44e16ac84993f4ca37d58e71d
     - name: RHATK2Ready_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 31
         width: 80
-        height: 42
+        height: 43
       spriteId: 1d1ee19ba8f318946972df8370d71a87
     - name: RHATK2Ready_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
+        y: 31
         width: 80
-        height: 39
+        height: 40
       spriteId: bdb59e4b4cc8c574a8c276e90cb3f8ad
     linkedCells: []
     parentIndex: -1

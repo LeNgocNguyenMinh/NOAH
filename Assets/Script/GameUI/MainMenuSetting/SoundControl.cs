@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundControl : MonoBehaviour
 {
-    public static SoundControl instance;
+    public static SoundControl Instance;
     private AudioSource musicSrc;
     private AudioSource sfxSrc;
     [Header("----------Player Audio Clips----------")]
@@ -17,6 +17,17 @@ public class SoundControl : MonoBehaviour
     [Header("----------FD Audio Clips----------")]
     public AudioClip dragonRoar;
     public AudioClip dragonFire;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }   
+    }
     private void Start()
     {
         musicSrc = GameObject.FindWithTag("Music").GetComponent<AudioSource>();

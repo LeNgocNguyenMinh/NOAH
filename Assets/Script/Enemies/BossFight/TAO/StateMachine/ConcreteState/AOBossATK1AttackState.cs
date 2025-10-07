@@ -17,6 +17,7 @@ public class AOBossATK1AttackState : AOBossState
         readyPos = aoBoss.ATK1RHDirect;
         hasHitGround = false;
         aoBoss.AOBossAnimator.SetTrigger("ATK1RHGoDown");
+        aoBoss.ATK1RHBox.enabled = true;
         LHandBulletSpawn();
     }
     public override void FrameUpdate()
@@ -47,7 +48,6 @@ public class AOBossATK1AttackState : AOBossState
     }
     public void LHandBulletSpawn()
     {
-        Debug.Log("dfdfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsd");
         Instantiate(aoBoss.ATK1LHBulletPref, aoBoss.ATK1LHShootPos.position, Quaternion.identity)
         .GetComponent<AOBossATK1LHBullet>().SetValue(aoBoss.ATK1LHBulletSpeed, aoBoss.ATK1LHBulletTime, aoBoss.BossStatus.bossDamage);
     }

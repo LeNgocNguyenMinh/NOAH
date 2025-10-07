@@ -10,6 +10,7 @@ public class AOBossATK1EndState : AOBossState
     {
         base.EnterState();
         aoBoss.AOBossAnimator.SetTrigger("ATK1End");
+        aoBoss.ATK1RHBox.enabled = false;
         aoBoss.LeftHand.DORotate(Vector3.zero, 0.5f, RotateMode.Fast);
     }
     public override void FrameUpdate()

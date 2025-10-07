@@ -24,6 +24,7 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public float ATK1RHFlySpeed { get; set; }
     [field: SerializeField]public float ATK1RHFallSpeed { get; set; }
     [field: SerializeField]public float ATK1RHStayTime { get; set; }
+    [field: SerializeField]public BoxCollider2D ATK1RHBox { get; set; }
     public Vector3 ATK1RHDirect;
     [field: Header("----Left Hand")]
     [field: SerializeField]public Transform ATK1LHShootPos { get; set; }
@@ -57,7 +58,7 @@ public class AOBoss : MonoBehaviour
     public AOBossATK2IdleState ATK2IdleState { get; private set; }
     public AOBossATK2EndState ATK2EndState { get; private set; }
     public bool BossIsAwake { get; set; }
-    [field: SerializeField]public BossHealthBar HealthBar{ get; set; }
+    [field: SerializeField]public GameObject HealthBarCV{ get; set; }
 
     public enum AnimationTriggerType
     {
@@ -90,6 +91,8 @@ public class AOBoss : MonoBehaviour
         RightHandOriginTrans = RightHand.position;
         LeftHandOriginTrans = LeftHand.position;
         AttackCount = 0;
+        ATK1RHBox.enabled = false;
+        HealthBarCV.SetActive(false);
         StateMachine.Initialize(RestState);
     }
     private void Update()

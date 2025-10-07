@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638945039910531948
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: RHATK1HitGround_Frame_0
     originalName: 
-    pivot: {x: 0.375, y: 0}
+    pivot: {x: 0.3846154, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 64
-      height: 58
+      y: 65
+      width: 65
+      height: 59
     spriteID: 3a7bfc42ca753564ab507f744df7fcf0
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 65}
   - name: RHATK1HitGround_Frame_1
     originalName: 
-    pivot: {x: 0.375, y: 0}
+    pivot: {x: 0.40298507, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
-      y: 4
-      width: 64
-      height: 55
+      x: 77
+      y: 65
+      width: 67
+      height: 56
     spriteID: da3495b70fae4eb4eb624acd9d4965ee
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 76, y: 4}
+    uvTransform: {x: 77, y: 65}
   - name: RHATK1HitGround_Frame_2
     originalName: 
-    pivot: {x: 0.375, y: 0}
+    pivot: {x: 0.4936709, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 70
-      width: 64
-      height: 52
+      y: 4
+      width: 79
+      height: 53
     spriteID: 86f2730e7bf3ab344bccc925d6f96764
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 70}
+    uvTransform: {x: 4, y: 4}
   - name: RHATK1HitGround_Frame_3
     originalName: 
-    pivot: {x: 0.375, y: 0}
+    pivot: {x: 0.42857146, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 148
-      y: 4
-      width: 64
-      height: 49
+      x: 152
+      y: 65
+      width: 70
+      height: 50
     spriteID: 55a49b7bd7d714e43b87b2ecc78edeca
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 148, y: 4}
+    uvTransform: {x: 152, y: 65}
   - name: RHATK1HitGround_Frame_4
     originalName: 
-    pivot: {x: 0.375, y: 0}
+    pivot: {x: 0.3846154, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
-      y: 67
-      width: 64
-      height: 46
+      x: 91
+      y: 4
+      width: 65
+      height: 47
     spriteID: b5aee1c2542026945abbd8bc391ede72
     spriteBone: []
     spriteOutline: []
@@ -220,7 +220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 76, y: 67}
+    uvTransform: {x: 91, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -234,46 +234,46 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 15
         y: 0
-        width: 64
-        height: 58
+        width: 65
+        height: 59
       spriteId: 3a7bfc42ca753564ab507f744df7fcf0
     - name: RHATK1HitGround_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 13
         y: 0
-        width: 64
-        height: 55
+        width: 67
+        height: 56
       spriteId: da3495b70fae4eb4eb624acd9d4965ee
     - name: RHATK1HitGround_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 1
         y: 0
-        width: 64
-        height: 52
+        width: 79
+        height: 53
       spriteId: 86f2730e7bf3ab344bccc925d6f96764
     - name: RHATK1HitGround_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 10
         y: 0
-        width: 64
-        height: 49
+        width: 70
+        height: 50
       spriteId: 55a49b7bd7d714e43b87b2ecc78edeca
     - name: RHATK1HitGround_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 15
         y: 0
-        width: 64
-        height: 46
+        width: 65
+        height: 47
       spriteId: b5aee1c2542026945abbd8bc391ede72
     linkedCells: []
     parentIndex: -1
@@ -285,6 +285,54 @@ ScriptedImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0

@@ -46,6 +46,22 @@ public class CollectableItems : MonoBehaviour
             }
         }
     }
+    private void OllisionEnter2D(Collision2D collision)
+    {
+        if(isCollected == true) return;
+        if(collision.gameObject.tag=="Player")
+        {
+            animator = GetComponent<Animator>();
+            animator.SetTrigger("Collect");
+            if(uiInventoryPage.AddItem(item, itemQuantity))
+            {
+                isCollected = true;
+                uiInventoryPage.AddItemPopUp(item, itemQuantity);
+                itemInGroundController.SetItemIsCollect(item.itemID, transform.position);
+                Destroy(gameObject, .5f);
+            }
+        }
+    }
     public void DropItemAnim()
     {
         animator = GetComponent<Animator>();

@@ -34,17 +34,12 @@ public class PlayerStatusUI : MonoBehaviour
     public void UpdateWhenOpen()
     {
         this.playerAvailablePoint.text = playerStatus.availablePoint + "";
-        this.playerLevel.text = playerStatus.playerLevel + "";
+        this.playerLevel.text = "Level " + playerStatus.playerLevel + "";
         this.playerHealth.text = playerStatus.maxHealth + "";
         this.playerBulletNumber.text = playerStatus.playerBullet + "";
         this.playerDamage.text = playerStatus.playerCurrentDamage + "";
         this.playerCoinNumber.text = playerStatus.playerCoin + "";
     }
-    public void UpdateCoin()
-    {
-        this.playerCoinNumber.text = playerStatus.playerCoin + "";
-    }
-
     public void UpdateDamage()
     {
         this.playerDamage.text = playerStatus.playerCurrentDamage + "";
@@ -59,8 +54,6 @@ public class PlayerStatusUI : MonoBehaviour
     }
     public void UpdateAvailablePoint()
     {
-        this.playerAvailablePoint.text = playerStatus.availablePoint + "";
-    }
-
-    
+        this.playerAvailablePoint.text = "Point " + playerStatus.availablePoint + "";
+    }  
 }

@@ -1,62 +1,82 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.Events;
 
-public class FakeHeightObject : MonoBehaviour
-{
-    public UnityEvent onGroundHitEven;
+public class FakeHeightObject : MonoBehaviour {
+
+    public UnityEvent onGroundHitEvent;
+    public Vector2 groundDispenseVelocity;
+    public Vector2 verticalDispenseVelocity;
+
     public Transform trnsObject;
     public Transform trnsBody;
     public Transform trnsShadow;
 
-    public float gravity = -10f;
+    public float gravity = -10;
     public Vector2 groundVelocity;
     public float verticalVelocity;
-    public float lastInitVerticalVelocity;
+    private float lastIntialVerticalVelocity;
 
     public bool isGrounded;
 
-    void Update()
-    {
+    void Update(){
         UpdatePosition();
-        CheckGroundHit();
+        CheckGroundHit();   
     }
-    public void Initialize(Vector2 groundVelocity, float verticalVelocity)
-    {
+
+    public void Initialize(Vector2 groundVelocity, float verticalVelocity){
+
         isGrounded = false;
         this.groundVelocity = groundVelocity;
         this.verticalVelocity = verticalVelocity;
-        lastInitVerticalVelocity = verticalVelocity;
+        lastIntialVerticalVelocity = verticalVelocity;
+
     }
-    public void UpdatePosition()
-    {
-        if(!isGrounded)
-        {
+
+    void UpdatePosition(){
+
+        if(!isGrounded){
             verticalVelocity += gravity * Time.deltaTime;
             trnsBody.position += new Vector3(0, verticalVelocity, 0) * Time.deltaTime;
         }
-        transform.position += (Vector3)groundVelocity * Time.deltaTime;
+
+        trnsObject.position += (Vector3)groundVelocity * Time.deltaTime;
+
     }
-    void CheckGroundHit()
-    {
-        if(trnsBody.position.y <= trnsObject.position.y && !isGrounded)
-        {
+
+    void CheckGroundHit(){
+
+        if(trnsBody.position.y < trnsObject.position.y && !isGrounded){
+
             trnsBody.position = trnsObject.position;
             isGrounded = true;
             GroundHit();
-           
         }
+
     }
-    public void GroundHit()
-    {
-        onGroundHitEven.Invoke();
+
+    void GroundHit(){
+        onGroundHitEvent.Invoke();
     }
-    public void Stick()
-    {
+
+    public void Stick(){
         groundVelocity = Vector2.zero;
     }
-    public void Bounce(float divisionFactor)
-    {
-        Initialize(groundVelocity, lastInitVerticalVelocity/divisionFactor);
+
+    public void Bounce(float divisionFactor){
+        Initialize(groundVelocity, lastIntialVerticalVelocity / divisionFactor);
     }
+    
+    public void SlowDownGroundVelocity(float divisionFactor){
+        groundVelocity = groundVelocity / divisionFactor;
+    }
+
+    public void Destroy(float timeToDestruction){
+
+        Destroy(gameObject, timeToDestruction);
+
+    }
+
+
+
 }

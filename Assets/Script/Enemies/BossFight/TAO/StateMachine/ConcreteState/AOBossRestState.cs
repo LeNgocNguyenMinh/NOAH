@@ -18,7 +18,6 @@ public class AOBossRestState : AOBossState
         aoBoss.HeadCld.isTrigger = false;
         aoBoss.BossIsAwake = false;
         aoBoss.AOBossAnimator.SetTrigger("Rest");
-        aoBoss.HealthBar.HideHealthBar();
     }
     public override void FrameUpdate()
     {

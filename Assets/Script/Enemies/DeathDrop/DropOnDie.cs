@@ -6,6 +6,10 @@ public class DropOnDie : MonoBehaviour
 {
     [SerializeField]private GameObject expPrefab;
     [SerializeField]private GameObject coinPrefab;
+    [SerializeField] private AnimationCurve trajectoryAnimationCurve;
+    [SerializeField] private AnimationCurve axisCorrectionAnimationCurve;
+    [SerializeField] private AnimationCurve projectileSpeedAnimationCurve;
+    [SerializeField]private GameObject projectilePrefab;
     public void DropEXP(Vector3 pos)
     {
         int expPoint = Random.Range(3,5);

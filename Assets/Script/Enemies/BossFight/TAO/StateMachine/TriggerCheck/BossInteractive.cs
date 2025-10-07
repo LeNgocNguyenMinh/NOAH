@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossInteractive : MonoBehaviour
 {
-    [SerializeField] private AOBoss aoBoss;
+    [SerializeField]private AOBoss aoBoss;
     public void WakeBoss()
     {
         if(aoBoss != null)

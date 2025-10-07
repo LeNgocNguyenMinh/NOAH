@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: LHAwake
     originalName: 
-    pivot: {x: 0.5633803, y: -1.2800001}
+    pivot: {x: 0.5479452, y: -1.1481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 71
-      height: 25
+      width: 73
+      height: 27
     spriteID: 420ae19f1a6fc1e4ab9cb3fb1a127f57
     spriteBone: []
     spriteOutline: []
@@ -143,15 +143,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: LHAwake_Frame_1
     originalName: 
-    pivot: {x: 0.5633803, y: -1.2800001}
+    pivot: {x: 0.5479452, y: -1.1481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 37
-      width: 71
-      height: 25
+      y: 39
+      width: 73
+      height: 27
     spriteID: 8a9e7c97a6c6c23469e2de6c1cccd230
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 37}
+    uvTransform: {x: 4, y: 39}
   - name: LHAwake_Frame_2
     originalName: 
-    pivot: {x: 0.5633803, y: -1.2800001}
+    pivot: {x: 0.5479452, y: -1.1481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 70
-      width: 71
-      height: 25
+      y: 74
+      width: 73
+      height: 27
     spriteID: d4046f9bfa642fd4aa11f09f06e99472
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 70}
+    uvTransform: {x: 4, y: 74}
   - name: LHAwake_Frame_3
     originalName: 
-    pivot: {x: 0.5633803, y: -1.2800001}
+    pivot: {x: 0.5479452, y: -1.1481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 103
-      width: 71
-      height: 25
+      y: 109
+      width: 73
+      height: 27
     spriteID: a688cb57be09eab40b307424474eb3c4
     spriteBone: []
     spriteOutline: []
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 103}
+    uvTransform: {x: 4, y: 109}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -215,36 +215,36 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
-        width: 71
-        height: 25
+        y: 31
+        width: 73
+        height: 27
       spriteId: 420ae19f1a6fc1e4ab9cb3fb1a127f57
     - name: LHAwake_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
-        width: 71
-        height: 25
+        y: 31
+        width: 73
+        height: 27
       spriteId: 8a9e7c97a6c6c23469e2de6c1cccd230
     - name: LHAwake_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
-        width: 71
-        height: 25
+        y: 31
+        width: 73
+        height: 27
       spriteId: d4046f9bfa642fd4aa11f09f06e99472
     - name: LHAwake_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 32
-        width: 71
-        height: 25
+        y: 31
+        width: 73
+        height: 27
       spriteId: a688cb57be09eab40b307424474eb3c4
     linkedCells: []
     parentIndex: -1

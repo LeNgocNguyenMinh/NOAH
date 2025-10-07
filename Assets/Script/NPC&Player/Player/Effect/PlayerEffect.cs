@@ -15,7 +15,7 @@ public class PlayerEffect : MonoBehaviour
     [SerializeField]private SpriteRenderer[] spriteRenderer;
     [SerializeField]private Color flashColor;
     [SerializeField]private Material flashMaterial;
-    private Material defaultMaterial;
+    [SerializeField]private Material defaultMaterial;
     private Coroutine flashCoroutine;
     private void Awake()
     {
@@ -59,7 +59,6 @@ public class PlayerEffect : MonoBehaviour
     {
         foreach(var sr in spriteRenderer)
         {
-            defaultMaterial = sr.material;
             sr.material = flashMaterial;
             sr.material.color = flashColor;
         }
