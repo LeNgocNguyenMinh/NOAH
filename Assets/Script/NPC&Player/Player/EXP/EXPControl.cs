@@ -7,17 +7,28 @@ using TMPro;
 // This class control each EXP point come to player
 public class EXPControl : MonoBehaviour
 {
+    public static EXPControl Instance;
     [SerializeField]private PlayerStatus playerStatus;
     private EXPBar expBar;// EXP bar
     private float expCurrentValue;// EXP current value
     private float expMaxValue; // EXP max value need to achive for level up
     private int currentLevel = 1; //start level
-    
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         expBar = GetComponent<EXPBar>();
-        
-        //Set Start Value 
+
         currentLevel = playerStatus.playerLevel;
         expCurrentValue = playerStatus.currentExp;
         expMaxValue = playerStatus.maxExp;

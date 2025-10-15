@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class FKBossDeadState : FKBossState
 {
-    public FKBossDeadState(FKBoss aoBoss, FKBossStateMachine aoBossStateMachine) : base(aoBoss, aoBossStateMachine)
+    public FKBossDeadState(FKBoss fkBoss, FKBossStateMachine fkBossStateMachine) : base(fkBoss, fkBossStateMachine)
     {
     }
     public override void EnterState()
     {
         base.EnterState();
-        aoBoss.FKBossAnimator.SetTrigger("Dead");
+        fkBoss.FKBossAnimator.SetTrigger("Dead");
     }
     public override void FrameUpdate()
     {

@@ -1098,8 +1098,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb2853b7db70ca419455f54da85b595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expPrefab: {fileID: 3192577251028670781, guid: 7eb29ef071e86b64098fc19bf79e5b33, type: 3}
-  coinPrefab: {fileID: 2226808372654750378, guid: 7ef5462f482b7fd45af094ccc773212d, type: 3}
+  coin: {fileID: 2226808372654750378, guid: 7ef5462f482b7fd45af094ccc773212d, type: 3}
+  exp: {fileID: 3192577251028670781, guid: 7eb29ef071e86b64098fc19bf79e5b33, type: 3}
+  maxSpeed: 2
+  maxHeight: 1
 --- !u!114 &782655299358372623
 MonoBehaviour:
   m_ObjectHideFlags: 0

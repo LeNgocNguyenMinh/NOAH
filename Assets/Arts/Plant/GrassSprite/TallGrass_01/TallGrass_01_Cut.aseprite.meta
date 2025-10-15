@@ -131,7 +131,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 31
-      height: 27
+      height: 29
     spriteID: a214d1159aade3249ab67cc47a824fa9
     spriteBone: []
     spriteOutline: []
@@ -149,9 +149,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 39
+      y: 41
       width: 16
-      height: 8
+      height: 10
     spriteID: 4a5b8d1bcc2f6c14fbd2bfad440c9579
     spriteBone: []
     spriteOutline: []
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 39}
+    uvTransform: {x: 4, y: 41}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -177,7 +177,7 @@ ScriptedImporter:
         x: 16
         y: 0
         width: 31
-        height: 27
+        height: 29
       spriteId: a214d1159aade3249ab67cc47a824fa9
     - name: TallGrass_01_Cut_Frame_1
       frameIndex: 1
@@ -186,7 +186,7 @@ ScriptedImporter:
         x: 23
         y: 0
         width: 16
-        height: 8
+        height: 10
       spriteId: 4a5b8d1bcc2f6c14fbd2bfad440c9579
     linkedCells: []
     parentIndex: -1
@@ -206,4 +206,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 64, y: 32}

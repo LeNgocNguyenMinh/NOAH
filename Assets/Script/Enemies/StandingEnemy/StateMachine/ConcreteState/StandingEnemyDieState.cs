@@ -30,7 +30,7 @@ public class StandingEnemyDieState : StandingEnemyState
         base.AnimationTriggerEvent(triggerType);
         if(triggerType == StandingEnemy.AnimationTriggerType.DeadAnimFinish)
         {
-            enemy.DropOnDie.DropEXP(enemy.transform.position);
+            enemy.DropOnDie.DropReward();
             enemy.DestroyAfterDead();
         }
     }

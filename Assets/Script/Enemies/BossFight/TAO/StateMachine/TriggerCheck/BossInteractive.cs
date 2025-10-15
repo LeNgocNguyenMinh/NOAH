@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class BossInteractive : MonoBehaviour
 {
-    [SerializeField]private AOBoss aoBoss;
+    private enum LinkToBoss{
+        AOBoss,
+        FKBoss
+    }
+    [SerializeField]private LinkToBoss linkToBoss;
     public void WakeBoss()
     {
-        if(aoBoss != null)
-        {
-            aoBoss.BossAwake();
-        }
+        if(linkToBoss == LinkToBoss.AOBoss)
+            AOBoss.Instance.BossAwake();
+        else if(linkToBoss == LinkToBoss.FKBoss)
+            FKBoss.Instance.BossAwake();
     }
 }

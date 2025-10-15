@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: WaterMelonPieceExplode_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.30769232}
+    pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 91
+      x: 62
       y: 4
-      width: 32
-      height: 39
+      width: 22
+      height: 32
     spriteID: 1529aa9a9781f0842a3a40b73bfc92c0
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 91, y: 4}
+    uvTransform: {x: 62, y: 4}
   - name: WaterMelonPieceExplode_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.30769232}
+    pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 67
-      width: 32
-      height: 39
+      x: 62
+      y: 44
+      width: 22
+      height: 32
     spriteID: a06decbf55c71884ca93a09a87f2db1d
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 67}
+    uvTransform: {x: 62, y: 44}
   - name: WaterMelonPieceExplode_Frame_2
     originalName: 
-    pivot: {x: 0.5357143, y: -0.32432434}
+    pivot: {x: 0.42857146, y: -0.31578946}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 80
-      y: 67
+      x: 4
+      y: 180
       width: 28
-      height: 37
+      height: 38
     spriteID: c32c53a7be519e94c96bde37a34b2234
     spriteBone: []
     spriteOutline: []
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 80, y: 67}
+    uvTransform: {x: 4, y: 180}
   - name: WaterMelonPieceExplode_Frame_3
     originalName: 
     pivot: {x: 0.5357143, y: -0.23809524}
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 67
+      x: 4
+      y: 130
       width: 28
       height: 42
     spriteID: 816dbd96dd6a6bd41b17f9503fb219d9
@@ -200,17 +200,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 67}
+    uvTransform: {x: 4, y: 130}
   - name: WaterMelonPieceExplode_Frame_4
     originalName: 
-    pivot: {x: 0.5151515, y: -0.09803922}
+    pivot: {x: 0.5405406, y: -0.11764707}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 50
-      y: 4
-      width: 33
+      x: 4
+      y: 71
+      width: 37
       height: 51
     spriteID: e8909457bdc02cf44b162531b90328f2
     spriteBone: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 50, y: 4}
+    uvTransform: {x: 4, y: 71}
   - name: WaterMelonPieceExplode_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: -0.054545455}
+    pivot: {x: 0.48, y: -0.033898305}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 38
-      height: 55
+      width: 50
+      height: 59
     spriteID: a1c96f4e4f1798c46978266ac2ca6857
     spriteBone: []
     spriteOutline: []
@@ -254,28 +254,28 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 12
-        width: 32
-        height: 39
+        x: 21
+        y: 16
+        width: 22
+        height: 32
       spriteId: 1529aa9a9781f0842a3a40b73bfc92c0
     - name: WaterMelonPieceExplode_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 12
-        width: 32
-        height: 39
+        x: 21
+        y: 16
+        width: 22
+        height: 32
       spriteId: a06decbf55c71884ca93a09a87f2db1d
     - name: WaterMelonPieceExplode_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 17
+        x: 20
         y: 12
         width: 28
-        height: 37
+        height: 38
       spriteId: c32c53a7be519e94c96bde37a34b2234
     - name: WaterMelonPieceExplode_Frame_3
       frameIndex: 3
@@ -290,19 +290,19 @@ ScriptedImporter:
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 15
-        y: 5
-        width: 33
+        x: 12
+        y: 6
+        width: 37
         height: 51
       spriteId: e8909457bdc02cf44b162531b90328f2
     - name: WaterMelonPieceExplode_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 13
-        y: 3
-        width: 38
-        height: 55
+        x: 8
+        y: 2
+        width: 50
+        height: 59
       spriteId: a1c96f4e4f1798c46978266ac2ca6857
     linkedCells: []
     parentIndex: -1

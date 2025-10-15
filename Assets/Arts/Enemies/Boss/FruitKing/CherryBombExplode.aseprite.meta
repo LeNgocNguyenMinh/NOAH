@@ -128,8 +128,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 46
-      y: 4
+      x: 4
+      y: 118
       width: 29
       height: 38
     spriteID: 63055ff3789ede0468414bdc574da524
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 46, y: 4}
+    uvTransform: {x: 4, y: 118}
   - name: CherryBombExplode_Frame_1
     originalName: 
     pivot: {x: 0.33333334, y: -0.44444445}
@@ -148,8 +148,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 83
-      y: 4
+      x: 4
+      y: 209
       width: 27
       height: 36
     spriteID: 97ade42b6d7f07449838ad17272b1b79
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 83, y: 4}
+    uvTransform: {x: 4, y: 209}
   - name: CherryBombExplode_Frame_2
     originalName: 
     pivot: {x: 0.33333334, y: -0.4848485}
@@ -168,8 +168,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 83
-      y: 48
+      x: 61
+      y: 4
       width: 24
       height: 33
     spriteID: 8cfb0c5269788924ebf520265d2bd1ca
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 83, y: 48}
+    uvTransform: {x: 61, y: 4}
   - name: CherryBombExplode_Frame_3
     originalName: 
     pivot: {x: 0.3214286, y: -0.4054054}
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 46
-      y: 50
+      x: 4
+      y: 164
       width: 28
       height: 37
     spriteID: 645308d112c7cfe468a5bf923e12a498
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 46, y: 50}
+    uvTransform: {x: 4, y: 164}
   - name: CherryBombExplode_Frame_4
     originalName: 
-    pivot: {x: 0.36363637, y: -0.29268292}
+    pivot: {x: 0.3846154, y: -0.27272728}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 57
-      width: 33
-      height: 41
+      y: 66
+      width: 39
+      height: 44
     spriteID: 55cd1bb71fbe8944bbd6923ae2bb1ed0
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 57}
+    uvTransform: {x: 4, y: 66}
   - name: CherryBombExplode_Frame_5
     originalName: 
-    pivot: {x: 0.44117647, y: -0.22222222}
+    pivot: {x: 0.40816325, y: -0.11111111}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 34
-      height: 45
+      width: 49
+      height: 54
     spriteID: 80d30ef2968fcd64d8ad8dedda2e1ad1
     spriteBone: []
     spriteOutline: []
@@ -290,19 +290,19 @@ ScriptedImporter:
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 20
+        x: 17
         y: 12
-        width: 33
-        height: 41
+        width: 39
+        height: 44
       spriteId: 55cd1bb71fbe8944bbd6923ae2bb1ed0
     - name: CherryBombExplode_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 10
-        width: 34
-        height: 45
+        x: 12
+        y: 6
+        width: 49
+        height: 54
       spriteId: 80d30ef2968fcd64d8ad8dedda2e1ad1
     linkedCells: []
     parentIndex: -1

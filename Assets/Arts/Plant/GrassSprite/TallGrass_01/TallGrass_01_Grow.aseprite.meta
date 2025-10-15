@@ -129,9 +129,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 92
+      y: 98
       width: 16
-      height: 8
+      height: 10
     spriteID: 4d28b4188db6def4b9b273f4858818aa
     spriteBone: []
     spriteOutline: []
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 92}
+    uvTransform: {x: 4, y: 98}
   - name: TallGrass_01_Grow_Frame_1
     originalName: 
     pivot: {x: 0.5625, y: 0}
@@ -149,9 +149,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 72
+      y: 76
       width: 16
-      height: 12
+      height: 14
     spriteID: c94630fa3bda8b141a0b358697b1bafb
     spriteBone: []
     spriteOutline: []
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 72}
+    uvTransform: {x: 4, y: 76}
   - name: TallGrass_01_Grow_Frame_2
     originalName: 
     pivot: {x: 0.5294118, y: 0}
@@ -171,7 +171,7 @@ ScriptedImporter:
       x: 43
       y: 4
       width: 17
-      height: 17
+      height: 19
     spriteID: c1a38eba37ba79e4ca27b1e2a4ba237f
     spriteBone: []
     spriteOutline: []
@@ -189,9 +189,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 39
+      y: 41
       width: 25
-      height: 25
+      height: 27
     spriteID: aece689c3d4477a4eafd20615a0d98c2
     spriteBone: []
     spriteOutline: []
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 39}
+    uvTransform: {x: 4, y: 41}
   - name: TallGrass_01_Grow_Frame_4
     originalName: 
     pivot: {x: 0.516129, y: 0}
@@ -211,7 +211,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 31
-      height: 27
+      height: 29
     spriteID: 9f19fcc65d43d6944958c3a5d80244fa
     spriteBone: []
     spriteOutline: []
@@ -237,7 +237,7 @@ ScriptedImporter:
         x: 23
         y: 0
         width: 16
-        height: 8
+        height: 10
       spriteId: 4d28b4188db6def4b9b273f4858818aa
     - name: TallGrass_01_Grow_Frame_1
       frameIndex: 1
@@ -246,7 +246,7 @@ ScriptedImporter:
         x: 23
         y: 0
         width: 16
-        height: 12
+        height: 14
       spriteId: c94630fa3bda8b141a0b358697b1bafb
     - name: TallGrass_01_Grow_Frame_2
       frameIndex: 2
@@ -255,7 +255,7 @@ ScriptedImporter:
         x: 23
         y: 0
         width: 17
-        height: 17
+        height: 19
       spriteId: c1a38eba37ba79e4ca27b1e2a4ba237f
     - name: TallGrass_01_Grow_Frame_3
       frameIndex: 3
@@ -264,7 +264,7 @@ ScriptedImporter:
         x: 20
         y: 0
         width: 25
-        height: 25
+        height: 27
       spriteId: aece689c3d4477a4eafd20615a0d98c2
     - name: TallGrass_01_Grow_Frame_4
       frameIndex: 4
@@ -273,7 +273,7 @@ ScriptedImporter:
         x: 16
         y: 0
         width: 31
-        height: 27
+        height: 29
       spriteId: 9f19fcc65d43d6944958c3a5d80244fa
     linkedCells: []
     parentIndex: -1
@@ -293,4 +293,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 64, y: 32}

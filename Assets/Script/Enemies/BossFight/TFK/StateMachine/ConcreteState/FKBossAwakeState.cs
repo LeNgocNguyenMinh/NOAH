@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class FKBossAwakeState : FKBossState
 {
-    public FKBossAwakeState(FKBoss aoBoss, FKBossStateMachine aoBossStateMachine) : base(aoBoss, aoBossStateMachine)
+    public FKBossAwakeState(FKBoss fkBoss, FKBossStateMachine fkBossStateMachine) : base(fkBoss, fkBossStateMachine)
     {
     }
     public override void EnterState()
     {
         base.EnterState();
-        aoBoss.FKBossAnimator.SetTrigger("Awake");
-        aoBoss.HealthBarCV.SetActive(true);
+        fkBoss.FKBossAnimator.SetTrigger("Awake");
+        fkBoss.HealthBarCV.SetActive(true);
 
     }
     public override void FrameUpdate()
@@ -26,8 +26,8 @@ public class FKBossAwakeState : FKBossState
     {
         if (triggerType == FKBoss.AnimationTriggerType.AwakeAnimFinish)
         {
-            aoBoss.BossIsAwake = true;
-            aoBoss.StateMachine.ChangeState(aoBoss.IdleState);
+            fkBoss.BossIsAwake = true;
+            fkBoss.StateMachine.ChangeState(fkBoss.IdleState);
         }
     }
 }

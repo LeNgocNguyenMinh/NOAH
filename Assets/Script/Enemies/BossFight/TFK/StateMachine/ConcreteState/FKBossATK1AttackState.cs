@@ -3,39 +3,19 @@ using UnityEngine;
 
 public class FKBossATK1AttackState : FKBossState
 {
-    private float timer = 0f;
-    private Vector3 readyPos;
-    private bool hasHitGround;
-    public FKBossATK1AttackState(FKBoss aoBoss, FKBossStateMachine aoBossStateMachine) : base(aoBoss, aoBossStateMachine)
+    private float coolDown;
+
+    public FKBossATK1AttackState(FKBoss fkBoss, FKBossStateMachine fkBossStateMachine) : base(fkBoss, fkBossStateMachine)
     {
     }
     public override void EnterState()
     {
         base.EnterState();
-        aoBoss.AttackCount++;
-        timer = aoBoss.ATK1RHStayTime;
-        readyPos = aoBoss.ATK1RHDirect;
-        hasHitGround = false;
-        aoBoss.FKBossAnimator.SetTrigger("ATK1RHGoDown");
-        aoBoss.ATK1RHBox.enabled = true;
-        LHandBulletSpawn();
+        fkBoss.FKBossAnimator.SetTrigger("ATK1Attack");
     }
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        timer -= Time.deltaTime;
-        aoBoss.RightHand.position = 
-        Vector3.MoveTowards(aoBoss.RightHand.position, readyPos, aoBoss.ATK1RHFallSpeed * Time.deltaTime);
-        if(Vector3.Distance(aoBoss.RightHand.position, readyPos) <= 0.1f && !hasHitGround)
-        {
-            hasHitGround = true;
-            aoBoss.FKBossAnimator.SetTrigger("ATK1RHHitGround");
-            aoBoss.RightHand.position = readyPos;
-        }
-        if(timer <= 0)
-        {
-            aoBoss.StateMachine.ChangeState(aoBoss.ATK1IdleState);
-        }
     }
 
     public override void ExitState()
@@ -44,11 +24,26 @@ public class FKBossATK1AttackState : FKBossState
     }
     public override void AnimationTriggerEvent(FKBoss.AnimationTriggerType triggerType)
     {
-        
-    }
-    public void LHandBulletSpawn()
-    {
-        Instantiate(aoBoss.ATK1LHBulletPref, aoBoss.ATK1LHShootPos.position, Quaternion.identity)
-        .GetComponent<FKBossATK1LHBullet>().SetValue(aoBoss.ATK1LHBulletSpeed, aoBoss.ATK1LHBulletTime, aoBoss.BossStatus.bossDamage);
+        if(triggerType == FKBoss.AnimationTriggerType.ATK1RHThrow)
+        {
+            Instantiate(fkBoss.Banana, fkBoss.RHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1RHBullet>().SetValue(fkBoss.ATK1RHFlyTime, fkBoss.ATK1RhRotateSpeed);
+        }
+        else if(triggerType == FKBoss.AnimationTriggerType.ATK1LHThrow)
+        {
+            Instantiate(fkBoss.WaterMelon, fkBoss.LHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1LHBigBullet>().SetValue(fkBoss.ATK1LHWMSpeed, fkBoss.ATK1LHWMFlyDist, fkBoss.ATK1LHWMPSpeed, fkBoss.ATK1LHWMPFlyDist, fkBoss.BossStatus.bossDamage, fkBoss.ATK1RtSpeed);
+        }
+        if(triggerType == FKBoss.AnimationTriggerType.ATK1AttackAnimFinish)
+        {
+            if(fkBoss.ATK1Count < fkBoss.ATK1AtttackNum)
+            {
+                fkBoss.ATK1Count ++;
+                fkBoss.StateMachine.ChangeState(fkBoss.ATK1IdleState);
+            }
+            else
+            {
+                fkBoss.ATK1Count = 0;
+                fkBoss.StateMachine.ChangeState(fkBoss.ATK1EndState);
+            }
+        }
     }
 }

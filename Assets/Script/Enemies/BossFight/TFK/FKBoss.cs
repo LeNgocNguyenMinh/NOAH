@@ -2,49 +2,10 @@ using UnityEngine;
 
 public class FKBoss : MonoBehaviour
 {
+    public static FKBoss Instance { get; private set; }
     [field: Header("General attribute")]
     [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public Animator FKBossAnimator { get; set; }
-    [field: SerializeField]public Transform RightHand { get; set; }
-    [field: SerializeField]public Transform LeftHand { get; set; }
-    [field: SerializeField]public Rigidbody2D RHandRB { get; set; }
-    [field: SerializeField]public Rigidbody2D LHandRB { get; set; }
-    [field: SerializeField]public Rigidbody2D HeadRB { get; set; }
-    [field: SerializeField]public BoxCollider2D LHandCld { get; set; }
-    [field: SerializeField]public BoxCollider2D RHandCld { get; set; }
-    [field: SerializeField]public BoxCollider2D HeadCld { get; set; }
-    public Vector3 RightHandOriginTrans { get; set; }
-    public Vector3 LeftHandOriginTrans { get; set; }
-    [field: Header("ATK1 Setting")]
-    [field: SerializeField]public int ATK1MaxAtk { get; set; }
-    public int AttackCount { get; set; }
-    [field: Header("----Right Hand")]
-    [field: SerializeField]public GameObject ATK1SitePref { get; set; }
-    [field: SerializeField]public float ATK1RHReadyTime { get; set; }
-    [field: SerializeField]public float ATK1RHFlySpeed { get; set; }
-    [field: SerializeField]public float ATK1RHFallSpeed { get; set; }
-    [field: SerializeField]public float ATK1RHStayTime { get; set; }
-    [field: SerializeField]public BoxCollider2D ATK1RHBox { get; set; }
-    public Vector3 ATK1RHDirect;
-    [field: Header("----Left Hand")]
-    [field: SerializeField]public Transform ATK1LHShootPos { get; set; }
-    [field: SerializeField]public GameObject ATK1LHBulletPref { get; set; }
-    [field: SerializeField]public float ATK1LHBulletTime { get; set; }
-    [field: SerializeField]public float ATK1LHBulletSpeed { get; set; }
-    [field: Header("ATK2 Setting")]
-    [field: SerializeField]public int ATK2MaxAtk { get; set; }
-    [field: SerializeField]public int ATK2AtkDelay { get; set; }
-    [field: Header("----Right Hand")]
-    [field: SerializeField]public GameObject ATK2RHBulletPref { get; set; }
-    [field: SerializeField]public float ATK2RHBulletSpeed { get; set; }
-    [field: SerializeField]public int ATK2RHBoundLimit { get; set; }
-    [field: SerializeField]public Transform ATK2RHShootPos { get; set; }
-    [field: Header("----Left Hand")]
-    [field: SerializeField]public GameObject ATK2LHBulletPref { get; set; }
-    [field: SerializeField]public float ATK2LHBulletSpeed { get; set; }
-    [field: SerializeField]public int ATK2LHBoundLimit { get; set; }
-    [field: SerializeField]public Transform ATK2LHShootPos { get; set; }
-    public Vector3 ATK1Direct;
     public FKBossStateMachine StateMachine { get; private set;}
     public FKBossRestState RestState { get; private set; }
     public FKBossAwakeState AwakeState { get; private set; }
@@ -59,6 +20,28 @@ public class FKBoss : MonoBehaviour
     public FKBossATK2EndState ATK2EndState { get; private set; }
     public bool BossIsAwake { get; set; }
     [field: SerializeField]public GameObject HealthBarCV{ get; set; }
+    [field: Header("ATK1 attribute")]
+    [field: SerializeField]public int ATK1AtttackNum { get; set; }
+    [field: SerializeField]public float ATK1RtSpeed { get; set; }
+    [field: SerializeField]public int ATK1IdleTime { get; set; }
+    public int ATK1Count { get; set; }
+    [field: Header("ATK1 LH")]
+    [field: SerializeField]public float ATK1LHWMFlyDist { get; set; }
+    [field: SerializeField]public GameObject WaterMelon { get; set; }
+    [field: SerializeField]public float ATK1LHWMSpeed { get; set; }
+    [field: SerializeField]public float ATK1LHWMPFlyDist { get; set; }
+    [field: SerializeField]public GameObject WaterMelonPiece { get; set; }
+    [field: SerializeField]public float ATK1LHWMPSpeed { get; set; }
+    [field: SerializeField]public Transform LHThrowPoint { get; set; }
+
+    [field: SerializeField]public float LHATK1Time { get; set; }
+    [field: Header("ATK1 RH")]
+    [field: SerializeField]public Transform RHThrowPoint { get; set; }
+    [field: SerializeField]public GameObject Banana { get; set; }
+    [field: SerializeField]public float RHATK1Time { get; set; }
+    [field: SerializeField]public float ATK1RHFlyTime { get; set; }
+    [field: SerializeField]public float ATK1RhRotateSpeed { get; set; }
+   
 
     public enum AnimationTriggerType
     {
@@ -66,13 +49,24 @@ public class FKBoss : MonoBehaviour
         AwakeAnimFinish, 
         IdleAnimFinish,
         ATK1ReadyAnimFinish,
-        ATK2ReadyAnimFinish,
-        ATK2EndAnimFinish,
+        ATK1AttackAnimFinish,
+        ATK1RHThrow,
+        ATK1LHThrow,
+        ATK1IdleAnimFinish,
+        ATK1EndAnimFinish,
         DeadAnimFinish,
     }
 
     private void Awake()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         StateMachine = new FKBossStateMachine();
         RestState = new FKBossRestState(this, StateMachine);
         AwakeState = new FKBossAwakeState(this, StateMachine);
@@ -88,10 +82,6 @@ public class FKBoss : MonoBehaviour
     }
     private void Start()
     {
-        RightHandOriginTrans = RightHand.position;
-        LeftHandOriginTrans = LeftHand.position;
-        AttackCount = 0;
-        ATK1RHBox.enabled = false;
         HealthBarCV.SetActive(false);
         StateMachine.Initialize(RestState);
     }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class FKBossIdleState : FKBossState
 {
-    public FKBossIdleState(FKBoss aoBoss, FKBossStateMachine aoBossStateMachine) : base(aoBoss, aoBossStateMachine)
+    public FKBossIdleState(FKBoss fkBoss, FKBossStateMachine fkBossStateMachine) : base(fkBoss, fkBossStateMachine)
     {
     }
     public override void EnterState()
     {
         base.EnterState();
-        aoBoss.FKBossAnimator.SetTrigger("Idle");
+        fkBoss.FKBossAnimator.SetTrigger("Idle");
     }
     public override void FrameUpdate()
     {
@@ -24,13 +24,7 @@ public class FKBossIdleState : FKBossState
     {
         if (triggerType == FKBoss.AnimationTriggerType.IdleAnimFinish)
         {
-            aoBoss.LHandRB.bodyType = RigidbodyType2D.Dynamic;
-            aoBoss.RHandRB.bodyType = RigidbodyType2D.Dynamic;
-            aoBoss.HeadRB.bodyType = RigidbodyType2D.Dynamic;
-            aoBoss.LHandCld.isTrigger = true;
-            aoBoss.RHandCld.isTrigger = true;
-            aoBoss.HeadCld.isTrigger = true;
-            aoBoss.StateMachine.ChangeState(aoBoss.ATK1ReadyState);
+            fkBoss.StateMachine.ChangeState(fkBoss.ATK1ReadyState);
         }
     }
 }

@@ -10,7 +10,7 @@ public class PlayerStep : MonoBehaviour
     [SerializeField]private GameObject echo;
     void Update()
     {
-        if(Player.Instance.MoveDirect != Vector2.zero)
+        if(Player.Instance.RB.velocity.sqrMagnitude > 0.5f)
         {
             if(timeBtwSpawn <= 0)
             {

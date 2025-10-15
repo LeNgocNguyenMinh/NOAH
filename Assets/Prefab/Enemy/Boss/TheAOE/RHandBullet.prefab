@@ -60,7 +60,6 @@ GameObject:
   - component: {fileID: 7585699163524478294}
   - component: {fileID: 8281460087728436913}
   - component: {fileID: 1999662039692919892}
-  - component: {fileID: 6266590546662374647}
   - component: {fileID: 6678945175462588513}
   m_Layer: 0
   m_Name: RHandBullet
@@ -168,18 +167,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6266590546662374647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6977596845214558048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01d67de31ee394d4a8b2083f58256774, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &6678945175462588513
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -229,6 +216,6 @@ SpriteRenderer:
   m_Size: {x: 6, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1

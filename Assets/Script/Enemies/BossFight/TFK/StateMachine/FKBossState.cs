@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FKBossState : MonoBehaviour
 {
-    protected FKBossStateMachine aoBossStateMachine;
-    protected FKBoss aoBoss;
-    public FKBossState(FKBoss aoBoss, FKBossStateMachine aoBossStateMachine)
+    protected FKBossStateMachine fkBossStateMachine;
+    protected FKBoss fkBoss;
+    public FKBossState(FKBoss fkBoss, FKBossStateMachine fkBossStateMachine)
     {
-        this.aoBoss = aoBoss;
-        this.aoBossStateMachine = aoBossStateMachine;
+        this.fkBoss = fkBoss;
+        this.fkBossStateMachine = fkBossStateMachine;
     }
     public virtual void EnterState()
     {

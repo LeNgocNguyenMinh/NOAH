@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class DropOnDie : MonoBehaviour
 {
-    [SerializeField]private GameObject expPrefab;
-    [SerializeField]private GameObject coinPrefab;
-    [SerializeField] private AnimationCurve trajectoryAnimationCurve;
-    [SerializeField] private AnimationCurve axisCorrectionAnimationCurve;
-    [SerializeField] private AnimationCurve projectileSpeedAnimationCurve;
-    [SerializeField]private GameObject projectilePrefab;
-    public void DropEXP(Vector3 pos)
+    public GameObject coin;
+    public GameObject exp;
+    public float maxSpeed;
+    public float maxHeight;
+    public void DropReward()
     {
-        int expPoint = Random.Range(3,5);
-        int coinPoint = Random.Range(4,7);
-        for (int i =0; i < expPoint; i++)
+        int num = 4;
+        for(int i = 0; i < num; i++)
         {
-            Vector3 randomOffset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
-            Vector3 spawnPosition = pos + randomOffset;
-            Instantiate(expPrefab, spawnPosition, Quaternion.identity);
-        }
-        for (int i =0; i < coinPoint; i++)
-        {
-            Vector3 randomOffset = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
-            Vector3 spawnPosition = pos + randomOffset;
-            Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
+            float xC = (Random.value < 0.5f) ? Random.Range(2f, 3f) : Random.Range(-3f, -2f);
+            float yC = (Random.value < 0.5f) ? Random.Range(1f, 2f) : Random.Range(-2f, -1f);
+        
+            float xE = (Random.value < 0.5f) ? Random.Range(2f, 3f) : Random.Range(-3f, -2f);
+            float yE = (Random.value < 0.5f) ? Random.Range(1f, 2f) : Random.Range(-2f, -1f);
+
+            Vector3 offsetC = new Vector3(xC, yC, 0f);
+            Vector3 offsetE = new Vector3(xE, yE, 0f);
+
+            Projectile coinPro = Instantiate(coin, transform.position, Quaternion.identity).GetComponent<Projectile>();
+            coinPro.InitializeProjectile(transform.position + offsetC, maxSpeed, maxHeight);
+            
+            Projectile EXPPro = Instantiate(exp, transform.position, Quaternion.identity).GetComponent<Projectile>();
+            EXPPro.InitializeProjectile(transform.position + offsetE, maxSpeed, maxHeight);
+        
         }
     }
 }

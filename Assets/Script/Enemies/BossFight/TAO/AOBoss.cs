@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AOBoss : MonoBehaviour
 {
+    public static AOBoss Instance { get; private set; }
     [field: Header("General attribute")]
     [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public Animator AOBossAnimator { get; set; }
@@ -73,6 +74,14 @@ public class AOBoss : MonoBehaviour
 
     private void Awake()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         StateMachine = new AOBossStateMachine();
         RestState = new AOBossRestState(this, StateMachine);
         AwakeState = new AOBossAwakeState(this, StateMachine);

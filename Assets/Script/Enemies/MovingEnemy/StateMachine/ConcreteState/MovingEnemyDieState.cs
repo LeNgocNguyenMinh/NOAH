@@ -31,7 +31,7 @@ public class MovingEnemyDieState : MovingEnemyState
         base.AnimationTriggerEvent(triggerType);
         if(triggerType == MovingEnemy.AnimationTriggerType.DeadAnimFinish)
         {
-            enemy.DropOnDie.DropEXP(enemy.transform.position);
+            enemy.DropOnDie.DropReward();
             enemy.DestroyAfterDead();
         }
     }

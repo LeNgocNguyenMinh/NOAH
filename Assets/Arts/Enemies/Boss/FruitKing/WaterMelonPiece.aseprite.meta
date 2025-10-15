@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: WaterMelonPiece
     originalName: 
-    pivot: {x: 0.5, y: -0.30769232}
+    pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 39
+      width: 22
+      height: 32
     spriteID: 97711d6eb16dc174ebf80d32bbef3f2a
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 12
-        width: 32
-        height: 39
+        x: 21
+        y: 16
+        width: 22
+        height: 32
       spriteId: 97711d6eb16dc174ebf80d32bbef3f2a
     linkedCells: []
     parentIndex: -1

@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class FKBossATK1ReadyState : FKBossState
 {
-    public FKBossATK1ReadyState(FKBoss aoBoss, FKBossStateMachine aoBossStateMachine) : base(aoBoss, aoBossStateMachine)
+    public FKBossATK1ReadyState(FKBoss fkBoss, FKBossStateMachine fkBossStateMachine) : base(fkBoss, fkBossStateMachine)
     {
     }
     public override void EnterState()
     {
         base.EnterState();
-        aoBoss.FKBossAnimator.SetTrigger("ATK1Ready");
+        fkBoss.FKBossAnimator.SetTrigger("ATK1Ready");
     }
     public override void FrameUpdate()
     {
@@ -21,9 +21,9 @@ public class FKBossATK1ReadyState : FKBossState
     }
     public override void AnimationTriggerEvent(FKBoss.AnimationTriggerType triggerType)
     {
-        if(triggerType == FKBoss.AnimationTriggerType.ATK1ReadyAnimFinish)
+        if (triggerType == FKBoss.AnimationTriggerType.ATK1ReadyAnimFinish)
         {
-            aoBoss.StateMachine.ChangeState(aoBoss.ATK1IdleState);
+            fkBoss.StateMachine.ChangeState(fkBoss.ATK1AttackState);
         }
     }
 }

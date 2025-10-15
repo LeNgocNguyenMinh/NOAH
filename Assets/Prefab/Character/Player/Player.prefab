@@ -981,7 +981,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2106746660748532088
 MonoBehaviour:
@@ -1215,6 +1215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayWandATK: 0.5
   firePoint: {fileID: 1616526034875243648}
+  projectileMaxMoveSpeed: 30
+  projectileMaxHeight: 0.25
 --- !u!1 &3255289146521034263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1439,7 @@ Transform:
   m_GameObject: {fileID: 3720716470400463891}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.14, y: 0, z: 0}
+  m_LocalPosition: {x: 2.18, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

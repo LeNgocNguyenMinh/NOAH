@@ -6,13 +6,13 @@ public class FKBossATK2EndState : FKBossState
 {
     private Vector3 rhDirect;
     private Vector3 lhDirect;
-    public FKBossATK2EndState(FKBoss aoBoss, FKBossStateMachine aoBossStateMachine) : base(aoBoss, aoBossStateMachine)
+    public FKBossATK2EndState(FKBoss fkBoss, FKBossStateMachine fkBossStateMachine) : base(fkBoss, fkBossStateMachine)
     {
     }
     public override void EnterState()
     {
         base.EnterState();
-        aoBoss.FKBossAnimator.SetTrigger("ATK2End");
+    
     }
     public override void FrameUpdate()
     {
@@ -24,9 +24,6 @@ public class FKBossATK2EndState : FKBossState
     }
     public override void AnimationTriggerEvent(FKBoss.AnimationTriggerType triggerType)
     {
-        if(triggerType == FKBoss.AnimationTriggerType.ATK2EndAnimFinish)
-        {
-            aoBoss.StateMachine.ChangeState(aoBoss.IdleState);
-        }
+     
     }
 }
