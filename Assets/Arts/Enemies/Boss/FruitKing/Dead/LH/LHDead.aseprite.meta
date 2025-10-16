@@ -128,7 +128,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 37
+      x: 44
       y: 4
       width: 26
       height: 24
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 37, y: 4}
+    uvTransform: {x: 44, y: 4}
   - name: LHDead_Frame_1
     originalName: 
     pivot: {x: 1.1538461, y: -1.6666667}
@@ -148,7 +148,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 37
+      x: 44
       y: 36
       width: 26
       height: 24
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 37, y: 36}
+    uvTransform: {x: 44, y: 36}
   - name: LHDead_Frame_2
     originalName: 
-    pivot: {x: 1.1538461, y: -1.6666667}
+    pivot: {x: 1.2727273, y: -1.8636364}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 37
+      x: 44
       y: 68
-      width: 26
-      height: 24
+      width: 22
+      height: 22
     spriteID: 78c16355f34b85745975ca10a259e908
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 37, y: 68}
+    uvTransform: {x: 44, y: 68}
   - name: LHDead_Frame_3
     originalName: 
-    pivot: {x: 1.2857143, y: -1.952381}
+    pivot: {x: 1.1111112, y: -1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 75
-      width: 21
-      height: 21
+      width: 27
+      height: 25
     spriteID: 1a458b8794680ab40bbfb9ac578e4b25
     spriteBone: []
     spriteOutline: []
@@ -203,15 +203,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 75}
   - name: LHDead_Frame_4
     originalName: 
-    pivot: {x: 1.2857143, y: -1.6956522}
+    pivot: {x: 1.0689656, y: -1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 37
-      y: 100
-      width: 21
-      height: 23
+      x: 4
+      y: 42
+      width: 29
+      height: 25
     spriteID: fd7abd68c2ef1bf4db6ea7e985874f93
     spriteBone: []
     spriteOutline: []
@@ -220,39 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 37, y: 100}
+    uvTransform: {x: 4, y: 42}
   - name: LHDead_Frame_5
     originalName: 
-    pivot: {x: 1.2272727, y: -1.423077}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 41
-      width: 22
-      height: 26
-    spriteID: 4b40c3823bffaa141904c2a656d99d40
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 41}
-  - name: LHDead_Frame_6
-    originalName: 
-    pivot: {x: 1.16, y: -1.2068965}
+    pivot: {x: 1, y: -1.1333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 25
-      height: 29
-    spriteID: d7a4beb7d31fa3d4d8a664ce1b5524f2
+      width: 32
+      height: 30
+    spriteID: 4b40c3823bffaa141904c2a656d99d40
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,47 +272,38 @@ ScriptedImporter:
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: 40
-        width: 26
-        height: 24
+        x: 4
+        y: 41
+        width: 22
+        height: 22
       spriteId: 78c16355f34b85745975ca10a259e908
     - name: LHDead_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 5
-        y: 41
-        width: 21
-        height: 21
+        x: 2
+        y: 38
+        width: 27
+        height: 25
       spriteId: 1a458b8794680ab40bbfb9ac578e4b25
     - name: LHDead_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 5
-        y: 39
-        width: 21
-        height: 23
+        x: 1
+        y: 38
+        width: 29
+        height: 25
       spriteId: fd7abd68c2ef1bf4db6ea7e985874f93
     - name: LHDead_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 5
-        y: 37
-        width: 22
-        height: 26
+        x: 0
+        y: 34
+        width: 32
+        height: 30
       spriteId: 4b40c3823bffaa141904c2a656d99d40
-    - name: LHDead_Frame_6
-      frameIndex: 6
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 35
-        width: 25
-        height: 29
-      spriteId: d7a4beb7d31fa3d4d8a664ce1b5524f2
     linkedCells: []
     parentIndex: -1
   platformSettings:

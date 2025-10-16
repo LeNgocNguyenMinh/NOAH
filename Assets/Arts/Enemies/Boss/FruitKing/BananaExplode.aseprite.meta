@@ -128,8 +128,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 79
+      x: 74
+      y: 4
       width: 44
       height: 23
     spriteID: 68c77971c8d326c4a87920799886e808
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 79}
+    uvTransform: {x: 74, y: 4}
   - name: BananaExplode_Frame_1
     originalName: 
     pivot: {x: 0.5227273, y: -0.65217394}
@@ -149,7 +149,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 110
+      y: 149
       width: 44
       height: 23
     spriteID: 91b6b08e22ed2174e953539d386cb993
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 110}
+    uvTransform: {x: 4, y: 149}
   - name: BananaExplode_Frame_2
     originalName: 
     pivot: {x: 0.5121951, y: -0.8333333}
@@ -169,7 +169,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 198
+      y: 180
       width: 41
       height: 18
     spriteID: 7e2b7b1232fea3d41bb5d67b45916df6
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 198}
+    uvTransform: {x: 4, y: 180}
   - name: BananaExplode_Frame_3
     originalName: 
     pivot: {x: 0.53846157, y: -1}
@@ -189,7 +189,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 224
+      y: 206
       width: 39
       height: 17
     spriteID: 0ade3b520323c8e46949622647b324a4
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 224}
+    uvTransform: {x: 4, y: 206}
   - name: BananaExplode_Frame_4
     originalName: 
-    pivot: {x: 0.53658533, y: -0.84210527}
+    pivot: {x: 0.5217391, y: -0.6086957}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 171
-      width: 41
-      height: 19
+      x: 69
+      y: 56
+      width: 46
+      height: 23
     spriteID: a8e1fb0dc53d65f47bc785a1f720eb8c
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 171}
+    uvTransform: {x: 69, y: 56}
   - name: BananaExplode_Frame_5
     originalName: 
-    pivot: {x: 0.5227273, y: -0.6363636}
+    pivot: {x: 0.5178572, y: -0.22222222}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 141
-      width: 44
-      height: 22
+      y: 105
+      width: 56
+      height: 36
     spriteID: cd3a84f0ce7778a448e56dfef4d80789
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 141}
+    uvTransform: {x: 4, y: 105}
   - name: BananaExplode_Frame_6
     originalName: 
-    pivot: {x: 0.52, y: -0.37931034}
+    pivot: {x: 0.50877196, y: -0.14634146}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 42
-      width: 50
-      height: 29
+      y: 56
+      width: 57
+      height: 41
     spriteID: 357109f943a48ec4b8709f1b84b6035c
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 42}
+    uvTransform: {x: 4, y: 56}
   - name: BananaExplode_Frame_7
     originalName: 
-    pivot: {x: 0.53846157, y: -0.36666667}
+    pivot: {x: 0.5, y: -0.09090909}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 52
-      height: 30
+      width: 62
+      height: 44
     spriteID: 19570b17dea7c904fa73a02ae37067b0
     spriteBone: []
     spriteOutline: []
@@ -330,37 +330,37 @@ ScriptedImporter:
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 16
-        width: 41
-        height: 19
+        x: 8
+        y: 14
+        width: 46
+        height: 23
       spriteId: a8e1fb0dc53d65f47bc785a1f720eb8c
     - name: BananaExplode_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 14
-        width: 44
-        height: 22
+        x: 3
+        y: 8
+        width: 56
+        height: 36
       spriteId: cd3a84f0ce7778a448e56dfef4d80789
     - name: BananaExplode_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 6
-        y: 11
-        width: 50
-        height: 29
+        x: 3
+        y: 6
+        width: 57
+        height: 41
       spriteId: 357109f943a48ec4b8709f1b84b6035c
     - name: BananaExplode_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 4
-        y: 11
-        width: 52
-        height: 30
+        x: 1
+        y: 4
+        width: 62
+        height: 44
       spriteId: 19570b17dea7c904fa73a02ae37067b0
     linkedCells: []
     parentIndex: -1

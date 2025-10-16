@@ -248,6 +248,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: WaterMelonExplode_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86a3a150959779449215d52056feac0
+      internalID: 309431563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -265,6 +286,7 @@ TextureImporter:
       WaterMelonExplode_3: 1944610833
       WaterMelonExplode_4: -327151010
       WaterMelonExplode_5: -1485565815
+      WaterMelonExplode_6: 309431563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

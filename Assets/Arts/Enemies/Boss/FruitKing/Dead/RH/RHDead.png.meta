@@ -248,27 +248,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: RHDead_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 103751f666044084698bbe856c89f117
-      internalID: 1087469283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -286,7 +265,6 @@ TextureImporter:
       RHDead_3: -454305246
       RHDead_4: -810062366
       RHDead_5: -1255586688
-      RHDead_6: 1087469283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

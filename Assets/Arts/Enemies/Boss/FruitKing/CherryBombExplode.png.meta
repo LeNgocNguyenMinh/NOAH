@@ -248,6 +248,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CherryBombExplode_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2ea9d2089af044dab22f0e7b5ec59a
+      internalID: -1892172706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -265,6 +286,7 @@ TextureImporter:
       CherryBombExplode_3: -1734420481
       CherryBombExplode_4: 1735908746
       CherryBombExplode_5: -886512906
+      CherryBombExplode_6: -1892172706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -248,27 +248,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Dead_6
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 0
-        width: 112
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c629cfe6f25c8ad44a52af01a55d588c
-      internalID: 1012490029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -286,7 +265,6 @@ TextureImporter:
       Dead_3: 1636501172
       Dead_4: -354519341
       Dead_5: 118423442
-      Dead_6: 1012490029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

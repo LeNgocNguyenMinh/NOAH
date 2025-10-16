@@ -248,27 +248,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: LHDead_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92d14c929eb5e924da71f9f760f5731d
-      internalID: -1701825557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -286,7 +265,6 @@ TextureImporter:
       LHDead_3: 600457488
       LHDead_4: -819758159
       LHDead_5: -1823262680
-      LHDead_6: -1701825557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
