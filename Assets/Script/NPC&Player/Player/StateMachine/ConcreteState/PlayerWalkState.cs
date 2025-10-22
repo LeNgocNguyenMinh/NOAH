@@ -23,7 +23,7 @@ public class PlayerWalkState : PlayerState
         player.CheckDashCoolDown();
         if(!player.GotHit)
         {
-            player.RB.velocity = player.MoveDirect * player.WalkSpeed;
+            player.RB.linearVelocity = player.MoveDirect * player.WalkSpeed;
         }
         player.CheckDashButton();
     }

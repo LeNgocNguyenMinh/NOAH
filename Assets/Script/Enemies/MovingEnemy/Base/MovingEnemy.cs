@@ -76,13 +76,13 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
 
     public void Move(Vector2 direct, float speedValue)
     {
-        RB.velocity = direct * speedValue;
-        FlipSprite(RB.velocity);
+        RB.linearVelocity = direct * speedValue;
+        FlipSprite(RB.linearVelocity);
     }
 
     public void Stop()
     {
-        RB.velocity = Vector2.zero;
+        RB.linearVelocity = Vector2.zero;
     }
     public enum AnimationTriggerType
     {

@@ -28,7 +28,7 @@ public class FKBossATK1AttackState : FKBossState
         {
             Instantiate(fkBoss.Banana, fkBoss.RHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1RHBullet>().SetValue(fkBoss.ATK1RHFlyTime, fkBoss.ATK1RhRotateSpeed);
         }
-        else if(triggerType == FKBoss.AnimationTriggerType.ATK1LHThrow)
+        if(triggerType == FKBoss.AnimationTriggerType.ATK1LHThrow)
         {
             Instantiate(fkBoss.WaterMelon, fkBoss.LHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1LHBigBullet>().SetValue(fkBoss.ATK1LHWMSpeed, fkBoss.ATK1LHWMFlyDist, fkBoss.ATK1LHWMPSpeed, fkBoss.ATK1LHWMPFlyDist, fkBoss.BossStatus.bossDamage, fkBoss.ATK1RtSpeed);
         }

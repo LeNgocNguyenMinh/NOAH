@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.6875, y: -0.43243244}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 80
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.38709676, y: -0.30952382}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 41
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.20689654, y: -0.20833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: -1, y: -0.15384616}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 41
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: -0.42105263, y: -0.06779661}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -222,15 +233,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 60}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 198971140
+    uuid:
+      value0: 1807200276
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1807200276
     name: SplashAfterEffect
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SplashAfterEffect_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +256,7 @@ ScriptedImporter:
         width: 32
         height: 37
       spriteId: 878c77daf38a18948bf2c4e319379211
-    - name: SplashAfterEffect_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +265,7 @@ ScriptedImporter:
         width: 31
         height: 42
       spriteId: 119b6d1905b8cca479c03fc573f49fc0
-    - name: SplashAfterEffect_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +274,7 @@ ScriptedImporter:
         width: 29
         height: 48
       spriteId: 75b070e2ccf6ee3469e29d4be7ed6769
-    - name: SplashAfterEffect_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +283,7 @@ ScriptedImporter:
         width: 12
         height: 52
       spriteId: 1d514ab8160c5484eb27094d5172db3e
-    - name: SplashAfterEffect_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -276,7 +293,10 @@ ScriptedImporter:
         height: 59
       spriteId: f75c732967d190c48a10ccf76499c1fc
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -294,3 +314,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 128, y: 128}

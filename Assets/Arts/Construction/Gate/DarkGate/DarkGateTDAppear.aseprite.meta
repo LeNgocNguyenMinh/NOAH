@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: -6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 198
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -1.3333333}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 192
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.8571428}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.59999996}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 194
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.49999997}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.4285714}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 194
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.3934426}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.34285715}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 198
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.27586207}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.24742267}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 196
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.22018348}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -342,15 +359,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1410946268
+    uuid:
+      value0: 3865779020
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -429188276
     name: DarkGateTDAppear
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: DarkGateTDAppear_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -359,7 +382,7 @@ ScriptedImporter:
         width: 154
         height: 4
       spriteId: 37999b46c79272b4c9a9ddaa45c15e7a
-    - name: DarkGateTDAppear_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -368,7 +391,7 @@ ScriptedImporter:
         width: 170
         height: 18
       spriteId: f7f85477bcdffdc4987a61a8d6f49b81
-    - name: DarkGateTDAppear_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -377,7 +400,7 @@ ScriptedImporter:
         width: 180
         height: 28
       spriteId: e45d4ae460376a541a791c79d11f0987
-    - name: DarkGateTDAppear_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -386,7 +409,7 @@ ScriptedImporter:
         width: 182
         height: 40
       spriteId: 3a76eb12fd0247c46937b72c04bd09b9
-    - name: DarkGateTDAppear_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -395,7 +418,7 @@ ScriptedImporter:
         width: 182
         height: 48
       spriteId: 154325e9ef131b045a7843e0e8178648
-    - name: DarkGateTDAppear_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -404,7 +427,7 @@ ScriptedImporter:
         width: 182
         height: 56
       spriteId: 14069aa7a51b4e843ab4d8091b7264f7
-    - name: DarkGateTDAppear_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -413,7 +436,7 @@ ScriptedImporter:
         width: 182
         height: 61
       spriteId: 74ed1c827107a9e49839bca6d0f306f3
-    - name: DarkGateTDAppear_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -422,7 +445,7 @@ ScriptedImporter:
         width: 184
         height: 70
       spriteId: 6a22a9841497ba3459639ac67d545fdb
-    - name: DarkGateTDAppear_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -431,7 +454,7 @@ ScriptedImporter:
         width: 186
         height: 87
       spriteId: 8d8ca164e60f8124db242994ecf9a59c
-    - name: DarkGateTDAppear_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -440,7 +463,7 @@ ScriptedImporter:
         width: 186
         height: 97
       spriteId: 6793e1472c514cf4780cd0b4ebfa0e39
-    - name: DarkGateTDAppear_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -450,7 +473,10 @@ ScriptedImporter:
         height: 109
       spriteId: ed9a39ffb5c4d624db3bb5fb42159159
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -468,3 +494,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 200, y: 200}
+  previousTextureSize: {x: 512, y: 512}

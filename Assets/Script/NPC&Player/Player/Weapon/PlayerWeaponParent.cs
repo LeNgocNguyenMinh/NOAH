@@ -6,10 +6,13 @@ using TMPro;
 
 public class PlayerWeaponParent : MonoBehaviour
 {
+    [Header("----General----")]
     public static PlayerWeaponParent Instance;
     public PlayerStatus playerStatus;
     public SpriteRenderer wandSprite;
     public SpriteRenderer physicATKSprite;
+    [SerializeField]private Transform wandRotate;   
+    [SerializeField]private Transform wandShadowRotate;
     public float delayWandCount = 0f; // Delay count for wand attack, used to prevent multiple attacks in a short time
     [Header("----EnergyBar----")]
     [SerializeField]private Image bulletEnergyFront;
@@ -62,13 +65,6 @@ public class PlayerWeaponParent : MonoBehaviour
         WeaponRotate();
         PlayerWandATK.Instance.CheckWandATK();  
         PlayerMeleeATK.Instance.CheckMeleeATK();
-        /* if(Input.GetKeyDown(KeyCode.Q))
-        {
-            FakeHeightObject tmpBullet = Instantiate(testBullet, transform.position, Quaternion.identity).GetComponent<FakeHeightObject>();
-            tmpBullet.Initialize(transform.right * Random.Range(groundDispenseVelocity.x, groundDispenseVelocity.y), 
-            Random.Range(verticalDispenseVelocity.x, verticalDispenseVelocity.y));
-            
-        } */
     }
     public void ActiveWandATK()
     {
@@ -85,7 +81,8 @@ public class PlayerWeaponParent : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 rotation = mousePos - transform.position;
         float rotz = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rotz);
+        wandRotate.transform.rotation = Quaternion.Euler(0, 0, rotz);
+        wandShadowRotate.transform.rotation = Quaternion.Euler(0, 0, -rotz);
         
         if(Mathf.Abs(rotz) > 90)
         {

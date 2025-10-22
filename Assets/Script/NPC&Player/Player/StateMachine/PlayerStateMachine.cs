@@ -14,7 +14,7 @@ public class PlayerStateMachine : MonoBehaviour
     {
         CurrentState.ExitState();
         CurrentState = newState;
-        Debug.Log("State changed to: " + CurrentState.GetType().Name);
+        /* Debug.Log("State changed to: " + CurrentState.GetType().Name); */
         CurrentState.EnterState();
     }
 }

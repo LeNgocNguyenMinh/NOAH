@@ -27,16 +27,16 @@ public class AOBossATK1LHBullet : MonoBehaviour
             direct = (Player.Instance.transform.position - transform.position).normalized;
             float angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, angle - 180f);
-            rb.velocity = direct * speed;
+            rb.linearVelocity = direct * speed;
         } 
         else{
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
         if(flyTime <= 0f && !breaking)
         {
             breaking = true;
             flyTime = 0f;
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("Break");  
         }
     }

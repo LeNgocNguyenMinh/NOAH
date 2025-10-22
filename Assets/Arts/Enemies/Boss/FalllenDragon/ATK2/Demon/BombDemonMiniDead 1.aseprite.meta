@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.7499993, y: -17.8}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 243
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.42857143, y: -2.419355}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 144
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.56249994, y: -1.3469388}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 144
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5526316, y: -0.6756757}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 151
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.47000003, y: -0.3958333}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 145
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.48484847, y: -0.26605505}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.48888886, y: -0.22807017}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5467626, y: -0.24999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.57142854, y: -0.26548675}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.58571434, y: -0.8450705}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 147
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5568182, y: -2.2424242}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 151
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.47727275, y: -4.7058825}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 147
@@ -362,15 +380,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 147, y: 207}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -749952931
+    uuid:
+      value0: 3038125585
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1256841711
     name: BombDemonMiniDead 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BombDemonMiniDead 1_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -379,7 +403,7 @@ ScriptedImporter:
         width: 4
         height: 5
       spriteId: 2af208eeb91e4924d9472f514947af05
-    - name: BombDemonMiniDead 1_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -388,7 +412,7 @@ ScriptedImporter:
         width: 28
         height: 31
       spriteId: 357d4f203e0add841a3cc9da9cf2e4fc
-    - name: BombDemonMiniDead 1_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -397,7 +421,7 @@ ScriptedImporter:
         width: 48
         height: 49
       spriteId: 27fc53a57467d1c4598365689cc722fd
-    - name: BombDemonMiniDead 1_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -406,7 +430,7 @@ ScriptedImporter:
         width: 76
         height: 74
       spriteId: 862fa4c018fe5fa49896ad11629e4fd0
-    - name: BombDemonMiniDead 1_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -415,7 +439,7 @@ ScriptedImporter:
         width: 100
         height: 96
       spriteId: e2fbfb0b050f96641a4c644b994c340d
-    - name: BombDemonMiniDead 1_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -424,7 +448,7 @@ ScriptedImporter:
         width: 132
         height: 109
       spriteId: 9698100b5185c21468e252dc3b156b8f
-    - name: BombDemonMiniDead 1_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -433,7 +457,7 @@ ScriptedImporter:
         width: 135
         height: 114
       spriteId: 0819a4d534ba3854bbe1602c10579b53
-    - name: BombDemonMiniDead 1_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -442,7 +466,7 @@ ScriptedImporter:
         width: 139
         height: 116
       spriteId: 249a36c6885c41d4587586346cdd702a
-    - name: BombDemonMiniDead 1_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -451,7 +475,7 @@ ScriptedImporter:
         width: 133
         height: 113
       spriteId: 0eb7446b17599654ab2fbe75140e38e1
-    - name: BombDemonMiniDead 1_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -460,7 +484,7 @@ ScriptedImporter:
         width: 70
         height: 71
       spriteId: 9d104e01627b49547b0079d3cb39e2f7
-    - name: BombDemonMiniDead 1_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -469,7 +493,7 @@ ScriptedImporter:
         width: 88
         height: 33
       spriteId: 67c73aaf114f0b442b6e9687bb9a9a36
-    - name: BombDemonMiniDead 1_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -479,7 +503,10 @@ ScriptedImporter:
         height: 17
       spriteId: 8e5beaf22b652c945a3065740b0d5abc
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -497,3 +524,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 200, y: 200}
+  previousTextureSize: {x: 256, y: 512}

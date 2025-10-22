@@ -39,12 +39,12 @@ public class PlayerEffect : MonoBehaviour
     }
     private IEnumerator KnockBackCoroutine(Vector2 direct)
     {
-        rb.velocity = direct * knockBackForce;
+        rb.linearVelocity = direct * knockBackForce;
         Player.Instance.GotHit = true;
         yield return new WaitForSeconds(knockDuration);
         isKnock = false;
         Player.Instance.GotHit = false;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         knockBackCoroutine = null;
     }
     public void HitFlash()

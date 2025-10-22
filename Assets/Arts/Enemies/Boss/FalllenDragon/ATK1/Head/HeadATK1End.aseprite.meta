@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.55617976, y: -0.4230769}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5505618, y: -0.47474745}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 190
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5449438, y: -0.5157895}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.53672314, y: -0.58426964}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 190
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.52840906, y: -0.6352942}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.52, y: -0.69135803}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 188
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.51445085, y: -0.7037037}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 182
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5058824, y: -0.6666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.4909091, y: -0.64835167}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 174
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.48148146, y: -0.631579}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -322,15 +338,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 219}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2004134986
+    uuid:
+      value0: 1703561714
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1703561714
     name: HeadATK1End
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: HeadATK1End_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -339,7 +361,7 @@ ScriptedImporter:
         width: 178
         height: 104
       spriteId: 9dbc3e8e704fc8f4fa179133d351faa7
-    - name: HeadATK1End_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -348,7 +370,7 @@ ScriptedImporter:
         width: 178
         height: 99
       spriteId: 5b8183384fc51b048909c01c9b53b200
-    - name: HeadATK1End_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -357,7 +379,7 @@ ScriptedImporter:
         width: 178
         height: 95
       spriteId: 54ce1f321b30cde468daa75f5f3caaf5
-    - name: HeadATK1End_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -366,7 +388,7 @@ ScriptedImporter:
         width: 177
         height: 89
       spriteId: 263236e381656454d99595af41e5d560
-    - name: HeadATK1End_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -375,7 +397,7 @@ ScriptedImporter:
         width: 176
         height: 85
       spriteId: 26153c38ab4d6954495ba7d255ac70cc
-    - name: HeadATK1End_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -384,7 +406,7 @@ ScriptedImporter:
         width: 175
         height: 81
       spriteId: 2a04f09801c234d4aa4b7ce9efa084b4
-    - name: HeadATK1End_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -393,7 +415,7 @@ ScriptedImporter:
         width: 173
         height: 81
       spriteId: b7621c89ec4d32f49aa8c1b26000991f
-    - name: HeadATK1End_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -402,7 +424,7 @@ ScriptedImporter:
         width: 170
         height: 87
       spriteId: 87ddee2bb38d1d6439676be8a4582a05
-    - name: HeadATK1End_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -411,7 +433,7 @@ ScriptedImporter:
         width: 165
         height: 91
       spriteId: 183af229a858fa747ba8462dae13cf96
-    - name: HeadATK1End_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -421,7 +443,10 @@ ScriptedImporter:
         height: 95
       spriteId: b975983c3c9034545bddc77381df76fb
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -439,3 +464,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 200, y: 200}
+  previousTextureSize: {x: 512, y: 512}

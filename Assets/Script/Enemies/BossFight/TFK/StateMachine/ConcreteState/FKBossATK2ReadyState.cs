@@ -12,6 +12,7 @@ public class FKBossATK2ReadyState : FKBossState
     public override void EnterState()
     {
         base.EnterState();
+        fkBoss.FKBossAnimator.SetTrigger("ATK2Ready");
     }
     public override void FrameUpdate()
     {
@@ -23,5 +24,9 @@ public class FKBossATK2ReadyState : FKBossState
     }
     public override void AnimationTriggerEvent(FKBoss.AnimationTriggerType triggerType)
     {
+        if (triggerType == FKBoss.AnimationTriggerType.ATK2ReadyAnimFinish)
+        {
+            fkBoss.StateMachine.ChangeState(fkBoss.ATK2AttackState);
+        }
     }
 }

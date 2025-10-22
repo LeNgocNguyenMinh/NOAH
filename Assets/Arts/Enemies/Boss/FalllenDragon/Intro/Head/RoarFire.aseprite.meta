@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 14, y: -6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 239
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 6, y: -3.8333333}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 221
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 3.1111112, y: -2.6470587}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 220
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 2.4705882, y: -2.4444444}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 197
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 1.6800001, y: -1.9545455}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 197
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 1.2537314, y: -1.15625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 1.0243903, y: -0.89189196}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 107
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.8842106, y: -0.58}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.9032259, y: -0.7333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 107
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.85714287, y: -0.66666675}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 107
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.7924529, y: -0.8095238}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 107
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.7809524, y: -1.15625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 107
@@ -362,15 +380,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 107, y: 160}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2117735470
+    uuid:
+      value0: 3110260326
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1184706970
     name: RoarFire
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: RoarFire_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -379,7 +403,7 @@ ScriptedImporter:
         width: 6
         height: 8
       spriteId: 3995067010848a5488609b9a031de60c
-    - name: RoarFire_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -388,7 +412,7 @@ ScriptedImporter:
         width: 14
         height: 12
       spriteId: 0a8a0ad56f57055489c278174f6a8d7d
-    - name: RoarFire_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -397,7 +421,7 @@ ScriptedImporter:
         width: 27
         height: 17
       spriteId: 8bedd52a5a2e9b84899d65bcb4be74e8
-    - name: RoarFire_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -406,7 +430,7 @@ ScriptedImporter:
         width: 34
         height: 18
       spriteId: 7c70b1ab8ce414c478d1be6a6ffe7a21
-    - name: RoarFire_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -415,7 +439,7 @@ ScriptedImporter:
         width: 50
         height: 22
       spriteId: 7997bb11c1e28ba4aad29b2a5a1a8eba
-    - name: RoarFire_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -424,7 +448,7 @@ ScriptedImporter:
         width: 67
         height: 32
       spriteId: 11b9ebf8395b1eb49b99be9ee197bcaf
-    - name: RoarFire_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -433,7 +457,7 @@ ScriptedImporter:
         width: 82
         height: 37
       spriteId: 68312d8f2dc7fb54aaf32efae319750e
-    - name: RoarFire_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -442,7 +466,7 @@ ScriptedImporter:
         width: 95
         height: 50
       spriteId: 836351a1a812c51479c01b422e50f6fb
-    - name: RoarFire_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -451,7 +475,7 @@ ScriptedImporter:
         width: 93
         height: 45
       spriteId: de0067f27052e404389151c04f47cb88
-    - name: RoarFire_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -460,7 +484,7 @@ ScriptedImporter:
         width: 98
         height: 45
       spriteId: d36567e2f7d035645b38ca5df594f06a
-    - name: RoarFire_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -469,7 +493,7 @@ ScriptedImporter:
         width: 106
         height: 42
       spriteId: 31e7cc9f2c51ee64e9f292ab786351c3
-    - name: RoarFire_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -479,7 +503,10 @@ ScriptedImporter:
         height: 32
       spriteId: 2dc508dd1945298488153fda506d0cee
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -497,3 +524,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 200, y: 100}
+  previousTextureSize: {x: 256, y: 256}

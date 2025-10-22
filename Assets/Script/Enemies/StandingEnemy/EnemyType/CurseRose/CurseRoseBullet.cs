@@ -25,25 +25,25 @@ public class CurseRoseBullet : MonoBehaviour
         timeCount -= Time.deltaTime;
         if(timeCount <= 0 && !bulletBreak)
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             bulletBreak = true;
             animator.SetTrigger("break");
             return;
         }
         if(bulletBreak)
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             return;
         }
         direction = (playerTransform.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+        rb.linearVelocity = direction * speed;
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
             HealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             bulletBreak = true;
             animator.SetTrigger("break");
         }

@@ -43,11 +43,11 @@ public class FKBossATK1LHBigBullet : MonoBehaviour
                 wmFlyTime -= Time.deltaTime;
                 float angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;
                 wmSprite.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
-                rb.velocity = direct * wmSpeed ;
+                rb.linearVelocity = direct * wmSpeed ;
             }
         } 
         else{
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
 
     }

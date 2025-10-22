@@ -23,7 +23,6 @@ public class ProjectileVisual : MonoBehaviour
 
 
     private void FixedUpdate() {
-        
         UpdateProjectileRotation();
         UpdateShadowPosition();
         UpdateProjectileShadowRotation();

@@ -43,7 +43,7 @@ AnimationClip:
     - time: 1
       value: {fileID: -207575144, guid: d134048ffac52ae4cb2cf59cf038f02f, type: 3}
     attribute: m_Sprite
-    path: PlayerBodyPart/PlayerLeg
+    path: BodyPartShadow/Leg
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -72,7 +72,7 @@ AnimationClip:
     - time: 1
       value: {fileID: -207575144, guid: d134048ffac52ae4cb2cf59cf038f02f, type: 3}
     attribute: m_Sprite
-    path: PlayerShadow/Leg
+    path: BodyPart/Leg
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -84,7 +84,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3208947502
+      path: 2892152139
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -93,7 +93,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 936931470
+      path: 2558501629
       attribute: 0
       script: {fileID: 0}
       typeID: 212

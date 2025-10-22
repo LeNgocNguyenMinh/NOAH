@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.33009708}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.30097085}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.27184466}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.24271844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 81
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.21359223}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 81
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.184466}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 81
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.1553398}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 81
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.12621358}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 158
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.097087376}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 158
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.067961164}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 158
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: 0.009708738}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 158
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: -0.029411767}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 235
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.47826087, y: -0.038461544}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -382,15 +401,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -144424231
+    uuid:
+      value0: 1568327037
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1568327037
     name: Awake
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Awake_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -399,7 +424,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: 0fe78bdc11773854ab1d64bbdfdfae4a
-    - name: Awake_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -408,7 +433,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: feff3f59e9699674ba16a586019c68b0
-    - name: Awake_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -417,7 +442,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: b69759d0f02b76145bb262ffad9761a8
-    - name: Awake_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -426,7 +451,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: 9090aca818b4f6947bb2946fbd0082ff
-    - name: Awake_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -435,7 +460,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: 2bbfd2984c91fa641a231c7bb47f25d3
-    - name: Awake_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -444,7 +469,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: 860b2d222b9d62b42b7e53846bd773fd
-    - name: Awake_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -453,7 +478,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: d96525c08f2d3b046b917569ee8ef5b6
-    - name: Awake_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -462,7 +487,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: f2c195d2714e5b74190f651c3f96c90b
-    - name: Awake_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -471,7 +496,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: 28079235031f4584db142f9ec03c137d
-    - name: Awake_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -480,7 +505,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: 79cd65424b7e9284faff6951a9ddd7aa
-    - name: Awake_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -489,7 +514,7 @@ ScriptedImporter:
         width: 69
         height: 103
       spriteId: 6a2b725f745f8d944921bb4a06f66425
-    - name: Awake_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -498,7 +523,7 @@ ScriptedImporter:
         width: 69
         height: 102
       spriteId: c5eb79c4c48849d4c8d44597ddd7935f
-    - name: Awake_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -508,7 +533,10 @@ ScriptedImporter:
         height: 104
       spriteId: 809c24a23cff76945ad8f17c3cf716f0
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -526,3 +554,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 112, y: 112}
+  previousTextureSize: {x: 512, y: 512}

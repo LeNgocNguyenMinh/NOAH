@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 74
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 74
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 74
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: -1.5142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 74
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: -2.2592595}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 74
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -7.8}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -342,15 +359,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 484}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1373442906
+    uuid:
+      value0: 674210114
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 674210114
     name: HeadDead
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: HeadDead_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -359,7 +382,7 @@ ScriptedImporter:
         width: 62
         height: 88
       spriteId: cf6c6d106d8b0eb4390ca81cd07f999f
-    - name: HeadDead_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -368,7 +391,7 @@ ScriptedImporter:
         width: 62
         height: 88
       spriteId: 83aae1f90af032644b66814069e79946
-    - name: HeadDead_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -377,7 +400,7 @@ ScriptedImporter:
         width: 62
         height: 88
       spriteId: 35283ab985ebb684ebd6520ddb2e18c9
-    - name: HeadDead_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -386,7 +409,7 @@ ScriptedImporter:
         width: 62
         height: 88
       spriteId: eaf304abae4dc8942917cdbfa0a6e816
-    - name: HeadDead_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -395,7 +418,7 @@ ScriptedImporter:
         width: 62
         height: 88
       spriteId: 176c5868f66094140b3d425f304296ba
-    - name: HeadDead_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -404,7 +427,7 @@ ScriptedImporter:
         width: 62
         height: 88
       spriteId: 4fbd37da63ad29a439f335865164d8cf
-    - name: HeadDead_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -413,7 +436,7 @@ ScriptedImporter:
         width: 62
         height: 88
       spriteId: c9e761da13853af4aa220b86a1286ef8
-    - name: HeadDead_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -422,7 +445,7 @@ ScriptedImporter:
         width: 62
         height: 88
       spriteId: 3b898249786527d4c94f1edebb09a54a
-    - name: HeadDead_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -431,7 +454,7 @@ ScriptedImporter:
         width: 62
         height: 35
       spriteId: e6a8d8e14bd396c4683deecea3b836e8
-    - name: HeadDead_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -440,7 +463,7 @@ ScriptedImporter:
         width: 62
         height: 27
       spriteId: be2523ca232acf541becce7a68e22ca1
-    - name: HeadDead_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -450,7 +473,10 @@ ScriptedImporter:
         height: 10
       spriteId: 5b956ebdb44558c4eb2fbd7293dae0ba
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -468,3 +494,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 96}
+  previousTextureSize: {x: 256, y: 512}

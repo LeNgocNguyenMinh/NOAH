@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.7222222, y: -0.3548387}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.6818182, y: -0.3030303}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.6538462, y: -0.2647059}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 86
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.6333334, y: -0.2162162}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 48
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.6111111, y: -0.15}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -222,15 +233,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1895145989
+    uuid:
+      value0: 3001514073
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1293453223
     name: CurseRoseBulletGrowBack
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CurseRoseBulletGrowBack_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +256,7 @@ ScriptedImporter:
         width: 18
         height: 31
       spriteId: 8cbc9b6397fc0624cac660b0f7666ca3
-    - name: CurseRoseBulletGrowBack_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +265,7 @@ ScriptedImporter:
         width: 22
         height: 33
       spriteId: 545095d78ade0504a8a27400563a6920
-    - name: CurseRoseBulletGrowBack_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +274,7 @@ ScriptedImporter:
         width: 26
         height: 34
       spriteId: 08020a2e8a7acab4b9a9865a586b153d
-    - name: CurseRoseBulletGrowBack_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +283,7 @@ ScriptedImporter:
         width: 30
         height: 37
       spriteId: dd89edd950de7254eb450487b286a269
-    - name: CurseRoseBulletGrowBack_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -276,7 +293,10 @@ ScriptedImporter:
         height: 40
       spriteId: 80305189f509ac44fb96d15d287e8e04
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -294,3 +314,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 80}
+  previousTextureSize: {x: 128, y: 128}

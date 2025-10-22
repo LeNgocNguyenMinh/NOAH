@@ -24,18 +24,18 @@ public class SlimeBulletMove : MonoBehaviour
         timeCount -= Time.deltaTime;
         if(timeCount <= 0 && !bulletBreak)
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             bulletBreak = true;
             animator.SetTrigger("break");
             return;
         }
         if(bulletBreak)
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             return;
         }
         direction = (Player.Instance.transform.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+        rb.linearVelocity = direction * speed;
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -44,7 +44,7 @@ public class SlimeBulletMove : MonoBehaviour
             collider.GetComponent<PlayerEffect>().PushBack(direction);
             collider.GetComponent<PlayerEffect>().HitFlash();   
             HealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             bulletBreak = true;
             animator.SetTrigger("break");
         }

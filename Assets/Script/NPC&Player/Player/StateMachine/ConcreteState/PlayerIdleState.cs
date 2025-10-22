@@ -10,7 +10,7 @@ public class PlayerIdleState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
-        player.RB.velocity = Vector2.zero;
+        player.RB.linearVelocity = Vector2.zero;
         player.PlayerAnimator.SetTrigger("Idle");
     }
     public override void FrameUpdate()

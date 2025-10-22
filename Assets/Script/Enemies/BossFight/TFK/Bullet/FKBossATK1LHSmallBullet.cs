@@ -33,17 +33,17 @@ public class FKBossATK1LHSmallBullet : MonoBehaviour
                 breaking = true;
                 wmpFlyTime = 0f;
                 animator.SetTrigger("Break");  
-                rb.velocity = Vector2.zero;
+                rb.linearVelocity = Vector2.zero;
             }
             else{
                 wmpFlyTime -= Time.deltaTime;
                 float angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;
                 transform.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
-                rb.velocity = direct * wmpSpeed ;
+                rb.linearVelocity = direct * wmpSpeed ;
             }
         } 
         else{
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
 
     }

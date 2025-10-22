@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.516129}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5714286, y: -0.5925926}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 75
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5925926, y: -0.55172414}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 40
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.64, y: -0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.64, y: -0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 37
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5714286, y: -0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 81
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5714286, y: -0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.51724136, y: -0.55172414}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.53333336, y: -0.64}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 70
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.53333336, y: -8}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 70
@@ -322,15 +338,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 70, y: 114}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1796141504
+    uuid:
+      value0: 4030797632
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -264169664
     name: SlimeDead
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SlimeDead_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -339,7 +361,7 @@ ScriptedImporter:
         width: 32
         height: 31
       spriteId: 50b17557c40f9e74ba229428a4a2e695
-    - name: SlimeDead_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -348,7 +370,7 @@ ScriptedImporter:
         width: 28
         height: 27
       spriteId: 1e9a9e3e2cc2585468510e5b2e4de691
-    - name: SlimeDead_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -357,7 +379,7 @@ ScriptedImporter:
         width: 27
         height: 29
       spriteId: d5a473d30e67d7646876d081af9679ab
-    - name: SlimeDead_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -366,7 +388,7 @@ ScriptedImporter:
         width: 25
         height: 30
       spriteId: 98746da81bfbe0644a1d6e9824b12447
-    - name: SlimeDead_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -375,7 +397,7 @@ ScriptedImporter:
         width: 25
         height: 30
       spriteId: 565c282e4d2c14f408efad930ff25590
-    - name: SlimeDead_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -384,7 +406,7 @@ ScriptedImporter:
         width: 28
         height: 30
       spriteId: d2eb661e459c65545967e89f20273837
-    - name: SlimeDead_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -393,7 +415,7 @@ ScriptedImporter:
         width: 28
         height: 30
       spriteId: 981633d6c60f45f488d1f47945c8166f
-    - name: SlimeDead_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -402,7 +424,7 @@ ScriptedImporter:
         width: 29
         height: 29
       spriteId: fb7ee8aa9f53f2d489178b2f6dbab677
-    - name: SlimeDead_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -411,7 +433,7 @@ ScriptedImporter:
         width: 30
         height: 25
       spriteId: 917517f636cebed4aaa8af6b38d23c55
-    - name: SlimeDead_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -421,7 +443,10 @@ ScriptedImporter:
         height: 2
       spriteId: de91ff2c6ee5f5343b92a23698725225
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -439,3 +464,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 128, y: 128}

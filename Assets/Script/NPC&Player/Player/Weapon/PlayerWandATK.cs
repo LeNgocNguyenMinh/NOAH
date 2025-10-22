@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerWandATK : MonoBehaviour
 {
     public static PlayerWandATK Instance;
-    private Animator wandATKAnimator;
+    [SerializeField]private Animator wandATKAnimator;
     [SerializeField]private float delayWandATK = 0.5f;
     [SerializeField]private Transform firePoint;
     private GameObject bulletPrefap;
@@ -42,7 +42,6 @@ public class PlayerWandATK : MonoBehaviour
         PlayerWeaponParent.Instance.physicATKSprite.enabled = false;
         if(PlayerWeaponParent.Instance.currentBullet<=0)return;
         PlayerSound.Instance.PlayShootSound();//play the shoot sound
-        wandATKAnimator = GetComponent<Animator>();
         wandATKAnimator.SetTrigger("Shoot");
         PlayerWeaponParent.Instance.currentBullet--;
         PlayerWeaponParent.Instance.CheckEnergyBarLeft();

@@ -8,8 +8,6 @@ public class SpawnControl : MonoBehaviour
 {
     [SerializeField]private PlayerStatus playerStatus;
     private string saveLocation;
-    private Player playerControl;
-    private Animator animator;
     void Awake()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
@@ -52,7 +50,6 @@ public class SpawnControl : MonoBehaviour
     }
     private void PlayerStatusAfterRespawn()
     {
-        animator = GetComponent<Animator>();
         Player.Instance.PlayerRespawn();
         playerStatus.RespawnPlayerAfterDead();//Player Status after dead and was respawn
         HealthControl.Instance.PlayerHeatlthAfterRespawn(); //Player Health UI

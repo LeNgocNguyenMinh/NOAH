@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.8518518, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 45
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.8518518, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.74193543, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.8064516, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.72727275, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.8064516, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 45
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.74193543, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 45
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.82608694, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 1.3333333, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -302,15 +317,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 84, y: 145}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 576185453
+    uuid:
+      value0: 3171288673
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1123678623
     name: LRPlantGateBurn
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: LRPlantGateBurn_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -319,7 +340,7 @@ ScriptedImporter:
         width: 27
         height: 64
       spriteId: 2d5c4869eecc36d4ba88fd619b222a89
-    - name: LRPlantGateBurn_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -328,7 +349,7 @@ ScriptedImporter:
         width: 27
         height: 64
       spriteId: 41e5ec57bf669c146ab00c40e0871e00
-    - name: LRPlantGateBurn_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -337,7 +358,7 @@ ScriptedImporter:
         width: 31
         height: 64
       spriteId: e493c036f41602f45bf9947a0b3740d8
-    - name: LRPlantGateBurn_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -346,7 +367,7 @@ ScriptedImporter:
         width: 31
         height: 64
       spriteId: afb9b7532df75af4d8c5160df0168dbf
-    - name: LRPlantGateBurn_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -355,7 +376,7 @@ ScriptedImporter:
         width: 33
         height: 65
       spriteId: 981337f60d6fec541ab37e5f5f321f88
-    - name: LRPlantGateBurn_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -364,7 +385,7 @@ ScriptedImporter:
         width: 31
         height: 63
       spriteId: 692f64811a3c90f40881184fa8a35aef
-    - name: LRPlantGateBurn_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -373,7 +394,7 @@ ScriptedImporter:
         width: 31
         height: 61
       spriteId: a4ddb77f22d927d4caad4cb07a9ef9d1
-    - name: LRPlantGateBurn_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -382,7 +403,7 @@ ScriptedImporter:
         width: 23
         height: 61
       spriteId: 015014b0289616d4ba69b5cdda84c9f6
-    - name: LRPlantGateBurn_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -392,7 +413,10 @@ ScriptedImporter:
         height: 55
       spriteId: eb1f34198f72d684bb6e76ace7e71845
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -410,3 +434,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 100, y: 100}
+  previousTextureSize: {x: 128, y: 256}

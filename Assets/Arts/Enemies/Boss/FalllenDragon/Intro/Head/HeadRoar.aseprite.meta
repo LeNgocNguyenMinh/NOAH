@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.48148146, y: -0.631579}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 173
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.4909091, y: -0.64835167}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 513
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5058824, y: -0.6666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.51445085, y: -0.7037037}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 738
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.52, y: -0.69135803}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 372
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.52840906, y: -0.6352942}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.53672314, y: -0.58426964}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 562
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5449438, y: -0.5157895}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 190
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5505618, y: -0.47474745}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 748
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.55617976, y: -0.4230769}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 376
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.56179774, y: -0.34821427}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.56179774, y: -0.34821427}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 190
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.55617976, y: -0.4230769}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 562
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.5505618, y: -0.47474745}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5449438, y: -0.5157895}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 376
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.53672314, y: -0.58426964}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 747
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.52840906, y: -0.6352942}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 188
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.52, y: -0.69135803}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 555
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.51445085, y: -0.7037037}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 360
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.5058824, y: -0.6666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 182
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.4909091, y: -0.64835167}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 686
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: 0.48148146, y: -0.631579}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 343
@@ -566,6 +594,7 @@ ScriptedImporter:
     pivot: {x: 0.47204968, y: -0.625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -582,15 +611,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 231}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1938787060
+    uuid:
+      value0: 3457054780
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -837912516
     name: HeadRoar
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: HeadRoar_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -599,7 +634,7 @@ ScriptedImporter:
         width: 162
         height: 95
       spriteId: c3135bbc87286c4428e86c5fb979ed43
-    - name: HeadRoar_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -608,7 +643,7 @@ ScriptedImporter:
         width: 165
         height: 91
       spriteId: 841927565a662494d81987a4c5ccca61
-    - name: HeadRoar_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -617,7 +652,7 @@ ScriptedImporter:
         width: 170
         height: 87
       spriteId: d5efd7f889f1abd4c86478de277acb1f
-    - name: HeadRoar_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -626,7 +661,7 @@ ScriptedImporter:
         width: 173
         height: 81
       spriteId: b2581ea16b6c6594fb232982f2046042
-    - name: HeadRoar_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -635,7 +670,7 @@ ScriptedImporter:
         width: 175
         height: 81
       spriteId: f80eb173f3b3fa147bd282de383f7175
-    - name: HeadRoar_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -644,7 +679,7 @@ ScriptedImporter:
         width: 176
         height: 85
       spriteId: 8baef52face50a94591c9c8378244057
-    - name: HeadRoar_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -653,7 +688,7 @@ ScriptedImporter:
         width: 177
         height: 89
       spriteId: ed143039811276444b2fd177b211c3a0
-    - name: HeadRoar_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -662,7 +697,7 @@ ScriptedImporter:
         width: 178
         height: 95
       spriteId: eea4529501c775c449aac702eb17c346
-    - name: HeadRoar_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -671,7 +706,7 @@ ScriptedImporter:
         width: 178
         height: 99
       spriteId: 5a8d3864d6313764ab2d7032fb56511f
-    - name: HeadRoar_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -680,7 +715,7 @@ ScriptedImporter:
         width: 178
         height: 104
       spriteId: 6d9e4edd592733f41bdc171df96379cc
-    - name: HeadRoar_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -689,7 +724,7 @@ ScriptedImporter:
         width: 178
         height: 112
       spriteId: 863cc16f2aa111547aad784334c70c47
-    - name: HeadRoar_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -698,7 +733,7 @@ ScriptedImporter:
         width: 178
         height: 112
       spriteId: 1a865f7f7dfdd584caff03c8f734ac3c
-    - name: HeadRoar_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -707,7 +742,7 @@ ScriptedImporter:
         width: 178
         height: 104
       spriteId: f30d045880d5c9d4a8c95d1c8332d78a
-    - name: HeadRoar_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -716,7 +751,7 @@ ScriptedImporter:
         width: 178
         height: 99
       spriteId: c2dd0832ad6dcdf4580b1e2ef891e2eb
-    - name: HeadRoar_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -725,7 +760,7 @@ ScriptedImporter:
         width: 178
         height: 95
       spriteId: 8fe795c8f0c0ab54786153491ce9826a
-    - name: HeadRoar_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -734,7 +769,7 @@ ScriptedImporter:
         width: 177
         height: 89
       spriteId: 340ada7dede97ab4eb13cd57f0f054ed
-    - name: HeadRoar_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -743,7 +778,7 @@ ScriptedImporter:
         width: 176
         height: 85
       spriteId: 35a093558cca92540a3b1ee837de9f26
-    - name: HeadRoar_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -752,7 +787,7 @@ ScriptedImporter:
         width: 175
         height: 81
       spriteId: c5b348b4df3955d468c162762d2e15bd
-    - name: HeadRoar_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -761,7 +796,7 @@ ScriptedImporter:
         width: 173
         height: 81
       spriteId: 23472b92dde9d2f4fbbd43d8155dd81e
-    - name: HeadRoar_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -770,7 +805,7 @@ ScriptedImporter:
         width: 170
         height: 87
       spriteId: f7cf202dd373b084092b10cc4b810bf9
-    - name: HeadRoar_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -779,7 +814,7 @@ ScriptedImporter:
         width: 165
         height: 91
       spriteId: 07927206eceba2b4fbe0e88996b90ebc
-    - name: HeadRoar_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -788,7 +823,7 @@ ScriptedImporter:
         width: 162
         height: 95
       spriteId: 14d1582e0f08ae24e8920e0148bffa84
-    - name: HeadRoar_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -798,7 +833,10 @@ ScriptedImporter:
         height: 96
       spriteId: 7e250ff24f1a1524a9daa9c890cd430f
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -816,3 +854,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 200, y: 200}
+  previousTextureSize: {x: 1024, y: 1024}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.34426227}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.36885244}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.40983605}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.5849057}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.7319587}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 132
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.90909094}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 132
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -1.1818182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 132
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -2.2941175}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 132
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -3.5405405}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 132
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.50961536, y: -8.333333}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 132
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -27}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 132
@@ -342,15 +359,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 132, y: 420}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -468638537
+    uuid:
+      value0: 583021651
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 583021651
     name: FDTopHandDisappear
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: FDTopHandDisappear_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -359,7 +382,7 @@ ScriptedImporter:
         width: 120
         height: 122
       spriteId: deb0b5238f04b054d8c4506b6330037a
-    - name: FDTopHandDisappear_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -368,7 +391,7 @@ ScriptedImporter:
         width: 120
         height: 122
       spriteId: b4bf3350b2a5e6447be70478c9336dcf
-    - name: FDTopHandDisappear_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -377,7 +400,7 @@ ScriptedImporter:
         width: 120
         height: 122
       spriteId: e3871ede69129e147ab7a55d5753da07
-    - name: FDTopHandDisappear_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -386,7 +409,7 @@ ScriptedImporter:
         width: 120
         height: 106
       spriteId: 6e559e60b29d12947bce1c009ed317d3
-    - name: FDTopHandDisappear_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -395,7 +418,7 @@ ScriptedImporter:
         width: 120
         height: 97
       spriteId: c4c522010605a49479fa32d49587056e
-    - name: FDTopHandDisappear_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -404,7 +427,7 @@ ScriptedImporter:
         width: 120
         height: 88
       spriteId: 52306aad5d17d6a42af650203aee9cde
-    - name: FDTopHandDisappear_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -413,7 +436,7 @@ ScriptedImporter:
         width: 120
         height: 77
       spriteId: d212b09d68c691d4ca490da02274cf05
-    - name: FDTopHandDisappear_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -422,7 +445,7 @@ ScriptedImporter:
         width: 120
         height: 51
       spriteId: 724277cd84855a242b5f3e65ce620122
-    - name: FDTopHandDisappear_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -431,7 +454,7 @@ ScriptedImporter:
         width: 116
         height: 37
       spriteId: 58a6f44cbca6fba4cac2c56ced4b8c9d
-    - name: FDTopHandDisappear_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -440,7 +463,7 @@ ScriptedImporter:
         width: 104
         height: 18
       spriteId: f1cdffad1d3e90a4ab4c626d4e6576f4
-    - name: FDTopHandDisappear_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -450,7 +473,10 @@ ScriptedImporter:
         height: 6
       spriteId: 335a3cd1bb9afbf498cdcec4a646358c
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -468,3 +494,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 200, y: 200}
+  previousTextureSize: {x: 256, y: 512}

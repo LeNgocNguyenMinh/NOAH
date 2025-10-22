@@ -2,53 +2,25 @@ using UnityEngine;
 
 public class FKBossATK2RHBullet : MonoBehaviour
 {
-    private Vector3 direct;
-    private float speed;
-    private Animator animator;
-    private Rigidbody2D rb;
-    private int flyTime;
-    private bool animTrigger = false;
-    private float damage;
-    public void SetValue(Vector3 direct, float speed, int flyTime, float damage)
+    [SerializeField]private Projectile projectile;
+    [SerializeField]private Animator animator;
+    private Vector3 target;
+    private bool isFly = true;
+    
+    public void SetValue(float maxSpeed, float maxHeight)
     {
-        this.direct = direct;
-        this.speed = speed;
-        this.flyTime = flyTime;
-        this.damage = damage;
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        Shoot();
+        target = Player.Instance.transform.position;
+        projectile.InitializeProjectile(target, maxSpeed, maxHeight);
     }
-    public void Shoot()
+    public void Update()
     {
-        rb.velocity = direct * speed;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        flyTime--;
-        if(collision.gameObject.tag == "PlayerHitCollider" && !animTrigger)
+        if(projectile.isStop && isFly)
         {
-            PlayerEffect.Instance.PushBack(direct);
-            PlayerEffect.Instance.HitFlash();
-            animTrigger = true;
-            rb.velocity = Vector2.zero;
-            HealthControl.Instance.PlayerHurt(damage);
-            animator.SetTrigger("Break");
-            return;
+            isFly = false;
+            animator.SetTrigger("Explode");
         }
-        if(flyTime < 0 && !animTrigger)
-        {
-            rb.velocity = Vector2.zero;
-            animTrigger = true;
-            animator.SetTrigger("Break");
-            return;
-        }
-        var firstContact = collision.contacts[0];
-        Vector2 newVelocity = Vector2.Reflect(direct, firstContact.normal);
-        direct = newVelocity.normalized;
-        Shoot();
     }
-    public void DestroyBullet()
+    private void DestroyBullet()
     {
         Destroy(gameObject);
     }

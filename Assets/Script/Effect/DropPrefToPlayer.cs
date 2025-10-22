@@ -27,7 +27,7 @@ public class DropPrefToPlayer : MonoBehaviour
             projectileVisual.enabled = false;
             Vector2 direction = (Player.Instance.transform.position - transform.position).normalized;//Find Vector from expSpawn Point to Player
 
-            rb.velocity = direction * moveSpeed; //Start to move to player
+            rb.linearVelocity = direction * moveSpeed; //Start to move to player
         }
     }
     private void OnTriggerEnter2D(Collider2D collider)

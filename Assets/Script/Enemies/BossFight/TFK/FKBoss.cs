@@ -17,6 +17,7 @@ public class FKBoss : MonoBehaviour
     public FKBossATK1EndState ATK1EndState { get; private set; }
     public FKBossATK2ReadyState ATK2ReadyState { get; private set; }
     public FKBossATK2IdleState ATK2IdleState { get; private set; }
+    public FKBossATK2AttackState ATK2AttackState { get; private set; }
     public FKBossATK2EndState ATK2EndState { get; private set; }
     public bool BossIsAwake { get; set; }
     [field: SerializeField]public GameObject HealthBarCV{ get; set; }
@@ -41,19 +42,37 @@ public class FKBoss : MonoBehaviour
     [field: SerializeField]public float RHATK1Time { get; set; }
     [field: SerializeField]public float ATK1RHFlyTime { get; set; }
     [field: SerializeField]public float ATK1RhRotateSpeed { get; set; }
-   
+    [field: Header("ATK2 attribute")]
+    [field: SerializeField]public int ATK2AtttackNum { get; set; }
+    [field: SerializeField]public int ATK2IdleTime { get; set; }
+    public int ATK2Count { get; set; }
 
+    [field: Header("ATK2 RH")]
+    [field: SerializeField]public Transform ATK2RHShootPoint { get; set; }
+    [field: SerializeField]public GameObject ATK2RHBullet { get; set; }
+    [field: SerializeField]public float ATK2RHBulletMaxSpeed { get; set; }
+    [field: SerializeField]public float ATK2RHBulletMaxHeight { get; set; }
+    [field: Header("ATK2 LH")]
+    [field: SerializeField]public GameObject ATK2LHRoute { get; set; }
+    [field: SerializeField]public float ATK2LHSpawnDistance{ get; set; }
+    [field: SerializeField]public float ATK2LHSpawdDelay { get; set; }
     public enum AnimationTriggerType
     {
         RestAnimFinish,
         AwakeAnimFinish, 
         IdleAnimFinish,
         ATK1ReadyAnimFinish,
+        ATK1IdleAnimFinish,
         ATK1AttackAnimFinish,
+        ATK1EndAnimFinish,
         ATK1RHThrow,
         ATK1LHThrow,
-        ATK1IdleAnimFinish,
-        ATK1EndAnimFinish,
+        ATK2ReadyAnimFinish,
+        ATK2IdleAnimFinish,
+        ATK2AttackAnimFinish,
+        ATK2EndAnimFinish,
+        ATK2RHShoot,
+        ATK2LHAttack,
         DeadAnimFinish,
     }
 
@@ -78,6 +97,7 @@ public class FKBoss : MonoBehaviour
         ATK1EndState = new FKBossATK1EndState(this, StateMachine);      
         ATK2ReadyState = new FKBossATK2ReadyState(this, StateMachine);
         ATK2IdleState = new FKBossATK2IdleState(this, StateMachine);
+        ATK2AttackState = new FKBossATK2AttackState(this, StateMachine);
         ATK2EndState = new FKBossATK2EndState(this, StateMachine);   
     }
     private void Start()

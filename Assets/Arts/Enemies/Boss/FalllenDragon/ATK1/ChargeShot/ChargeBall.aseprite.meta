@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: -1.9999981, y: -42}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 134
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.48148146, y: -0.01369863}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5308642, y: -0.013513514}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5466667, y: -0.039473683}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5970149, y: -0.09722222}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5614035, y: -0.3275862}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.53999996, y: -0.5102041}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.51219517, y: -0.65116274}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.45161286, y: -0.7837838}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.36363643, y: -1.0689656}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.39999998, y: -1.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.41379312, y: -0.9655172}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.42424238, y: -0.78787875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.41333336, y: -0.08571429}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.44303796, y: -0.04109589}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.6, y: -0.19696969}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -442,15 +464,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 93, y: 4}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1431344723
+    uuid:
+      value0: 4042535073
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -252432223
     name: ChargeBall
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ChargeBall_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -459,7 +487,7 @@ ScriptedImporter:
         width: 1
         height: 1
       spriteId: fc1b2b3c255294548b7fdf9d4abc1e81
-    - name: ChargeBall_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -468,7 +496,7 @@ ScriptedImporter:
         width: 81
         height: 73
       spriteId: b04d2667ceb2ed24f8c17f7fbe263e19
-    - name: ChargeBall_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -477,7 +505,7 @@ ScriptedImporter:
         width: 81
         height: 74
       spriteId: f7d7119f13d8d2b46a6cd2bc7a135732
-    - name: ChargeBall_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -486,7 +514,7 @@ ScriptedImporter:
         width: 75
         height: 76
       spriteId: 40532c20478747c45aa426f46daccbbc
-    - name: ChargeBall_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -495,7 +523,7 @@ ScriptedImporter:
         width: 67
         height: 72
       spriteId: 5ae115055de8529429eaacec8495a551
-    - name: ChargeBall_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -504,7 +532,7 @@ ScriptedImporter:
         width: 57
         height: 58
       spriteId: 504958ab18bb21c4cac8ec70e5223444
-    - name: ChargeBall_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -513,7 +541,7 @@ ScriptedImporter:
         width: 50
         height: 49
       spriteId: 5eaaef6a1b5c7c84ebaa5a367b6d0fc7
-    - name: ChargeBall_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -522,7 +550,7 @@ ScriptedImporter:
         width: 41
         height: 43
       spriteId: 79c7e5cda9a8b254082afd015b051005
-    - name: ChargeBall_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -531,7 +559,7 @@ ScriptedImporter:
         width: 31
         height: 37
       spriteId: cc94128299f9b7041ac58db6ee42b120
-    - name: ChargeBall_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -540,7 +568,7 @@ ScriptedImporter:
         width: 22
         height: 29
       spriteId: f609c54c78ca85f44b3638ec3e01cd96
-    - name: ChargeBall_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -549,7 +577,7 @@ ScriptedImporter:
         width: 25
         height: 25
       spriteId: 02be7e88172195d4fbc2efc764d83c16
-    - name: ChargeBall_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -558,7 +586,7 @@ ScriptedImporter:
         width: 29
         height: 29
       spriteId: c18a95c8fd52f064d83e1fc33d7fb924
-    - name: ChargeBall_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -567,7 +595,7 @@ ScriptedImporter:
         width: 33
         height: 33
       spriteId: ff6849aeb7baba8439dbd518b54cdff1
-    - name: ChargeBall_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -576,7 +604,7 @@ ScriptedImporter:
         width: 75
         height: 70
       spriteId: fc55ab0cafa25704a8f8b7b1dbc569a5
-    - name: ChargeBall_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -585,7 +613,7 @@ ScriptedImporter:
         width: 79
         height: 73
       spriteId: 9a7c0d4c6f319bd48af6daf084ffd3d6
-    - name: ChargeBall_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -595,7 +623,10 @@ ScriptedImporter:
         height: 66
       spriteId: 96c6cc0eb83ce6c499247cf00e9e4022
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -613,3 +644,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 100, y: 100}
+  previousTextureSize: {x: 256, y: 512}

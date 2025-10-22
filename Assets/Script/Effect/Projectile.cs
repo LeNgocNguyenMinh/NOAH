@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private ProjectileVisual projectileVisual;
 
     public Vector3 target;
-    private float moveSpeed;
+    public float moveSpeed = 0f;
     private float maxMoveSpeed;
     private float trajectoryMaxRelativeHeight;
    /*  [SerializeField]private float distanceToTargetToDestroyProjectile; */
@@ -31,7 +31,6 @@ public class Projectile : MonoBehaviour
     private float nextPositionYCorrectionAbsolute;
     private float nextPositionXCorrectionAbsolute;
     public bool isStop = false;
-
 
     private void Start() {
         trajectoryStartPoint = transform.position;
@@ -171,14 +170,6 @@ public class Projectile : MonoBehaviour
 
         projectileVisual.SetTarget(target);
     }
-
-
-    /* public void InitializeAnimationCurves(AnimationCurve trajectoryAnimationCurve, AnimationCurve axisCorrectionAnimationCurve, AnimationCurve projectileSpeedAnimationCurve) {
-        this.trajectoryAnimationCurve = trajectoryAnimationCurve;
-        this.axisCorrectionAnimationCurve = axisCorrectionAnimationCurve;
-        this.projectileSpeedAnimationCurve = projectileSpeedAnimationCurve;
-    } */
-
 
     public Vector3 GetProjectileMoveDir() {
         return projectileMoveDir;

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5633803, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5633803, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 83
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5633803, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 162
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5633803, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5633803, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 83
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5507246, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 162
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.53030306, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.41509435, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.24390244, y: -1.2307693}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 139
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: -0.40909097, y: -1.65}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 188
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: -2.1, y: -1.65}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 241
@@ -342,15 +359,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 241, y: 4}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 995545384
+    uuid:
+      value0: 4091922376
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -203044920
     name: LHDead
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: LHDead_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -359,7 +382,7 @@ ScriptedImporter:
         width: 71
         height: 26
       spriteId: 67ffb0ebbc59e4b4f9459eb325570212
-    - name: LHDead_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -368,7 +391,7 @@ ScriptedImporter:
         width: 71
         height: 26
       spriteId: 40063ff8aa9511248b698d32a4b82d1f
-    - name: LHDead_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -377,7 +400,7 @@ ScriptedImporter:
         width: 71
         height: 26
       spriteId: d993a2e4fa35d3a488473555312b5c4c
-    - name: LHDead_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -386,7 +409,7 @@ ScriptedImporter:
         width: 71
         height: 26
       spriteId: 69b9d2ac4ea04464c8305084e1727f5f
-    - name: LHDead_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -395,7 +418,7 @@ ScriptedImporter:
         width: 71
         height: 26
       spriteId: 013140ddd23991e45a70d3cbc18beb70
-    - name: LHDead_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -404,7 +427,7 @@ ScriptedImporter:
         width: 69
         height: 26
       spriteId: 1fc6622a604bd98499d70c4b22c3610c
-    - name: LHDead_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -413,7 +436,7 @@ ScriptedImporter:
         width: 66
         height: 26
       spriteId: 553433d289d74c343bed729e1b7755c5
-    - name: LHDead_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -422,7 +445,7 @@ ScriptedImporter:
         width: 53
         height: 26
       spriteId: 5564696340567324c92eceb6ea401e04
-    - name: LHDead_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -431,7 +454,7 @@ ScriptedImporter:
         width: 41
         height: 26
       spriteId: 36318615437767e44b177d3572d4c7ba
-    - name: LHDead_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -440,7 +463,7 @@ ScriptedImporter:
         width: 22
         height: 20
       spriteId: d668facc6f93a3a459fb1877ec7b2dc2
-    - name: LHDead_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -450,7 +473,10 @@ ScriptedImporter:
         height: 20
       spriteId: e4a33084f9a104e42acd48a02f708b5b
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -468,3 +494,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 128}

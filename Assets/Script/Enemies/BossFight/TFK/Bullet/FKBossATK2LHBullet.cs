@@ -21,7 +21,7 @@ public class FKBossATK2LHBullet : MonoBehaviour
     }
     public void Shoot()
     {
-        rb.velocity = direct * speed;
+        rb.linearVelocity = direct * speed;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -31,14 +31,14 @@ public class FKBossATK2LHBullet : MonoBehaviour
             PlayerEffect.Instance.PushBack(direct);
             PlayerEffect.Instance.HitFlash();
             animTrigger = true;
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             HealthControl.Instance.PlayerHurt(damage);
             animator.SetTrigger("Break");
             return;
         }
         if(flyTime < 0 && !animTrigger)
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             animTrigger = true;
             animator.SetTrigger("Break");
             return;

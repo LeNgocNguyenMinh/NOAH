@@ -9,7 +9,8 @@ public class Player : MonoBehaviour, IPlayerMoveable
     public Vector3 MousePos { get; set; }
     public bool CanChangeState { get; set; }
     public Animator PlayerAnimator { get; set; }
-    [SerializeField] private Transform SpriteTransform;
+    [SerializeField] private Transform BodyPartTrans;
+    [SerializeField] private Transform BodyPartShadowTrans;
     public PlayerStateMachine StateMachine { get; private set;}
     public PlayerIdleState IdleState { get; private set; }
     public PlayerWalkState WalkState { get; private set; }
@@ -99,11 +100,9 @@ public class Player : MonoBehaviour, IPlayerMoveable
     public void FacingDirection()
     {
         MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (MousePos.x < SpriteTransform.position.x && SpriteTransform.localScale.x > 0) {
-            SpriteTransform.localScale = new Vector3(SpriteTransform.localScale.x *-1, SpriteTransform.localScale.y, SpriteTransform.localScale.z);
-        } else if (MousePos.x > SpriteTransform.position.x && SpriteTransform.localScale.x < 0) 
-        {
-            SpriteTransform.localScale = new Vector3(SpriteTransform.localScale.x *-1, SpriteTransform.localScale.y, SpriteTransform.localScale.z);
+        if (MousePos.x < BodyPartTrans.position.x && BodyPartTrans.localScale.x > 0 || MousePos.x > BodyPartTrans.position.x && BodyPartTrans.localScale.x < 0) {
+            BodyPartTrans.localScale = new Vector3(BodyPartTrans.localScale.x *-1, BodyPartTrans.localScale.y, BodyPartTrans.localScale.z);
+            BodyPartShadowTrans.localScale = new Vector3(BodyPartShadowTrans.localScale.x *-1, BodyPartShadowTrans.localScale.y, BodyPartShadowTrans.localScale.z);
         }
     }
     public void AnimationTriggerEvent(AnimationTriggerType triggerType)

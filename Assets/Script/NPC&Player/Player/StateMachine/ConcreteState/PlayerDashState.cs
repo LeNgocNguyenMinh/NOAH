@@ -19,7 +19,7 @@ public class PlayerDashState : PlayerState
         base.FrameUpdate();
         if(!player.GotHit)
         {
-            player.RB.velocity = player.MoveDirect * player.DashSpeed;
+            player.RB.linearVelocity = player.MoveDirect * player.DashSpeed;
         }
         
     }
