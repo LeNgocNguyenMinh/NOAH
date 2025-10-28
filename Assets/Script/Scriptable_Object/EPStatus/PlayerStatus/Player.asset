@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7476459a54eb7498184a32700548f8, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  playerLevel: 10
+  playerLevel: 5
   availablePoint: 8
   playerName: Noah
   playerAge: 22
@@ -21,7 +21,7 @@ MonoBehaviour:
   playerBullet: 100
   playerCoin: 174
   playerSprite: {fileID: 1028573758, guid: 8dbb52ff946028241861992a9ffdaf42, type: 3}
-  maxExp: 1537.7344
+  maxExp: 10
   currentExp: 32
   maxHealth: 200
   currentHealth: 54

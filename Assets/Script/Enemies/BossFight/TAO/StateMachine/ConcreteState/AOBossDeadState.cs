@@ -22,5 +22,9 @@ public class AOBossDeadState : AOBossState
     }
     public override void AnimationTriggerEvent(AOBoss.AnimationTriggerType triggerType)
     {
+        if(triggerType == AOBoss.AnimationTriggerType.DeadAnimFinish)
+        {
+            aoBoss.BossVanish();
+        }
     }
 }

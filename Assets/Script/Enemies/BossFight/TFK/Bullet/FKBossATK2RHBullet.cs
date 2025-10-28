@@ -20,7 +20,18 @@ public class FKBossATK2RHBullet : MonoBehaviour
             animator.SetTrigger("Explode");
         }
     }
-    private void DestroyBullet()
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.CompareTag("PlayerHitCollider"))
+        {
+            HealthControl.Instance.PlayerHurt(1f);
+            Vector3 hitDirect = (Player.Instance.transform.position - transform.position).normalized;
+            PlayerEffect.Instance.PushBack(hitDirect);
+            PlayerEffect.Instance.HitFlash();
+            animator.SetTrigger("Explode");
+        }
+    }
+    public void DestroyBullet()
     {
         Destroy(gameObject);
     }

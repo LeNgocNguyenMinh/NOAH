@@ -53,6 +53,14 @@ public class FKBossATK1LHSmallBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        if(collider.CompareTag("PlayerHitCollider") && !breaking)
+        {
+            breaking = true;
+            HealthControl.Instance.PlayerHurt(damage);
+            PlayerEffect.Instance.PushBack(direct);
+            PlayerEffect.Instance.HitFlash();
+            animator.SetTrigger("Break");
+        }
     }
     public void DesTroyObject()
     {

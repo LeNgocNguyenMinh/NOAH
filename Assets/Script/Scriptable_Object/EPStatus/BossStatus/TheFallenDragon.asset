@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossLevel: 1
   bossName: The Fallen Dragon
+  bossID: B_02
   bossBaseDamage: 10
   bossDamage: 11
   bossBaseHealth: 200
   bossMaxHealth: 0
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
-  isAlive: 0

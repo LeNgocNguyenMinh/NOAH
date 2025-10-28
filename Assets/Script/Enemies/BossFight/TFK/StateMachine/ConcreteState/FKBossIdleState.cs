@@ -24,7 +24,7 @@ public class FKBossIdleState : FKBossState
     {
         if (triggerType == FKBoss.AnimationTriggerType.IdleAnimFinish)
         {
-            fkBoss.StateMachine.ChangeState(fkBoss.ATK2ReadyState);
+            fkBoss.StateMachine.ChangeState(fkBoss.ATK1ReadyState);
         }
     }
 }

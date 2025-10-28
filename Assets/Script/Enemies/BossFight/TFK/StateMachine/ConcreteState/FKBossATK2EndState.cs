@@ -12,6 +12,7 @@ public class FKBossATK2EndState : FKBossState
     public override void EnterState()
     {
         base.EnterState();
+        fkBoss.StateMachine.ChangeState(fkBoss.ATK1ReadyState);
     
     }
     public override void FrameUpdate()

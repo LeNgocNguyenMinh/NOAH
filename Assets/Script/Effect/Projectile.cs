@@ -41,7 +41,7 @@ public class Projectile : MonoBehaviour
     {
         if(isStop) return;
         UpdateProjectilePosition();
-        if(Vector3.Distance(transform.position, target) < .1f) {
+        if(Vector3.Distance(transform.position, target) <= .25f) {
             isStop = true;
         }
     }

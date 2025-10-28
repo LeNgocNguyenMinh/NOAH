@@ -448,6 +448,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CarrotAttack_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848cbd474b0180d4c941a2aad4124704
+      internalID: -1283981443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -469,6 +491,7 @@ TextureImporter:
       CarrotAttack_10: 1993548310920987187
       CarrotAttack_11: -670446457095619578
       CarrotAttack_12: 56364121567389139
+      CarrotAttack_13: -1283981443
       CarrotAttack_2: -8803480832539641306
       CarrotAttack_3: -7216338534399209221
       CarrotAttack_4: -1188805724306903351

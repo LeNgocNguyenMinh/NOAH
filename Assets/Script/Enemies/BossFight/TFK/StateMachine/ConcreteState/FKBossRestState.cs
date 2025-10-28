@@ -11,7 +11,7 @@ public class FKBossRestState : FKBossState
     {
         base.EnterState();
         fkBoss.FKBossAnimator.SetTrigger("Rest");
-        
+        fkBoss.BossIsAwake = false;        
     }
     public override void FrameUpdate()
     {

@@ -24,11 +24,11 @@ public class FKBossATK1AttackState : FKBossState
     }
     public override void AnimationTriggerEvent(FKBoss.AnimationTriggerType triggerType)
     {
-        if(triggerType == FKBoss.AnimationTriggerType.ATK1RHThrow)
+        if(triggerType == FKBoss.AnimationTriggerType.ATK1RHThrow && (fkBoss.ATKTestType == FKBoss.TestType.ATK1RH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))
         {
             Instantiate(fkBoss.Banana, fkBoss.RHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1RHBullet>().SetValue(fkBoss.ATK1RHFlyTime, fkBoss.ATK1RhRotateSpeed);
         }
-        if(triggerType == FKBoss.AnimationTriggerType.ATK1LHThrow)
+        if(triggerType == FKBoss.AnimationTriggerType.ATK1LHThrow && (fkBoss.ATKTestType == FKBoss.TestType.ATK1LH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))
         {
             Instantiate(fkBoss.WaterMelon, fkBoss.LHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1LHBigBullet>().SetValue(fkBoss.ATK1LHWMSpeed, fkBoss.ATK1LHWMFlyDist, fkBoss.ATK1LHWMPSpeed, fkBoss.ATK1LHWMPFlyDist, fkBoss.BossStatus.bossDamage, fkBoss.ATK1RtSpeed);
         }

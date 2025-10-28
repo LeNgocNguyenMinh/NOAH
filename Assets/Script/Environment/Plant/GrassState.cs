@@ -6,9 +6,13 @@ using UnityEngine;
 
 public class GrassState : MonoBehaviour
 {
-    private Animator animator;
+    [SerializeField]private Animator animator;
     private bool canCut = true;
     private bool canGrow = false;
+    public enum AnimationTrigger
+    {
+        GrowAnimFinish,
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Sword") || collision.tag.Contains("Bullet"))
@@ -21,7 +25,6 @@ public class GrassState : MonoBehaviour
         if(canCut)
         {
             canCut = false;
-            animator = GetComponent<Animator>();
             animator.SetTrigger("Cut");
             canGrow = true;
         }
@@ -39,8 +42,12 @@ public class GrassState : MonoBehaviour
             canGrow = false;
         }
     }
-    public void SetCanCut()
+    public void AnimationEventTrigger(AnimationTrigger animationTrigger)
     {
-        canCut = true;
+        if(animationTrigger == AnimationTrigger.GrowAnimFinish)
+        {
+            canCut = true;
+            animator.SetTrigger("Idle");
+        }
     }
 }

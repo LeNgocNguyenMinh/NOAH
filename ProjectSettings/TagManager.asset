@@ -97,5 +97,8 @@ TagManager:
   - name: House
     uniqueID: 1271831277
     locked: 0
+  - name: UIText
+    uniqueID: 2087403631
+    locked: 0
   m_RenderingLayers:
   - Default

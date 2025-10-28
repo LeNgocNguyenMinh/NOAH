@@ -14,7 +14,7 @@ public class FKBossStateMachine : MonoBehaviour
     {
         CurrentState.ExitState();
         CurrentState = newState;
-        Debug.Log("FK Boss State changed to: " + CurrentState.GetType().Name);
+        /* Debug.Log("FK Boss State changed to: " + CurrentState.GetType().Name); */
         CurrentState.EnterState();
     }
 }

@@ -55,7 +55,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BlendValue: 0.09
-    - _CellDensity: 5
+    - _CellDensity: 2
     - _PixelateAmount: 120
     - _Speed: 3
     m_Colors: []

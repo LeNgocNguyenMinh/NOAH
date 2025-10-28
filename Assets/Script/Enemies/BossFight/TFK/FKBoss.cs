@@ -4,6 +4,7 @@ public class FKBoss : MonoBehaviour
 {
     public static FKBoss Instance { get; private set; }
     [field: Header("General attribute")]
+    
     [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public Animator FKBossAnimator { get; set; }
     public FKBossStateMachine StateMachine { get; private set;}
@@ -53,9 +54,19 @@ public class FKBoss : MonoBehaviour
     [field: SerializeField]public float ATK2RHBulletMaxSpeed { get; set; }
     [field: SerializeField]public float ATK2RHBulletMaxHeight { get; set; }
     [field: Header("ATK2 LH")]
-    [field: SerializeField]public GameObject ATK2LHRoute { get; set; }
-    [field: SerializeField]public float ATK2LHSpawnDistance{ get; set; }
-    [field: SerializeField]public float ATK2LHSpawdDelay { get; set; }
+    [field: SerializeField]public GameObject ATK2LHObject { get; set; }
+    [field: SerializeField]public float ATK2LHDisBet { get; set; }
+    [field: SerializeField]public float ATK2LHSpawnDelay { get; set; }
+    [field: SerializeField]public Transform ATK2LHStartPoint { get; set; }
+    public enum TestType
+    {
+        ATK1LH,
+        ATK1RH,
+        ATK2LH,
+        ATK2RH,
+        AllATK
+    }
+    [field: SerializeField]public TestType ATKTestType { get; set; }
     public enum AnimationTriggerType
     {
         RestAnimFinish,
@@ -112,6 +123,10 @@ public class FKBoss : MonoBehaviour
     public void BossAwake()
     {
         StateMachine.ChangeState(AwakeState);
+    }
+    public void BossDeath()
+    {
+        StateMachine.ChangeState(DeadState);
     }
     public void AnimationTriggerEvent(AnimationTriggerType triggerType)
     {

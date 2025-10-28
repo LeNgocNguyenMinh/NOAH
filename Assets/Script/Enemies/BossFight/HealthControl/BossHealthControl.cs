@@ -6,11 +6,9 @@ using TMPro;
 public class BossHealthControl : MonoBehaviour
 {
     [SerializeField]private BossStatus bossStatus;
-    [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private BossHealthBar bossHealthBar;
     private float currentHealth;
     private float maxHealth;
-    [SerializeField]private TextMeshProUGUI healthText;
     [SerializeField]private TextMeshProUGUI levelText;
     // Start is called before the first frame update
     void Start()
@@ -38,6 +36,16 @@ public class BossHealthControl : MonoBehaviour
         if(currentHealth <=0)
         {
             currentHealth = 0;
+            bossHealthBar.UpdateHealthText();
+            bossHealthBar.SetHealth(currentHealth);    
+            if(bossStatus.bossID == "B_01")//The Ancient One
+            {
+                AOBoss.Instance.BossDeath();
+            }  
+            if(bossStatus.bossName == "B_03")//FruitKing
+            {
+                FKBoss.Instance.BossDeath();
+            }       
         }
         bossHealthBar.UpdateHealthText();
         bossHealthBar.SetHealth(currentHealth);

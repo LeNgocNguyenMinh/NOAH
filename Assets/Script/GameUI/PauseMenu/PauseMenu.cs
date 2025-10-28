@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using System;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -19,8 +18,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private Image pauseImage;
     [SerializeField]private Sprite pauseSprite;
     [SerializeField]private Sprite gameOverSprite;
-    [SerializeField]private GameObject quitAskPanel;
-    [SerializeField]private GameObject mainMenuAskPanel;
+    [SerializeField]private RectTransform quitAskPanel;
+    [SerializeField]private RectTransform mainMenuAskPanel;
     [SerializeField]private GameObject otherPanel;
     [SerializeField]private Image resumeButtonImage;
     [SerializeField]private Sprite respawnSprite;
@@ -28,7 +27,6 @@ public class PauseMenu : MonoBehaviour
 
     public static bool isPaused = false;
     private bool isOver = false;
-    private bool panelShow = false;
 
     private void Awake()
     {
@@ -47,7 +45,6 @@ public class PauseMenu : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             if(isOver)return;
-            if(isOver||panelShow)return;
             if(isPaused)
             {
                 PauseMenuPanelOff();
@@ -58,9 +55,15 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-    //Open pause menu
-    private void PauseMenuPanelShow()
+    //Open pause menu, for pause game or game over
+    public void PauseMenuPanelShow(bool isDead = false)
     {
+        if(isDead)
+        {
+            isOver = true;
+            pauseImage.sprite = gameOverSprite;
+            resumeButtonImage.sprite = respawnSprite;
+        }
         pauseImage.sprite = pauseSprite;
         resumeButtonImage.sprite = resumeSprite;
         pauseMenuPanel.gameObject.SetActive(true);
@@ -68,21 +71,9 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         pauseMenuPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true);
     }
-    public void GameOverMenuPanelShow()
-    {
-        isOver = true;
-        pauseImage.sprite = gameOverSprite;
-        resumeButtonImage.sprite = respawnSprite;
-        pauseMenuPanel.gameObject.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
-        pauseMenuPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true);
-    }
-
-    //Resume button function
+    //Resume button function, if player dead then respawn if player choose continue
     public void PauseMenuPanelOff()
     {
-        Time.timeScale = 1f;
         pauseMenuPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             if(isOver)
@@ -93,42 +84,59 @@ public class PauseMenu : MonoBehaviour
             }
             isPaused = false;
             pauseMenuPanel.gameObject.SetActive(false);
+            Time.timeScale = 1f;
         });
     }
-  
-    public void SettingPanelShow()
+
+    //Ask panel active for main menu button function
+    public void ButtonShowFuntion(ButtonEnum btnEnum)
     {
-        panelShow = true;
-        settingPanel.gameObject.SetActive(true);
-        settingPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
+        otherPanel.SetActive(false);
+        if(btnEnum.buttonType == ButtonEnum.ButtonType.MainMenuBtn)
+        {
+            mainMenuAskPanel.gameObject.SetActive(true);
+            mainMenuAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
+        }
+        else if(btnEnum.buttonType == ButtonEnum.ButtonType.QuitBtn)
+        {
+            quitAskPanel.gameObject.SetActive(true);
+            quitAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
+        }
+        else if(btnEnum.buttonType == ButtonEnum.ButtonType.SettingBtn)
+        {
+            settingPanel.gameObject.SetActive(true);
+            settingPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
+        }
     }
-    public void SettingPanelOff()
+  
+    //Ask panel deactive for main menu button function
+    public void BackToPauseMenu()
     {
+        otherPanel.SetActive(true);
+        mainMenuAskPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            mainMenuAskPanel.gameObject.SetActive(false);
+        }); 
+        quitAskPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            quitAskPanel.gameObject.SetActive(false);
+        }); 
         settingPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             settingPanel.gameObject.SetActive(false);
-            panelShow = false;
-        });
+        }); 
     }
-    //Ask panel active for main menu button function
-    public void MainMenuAskPanelShow()
-    {
-        panelShow = true;
-        otherPanel.SetActive(false);
-        mainMenuAskPanel.SetActive(true);
-    }
-    //Ask panel deactive for main menu button function
-    public void MainMenuAskPanelOff()
-    {
-        panelShow = false;
-        otherPanel.SetActive(true);
-        mainMenuAskPanel.SetActive(false);
-    }
-    //To main menu
-    public void ToMainMenu()
+    public void MoveTo(ButtonEnum btnEnum)
     {
         PauseMenuPanelOff();
-        StartCoroutine(ToMainMenuCoroutine());
+        if(btnEnum.buttonType == ButtonEnum.ButtonType.MainMenuConfirm)
+        {
+            StartCoroutine(ToMainMenuCoroutine());
+        }
+        else if(btnEnum.buttonType == ButtonEnum.ButtonType.QuitConfirm)
+        {
+            Application.Quit();
+        }
     }
     IEnumerator ToMainMenuCoroutine()
     {
@@ -153,25 +161,5 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneTransition.Instance.SceneIn();    
-    }
-    //Ask panel active for quit game button function
-    public void QuitAskPanelShow()
-    {
-        panelShow = true;
-        otherPanel.SetActive(false);
-        quitAskPanel.SetActive(true);
-    }
-    //Ask panel deactive for quit game button function
-    public void QuitAskPanelOff()
-    {
-        panelShow = false;
-        otherPanel.SetActive(true);
-        quitAskPanel.SetActive(false);
-    }
-    //quit game
-    public void QuitGame()
-    {
-        PauseMenuPanelOff();
-        Application.Quit();
     }
 }

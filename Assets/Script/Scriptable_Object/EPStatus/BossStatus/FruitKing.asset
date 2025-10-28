@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac46b774ef156794b91fe794fa4f82aa, type: 3}
+  m_Name: FruitKing
+  m_EditorClassIdentifier: 
+  bossLevel: 12
+  bossName: The Fruit King
+  bossID: B_03
+  bossBaseDamage: 10
+  bossDamage: 10
+  bossBaseHealth: 200
+  bossMaxHealth: 1300
+  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}

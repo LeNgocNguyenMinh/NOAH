@@ -67,7 +67,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -80,7 +80,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -93,7 +93,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -106,7 +106,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -128,17 +128,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 49
-        height: 59
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e45afbf8034d9b49bed08ee7a21674a
-      internalID: -199736714
+      spriteID: 2b0d2bfe0c34e4449bf013f88352f247
+      internalID: -279158521
       vertices: []
       indices: 
       edges: []
@@ -147,19 +148,20 @@ TextureImporter:
       name: SplashAfterEffect_1
       rect:
         serializedVersion: 2
-        x: 49
+        x: 64
         y: 0
-        width: 49
-        height: 59
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3174b7eab15bb6647ad4c94c648b77a1
-      internalID: 1181283545
+      spriteID: 711aa34bb19ae6e4fb0f5fa529256290
+      internalID: 703932689
       vertices: []
       indices: 
       edges: []
@@ -168,19 +170,20 @@ TextureImporter:
       name: SplashAfterEffect_2
       rect:
         serializedVersion: 2
-        x: 98
+        x: 128
         y: 0
-        width: 49
-        height: 59
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 327b4dd8cf921474a8c23abbe761c5b0
-      internalID: -589864945
+      spriteID: 457ac2770c9b2a94ca568e7c205d941a
+      internalID: -360393926
       vertices: []
       indices: 
       edges: []
@@ -189,19 +192,20 @@ TextureImporter:
       name: SplashAfterEffect_3
       rect:
         serializedVersion: 2
-        x: 147
+        x: 192
         y: 0
-        width: 49
-        height: 59
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c68ba91ab8879b4c95db526ded2c7b9
-      internalID: 2123521936
+      spriteID: f2a9b64dffe12524dada74ad6b6b9720
+      internalID: 526435323
       vertices: []
       indices: 
       edges: []
@@ -210,24 +214,48 @@ TextureImporter:
       name: SplashAfterEffect_4
       rect:
         serializedVersion: 2
-        x: 196
+        x: 256
         y: 0
-        width: 49
-        height: 59
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d647d446114d9a449ab1fd6acf5fed2
-      internalID: 20635101
+      spriteID: 4b6f686ad0b057f4681b898986584013
+      internalID: 978322463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SplashAfterEffect_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712625cfe96cae543bcd3d369a16a5cd
+      internalID: -1384844493
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -237,12 +265,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SplashAfterEffect_0: -199736714
-      SplashAfterEffect_1: 1181283545
-      SplashAfterEffect_2: -589864945
-      SplashAfterEffect_3: 2123521936
-      SplashAfterEffect_4: 20635101
+      SplashAfterEffect_0: -279158521
+      SplashAfterEffect_1: 703932689
+      SplashAfterEffect_2: -360393926
+      SplashAfterEffect_3: 526435323
+      SplashAfterEffect_4: 978322463
+      SplashAfterEffect_5: -1384844493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

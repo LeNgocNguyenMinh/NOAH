@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyHitEffect : MonoBehaviour
 {
     [SerializeField] private Material flashMaterial;
-
+    [SerializeField] private Color color;
     [SerializeField] private float duration;
     [SerializeField] private float splashDistance;
     [SerializeField] private GameObject hitEffectPrefab;
@@ -20,7 +20,7 @@ public class EnemyHitEffect : MonoBehaviour
     }
 
 
-    public void Flash(Color color)
+    public void Flash()
     {
         // If the flashRoutine is not null, then it is currently running.
         if (flashRoutine != null)
@@ -31,7 +31,7 @@ public class EnemyHitEffect : MonoBehaviour
         }
 
         // Start the Coroutine, and store the reference for it.
-        flashRoutine = StartCoroutine(FlashRoutine(color));
+        flashRoutine = StartCoroutine(FlashRoutine(this.color));
     }
 
     private IEnumerator FlashRoutine(Color color)
@@ -51,7 +51,7 @@ public class EnemyHitEffect : MonoBehaviour
         // Set the flashRoutine to null, signaling that it's finished.
         flashRoutine = null;
     }
-    public void SplashAfterEffectInit(Vector2 hitPoint, Vector2 direct)
+    public void Splash(Vector2 hitPoint, Vector2 direct)
     {
         Vector2 spawnPoint = hitPoint + direct * splashDistance;
         float angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;

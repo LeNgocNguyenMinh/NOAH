@@ -90,12 +90,12 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 11
+    intParameter: 14
     messageOptions: 0
   - time: 0.6
-    functionName: 
+    functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 11
     messageOptions: 0

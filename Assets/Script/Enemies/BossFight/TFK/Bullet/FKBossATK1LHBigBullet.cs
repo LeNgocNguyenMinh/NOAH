@@ -41,7 +41,6 @@ public class FKBossATK1LHBigBullet : MonoBehaviour
             }
             else{
                 wmFlyTime -= Time.deltaTime;
-                float angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;
                 wmSprite.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
                 rb.linearVelocity = direct * wmSpeed ;
             }
@@ -58,6 +57,14 @@ public class FKBossATK1LHBigBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        if(collider.CompareTag("PlayerHitCollider") && !breaking)
+        {
+            breaking = true;
+            HealthControl.Instance.PlayerHurt(damage);
+            PlayerEffect.Instance.PushBack(direct);
+            PlayerEffect.Instance.HitFlash();
+            animator.SetTrigger("Break");
+        }
     }
     public void WaterMelonSplit()
     {

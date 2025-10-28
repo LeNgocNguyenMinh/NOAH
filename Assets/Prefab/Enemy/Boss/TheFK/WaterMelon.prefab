@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 5081992670822535640}
   - component: {fileID: 9074040726984757555}
   - component: {fileID: 3106229042297708502}
+  - component: {fileID: 7600702656555753693}
   m_Layer: 0
   m_Name: WaterMelon
   m_TagString: Untagged
@@ -342,3 +343,39 @@ MonoBehaviour:
   rb: {fileID: 9074040726984757555}
   wmPiece: {fileID: 7807390220059868905, guid: 0d7a4e40bf39f5247850715257e5df70, type: 3}
   wmSprite: {fileID: 1438854891950563859}
+--- !u!58 &7600702656555753693
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754539827080339490}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.06

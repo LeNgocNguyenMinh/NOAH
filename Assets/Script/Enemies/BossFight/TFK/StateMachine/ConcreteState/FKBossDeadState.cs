@@ -22,5 +22,9 @@ public class FKBossDeadState : FKBossState
     }
     public override void AnimationTriggerEvent(FKBoss.AnimationTriggerType triggerType)
     {
+        if(triggerType == FKBoss.AnimationTriggerType.DeadAnimFinish)
+        {
+            /* fkBoss.DestroyGameObject(); */
+        }
     }
 }

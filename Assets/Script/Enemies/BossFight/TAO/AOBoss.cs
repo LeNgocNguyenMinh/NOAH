@@ -5,6 +5,7 @@ public class AOBoss : MonoBehaviour
     public static AOBoss Instance { get; private set; }
     [field: Header("General attribute")]
     [field: SerializeField]public BossStatus BossStatus { get; set; }
+    [field: SerializeField]public GameObject BossBody { get; set; }
     [field: SerializeField]public Animator AOBossAnimator { get; set; }
     [field: SerializeField]public Transform RightHand { get; set; }
     [field: SerializeField]public Transform LeftHand { get; set; }
@@ -111,6 +112,14 @@ public class AOBoss : MonoBehaviour
     public void BossAwake()
     {
         StateMachine.ChangeState(AwakeState);
+    }
+    public void BossDeath()
+    {
+        StateMachine.ChangeState(DeadState);
+    }
+    public void BossVanish()
+    {
+        Destroy(BossBody);
     }
     public void AnimationTriggerEvent(AnimationTriggerType triggerType)
     {

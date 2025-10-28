@@ -7,7 +7,6 @@ using Microsoft.Unity.VisualStudio.Editor;
 public class HealthControl : MonoBehaviour
 {
     public static HealthControl Instance;
-    private PauseMenu pauseMenu;
     [SerializeField]private PlayerStatus playerStatus;
     private HealthBar healthBar;// Health bar
     private float healthCurrentValue;// Health current value
@@ -48,11 +47,6 @@ public class HealthControl : MonoBehaviour
         healthBar.SetHealth(healthCurrentValue);
         playerStatus.SetCurrentHealth(healthCurrentValue);
         healthBar.UpdateHealthText();
-    }
-    public void GameOverMenuActive()
-    {
-        pauseMenu = FindObjectOfType<PauseMenu>().GetComponent<PauseMenu>();
-        pauseMenu.GameOverMenuPanelShow();
     }
     public bool HealthRecover(float health)
     {
