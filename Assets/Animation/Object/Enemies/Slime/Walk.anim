@@ -39,6 +39,27 @@ AnimationClip:
     classID: 212
     script: {fileID: 0}
     flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 1729631163, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - time: 0.1
+      value: {fileID: 693132683, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - time: 0.2
+      value: {fileID: 1581540049, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - time: 0.3
+      value: {fileID: 291135436, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - time: 0.4
+      value: {fileID: -2113306982, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - time: 0.5
+      value: {fileID: -145215911, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - time: 0.6
+      value: {fileID: 734630102, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    attribute: m_Sprite
+    path: Reflect
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
   m_SampleRate: 10
   m_WrapMode: 0
   m_Bounds:
@@ -55,7 +76,23 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1094318037
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
+    - {fileID: 1729631163, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - {fileID: 693132683, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - {fileID: 1581540049, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - {fileID: 291135436, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - {fileID: -2113306982, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - {fileID: -145215911, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
+    - {fileID: 734630102, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
     - {fileID: 1729631163, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
     - {fileID: 693132683, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}
     - {fileID: 1581540049, guid: 1bb22417bb82f7d44b7e4e0b0c5df221, type: 3}

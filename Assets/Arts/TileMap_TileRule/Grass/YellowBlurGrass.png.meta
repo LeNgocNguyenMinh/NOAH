@@ -1,7 +1,49 @@
 fileFormatVersion: 2
-guid: b9d6846aacaff9f4a9ee31ef94afbea8
+guid: d7ce61e89fa1b154690507620cf41214
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8713001786947910374
+    second: YellowBlurGrass_0
+  - first:
+      213: 5255694664635935397
+    second: YellowBlurGrass_1
+  - first:
+      213: 7099935673721564811
+    second: YellowBlurGrass_2
+  - first:
+      213: 3032076719245662956
+    second: YellowBlurGrass_3
+  - first:
+      213: -6992478599653668421
+    second: YellowBlurGrass_4
+  - first:
+      213: 8283046945368169430
+    second: YellowBlurGrass_5
+  - first:
+      213: -3963330939865263602
+    second: YellowBlurGrass_6
+  - first:
+      213: -8689235332796753689
+    second: YellowBlurGrass_7
+  - first:
+      213: -6372755557103997396
+    second: YellowBlurGrass_8
+  - first:
+      213: -5097112107755873129
+    second: YellowBlurGrass_9
+  - first:
+      213: 4070385468429472442
+    second: YellowBlurGrass_10
+  - first:
+      213: 5923624768797326599
+    second: YellowBlurGrass_11
+  - first:
+      213: 3025977359240347218
+    second: YellowBlurGrass_12
+  - first:
+      213: -4759091270498264613
+    second: YellowBlurGrass_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +109,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -80,34 +122,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlurGrass_0
+      name: YellowBlurGrass_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,20 +147,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 43d64221da0b14e429a73c5c92a39aa4
-      internalID: 1741352338
+      spriteID: 6eabf5636fccae870800000000000000
+      internalID: 8713001786947910374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlurGrass_1
+      name: YellowBlurGrass_1
       rect:
         serializedVersion: 2
         x: 16
@@ -152,20 +169,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9f10ee7d782d3e04e89b23e7265377d6
-      internalID: -203197114
+      spriteID: 5aa6a8d937affe840800000000000000
+      internalID: 5255694664635935397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlurGrass_2
+      name: YellowBlurGrass_2
       rect:
         serializedVersion: 2
         x: 0
@@ -173,20 +191,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1006fb09442777d45b09e8ca2ea86599
-      internalID: 1024666850
+      spriteID: b8e2c40d0e9088260800000000000000
+      internalID: 7099935673721564811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlurGrass_3
+      name: YellowBlurGrass_3
       rect:
         serializedVersion: 2
         x: 16
@@ -194,33 +213,39 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ed14964202941584f9f8dbe36b496d4e
-      internalID: -1369065525
+      spriteID: cea9e5626b9141a20800000000000000
+      internalID: 3032076719245662956
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: bcadd2ba25b61a345a24ae62d10007c4
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      BlurGrass_0: 1741352338
-      BlurGrass_1: -203197114
-      BlurGrass_2: 1024666850
-      BlurGrass_3: -1369065525
+      YellowBlurGrass_0: 8713001786947910374
+      YellowBlurGrass_1: 5255694664635935397
+      YellowBlurGrass_2: 7099935673721564811
+      YellowBlurGrass_3: 3032076719245662956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

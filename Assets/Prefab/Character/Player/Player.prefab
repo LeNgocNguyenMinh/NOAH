@@ -84,8 +84,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8118407466020162140}
-  - component: {fileID: 5543235392879031051}
   - component: {fileID: 4697004532639507430}
+  - component: {fileID: 3851255319556801915}
   m_Layer: 0
   m_Name: WalkCollider
   m_TagString: Player
@@ -102,14 +102,26 @@ Transform:
   m_GameObject: {fileID: 270695433756846957}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4243850827278687691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5543235392879031051
-BoxCollider2D:
+--- !u!114 &4697004532639507430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270695433756846957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12644cb82b767e9488079ac74a0dcbe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &3851255319556801915
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -142,30 +154,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.8461204}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.2665248}
-  m_EdgeRadius: 0
---- !u!114 &4697004532639507430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270695433756846957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12644cb82b767e9488079ac74a0dcbe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.07, y: 0.45}
+  m_Direction: 1
 --- !u!1 &608996696982073589
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +767,7 @@ GameObject:
   - component: {fileID: 1691768245154544631}
   - component: {fileID: 6093137392262755821}
   - component: {fileID: 7340317130336529593}
+  - component: {fileID: 1014023350954573310}
   m_Layer: 0
   m_Name: WeaponParent
   m_TagString: Untagged
@@ -848,6 +840,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!210 &1014023350954573310
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482345255195021705}
+  m_Enabled: 1
+  m_SortingLayerID: 1549724067
+  m_SortingLayer: 3
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &2781196189683914338
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +946,6 @@ GameObject:
   - component: {fileID: 8043397015988100008}
   - component: {fileID: 2106746660748532088}
   - component: {fileID: 658413459679561602}
-  - component: {fileID: 7795985824901675536}
   - component: {fileID: 77727996766165975}
   - component: {fileID: 3877649345066503191}
   - component: {fileID: 1656690165533526599}
@@ -1049,18 +1052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
---- !u!114 &7795985824901675536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2828759920035105045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37c69044bb9a59445995256d947c8549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &77727996766165975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,9 +1066,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BodyPartTrans: {fileID: 7586436353807715032}
   BodyPartShadowTrans: {fileID: 5121294946703609993}
-  <WalkSpeed>k__BackingField: 10
-  <DashSpeed>k__BackingField: 15
-  <DashCoolDown>k__BackingField: 2
+  <WalkSpeed>k__BackingField: 15
+  <DashSpeed>k__BackingField: 20
+  <DashCoolDown>k__BackingField: 0.5
 --- !u!114 &3877649345066503191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,7 +1359,15 @@ MonoBehaviour:
   destroyTime: 0.5
   stepOnLandEcho: {fileID: 6257060955537167324, guid: 0fd3740afae3c6c44a459e418171d69f, type: 3}
   stepOnWaterEcho: {fileID: 6257060955537167324, guid: 82e32112db312ac41be3fb1165ba9708, type: 3}
-  tilemaps: []
+  tilemaps:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &3640525736498041150
 GameObject:
   m_ObjectHideFlags: 0

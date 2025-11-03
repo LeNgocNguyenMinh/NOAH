@@ -41,7 +41,7 @@ public class PlayerWandATK : MonoBehaviour
         PlayerWeaponParent.Instance.wandSprite.enabled = true;
         PlayerWeaponParent.Instance.physicATKSprite.enabled = false;
         if(PlayerWeaponParent.Instance.currentBullet<=0)return;
-        PlayerSound.Instance.PlayShootSound();//play the shoot sound
+        SoundControl.Instance.PlayerShootSoundPlay();;//play the shoot sound
         wandATKAnimator.SetTrigger("Shoot");
         PlayerWeaponParent.Instance.currentBullet--;
         PlayerWeaponParent.Instance.CheckEnergyBarLeft();

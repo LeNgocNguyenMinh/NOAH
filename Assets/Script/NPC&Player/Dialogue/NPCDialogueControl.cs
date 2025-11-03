@@ -48,12 +48,12 @@ public class NPCDialogueControl : MonoBehaviour
     }
     private void Interact()
     {
-        //Some UI panel is active
-        if(dialogueData == null || (UIMouseAndPriority.Instance.CanOpenThisUI() == false && isDialogueActive == false))
+        //Some UI panel is active, check if other panel is active, yes -> return, no -> continue 
+        if(dialogueData == null  || (UIMouseAndPriority.Instance.CanOpenThisUI() == false && isDialogueActive == false))
         {
             return;
         }
-        //in option choice line
+        //if in option choice line and previous line done typing and player not choose yet, return
         if(CheckOptionChoice() && !mainLineIsTyping && !mainLineRespondIsTyping && !isChoosen)
         {
             return;
@@ -119,6 +119,7 @@ public class NPCDialogueControl : MonoBehaviour
         else if(dialogueState == DialogueState.InQuestLineFinish)
         {
             fullText = currentMissionLine.finishQuestDialogue;
+            missionState = DialogueMissionState.FinishMission;
             questLineRespondIsTyping = true;
         }
         
@@ -291,10 +292,4 @@ public class NPCDialogueControl : MonoBehaviour
         TypeLine(DialogueState.InMainLineRespond, currentChoice.respond[i]);
         DialogueController.Instance.ClearChoice();
     }
-
-    public void MissionFinish()
-    {
-        missionState = DialogueMissionState.FinishMission;
-    }
-
 }
