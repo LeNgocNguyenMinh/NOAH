@@ -16,15 +16,15 @@ MonoBehaviour:
   availablePoint: 8
   playerName: Noah
   playerAge: 22
-  playerCurrentDamage: 20
-  playerWeaponDamage: 3
+  playerCurrentDamage: 1
+  playerWeaponDamage: 1
   playerBullet: 100
-  playerCoin: 174
+  playerCoin: 87
   playerSprite: {fileID: 1028573758, guid: 8dbb52ff946028241861992a9ffdaf42, type: 3}
   maxExp: 10
-  currentExp: 32
+  currentExp: 0
   maxHealth: 200
-  currentHealth: 54
+  currentHealth: 65
   defaultWeapon: {fileID: 11400000, guid: 936f99e7a6062d84982a54d0b3a2027d, type: 2}
   currentWeapon: {fileID: 11400000, guid: 936f99e7a6062d84982a54d0b3a2027d, type: 2}
   defaultHat: {fileID: 11400000, guid: b97c59e6fb5b1d44fa5409de59353bbe, type: 2}

@@ -37,6 +37,10 @@ public class MovingEnemyAttackState : MovingEnemyState
                 {
                     enemy.StateMachine.ChangeState(enemy.ChaseState);
                 }
+                else 
+                {
+                    enemy.StateMachine.ChangeState(enemy.IdleState);
+                }
             }
             else{
                 enemy.StateMachine.ChangeState(enemy.IdleState);

@@ -25,7 +25,7 @@ public class ProjectileVisual : MonoBehaviour
     private void FixedUpdate() {
         UpdateProjectileRotation();
         UpdateShadowPosition();
-        UpdateProjectileShadowRotation();
+        /* UpdateProjectileShadowRotation(); */
         
         float trajectoryProgressMagnitude = (transform.position - trajectoryStartPosition).magnitude;
         float trajectoryMagnitude = (target - trajectoryStartPosition).magnitude;

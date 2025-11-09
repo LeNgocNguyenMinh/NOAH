@@ -8,20 +8,14 @@ public class EnemyHitEffect : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private float splashDistance;
     [SerializeField] private GameObject hitEffectPrefab;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField]private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
     private Coroutine flashRoutine;
-    
-    void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalMaterial = spriteRenderer.material;
-        flashMaterial = new Material(flashMaterial);
-    }
-
 
     public void Flash()
     {
+        originalMaterial = spriteRenderer.material;
+        flashMaterial = new Material(flashMaterial);
         // If the flashRoutine is not null, then it is currently running.
         if (flashRoutine != null)
         {
@@ -31,11 +25,12 @@ public class EnemyHitEffect : MonoBehaviour
         }
 
         // Start the Coroutine, and store the reference for it.
-        flashRoutine = StartCoroutine(FlashRoutine(this.color));
+        flashRoutine = StartCoroutine(FlashRoutine(color));
     }
 
     private IEnumerator FlashRoutine(Color color)
     {
+        Debug.Log("EfectACtive");
         // Swap to the flashMaterial.
         spriteRenderer.material = flashMaterial;
 

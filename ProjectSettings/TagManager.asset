@@ -6,14 +6,11 @@ TagManager:
   tags:
   - ForeGround
   - BackGround
-  - Slime
   - Audio
   - NPC
   - Item
   - PlayerWand
   - PlayerSprite
-  - Inventory
-  - PlayerWeaponParent
   - LightManager
   - PlayerHitCollider
   - Boss
@@ -23,7 +20,6 @@ TagManager:
   - DashCDImage
   - SFX
   - Music
-  - BombDemonMini
   - LightBullet
   - WaterBullet
   - Sword

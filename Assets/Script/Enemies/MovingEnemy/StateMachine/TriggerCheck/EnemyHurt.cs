@@ -5,14 +5,14 @@ public class EnemyHurt : MonoBehaviour
     [SerializeField] private EnemyHealthControl healthControl;
     [SerializeField] private Transform dmgPopUpTrans;
     [SerializeField] private GameObject damagePopUpPref;
-    public void DamageReceive(float damage, Vector3 direction = default)
+    [SerializeField]private EnemyHitEffect enemyHitEffect;
+    public void DamageReceive(float damage, Vector2 direction = default)
     {
-        EnemyHitEffect enemyHitEffect = GetComponentInParent<EnemyHitEffect>();
         if(enemyHitEffect != null && direction != default)
         {
             Debug.Log("dfsfnsjdkhfsdbjfsdgfsdgfkjsdfkjsdh");
             enemyHitEffect.Flash();
-            enemyHitEffect.Splash( transform.position, (Vector2) direction);
+            enemyHitEffect.Splash( transform.position, direction);
         }
         int offSet = Random.Range(-1, 1);
         Vector3 spawnPos = dmgPopUpTrans.position + new Vector3(offSet, 0, 0);

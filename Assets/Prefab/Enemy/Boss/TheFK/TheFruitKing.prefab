@@ -1160,8 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHurt
   healthControl: {fileID: 8549682667463811723}
-  aoBoss: {fileID: 0}
-  fkBoss: {fileID: 4574488448380408651}
+  currentBoss: 1
   color: {r: 1, g: 0, b: 0, a: 0}
   dmgPopUpTrans: {fileID: 4764564264970629458}
   damagePopUpPref: {fileID: 2722009802675096760, guid: 405543868e778f449bd8daf304bf740b, type: 3}
@@ -1179,6 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHitEffect
   flashMaterial: {fileID: 2100000, guid: 4aa70327bcf82a044b2ef5e42e433f28, type: 2}
+  color: {r: 0, g: 0, b: 0, a: 0}
   duration: 0.5
   splashDistance: 1
   hitEffectPrefab: {fileID: 5851200870473605464, guid: 1a19b705ab3539641b3d7887f02f001d, type: 3}

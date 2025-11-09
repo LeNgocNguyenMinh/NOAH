@@ -54,7 +54,7 @@ public class UIInventoryController : MonoBehaviour
     }  
     private void MissionBoardOpen()
     {
-        if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
+        if(UIMouseAndPriority.Instance.OtherPanelIsActive())return;
         invCanvasGroup.alpha = 0f;
         missionCanvasGroup.alpha = 1f;
         missionPanel.SetAsLastSibling();
@@ -73,7 +73,7 @@ public class UIInventoryController : MonoBehaviour
     }
     private void InventoryOpen()
     {
-        if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
+        if(UIMouseAndPriority.Instance.OtherPanelIsActive())return;
         invCanvasGroup.alpha = 1f;
         missionCanvasGroup.alpha = 0f;
         inventoryOpen = true;

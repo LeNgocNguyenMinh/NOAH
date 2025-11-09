@@ -59,7 +59,7 @@ public class Player : MonoBehaviour, IPlayerMoveable
     }
     private void Update()
     {
-        if(PauseMenu.isPaused)return;
+        if(UIMouseAndPriority.Instance.OtherPanelIsActive())return;
         StateMachine.CurrentState.FrameUpdate();
     }
     public void CheckDashButton()

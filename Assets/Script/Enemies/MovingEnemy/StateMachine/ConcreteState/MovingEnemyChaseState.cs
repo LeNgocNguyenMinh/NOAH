@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovingEnemyChaseState : MovingEnemyState
 {
-    private Vector3 playerPos;
     private Vector3 direction;
     public MovingEnemyChaseState(MovingEnemy enemy, MovingEnemyStateMachine stateMachine) : base(enemy, stateMachine)
     {
@@ -21,8 +20,7 @@ public class MovingEnemyChaseState : MovingEnemyState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        playerPos = UnityEngine.Object.FindObjectOfType<Player>().GetComponent<Player>().transform.position;
-        direction = (playerPos - enemy.transform.position).normalized; 
+        direction = (Player.Instance.transform.position - enemy.transform.position).normalized; 
         enemy.Move(direction, enemy.ChaseSpeed);
         if(enemy.IsInAttackRange)
         {

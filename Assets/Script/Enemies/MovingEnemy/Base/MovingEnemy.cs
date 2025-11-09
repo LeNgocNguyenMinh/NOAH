@@ -6,8 +6,10 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
 {
     public bool IsInChaseRange { get; set; } = false;
     public bool IsInAttackRange { get; set; } = false;
+    [field: SerializeField]public GameObject HealthBarUI { get; set; }
+    [field: SerializeField]public Transform Body {get; set;}
     [field: Header("Moving Enemy Setting")]
-    [field: SerializeField]public GameObject mainObject { get; set; }
+    [field: SerializeField]public GameObject MainObject { get; set; }
     [field: SerializeField]public Rigidbody2D RB { get; set; }
     [field: SerializeField]public float WalkSpeed { get; set;}
     [field: SerializeField]public float WalkDuration { get; set;}
@@ -15,7 +17,7 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     [field: SerializeField]public float ChaseSpeed { get; set;}
     [field: SerializeField]public float MoveRange { get; set;}
     [field: SerializeField]public float AttackCoolDown { get; set;}
-
+    
     public bool IsFacingRight{ get; set;} = true;
     public MovingEnemyStateMachine StateMachine { get; set; }
     public MovingEnemyIdleState IdleState { get; set; }
@@ -26,7 +28,6 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     
     public Animator Animator { get; set; }
     public DropOnDie DropOnDie { get; set; }
-
     
     private void Awake()
     {
@@ -57,12 +58,12 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
         if(IsFacingRight && velocity.x < 0)
         {
             IsFacingRight = false;
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            Body.localScale = new Vector3(-Body.localScale.x, Body.localScale.y, Body.localScale.z);
         }
         else if(!IsFacingRight && velocity.x > 0)
         {
             IsFacingRight = true;
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            Body.localScale = new Vector3(-Body.localScale.x, Body.localScale.y, Body.localScale.z);
         }
     }
     public void SetIsInChaseRange(bool value)
@@ -87,7 +88,9 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     public enum AnimationTriggerType
     {
         WalkAnimFinish,
-        DeadAnimFinish,
+        DeadStartAnimFinish,
+        DeadFloatAnimFinish,
+        DeadBlurAnimFinish,
         AttackAnimFinish,
         IdleAnimFinish
     }
@@ -99,7 +102,11 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     }
     public void DestroyAfterDead()
     {
-        Destroy(mainObject);
+        Destroy(MainObject);
+    }
+    public void HideUI()
+    {
+        HealthBarUI.SetActive(false);
     }
     public void AnimationTriggerEvent(AnimationTriggerType triggerType)
     {

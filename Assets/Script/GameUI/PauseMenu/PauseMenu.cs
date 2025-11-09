@@ -50,7 +50,7 @@ public class PauseMenu : MonoBehaviour
                 PauseMenuPanelOff();
             }
             else{
-                if(!UIMouseAndPriority.Instance.CanOpenThisUI()) return;
+                if(UIMouseAndPriority.Instance.OtherPanelIsActive()) return;
                 PauseMenuPanelShow();
             }
         }

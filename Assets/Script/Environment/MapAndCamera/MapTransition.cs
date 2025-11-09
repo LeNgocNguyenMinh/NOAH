@@ -12,7 +12,6 @@ public class MapTransition : MonoBehaviour
     [SerializeField]private bool teleportPoint;
     enum Direction { Up, Down, Left, Right}
     [SerializeField]private float additivePos;
-    private GameObject playerObject;
     private void Awake()
     {
         confiner = FindObjectOfType<CinemachineConfiner>();
@@ -21,9 +20,8 @@ public class MapTransition : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Player"))
         {
-            playerObject = FindObjectOfType<Player>().gameObject;
             confiner.m_BoundingShape2D = mapBoundry;
-            UpdatePlayerPosition(playerObject);
+            UpdatePlayerPosition(Player.Instance.gameObject);
         }
     }
     public void UpdateCameraBoundry(PolygonCollider2D newMapBoundry)

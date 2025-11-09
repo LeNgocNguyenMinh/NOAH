@@ -35,7 +35,7 @@ public class PlayerStatusController : MonoBehaviour
                 });
             }
             else{
-                if(!UIMouseAndPriority.Instance.CanOpenThisUI()) return;
+                if(UIMouseAndPriority.Instance.OtherPanelIsActive()) return;
                 playerStatusUI.OpenPlayerStatus();
                 addAvailablePoint = GetComponent<AddAvailablePoint>();
                 addAvailablePoint.CheckAvailablePoint();                

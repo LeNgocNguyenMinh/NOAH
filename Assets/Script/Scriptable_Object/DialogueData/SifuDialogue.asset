@@ -17,9 +17,9 @@ MonoBehaviour:
   dialogueLine:
   - Hello my student!
   - Do you remember your name?
-  - Now, can y help me to get 2 apples so i  make a potion for you?
-  - Please rest first.
-  endDialogueLine: 000000000101
+  - Now, help me collect 2 apples so i can make a potion for you.
+  - Be careful.
+  endDialogueLine: 00000001
   typingSpeed: 0.05
   choice:
   - dialogueIndex: 1
@@ -29,13 +29,6 @@ MonoBehaviour:
     respond:
     - Oke, i see.
     - May be your head was effect by the dark magic.
-  - dialogueIndex: 2
-    choice:
-    - Oke.
-    - Let me rest a moment.
-    respond:
-    - Good, please do it fast.
-    - Oke i understand that.
   missionLine:
   - dialogueIndex: 2
     missionID: NPC_MS01

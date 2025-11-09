@@ -20,6 +20,7 @@ public class SpawnControl : MonoBehaviour
             StartCoroutine(LoadSceneAsync(saveData.saveScene));
         } 
         else{
+            Time.timeScale = 1f;
             PlayerStatusAfterRespawn();
             Player.Instance.transform.position = saveData.playerPosition;
         }

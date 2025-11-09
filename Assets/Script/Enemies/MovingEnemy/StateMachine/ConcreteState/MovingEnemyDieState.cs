@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MovingEnemyDieState : MovingEnemyState
 {
+    private int count = 0;
     public MovingEnemyDieState(MovingEnemy enemy, MovingEnemyStateMachine stateMachine) : base(enemy, stateMachine)
     {
     }  
-        public override void EnterState()
+    public override void EnterState()
     {
         base.EnterState();
         enemy.Stop();
-        enemy.Animator.SetTrigger("Dead");
-
+        enemy.Animator.SetTrigger("DeadStart");
+        enemy.HideUI();
+        enemy.DropOnDie.DropReward();
     }
     public override void ExitState()
     {
@@ -29,10 +31,17 @@ public class MovingEnemyDieState : MovingEnemyState
     public override void AnimationTriggerEvent(MovingEnemy.AnimationTriggerType triggerType)
     {
         base.AnimationTriggerEvent(triggerType);
-        if(triggerType == MovingEnemy.AnimationTriggerType.DeadAnimFinish)
+        if(triggerType == MovingEnemy.AnimationTriggerType.DeadStartAnimFinish)
         {
-            enemy.DropOnDie.DropReward();
-            enemy.DestroyAfterDead();
+            enemy.Animator.SetTrigger("DeadFloat");
+        }
+        if(triggerType == MovingEnemy.AnimationTriggerType.DeadFloatAnimFinish)
+        {
+            count++;
+            if(count == 3)
+            {
+                enemy.DestroyAfterDead();
+            }
         }
     }
 }

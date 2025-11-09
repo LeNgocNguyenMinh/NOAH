@@ -9,13 +9,13 @@ public class UIMouseAndPriority : MonoBehaviour
     {
         Instance = this;   
     }
-    public bool CanOpenThisUI()//return false if one of the UI is Open
+    public bool OtherPanelIsActive()//return false if one of the UI is Open
     {
         if(UIInventoryController.inventoryOpen || UIInventoryController.missionBoardOpen || PlayerStatusUI.playerStatusUIOpen 
         || PauseMenu.isPaused || ShopController.Instance.shopPanelIsOpen || NPCDialogueControl.isDialogueActive)
         {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 }

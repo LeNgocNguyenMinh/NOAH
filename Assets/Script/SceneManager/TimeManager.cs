@@ -5,17 +5,21 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class TimeManager : MonoBehaviour
 {
+    [Header("Clock Components")]
     [SerializeField]private Transform clockHourStick;//Transform of the hour stick, for rotate purpose 
     [SerializeField]private Transform clockMinuteStick;//Transform of the minute stick, for rotate purpose 
     [SerializeField]private TextMeshProUGUI amAndPmBox;//Show AM or PM
     public TextMeshProUGUI timeDisplay;//Display Minute to check or for who want easier clock
     public TextMeshProUGUI dayDisplay;//Display the date
     public Gradient sunLightGradient;//Create the change of the gradient for sun light
+    [Header("Effect By Time")]
     [SerializeField]private GameObject lightSource = null;//Create the list of the light such as light from house
-
+    [SerializeField]private ParticleSystem fireFly;
+    private bool startNightMode = false;
     public Light2D[] sunLight; //List of Sunlight 
     private string[] seasons = {"Spring", "Summer", "Autumn", "Winter"};
     private string[] dateList = {"Mon", "Tue", "Wed","Thu", "Fri", "Sat", "Sun"};
@@ -99,10 +103,20 @@ public class TimeManager : MonoBehaviour
         {
             if((19 <= hour && hour <= 24)||(0<=hour && hour <=3))
             {
-                lightSource.SetActive(true);
+                if(startNightMode == false)
+                {
+                    lightSource.SetActive(true);
+                    fireFly.Play();
+                    startNightMode = true;    
+                }
             }
             else{
-                lightSource.SetActive(false);
+                if(startNightMode == true)
+                {
+                    lightSource.SetActive(false);
+                    fireFly.Stop();
+                    startNightMode = false;    
+                }
             }
         } 
         float hourAngle = (hour + min / 60f) * (360f / 12f); // Calculate rotate angle for hour stick

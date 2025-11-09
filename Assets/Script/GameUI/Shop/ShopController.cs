@@ -34,7 +34,7 @@ public class ShopController : MonoBehaviour
         }
         else 
         {
-            if(!UIMouseAndPriority.Instance.CanOpenThisUI())return;
+            if(UIMouseAndPriority.Instance.OtherPanelIsActive())return;
             if(!canOpenShop)
             {
                 NotifPopUp.Instance.ShowNotification("Shop open at 10 A.M and close at 10 P.M!!");

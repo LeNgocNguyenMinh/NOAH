@@ -50,6 +50,7 @@
             else if (hitInfo.tag == "Enemy")
             {
                 EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
+                direction = (hitInfo.gameObject.transform.position - Player.Instance.transform.position).normalized;
                 enemy.DamageReceive(damageAmount + playerStatus.playerWeaponDamage, direction);//Enemy hurt
                 BulletDestroy();
             }
