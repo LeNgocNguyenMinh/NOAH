@@ -6,26 +6,31 @@
     {
         [SerializeField]private PlayerStatus playerStatus;
         [SerializeField]private GameObject bulletHitParticle;
+        [SerializeField]private Rigidbody2D rb;
         private float maxDistance = 15f;//Max distance bullet go before disappear
-        private Vector3 startPosition;//Bullet Spawn point
+        private Vector2 startPosition;//Bullet Spawn point
         private float damageAmount;//Damage each Bullet
-        private Projectile projectile;
-        private Vector3 target;
-        private Vector3 direction;
+        /* private Projectile projectile; */
+        private Vector2 target;
+        private Vector2 direction;
         private bool isDestroy = false;
+        private float speed;
 
-        private void Start()
+        public void SetValue(float speed)
         {
-            projectile = GetComponent<Projectile>();
             startPosition = transform.position;
-            target = projectile.target;
+            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            direction = (target - startPosition).normalized;
+            rb.linearVelocity = direction * speed;
+            this.speed = speed;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            if((Vector3.Distance(startPosition, transform.position)>=maxDistance || (Vector3.Distance(transform.position, target) <= 0.3f)) && !isDestroy)
+            if((Vector2.Distance(startPosition, transform.position)>=maxDistance || (Vector2.Distance(transform.position, target) <= 0.01f)) && !isDestroy && target != null)
             {
                 BulletDestroy();
+                return;
             }
         }
         public void BulletHitParticleDestroy()

@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private Sprite resumeSprite;
 
     public static bool isPaused = false;
-    private bool isOver = false;
+    public static bool isOver = false;
 
     private void Awake()
     {
@@ -40,21 +40,6 @@ public class PauseMenu : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(isOver)return;
-            if(isPaused)
-            {
-                PauseMenuPanelOff();
-            }
-            else{
-                if(UIMouseAndPriority.Instance.OtherPanelIsActive()) return;
-                PauseMenuPanelShow();
-            }
-        }
-    }
     //Open pause menu, for pause game or game over
     public void PauseMenuPanelShow(bool isDead = false)
     {

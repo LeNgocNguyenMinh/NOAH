@@ -127,8 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2c494f0c5d4f94080fcbeb430cc0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentObject: {fileID: 5757221238128967508}
-  animator: {fileID: 0}
 --- !u!1 &5169877815460791675
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +216,6 @@ GameObject:
   - component: {fileID: 5581471062778438460}
   - component: {fileID: 1329540661271885818}
   - component: {fileID: 2549443716270592262}
-  - component: {fileID: 7229414184367010044}
   m_Layer: 0
   m_Name: SummonStone
   m_TagString: Untagged
@@ -300,18 +297,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838cefa7fe7167e42bc9e0c9ab726df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossInteractive: {fileID: 7229414184367010044}
   animator: {fileID: 5225649414311805901}
---- !u!114 &7229414184367010044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5757221238128967508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea3edd039fd4a0746bbc6cfd0cff50b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   linkToBoss: 0

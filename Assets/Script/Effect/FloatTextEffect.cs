@@ -9,7 +9,7 @@ public class FloatTextEffect : MonoBehaviour
     public float duration = 1f;         // Thời gian một chu kỳ đi lên/đi xuống
     public float phaseOffset = 0f;      // Độ trễ pha (nếu cần dùng cho nhiều text khác nhau)
 
-    private Vector3 startPos;
+    private Vector2 startPos;
 
     void OnEnable()
     {

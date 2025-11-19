@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class AnimBehaviourGeneral : MonoBehaviour
 {
-    [SerializeField]private GameObject currentObject;
-    [SerializeField]private Animator animator;
-    public void BreakAnim()
+    public void DestroyObject()
     {
-        animator.SetTrigger("Break");
-    }
-    public void DestroyStone()
-    {
-        Destroy(currentObject);
+        Destroy(gameObject);
     }
 }

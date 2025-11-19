@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: EneryBarLeft
     originalName: 
-    pivot: {x: 1.2, y: -0.25}
+    pivot: {x: -3, y: -0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,8 +137,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 20
-      height: 48
+      width: 3
+      height: 14
     spriteID: 6ffa8183d736d384ca3b124b4df3436d
     spriteBone: []
     spriteOutline: []
@@ -167,10 +167,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 12
-        width: 20
-        height: 48
+        x: 25
+        y: 1
+        width: 3
+        height: 14
       spriteId: 6ffa8183d736d384ca3b124b4df3436d
     linkedCells: []
     tileCells: []
@@ -193,5 +193,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
-  previousTextureSize: {x: 32, y: 64}
+  canvasSize: {x: 32, y: 32}
+  previousTextureSize: {x: 16, y: 32}

@@ -9,13 +9,13 @@ public class PlayerMeleeHit : MonoBehaviour
         if(hitInfo.tag == "Enemy")
         {
             EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
-            PlayerWeaponParent.Instance.HitCountIncrease();
+            PlayerMagazine.Instance.HitCountIncrease();
             enemy.DamageReceive(1);//Enemy hurt
         }
         else if(hitInfo.tag == "Boss")
         {
             BossHurt bossHurt = hitInfo.GetComponent<BossHurt>();
-            PlayerWeaponParent.Instance.HitCountIncrease();
+            PlayerMagazine.Instance.HitCountIncrease();
             bossHurt.DamageReceive(1);
         }
     }

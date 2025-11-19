@@ -15,26 +15,14 @@ public class PlayerWeaponParent : MonoBehaviour
     [SerializeField]private Transform wandShadowRotate;
     public float delayWandCount = 0f; // Delay count for wand attack, used to prevent multiple attacks in a short time
     [Header("----EnergyBar----")]
-    [SerializeField]private Image bulletEnergyFront;
-    [SerializeField]private Image bulletEnergyBack;
-    [SerializeField]private Image hitEnergyFront;
-    [SerializeField]private Image hitEnergyBack;
-    private float energyMainTime = 0.3f;
-    private float energySlowerTime = 1f;
-    private float hitMainTime = 0.1f;
-    private float hitSlowerTime = 0.3f;
     [SerializeField]private int requireHit;
-    [SerializeField]private TextMeshProUGUI text;
-    private int hitCount = 0;//Hit count
+    private int currentHitCount = 0;//Hit count
     private Vector3 mousePos;
-    private int magazine;
-    public int currentBullet; 
+    private int magazine = 0;
+    private int currentBullet = 0; 
     public bool playerCanATK = true; // Can player shoot or not, set to false when player is reloading or something else
     private GameObject bulletPrefap;
-/*     [Header("----TestBullet----")]
-    [SerializeField]private GameObject testBullet;
-    [SerializeField]private Vector2 groundDispenseVelocity;
-    [SerializeField]private Vector2 verticalDispenseVelocity; */
+
     private void Awake()
     {
         if (Instance == null)
@@ -109,44 +97,44 @@ public class PlayerWeaponParent : MonoBehaviour
     public void UpdateMagazine()//Trigger when player Spend point in magazine
     {
         magazine = playerStatus.playerBullet;
-        text.text = $"{currentBullet}/{magazine}";
+        PlayerMagazine.Instance.UpdateMagazineText();
     }
-    
-    public void CheckEnergyBarLeft()
+    public int GetCurrentBullet()
     {
-        float target = currentBullet / (float)magazine;
-        if(bulletEnergyFront.fillAmount > bulletEnergyBack.fillAmount)
-        {
-            bulletEnergyBack.fillAmount = bulletEnergyFront.fillAmount;
-        }
-        bulletEnergyFront.DOFillAmount(target, energyMainTime).SetEase(Ease.Linear);
-        bulletEnergyBack.DOFillAmount(target, energySlowerTime).SetEase(Ease.Linear);
+        return currentBullet;
     }
-    public void CheckEnergyBarRight()
+    public void SetCurrentBullet(int value)
     {
-        float target = hitCount / (float)requireHit;
-        if(hitEnergyFront.fillAmount > hitEnergyBack.fillAmount)
-        {
-            hitEnergyBack.fillAmount = hitEnergyFront.fillAmount;
-        }
-        hitEnergyFront.DOFillAmount(target, hitMainTime).SetEase(Ease.Linear);
-        hitEnergyBack.DOFillAmount(target, hitSlowerTime).SetEase(Ease.Linear);
-        if(hitCount >= requireHit)
-        {
-            if(currentBullet < magazine)
-            {
-                currentBullet++;
-                CheckEnergyBarLeft();
-                UpdateMagazine();
-            }
-            hitCount = 0; // Reset hit count after charging energy
-            CheckEnergyBarRight();
-        }
+        currentBullet = value;
     }
-    public void HitCountIncrease()
+    public void SubCurrentBullet()
     {
-        hitCount++;
-        CheckEnergyBarRight();
+        currentBullet--;
+    }
+    public void AddCurrentBullet()
+    {
+        currentBullet++;
+    }
+    public int GetCurrentHitCount()
+    {
+        return currentHitCount;
+    }
+    public void SetCurrentHitCount(int value)
+    {
+        currentHitCount = value;
+    }
+    public void AddCurrentHitCount()
+    {
+        currentHitCount ++;
+    }
+    public int GetMagazine()
+    {
+        magazine = playerStatus.playerBullet;
+        return magazine;
+    }
+    public int GetRequireHit()
+    {
+        return requireHit;
     }
 }
 
