@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7476459a54eb7498184a32700548f8, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  playerLevel: 5
-  availablePoint: 8
+  playerLevel: 1
+  availablePoint: 3
   playerName: Noah
   playerAge: 22
-  playerCurrentDamage: 1
-  playerWeaponDamage: 1
-  playerBullet: 100
-  playerCoin: 87
+  playerCurrentDamage: 20
+  playerWeaponDamage: 3
+  playerBullet: 6
+  playerCoin: 250
   playerSprite: {fileID: 1028573758, guid: 8dbb52ff946028241861992a9ffdaf42, type: 3}
-  maxExp: 10
+  maxExp: 40
   currentExp: 0
   maxHealth: 200
-  currentHealth: 65
+  currentHealth: 200
   defaultWeapon: {fileID: 11400000, guid: 936f99e7a6062d84982a54d0b3a2027d, type: 2}
   currentWeapon: {fileID: 11400000, guid: 936f99e7a6062d84982a54d0b3a2027d, type: 2}
   defaultHat: {fileID: 11400000, guid: b97c59e6fb5b1d44fa5409de59353bbe, type: 2}

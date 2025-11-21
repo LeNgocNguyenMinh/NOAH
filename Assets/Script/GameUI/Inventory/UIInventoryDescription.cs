@@ -26,6 +26,11 @@ public class UIInventoryDescription : MonoBehaviour
         itemInDescription = item;
         if(item.itemSprite != null)
         {
+            itemImageBox.enabled = true;
+            itemImageBox.sprite = item.itemSprite;
+            itemImageBox.SetNativeSize();
+            itemNameBox.text = item.itemName +"";
+            itemDescriptionBox.text = item.itemDescription + ""; 
             if(item.itemID.Contains("WP"))//Mean only weapon has upgrade function available
             {
                 itemFunction.gameObject.SetActive(true);
@@ -34,7 +39,11 @@ public class UIInventoryDescription : MonoBehaviour
                 upgradeButton.SetActive(true);
                 weaponLevelText.text = "Level " + item.weaponLevel;
                 requireForUpgradeText.text = playerStatus.playerCoin + "/" + item.materialNeedToUpgrade;
-                this.itemFunction.text = "Damage + " + item.weaponDamage;
+                itemFunction.text = "Damage + " + item.weaponDamage;
+                RectTransform rectTransform = itemImageBox.rectTransform;
+                rectTransform.sizeDelta = new Vector2(
+                itemImageBox.sprite.rect.width * 4f,
+                itemImageBox.sprite.rect.height * 4f);
             }
             else if(item.itemID.Contains("HP"))//else then show the item information
             {
@@ -42,7 +51,7 @@ public class UIInventoryDescription : MonoBehaviour
                 weaponLevelBox.SetActive(false);
                 requireForUpgrade.SetActive(false);
                 upgradeButton.SetActive(false);
-                this.itemFunction.text = "Health recover + " + item.healthRecover;
+                itemFunction.text = "Health recover + " + item.healthRecover;
             }
             else
             {
@@ -52,12 +61,6 @@ public class UIInventoryDescription : MonoBehaviour
                 itemFunction.text = null;
                 itemFunction.gameObject.SetActive(false);
             }
-            
-            itemImageBox.enabled = true;
-            itemImageBox.sprite = item.itemSprite;
-            itemImageBox.SetNativeSize();
-            itemNameBox.text = item.itemName +"";
-            itemDescriptionBox.text = item.itemDescription + ""; 
         }
         else{
             ItemHideInformation();

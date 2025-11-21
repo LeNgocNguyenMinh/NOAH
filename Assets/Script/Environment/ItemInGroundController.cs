@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class ItemInGroundController : MonoBehaviour
 {
+    public static ItemInGroundController Instance;
     [SerializeField]private List<CollectableItems> itemsInGround = new List<CollectableItems>();
     public List<ItemInGroundSaveData> listItems = new List<ItemInGroundSaveData>();
     public List<GameObject> itemInGroudPrefab;
-    private ItemDictionary itemDictionary;
-
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
     public void SetItemIsCollect(string itemID, Vector3 pos)
     {
         for(int i = 0; i < listItems.Count; i++)
@@ -40,7 +44,6 @@ public class ItemInGroundController : MonoBehaviour
     }
     public void SetItemInGround(List<ItemInGroundSaveData> itemGroundData)
     {
-        itemDictionary = FindObjectOfType<ItemDictionary>().GetComponent<ItemDictionary>();
         listItems = itemGroundData;
         for(int i = 0; i < itemInGroudPrefab.Count; i++)
         {
@@ -50,7 +53,7 @@ public class ItemInGroundController : MonoBehaviour
         {
             if(!itemGroundData[i].isCollect)
             {
-                itemInGroudPrefab.Add(Instantiate(itemDictionary.GetItemInfo(itemGroundData[i].itemID).itemPrefab, itemGroundData[i].itemPos, Quaternion.identity));
+                itemInGroudPrefab.Add(Instantiate(ItemDictionary.Instance.GetItemInfo(itemGroundData[i].itemID).itemPrefab, itemGroundData[i].itemPos, Quaternion.identity));
             }
         }
     }

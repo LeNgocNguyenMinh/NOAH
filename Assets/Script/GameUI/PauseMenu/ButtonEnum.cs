@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonEnum : MonoBehaviour
 {
-    public enum ButtonType
+    public enum PauseMenuButtonType
     {
         ResumeBtn,
         SettingBtn,
@@ -12,8 +12,18 @@ public class ButtonEnum : MonoBehaviour
         MainMenuConfirm,
         QuitBtn,
         QuitConfirm,
-        BackToPauseMenu
-    }
+        BackToPauseMenu,
 
-    public ButtonType buttonType;
+    }
+    public enum MainMenuButtonType
+    {
+        NewGameBtn,
+        LoadBtn,
+        SettingBtn,
+        QuitBtn,
+        NewGameConfirm,
+        QuitConfirm,
+    }
+    public PauseMenuButtonType pauseBtnType;
+    public MainMenuButtonType mainMenuBtnType;
 }

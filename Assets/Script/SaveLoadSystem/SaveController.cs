@@ -12,12 +12,6 @@ public class SaveController : MonoBehaviour
     private string saveLocation;
     private string newGameSaveLocation;
     private SaveData existingData;
-    private UIInventoryPage uiInventoryPage;
-    private HotBarManager hotBarManager;
-    private ShopController shopController;
-    private TimeManager timeManager;
-    private ItemInGroundController itemInGroundController;
-    private MissionManager missionManager;
     [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private List<Item> weaponList;
     [SerializeField]private MissionScriptable missionScriptable;
@@ -25,85 +19,76 @@ public class SaveController : MonoBehaviour
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         newGameSaveLocation = Path.Combine(Application.persistentDataPath, "newGameData.json");
-        Instance = this;
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     
     public void SaveGame()
     {
+        saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         existingData = File.Exists(saveLocation) ? 
             JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation)) : 
             new SaveData();
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
-        hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
-        timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
-        itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
-        missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
         SaveData saveData = new SaveData
         {
             saveScene = SceneManager.GetActiveScene().name,
-            playerPosition = FindObjectOfType<Player>().transform.position,
-            inventorySaveData = uiInventoryPage?.GetInventoryItems(),
+            playerPosition = Player.Instance.transform.position,
+            inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
             mapBoundary = existingData.mapBoundary,
-            hotBarSaveData = hotBarManager?.GetHotBarItems(),
-            shopSaveData = existingData.shopSaveData,
-            itemInGroundSaveData = itemInGroundController?.GetListItemInGround(),
-            timeSaveData = timeManager?.GetTime(),
+            hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
+            shopSaveData = ShopController.Instance.GetListItemInShop(),
+            itemInGroundSaveData = ItemInGroundController.Instance.GetListItemInGround(),
+            timeSaveData = TimeManager.Instance.GetTime(),
             playerSaveData = playerStatus?.GetPlayerInfo(),
-            missionSaveData = missionManager?.GetMissionList()
+            missionSaveData = MissionManager.Instance.GetMissionList(),
         };
         for(int i = 0; i < weaponList.Count; i++)
         {
             saveData.weaponListData.Add(weaponList[i].GetWeaponData());
         }
-        if(FindObjectOfType<CinemachineConfiner>()!=null)
+      /*   if(FindObjectOfType<CinemachineConfiner>()!=null)
         {
             if(FindObjectOfType<CinemachineConfiner>()?.m_BoundingShape2D.gameObject.name!=null)
             {
                 saveData.mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name;
             }
-        }
-        if(FindObjectOfType<ShopController>()!=null)
-        {
-            shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
-            saveData.shopSaveData = shopController.GetListItemInShop();
-        }
+        } */
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
         NotifPopUp.Instance.ShowNotification("Save success.");
     }
     public void SaveGameByBed()
     {
+        saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         existingData = File.Exists(saveLocation) ? 
             JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation)) : 
             new SaveData();
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
-        hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
-        timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
-        missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
         SaveData saveData = new SaveData
         {
             saveScene = SceneManager.GetActiveScene().name,
-            playerPosition = FindObjectOfType<Player>().transform.position,
-            inventorySaveData = uiInventoryPage?.GetInventoryItems(),
+            playerPosition = Player.Instance.transform.position,
+            inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
             mapBoundary = existingData.mapBoundary,
-            hotBarSaveData = hotBarManager?.GetHotBarItems(),
+            hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
             shopSaveData = existingData.shopSaveData,
             itemInGroundSaveData = existingData.itemInGroundSaveData,
-            timeSaveData = timeManager?.GetTimeSkip(),
+            timeSaveData = TimeManager.Instance.GetTimeSkip(),
             playerSaveData = playerStatus?.GetPlayerInfo(),
-            missionSaveData = missionManager?.GetMissionList()
+            missionSaveData = MissionManager.Instance.GetMissionList()
         };
-        if(FindObjectOfType<CinemachineConfiner>()!=null)
+        /* if(FindObjectOfType<CinemachineConfiner>()!=null)
         {
             if(FindObjectOfType<CinemachineConfiner>()?.m_BoundingShape2D.gameObject.name!=null)
             {
                 saveData.mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name;
             }
-        }
-        if(FindObjectOfType<ShopController>()!=null)
-        {
-            shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
-            saveData.shopSaveData = shopController.GetListItemInShop();
-        }
+        } */
         for(int i = 0; i < weaponList.Count; i++)
         {
             saveData.weaponListData.Add(weaponList[i].GetWeaponData());
@@ -111,145 +96,39 @@ public class SaveController : MonoBehaviour
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
         NotifPopUp.Instance.ShowNotification("Save success.");
     }
-    public void LoadSave(Vector3 playerPos = new Vector3(), List<InventorySaveData> inventoryItemsTMP = null, List<InventorySaveData> hotBarItemsTMP = null, List<ItemInGroundSaveData> listItemsTMP = null, TimeSaveData timeDataTMP = null, PlayerSaveData playerDataTMP = null, MissionSaveData missionSaveDataTMP = null, bool loadWeaponData = true)
+    public void LoadSave()
     {
+        saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         if(File.Exists(saveLocation))
         {
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
-            if(playerPos != Vector3.zero)
-            {
-                FindObjectOfType<Player>().transform.position = playerPos;
-            }
-            else{
-                FindObjectOfType<Player>().transform.position = saveData.playerPosition;
-            }
-            if(FindObjectOfType<CinemachineConfiner>()!=null && saveData.mapBoundary != null)
-            {
-                FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
-            }
-            uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
-            timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
-            hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
-            itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
-            shopController = FindObjectOfType<ShopController>()?.GetComponent<ShopController>();
-            missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
-
-            if(inventoryItemsTMP != null && uiInventoryPage != null)
-            {
-                uiInventoryPage.SetInventoryItems(inventoryItemsTMP);
-            }
-            else if(saveData.inventorySaveData!=null && uiInventoryPage != null)
-            {
-                uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
-            }
-
-            if(hotBarItemsTMP != null && hotBarManager != null)
-            {
-                hotBarManager.SetHotBarItems(hotBarItemsTMP);
-            }
-            else if(saveData.hotBarSaveData != null && hotBarManager != null)
-            {
-                hotBarManager.SetHotBarItems(saveData.hotBarSaveData);
-            }
-
-            if(saveData.shopSaveData != null && shopController != null)
-            {
-                shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
-                shopController.SetListItemInShop(saveData.shopSaveData);
-            }
-
-            if(timeDataTMP != null && timeManager != null)
-            {
-                timeManager.SetTime(timeDataTMP);
-            }
-            else if(saveData.timeSaveData != null && timeManager != null)
-            {
-                timeManager.SetTime(saveData.timeSaveData);
-            }
-
-            if(listItemsTMP != null && itemInGroundController != null)
-            {
-                itemInGroundController.SetItemInGround(listItemsTMP);
-            }
-            else if(saveData.itemInGroundSaveData != null && itemInGroundController != null)
-            {
-                itemInGroundController.SetItemInGround(saveData.itemInGroundSaveData);
-            }
-
-            if(playerDataTMP != null)
-            {
-                playerStatus.SetPlayerInfo(playerDataTMP);
-            }
-            else if(saveData.playerSaveData!=null)
-            {
-                playerStatus.SetPlayerInfo(saveData.playerSaveData);
-            }
-            if(missionSaveDataTMP != null)
-            {
-                missionManager.SetMissionList(missionSaveDataTMP);
-            }
-            else if(saveData.missionSaveData != null && missionManager != null)
-            {
-                missionManager.SetMissionList(saveData.missionSaveData);
-            }
-            if(loadWeaponData == true)
-            {
-                for(int i = 0; i < weaponList.Count; i++)
-                {
-                    weaponList[i].SetWeaponData(saveData.weaponListData[i]);
-                }
-            }            
+            Player.Instance.transform.position = saveData.playerPosition;
+            UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
+            UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
+            HotBarManager.Instance.SetHotBarItems(saveData.hotBarSaveData);
+            ShopController.Instance.SetListItemInShop(saveData.shopSaveData);
+            TimeManager.Instance.SetTime(saveData.timeSaveData);
+            ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
+            playerStatus.SetPlayerInfo(saveData.playerSaveData);
+            MissionManager.Instance.SetMissionList(saveData.missionSaveData);          
         }
     }
 
     public void LoadNewGame()
     {
+        newGameSaveLocation = Path.Combine(Application.persistentDataPath, "newGameData.json");
         if(File.Exists(newGameSaveLocation))
         {
-            SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(newGameSaveLocation));
-            FindObjectOfType<Player>().transform.position = saveData.playerPosition;
-            FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
-            uiInventoryPage = FindObjectOfType<UIInventoryPage>()?.GetComponent<UIInventoryPage>();
-            timeManager = FindObjectOfType<TimeManager>()?.GetComponent<TimeManager>();
-            hotBarManager = FindObjectOfType<HotBarManager>()?.GetComponent<HotBarManager>();
-            itemInGroundController = FindObjectOfType<ItemInGroundController>()?.GetComponent<ItemInGroundController>();
-            missionManager = FindObjectOfType<MissionManager>()?.GetComponent<MissionManager>();
-            if(saveData.inventorySaveData!=null)
-            {
-                uiInventoryPage.SetInventoryItems(saveData.inventorySaveData);
-            }
-            if(saveData.hotBarSaveData!=null)
-            {
-                hotBarManager.SetHotBarItems(saveData.hotBarSaveData);
-            }
-            if(FindObjectOfType<ShopController>()!=null)
-            {
-                if(saveData.shopSaveData!=null)
-                {
-                    shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
-                    shopController.SetListItemInShop(saveData.shopSaveData);
-                }
-            }
-            if(saveData.timeSaveData!=null)
-            {
-                timeManager.SetTime(saveData.timeSaveData);
-            }
-            if(saveData.playerSaveData!=null)
-            {
-                playerStatus.SetPlayerInfo(saveData.playerSaveData);
-            }
-            if(saveData.itemInGroundSaveData!=null)
-            {
-                itemInGroundController.SetItemInGround(saveData.itemInGroundSaveData);
-            }
-            for(int i = 0; i < weaponList.Count; i++)
-            {
-                weaponList[i].SetWeaponDefaultData();
-            }
-            if(missionManager != null)
-            {
-                missionManager.SetMissionList(saveData.missionSaveData);
-            }
+            SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(newGameSaveLocation));    
+            Player.Instance.transform.position = saveData.playerPosition;
+            UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
+            UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
+            HotBarManager.Instance.SetHotBarItems(saveData.hotBarSaveData);
+            ShopController.Instance.SetListItemInShop(saveData.shopSaveData);
+            TimeManager.Instance.SetTime(saveData.timeSaveData);
+            ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
+            playerStatus.SetPlayerInfo(saveData.playerSaveData);
+            MissionManager.Instance.SetMissionList(saveData.missionSaveData);     
             SaveGame();
         }
         else{
@@ -286,8 +165,8 @@ public class SaveController : MonoBehaviour
                     ""playerCoinData"": 250,
                     ""maxExpData"": 40.0,
                     ""currentExpData"": 0.0,
-                    ""maxHealthData"": 200.0,
-                    ""currentHealthData"": 200.0,
+                    ""maxHealthData"": 20.0,
+                    ""currentHealthData"": 20.0,
                     ""currentWeaponID"": ""WP_03"",
                     ""currentHatID"": ""None"",
                     ""currentCoatID"": ""None""

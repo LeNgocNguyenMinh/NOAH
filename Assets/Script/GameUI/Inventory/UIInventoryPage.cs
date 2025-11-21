@@ -18,9 +18,7 @@ public class UIInventoryPage : MonoBehaviour
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
     public bool descriptionPanelOpen = false;
     [SerializeField]private int inventorySize;
-    
-    ///
-    private ItemDictionary itemDictionary;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -72,6 +70,7 @@ public class UIInventoryPage : MonoBehaviour
     }
     public void CloseDescriptionPanel()
     {
+        UIInventoryDescription.Instance.ItemHideInformation();
         descriptionPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             descriptionPanelOpen = false;
@@ -176,13 +175,12 @@ public class UIInventoryPage : MonoBehaviour
     }
     public void SetInventoryItems(List<InventorySaveData> invData)
     {
-        itemDictionary = FindObjectOfType<ItemDictionary>().GetComponent<ItemDictionary>();
         InitializeInventoryUI();
         for(int i = 0; i < invData.Count; i++)
         {
             if(invData[i].itemID != null)
             {
-                listOfUIItems[invData[i].slotIndex].AddItem(itemDictionary.GetItemInfo(invData[i].itemID), invData[i].itemQuantity);
+                listOfUIItems[invData[i].slotIndex].AddItem(ItemDictionary.Instance.GetItemInfo(invData[i].itemID), invData[i].itemQuantity);
             }
         }
     }

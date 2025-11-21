@@ -10450,7 +10450,7 @@ PrefabInstance:
       objectReference: {fileID: 3837684797153672487}
     - target: {fileID: 1588026988894970244, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
       propertyPath: inventorySize
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1588026988894970244, guid: cc31065569c30ad45b5cdd885a0855fd, type: 3}
       propertyPath: descriptionPanel

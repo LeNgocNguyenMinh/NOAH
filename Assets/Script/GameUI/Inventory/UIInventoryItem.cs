@@ -57,8 +57,11 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         }
         else if(itemID.Contains("WP"))
         {
-            this.itemImage.SetNativeSize();
             this.quantityText.enabled = false;
+            RectTransform rectTransform = this.itemImage.rectTransform;
+            rectTransform.sizeDelta = new Vector2(
+            this.itemImage.sprite.rect.width * 3f,
+            this.itemImage.sprite.rect.height * 3f);
         }
         else if(itemID.Contains("Gem"))
         {

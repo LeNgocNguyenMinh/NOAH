@@ -17,38 +17,44 @@ public class ShopController : MonoBehaviour
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
     public bool canOpenShop = false;
-    private ItemDictionary itemDictionary;
     private void Awake() 
     {
         if(Instance == null) Instance = this;
     }
-    public void CheckShopUI()
+    public void ShopUIInteract()
     {
         if(shopPanelIsOpen)
         {
-            shopPanelIsOpen = false;
-            panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
-            {
-                Time.timeScale = 1f;
-            });
+            ShopUIClose();
         }
         else 
         {
-            if(UIMouseAndPriority.Instance.OtherPanelIsActive())return;
-            if(!canOpenShop)
-            {
-                NotifPopUp.Instance.ShowNotification("Shop open at 10 A.M and close at 10 P.M!!");
-                return;
-            }
-            UpdateWhenOpen();
-            shopPanelIsOpen = true;
-            panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
-            {
-                Time.timeScale = 0f;
-            });
+            ShopUIOpen();
         }
     }
-    
+    public void ShopUIOpen()
+    {
+        if(UIMouseAndPriority.Instance.OtherPanelIsActive())return;
+        if(!canOpenShop)
+        {
+            NotifPopUp.Instance.ShowNotification("Shop open at 10 A.M and close at 10 P.M!!");
+            return;
+        }
+        UpdateWhenOpen();
+        shopPanelIsOpen = true;
+        panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            Time.timeScale = 0f;
+        });
+    }
+    public void ShopUIClose()
+    {
+        shopPanelIsOpen = false;
+        panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        {
+            Time.timeScale = 1f;
+        });
+    }
     public void UpdateWhenOpen()
     {
         playerCoin.text = playerStatus.playerCoin.ToString();
@@ -79,10 +85,9 @@ public class ShopController : MonoBehaviour
     }
     public void SetListItemInShop(List<ShopSaveData> shopData)
     {
-        itemDictionary = FindObjectOfType<ItemDictionary>().GetComponent<ItemDictionary>();
         for(int i = 0; i < shopData.Count; i++)
         {
-            listOfItemSlot[i].SetItem(itemDictionary.GetItemInfo(shopData[i].itemID));
+            listOfItemSlot[i].SetItem(ItemDictionary.Instance.GetItemInfo(shopData[i].itemID));
             listOfItemSlot[i].SetNumberOfItem(shopData[i].itemLeftNumber);
         }
     }

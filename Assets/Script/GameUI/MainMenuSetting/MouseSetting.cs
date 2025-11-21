@@ -21,7 +21,7 @@ public class MouseSetting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(UIMouseAndPriority.Instance.OtherPanelIsActive() || mouseShouldVisible)//Mean one of the UI is Now open
+        if(UIMouseAndPriority.Instance.OtherPanelIsActive() || mouseShouldVisible || UIMouseAndPriority.Instance.IsInLimitInteractPanel())//Mean one of the UI is Now open
         {
             Cursor.visible = true;
             return;

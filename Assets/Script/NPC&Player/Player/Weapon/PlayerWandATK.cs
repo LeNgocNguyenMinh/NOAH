@@ -11,12 +11,8 @@ public class PlayerWandATK : MonoBehaviour
     [SerializeField]private Transform firePoint;
     [SerializeField]private float wandBulletSpeed;
     [SerializeField]private float canShootRadius;
-    private int currentBullet;
-    private int magazine;
     private GameObject bulletPrefap;
-   /*  [SerializeField] private float projectileMaxMoveSpeed;
-    [SerializeField] private float projectileMaxHeight; */
-    private Vector3 target;
+    private Vector2 direction;
     private void Awake()
     {
         if (Instance == null)
@@ -31,8 +27,6 @@ public class PlayerWandATK : MonoBehaviour
     public void CheckWandATK()
     {
         bulletPrefap = PlayerWeaponParent.Instance.playerStatus.currentWeapon.weaponBulletType;
-        currentBullet = PlayerWeaponParent.Instance.GetCurrentBullet();
-        magazine = PlayerWeaponParent.Instance.GetMagazine();
         if(PlayerWeaponParent.Instance.delayWandCount > 0) PlayerWeaponParent.Instance.delayWandCount-=Time.deltaTime;
         if(!PlayerWeaponParent.Instance.playerCanATK)return;   
 
@@ -46,13 +40,18 @@ public class PlayerWandATK : MonoBehaviour
         PlayerWeaponParent.Instance.delayWandCount = delayWandATK;//Set up delay time between each shoot
         PlayerWeaponParent.Instance.wandSprite.enabled = true;
         PlayerWeaponParent.Instance.physicATKSprite.enabled = false;
-        if(PlayerWeaponParent.Instance.GetCurrentBullet()<=0)return;
+        if(PlayerWeaponParent.Instance.GetCurrentBullet()<=0)
+        {
+            NotifPopUp.Instance.ShowNotification("No Energy!");
+            return;
+        }
         SoundControl.Instance.PlayerShootSoundPlay();;//play the shoot sound
         wandATKAnimator.SetTrigger("Shoot");
         PlayerWeaponParent.Instance.SubCurrentBullet();
         PlayerMagazine.Instance.CheckEnergyBarLeft();
         PlayerWeaponParent.Instance.UpdateMagazine();
-        Instantiate(bulletPrefap, firePoint.position, Quaternion.identity).GetComponent<WandBullet>().SetValue(wandBulletSpeed);
+        direction = (Vector2)(firePoint.position - transform.position);
+        Instantiate(bulletPrefap, firePoint.position, Quaternion.identity).GetComponent<WandBullet>().SetValue(wandBulletSpeed, direction);
     }
     
 }

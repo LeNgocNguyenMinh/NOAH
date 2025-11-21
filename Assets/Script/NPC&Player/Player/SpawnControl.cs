@@ -14,41 +14,14 @@ public class SpawnControl : MonoBehaviour
     }
     public void RespawnAfterDead()
     {
+        /* saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
-        if(SceneManager.GetActiveScene().name != saveData.saveScene)
-        {
-            StartCoroutine(LoadSceneAsync(saveData.saveScene));
-        } 
-        else{
-            Time.timeScale = 1f;
-            PlayerStatusAfterRespawn();
-            Player.Instance.transform.position = saveData.playerPosition;
-        }
-    }
-    private IEnumerator LoadSceneAsync(string sceneName)
-    {
-        yield return null;
-        // Bắt đầu load scene nhưng không active ngay lập tức
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-        operation.allowSceneActivation = false;
-
-        // Chờ scene load xong
-        while (!operation.isDone)
-        {
-            // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
-            if (operation.progress >= 0.9f)
-            {
-                SceneManager.sceneLoaded += OnSceneLoaded;
-                operation.allowSceneActivation = true;
-            }
-            yield return null;
-        }
-    }
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        Time.timeScale = 1f;
+        PlayerStatusAfterRespawn();
+        Player.Instance.transform.position = saveData.playerPosition; */
         SaveController.Instance.LoadSave();
     }
+   
     private void PlayerStatusAfterRespawn()
     {
         Player.Instance.PlayerRespawn();

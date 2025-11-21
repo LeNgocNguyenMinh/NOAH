@@ -7,7 +7,6 @@ using UnityEngine;
 public class PlayerStatus : ScriptableObject
 {
     [Header("---------Player basic information---------")] 
-    private ItemDictionary itemDictionary;
     public int playerLevel = 1;
     public int availablePoint;// Contain the points when level up (Only %2 = 0 level)
     public string playerName;
@@ -69,8 +68,6 @@ public class PlayerStatus : ScriptableObject
     public void SetPlayerInfo(PlayerSaveData playerSaveData)
     {
         SetPlayerNewInfo();
-        playerCurrentClothChange = FindObjectOfType<PlayerCurrentClothChange>().GetComponent<PlayerCurrentClothChange>();
-        itemDictionary = FindObjectOfType<ItemDictionary>().GetComponent<ItemDictionary>();
         playerLevel = playerSaveData.playerLevelData;
         availablePoint = playerSaveData.availablePointData;
         playerCurrentDamage = playerSaveData.playerCurrentDamageData;
@@ -81,7 +78,7 @@ public class PlayerStatus : ScriptableObject
         currentExp = playerSaveData.currentExpData;
         maxHealth = playerSaveData.maxHealthData;
         currentHealth = playerSaveData.currentHealthData;
-        currentWeapon = playerSaveData.currentWeaponID != "None" ? itemDictionary.GetItemInfo(playerSaveData.currentWeaponID) : null;
+        currentWeapon = playerSaveData.currentWeaponID != "None" ? ItemDictionary.Instance.GetItemInfo(playerSaveData.currentWeaponID) : null;
         /* if(playerSaveData.currentHatID != "None")
         {
             currentHat = itemDictionary.GetItemInfo(playerSaveData.currentHatID);

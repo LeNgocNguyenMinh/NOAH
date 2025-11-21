@@ -79,7 +79,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!95 &1398047584207032958
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,6 +93,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -110,3 +111,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a68a6db8444d54daf3c0faad5a5474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1398047584207032958}

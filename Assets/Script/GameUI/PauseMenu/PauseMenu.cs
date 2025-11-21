@@ -59,6 +59,7 @@ public class PauseMenu : MonoBehaviour
     //Resume button function, if player dead then respawn if player choose continue
     public void PauseMenuPanelOff()
     {
+        BackToPauseMenu();
         pauseMenuPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             if(isOver)
@@ -77,17 +78,17 @@ public class PauseMenu : MonoBehaviour
     public void ButtonShowFuntion(ButtonEnum btnEnum)
     {
         otherPanel.SetActive(false);
-        if(btnEnum.buttonType == ButtonEnum.ButtonType.MainMenuBtn)
+        if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.MainMenuBtn)
         {
             mainMenuAskPanel.gameObject.SetActive(true);
             mainMenuAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
         }
-        else if(btnEnum.buttonType == ButtonEnum.ButtonType.QuitBtn)
+        else if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.QuitBtn)
         {
             quitAskPanel.gameObject.SetActive(true);
             quitAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
         }
-        else if(btnEnum.buttonType == ButtonEnum.ButtonType.SettingBtn)
+        else if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.SettingBtn)
         {
             settingPanel.gameObject.SetActive(true);
             settingPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
@@ -114,11 +115,11 @@ public class PauseMenu : MonoBehaviour
     public void MoveTo(ButtonEnum btnEnum)
     {
         PauseMenuPanelOff();
-        if(btnEnum.buttonType == ButtonEnum.ButtonType.MainMenuConfirm)
+        if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.MainMenuConfirm)
         {
             StartCoroutine(ToMainMenuCoroutine());
         }
-        else if(btnEnum.buttonType == ButtonEnum.ButtonType.QuitConfirm)
+        else if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.QuitConfirm)
         {
             Application.Quit();
         }

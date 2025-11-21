@@ -17,7 +17,14 @@ public class NotifPopUp : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     public void ShowNotification(string newValue)
     {

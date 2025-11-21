@@ -49,7 +49,7 @@ public class PlayerWeaponParent : MonoBehaviour
     }
     void Update()
     {
-        if(UIMouseAndPriority.Instance.OtherPanelIsActive()) return;
+        if(UIMouseAndPriority.Instance.OtherPanelIsActive() || UIMouseAndPriority.Instance.IsInLimitInteractPanel()) return;
         WeaponRotate();
         PlayerWandATK.Instance.CheckWandATK();  
         PlayerMeleeATK.Instance.CheckMeleeATK();

@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638992807104995321
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -137,8 +137,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 160
-      height: 90
+      width: 32
+      height: 32
     spriteID: 2f4416baf8e407449af6ec12d06061a1
     spriteBone: []
     spriteOutline: []
@@ -169,8 +169,8 @@ ScriptedImporter:
       cellRect:
         x: 0
         y: 0
-        width: 160
-        height: 90
+        width: 32
+        height: 32
       spriteId: 2f4416baf8e407449af6ec12d06061a1
     linkedCells: []
     tileCells: []
@@ -190,8 +190,32 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 160, y: 90}
-  previousTextureSize: {x: 256, y: 128}
+  canvasSize: {x: 32, y: 32}
+  previousTextureSize: {x: 64, y: 64}

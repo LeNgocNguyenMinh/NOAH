@@ -9,6 +9,7 @@ using Unity.VisualScripting;
 
 public class TimeManager : MonoBehaviour
 {
+    public static TimeManager Instance;
     [Header("Clock Components")]
     [SerializeField]private Transform clockHourStick;//Transform of the hour stick, for rotate purpose 
     [SerializeField]private Transform clockMinuteStick;//Transform of the minute stick, for rotate purpose 
@@ -31,6 +32,16 @@ public class TimeManager : MonoBehaviour
     private ShopInteractive shopInteractive;
     private ShopController shopController;
 
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else{
+            Destroy(gameObject);
+        }
+    }
     void FixedUpdate() // we used fixed update, since update is frame dependant. 
     {
         if(Input.GetKeyDown(KeyCode.X))
@@ -62,10 +73,7 @@ public class TimeManager : MonoBehaviour
             {
                 dateIndex = 0;
             }
-            if(FindObjectOfType<ShopController>()!=null)
-            {
-                ShopController.Instance.AddItemToShop();
-            }
+            ShopController.Instance.AddItemToShop();
         }
 
         if(hour > 12) // Mean finish a first circle 
@@ -75,16 +83,12 @@ public class TimeManager : MonoBehaviour
         else{
             amAndPmBox.text = "AM";
         }
-
-        if(FindObjectOfType<ShopInteractive>()!=null)
+        if(10 <= hour && hour <= 22)
         {
-            if(10 <= hour && hour <= 22)
-            {
-                ShopController.Instance.canOpenShop = true;
-            }
-            else{
-                ShopController.Instance.canOpenShop = false;
-            }
+            ShopController.Instance.canOpenShop = true;
+        }
+        else{
+            ShopController.Instance.canOpenShop = false;
         }
         
         percentage = hour/24*1f;

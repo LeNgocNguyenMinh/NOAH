@@ -117,8 +117,7 @@ public class UIInventoryController : MonoBehaviour
         missionCanvasGroup.alpha = 0f;
         statusCanvasGroup.alpha = 0f;
         inventoryOpen = true;
-        uiInventoryPage = GetComponent<UIInventoryPage>();
-        uiInventoryPage.InventoryUpdateOpen();
+        UIInventoryPage.Instance.InventoryUpdateOpen();
         invPanel.SetAsLastSibling();
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         animator.SetTrigger("Idle");
@@ -130,8 +129,7 @@ public class UIInventoryController : MonoBehaviour
         {
             return;
         }
-        uiInventoryPage = GetComponent<UIInventoryPage>();
-        uiInventoryPage.InventoryUpdateClose();
+        UIInventoryPage.Instance.InventoryUpdateClose();
         animator.SetTrigger("Stop");
         MoveDown();
     }

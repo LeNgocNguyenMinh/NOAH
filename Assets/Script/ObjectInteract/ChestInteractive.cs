@@ -7,7 +7,6 @@ public class ChestInteractive : MonoBehaviour
     [SerializeField]private Item item;
     private ObjectInteraction objectInteraction;
     private Animator animator;
-    private UIInventoryPage uiInventoryPage;
     private bool chestOpen = false;
     public void Update()
     {
@@ -19,12 +18,11 @@ public class ChestInteractive : MonoBehaviour
                 animator = GetComponent<Animator>();
                 chestOpen = true;
                 animator.SetTrigger("chestIsOpen");
-                uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-                if (!uiInventoryPage.AddItem(item, 1))
+                if (!UIInventoryPage.Instance.AddItem(item, 1))
                 {
                     return;
                 }
-                uiInventoryPage.AddItemPopUp(item, 1);
+                UIInventoryPage.Instance.AddItemPopUp(item, 1);
                 ChestIsEmpty();
             }
         }

@@ -30,6 +30,7 @@ public class UIMouseAndPriority : MonoBehaviour
     public void CloseAllUI()
     {
         UIInventoryController.Instance.MoveDown();
+        ShopController.Instance.ShopUIClose(); 
     }
     private void Update()
     {

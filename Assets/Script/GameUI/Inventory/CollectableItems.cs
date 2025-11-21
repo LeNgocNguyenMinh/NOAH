@@ -7,16 +7,12 @@ public class CollectableItems : MonoBehaviour
     [SerializeField]private Item item; //Contain item information
     [SerializeField]private int itemQuantity;
     private bool isCollected = false;
-    private ItemInGroundController itemInGroundController;
     private SpriteRenderer spriteRenderer;
-    private UIInventoryPage uiInventoryPage;
     private Animator animator;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = item.itemSprite;
-        itemInGroundController = FindObjectOfType<ItemInGroundController>().GetComponent<ItemInGroundController>();
-        uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
     }
     public string GetItemID()
     {
@@ -37,31 +33,16 @@ public class CollectableItems : MonoBehaviour
         {
             animator = GetComponent<Animator>();
             animator.SetTrigger("Collect");
-            if(uiInventoryPage.AddItem(item, itemQuantity))
+            if(UIInventoryPage.Instance.AddItem(item, itemQuantity))
             {
                 isCollected = true;
-                uiInventoryPage.AddItemPopUp(item, itemQuantity);
-                itemInGroundController.SetItemIsCollect(item.itemID, transform.position);
+                UIInventoryPage.Instance.AddItemPopUp(item, itemQuantity);
+                ItemInGroundController.Instance.SetItemIsCollect(item.itemID, transform.position);
                 Destroy(gameObject, .5f);
             }
         }
     }
-    private void OllisionEnter2D(Collision2D collision)
-    {
-        if(isCollected == true) return;
-        if(collision.gameObject.tag=="Player")
-        {
-            animator = GetComponent<Animator>();
-            animator.SetTrigger("Collect");
-            if(uiInventoryPage.AddItem(item, itemQuantity))
-            {
-                isCollected = true;
-                uiInventoryPage.AddItemPopUp(item, itemQuantity);
-                itemInGroundController.SetItemIsCollect(item.itemID, transform.position);
-                Destroy(gameObject, .5f);
-            }
-        }
-    }
+    
     public void DropItemAnim()
     {
         animator = GetComponent<Animator>();

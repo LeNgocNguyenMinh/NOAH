@@ -42,7 +42,7 @@ public class BlueSlimeBullet : MonoBehaviour
         {
             collider.GetComponent<PlayerEffect>().PushBack(direction);
             collider.GetComponent<PlayerEffect>().HitFlash();   
-            HealthControl.Instance.PlayerHurt(1);
+            HealthControl.Instance.PlayerHurt(50);
             bulletBreak = true;
             animator.SetTrigger("break");
         }

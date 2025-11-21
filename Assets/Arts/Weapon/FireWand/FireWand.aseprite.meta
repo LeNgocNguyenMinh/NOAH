@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638697899836539103
+  platformSettingsDirtyTick: 638991989166654873
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: FireWand
     originalName: 
-    pivot: {x: 0.54545456, y: 0}
+    pivot: {x: 0.53846157, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,7 +137,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 11
+      width: 13
       height: 32
     spriteID: a267aa3f7387d0c41993567755ff045e
     spriteBone: []
@@ -167,9 +167,9 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 2
+        x: 1
         y: 0
-        width: 11
+        width: 13
         height: 32
       spriteId: a267aa3f7387d0c41993567755ff045e
     linkedCells: []

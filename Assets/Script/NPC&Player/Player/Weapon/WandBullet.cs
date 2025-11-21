@@ -1,6 +1,4 @@
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
+using UnityEngine;
 
     public class WandBullet : MonoBehaviour
     {
@@ -16,18 +14,16 @@
         private bool isDestroy = false;
         private float speed;
 
-        public void SetValue(float speed)
+        public void SetValue(float speed, Vector2 direction)
         {
             startPosition = transform.position;
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            direction = (target - startPosition).normalized;
             rb.linearVelocity = direction * speed;
             this.speed = speed;
         }
 
         private void Update()
         {
-            if((Vector2.Distance(startPosition, transform.position)>=maxDistance || (Vector2.Distance(transform.position, target) <= 0.01f)) && !isDestroy && target != null)
+            if((Vector2.Distance(startPosition, transform.position)>=maxDistance) && !isDestroy && target != null)
             {
                 BulletDestroy();
                 return;

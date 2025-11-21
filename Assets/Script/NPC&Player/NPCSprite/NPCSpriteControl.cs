@@ -5,28 +5,21 @@ using UnityEngine;
 
 public class NPCSpriteControl : MonoBehaviour
 {
-    private Transform player;
-    private Animator animator;
-    private SpriteRenderer mySpriteRender;
-
+    [SerializeField]private ObjectInteraction objectInteraction;
     private void Update()
     {
-        player = FindObjectOfType<Player>()?.transform;
-        if(player == null) return;
-        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-        if(distanceToPlayer<3)
+        if(objectInteraction.GetCanInteract())
         {
             FacingDirection();
         }
-    }    
+    }
     private void FacingDirection()
     {
-        player = FindObjectOfType<Player>().transform;
-        if (transform.position.x < player.transform.position.x && transform.localScale.x < 0)
+        if (transform.position.x < Player.Instance.transform.position.x && transform.localScale.x < 0)
         {
             Flip();
         } 
-        else if (transform.position.x > player.transform.position.x && transform.localScale.x > 0)
+        else if (transform.position.x > Player.Instance.transform.position.x && transform.localScale.x > 0)
         {
             Flip();
         }

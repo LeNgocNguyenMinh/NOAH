@@ -389,13 +389,7 @@ MonoBehaviour:
   wandRotate: {fileID: 3658691024834985903}
   wandShadowRotate: {fileID: 3595186348209831946}
   delayWandCount: 0
-  bulletEnergyFront: {fileID: 0}
-  bulletEnergyBack: {fileID: 0}
-  hitEnergyFront: {fileID: 0}
-  hitEnergyBack: {fileID: 0}
   requireHit: 3
-  text: {fileID: 0}
-  currentBullet: 0
   playerCanATK: 1
 --- !u!95 &7340317130336529593
 Animator:

@@ -45,19 +45,22 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
 
         if(newSlot!=null && newSlot != previousSlot)//If there is a slot under drop point
         {
-            if(newSlot.isHotBarSlot && previousSlot.GetItemID().Contains("Cloth"))
+            if(newSlot.isHotBarSlot)
             {
-                NotifPopUp.Instance.ShowNotification("Can't add cloth to hot bar");
-                transform.SetParent(originalParent, true);
-                transform.localPosition = originalLocalPosition;
-                return;
-            }
-            if(newSlot.isHotBarSlot && previousSlot.GetItemID().Contains("Note"))
-            {
-                NotifPopUp.Instance.ShowNotification("Can't add paper to hot bar");
-                transform.SetParent(originalParent, true);
-                transform.localPosition = originalLocalPosition;
-                return;
+                if(previousSlot.GetItemID().Contains("Cloth"))
+                {
+                    NotifPopUp.Instance.ShowNotification("Can't add cloth to hot bar");
+                    transform.SetParent(originalParent, true);
+                    transform.localPosition = originalLocalPosition;
+                    return;
+                }
+                if(previousSlot.GetItemID().Contains("Note"))
+                {
+                    NotifPopUp.Instance.ShowNotification("Can't add paper to hot bar");
+                    transform.SetParent(originalParent, true);
+                    transform.localPosition = originalLocalPosition;
+                    return;
+                }
             }
             if(newSlot.isEmpty) //If no item in new slot
             {
@@ -93,13 +96,12 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
         {
             if(eventData.pointerEnter == null)//mean you drop it outside inv
             {
-                Transform playerTrans = FindObjectOfType<Player>().transform;
                 // Random góc
                 float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
 
                 // Vị trí trên vòng tròn bán kính 2f quanh player
                 Vector2 dropOffset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * 4f;
-                Vector2 dropPosition = (Vector2)playerTrans.position + dropOffset;
+                Vector2 dropPosition = (Vector2)Player.Instance.transform.position + dropOffset;
                 CollectableItems dropItem = Instantiate(previousSlot.GetItem().itemPrefab, dropPosition, Quaternion.identity).GetComponentInChildren<CollectableItems>();
                 dropItem.SetItemQuantity(previousSlot.GetItemQuantity());
                 dropItem.DropItemAnim();

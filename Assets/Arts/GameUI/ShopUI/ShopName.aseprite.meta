@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: ShopName
     originalName: 
-    pivot: {x: 0.33333334, y: -0.42105263}
+    pivot: {x: 0.5, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,8 +137,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 48
-      height: 19
+      width: 50
+      height: 21
     spriteID: b8ede001c6b335b41ae6efc8551f0d69
     spriteBone: []
     spriteOutline: []
@@ -167,10 +167,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 8
-        width: 48
-        height: 19
+        x: 7
+        y: 7
+        width: 50
+        height: 21
       spriteId: b8ede001c6b335b41ae6efc8551f0d69
     linkedCells: []
     tileCells: []
