@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Cloud
     originalName: 
-    pivot: {x: 0.5, y: -0.17741935}
+    pivot: {x: 0.5, y: -0.296875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -138,7 +138,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 480
-      height: 62
+      height: 64
     spriteID: 672716307a914d941a145c5ce9a8afac
     spriteBone: []
     spriteOutline: []
@@ -168,9 +168,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 11
+        y: 19
         width: 480
-        height: 62
+        height: 64
       spriteId: 672716307a914d941a145c5ce9a8afac
     linkedCells: []
     tileCells: []

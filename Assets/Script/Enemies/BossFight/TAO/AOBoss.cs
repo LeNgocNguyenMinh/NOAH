@@ -15,6 +15,7 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public BoxCollider2D LHandCld { get; set; }
     [field: SerializeField]public BoxCollider2D RHandCld { get; set; }
     [field: SerializeField]public BoxCollider2D HeadCld { get; set; }
+    public bool IsDead { get; set; } = false;
     public Vector3 RightHandOriginTrans { get; set; }
     public Vector3 LeftHandOriginTrans { get; set; }
     [field: Header("ATK1 Setting")]

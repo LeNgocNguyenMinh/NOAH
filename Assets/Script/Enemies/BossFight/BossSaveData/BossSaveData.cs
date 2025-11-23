@@ -4,9 +4,10 @@ using UnityEngine;
 public class BossSaveData : MonoBehaviour
 {
     public static BossSaveData Instance;
-    public bool aoBossDefeat = false;
-    public bool fkBossDefeat = false;
-
+    public bool isAOBossDead;
+    public bool isFKBossDead;
+    public List<GameObject> bossPrefab;
+    public List<BossCurrentStatus> bossPrefList;
     private void Awake()
     {
         if (Instance == null)
@@ -21,52 +22,54 @@ public class BossSaveData : MonoBehaviour
     }
     public List<BossCurrentStatus> GetAllBossCurrentStatus()
     {
-        List<BossCurrentStatus> bossStatusList = new List<BossCurrentStatus>();
+        List<BossCurrentStatus> bossStatus = new List<BossCurrentStatus>();
 
         BossCurrentStatus aoStatus = new BossCurrentStatus
         {
             bossID = "AO_BOSS",
-            isDefeated = aoBossDefeat
+            isDead = AOBoss.Instance.IsDead
         };
-        bossStatusList.Add(aoStatus);
+        bossStatus.Add(aoStatus);
 
         BossCurrentStatus fkStatus = new BossCurrentStatus
         {
             bossID = "FK_BOSS",
-            isDefeated = fkBossDefeat
+            isDead = FKBoss.Instance.IsDead
         };
-        bossStatusList.Add(fkStatus);
+        bossStatus.Add(fkStatus);
 
-        return bossStatusList;
+        return bossStatus;
     }
-    public void SetBossCurrentStatus(List<BossCurrentStatus> bossCurrentStatuses)
+    public void SetBossCurrentStatus(List<BossCurrentStatus> bossCurrentStatus)
     {
-        foreach (var status in bossCurrentStatuses)
+        foreach (var status in bossCurrentStatus)
         {
             if (status.bossID == "AO_BOSS")
             {
-                aoBossDefeat = status.isDefeated;
+                isAOBossDead = status.isDead;
             }
             else if (status.bossID == "FK_BOSS")
             {
-                fkBossDefeat = status.isDefeated;
+                isFKBossDead = status.isDead;
             }
         }
-    }
-    public void SetBossDefeated(string bossID)
-    {
-        if (bossID == "AO_BOSS")
+        bossPrefList = bossCurrentStatus;
+        for(int i = 0; i < bossPrefab.Count; i++)
         {
-            aoBossDefeat = true;
+            Destroy(bossPrefab[i]);
         }
-        else if (bossID == "FK_BOSS")
+        for(int i = 0; i < bossCurrentStatus.Count; i++)
         {
-            fkBossDefeat = true;
+            if(!bossCurrentStatus[i].isDead)
+            {
+                bossPrefab.Add(Instantiate(ItemDictionary.Instance.GetBossInfo(bossCurrentStatus[i].bossID).bossPrefab, bossCurrentStatus[i].bossPos, Quaternion.identity));
+            }
         }
     }
 }
 public class BossCurrentStatus
 {
     public string bossID;
-    public bool isDefeated;
+    public bool isDead;
+    public Vector3 bossPos;
 }

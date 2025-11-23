@@ -15,7 +15,7 @@ public class ButtonEnum : MonoBehaviour
         BackToPauseMenu,
 
     }
-    public enum MainMenuButtonType
+    /* public enum MainMenuButtonType
     {
         NewGameBtn,
         LoadBtn,
@@ -23,7 +23,7 @@ public class ButtonEnum : MonoBehaviour
         QuitBtn,
         NewGameConfirm,
         QuitConfirm,
-    }
+    } */
     public PauseMenuButtonType pauseBtnType;
-    public MainMenuButtonType mainMenuBtnType;
+    /* public MainMenuButtonType mainMenuBtnType; */
 }

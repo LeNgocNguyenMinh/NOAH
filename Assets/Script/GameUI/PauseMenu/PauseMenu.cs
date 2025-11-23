@@ -9,7 +9,6 @@ using System;
 public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu Instance;
-    private SpawnControl spawnControl;
     [SerializeField]private RectTransform pauseMenuPanel;
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;  
@@ -24,7 +23,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private Image resumeButtonImage;
     [SerializeField]private Sprite respawnSprite;
     [SerializeField]private Sprite resumeSprite;
-
+    [SerializeField]private SettingBtnFunction settingBtnFunction;
     public static bool isPaused = false;
     public static bool isOver = false;
 
@@ -49,8 +48,10 @@ public class PauseMenu : MonoBehaviour
             pauseImage.sprite = gameOverSprite;
             resumeButtonImage.sprite = respawnSprite;
         }
-        pauseImage.sprite = pauseSprite;
-        resumeButtonImage.sprite = resumeSprite;
+        else{
+            pauseImage.sprite = pauseSprite;
+            resumeButtonImage.sprite = resumeSprite;
+        }
         pauseMenuPanel.gameObject.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -64,8 +65,7 @@ public class PauseMenu : MonoBehaviour
         {
             if(isOver)
             {
-                spawnControl = FindObjectOfType<SpawnControl>().GetComponent<SpawnControl>();
-                spawnControl.RespawnAfterDead();
+                SpawnControl.Instance.RespawnAfterDead();
                 isOver = false;
             }
             isPaused = false;
@@ -91,6 +91,7 @@ public class PauseMenu : MonoBehaviour
         else if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.SettingBtn)
         {
             settingPanel.gameObject.SetActive(true);
+            settingBtnFunction.ActiveGameSettingPanel();
             settingPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
         }
     }

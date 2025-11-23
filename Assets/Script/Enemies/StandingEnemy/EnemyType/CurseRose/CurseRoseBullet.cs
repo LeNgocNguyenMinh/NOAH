@@ -42,7 +42,7 @@ public class CurseRoseBullet : MonoBehaviour
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
-            HealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
+            PlayerHealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
             rb.linearVelocity = Vector2.zero;
             bulletBreak = true;
             animator.SetTrigger("break");

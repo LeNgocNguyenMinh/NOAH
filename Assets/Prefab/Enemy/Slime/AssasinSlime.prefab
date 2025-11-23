@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4f9daf958608f4996433d70b86f6a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <HealthBarUI>k__BackingField: {fileID: 0}
+  <HealthBarUI>k__BackingField: {fileID: 6918591162495647317}
   <Body>k__BackingField: {fileID: 4922278761936341463}
   <MainObject>k__BackingField: {fileID: 28939735398813955}
   <RB>k__BackingField: {fileID: 8580631396950008050}
@@ -638,6 +638,7 @@ MonoBehaviour:
   splashDistance: 0.3
   hitEffectPrefab: {fileID: 5851200870473605464, guid: 1a19b705ab3539641b3d7887f02f001d, type: 3}
   spriteRenderer: {fileID: 2242347611025766143}
+  originalMaterial: {fileID: 2100000, guid: 5f758165c725e624894a5dff8d2f4e05, type: 2}
 --- !u!114 &3615415505839671059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40f8780ba1303d40b058bd3bc21a188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarBackImage: {fileID: 1692476284016518703}
+  healthBarFrontImage: {fileID: 1692476284016518703}
+  healthBarBackImage: {fileID: 6687396742448799199}
   healthText: {fileID: 3822291799049780274}
 --- !u!114 &5990957773545232470
 MonoBehaviour:
@@ -898,6 +900,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6687396742448799199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4870306822114333607, guid: abc7b0c3c3d3fef4787ed8eac092dbdb, type: 3}
+  m_PrefabInstance: {fileID: 2258741751181905528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6918591162495647317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177051425731981357, guid: abc7b0c3c3d3fef4787ed8eac092dbdb, type: 3}
+  m_PrefabInstance: {fileID: 2258741751181905528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7438755754273835711 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8674897521348707527, guid: abc7b0c3c3d3fef4787ed8eac092dbdb, type: 3}

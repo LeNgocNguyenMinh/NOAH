@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField]private Vector2 hiddenPos;
     [SerializeField]private Vector2 visiblePos;
     [SerializeField]private GameObject otherPanel;
+    [SerializeField]private SettingBtnFunction settingBtnFunction;
     public TMP_Text progressText;
     private void Awake()
     {
@@ -158,6 +159,7 @@ public class MainMenu : MonoBehaviour
     {
         otherPanel.SetActive(false);
         settingPanel.gameObject.SetActive(true);
+        settingBtnFunction.ActiveGameSettingPanel();
         settingPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
     }
     public void SettingPanelOff()

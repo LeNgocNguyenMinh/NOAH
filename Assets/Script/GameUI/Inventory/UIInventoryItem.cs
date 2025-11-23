@@ -141,7 +141,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         }
         else if(itemID.Contains("HP"))//If HP item is equip
         {
-            if(HealthControl.Instance.HealthRecover(this.item.healthRecover))//this function return: true if health is not full and otherwise
+            if(PlayerHealthControl.Instance.HealthRecover(this.item.healthRecover))//this function return: true if health is not full and otherwise
             {
                 DeleteOne();//Mean item was used
             }

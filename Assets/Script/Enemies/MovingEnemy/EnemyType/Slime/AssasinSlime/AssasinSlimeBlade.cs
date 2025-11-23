@@ -17,7 +17,7 @@ public class AssasinSlimeBlade : MonoBehaviour
             }
             collider.GetComponent<PlayerEffect>().PushBack(direction);
             collider.GetComponent<PlayerEffect>().HitFlash();   
-            HealthControl.Instance.PlayerHurt(1);
+            PlayerHealthControl.Instance.PlayerHurt(1);
         }
     }
 }

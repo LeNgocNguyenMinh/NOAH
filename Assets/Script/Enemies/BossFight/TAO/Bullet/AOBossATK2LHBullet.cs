@@ -32,7 +32,7 @@ public class AOBossATK2LHBullet : MonoBehaviour
             PlayerEffect.Instance.HitFlash();
             animTrigger = true;
             rb.linearVelocity = Vector2.zero;
-            HealthControl.Instance.PlayerHurt(damage);
+            PlayerHealthControl.Instance.PlayerHurt(damage);
             animator.SetTrigger("Break");
             return;
         }

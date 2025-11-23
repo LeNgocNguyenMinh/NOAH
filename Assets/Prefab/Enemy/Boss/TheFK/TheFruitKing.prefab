@@ -320,6 +320,7 @@ Transform:
   - {fileID: 4068394150707334644}
   - {fileID: 2350591736197034437}
   - {fileID: 5501048020493130078}
+  - {fileID: 7560508307254730282}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6407952438591674577
@@ -578,6 +579,7 @@ MonoBehaviour:
   splashDistance: 1
   hitEffectPrefab: {fileID: 5851200870473605464, guid: 1a19b705ab3539641b3d7887f02f001d, type: 3}
   spriteRenderer: {fileID: 0}
+  originalMaterial: {fileID: 0}
 --- !u!1 &7069464764636328407
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,10 +771,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0fb075f0548ea04da90cbb17499e9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <BossBody>k__BackingField: {fileID: 0}
   <BossStatus>k__BackingField: {fileID: 11400000, guid: 9767c92b69c92bb43bf691f5b4443713, type: 2}
   <FKBossAnimator>k__BackingField: {fileID: 1005052120821581274}
   <HealthBarCV>k__BackingField: {fileID: 3850944648587721439}
-  <ATK1AtttackNum>k__BackingField: 3
+  <ATK1AtttackNum>k__BackingField: 2
   <ATK1RtSpeed>k__BackingField: 200
   <ATK1IdleTime>k__BackingField: 3
   <ATK1LHWMFlyDist>k__BackingField: 6
@@ -788,17 +791,88 @@ MonoBehaviour:
   <RHATK1Time>k__BackingField: 2
   <ATK1RHFlyTime>k__BackingField: 2
   <ATK1RhRotateSpeed>k__BackingField: 300
-  <ATK2AtttackNum>k__BackingField: 3
-  <ATK2IdleTime>k__BackingField: 3
+  <ATK2AtttackNum>k__BackingField: 2
+  <ATK2IdleTime>k__BackingField: 2
   <ATK2RHShootPoint>k__BackingField: {fileID: 6320398399920738028}
   <ATK2RHBullet>k__BackingField: {fileID: 2754539827080339490, guid: c37b4fbd562074e40ac12b1e6c1306d5, type: 3}
   <ATK2RHBulletMaxSpeed>k__BackingField: 10
   <ATK2RHBulletMaxHeight>k__BackingField: 0.5
   <ATK2LHObject>k__BackingField: {fileID: 2754539827080339490, guid: 25bf35ef04da4d14e8a5676fd9e0084e, type: 3}
-  <ATK2LHDisBet>k__BackingField: 1
+  <ATK2LHDisBet>k__BackingField: 1.5
   <ATK2LHSpawnDelay>k__BackingField: 0.1
   <ATK2LHStartPoint>k__BackingField: {fileID: 5930868232832239248}
-  <ATKTestType>k__BackingField: 0
+  <ATKTestType>k__BackingField: 4
+--- !u!1001 &2709210272635632918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6547734074292127748}
+    m_Modifications:
+    - target: {fileID: 2549443716270592262, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: linkToBoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0007095337
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757221238128967508, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: m_Name
+      value: SummonStone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229414184367010044, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+      propertyPath: linkToBoss
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7229414184367010044, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+--- !u!4 &7560508307254730282 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5581471062778438460, guid: 3d8a5ae4f8e6d7b4293e0397ac32243d, type: 3}
+  m_PrefabInstance: {fileID: 2709210272635632918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6411271630098942963
 PrefabInstance:
   m_ObjectHideFlags: 0

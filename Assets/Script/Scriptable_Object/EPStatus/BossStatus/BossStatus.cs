@@ -11,8 +11,8 @@ public class BossStatus : ScriptableObject
     public float bossBaseDamage;
     public float bossDamage;
     public float bossBaseHealth;
-
     public float bossMaxHealth;
+    public GameObject bossPrefab;
     public PlayerStatus playerStatus;
     public void UpdateLevel()
     {

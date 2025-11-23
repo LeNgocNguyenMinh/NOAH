@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject[] enemyPrefab;
+    [SerializeField]private GameObject[] enemyPrefab;
+    [SerializeField]private Transform[] spawnPoints;
  
-    [SerializeField] private float spawnTime;
+    [SerializeField]private float spawnTime;
     public int enemyNumberOnField = 0;
     public int maxEnemyOnField;
-    private float timeUntilSpawn;
-    void Awake()
-    {
-        SetTimeUntilSpawn();
-    }
+    private float timeUntilSpawn = 0f;
+
     void Update()
     {
-        if(enemyNumberOnField == maxEnemyOnField)return;
+        if(enemyNumberOnField >= maxEnemyOnField)return;
         timeUntilSpawn -= Time.deltaTime;
         if(timeUntilSpawn <= 0)
         {
             int randomIndex = Random.Range(0, enemyPrefab.Length);
-            Instantiate(enemyPrefab[randomIndex], transform.position, Quaternion.identity);
+            int randomPlace = Random.Range(0, spawnPoints.Length);
+            Instantiate(enemyPrefab[randomIndex], spawnPoints[randomPlace].position, Quaternion.identity);
             enemyNumberOnField++;
             SetTimeUntilSpawn();
         }

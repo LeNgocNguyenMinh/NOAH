@@ -24,7 +24,7 @@ public class FKBossATK2RHBullet : MonoBehaviour
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
-            HealthControl.Instance.PlayerHurt(1f);
+            PlayerHealthControl.Instance.PlayerHurt(1f);
             Vector3 hitDirect = (Player.Instance.transform.position - transform.position).normalized;
             PlayerEffect.Instance.PushBack(hitDirect);
             PlayerEffect.Instance.HitFlash();

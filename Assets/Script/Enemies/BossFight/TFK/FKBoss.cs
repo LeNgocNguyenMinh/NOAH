@@ -4,7 +4,7 @@ public class FKBoss : MonoBehaviour
 {
     public static FKBoss Instance { get; private set; }
     [field: Header("General attribute")]
-    
+    [field: SerializeField]public GameObject BossBody { get; set; }
     [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public Animator FKBossAnimator { get; set; }
     public FKBossStateMachine StateMachine { get; private set;}
@@ -21,6 +21,7 @@ public class FKBoss : MonoBehaviour
     public FKBossATK2AttackState ATK2AttackState { get; private set; }
     public FKBossATK2EndState ATK2EndState { get; private set; }
     public bool BossIsAwake { get; set; }
+    public bool IsDead { get; set; } = false;
     [field: SerializeField]public GameObject HealthBarCV{ get; set; }
     [field: Header("ATK1 attribute")]
     [field: SerializeField]public int ATK1AtttackNum { get; set; }
@@ -127,6 +128,10 @@ public class FKBoss : MonoBehaviour
     public void BossDeath()
     {
         StateMachine.ChangeState(DeadState);
+    }
+    public void BossVanish()
+    {
+        Destroy(BossBody);
     }
     public void AnimationTriggerEvent(AnimationTriggerType triggerType)
     {

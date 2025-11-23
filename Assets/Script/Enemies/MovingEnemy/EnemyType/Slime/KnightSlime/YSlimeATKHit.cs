@@ -8,8 +8,8 @@ public class YSlimeATKHit : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("PlayerHitCollider"))
         {
-            direct = Player.Instance.transform.position - enemyTrans.position;
-            HealthControl.Instance.PlayerHurt(10);
+            direct = (Player.Instance.transform.position - enemyTrans.position).normalized;
+            PlayerHealthControl.Instance.PlayerHurt(10);
             PlayerEffect.Instance.PushBack(direct);
             PlayerEffect.Instance.HitFlash();
         }

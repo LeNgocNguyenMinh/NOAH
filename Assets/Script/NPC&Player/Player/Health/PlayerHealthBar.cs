@@ -3,26 +3,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class PlayerHealthBar : MonoBehaviour
 {
     
     [SerializeField]private Image healthBarFrontImage;
     [SerializeField]private Image healthBarBackImage;
     [SerializeField]private TextMeshProUGUI healthText;
-    private float currentHealth;
-    private float maxHealth;
     public void SetMaxHealth(float health)
     {
         healthBarFrontImage.fillAmount = 1f;
         healthBarBackImage.fillAmount = 1f;
-        currentHealth = health;
-        maxHealth = health;
     }
 
     public void SetHealth(float health)
     {
-        currentHealth = health;
-        float target = health / maxHealth;
+        float target = PlayerHealthControl.Instance.healthCurrentValue / PlayerHealthControl.Instance.healthMaxValue;
         if(healthBarFrontImage.fillAmount > healthBarBackImage.fillAmount)
         {
             healthBarBackImage.fillAmount = healthBarFrontImage.fillAmount;
@@ -32,6 +27,6 @@ public class HealthBar : MonoBehaviour
     }
     public void UpdateHealthText()
     {
-        healthText.text = $"{(int)currentHealth}/{(int)maxHealth}";
+        healthText.text = $"{(int)PlayerHealthControl.Instance.healthCurrentValue}/{(int)PlayerHealthControl.Instance.healthMaxValue}";
     }
 }

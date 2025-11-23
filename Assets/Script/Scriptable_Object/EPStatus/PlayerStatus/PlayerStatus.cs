@@ -49,25 +49,9 @@ public class PlayerStatus : ScriptableObject
             currentCoatID = currentCoat != null ? currentCoat.itemID : "None"
         };
     }
-    public void SetPlayerNewInfo()
-    {
-        playerLevel = 1;
-        availablePoint = 3;
-        playerCurrentDamage = 3;
-        playerWeaponDamage = 3;
-        playerBullet = 3;
-        playerCoin = 0;
-        maxExp = 40;
-        currentExp = 0;
-        maxHealth = 120;
-        currentHealth = 120;
-        currentWeapon = defaultWeapon;
-        currentHat = null;
-        currentCoat = null;
-    }
+
     public void SetPlayerInfo(PlayerSaveData playerSaveData)
     {
-        SetPlayerNewInfo();
         playerLevel = playerSaveData.playerLevelData;
         availablePoint = playerSaveData.availablePointData;
         playerCurrentDamage = playerSaveData.playerCurrentDamageData;
@@ -79,16 +63,6 @@ public class PlayerStatus : ScriptableObject
         maxHealth = playerSaveData.maxHealthData;
         currentHealth = playerSaveData.currentHealthData;
         currentWeapon = playerSaveData.currentWeaponID != "None" ? ItemDictionary.Instance.GetItemInfo(playerSaveData.currentWeaponID) : null;
-        /* if(playerSaveData.currentHatID != "None")
-        {
-            currentHat = itemDictionary.GetItemInfo(playerSaveData.currentHatID);
-            playerCurrentClothChange.ChangeCloth(currentHat);
-        }
-        if(playerSaveData.currentCoatID != "None")
-        {
-            currentCoat = itemDictionary.GetItemInfo(playerSaveData.currentCoatID);
-            playerCurrentClothChange.ChangeCloth(currentCoat);
-        } */
     }
     public void SetLevel(int playerLevel)
     {
@@ -147,14 +121,6 @@ public class PlayerStatus : ScriptableObject
         this.currentWeapon = newWeapon;
         this.playerWeaponDamage = this.currentWeapon.weaponDamage;
     }
-
-    public void RespawnPlayerAfterDead()
-    {
-        this.currentHealth = this.maxHealth;
-        this.currentExp = 0;//this and below code consider as death's punishment
-        this.playerCoin /=2;
-    }
-    /////----------------------------------------------------------------
     public void SetCurrentHat(Item newHat)
     {
         this.currentHat = newHat;

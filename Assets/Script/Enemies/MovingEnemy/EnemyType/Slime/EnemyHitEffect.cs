@@ -9,12 +9,11 @@ public class EnemyHitEffect : MonoBehaviour
     [SerializeField] private float splashDistance;
     [SerializeField] private GameObject hitEffectPrefab;
     [SerializeField]private SpriteRenderer spriteRenderer;
-    private Material originalMaterial;
+    [SerializeField]private Material originalMaterial;
     private Coroutine flashRoutine;
 
     public void Flash()
     {
-        originalMaterial = spriteRenderer.material;
         flashMaterial = new Material(flashMaterial);
         // If the flashRoutine is not null, then it is currently running.
         if (flashRoutine != null)

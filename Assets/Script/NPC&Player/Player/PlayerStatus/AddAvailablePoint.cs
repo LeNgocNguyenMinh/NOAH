@@ -49,7 +49,7 @@ public class AddAvailablePoint : MonoBehaviour
     {
         playerStatus.SetMaxHealth(10);
         PlayerStatusInfo.Instance.UpdateMaxHealth();
-        HealthControl.Instance.UpdateMaxHealth();//Update (Curren/MaxHealth) in UI Health Bar
+        PlayerHealthControl.Instance.UpdateMaxHealth();//Update (Curren/MaxHealth) in UI Health Bar
         AddOnePoint();
     }
     public void AddPointToBullet()

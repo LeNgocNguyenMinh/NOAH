@@ -60,7 +60,7 @@ public class FKBossATK1LHBigBullet : MonoBehaviour
         if(collider.CompareTag("PlayerHitCollider") && !breaking)
         {
             breaking = true;
-            HealthControl.Instance.PlayerHurt(damage);
+            PlayerHealthControl.Instance.PlayerHurt(damage);
             PlayerEffect.Instance.PushBack(direct);
             PlayerEffect.Instance.HitFlash();
             animator.SetTrigger("Break");

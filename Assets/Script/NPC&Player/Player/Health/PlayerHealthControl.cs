@@ -4,13 +4,13 @@ using UnityEngine;
 using TMPro;
 using Microsoft.Unity.VisualStudio.Editor;
 
-public class HealthControl : MonoBehaviour
+public class PlayerHealthControl : MonoBehaviour
 {
-    public static HealthControl Instance;
+    public static PlayerHealthControl Instance;
     [SerializeField]private PlayerStatus playerStatus;
-    private HealthBar healthBar;// Health bar
-    private float healthCurrentValue;// Health current value
-    private float healthMaxValue; // Health max value need to achive for level up
+    private PlayerHealthBar healthBar;// Health bar
+    public float healthCurrentValue;// Health current value
+    public float healthMaxValue; // Health max value need to achive for level up
     private Animator animator;
 
     private void Awake()
@@ -19,7 +19,7 @@ public class HealthControl : MonoBehaviour
     }
     private void Start()
     {
-        healthBar = GetComponent<HealthBar>();
+        healthBar = GetComponent<PlayerHealthBar>();
         //Set Start Value same with data (player status)
         healthCurrentValue = playerStatus.currentHealth;
         healthMaxValue = playerStatus.maxHealth;
@@ -67,11 +67,9 @@ public class HealthControl : MonoBehaviour
     }
     public void PlayerHeatlthAfterRespawn()
     {
-        healthCurrentValue = healthMaxValue;
+        healthCurrentValue = playerStatus.currentHealth;
+        healthMaxValue =   playerStatus.maxHealth;
         healthBar.SetHealth(healthCurrentValue);
         healthBar.UpdateHealthText();
-        animator = GetComponent<Animator>();
-        animator.SetTrigger("isRespawn");
-        /* playerControl.SetIsAlive(true); */
     }
 }

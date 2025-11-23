@@ -18,6 +18,11 @@ public class ItemDictionary : MonoBehaviour
         {
             itemDictionary[item.itemID] = item;
         }
+        bossDictionary = new Dictionary<string, BossStatus>();
+        foreach(BossStatus bossStatus in boss)
+        {
+            bossDictionary[bossStatus.bossID] = bossStatus;
+        }
     }
     public Item GetItemInfo(string itemID)
     {
@@ -26,6 +31,15 @@ public class ItemDictionary : MonoBehaviour
             return item;
         }
         Debug.LogWarning($"Không tìm thấy Item ID {itemID} trong dictionary");
+        return null; // Trả về null nếu không tìm thấy
+    }
+    public BossStatus GetBossInfo(string bossID)
+    {
+        if (bossDictionary.TryGetValue(bossID, out BossStatus bossStatus))
+        {
+            return bossStatus;
+        }
+        Debug.LogWarning($"Không tìm thấy Boss ID {bossID} trong dictionary");
         return null; // Trả về null nếu không tìm thấy
     }
 }
