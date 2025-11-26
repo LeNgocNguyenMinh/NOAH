@@ -26,29 +26,31 @@ public class BossSaveData : MonoBehaviour
 
         BossCurrentStatus aoStatus = new BossCurrentStatus
         {
-            bossID = "AO_BOSS",
-            isDead = AOBoss.Instance.IsDead
+            bossID = "B_01",
+            isDead = AOBoss.Instance.IsDead,
+            bossPos = new Vector3(-16.73f, 75.6f, 0.0f )
         };
         bossStatus.Add(aoStatus);
 
         BossCurrentStatus fkStatus = new BossCurrentStatus
         {
-            bossID = "FK_BOSS",
-            isDead = FKBoss.Instance.IsDead
+            bossID = "B_03",
+            isDead = FKBoss.Instance.IsDead,
+            bossPos = new Vector3(114.32f, 6.04f, 0.0f)
         };
         bossStatus.Add(fkStatus);
 
         return bossStatus;
     }
     public void SetBossCurrentStatus(List<BossCurrentStatus> bossCurrentStatus)
-    {
-        foreach (var status in bossCurrentStatus)
+    {      
+        foreach (BossCurrentStatus status in bossCurrentStatus)
         {
-            if (status.bossID == "AO_BOSS")
+            if (status.bossID == "B_01")
             {
                 isAOBossDead = status.isDead;
             }
-            else if (status.bossID == "FK_BOSS")
+            else if (status.bossID == "B_03")
             {
                 isFKBossDead = status.isDead;
             }
@@ -67,6 +69,7 @@ public class BossSaveData : MonoBehaviour
         }
     }
 }
+[System.Serializable]
 public class BossCurrentStatus
 {
     public string bossID;

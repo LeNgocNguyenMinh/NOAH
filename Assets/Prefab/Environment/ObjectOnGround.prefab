@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6019778685439073480}
   - component: {fileID: 8599578231410892193}
+  - component: {fileID: 1026442799564769264}
   m_Layer: 0
   m_Name: ObjectOnGround
   m_TagString: Untagged
@@ -47,3 +48,18 @@ MonoBehaviour:
   itemsInGround: []
   listItems: []
   itemInGroudPrefab: []
+--- !u!114 &1026442799564769264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748084698994855248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1afaed1bc8f83c147ab3e16555148214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossSaveData
+  isAOBossDead: 0
+  isFKBossDead: 0
+  bossPrefab: []

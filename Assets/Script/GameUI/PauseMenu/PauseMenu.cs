@@ -113,17 +113,15 @@ public class PauseMenu : MonoBehaviour
             settingPanel.gameObject.SetActive(false);
         }); 
     }
-    public void MoveTo(ButtonEnum btnEnum)
+    public void MoveToMainMenu()
     {
-        PauseMenuPanelOff();
-        if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.MainMenuConfirm)
-        {
-            StartCoroutine(ToMainMenuCoroutine());
-        }
-        else if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.QuitConfirm)
-        {
-            Application.Quit();
-        }
+        isPaused = false;
+        StartCoroutine(ToMainMenuCoroutine());
+    }
+    public void QuitGame()
+    {
+        isPaused = false;
+        Application.Quit();
     }
     IEnumerator ToMainMenuCoroutine()
     {

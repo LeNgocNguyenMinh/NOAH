@@ -12,7 +12,7 @@ public class SaveData
     public List<InventorySaveData> hotBarSaveData;
     public List<ShopSaveData> shopSaveData; 
     public List<ItemInGroundSaveData> itemInGroundSaveData;
-    public List<BossCurrentStatus> bossCurrentStatuses;
+    public List<BossCurrentStatus> bossSaveData;
     public TimeSaveData timeSaveData;
     public PlayerSaveData playerSaveData;
     public MissionSaveData missionSaveData;

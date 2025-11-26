@@ -9,9 +9,7 @@ public class ButtonEnum : MonoBehaviour
         ResumeBtn,
         SettingBtn,
         MainMenuBtn,
-        MainMenuConfirm,
         QuitBtn,
-        QuitConfirm,
         BackToPauseMenu,
 
     }

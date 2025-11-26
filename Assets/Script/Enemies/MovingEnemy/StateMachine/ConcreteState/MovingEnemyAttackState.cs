@@ -31,20 +31,7 @@ public class MovingEnemyAttackState : MovingEnemyState
         base.AnimationTriggerEvent(triggerType);
         if(triggerType == MovingEnemy.AnimationTriggerType.AttackAnimFinish)
         {
-            if(enemy.IsInChaseRange)
-            {
-                if(!enemy.IsInAttackRange)
-                {
-                    enemy.StateMachine.ChangeState(enemy.ChaseState);
-                }
-                else 
-                {
-                    enemy.StateMachine.ChangeState(enemy.IdleState);
-                }
-            }
-            else{
-                enemy.StateMachine.ChangeState(enemy.IdleState);
-            }
+            enemy.StateMachine.ChangeState(enemy.IdleState);
         }
     }
 }

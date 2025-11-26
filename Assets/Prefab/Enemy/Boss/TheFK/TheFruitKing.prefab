@@ -473,7 +473,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 5f758165c725e624894a5dff8d2f4e05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -557,7 +557,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossHurt
   healthControl: {fileID: 8549682667463811723}
   currentBoss: 1
-  color: {r: 1, g: 0, b: 0, a: 0}
   dmgPopUpTrans: {fileID: 4764564264970629458}
   damagePopUpPref: {fileID: 2722009802675096760, guid: 405543868e778f449bd8daf304bf740b, type: 3}
   enemyHitEffect: {fileID: 1633227851031283742}
@@ -574,12 +573,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHitEffect
   flashMaterial: {fileID: 2100000, guid: 4aa70327bcf82a044b2ef5e42e433f28, type: 2}
-  color: {r: 0, g: 0, b: 0, a: 0}
-  duration: 0.5
+  color: {r: 1, g: 1, b: 1, a: 1}
+  duration: 0.1
   splashDistance: 1
   hitEffectPrefab: {fileID: 5851200870473605464, guid: 1a19b705ab3539641b3d7887f02f001d, type: 3}
-  spriteRenderer: {fileID: 0}
-  originalMaterial: {fileID: 0}
+  spriteRenderer: {fileID: 1301562383738519608}
+  originalMaterial: {fileID: 2100000, guid: 5f758165c725e624894a5dff8d2f4e05, type: 2}
 --- !u!1 &7069464764636328407
 GameObject:
   m_ObjectHideFlags: 0

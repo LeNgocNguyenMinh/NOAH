@@ -13,19 +13,14 @@ public class ItemDictionary : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-        itemDictionary = new Dictionary<string, Item>();
-        foreach(Item item in itemList)
-        {
-            itemDictionary[item.itemID] = item;
-        }
-        bossDictionary = new Dictionary<string, BossStatus>();
-        foreach(BossStatus bossStatus in boss)
-        {
-            bossDictionary[bossStatus.bossID] = bossStatus;
-        }
     }
     public Item GetItemInfo(string itemID)
     {
+        itemDictionary = new Dictionary<string, Item>();
+        foreach(Item itm in itemList)
+        {
+            itemDictionary[itm.itemID] = itm;
+        }
         if (itemDictionary.TryGetValue(itemID, out Item item))
         {
             return item;
@@ -35,6 +30,11 @@ public class ItemDictionary : MonoBehaviour
     }
     public BossStatus GetBossInfo(string bossID)
     {
+        bossDictionary = new Dictionary<string, BossStatus>();
+        foreach(BossStatus bossStat in boss)
+        {
+            bossDictionary[bossStat.bossID] = bossStat;
+        }
         if (bossDictionary.TryGetValue(bossID, out BossStatus bossStatus))
         {
             return bossStatus;

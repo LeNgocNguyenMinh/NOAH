@@ -216,7 +216,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 2055354556, guid: 1143e15547382ee478d192e42a51a505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_FlipX: 0
@@ -578,6 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <HealthBarUI>k__BackingField: {fileID: 6753706461402888175}
   <Body>k__BackingField: {fileID: 4922278761936341463}
+  <Col>k__BackingField: {fileID: 6003938438514648614}
   <MainObject>k__BackingField: {fileID: 28939735398813955}
   <RB>k__BackingField: {fileID: 8580631396950008050}
   <WalkSpeed>k__BackingField: 4

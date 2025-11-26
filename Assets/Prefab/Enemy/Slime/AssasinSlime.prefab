@@ -33,7 +33,6 @@ Transform:
   - {fileID: 4922278761936341463}
   - {fileID: 8903629063172529296}
   - {fileID: 7438755754273835711}
-  - {fileID: 6644037742874312697}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8580631396950008050
@@ -217,7 +216,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -627643634987786996, guid: f7b3495a45307884e92bd17fc185fe01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_FlipX: 0
@@ -483,37 +482,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 782655299358372623}
---- !u!1 &6678205564407727716
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6644037742874312697}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6644037742874312697
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6678205564407727716}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8579378497525975813}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8948891771955275171
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <HealthBarUI>k__BackingField: {fileID: 6918591162495647317}
   <Body>k__BackingField: {fileID: 4922278761936341463}
+  <Col>k__BackingField: {fileID: 6003938438514648614}
   <MainObject>k__BackingField: {fileID: 28939735398813955}
   <RB>k__BackingField: {fileID: 8580631396950008050}
   <WalkSpeed>k__BackingField: 4

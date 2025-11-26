@@ -10,7 +10,6 @@ public class BossHurt : MonoBehaviour
         FKBoss
     }
     [SerializeField] private CurrentBoss currentBoss;
-    [SerializeField] private Color color;
     [SerializeField] private Transform dmgPopUpTrans;
     [SerializeField] private GameObject damagePopUpPref;
     [SerializeField] private EnemyHitEffect enemyHitEffect;
@@ -22,9 +21,12 @@ public class BossHurt : MonoBehaviour
         DamagePopUp damagePopUp = Instantiate(damagePopUpPref, spawnPos, Quaternion.identity).GetComponent<DamagePopUp>();
         if((currentBoss == CurrentBoss.AOBoss && AOBoss.Instance.BossIsAwake)||(currentBoss == CurrentBoss.FKBoss && FKBoss.Instance.BossIsAwake))
         {
-            if(enemyHitEffect != null && direction != default)
+            if(enemyHitEffect != null)
             {
                 enemyHitEffect.Flash();
+            }
+            if(direction != default)
+            {
                 enemyHitEffect.Splash(transform.position, (Vector2) direction);
             }
             damagePopUp.ShowDamage(damage);

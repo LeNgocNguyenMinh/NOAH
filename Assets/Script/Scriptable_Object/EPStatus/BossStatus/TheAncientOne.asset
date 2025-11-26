@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac46b774ef156794b91fe794fa4f82aa, type: 3}
   m_Name: TheAncientOne
   m_EditorClassIdentifier: 
-  bossLevel: 7
+  bossLevel: 3
   bossName: The Ancient One
   bossID: B_01
-  bossBaseDamage: 10
-  bossDamage: 10
-  bossBaseHealth: 10
-  bossMaxHealth: 40
+  bossBaseDamage: 2
+  bossDamage: 2
+  bossBaseHealth: 100
+  bossMaxHealth: 200
+  bossPrefab: {fileID: 7669869676042543480, guid: 476ba4a0985d78443aa461d3ba7d3976, type: 3}
   playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}

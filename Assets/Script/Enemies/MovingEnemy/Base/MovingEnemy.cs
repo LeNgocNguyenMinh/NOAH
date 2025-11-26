@@ -8,6 +8,7 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     public bool IsInAttackRange { get; set; } = false;
     [field: SerializeField]public GameObject HealthBarUI { get; set; }
     [field: SerializeField]public Transform Body {get; set;}
+    [field: SerializeField]public CircleCollider2D Col { get; set;}
     [field: Header("Moving Enemy Setting")]
     [field: SerializeField]public GameObject MainObject { get; set; }
     [field: SerializeField]public Rigidbody2D RB { get; set; }
@@ -96,9 +97,7 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     }
     public void Die()
     {
-        if(StateMachine.CurrentEnemyState.GetType().Name != "MovingEnemyDieState") { 
-            StateMachine.ChangeState(DieState);
-        }
+        StateMachine.ChangeState(DieState);
     }
     public void DestroyAfterDead()
     {

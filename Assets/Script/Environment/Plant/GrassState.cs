@@ -17,10 +17,10 @@ public class GrassState : MonoBehaviour
     {
         if (collision.CompareTag("Sword") || collision.tag.Contains("Bullet"))
         {
-            CanCut();
+            CanCutCheck();
         }
     }
-    private void CanCut()
+    private void CanCutCheck()
     {
         if(canCut)
         {

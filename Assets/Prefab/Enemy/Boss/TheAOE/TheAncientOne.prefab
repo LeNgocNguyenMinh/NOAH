@@ -251,7 +251,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthControl: {fileID: 8546079636946162697}
   currentBoss: 0
-  color: {r: 1, g: 0.2999999, b: 0.2999999, a: 0}
   dmgPopUpTrans: {fileID: 2535275078249216255}
   damagePopUpPref: {fileID: 2722009802675096760, guid: 405543868e778f449bd8daf304bf740b, type: 3}
   enemyHitEffect: {fileID: 0}
@@ -438,7 +437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthControl: {fileID: 8546079636946162697}
   currentBoss: 0
-  color: {r: 1, g: 0.2999999, b: 0.2999999, a: 0}
   dmgPopUpTrans: {fileID: 6968899789170482789}
   damagePopUpPref: {fileID: 2722009802675096760, guid: 405543868e778f449bd8daf304bf740b, type: 3}
   enemyHitEffect: {fileID: 0}
@@ -562,7 +560,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5f758165c725e624894a5dff8d2f4e05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -654,12 +652,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 4aa70327bcf82a044b2ef5e42e433f28, type: 2}
-  color: {r: 0, g: 0, b: 0, a: 0}
-  duration: 0.5
+  color: {r: 1, g: 1, b: 1, a: 1}
+  duration: 0.1
   splashDistance: 1
   hitEffectPrefab: {fileID: 5851200870473605464, guid: 1a19b705ab3539641b3d7887f02f001d, type: 3}
-  spriteRenderer: {fileID: 0}
-  originalMaterial: {fileID: 0}
+  spriteRenderer: {fileID: 9192682334332802122}
+  originalMaterial: {fileID: 2100000, guid: 5f758165c725e624894a5dff8d2f4e05, type: 2}
 --- !u!114 &8672469465394309978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,7 +672,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthControl: {fileID: 8546079636946162697}
   currentBoss: 0
-  color: {r: 1, g: 0.2999999, b: 0.2999999, a: 0}
   dmgPopUpTrans: {fileID: 4989938255539332569}
   damagePopUpPref: {fileID: 2722009802675096760, guid: 405543868e778f449bd8daf304bf740b, type: 3}
   enemyHitEffect: {fileID: 6381305756700793346}

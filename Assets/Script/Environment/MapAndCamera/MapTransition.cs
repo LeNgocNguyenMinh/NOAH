@@ -21,16 +21,16 @@ public class MapTransition : MonoBehaviour
         if(collider.gameObject.CompareTag("Player"))
         {
             confiner.m_BoundingShape2D = mapBoundry;
-            UpdatePlayerPosition(Player.Instance.gameObject);
+            UpdatePlayerPosition();
         }
     }
     public void UpdateCameraBoundry(PolygonCollider2D newMapBoundry)
     {
         confiner.m_BoundingShape2D = newMapBoundry;
     }
-    private void UpdatePlayerPosition(GameObject player)
+    private void UpdatePlayerPosition()
     {
-        Vector3 newPos = player.transform.position;
+        Vector3 newPos = Player.Instance.transform.position;
         if(teleportPoint == true)
         {
             newPos = teleportTransform.position;
@@ -54,6 +54,6 @@ public class MapTransition : MonoBehaviour
         { 
             SceneTransition.Instance.SceneIn();
         }
-        player.transform.position = newPos;
+        Player.Instance.transform.position = newPos;
     }
 }

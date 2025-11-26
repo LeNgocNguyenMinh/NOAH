@@ -50,7 +50,7 @@ public class PlayerWandATK : MonoBehaviour
         PlayerWeaponParent.Instance.SubCurrentBullet();
         PlayerMagazine.Instance.CheckEnergyBarLeft();
         PlayerWeaponParent.Instance.UpdateMagazine();
-        direction = (Vector2)(firePoint.position - transform.position);
+        direction = (Vector2)(firePoint.position - transform.position).normalized;
         Instantiate(bulletPrefap, firePoint.position, Quaternion.identity).GetComponent<WandBullet>().SetValue(wandBulletSpeed, direction);
     }
     

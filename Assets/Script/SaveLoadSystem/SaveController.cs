@@ -17,8 +17,6 @@ public class SaveController : MonoBehaviour
     [SerializeField]private MissionScriptable missionScriptable;
     void Awake()
     {
-        saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
-        newGameSaveLocation = Path.Combine(Application.persistentDataPath, "newGameData.json");
         if(Instance == null)
         {
             Instance = this;
@@ -45,7 +43,7 @@ public class SaveController : MonoBehaviour
             hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
             shopSaveData = ShopController.Instance.GetListItemInShop(),
             itemInGroundSaveData = ItemInGroundController.Instance.GetListItemInGround(),
-            bossCurrentStatuses = BossSaveData.Instance.GetAllBossCurrentStatus(),
+            bossSaveData = BossSaveData.Instance.GetAllBossCurrentStatus(),
             timeSaveData = TimeManager.Instance.GetTime(),
             playerSaveData = playerStatus?.GetPlayerInfo(),
             missionSaveData = MissionManager.Instance.GetMissionList(),
@@ -79,7 +77,7 @@ public class SaveController : MonoBehaviour
             hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
             shopSaveData = existingData.shopSaveData,
             itemInGroundSaveData = existingData.itemInGroundSaveData,
-            bossCurrentStatuses = existingData.bossCurrentStatuses,
+            bossSaveData = existingData.bossSaveData,
             timeSaveData = TimeManager.Instance.GetTimeSkip(),
             playerSaveData = playerStatus?.GetPlayerInfo(),
             missionSaveData = MissionManager.Instance.GetMissionList()
@@ -111,7 +109,7 @@ public class SaveController : MonoBehaviour
             ShopController.Instance.SetListItemInShop(saveData.shopSaveData);
             TimeManager.Instance.SetTime(saveData.timeSaveData);
             ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
-            BossSaveData.Instance.SetBossCurrentStatus(saveData.bossCurrentStatuses);
+            BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
             playerStatus.SetPlayerInfo(saveData.playerSaveData);
             MissionManager.Instance.SetMissionList(saveData.missionSaveData);          
         }
@@ -134,7 +132,6 @@ public class SaveController : MonoBehaviour
             { ""itemID"": ""HPPotion_03"", ""itemLeftNumber"": 5 },
             { ""itemID"": ""HPPotion_02"", ""itemLeftNumber"": 5 }
         ],
-        
         ""itemInGroundSaveData"": [
             { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -15.3, ""y"": 3.2, ""z"": 0.0 }, ""isCollect"": false },
             { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -23.05, ""y"": -2.18, ""z"": 0.0 }, ""isCollect"": false },
@@ -144,6 +141,10 @@ public class SaveController : MonoBehaviour
             { ""itemID"": ""HPPotion_01"", ""itemPos"": { ""x"": -23.83, ""y"": -1.7, ""z"": 0.0 }, ""isCollect"": false },
             { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": -15.0, ""y"": 9.86, ""z"": 0.0 }, ""isCollect"": false },
             { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": -1.31, ""y"": 1.46, ""z"": 0.0 }, ""isCollect"": false }
+        ],
+        ""bossSaveData"": [
+            { ""bossID"": ""B_01"", ""isDead"": ""false"", ""bossPos"": { ""x"": -16.73, ""y"": 75.6, ""z"": 0.0 }},
+            { ""bossID"": ""B_03"", ""isDead"": ""false"", ""bossPos"": { ""x"": 114.32, ""y"": 6.04, ""z"": 0.0 }}
         ],
         ""timeSaveData"": { ""minData"": 0.0, ""hourData"": 0.0, ""dateData"": 0 },
         ""playerSaveData"": {
@@ -155,8 +156,8 @@ public class SaveController : MonoBehaviour
             ""playerCoinData"": 250,
             ""maxExpData"": 40.0,
             ""currentExpData"": 0.0,
-            ""maxHealthData"": 20.0,
-            ""currentHealthData"": 20.0,
+            ""maxHealthData"": 200.0,
+            ""currentHealthData"": 200.0,
             ""currentWeaponID"": ""WP_03"",
             ""currentHatID"": ""None"",
             ""currentCoatID"": ""None""
@@ -177,11 +178,6 @@ public class SaveController : MonoBehaviour
                     ""currentAmount"": 0,
                     ""isFinish"": false,
                     ""missionID"": ""MS03""
-                },
-                {
-                    ""currentAmount"": 0,
-                    ""isFinish"": false,
-                    ""missionID"": ""NPC_MS01""
                 }
             ],
             ""currentMissionID"": """"
@@ -203,7 +199,7 @@ public class SaveController : MonoBehaviour
         ShopController.Instance.SetListItemInShop(saveData.shopSaveData);
         TimeManager.Instance.SetTime(saveData.timeSaveData);
         ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
-        BossSaveData.Instance.SetBossCurrentStatus(saveData.bossCurrentStatuses);
+        BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
         playerStatus.SetPlayerInfo(saveData.playerSaveData);
         MissionManager.Instance.SetMissionList(saveData.missionSaveData);     
         SaveGame();

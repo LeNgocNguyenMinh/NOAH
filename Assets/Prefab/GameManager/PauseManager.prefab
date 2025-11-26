@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &838801163645040934
 Transform:
@@ -61,6 +61,7 @@ MonoBehaviour:
   resumeButtonImage: {fileID: 0}
   respawnSprite: {fileID: 21300000, guid: aceaa0773e9d25241ac1ad3a3a9903c3, type: 3}
   resumeSprite: {fileID: 21300000, guid: eb79cd72f8dc61e46a8c8bb5b1b4beb6, type: 3}
+  settingBtnFunction: {fileID: 3285657798127977723}
 --- !u!114 &3569652315441583608
 MonoBehaviour:
   m_ObjectHideFlags: 0

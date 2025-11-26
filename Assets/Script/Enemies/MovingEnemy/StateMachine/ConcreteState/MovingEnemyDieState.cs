@@ -12,9 +12,10 @@ public class MovingEnemyDieState : MovingEnemyState
     {
         base.EnterState();
         enemy.Stop();
-        enemy.Animator.SetTrigger("DeadStart");
         enemy.HideUI();
         enemy.DropOnDie.DropReward();
+        enemy.Col.enabled = false;
+        enemy.Animator.SetTrigger("DeadStart");
     }
     public override void ExitState()
     {

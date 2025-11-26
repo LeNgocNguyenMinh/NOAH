@@ -83,7 +83,7 @@ public class TimeManager : MonoBehaviour
         else{
             amAndPmBox.text = "AM";
         }
-        if(10 <= hour && hour <= 22)
+        if(7 <= hour && hour <= 22)
         {
             ShopController.Instance.canOpenShop = true;
         }
