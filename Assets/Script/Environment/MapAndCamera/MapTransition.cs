@@ -6,7 +6,7 @@ using Cinemachine;
 public class MapTransition : MonoBehaviour
 {
     [SerializeField]private PolygonCollider2D mapBoundry;
-    CinemachineConfiner confiner;
+    [SerializeField]CinemachineConfiner confiner;
     [SerializeField]private Direction direction;
     [SerializeField]private Transform teleportTransform;
     [SerializeField]private bool teleportPoint;

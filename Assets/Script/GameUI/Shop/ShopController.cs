@@ -19,7 +19,14 @@ public class ShopController : MonoBehaviour
     public bool canOpenShop = false;
     private void Awake() 
     {
-        if(Instance == null) Instance = this;
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     public void ShopUIInteract()
     {

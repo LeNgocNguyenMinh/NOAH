@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class CoinDrop : MonoBehaviour
 {
-    private Transform player;//Player object
-    private CoinControl coinControl; // 
     private float delayBeforeMoving = 2f; //Delay time after dead and before go to player
-    private float moveSpeed = 20f; //Speed of exp point        
-
-    private Vector3 playerPosition;     //For player position
+    private float moveSpeed = 20f; //Speed of exp point   
     private Rigidbody2D rb;             
-    private bool hasStartedMoving = false; 
-    private SoundControl soundControl;
+    private bool hasStartedMoving = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); 
-        player = FindObjectOfType<Player>().transform;
         Invoke("StartMoving", delayBeforeMoving); 
     }
     void StartMoving()
@@ -28,9 +22,8 @@ public class CoinDrop : MonoBehaviour
     {
         if (hasStartedMoving)
         {
-            playerPosition = player.transform.position;
 
-            Vector2 direction = (playerPosition - transform.position).normalized;//Find Vector from expSpawn Point to Player
+            Vector2 direction = (Player.Instance.transform.position - transform.position).normalized;//Find Vector from expSpawn Point to Player
 
             rb.linearVelocity = direction * moveSpeed; //Start to move to player
         }
@@ -39,10 +32,8 @@ public class CoinDrop : MonoBehaviour
     {
         if(collider.gameObject.tag=="PlayerHitCollider")
         {
-            soundControl = FindObjectOfType<SoundControl>().GetComponent<SoundControl>();
-            soundControl.CoinCollectPlay();
-            coinControl = player.GetComponent<CoinControl>();
-            coinControl.AddCoin(2);
+            SoundControl.Instance.CoinCollectPlay();
+            CoinControl.Instance.AddCoin(2);
             Destroy(gameObject);
         }
     }

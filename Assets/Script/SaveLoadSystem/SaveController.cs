@@ -144,7 +144,7 @@ public class SaveController : MonoBehaviour
         ],
         ""bossSaveData"": [
             { ""bossID"": ""B_01"", ""isDead"": ""false"", ""bossPos"": { ""x"": -16.73, ""y"": 75.6, ""z"": 0.0 }},
-            { ""bossID"": ""B_03"", ""isDead"": ""false"", ""bossPos"": { ""x"": 114.32, ""y"": 6.04, ""z"": 0.0 }}
+            { ""bossID"": ""B_03"", ""isDead"": ""false"", ""bossPos"": { ""x"": 118.42, ""y"": 6.6, ""z"": 0.0 }}
         ],
         ""timeSaveData"": { ""minData"": 0.0, ""hourData"": 0.0, ""dateData"": 0 },
         ""playerSaveData"": {

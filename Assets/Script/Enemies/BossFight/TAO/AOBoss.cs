@@ -4,6 +4,7 @@ public class AOBoss : MonoBehaviour
 {
     public static AOBoss Instance { get; private set; }
     [field: Header("General attribute")]
+    [field: SerializeField]public GameObject Gate { get; set; }
     [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public GameObject BossBody { get; set; }
     [field: SerializeField]public Animator AOBossAnimator { get; set; }
@@ -12,9 +13,6 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public Rigidbody2D RHandRB { get; set; }
     [field: SerializeField]public Rigidbody2D LHandRB { get; set; }
     [field: SerializeField]public Rigidbody2D HeadRB { get; set; }
-    [field: SerializeField]public BoxCollider2D LHandCld { get; set; }
-    [field: SerializeField]public BoxCollider2D RHandCld { get; set; }
-    [field: SerializeField]public BoxCollider2D HeadCld { get; set; }
     public bool IsDead { get; set; } = false;
     public Vector3 RightHandOriginTrans { get; set; }
     public Vector3 LeftHandOriginTrans { get; set; }
@@ -116,7 +114,12 @@ public class AOBoss : MonoBehaviour
     }
     public void BossDeath()
     {
-        StateMachine.ChangeState(DeadState);
+        if(!IsDead)
+        {
+            IsDead = true;
+            StateMachine.ChangeState(DeadState);
+        }
+        
     }
     public void BossVanish()
     {

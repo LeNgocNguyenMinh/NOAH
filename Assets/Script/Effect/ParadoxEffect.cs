@@ -4,7 +4,7 @@ using UnityEngine.UI;
  
 public class ParadoxEffect : MonoBehaviour {
     [SerializeField] private RawImage rawImage;
-    [SerializeField] private float scrollSpeed = 0.5f;
+    [SerializeField] private float scrollTime = 0.5f;
 
     private float uvX = 0f;
 
@@ -19,7 +19,7 @@ public class ParadoxEffect : MonoBehaviour {
             rect.x = uvX;
             rawImage.uvRect = rect;
 
-        }, 1f, scrollSpeed)                            // 0 → 1 trong 2 giây
+        }, 1f, scrollTime)                            // 0 → 1 trong 2 giây
         .SetEase(Ease.Linear)
         .SetLoops(-1, LoopType.Restart);       // đạt 1 → trở về 0 → chạy lại
     }

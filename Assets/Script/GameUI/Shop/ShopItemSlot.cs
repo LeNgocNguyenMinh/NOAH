@@ -14,8 +14,6 @@ public class ShopItemSlot : MonoBehaviour
     [SerializeField]private TMP_Text itemPrice;
     [SerializeField]private Image itemImage;
     [SerializeField]private PlayerStatus playerStatus; 
-    private ShopController shopController;
-    private UIInventoryPage uiInventoryPage;
     public void SetItem(Item newValue)
     {
         item = newValue;
@@ -46,16 +44,14 @@ public class ShopItemSlot : MonoBehaviour
         }
         if(playerStatus.playerCoin >= item.itemPrice)
         {
-            uiInventoryPage = FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
-            if(!uiInventoryPage.AddItem(item, 1))
+            if(!UIInventoryPage.Instance.AddItem(item, 1))
             {
                 return;
             }
             NotifPopUp.Instance.ShowNotification("Add 1 " + item.itemName + " to inventory.");
             numberOfItem--;
             SetNumberOfItem(numberOfItem);
-            shopController = FindObjectOfType<ShopController>().GetComponent<ShopController>();
-            shopController.CoinTextUpdateAfterBuy(item.itemPrice);
+            ShopController.Instance.CoinTextUpdateAfterBuy(item.itemPrice);
         }
         else
         {

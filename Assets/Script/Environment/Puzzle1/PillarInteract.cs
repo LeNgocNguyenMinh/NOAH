@@ -5,13 +5,8 @@ using UnityEngine;
 public class PillarInteract : MonoBehaviour
 {
     [SerializeField]private string text;
-    private LightOnTopInteractive lightOnTopInteractive;
-    private Puzzle01Interact puzzle01Interact;
-    private void Start()
-    {
-        puzzle01Interact = FindObjectOfType<Puzzle01Interact>().GetComponent<Puzzle01Interact>();
-        lightOnTopInteractive = GetComponentInChildren<LightOnTopInteractive>();
-    }
+    [SerializeField]private LightOnTopInteractive lightOnTopInteractive;
+    [SerializeField]private Puzzle01Interact puzzle01Interact;
     public void ResetEnterPass()
     {
         puzzle01Interact.AddToPassWord("");

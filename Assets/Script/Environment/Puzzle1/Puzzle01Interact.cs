@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Puzzle01Interact : MonoBehaviour
 {
-    private bool chestIsSpawn;
+    public static Puzzle01Interact instance;
+    private bool chestIsSpawn = false;
     private string passWord = "";
     [SerializeField]private Transform chestSpawn;
     [SerializeField]private GameObject chestPrefab;
@@ -14,7 +15,6 @@ public class Puzzle01Interact : MonoBehaviour
     private void Start()
     {
         chestPrefab.SetActive(false);
-        chestIsSpawn = false;
     }
 
     public void AddToPassWord(string text)
