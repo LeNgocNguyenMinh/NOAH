@@ -6,27 +6,22 @@ using Cinemachine;
 public class MapTransition : MonoBehaviour
 {
     [SerializeField]private PolygonCollider2D mapBoundry;
-    [SerializeField]CinemachineConfiner confiner;
     [SerializeField]private Direction direction;
     [SerializeField]private Transform teleportTransform;
     [SerializeField]private bool teleportPoint;
     enum Direction { Up, Down, Left, Right}
     [SerializeField]private float additivePos;
-    private void Awake()
-    {
-        confiner = FindObjectOfType<CinemachineConfiner>();
-    } 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.CompareTag("Player"))
         {
-            confiner.m_BoundingShape2D = mapBoundry;
+            CameraControl.Instance.confiner.m_BoundingShape2D = mapBoundry;
             UpdatePlayerPosition();
         }
     }
     public void UpdateCameraBoundry(PolygonCollider2D newMapBoundry)
     {
-        confiner.m_BoundingShape2D = newMapBoundry;
+        CameraControl.Instance.confiner.m_BoundingShape2D = newMapBoundry;
     }
     private void UpdatePlayerPosition()
     {

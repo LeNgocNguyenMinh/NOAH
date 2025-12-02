@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class UIInventoryController : MonoBehaviour
 {
     public static UIInventoryController Instance;
-    private UIInventoryPage uiInventoryPage;
     [SerializeField]private Animator animator;
     [Header("---------GeneralUI---------")] 
     [SerializeField]private RectTransform ismPanel;

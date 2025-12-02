@@ -10,6 +10,7 @@ public class CameraControl : MonoBehaviour
     [SerializeField]private CinemachineVirtualCamera virtualCamera;
     [SerializeField]private float smallSize;
     [SerializeField]private float normalSize;
+    public CinemachineConfiner confiner;
 
     private void Awake()
     {

@@ -45,6 +45,6 @@ public class PlayerStatusInfo : MonoBehaviour
     }
     public void UpdateAvailablePoint()
     {
-        this.playerAvailablePoint.text = "Point " + playerStatus.availablePoint + "";
+        this.playerAvailablePoint.text = playerStatus.availablePoint + "";
     }  
 }

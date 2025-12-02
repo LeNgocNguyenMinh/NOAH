@@ -21,7 +21,7 @@ public class UIMouseAndPriority : MonoBehaviour
     } 
     public bool IsInLimitInteractPanel()
     {
-        if(PauseMenu.isPaused || NPCDialogueControl.isDialogueActive || PauseMenu.isOver)
+        if(PauseMenu.isPaused || NPCDialogueControl.isDialogueActive || PauseMenu.isOver || TutorialUIManager.panelActive)
         {
             return true;
         }

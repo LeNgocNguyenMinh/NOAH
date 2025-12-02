@@ -14,7 +14,6 @@ public class SaveController : MonoBehaviour
     private SaveData existingData;
     [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private List<Item> weaponList;
-    [SerializeField]private MissionScriptable missionScriptable;
     void Awake()
     {
         if(Instance == null)
@@ -52,13 +51,6 @@ public class SaveController : MonoBehaviour
         {
             saveData.weaponListData.Add(weaponList[i].GetWeaponData());
         }
-      /*   if(FindObjectOfType<CinemachineConfiner>()!=null)
-        {
-            if(FindObjectOfType<CinemachineConfiner>()?.m_BoundingShape2D.gameObject.name!=null)
-            {
-                saveData.mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name;
-            }
-        } */
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
         NotifPopUp.Instance.ShowNotification("Save success.");
     }
@@ -82,14 +74,7 @@ public class SaveController : MonoBehaviour
             playerSaveData = playerStatus?.GetPlayerInfo(),
             missionSaveData = MissionManager.Instance.GetMissionList()
         };
-        /* if(FindObjectOfType<CinemachineConfiner>()!=null)
-        {
-            if(FindObjectOfType<CinemachineConfiner>()?.m_BoundingShape2D.gameObject.name!=null)
-            {
-                saveData.mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.gameObject.name;
-            }
-        } */
-        for(int i = 0; i < weaponList.Count; i++)
+           for(int i = 0; i < weaponList.Count; i++)
         {
             saveData.weaponListData.Add(weaponList[i].GetWeaponData());
         }
