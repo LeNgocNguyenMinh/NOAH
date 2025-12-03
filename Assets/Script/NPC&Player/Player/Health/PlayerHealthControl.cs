@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Microsoft.Unity.VisualStudio.Editor;
 
 public class PlayerHealthControl : MonoBehaviour
 {
     public static PlayerHealthControl Instance;
-    [SerializeField]private PlayerStatus playerStatus;
     private PlayerHealthBar healthBar;// Health bar
     public float healthCurrentValue;// Health current value
     public float healthMaxValue; // Health max value need to achive for level up
@@ -21,8 +19,8 @@ public class PlayerHealthControl : MonoBehaviour
     {
         healthBar = GetComponent<PlayerHealthBar>();
         //Set Start Value same with data (player status)
-        healthCurrentValue = playerStatus.currentHealth;
-        healthMaxValue = playerStatus.maxHealth;
+        healthCurrentValue = PlayerStatus.Instance.currentHealth;
+        healthMaxValue = PlayerStatus.Instance.maxHealth;
 
         healthBar.SetMaxHealth(healthMaxValue);
         healthBar.SetHealth(healthCurrentValue); 
@@ -31,7 +29,7 @@ public class PlayerHealthControl : MonoBehaviour
     }
     public void UpdateMaxHealth() //Update max Health when player Add point to Health 
     {
-        healthMaxValue = playerStatus.maxHealth;
+        healthMaxValue = PlayerStatus.Instance.maxHealth;
         healthBar.SetMaxHealth(healthMaxValue);
         healthBar.UpdateHealthText();
     }
@@ -45,7 +43,7 @@ public class PlayerHealthControl : MonoBehaviour
         }
         //Update Current Health and Health Text
         healthBar.SetHealth(healthCurrentValue);
-        playerStatus.SetCurrentHealth(healthCurrentValue);
+        PlayerStatus.Instance.SetCurrentHealth(healthCurrentValue);
         healthBar.UpdateHealthText();
     }
     public bool HealthRecover(float health)
@@ -61,14 +59,14 @@ public class PlayerHealthControl : MonoBehaviour
             healthCurrentValue = healthMaxValue;
         }
         healthBar.SetHealth(healthCurrentValue);
-        playerStatus.SetCurrentHealth(healthCurrentValue);
+        PlayerStatus.Instance.SetCurrentHealth(healthCurrentValue);
         healthBar.UpdateHealthText();
         return true;
     }
     public void PlayerHeatlthAfterRespawn()
     {
-        healthCurrentValue = playerStatus.currentHealth;
-        healthMaxValue =   playerStatus.maxHealth;
+        healthCurrentValue = PlayerStatus.Instance.currentHealth;
+        healthMaxValue =   PlayerStatus.Instance.maxHealth;
         healthBar.SetHealth(healthCurrentValue);
         healthBar.UpdateHealthText();
     }

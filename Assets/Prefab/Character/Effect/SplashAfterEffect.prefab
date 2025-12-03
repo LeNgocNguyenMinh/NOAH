@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4347025560015581208}
   - component: {fileID: 5952498410585292078}
   - component: {fileID: 7499837798218886871}
-  - component: {fileID: 6150058686688630850}
+  - component: {fileID: 1872584036516657957}
   m_Layer: 0
   m_Name: SplashAfterEffect
   m_TagString: Untagged
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -199736714, guid: b8e89f585b83df846a3c15485c893d29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,7 +114,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6150058686688630850
+--- !u!114 &1872584036516657957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,6 +123,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5851200870473605464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 911b6c4c43e96434c843b0d2654bfffa, type: 3}
+  m_Script: {fileID: 11500000, guid: fd2c494f0c5d4f94080fcbeb430cc0bb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimBehaviourGeneral

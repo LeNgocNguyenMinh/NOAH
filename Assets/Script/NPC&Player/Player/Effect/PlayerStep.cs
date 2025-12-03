@@ -10,7 +10,10 @@ public class PlayerStep : MonoBehaviour
     [SerializeField]private GameObject stepOnWaterEcho;
     private GameObject echo;
     public Tilemap[] tilemaps; // Gán trong Inspector hoặc tự động tìm
-
+    public void Start()
+    {
+        tilemaps = MapTileManager.Instance.GetTileMapList();   
+    }
     void Update()
     {
         if(Player.Instance.RB.linearVelocity.sqrMagnitude > 0.5f)
@@ -18,7 +21,6 @@ public class PlayerStep : MonoBehaviour
             if(timeBtwSpawn <= 0)
             {
                 Vector3Int cellPos = tilemaps[0].WorldToCell(transform.position);
-                /* CheckTile(cellPos); */
                 IsOnWater(cellPos);
                 SpawnEcho();
             }

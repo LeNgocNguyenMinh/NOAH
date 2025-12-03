@@ -6,12 +6,17 @@ public class CameraTransition : MonoBehaviour
 {
     public static CameraTransition Instance;
     [SerializeField]private PolygonCollider2D[] allColliders;
-    private MapTransition mapTransition;
     private PolygonCollider2D currentCollider;
-    
-
-    void Start()
+    private void Awake()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         currentCollider = allColliders[0];
     }
     void Update()
@@ -21,8 +26,7 @@ public class CameraTransition : MonoBehaviour
             if (collider.OverlapPoint(Player.Instance.transform.position) && collider != currentCollider)
             {
                 currentCollider = collider;
-                mapTransition = FindObjectOfType<MapTransition>().GetComponent<MapTransition>();
-                mapTransition.UpdateCameraBoundry(collider);
+                CameraControl.Instance.UpdateCameraBoundry(collider);
             }
         }
     }

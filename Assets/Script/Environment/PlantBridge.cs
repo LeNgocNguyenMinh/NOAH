@@ -13,7 +13,7 @@ public class PlantBridge : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "WoodBullet")
+        if (collider.CompareTag("WoodBullet"))
         {
             boxCollider.isTrigger = true;
             animator.SetTrigger("isHit");

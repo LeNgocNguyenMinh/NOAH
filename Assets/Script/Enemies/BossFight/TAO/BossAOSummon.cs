@@ -18,7 +18,7 @@ public class BossAOSummon : MonoBehaviour
     private bool isSummon = false;
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "Player" && !isSummon)
+        if(collider.CompareTag("Player") && !isSummon)
         {
             cmCamera.SetActive(false);
             bossTimeLine.SetActive(true);

@@ -27,8 +27,8 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     public MovingEnemyDieState DieState { get; set; }
     public MovingEnemyWalkState WalkState { get; set; } 
     
-    public Animator Animator { get; set; }
-    public DropOnDie DropOnDie { get; set; }
+    [field: SerializeField]public Animator Animator { get; set; }
+    [field: SerializeField]public DropOnDie DropOnDie { get; set; }
     
     private void Awake()
     {
@@ -41,8 +41,6 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     }
     private void Start()
     {
-        DropOnDie = GetComponent<DropOnDie>();
-        Animator = GetComponent<Animator>();
         StateMachine.Initialize(WalkState);   
     }
     private void Update()

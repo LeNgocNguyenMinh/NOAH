@@ -12,7 +12,7 @@ public class PlantGateHitByBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "FireBullet" && !isBurn)
+        if(collider.CompareTag("FireBullet") && !isBurn)
         {
             isBurn = true;
             animator = GetComponent<Animator>();

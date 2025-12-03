@@ -13,10 +13,9 @@ public class BossStatus : ScriptableObject
     public float bossBaseHealth;
     public float bossMaxHealth;
     public GameObject bossPrefab;
-    public PlayerStatus playerStatus;
     public void UpdateLevel()
     {
-        this.bossLevel = playerStatus.playerLevel + 2;
+        this.bossLevel = PlayerStatus.Instance.playerLevel + 2;
     }
     public void SetName(string newValue)
     {

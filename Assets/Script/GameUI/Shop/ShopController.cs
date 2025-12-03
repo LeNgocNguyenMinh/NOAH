@@ -10,7 +10,6 @@ public class ShopController : MonoBehaviour
     [SerializeField]private List<ShopItemSlot> listOfItemSlot = new List<ShopItemSlot>();
     [SerializeField]private List<Item> listItemForShop = new List<Item>();
     [SerializeField]private TMP_Text playerCoin;
-    [SerializeField]private PlayerStatus playerStatus;
     [Header("---------Panel Animation---------")]
     [SerializeField]private RectTransform panel;
     [SerializeField]private Vector2 hiddenPosition;
@@ -64,12 +63,12 @@ public class ShopController : MonoBehaviour
     }
     public void UpdateWhenOpen()
     {
-        playerCoin.text = playerStatus.playerCoin.ToString();
+        playerCoin.text = PlayerStatus.Instance.playerCoin.ToString();
     }
     public void CoinTextUpdateAfterBuy(int newValue)
     {
-        playerStatus.AddCoin(-newValue);
-        playerCoin.text = playerStatus.playerCoin.ToString();
+        PlayerStatus.Instance.AddCoin(-newValue);
+        playerCoin.text = PlayerStatus.Instance.playerCoin.ToString();
     }
     public void AddItemToShop()
     {

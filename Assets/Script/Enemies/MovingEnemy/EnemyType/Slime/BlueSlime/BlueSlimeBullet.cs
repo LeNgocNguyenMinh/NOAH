@@ -40,8 +40,8 @@ public class BlueSlimeBullet : MonoBehaviour
     {
         if(collider.CompareTag("PlayerHitCollider") && !bulletBreak)
         {
-            collider.GetComponent<PlayerEffect>().PushBack(direction);
-            collider.GetComponent<PlayerEffect>().HitFlash();   
+            PlayerEffect.Instance.PushBack(direction);
+            PlayerEffect.Instance.HitFlash();   
             PlayerHealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
             bulletBreak = true;
             animator.SetTrigger("break");

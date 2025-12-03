@@ -9,7 +9,6 @@ using UnityEngine.EventSystems;
 public class PlayerStatusInfo : MonoBehaviour
 {
     public static PlayerStatusInfo Instance;
-    [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private TMP_Text playerAvailablePoint;
     [SerializeField]private TMP_Text playerLevel;
     [SerializeField]private TMP_Text playerHealth;
@@ -24,27 +23,27 @@ public class PlayerStatusInfo : MonoBehaviour
     }
     public void UpdateInfo()
     {
-        this.playerAvailablePoint.text = playerStatus.availablePoint + "";
-        this.playerLevel.text = "Level " + playerStatus.playerLevel + "";
-        this.playerHealth.text = playerStatus.maxHealth + "";
-        this.playerBulletNumber.text = playerStatus.playerBullet + "";
-        this.playerDamage.text = playerStatus.playerCurrentDamage + "";
-        this.playerCoinNumber.text = playerStatus.playerCoin + "";
+        this.playerAvailablePoint.text = PlayerStatus.Instance.availablePoint + "";
+        this.playerLevel.text = "Level " + PlayerStatus.Instance.playerLevel + "";
+        this.playerHealth.text = PlayerStatus.Instance.maxHealth + "";
+        this.playerBulletNumber.text = PlayerStatus.Instance.playerBullet + "";
+        this.playerDamage.text = PlayerStatus.Instance.playerCurrentDamage + "";
+        this.playerCoinNumber.text = PlayerStatus.Instance.playerCoin + "";
     }
     public void UpdateDamage()
     {
-        this.playerDamage.text = playerStatus.playerCurrentDamage + "";
+        this.playerDamage.text = PlayerStatus.Instance.playerCurrentDamage + "";
     }
     public void UpdateMaxHealth()
     {
-        this.playerHealth.text = playerStatus.maxHealth + "";
+        this.playerHealth.text = PlayerStatus.Instance.maxHealth + "";
     }
     public void UpdateMaxBullet()
     {
-        this.playerBulletNumber.text = playerStatus.playerBullet + "";
+        this.playerBulletNumber.text = PlayerStatus.Instance.playerBullet + "";
     }
     public void UpdateAvailablePoint()
     {
-        this.playerAvailablePoint.text = playerStatus.availablePoint + "";
+        this.playerAvailablePoint.text = PlayerStatus.Instance.availablePoint + "";
     }  
 }

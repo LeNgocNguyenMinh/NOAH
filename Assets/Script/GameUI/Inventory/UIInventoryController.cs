@@ -16,7 +16,6 @@ public class UIInventoryController : MonoBehaviour
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
-    [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private CanvasGroup invCanvasGroup;
     [Header("---------MissionUI---------")] 
     [SerializeField]private RectTransform missionPanel;

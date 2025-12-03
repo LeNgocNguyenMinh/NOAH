@@ -15,8 +15,8 @@ public class AssasinSlimeBlade : MonoBehaviour
             {
                 direction = new(-1, 0);
             }
-            collider.GetComponent<PlayerEffect>().PushBack(direction);
-            collider.GetComponent<PlayerEffect>().HitFlash();   
+            PlayerEffect.Instance.PushBack(direction);
+            PlayerEffect.Instance.HitFlash();   
             PlayerHealthControl.Instance.PlayerHurt(1);
         }
     }

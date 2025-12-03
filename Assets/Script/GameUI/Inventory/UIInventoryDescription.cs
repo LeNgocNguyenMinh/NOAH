@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class UIInventoryDescription : MonoBehaviour
 {
     public static UIInventoryDescription Instance;
-    [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private TMP_Text itemNameBox;
     [SerializeField]private TMP_Text itemDescriptionBox;
     [SerializeField]private TMP_Text itemFunction;
@@ -38,7 +37,7 @@ public class UIInventoryDescription : MonoBehaviour
                 requireForUpgrade.SetActive(true);
                 upgradeButton.SetActive(true);
                 weaponLevelText.text = "Level " + item.weaponLevel;
-                requireForUpgradeText.text = playerStatus.playerCoin + "/" + item.materialNeedToUpgrade;
+                requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + item.materialNeedToUpgrade;
                 itemFunction.text = "Damage + " + item.weaponDamage;
                 RectTransform rectTransform = itemImageBox.rectTransform;
                 rectTransform.sizeDelta = new Vector2(
@@ -68,12 +67,12 @@ public class UIInventoryDescription : MonoBehaviour
     }
     public void UpgradeThisWeapon()
     {
-        if(itemInDescription.materialNeedToUpgrade <= playerStatus.playerCoin)
+        if(itemInDescription.materialNeedToUpgrade <= PlayerStatus.Instance.playerCoin)
         {
-            playerStatus.AddCoin(-itemInDescription.materialNeedToUpgrade);//Remove the coin player own
+            PlayerStatus.Instance.AddCoin(-itemInDescription.materialNeedToUpgrade);//Remove the coin player own
             itemInDescription.SetWeaponLevel(); //Add level weapon by 1 
             itemFunction.text = "Damage + " + itemInDescription.weaponDamage;//Update the damage
-            requireForUpgradeText.text = playerStatus.playerCoin + "/" + itemInDescription.materialNeedToUpgrade; //Update the requirement for upgrade
+            requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + itemInDescription.materialNeedToUpgrade; //Update the requirement for upgrade
             weaponLevelText.text = "Level " + itemInDescription.weaponLevel;// Update the level text
             NotifPopUp.Instance.ShowNotification("Update " + itemInDescription.itemName + " succes to level " + itemInDescription.weaponLevel);
         }

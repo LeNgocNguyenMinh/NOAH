@@ -26,7 +26,7 @@ public class PlayerWandATK : MonoBehaviour
     }
     public void CheckWandATK()
     {
-        bulletPrefap = PlayerWeaponParent.Instance.playerStatus.currentWeapon.weaponBulletType;
+        bulletPrefap = PlayerStatus.Instance.currentWeapon.weaponBulletType;
         if(PlayerWeaponParent.Instance.delayWandCount > 0) PlayerWeaponParent.Instance.delayWandCount-=Time.deltaTime;
         if(!PlayerWeaponParent.Instance.playerCanATK)return;   
 

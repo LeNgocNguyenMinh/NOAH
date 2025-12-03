@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638990815189153546
+  platformSettingsDirtyTick: 639002926411040645
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: EnergyBackGround
     originalName: 
-    pivot: {x: -1, y: 0}
+    pivot: {x: -0.6, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,7 +137,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 8
+      width: 10
       height: 32
     spriteID: dfc5c7cfb10616347b2473c59a277fc4
     spriteBone: []
@@ -167,9 +167,9 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 24
+        x: 22
         y: 0
-        width: 8
+        width: 10
         height: 32
       spriteId: dfc5c7cfb10616347b2473c59a277fc4
     linkedCells: []

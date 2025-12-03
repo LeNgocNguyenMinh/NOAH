@@ -66,14 +66,14 @@ TagManager:
   - name: WaterTile
     uniqueID: 2670007441
     locked: 0
-  - name: ForeGround
-    uniqueID: 1549724067
-    locked: 0
   - name: HouseWall
     uniqueID: 2712834573
     locked: 0
   - name: HouseDecor
     uniqueID: 553636171
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1549724067
     locked: 0
   - name: Bridge
     uniqueID: 3216069165

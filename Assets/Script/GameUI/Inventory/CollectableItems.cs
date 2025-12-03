@@ -29,7 +29,7 @@ public class CollectableItems : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(isCollected == true) return;
-        if(collider.gameObject.tag=="Player")
+        if(collider.CompareTag("Player"))
         {
             animator = GetComponent<Animator>();
             animator.SetTrigger("Collect");

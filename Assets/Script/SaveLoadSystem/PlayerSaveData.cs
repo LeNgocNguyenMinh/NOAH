@@ -8,7 +8,6 @@ public class PlayerSaveData
     public int playerLevelData;
     public int availablePointData;
     public float playerCurrentDamageData;
-    public float playerWeaponDamageData;
     public int playerBulletData;
     public int playerCoinData;
     public float maxExpData;
@@ -16,6 +15,4 @@ public class PlayerSaveData
     public float maxHealthData;
     public float currentHealthData;
     public string currentWeaponID;
-    public string currentHatID;
-    public string currentCoatID;
 }

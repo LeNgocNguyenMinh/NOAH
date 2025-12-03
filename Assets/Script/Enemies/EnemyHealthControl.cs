@@ -6,7 +6,6 @@ using TMPro;
 public class EnemyHealthControl : MonoBehaviour
 {
     [SerializeField]private EnemyStatus enemyStatus;
-    [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private MovingEnemy moveEnemy;
     [SerializeField]private StandingEnemy standEnemy;
     private float enemyMaxHealth;
@@ -16,9 +15,9 @@ public class EnemyHealthControl : MonoBehaviour
     private void Start()
     {
         //In here, we control both Health, damage and level of enemy.
-        if(playerStatus.playerLevel % 3 == 0)//Mean only when player level is 3, 6, 9
+        if(PlayerStatus.Instance.playerLevel % 3 == 0)//Mean only when player level is 3, 6, 9
         {
-            enemyStatus.SetLevel(playerStatus.playerLevel / 2);//then enemy level is 1, 3, 4, ...
+            enemyStatus.SetLevel(PlayerStatus.Instance.playerLevel / 2);//then enemy level is 1, 3, 4, ...
             //then damage, maxHealth calculate to fit with the level 
             enemyStatus.SetMaxHealth(enemyStatus.enemyBaseHealth * (1 + 0.4f * enemyStatus.enemyLevel));
         }

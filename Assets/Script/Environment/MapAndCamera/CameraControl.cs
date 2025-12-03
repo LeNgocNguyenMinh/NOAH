@@ -23,6 +23,10 @@ public class CameraControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void UpdateCameraBoundry(PolygonCollider2D newMapBoundry)
+    {
+        confiner.m_BoundingShape2D = newMapBoundry;
+    }
     public void SetUpHomeCam()
     {
         if (virtualCamera != null)

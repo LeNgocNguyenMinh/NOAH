@@ -100,6 +100,7 @@ public class MainMenu : MonoBehaviour
     private void OnNewGameSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= OnNewGameSceneLoaded;
+        TutorialUIManager.Instance.StartTutorial();
         SaveController.Instance.LoadNewGame();
         SceneTransition.Instance.SceneIn();
     }

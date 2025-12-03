@@ -1,21 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "NewStatus", menuName = "Status")]
-public class PlayerStatus : ScriptableObject
+public class PlayerStatus : MonoBehaviour
 {
+    public static PlayerStatus Instance;
     [Header("---------Player basic information---------")] 
     public int playerLevel = 1;
     public int availablePoint;// Contain the points when level up (Only %2 = 0 level)
     public string playerName;
     public int playerAge = 22;
     public float playerCurrentDamage = 5;
-    public float playerWeaponDamage = 3;
     public int playerBullet = 3; //Number of Bullet
     public int playerCoin = 0;
-    public Sprite playerSprite;
     public float maxExp = 200;
     public float currentExp;
     public float maxHealth = 100;
@@ -23,13 +17,17 @@ public class PlayerStatus : ScriptableObject
     [Header("---------Player Weapon---------")]
     public Item defaultWeapon;
     public Item currentWeapon;
-    [Header("---------Player Cloth---------")]
-    public Item defaultHat;
-    public Item defaultCoat;
-    public Item currentHat;
-    public Item currentCoat;
-    private PlayerCurrentClothChange playerCurrentClothChange;
-    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public PlayerSaveData GetPlayerInfo()
     {
         return new PlayerSaveData
@@ -37,16 +35,13 @@ public class PlayerStatus : ScriptableObject
             playerLevelData = playerLevel,
             availablePointData = availablePoint,
             playerCurrentDamageData = playerCurrentDamage,
-            playerWeaponDamageData = playerWeaponDamage,
             playerBulletData = playerBullet,
             playerCoinData = playerCoin,
             maxExpData = maxExp,
             currentExpData = currentExp,
             maxHealthData = maxHealth,
             currentHealthData = currentHealth,
-            currentWeaponID = currentWeapon != null ? currentWeapon.itemID : "None",
-            currentHatID = currentHat != null ? currentHat.itemID : "None",
-            currentCoatID = currentCoat != null ? currentCoat.itemID : "None"
+            currentWeaponID = currentWeapon != null ? currentWeapon.itemID : "None"
         };
     }
 
@@ -55,7 +50,6 @@ public class PlayerStatus : ScriptableObject
         playerLevel = playerSaveData.playerLevelData;
         availablePoint = playerSaveData.availablePointData;
         playerCurrentDamage = playerSaveData.playerCurrentDamageData;
-        playerWeaponDamage = playerSaveData.playerWeaponDamageData;
         playerBullet = playerSaveData.playerBulletData;
         playerCoin = playerSaveData.playerCoinData;
         maxExp = playerSaveData.maxExpData;
@@ -96,10 +90,6 @@ public class PlayerStatus : ScriptableObject
     {
         this.availablePoint += newPoint;
     }
-    public void SetSprite(Sprite playerSprite)
-    {
-        this.playerSprite = playerSprite;
-    }
     public void SetMaxEXP(float maxExp)
     {
         this.maxExp = maxExp;
@@ -119,14 +109,5 @@ public class PlayerStatus : ScriptableObject
     public void SetCurrentWeapon(Item newWeapon)
     {
         this.currentWeapon = newWeapon;
-        this.playerWeaponDamage = this.currentWeapon.weaponDamage;
-    }
-    public void SetCurrentHat(Item newHat)
-    {
-        this.currentHat = newHat;
-    }
-    public void SetCurrentCoat(Item newCoat)
-    {
-        this.currentCoat = newCoat;
     }
 }

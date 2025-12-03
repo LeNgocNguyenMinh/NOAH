@@ -12,7 +12,7 @@ public class DarkGateHitByBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "LightBullet" && !isHit)
+        if(collider.CompareTag("LightBullet") && !isHit)
         {
             isHit = true;
             animator = GetComponent<Animator>();

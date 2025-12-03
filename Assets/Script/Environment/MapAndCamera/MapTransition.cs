@@ -13,16 +13,13 @@ public class MapTransition : MonoBehaviour
     [SerializeField]private float additivePos;
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.CompareTag("Player"))
+        if(collider.CompareTag("Player"))
         {
-            CameraControl.Instance.confiner.m_BoundingShape2D = mapBoundry;
+            CameraControl.Instance.UpdateCameraBoundry(mapBoundry);
             UpdatePlayerPosition();
         }
     }
-    public void UpdateCameraBoundry(PolygonCollider2D newMapBoundry)
-    {
-        CameraControl.Instance.confiner.m_BoundingShape2D = newMapBoundry;
-    }
+    
     private void UpdatePlayerPosition()
     {
         Vector3 newPos = Player.Instance.transform.position;

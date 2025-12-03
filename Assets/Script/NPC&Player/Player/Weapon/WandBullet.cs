@@ -2,7 +2,6 @@ using UnityEngine;
 
     public class WandBullet : MonoBehaviour
     {
-        [SerializeField]private PlayerStatus playerStatus;
         [SerializeField]private GameObject bulletHitParticle;
         [SerializeField]private Rigidbody2D rb;
         private float maxDistance = 15f;//Max distance bullet go before disappear
@@ -41,18 +40,18 @@ using UnityEngine;
         } 
         private void OnTriggerEnter2D(Collider2D hitInfo)
         {
-            damageAmount = (Random.Range(0, 5) == 0) ? 0 : (int)Random.Range(playerStatus.playerCurrentDamage, playerStatus.playerCurrentDamage + playerStatus.playerWeaponDamage);
+            damageAmount = (Random.Range(0, 5) == 0) ? 0 : (int)Random.Range(PlayerStatus.Instance.playerCurrentDamage, PlayerStatus.Instance.playerCurrentDamage);
             if(hitInfo.tag == "Boss")
             {
                 BossHurt bossHurt = hitInfo.GetComponent<BossHurt>();
-                bossHurt.DamageReceive(damageAmount + playerStatus.playerWeaponDamage);
+                bossHurt.DamageReceive(damageAmount);
                 BulletDestroy();
             }
             else if (hitInfo.tag == "Enemy")
             {
                 EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
                 direction = (hitInfo.gameObject.transform.position - Player.Instance.transform.position).normalized;
-                enemy.DamageReceive(damageAmount + playerStatus.playerWeaponDamage, direction);//Enemy hurt
+                enemy.DamageReceive(damageAmount, direction);//Enemy hurt
                 BulletDestroy();
             }
             else if(hitInfo.tag == "ForeGround" || hitInfo.tag == "NPC")

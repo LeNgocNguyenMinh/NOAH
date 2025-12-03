@@ -14,7 +14,7 @@ public class PillarInteract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag.Contains("Bullet"))
+        if(collider.CompareTag("Bullet"))
         {
             puzzle01Interact.AddToPassWord(text);
             lightOnTopInteractive.LightOnTopActive();

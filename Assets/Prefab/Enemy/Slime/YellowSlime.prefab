@@ -215,7 +215,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7008412969330441016, guid: 29094ebb5b7531149a490f1a509cce30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
@@ -538,7 +538,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: -7008412969330441016, guid: 29094ebb5b7531149a490f1a509cce30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -630,7 +630,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 296286287, guid: e7a9984b1c6d7df42b76be68b33a625a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -793,6 +793,8 @@ MonoBehaviour:
   <ChaseSpeed>k__BackingField: 5
   <MoveRange>k__BackingField: 3
   <AttackCoolDown>k__BackingField: 0
+  <Animator>k__BackingField: {fileID: 615746275210919053}
+  <DropOnDie>k__BackingField: {fileID: 2521368930600493747}
   bulletChaseTime: 1
   bulletSpeed: 10
 --- !u!114 &4289366522790956879
@@ -827,7 +829,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStatus: {fileID: 11400000, guid: d742d73e6ef1e814d9fcc5cd6b99f3f0, type: 2}
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   moveEnemy: {fileID: 782655299358372623}
   standEnemy: {fileID: 0}
   levelText: {fileID: 4679925840622734382}

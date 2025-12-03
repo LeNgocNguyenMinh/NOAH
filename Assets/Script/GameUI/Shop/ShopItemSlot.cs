@@ -13,7 +13,6 @@ public class ShopItemSlot : MonoBehaviour
     [SerializeField]private TMP_Text itemUses;
     [SerializeField]private TMP_Text itemPrice;
     [SerializeField]private Image itemImage;
-    [SerializeField]private PlayerStatus playerStatus; 
     public void SetItem(Item newValue)
     {
         item = newValue;
@@ -42,7 +41,7 @@ public class ShopItemSlot : MonoBehaviour
             NotifPopUp.Instance.ShowNotification("Nah, we run out of " + item.itemName);
             return;
         }
-        if(playerStatus.playerCoin >= item.itemPrice)
+        if(PlayerStatus.Instance.playerCoin >= item.itemPrice)
         {
             if(!UIInventoryPage.Instance.AddItem(item, 1))
             {

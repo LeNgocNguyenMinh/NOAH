@@ -8,7 +8,6 @@ public class PlayerLoadout : MonoBehaviour
     [SerializeField]private Image coatSlotImage;
     [SerializeField]private Image hatImage;
     [SerializeField]private Image coatImage; */
-    [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private Image weaponSlotImage;
     /* [SerializeField]private GameObject unequipHat;
     [SerializeField]private GameObject unequipCoat; */
@@ -16,7 +15,6 @@ public class PlayerLoadout : MonoBehaviour
     /* private Item currentEquipHat;
     private Item currentEquipCoat; */
     private Item currentEquipWeapon;
-    private PlayerWeaponParent weaponParent;
     private PlayerCurrentClothChange playerCurrentClothChange;
     private void Awake()
     {
@@ -31,30 +29,30 @@ public class PlayerLoadout : MonoBehaviour
     }
     public void CheckClothStatus()
     {
-        /* if(playerStatus.currentHat != null)
+        /* if(PlayerStatus.Instance.currentHat != null)
         {
-            EquipCloth(playerStatus.currentHat);
+            EquipCloth(PlayerStatus.Instance.currentHat);
         }
         else{
-            hatSlotImage.sprite = playerStatus.defaultHat.itemSprite; //update image in hat slot 
+            hatSlotImage.sprite = PlayerStatus.Instance.defaultHat.itemSprite; //update image in hat slot 
             RectTransform hatRect = hatSlotImage.rectTransform;
             hatRect.sizeDelta = new Vector2(
             hatSlotImage.sprite.rect.width * 3f,
             hatSlotImage.sprite.rect.height * 3f);
         }
-        if(playerStatus.currentCoat != null)
+        if(PlayerStatus.Instance.currentCoat != null)
         {
-            EquipCloth(playerStatus.currentCoat);
+            EquipCloth(PlayerStatus.Instance.currentCoat);
         }
         else
         {
-            coatSlotImage.sprite = playerStatus.defaultCoat.itemSprite;
+            coatSlotImage.sprite = PlayerStatus.Instance.defaultCoat.itemSprite;
             RectTransform coatRect = coatSlotImage.rectTransform;
             coatRect.sizeDelta = new Vector2(
             coatSlotImage.sprite.rect.width * 3f,
             coatSlotImage.sprite.rect.height * 3f);
         } */
-        EquipWeapon(playerStatus.currentWeapon);
+        EquipWeapon(PlayerStatus.Instance.currentWeapon);
     }
     /* public void EquipCloth(Item newCloth)
     {
@@ -62,7 +60,7 @@ public class PlayerLoadout : MonoBehaviour
         playerCurrentClothChange.ChangeCloth(newCloth);
         if(newCloth.itemID.Contains("Hat"))//newCloth is hat
         {
-            if(currentEquipHat != null  && currentEquipHat != playerStatus.defaultHat)
+            if(currentEquipHat != null  && currentEquipHat != PlayerStatus.Instance.defaultHat)
             {
                 UIInventoryPage.Instance.AddItem(currentEquipHat, 1); //add current hat to inventory
             }
@@ -74,11 +72,11 @@ public class PlayerLoadout : MonoBehaviour
             hatRect.sizeDelta = new Vector2(
             hatSlotImage.sprite.rect.width * 3f,
             hatSlotImage.sprite.rect.height * 3f);
-            playerStatus.SetCurrentHat(newCloth);//update current hat in player status
+            PlayerStatus.Instance.SetCurrentHat(newCloth);//update current hat in player status
             unequipHat.SetActive(true);//enable for unequip hat
         }
         else{
-            if(currentEquipCoat != null && currentEquipCoat != playerStatus.defaultCoat)
+            if(currentEquipCoat != null && currentEquipCoat != PlayerStatus.Instance.defaultCoat)
             {
                 UIInventoryPage.Instance.AddItem(currentEquipCoat, 1);
             }
@@ -90,7 +88,7 @@ public class PlayerLoadout : MonoBehaviour
             coatRect.sizeDelta = new Vector2(
             coatSlotImage.sprite.rect.width * 3f,
             coatSlotImage .sprite.rect.height * 3f);
-            playerStatus.SetCurrentCoat(newCloth);
+            PlayerStatus.Instance.SetCurrentCoat(newCloth);
             unequipCoat.SetActive(true);
         }
     }
@@ -101,11 +99,11 @@ public class PlayerLoadout : MonoBehaviour
             return;
         }       
         playerCurrentClothChange = FindObjectOfType<PlayerCurrentClothChange>().GetComponent<PlayerCurrentClothChange>();
-        playerCurrentClothChange.ChangeCloth(playerStatus.defaultHat);
-        hatSlotImage.sprite = playerStatus.defaultHat.itemSprite;
-        hatImage.sprite = playerStatus.defaultHat.itemSprite;
-        playerStatus.SetCurrentHat(playerStatus.defaultHat);
-        currentEquipHat = playerStatus.defaultHat;
+        playerCurrentClothChange.ChangeCloth(PlayerStatus.Instance.defaultHat);
+        hatSlotImage.sprite = PlayerStatus.Instance.defaultHat.itemSprite;
+        hatImage.sprite = PlayerStatus.Instance.defaultHat.itemSprite;
+        PlayerStatus.Instance.SetCurrentHat(PlayerStatus.Instance.defaultHat);
+        currentEquipHat = PlayerStatus.Instance.defaultHat;
         unequipHat.SetActive(false);
     }
     public void UnequipCoat()
@@ -115,16 +113,16 @@ public class PlayerLoadout : MonoBehaviour
             return;
         } 
         playerCurrentClothChange = FindObjectOfType<PlayerCurrentClothChange>().GetComponent<PlayerCurrentClothChange>();
-        playerCurrentClothChange.ChangeCloth(playerStatus.defaultCoat);;
-        coatSlotImage.sprite = playerStatus.defaultCoat.itemSprite;
-        coatImage.sprite = playerStatus.defaultCoat.itemSprite;
-        playerStatus.SetCurrentCoat(playerStatus.defaultCoat);
-        currentEquipCoat = playerStatus.defaultCoat;
+        playerCurrentClothChange.ChangeCloth(PlayerStatus.Instance.defaultCoat);;
+        coatSlotImage.sprite = PlayerStatus.Instance.defaultCoat.itemSprite;
+        coatImage.sprite = PlayerStatus.Instance.defaultCoat.itemSprite;
+        PlayerStatus.Instance.SetCurrentCoat(PlayerStatus.Instance.defaultCoat);
+        currentEquipCoat = PlayerStatus.Instance.defaultCoat;
         unequipCoat.SetActive(false);
     } */
     public void EquipWeapon(Item newWeapon)
     {
-        if(newWeapon != playerStatus.defaultWeapon)
+        if(newWeapon != PlayerStatus.Instance.defaultWeapon)
         {
             unequipWeapon.SetActive(true);
         }
@@ -141,15 +139,14 @@ public class PlayerLoadout : MonoBehaviour
         {
             return;
         }
-        EquipWeapon(playerStatus.defaultWeapon);
-        weaponParent = FindObjectOfType<PlayerWeaponParent>().GetComponent<PlayerWeaponParent>();
-        weaponParent.EquipNewWeapon(playerStatus.defaultWeapon);
-        playerStatus.SetCurrentWeapon(playerStatus.defaultWeapon);
+        EquipWeapon(PlayerStatus.Instance.defaultWeapon);
+        PlayerWeaponParent.Instance.EquipNewWeapon(PlayerStatus.Instance.defaultWeapon);
+        PlayerStatus.Instance.SetCurrentWeapon(PlayerStatus.Instance.defaultWeapon);
         unequipWeapon.SetActive(false);
     }
     public void CheckUnequipButton()
     {
-        /* if(currentEquipCoat == null || currentEquipCoat == playerStatus.defaultCoat)
+        /* if(currentEquipCoat == null || currentEquipCoat == PlayerStatus.Instance.defaultCoat)
         {
             unequipCoat.SetActive(false);
         }
@@ -157,7 +154,7 @@ public class PlayerLoadout : MonoBehaviour
         {
             unequipCoat.SetActive(true);
         }
-        if(currentEquipHat == null || currentEquipHat == playerStatus.defaultHat)
+        if(currentEquipHat == null || currentEquipHat == PlayerStatus.Instance.defaultHat)
         {
             unequipHat.SetActive(false);
         }
@@ -165,7 +162,7 @@ public class PlayerLoadout : MonoBehaviour
         {
             unequipHat.SetActive(true);
         } */
-        if(currentEquipWeapon == null || currentEquipWeapon == playerStatus.defaultWeapon)
+        if(currentEquipWeapon == null || currentEquipWeapon == PlayerStatus.Instance.defaultWeapon)
         {
             unequipWeapon.SetActive(false);
         }

@@ -12,7 +12,6 @@ public class SaveController : MonoBehaviour
     private string saveLocation;
     private string newGameSaveLocation;
     private SaveData existingData;
-    [SerializeField]private PlayerStatus playerStatus;
     [SerializeField]private List<Item> weaponList;
     void Awake()
     {
@@ -44,7 +43,7 @@ public class SaveController : MonoBehaviour
             itemInGroundSaveData = ItemInGroundController.Instance.GetListItemInGround(),
             bossSaveData = BossSaveData.Instance.GetAllBossCurrentStatus(),
             timeSaveData = TimeManager.Instance.GetTime(),
-            playerSaveData = playerStatus?.GetPlayerInfo(),
+            playerSaveData = PlayerStatus.Instance.GetPlayerInfo(),
             missionSaveData = MissionManager.Instance.GetMissionList(),
         };
         for(int i = 0; i < weaponList.Count; i++)
@@ -71,7 +70,7 @@ public class SaveController : MonoBehaviour
             itemInGroundSaveData = existingData.itemInGroundSaveData,
             bossSaveData = existingData.bossSaveData,
             timeSaveData = TimeManager.Instance.GetTimeSkip(),
-            playerSaveData = playerStatus?.GetPlayerInfo(),
+            playerSaveData = PlayerStatus.Instance.GetPlayerInfo(),
             missionSaveData = MissionManager.Instance.GetMissionList()
         };
            for(int i = 0; i < weaponList.Count; i++)
@@ -95,7 +94,7 @@ public class SaveController : MonoBehaviour
             TimeManager.Instance.SetTime(saveData.timeSaveData);
             ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
             BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
-            playerStatus.SetPlayerInfo(saveData.playerSaveData);
+            PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
             MissionManager.Instance.SetMissionList(saveData.missionSaveData);          
         }
     }
@@ -106,7 +105,7 @@ public class SaveController : MonoBehaviour
         
         string defaultNewGameJson = @"{
         ""saveScene"": ""Level1"",
-        ""playerPosition"": { ""x"": 1.7463607, ""y"": -4.6992025, ""z"": 0.0 },
+        ""playerPosition"": { ""x"": -26.4, ""y"": 6.7, ""z"": 0.0 },
         ""mapBoundary"": ""L1"",
         ""inventorySaveData"": [],
         ""hotBarSaveData"": [],
@@ -135,17 +134,14 @@ public class SaveController : MonoBehaviour
         ""playerSaveData"": {
             ""playerLevelData"": 1,
             ""availablePointData"": 3,
-            ""playerCurrentDamageData"": 20.0,
-            ""playerWeaponDamageData"": 3.0,
+            ""playerCurrentDamageData"": 5.0,
             ""playerBulletData"": 6,
-            ""playerCoinData"": 250,
+            ""playerCoinData"": 50,
             ""maxExpData"": 40.0,
             ""currentExpData"": 0.0,
             ""maxHealthData"": 200.0,
             ""currentHealthData"": 200.0,
-            ""currentWeaponID"": ""WP_03"",
-            ""currentHatID"": ""None"",
-            ""currentCoatID"": ""None""
+            ""currentWeaponID"": ""WP_03""
         },
         ""missionSaveData"": {
             ""missionList"": [
@@ -185,7 +181,7 @@ public class SaveController : MonoBehaviour
         TimeManager.Instance.SetTime(saveData.timeSaveData);
         ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
         BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
-        playerStatus.SetPlayerInfo(saveData.playerSaveData);
+        PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
         MissionManager.Instance.SetMissionList(saveData.missionSaveData);     
         SaveGame();
     }

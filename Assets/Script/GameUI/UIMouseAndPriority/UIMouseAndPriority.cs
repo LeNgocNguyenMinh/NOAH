@@ -54,6 +54,10 @@ public class UIMouseAndPriority : MonoBehaviour
             CloseAllUI();
             return;
         }
+        if(Input.GetKeyDown(KeyCode.Escape) && TutorialUIManager.panelActive)
+        {
+            return;
+        }
         if(Input.GetKeyDown(KeyCode.Escape) && !PauseMenu.isOver)
         {
             if(PauseMenu.isPaused)

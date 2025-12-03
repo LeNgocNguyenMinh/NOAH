@@ -6,7 +6,6 @@ using System.IO;
 
 public class SpawnControl : MonoBehaviour
 {
-    [SerializeField]private PlayerStatus playerStatus;
     public static SpawnControl Instance;
     private void Awake()
     {

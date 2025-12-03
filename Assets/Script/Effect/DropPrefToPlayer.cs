@@ -5,13 +5,11 @@ using UnityEngine;
 //This class control each EXP point
 public class DropPrefToPlayer : MonoBehaviour
 {   
-    private EXPControl expControl; // 
     [SerializeField]private float delayBeforeMoving = 2f; //Delay time after dead and before go to player
     [SerializeField]private ProjectileVisual projectileVisual;
     private float moveSpeed = 20f; //Speed of exp point        
     [SerializeField]private Rigidbody2D rb;             
     private bool isCollected = false; 
-    private SoundControl soundControl;
     [SerializeField]private DropType dropType;
     public enum DropType { EXP, Coin } 
 
@@ -32,7 +30,7 @@ public class DropPrefToPlayer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag=="PlayerHitCollider")
+        if(collider.CompareTag("PlayerHitCollider"))
         {
             if(dropType == DropType.EXP)
             {

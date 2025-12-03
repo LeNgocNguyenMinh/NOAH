@@ -11,7 +11,6 @@ public class AddAvailablePoint : MonoBehaviour
     [SerializeField]private GameObject healthButton;//Add 'Add' button point in Health
     [SerializeField]private GameObject damageButton;//Add 'Add' button point in Damage
     [SerializeField]private GameObject bulletButton;//Add 'Add' button point in Bullet
-    [SerializeField]private PlayerStatus playerStatus;
   
     private void Awake()
     {
@@ -20,13 +19,13 @@ public class AddAvailablePoint : MonoBehaviour
     }
     public void CheckAvailablePoint()//Check only Number of available >= 2 then show all Button, else only show button which need 1 point
     {
-        if(playerStatus.availablePoint <= 0)
+        if(PlayerStatus.Instance.availablePoint <= 0)
         {
             healthButton.SetActive(false);
             damageButton.SetActive(false);
             bulletButton.SetActive(false);
         }
-        else if(playerStatus.availablePoint <= 1)
+        else if(PlayerStatus.Instance.availablePoint <= 1)
         {
             healthButton.SetActive(true);
             damageButton.SetActive(true);
@@ -41,33 +40,33 @@ public class AddAvailablePoint : MonoBehaviour
     }
     public void AddPointToDamage()
     {
-        playerStatus.SetDamageAmount(2);//Add 5 damage to player Damage
+        PlayerStatus.Instance.SetDamageAmount(2);//Add 5 damage to player Damage
         PlayerStatusInfo.Instance.UpdateDamage();// Update UI
         AddOnePoint();//Check button
     }
     public void AddPointToHealth()
     {
-        playerStatus.SetMaxHealth(10);
+        PlayerStatus.Instance.SetMaxHealth(10);
         PlayerStatusInfo.Instance.UpdateMaxHealth();
         PlayerHealthControl.Instance.UpdateMaxHealth();//Update (Curren/MaxHealth) in UI Health Bar
         AddOnePoint();
     }
     public void AddPointToBullet()
     {
-        playerStatus.SetBullet();
+        PlayerStatus.Instance.SetBullet();
         PlayerStatusInfo.Instance.UpdateMaxBullet();
         PlayerWeaponParent.Instance.UpdateMagazine();
         AddTwoPoint();
     }
     private void AddOnePoint()
     {
-        playerStatus.SetAvailablePoint(-1);
+        PlayerStatus.Instance.SetAvailablePoint(-1);
         PlayerStatusInfo.Instance.UpdateAvailablePoint();
         CheckAvailablePoint();
     }
     private void AddTwoPoint()
     {
-        playerStatus.SetAvailablePoint(-2);
+        PlayerStatus.Instance.SetAvailablePoint(-2);
         PlayerStatusInfo.Instance.UpdateAvailablePoint();
         CheckAvailablePoint();
     }

@@ -8,7 +8,6 @@ public class PlayerWeaponParent : MonoBehaviour
 {
     [Header("----General----")]
     public static PlayerWeaponParent Instance;
-    public PlayerStatus playerStatus;
     public SpriteRenderer wandSprite;
     public SpriteRenderer physicATKSprite;
     [SerializeField]private Transform wandRotate;   
@@ -37,15 +36,15 @@ public class PlayerWeaponParent : MonoBehaviour
     private void Start()
     {
         //Set start values
-        magazine = playerStatus.playerBullet;
+        magazine = PlayerStatus.Instance.playerBullet;
         currentBullet = magazine;
         UpdateMagazine();
-        if(playerStatus.currentWeapon == null)
+        if(PlayerStatus.Instance.currentWeapon == null)
         {
-            EquipNewWeapon(playerStatus.defaultWeapon);
+            EquipNewWeapon(PlayerStatus.Instance.defaultWeapon);
         }
-        wandSprite.sprite = playerStatus.currentWeapon.itemSprite;
-        bulletPrefap = playerStatus.currentWeapon.weaponBulletType;
+        wandSprite.sprite = PlayerStatus.Instance.currentWeapon.itemSprite;
+        bulletPrefap = PlayerStatus.Instance.currentWeapon.weaponBulletType;
     }
     void Update()
     {
@@ -84,11 +83,11 @@ public class PlayerWeaponParent : MonoBehaviour
     }
     public Item EquipNewWeapon(Item newWeapon) // Trigger this function when new Weapon equip
     {
-        Item usingWeapon = playerStatus.currentWeapon;
-        playerStatus.SetCurrentWeapon(newWeapon);//Set player current weapon 
-        wandSprite.sprite = playerStatus.currentWeapon.itemSprite;//Change weapon sprite
-        bulletPrefap = playerStatus.currentWeapon.weaponBulletType;//Change bullet type
-        if(usingWeapon == playerStatus.defaultWeapon)
+        Item usingWeapon = PlayerStatus.Instance.currentWeapon;
+        PlayerStatus.Instance.SetCurrentWeapon(newWeapon);//Set player current weapon 
+        wandSprite.sprite = PlayerStatus.Instance.currentWeapon.itemSprite;//Change weapon sprite
+        bulletPrefap = PlayerStatus.Instance.currentWeapon.weaponBulletType;//Change bullet type
+        if(usingWeapon == PlayerStatus.Instance.defaultWeapon)
         {
             return null;
         }
@@ -96,7 +95,7 @@ public class PlayerWeaponParent : MonoBehaviour
     }
     public void UpdateMagazine()//Trigger when player Spend point in magazine
     {
-        magazine = playerStatus.playerBullet;
+        magazine = PlayerStatus.Instance.playerBullet;
         PlayerMagazine.Instance.UpdateMagazineText();
     }
     public int GetCurrentBullet()
@@ -129,7 +128,7 @@ public class PlayerWeaponParent : MonoBehaviour
     }
     public int GetMagazine()
     {
-        magazine = playerStatus.playerBullet;
+        magazine = PlayerStatus.Instance.playerBullet;
         return magazine;
     }
     public int GetRequireHit()

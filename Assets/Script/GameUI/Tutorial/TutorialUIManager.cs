@@ -4,7 +4,7 @@ using DG.Tweening;
 
 public class TutorialUIManager : MonoBehaviour
 {
-    public static TutorialUIManager instance;
+    public static TutorialUIManager Instance;
     public static bool panelActive = false;
     [SerializeField]private RectTransform tutorialPanel;
     [SerializeField]private CanvasGroup keyBoardCG;
@@ -20,18 +20,14 @@ public class TutorialUIManager : MonoBehaviour
     [SerializeField]private Button backToEnergy;
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
             Destroy(gameObject);
         }
-    }
-    private void Start()
-    {
-        StartTutorial();   
     }
     private void OnEnable()
     {
