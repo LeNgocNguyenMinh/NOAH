@@ -3,19 +3,31 @@ using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 
-public class EXPBar : MonoBehaviour
+public class PlayerEXPBar : MonoBehaviour
 {
+    public static PlayerEXPBar Instance;
     [SerializeField]private Image expBarImage;
     [SerializeField]private TextMeshProUGUI expText;
     [SerializeField]private TextMeshProUGUI levelText;
     private float maxEXP;
     private float currentEXP;
     private float target;
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void SetMaxEXP(float exp)//Set max value need for level up
     {
        maxEXP = exp;
     }
-    public void SetEXP(float exp)//Set current value 
+    public void SetCurrentEXP(float exp)//Set current value 
     {
         currentEXP = exp;
         target = currentEXP / maxEXP;

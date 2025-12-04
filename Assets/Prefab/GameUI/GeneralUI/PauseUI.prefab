@@ -120,19 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 995626621801357164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8939221483318913207}
-        m_TargetAssemblyTypeName: SettingBtnFunction, Assembly-CSharp
-        m_MethodName: ActiveGameSettingPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &450138465034660381
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +270,7 @@ GameObject:
   - component: {fileID: 7158967340689374469}
   - component: {fileID: 4459043989443100291}
   m_Layer: 5
-  m_Name: YESButton
+  m_Name: YesQuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,19 +376,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7158967340689374469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &604670245679730115
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,19 +497,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7990164752270745200}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: ButtonShowFuntion
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7635710773546472623}
-          m_ObjectArgumentAssemblyTypeName: ButtonEnum, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &7635710773546472623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,7 +524,7 @@ GameObject:
   - component: {fileID: 1851060991493025141}
   - component: {fileID: 1528868984148962880}
   m_Layer: 5
-  m_Name: NOButton
+  m_Name: NoQuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,19 +630,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1851060991493025141}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: BackToPauseMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &725251512309059616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,7 +1116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3354269911677459241}
   m_Layer: 5
-  m_Name: OtherPanel
+  m_Name: OtherBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1810,19 +1762,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9141756032777286375}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: ButtonShowFuntion
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 109836006849854046}
-          m_ObjectArgumentAssemblyTypeName: ButtonEnum, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &109836006849854046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2603,19 +2543,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 134656737890878657}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: PauseMenuPanelOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2871088787234470539
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +2997,7 @@ GameObject:
   - component: {fileID: 232218710867771075}
   - component: {fileID: 4237369913347871694}
   m_Layer: 5
-  m_Name: YESButton
+  m_Name: YesMMButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3175,19 +3103,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2581282841574414258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: MoveToMainMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &4237369913347871694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3669,19 +3585,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6104033753131488920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: BackToPauseMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &4554619136293875439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,19 +4040,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7239097363951188045}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6926128404561492404}
-        m_TargetAssemblyTypeName: GraphicManager, Assembly-CSharp
-        m_MethodName: ApplyGraphics
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5898241987808424357
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,19 +4873,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4005702589450037804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8939221483318913207}
-        m_TargetAssemblyTypeName: SettingBtnFunction, Assembly-CSharp
-        m_MethodName: ActiveControlSettingPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &6693842984009610643
 GameObject:
   m_ObjectHideFlags: 0
@@ -5007,7 +4887,7 @@ GameObject:
   - component: {fileID: 6684791451086351134}
   - component: {fileID: 1913998008600669926}
   m_Layer: 5
-  m_Name: NOButton
+  m_Name: NoMMButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5113,19 +4993,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6684791451086351134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: BackToPauseMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &6983950511205296591
 GameObject:
   m_ObjectHideFlags: 0
@@ -5246,19 +5114,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4543657182853915434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 375609644685512454}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: ButtonShowFuntion
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 944615839046017506}
-          m_ObjectArgumentAssemblyTypeName: ButtonEnum, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &944615839046017506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5880,6 +5736,17 @@ MonoBehaviour:
   respawnSprite: {fileID: 21300000, guid: aceaa0773e9d25241ac1ad3a3a9903c3, type: 3}
   resumeSprite: {fileID: 21300000, guid: eb79cd72f8dc61e46a8c8bb5b1b4beb6, type: 3}
   settingBtnFunction: {fileID: 8939221483318913207}
+  graphicManager: {fileID: 6926128404561492404}
+  resumeBtn: {fileID: 4104816015264770330}
+  settingBtn: {fileID: 3695171331811571888}
+  settingCancelBtn: {fileID: 8911207824203738069}
+  settingApplyBtn: {fileID: 4077452645002437118}
+  mainMenuBtn: {fileID: 5806667214453068129}
+  mainMenuConfirmBtn: {fileID: 232218710867771075}
+  mainMenuCancelBtn: {fileID: 1913998008600669926}
+  quitBtn: {fileID: 6476856311486422427}
+  quitConfirmBtn: {fileID: 4459043989443100291}
+  quitCancelBtn: {fileID: 1528868984148962880}
 --- !u!114 &6926128404561492404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5908,6 +5775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSettingPanel: {fileID: 3373839645678530894}
   controlSettingPanel: {fileID: 2095991204288928121}
+  gameSetBtn: {fileID: 2807082369065032518}
+  controlSetBtn: {fileID: 1801367714192495072}
 --- !u!114 &1536844660986922929
 MonoBehaviour:
   m_ObjectHideFlags: 0

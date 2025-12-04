@@ -95,15 +95,15 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     }
     public void DeleteItem()//Delete Item data in this slot
     {
-        this.itemName = "";
-        this.itemID = "";
-        this.itemQuantity = 0;
-        this.itemSprite = null;
-        this.itemDescription = "";
-        this.isEmpty = true;
-        this.quantityText.enabled = false;
-        this.itemImage.sprite = null;
-        this.itemImage.enabled = false;
+        itemName = "";
+        itemID = "";
+        itemQuantity = 0;
+        itemSprite = null;
+        itemDescription = "";
+        isEmpty = true;
+        quantityText.enabled = false;
+        itemImage.sprite = null;
+        itemImage.enabled = false;
     }
     public void AddQuantity(int newValue) //Add this slot quantity
     {
@@ -115,33 +115,19 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         if(isEmpty) return;
         if(itemID.Contains("WP"))//If weapon is equip
         {
-            Item usingWeapon = PlayerWeaponParent.Instance.EquipNewWeapon(this.item);//Switch equipped weapon
+            Item previousWP = PlayerWeaponParent.Instance.GetCurrentWeapon();
+            PlayerLoadout.Instance.EquipWeapon(this.item);
+            DeleteItem();
+            AddItem(previousWP, 1);
+            UIInventoryDescription.Instance.ItemHideInformation();
             if(!isHotBarSlot)
             {
-                PlayerLoadout.Instance.EquipWeapon(this.item);
-                DeleteItem();//Remove this weapon out of slot
-                if(usingWeapon!=null )
-                {
-                    AddItem(usingWeapon, 1);//Add equipped weapon to this slot
-                    UIInventoryDescription.Instance.ItemShowInformation(this.item);//Show the right information 
-                }
-                else
-                {
-                    UIInventoryDescription.Instance.ItemHideInformation();
-                }
                 choicePanel.SetActive(false);//hide the select panel
-            }
-            else{
-                DeleteItem();
-                if(usingWeapon!=null )
-                {
-                    AddItem(usingWeapon, 1);//Add equipped weapon to this slot 
-                }
             }
         }
         else if(itemID.Contains("HP"))//If HP item is equip
         {
-            if(PlayerHealthControl.Instance.HealthRecover(this.item.healthRecover))//this function return: true if health is not full and otherwise
+            if(PlayerHealthControl.Instance.HealthCanRecover(this.item.healthRecover))//this function return: true if health is not full and otherwise
             {
                 DeleteOne();//Mean item was used
             }

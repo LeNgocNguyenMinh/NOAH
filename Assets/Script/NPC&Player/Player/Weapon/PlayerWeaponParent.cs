@@ -19,8 +19,8 @@ public class PlayerWeaponParent : MonoBehaviour
     private Vector3 mousePos;
     private int magazine = 0;
     private int currentBullet = 0; 
-    public bool playerCanATK = true; // Can player shoot or not, set to false when player is reloading or something else
-    private GameObject bulletPrefap;
+    public bool playerCanATK = true; 
+    private Item currentWeapon;
 
     private void Awake()
     {
@@ -39,12 +39,6 @@ public class PlayerWeaponParent : MonoBehaviour
         magazine = PlayerStatus.Instance.playerBullet;
         currentBullet = magazine;
         UpdateMagazine();
-        if(PlayerStatus.Instance.currentWeapon == null)
-        {
-            EquipNewWeapon(PlayerStatus.Instance.defaultWeapon);
-        }
-        wandSprite.sprite = PlayerStatus.Instance.currentWeapon.itemSprite;
-        bulletPrefap = PlayerStatus.Instance.currentWeapon.weaponBulletType;
     }
     void Update()
     {
@@ -81,17 +75,10 @@ public class PlayerWeaponParent : MonoBehaviour
             physicATKSprite.flipY = false;
         }
     }
-    public Item EquipNewWeapon(Item newWeapon) // Trigger this function when new Weapon equip
+    public void EquipNewWeapon(Item newWeapon) // Trigger this function when new Weapon equip
     {
-        Item usingWeapon = PlayerStatus.Instance.currentWeapon;
-        PlayerStatus.Instance.SetCurrentWeapon(newWeapon);//Set player current weapon 
-        wandSprite.sprite = PlayerStatus.Instance.currentWeapon.itemSprite;//Change weapon sprite
-        bulletPrefap = PlayerStatus.Instance.currentWeapon.weaponBulletType;//Change bullet type
-        if(usingWeapon == PlayerStatus.Instance.defaultWeapon)
-        {
-            return null;
-        }
-        return usingWeapon;
+        currentWeapon = newWeapon;
+        wandSprite.sprite = newWeapon.itemSprite;
     }
     public void UpdateMagazine()//Trigger when player Spend point in magazine
     {
@@ -134,6 +121,10 @@ public class PlayerWeaponParent : MonoBehaviour
     public int GetRequireHit()
     {
         return requireHit;
+    }
+    public Item GetCurrentWeapon() // Trigger this function when new Weapon equip
+    {
+        return currentWeapon;
     }
 }
 

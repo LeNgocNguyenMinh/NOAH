@@ -19,6 +19,21 @@ public class MainMenu : MonoBehaviour
     [SerializeField]private Vector2 visiblePos;
     [SerializeField]private GameObject otherPanel;
     [SerializeField]private SettingBtnFunction settingBtnFunction;
+    [SerializeField]private GraphicManager graphicManager;
+    [Header("Buttons")]
+    [Header("MainMenuButtons")]
+    [SerializeField]private Button newGameBtn;
+    [SerializeField]private Button newGameConfirmBtn;
+    [SerializeField]private Button newGameCancelBtn;
+    [SerializeField]private Button loadGameBtn;
+    [SerializeField]private Button settingBtn;
+    [SerializeField]private Button quitGameBtn;
+    [SerializeField]private Button quitGameConfirmBtn;
+    [SerializeField]private Button quitGameCancelBtn;
+    
+    [Header("SettingButtons")]
+    [SerializeField]private Button settingApplyBtn;
+    [SerializeField]private Button settingCancelMenu;
     public TMP_Text progressText;
     private void Awake()
     {
@@ -29,6 +44,21 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Debug.Log("Save location: " + saveLocation);      
+    }
+    private void OnEnable()
+    {
+        //MainMenu Buttons
+        newGameBtn.onClick.AddListener(NewGameBtn);
+        newGameConfirmBtn.onClick.AddListener(StartNewGame);
+        newGameCancelBtn.onClick.AddListener(NewGameAskPanelOff);
+        loadGameBtn.onClick.AddListener(LoadGameBtn);
+        settingBtn.onClick.AddListener(SettingBtn);
+        quitGameBtn.onClick.AddListener(QuitGameBtn);
+        quitGameConfirmBtn.onClick.AddListener(QuitGame);
+        quitGameCancelBtn.onClick.AddListener(QuitGameAskPanelOff);
+        //Setting Buttons
+        settingApplyBtn.onClick.AddListener(graphicManager.ApplyGraphics);
+        settingCancelMenu.onClick.AddListener(SettingPanelOff);
     }
     public void NewGameBtn()
     {

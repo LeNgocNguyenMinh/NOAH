@@ -26,6 +26,18 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private SettingBtnFunction settingBtnFunction;
     public static bool isPaused = false;
     public static bool isOver = false;
+    [SerializeField]private GraphicManager graphicManager;
+    [Header("Buttons")]
+    [SerializeField]private Button resumeBtn;
+    [SerializeField]private Button settingBtn;
+    [SerializeField]private Button settingCancelBtn;
+    [SerializeField]private Button settingApplyBtn;
+    [SerializeField]private Button mainMenuBtn;
+    [SerializeField]private Button mainMenuConfirmBtn;
+    [SerializeField]private Button mainMenuCancelBtn;
+    [SerializeField]private Button quitBtn;
+    [SerializeField]private Button quitConfirmBtn;
+    [SerializeField]private Button quitCancelBtn;
 
     private void Awake()
     {
@@ -37,6 +49,19 @@ public class PauseMenu : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    private void OnEnable()
+    {
+        resumeBtn.onClick.AddListener(PauseMenuPanelOff);
+        settingBtn.onClick.AddListener(SettingPanelShow);
+        settingApplyBtn.onClick.AddListener(graphicManager.ApplyGraphics);
+        settingCancelBtn.onClick.AddListener(SettingPanelOff);
+        mainMenuBtn.onClick.AddListener(MainMenuAskPanelShow);
+        mainMenuConfirmBtn.onClick.AddListener(MoveToMainMenu);
+        mainMenuCancelBtn.onClick.AddListener(MainMenuAskPanelOff);
+        quitBtn.onClick.AddListener(QuitAskPanelShow);
+        quitConfirmBtn.onClick.AddListener(QuitGame);
+        quitCancelBtn.onClick.AddListener(QuitAskPanelOff);
     }
     // Update is called once per frame
     //Open pause menu, for pause game or game over
@@ -60,7 +85,6 @@ public class PauseMenu : MonoBehaviour
     //Resume button function, if player dead then respawn if player choose continue
     public void PauseMenuPanelOff()
     {
-        BackToPauseMenu();
         pauseMenuPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             if(isOver)
@@ -73,45 +97,48 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1f;
         });
     }
-
-    //Ask panel active for main menu button function
-    public void ButtonShowFuntion(ButtonEnum btnEnum)
+    private void MainMenuAskPanelShow()
     {
         otherPanel.SetActive(false);
-        if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.MainMenuBtn)
-        {
-            mainMenuAskPanel.gameObject.SetActive(true);
-            mainMenuAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
-        }
-        else if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.QuitBtn)
-        {
-            quitAskPanel.gameObject.SetActive(true);
-            quitAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
-        }
-        else if(btnEnum.pauseBtnType == ButtonEnum.PauseMenuButtonType.SettingBtn)
-        {
-            settingPanel.gameObject.SetActive(true);
-            settingBtnFunction.ActiveGameSettingPanel();
-            settingPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
-        }
+        mainMenuAskPanel.gameObject.SetActive(true);
+        mainMenuAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
     }
-  
-    //Ask panel deactive for main menu button function
-    public void BackToPauseMenu()
+    private void MainMenuAskPanelOff()
     {
-        otherPanel.SetActive(true);
         mainMenuAskPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
+            otherPanel.SetActive(true);
             mainMenuAskPanel.gameObject.SetActive(false);
         }); 
+    }
+    private void QuitAskPanelShow()
+    {
+        otherPanel.SetActive(false);
+        quitAskPanel.gameObject.SetActive(true);
+        quitAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
+    }
+    private void QuitAskPanelOff()
+    {
         quitAskPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
+            otherPanel.SetActive(true);
             quitAskPanel.gameObject.SetActive(false);
         }); 
+    }
+    private void SettingPanelShow()
+    {
+        otherPanel.SetActive(false);
+        settingPanel.gameObject.SetActive(true);
+        settingBtnFunction.ActiveGameSettingPanel();
+        settingPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
+    }
+    private void SettingPanelOff()
+    {
         settingPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
+            otherPanel.SetActive(true);
             settingPanel.gameObject.SetActive(false);
-        }); 
+        });
     }
     public void MoveToMainMenu()
     {

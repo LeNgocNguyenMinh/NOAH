@@ -4,16 +4,7 @@ using UnityEngine.UI;
 public class PlayerLoadout : MonoBehaviour
 {
     public static PlayerLoadout Instance;
-    /* [SerializeField]private Image hatSlotImage;
-    [SerializeField]private Image coatSlotImage;
-    [SerializeField]private Image hatImage;
-    [SerializeField]private Image coatImage; */
     [SerializeField]private Image weaponSlotImage;
-    /* [SerializeField]private GameObject unequipHat;
-    [SerializeField]private GameObject unequipCoat; */
-    [SerializeField]private GameObject unequipWeapon;
-    /* private Item currentEquipHat;
-    private Item currentEquipCoat; */
     private Item currentEquipWeapon;
     private PlayerCurrentClothChange playerCurrentClothChange;
     private void Awake()
@@ -120,55 +111,14 @@ public class PlayerLoadout : MonoBehaviour
         currentEquipCoat = PlayerStatus.Instance.defaultCoat;
         unequipCoat.SetActive(false);
     } */
-    public void EquipWeapon(Item newWeapon)
+    public void EquipWeapon(Item weapon)
     {
-        if(newWeapon != PlayerStatus.Instance.defaultWeapon)
-        {
-            unequipWeapon.SetActive(true);
-        }
-        currentEquipWeapon = newWeapon;
-        weaponSlotImage.sprite = newWeapon.itemSprite; 
+        PlayerWeaponParent.Instance.EquipNewWeapon(weapon);
+        currentEquipWeapon = weapon;
+        weaponSlotImage.sprite = weapon.itemSprite; 
         RectTransform rectTransform = weaponSlotImage.rectTransform;
             rectTransform.sizeDelta = new Vector2(
             weaponSlotImage.sprite.rect.width * 3f,
             weaponSlotImage.sprite.rect.height * 3f);
-    }
-    public void UnequipWeapon()
-    {
-        if(!UIInventoryPage.Instance.AddItem(currentEquipWeapon, 1))
-        {
-            return;
-        }
-        EquipWeapon(PlayerStatus.Instance.defaultWeapon);
-        PlayerWeaponParent.Instance.EquipNewWeapon(PlayerStatus.Instance.defaultWeapon);
-        PlayerStatus.Instance.SetCurrentWeapon(PlayerStatus.Instance.defaultWeapon);
-        unequipWeapon.SetActive(false);
-    }
-    public void CheckUnequipButton()
-    {
-        /* if(currentEquipCoat == null || currentEquipCoat == PlayerStatus.Instance.defaultCoat)
-        {
-            unequipCoat.SetActive(false);
-        }
-        else
-        {
-            unequipCoat.SetActive(true);
-        }
-        if(currentEquipHat == null || currentEquipHat == PlayerStatus.Instance.defaultHat)
-        {
-            unequipHat.SetActive(false);
-        }
-        else
-        {
-            unequipHat.SetActive(true);
-        } */
-        if(currentEquipWeapon == null || currentEquipWeapon == PlayerStatus.Instance.defaultWeapon)
-        {
-            unequipWeapon.SetActive(false);
-        }
-        else
-        {
-            unequipWeapon.SetActive(true);
-        }
     }
 }

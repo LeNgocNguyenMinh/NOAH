@@ -74,7 +74,7 @@ public class UIInventoryController : MonoBehaviour
         missionCanvasGroup.alpha = 0f;
         statusCanvasGroup.alpha = 1f;
         statusOpen = true;
-        AddAvailablePoint.Instance.CheckAvailablePoint(); 
+        PlayerStatusInfoUI.Instance.UpdateInfo(); 
         statusPanel.SetAsLastSibling();
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         animator.SetTrigger("Idle");
@@ -165,6 +165,7 @@ public class UIInventoryController : MonoBehaviour
         missionCanvasGroup.alpha = 1f;
         missionBoardOpen = true;
         inventoryOpen = false;
+        statusOpen = false;
         missionPanel.SetAsLastSibling();
     }
     private void OnInvButtonClicked()
@@ -174,6 +175,7 @@ public class UIInventoryController : MonoBehaviour
         missionCanvasGroup.alpha = 0f;
         inventoryOpen = true;
         missionBoardOpen = false;
+        statusOpen = false;
         invPanel.SetAsLastSibling();
     }
     private void OnStatusButtonClicked()
@@ -181,8 +183,9 @@ public class UIInventoryController : MonoBehaviour
         statusCanvasGroup.alpha = 1f;
         invCanvasGroup.alpha = 0f;
         missionCanvasGroup.alpha = 0f;
-        inventoryOpen = true;
+        inventoryOpen = false;
         missionBoardOpen = false;
-        invPanel.SetAsLastSibling();
+        statusOpen = true;
+        statusPanel.SetAsLastSibling();
     }
 }

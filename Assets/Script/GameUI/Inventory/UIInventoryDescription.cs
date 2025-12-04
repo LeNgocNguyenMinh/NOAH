@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class UIInventoryDescription : MonoBehaviour
 {
@@ -13,12 +14,16 @@ public class UIInventoryDescription : MonoBehaviour
     [SerializeField]private TMP_Text requireForUpgradeText;
     [SerializeField]private GameObject weaponLevelBox;
     [SerializeField]private TMP_Text weaponLevelText;
-    [SerializeField]private GameObject upgradeButton;
+    [SerializeField]private Button wpUpgradeBtn;
     private Item itemInDescription;
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+    }
+    private void OnEnable()
+    {
+        wpUpgradeBtn.onClick.AddListener(UpgradeThisWeapon);
     }
     public void ItemShowInformation(Item item)
     {
@@ -35,7 +40,7 @@ public class UIInventoryDescription : MonoBehaviour
                 itemFunction.gameObject.SetActive(true);
                 weaponLevelBox.SetActive(true);
                 requireForUpgrade.SetActive(true);
-                upgradeButton.SetActive(true);
+                wpUpgradeBtn.gameObject.SetActive(true);
                 weaponLevelText.text = "Level " + item.weaponLevel;
                 requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + item.materialNeedToUpgrade;
                 itemFunction.text = "Damage + " + item.weaponDamage;
@@ -49,14 +54,14 @@ public class UIInventoryDescription : MonoBehaviour
                 itemFunction.gameObject.SetActive(true);
                 weaponLevelBox.SetActive(false);
                 requireForUpgrade.SetActive(false);
-                upgradeButton.SetActive(false);
+                wpUpgradeBtn.gameObject.SetActive(false);
                 itemFunction.text = "Health recover + " + item.healthRecover;
             }
             else
             {
                 weaponLevelBox.SetActive(false);
                 requireForUpgrade.SetActive(false);
-                upgradeButton.SetActive(false);
+                wpUpgradeBtn.gameObject.SetActive(false);
                 itemFunction.text = null;
                 itemFunction.gameObject.SetActive(false);
             }
@@ -84,7 +89,7 @@ public class UIInventoryDescription : MonoBehaviour
     {
         weaponLevelBox.SetActive(false);
         requireForUpgrade.SetActive(false);
-        upgradeButton.SetActive(false);
+        wpUpgradeBtn.gameObject.SetActive(false);
         itemFunction.text = null;
         itemImageBox.enabled = false;
         itemNameBox.text = null;

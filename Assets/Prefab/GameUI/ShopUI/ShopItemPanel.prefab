@@ -408,7 +408,7 @@ MonoBehaviour:
   itemUses: {fileID: 4950831235336799099}
   itemPrice: {fileID: 5711789509771457368}
   itemImage: {fileID: 2494336541759516545}
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
+  buyItemBtn: {fileID: 4271071601847982727}
 --- !u!1 &3986309006761621143
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,19 +953,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 835410859493875287}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8077690506144189722}
-        m_TargetAssemblyTypeName: ShopItem, Assembly-CSharp
-        m_MethodName: BuyItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8825322129447789310
 GameObject:
   m_ObjectHideFlags: 0

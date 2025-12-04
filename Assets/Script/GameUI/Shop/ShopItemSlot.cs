@@ -13,6 +13,11 @@ public class ShopItemSlot : MonoBehaviour
     [SerializeField]private TMP_Text itemUses;
     [SerializeField]private TMP_Text itemPrice;
     [SerializeField]private Image itemImage;
+    [SerializeField]private Button buyItemBtn;
+    private void OnEnable()
+    {
+        buyItemBtn.onClick.AddListener(BuyItem);
+    }
     public void SetItem(Item newValue)
     {
         item = newValue;

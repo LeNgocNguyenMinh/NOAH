@@ -15,7 +15,6 @@ public class PlayerStatus : MonoBehaviour
     public float maxHealth = 100;
     public float currentHealth = 100;
     [Header("---------Player Weapon---------")]
-    public Item defaultWeapon;
     public Item currentWeapon;
     private void Awake()
     {
@@ -41,7 +40,7 @@ public class PlayerStatus : MonoBehaviour
             currentExpData = currentExp,
             maxHealthData = maxHealth,
             currentHealthData = currentHealth,
-            currentWeaponID = currentWeapon != null ? currentWeapon.itemID : "None"
+            currentWeaponID = PlayerWeaponParent.Instance.GetCurrentWeapon().itemID
         };
     }
 
@@ -56,39 +55,14 @@ public class PlayerStatus : MonoBehaviour
         currentExp = playerSaveData.currentExpData;
         maxHealth = playerSaveData.maxHealthData;
         currentHealth = playerSaveData.currentHealthData;
-        currentWeapon = playerSaveData.currentWeaponID != "None" ? ItemDictionary.Instance.GetItemInfo(playerSaveData.currentWeaponID) : null;
+        currentWeapon = ItemDictionary.Instance.GetItemInfo(playerSaveData.currentWeaponID);
+        PlayerEXPControl.Instance.SetCurrentExpStatus();
+        PlayerHealthControl.Instance.SetCurrentHealthStatus();
+        PlayerLoadout.Instance.EquipWeapon(currentWeapon);
     }
     public void SetLevel(int playerLevel)
     {
         this.playerLevel = playerLevel;
-    }
-    public void SetName(string playerName)
-    {
-        this.playerName = playerName;
-    }
-    public void SetAge(int playerAge)
-    {
-        this.playerAge = playerAge;
-    }
-    public void SetDamageAmount(float newDamagePoint)
-    {
-        this.playerCurrentDamage += newDamagePoint;
-    }
-    public void SetCoin(int newCoin)
-    {
-        this.playerCoin = newCoin;
-    }
-    public void AddCoin(int newCoin)
-    {
-        this.playerCoin += newCoin;
-    }
-    public void SetBullet()
-    {
-        this.playerBullet ++;
-    }
-    public void SetAvailablePoint(int newPoint)
-    {
-        this.availablePoint += newPoint;
     }
     public void SetMaxEXP(float maxExp)
     {
@@ -98,9 +72,39 @@ public class PlayerStatus : MonoBehaviour
     {
         this.currentExp = currentExp;
     }
+    public void SetName(string playerName)
+    {
+        this.playerName = playerName;
+    }
+    public void SetAge(int playerAge)
+    {
+        this.playerAge = playerAge;
+    }
+    //relate to player status UI
+    public void SetDamageAmount(float newDamagePoint)
+    {
+        this.playerCurrentDamage += newDamagePoint;
+    }
+    public void SetBullet()
+    {
+        this.playerBullet ++;
+    }
     public void SetMaxHealth(float newHealthpoint)
     {
         this.maxHealth += newHealthpoint;
+    }
+    public void SetAvailablePoint(int newPoint)
+    {
+        this.availablePoint += newPoint;
+    }
+    //////////
+    public void SetCoin(int newCoin)
+    {
+        this.playerCoin = newCoin;
+    }
+    public void AddCoin(int newCoin)
+    {
+        this.playerCoin += newCoin;
     }
     public void SetCurrentHealth(float currentHealth)
     {

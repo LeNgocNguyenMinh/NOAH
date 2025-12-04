@@ -151,7 +151,6 @@ public class UIInventoryPage : MonoBehaviour
     //Some event when open inventory
     public void InventoryUpdateOpen()
     {
-        PlayerLoadout.Instance.CheckUnequipButton();
         OnlyClickOneSlot();
         OnlySellectOneSlot();
         uiInventoryDescription = GetComponent<UIInventoryDescription>();

@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4504821550340922509}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AddAvailablePoint, Assembly-CSharp
         m_MethodName: AddPointToDamage
         m_Mode: 1
@@ -405,7 +405,6 @@ GameObject:
   - component: {fileID: 4130475485753581243}
   - component: {fileID: 2276767891842701057}
   - component: {fileID: 6715819784712274754}
-  - component: {fileID: 4504821550340922509}
   - component: {fileID: 3528074024703970602}
   m_Layer: 0
   m_Name: InventoryStatusManager
@@ -448,7 +447,6 @@ MonoBehaviour:
   hiddenPosition: {x: -91, y: -940}
   visiblePosition: {x: -91, y: 0}
   moveDuration: 0.5
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   invCanvasGroup: {fileID: 7401656538679212954}
   missionPanel: {fileID: 2077138372976824620}
   missionBtn: {fileID: 7651914746770239427}
@@ -488,7 +486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f371a2f317ee1a548baa4e0d19fb4b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   itemNameBox: {fileID: 4616398210376849681}
   itemDescriptionBox: {fileID: 3192061327700237389}
   itemFunction: {fileID: 3207204046837439416}
@@ -497,7 +494,7 @@ MonoBehaviour:
   requireForUpgradeText: {fileID: 4711819829588895190}
   weaponLevelBox: {fileID: 8125808908933162062}
   weaponLevelText: {fileID: 2178853884629378189}
-  upgradeButton: {fileID: 181974470556192627}
+  wpUpgradeBtn: {fileID: 7336351613669646074}
 --- !u!114 &6715819784712274754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,29 +507,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812b2c8c6fe359d45a3aa47db7029f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   playerAvailablePoint: {fileID: 6193138464539268783}
   playerLevel: {fileID: 8653679738099872876}
   playerHealth: {fileID: 4552590252442683016}
   playerBulletNumber: {fileID: 6267092489182580839}
   playerDamage: {fileID: 5484846576419646537}
   playerCoinNumber: {fileID: 8945822625392475339}
---- !u!114 &4504821550340922509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149504695397272353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffa881d9ded51a54e943e55489fa6ebd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthButton: {fileID: 2382259973230763670}
-  damageButton: {fileID: 85609791012367679}
-  bulletButton: {fileID: 6078676321813431365}
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
+  bulletBtn: {fileID: 1889255471918921524}
+  healthBtn: {fileID: 4997161718938349861}
+  damageBtn: {fileID: 6421107444064987423}
 --- !u!114 &3528074024703970602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edfcc0a2bc82ce74a8ea5287ae019428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}
   weaponSlotImage: {fileID: 3149418953813554024}
   unequipWeapon: {fileID: 1927025952025506024}
 --- !u!1 &181974470556192627
@@ -669,19 +651,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7422806980840102576}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2276767891842701057}
-        m_TargetAssemblyTypeName: UIInventoryDescription, Assembly-CSharp
-        m_MethodName: UpgradeThisWeapon
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &331941235015405293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,7 +2823,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4504821550340922509}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AddAvailablePoint, Assembly-CSharp
         m_MethodName: AddPointToHealth
         m_Mode: 1
@@ -6299,7 +6269,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4504821550340922509}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AddAvailablePoint, Assembly-CSharp
         m_MethodName: AddPointToBullet
         m_Mode: 1

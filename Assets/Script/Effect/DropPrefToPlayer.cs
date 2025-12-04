@@ -35,7 +35,7 @@ public class DropPrefToPlayer : MonoBehaviour
             if(dropType == DropType.EXP)
             {
                 SoundControl.Instance.EXPCollectPlay();
-                EXPControl.Instance.AddEXP(2f);
+                PlayerEXPControl.Instance.AddEXP(2f);
                 Destroy(gameObject);
             }   
             else if(dropType == DropType.Coin)
