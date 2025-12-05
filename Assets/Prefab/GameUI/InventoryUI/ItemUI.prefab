@@ -603,19 +603,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1417089531439992305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5419230547192491895}
-        m_TargetAssemblyTypeName: UIInventoryItem, Assembly-CSharp
-        m_MethodName: RemoveAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &3307359788628952763
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +617,7 @@ GameObject:
   - component: {fileID: 227158864628013774}
   - component: {fileID: 5365974284984815866}
   m_Layer: 5
-  m_Name: ButtonRemove
+  m_Name: ButtonRemoveOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,19 +724,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 227158864628013774}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5419230547192491895}
-        m_TargetAssemblyTypeName: UIInventoryItem, Assembly-CSharp
-        m_MethodName: DeleteOne
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &3432352420781923966
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.68490565, g: 1, b: 0.6883579, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1010,8 +986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017517719626201208}
   - component: {fileID: 6158707411145682241}
-  - component: {fileID: 7284516453483484732}
-  - component: {fileID: 5419230547192491895}
+  - component: {fileID: 2281605845659868315}
   m_Layer: 5
   m_Name: ItemUI
   m_TagString: Untagged
@@ -1051,37 +1026,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6454584704839593618}
   m_CullTransparentMesh: 1
---- !u!114 &7284516453483484732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6454584704839593618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &5419230547192491895
+--- !u!114 &2281605845659868315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1093,14 +1038,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158f89d50739c19459b508e170a9b912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 
-  itemQuantity: 0
   isEmpty: 0
   quantityText: {fileID: 4133838439866570463}
   itemImage: {fileID: 1432416067884498329}
   choicePanel: {fileID: 8544986383090132598}
   isHotBarSlot: 0
   border: {fileID: 491473666943772121}
+  equipBtn: {fileID: 7860369226838596721}
+  removeOneBtn: {fileID: 5365974284984815866}
+  removeAllBtn: {fileID: 4102862440160685198}
 --- !u!1 &7137009604843456475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,16 +1484,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2498089702243534520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5419230547192491895}
-        m_TargetAssemblyTypeName: UIInventoryItem, Assembly-CSharp
-        m_MethodName: Equip
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []

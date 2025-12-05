@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class ShopController : MonoBehaviour
 {   
@@ -15,6 +16,7 @@ public class ShopController : MonoBehaviour
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
+    [SerializeField]private Button shopCancel;
     public bool canOpenShop = false;
     private void Awake() 
     {
@@ -37,6 +39,10 @@ public class ShopController : MonoBehaviour
         {
             ShopUIOpen();
         }
+    }
+    private void OnEnable()
+    {
+        shopCancel.onClick.AddListener(ShopUIClose);
     }
     public void ShopUIOpen()
     {

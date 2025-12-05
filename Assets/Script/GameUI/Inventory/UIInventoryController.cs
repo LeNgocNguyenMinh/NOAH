@@ -8,6 +8,7 @@ public class UIInventoryController : MonoBehaviour
 {
     public static UIInventoryController Instance;
     [SerializeField]private Animator animator;
+    [SerializeField]private Button closeBtn;
     [Header("---------GeneralUI---------")] 
     [SerializeField]private RectTransform ismPanel;
     [Header("---------InventoryUI---------")] 
@@ -154,6 +155,7 @@ public class UIInventoryController : MonoBehaviour
     }
     private void OnEnable()
     {
+        closeBtn.onClick.AddListener(MoveDown);
         missionBtn.onClick.AddListener(OnMissButtonClicked);
         invBtn.onClick.AddListener(OnInvButtonClicked);
         statusBtn.onClick.AddListener(OnStatusButtonClicked);

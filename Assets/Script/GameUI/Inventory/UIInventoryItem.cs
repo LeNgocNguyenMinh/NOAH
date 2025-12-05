@@ -5,13 +5,14 @@ using TMPro;
 using System;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
 {
     ////////////////////Item data
     private string itemName;
-    public string itemID;
-    public int itemQuantity = 0;
+    private string itemID;
+    private int itemQuantity = 0;
     private Sprite itemSprite;
     private string itemDescription;
     public bool isEmpty = true;//Check if slot is empty    
@@ -22,6 +23,10 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     public bool isHotBarSlot;
     public GameObject border;
     private bool isSelect;
+    [SerializeField]private Button equipBtn;
+    [SerializeField]private Button removeOneBtn;
+    [SerializeField]private Button removeAllBtn;
+
     private void Awake()
     {
         choicePanel.SetActive(false);
@@ -30,6 +35,12 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         border.SetActive(false);
         isSelect = false;
         isEmpty = true;
+    }
+    private void OnEnable()
+    {
+        equipBtn.onClick.AddListener(Equip);
+        removeOneBtn.onClick.AddListener(DeleteOne);
+        removeAllBtn.onClick.AddListener(RemoveAll);
     }
     public void AddItem(Item item, int amountOfItem)//Add new Item data to this slot
     {

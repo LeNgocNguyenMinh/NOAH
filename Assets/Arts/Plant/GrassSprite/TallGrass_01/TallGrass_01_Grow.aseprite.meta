@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638972454453217760
+  platformSettingsDirtyTick: 639004890817505868
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -129,16 +129,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: TallGrass_01_Grow_Frame_0
     originalName: 
-    pivot: {x: 0.46428573, y: 0}
+    pivot: {x: 0.4375, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 41
-      width: 28
-      height: 16
+      x: 47
+      y: 38
+      width: 32
+      height: 15
     spriteID: 4d28b4188db6def4b9b273f4858818aa
     spriteBone: []
     spriteOutline: []
@@ -147,19 +147,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 41}
+    uvTransform: {x: 47, y: 38}
   - name: TallGrass_01_Grow_Frame_1
     originalName: 
-    pivot: {x: 0.46428573, y: 0}
+    pivot: {x: 0.4375, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 43
-      y: 39
-      width: 28
-      height: 19
+      x: 4
+      y: 40
+      width: 32
+      height: 18
     spriteID: c94630fa3bda8b141a0b358697b1bafb
     spriteBone: []
     spriteOutline: []
@@ -168,19 +168,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 39}
+    uvTransform: {x: 4, y: 40}
   - name: TallGrass_01_Grow_Frame_2
     originalName: 
-    pivot: {x: 0.46428573, y: 0}
+    pivot: {x: 0.4375, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 80
+      x: 88
       y: 4
-      width: 28
-      height: 27
+      width: 32
+      height: 26
     spriteID: c1a38eba37ba79e4ca27b1e2a4ba237f
     spriteBone: []
     spriteOutline: []
@@ -189,19 +189,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 80, y: 4}
+    uvTransform: {x: 88, y: 4}
   - name: TallGrass_01_Grow_Frame_3
     originalName: 
-    pivot: {x: 0.4827586, y: 0}
+    pivot: {x: 0.45454547, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 43
+      x: 47
       y: 4
-      width: 29
-      height: 27
+      width: 33
+      height: 26
     spriteID: aece689c3d4477a4eafd20615a0d98c2
     spriteBone: []
     spriteOutline: []
@@ -210,10 +210,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 4}
+    uvTransform: {x: 47, y: 4}
   - name: TallGrass_01_Grow_Frame_4
     originalName: 
-    pivot: {x: 0.516129, y: 0}
+    pivot: {x: 0.4857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -221,8 +221,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 31
-      height: 29
+      width: 35
+      height: 28
     spriteID: 9f19fcc65d43d6944958c3a5d80244fa
     spriteBone: []
     spriteOutline: []
@@ -251,46 +251,46 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 3
+        x: 18
         y: 0
-        width: 28
-        height: 16
+        width: 32
+        height: 15
       spriteId: 4d28b4188db6def4b9b273f4858818aa
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 3
+        x: 18
         y: 0
-        width: 28
-        height: 19
+        width: 32
+        height: 18
       spriteId: c94630fa3bda8b141a0b358697b1bafb
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 3
+        x: 18
         y: 0
-        width: 28
-        height: 27
+        width: 32
+        height: 26
       spriteId: c1a38eba37ba79e4ca27b1e2a4ba237f
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 2
+        x: 17
         y: 0
-        width: 29
-        height: 27
+        width: 33
+        height: 26
       spriteId: aece689c3d4477a4eafd20615a0d98c2
     - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 15
         y: 0
-        width: 31
-        height: 29
+        width: 35
+        height: 28
       spriteId: 9f19fcc65d43d6944958c3a5d80244fa
     linkedCells: []
     tileCells: []
@@ -337,5 +337,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 64, y: 32}
   previousTextureSize: {x: 128, y: 64}

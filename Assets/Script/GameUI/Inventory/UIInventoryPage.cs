@@ -167,7 +167,7 @@ public class UIInventoryPage : MonoBehaviour
         {
             if(!listOfUIItems[i].isEmpty)
             {
-                invData.Add(new InventorySaveData {itemID = listOfUIItems[i].itemID, itemQuantity = listOfUIItems[i].itemQuantity, slotIndex = i});
+                invData.Add(new InventorySaveData {itemID = listOfUIItems[i].GetItemID(), itemQuantity = listOfUIItems[i].GetItemQuantity(), slotIndex = i});
             }
         }
         return invData;

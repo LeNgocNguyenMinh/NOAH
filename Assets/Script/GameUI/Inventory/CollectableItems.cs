@@ -6,12 +6,11 @@ public class CollectableItems : MonoBehaviour
 {
     [SerializeField]private Item item; //Contain item information
     [SerializeField]private int itemQuantity;
+    [SerializeField]private SpriteRenderer spriteRenderer;
     private bool isCollected = false;
-    private SpriteRenderer spriteRenderer;
     private Animator animator;
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = item.itemSprite;
     }
     public string GetItemID()

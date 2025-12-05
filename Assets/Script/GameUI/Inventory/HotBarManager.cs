@@ -41,15 +41,15 @@ public class HotBarManager : MonoBehaviour
         List<InventorySaveData> hotBarData = new List<InventorySaveData>();
         if(!slot1.isEmpty)
         {
-            hotBarData.Add(new InventorySaveData{itemID = slot1.itemID, itemQuantity = slot1.itemQuantity, slotIndex = 0});
+            hotBarData.Add(new InventorySaveData{itemID = slot1.GetItemID(), itemQuantity = slot1.GetItemQuantity(), slotIndex = 0});
         }
         if(!slot2.isEmpty)
         {
-            hotBarData.Add(new InventorySaveData{itemID = slot2.itemID, itemQuantity = slot2.itemQuantity, slotIndex = 1});
+            hotBarData.Add(new InventorySaveData{itemID = slot2.GetItemID(), itemQuantity = slot2.GetItemQuantity(), slotIndex = 1});
         }
         if(!slot3.isEmpty)
         {
-            hotBarData.Add(new InventorySaveData{itemID = slot3.itemID, itemQuantity = slot3.itemQuantity, slotIndex = 2});
+            hotBarData.Add(new InventorySaveData{itemID = slot3.GetItemID(), itemQuantity = slot3.GetItemQuantity(), slotIndex = 2});
         }
         return hotBarData;
     }

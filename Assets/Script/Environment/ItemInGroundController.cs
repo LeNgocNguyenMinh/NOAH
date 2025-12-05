@@ -24,6 +24,10 @@ public class ItemInGroundController : MonoBehaviour
             }
         }
     }
+    public void AddNewItemInGround(string itemID, Vector3 pos)
+    {
+        listItems.Add(new ItemInGroundSaveData{itemID = itemID, itemPos = pos, isCollect = false});
+    }
     public List<ItemInGroundSaveData> GetListItemInGround()
     {
         List<ItemInGroundSaveData> itemGroundData = new List<ItemInGroundSaveData>();
