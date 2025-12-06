@@ -6,13 +6,8 @@ public class CollectableItems : MonoBehaviour
 {
     [SerializeField]private Item item; //Contain item information
     [SerializeField]private int itemQuantity;
-    [SerializeField]private SpriteRenderer spriteRenderer;
+    [SerializeField]private Animator animator;
     private bool isCollected = false;
-    private Animator animator;
-    void Start()
-    {
-        spriteRenderer.sprite = item.itemSprite;
-    }
     public string GetItemID()
     {
         return item.itemID;
@@ -20,6 +15,10 @@ public class CollectableItems : MonoBehaviour
     public Vector3 GetItemPos()
     {
         return transform.position;
+    }
+    public int GetItemQuantity()
+    {
+        return itemQuantity;
     }
     public void SetItemQuantity(int quantity)
     {
@@ -30,7 +29,6 @@ public class CollectableItems : MonoBehaviour
         if(isCollected == true) return;
         if(collider.CompareTag("Player"))
         {
-            animator = GetComponent<Animator>();
             animator.SetTrigger("Collect");
             if(UIInventoryPage.Instance.AddItem(item, itemQuantity))
             {
@@ -44,7 +42,6 @@ public class CollectableItems : MonoBehaviour
     
     public void DropItemAnim()
     {
-        animator = GetComponent<Animator>();
         animator.SetTrigger("Drop");
     }
 }

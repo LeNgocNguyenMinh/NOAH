@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 57d68bc0160785443bfb50fcd754f22b, type: 2}
   itemQuantity: 1
-  spriteRenderer: {fileID: 7168827458612322557}
+  animator: {fileID: 1852534739538329028}
 --- !u!212 &7168827458612322557
 SpriteRenderer:
   m_ObjectHideFlags: 0

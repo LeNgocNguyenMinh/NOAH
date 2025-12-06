@@ -43,6 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8875766089250558708, guid: 0905e038c56845e4aa60cea9d51f60ee, type: 2}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -174,7 +175,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87c4bf23febd8746829a3db3c61d08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicSrc: {fileID: 8399362450052654068}
+  sfxSrc: {fileID: 904745784423894396}
+  mainMenuMusic: {fileID: 8300000, guid: ee9285d40f672e94890c9778b6ed6b20, type: 3}
+  inGameMusic: {fileID: 8300000, guid: e22ac09973cd92744939e3067fba0b59, type: 3}
   playerShootSound: {fileID: 8300000, guid: 0be70ded609e5ee4fa32b855f92def9d, type: 3}
+  PlayerMeleeSound: {fileID: 8300000, guid: ab98ab4937eb6164a9c03584dfdf097a, type: 3}
   playerWalkSound: {fileID: 8300000, guid: 209aab29d584cfe49b5400540fb6551b, type: 3}
   playerDashSound: {fileID: 8300000, guid: 1ad29a52abe2bdb48a19316e57f98eef, type: 3}
   playerDeathSound: {fileID: 8300000, guid: 29d1cb840953e2c42b9635f414b743bb, type: 3}
@@ -223,8 +229,9 @@ AudioSource:
   m_GameObject: {fileID: 8742115598949056843}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -8875766089250558708, guid: 0905e038c56845e4aa60cea9d51f60ee, type: 2}
+  OutputAudioMixerGroup: {fileID: 1716898633247049729, guid: 0905e038c56845e4aa60cea9d51f60ee, type: 2}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -24,16 +24,16 @@ public class ItemInGroundController : MonoBehaviour
             }
         }
     }
-    public void AddNewItemInGround(string itemID, Vector3 pos)
+    public void AddNewItemInGround(string itemID, Vector3 pos, int itemQuantity)
     {
-        listItems.Add(new ItemInGroundSaveData{itemID = itemID, itemPos = pos, isCollect = false});
+        listItems.Add(new ItemInGroundSaveData{itemID = itemID, itemPos = pos, itemQuantity = itemQuantity, isCollect = false});
     }
     public List<ItemInGroundSaveData> GetListItemInGround()
     {
         List<ItemInGroundSaveData> itemGroundData = new List<ItemInGroundSaveData>();
         for(int i = 0; i < listItems.Count; i++)
         {
-            itemGroundData.Add(new ItemInGroundSaveData{itemID = listItems[i].itemID, itemPos = listItems[i].itemPos, isCollect = listItems[i].isCollect});
+            itemGroundData.Add(new ItemInGroundSaveData{itemID = listItems[i].itemID, itemPos = listItems[i].itemPos, itemQuantity = listItems[i].itemQuantity, isCollect = listItems[i].isCollect});
         }
         return itemGroundData;
     }
@@ -42,7 +42,7 @@ public class ItemInGroundController : MonoBehaviour
         List<ItemInGroundSaveData> itemGroundData = new List<ItemInGroundSaveData>();
         for(int i = 0; i < itemsInGround.Count; i++)
         {
-            itemGroundData.Add(new ItemInGroundSaveData{itemID = itemsInGround[i].GetItemID(), itemPos = itemsInGround[i].GetItemPos()});
+            itemGroundData.Add(new ItemInGroundSaveData{itemID = itemsInGround[i].GetItemID(), itemPos = itemsInGround[i].GetItemPos(), itemQuantity = itemsInGround[i].GetItemQuantity()});
         }
         return itemGroundData;
     }
@@ -57,7 +57,9 @@ public class ItemInGroundController : MonoBehaviour
         {
             if(!itemGroundData[i].isCollect)
             {
-                itemInGroudPrefab.Add(Instantiate(ItemDictionary.Instance.GetItemInfo(itemGroundData[i].itemID).itemPrefab, itemGroundData[i].itemPos, Quaternion.identity));
+                GameObject tmpItem;
+                itemInGroudPrefab.Add(tmpItem = Instantiate(ItemDictionary.Instance.GetItemInfo(itemGroundData[i].itemID).itemPrefab, itemGroundData[i].itemPos, Quaternion.identity));
+                tmpItem.GetComponentInChildren<CollectableItems>().SetItemQuantity(itemGroundData[i].itemQuantity);
             }
         }
     }
@@ -67,5 +69,6 @@ public class ItemInGroundSaveData
 {
     public string itemID;
     public Vector3 itemPos;
+    public int itemQuantity;
     public bool isCollect = false;
 }

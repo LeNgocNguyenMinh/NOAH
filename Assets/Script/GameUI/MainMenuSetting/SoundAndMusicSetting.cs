@@ -7,20 +7,12 @@ using UnityEngine.Audio;
 public class SoundAndMusicSetting : MonoBehaviour
 {
     [SerializeField]private AudioMixer audioMixer;
-    private AudioSource musicSrc;
-    private AudioSource sfxSrc;
-    public AudioClip gameMusic;
     [SerializeField]private Slider musicSlider;
     [SerializeField]private Slider sfxSlider;
-    private static bool hasPlayedMusic = false;
     private void Start()
     {
-        musicSrc = GameObject.FindWithTag("Music").GetComponent<AudioSource>();
-        sfxSrc = GameObject.FindWithTag("SFX").GetComponent<AudioSource>();
         audioMixer.SetFloat("musicPara", Mathf.Log10(1)*20);
         audioMixer.SetFloat("sfxPara", Mathf.Log10(1)*20);
-        musicSrc.clip = gameMusic;
-        musicSrc.Play();
     }
     public void SetMusicVolume()
     {

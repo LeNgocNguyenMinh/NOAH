@@ -103,6 +103,7 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
                 Vector2 dropOffset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * 4f;
                 Vector2 dropPosition = (Vector2)Player.Instance.transform.position + dropOffset;
                 CollectableItems dropItem = Instantiate(previousSlot.GetItem().itemPrefab, dropPosition, Quaternion.identity).GetComponentInChildren<CollectableItems>();
+                ItemInGroundController.Instance.AddNewItemInGround(previousSlot.GetItemID(), dropPosition, previousSlot.GetItemQuantity());
                 dropItem.SetItemQuantity(previousSlot.GetItemQuantity());
                 dropItem.DropItemAnim();
                 transform.SetParent(previousSlot.transform, true);

@@ -117,14 +117,14 @@ public class SaveController : MonoBehaviour
             { ""itemID"": ""HPPotion_02"", ""itemLeftNumber"": 5 }
         ],
         ""itemInGroundSaveData"": [
-            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -15.3, ""y"": 3.2, ""z"": 0.0 }, ""isCollect"": false },
-            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -23.05, ""y"": -2.18, ""z"": 0.0 }, ""isCollect"": false },
-            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -22.03, ""y"": -2.16, ""z"": 0.0 }, ""isCollect"": false },
-            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -3.53, ""y"": -8.92, ""z"": 0.0 }, ""isCollect"": false },
-            { ""itemID"": ""HPPotion_03"", ""itemPos"": { ""x"": -2.29, ""y"": -8.72, ""z"": 0.0 }, ""isCollect"": false },
-            { ""itemID"": ""HPPotion_01"", ""itemPos"": { ""x"": -23.83, ""y"": -1.7, ""z"": 0.0 }, ""isCollect"": false },
-            { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": -15.0, ""y"": 9.86, ""z"": 0.0 }, ""isCollect"": false },
-            { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": -1.31, ""y"": 1.46, ""z"": 0.0 }, ""isCollect"": false }
+            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -15.3, ""y"": 3.2, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -23.05, ""y"": -2.18, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -22.03, ""y"": -2.16, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -3.53, ""y"": -8.92, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPPotion_03"", ""itemPos"": { ""x"": -2.29, ""y"": -8.72, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPPotion_01"", ""itemPos"": { ""x"": -23.83, ""y"": -1.7, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": -15.0, ""y"": 9.86, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": -1.31, ""y"": 1.46, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false }
         ],
         ""bossSaveData"": [
             { ""bossID"": ""B_01"", ""isDead"": ""false"", ""bossPos"": { ""x"": -16.73, ""y"": 75.6, ""z"": 0.0 }},

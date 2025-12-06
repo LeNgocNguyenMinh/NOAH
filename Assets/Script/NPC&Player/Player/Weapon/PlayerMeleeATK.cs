@@ -46,12 +46,14 @@ public class PlayerMeleeATK : MonoBehaviour
             if(comboCount == 1)
             {
                 meleeAnimator.SetTrigger("atk1");
+                SoundControl.Instance.PlayerMeleeSoundPlay();
                 delayMeleeCount = delayMelee;
                 comboCount ++;
             }
             else if(comboCount == 2 && delayMeleeCount > 0)
             {
                 meleeAnimator.SetTrigger("atk2");
+                SoundControl.Instance.PlayerMeleeSoundPlay();
                 delayMeleeCount = 0;
                 comboCount--;
             }

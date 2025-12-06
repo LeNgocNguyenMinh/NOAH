@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundControl : MonoBehaviour
 {
     public static SoundControl Instance;
-    private AudioSource musicSrc;
-    private AudioSource sfxSrc;
+    [SerializeField]private AudioSource musicSrc;
+    [SerializeField]private AudioSource sfxSrc;
+    [Header("----------Game Music----------")]
+    public AudioClip mainMenuMusic;
+    public AudioClip inGameMusic;
     [Header("----------Player Audio Clips----------")]
     public AudioClip playerShootSound;
+    public AudioClip PlayerMeleeSound;
     public AudioClip playerWalkSound;
     public AudioClip playerDashSound;
     public AudioClip playerDeathSound;
@@ -28,14 +33,28 @@ public class SoundControl : MonoBehaviour
             Destroy(gameObject);
         }   
     }
-    private void Start()
+    public void Start()
     {
-        musicSrc = GameObject.FindWithTag("Music").GetComponent<AudioSource>();
-        sfxSrc = GameObject.FindWithTag("SFX").GetComponent<AudioSource>();
+        Scene currentScene = SceneManager.GetActiveScene();
+		string sceneName = currentScene.name;
+        if(sceneName == "Level1")
+        {
+            Debug.Log("Level1MusicPlay");
+            InGameMusicPlay();
+        }
+        else if(sceneName == "MainMenu")
+        {
+            Debug.Log("mainMenuMusicPlay");
+            MainMenuMusicPlay();
+        }
     }
     public void PlayerShootSoundPlay()
     {
         PlaySFX(playerShootSound);
+    }
+    public void PlayerMeleeSoundPlay()
+    {
+        PlaySFX(PlayerMeleeSound);
     }
     public void PlayerWalkSoundPlay()
     {
@@ -59,7 +78,9 @@ public class SoundControl : MonoBehaviour
     }
     public void PlaySFX(AudioClip clip)
     {
-        sfxSrc.PlayOneShot(clip);
+        sfxSrc.clip = clip;
+        sfxSrc.loop = false;
+        sfxSrc.Play();
     }
     public void DragonRoarPlay()
     {
@@ -68,5 +89,19 @@ public class SoundControl : MonoBehaviour
     public void DragonFirePlay()
     {
         PlaySFX(dragonFire);
+    }
+    public void PlayMusic(AudioClip clip)
+    {
+        musicSrc.clip = clip;
+        musicSrc.loop = true;
+        musicSrc.Play();
+    }
+    public void InGameMusicPlay()
+    {
+        PlayMusic(inGameMusic);
+    }
+    public void MainMenuMusicPlay()
+    {
+        PlayMusic(mainMenuMusic);
     }
 }
