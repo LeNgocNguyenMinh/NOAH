@@ -45,11 +45,8 @@ public class SaveController : MonoBehaviour
             timeSaveData = TimeManager.Instance.GetTime(),
             playerSaveData = PlayerStatus.Instance.GetPlayerInfo(),
             missionSaveData = MissionManager.Instance.GetMissionList(),
+            weaponListData = WeaponManager.Instance.GetWeaponData()
         };
-        for(int i = 0; i < weaponList.Count; i++)
-        {
-            saveData.weaponListData.Add(weaponList[i].GetWeaponData());
-        }
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
         NotifPopUp.Instance.ShowNotification("Save success.");
     }
@@ -71,12 +68,9 @@ public class SaveController : MonoBehaviour
             bossSaveData = existingData.bossSaveData,
             timeSaveData = TimeManager.Instance.GetTimeSkip(),
             playerSaveData = PlayerStatus.Instance.GetPlayerInfo(),
-            missionSaveData = MissionManager.Instance.GetMissionList()
+            missionSaveData = MissionManager.Instance.GetMissionList(),
+            weaponListData = WeaponManager.Instance.GetWeaponData()
         };
-           for(int i = 0; i < weaponList.Count; i++)
-        {
-            saveData.weaponListData.Add(weaponList[i].GetWeaponData());
-        }
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
         NotifPopUp.Instance.ShowNotification("Save success.");
     }
@@ -95,7 +89,8 @@ public class SaveController : MonoBehaviour
             ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
             BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
             PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
-            MissionManager.Instance.SetMissionList(saveData.missionSaveData);          
+            MissionManager.Instance.SetMissionList(saveData.missionSaveData);    
+            WeaponManager.Instance.SetWeaponData(saveData.weaponListData);      
         }
     }
 
@@ -135,7 +130,7 @@ public class SaveController : MonoBehaviour
             ""playerLevelData"": 1,
             ""availablePointData"": 3,
             ""playerCurrentDamageData"": 5.0,
-            ""playerBulletData"": 6,
+            ""playerBulletData"": 3,
             ""playerCoinData"": 50,
             ""maxExpData"": 40.0,
             ""currentExpData"": 0.0,
@@ -164,11 +159,10 @@ public class SaveController : MonoBehaviour
             ""currentMissionID"": """"
         },
         ""weaponListData"": [
-            { ""weaponID"": ""WP_01"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 10.0 },
-            { ""weaponID"": ""WP_05"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 45, ""weaponDamage"": 8.0 },
-            { ""weaponID"": ""WP_02"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 8.0 },
-            { ""weaponID"": ""WP_04"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 9.0 },
-            { ""weaponID"": ""WP_03"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 75, ""weaponDamage"": 3.0 }
+            { ""weaponID"": ""WP_01"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 2.0 },
+            { ""weaponID"": ""WP_02"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 2.0 },
+            { ""weaponID"": ""WP_03"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 75, ""weaponDamage"": 2.0 },
+            { ""weaponID"": ""WP_04"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 2.0 }
         ]
         }";
         File.WriteAllText(newGameSaveLocation, defaultNewGameJson);
@@ -182,7 +176,8 @@ public class SaveController : MonoBehaviour
         ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
         BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
         PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
-        MissionManager.Instance.SetMissionList(saveData.missionSaveData);     
+        MissionManager.Instance.SetMissionList(saveData.missionSaveData);   
+        WeaponManager.Instance.SetWeaponData(saveData.weaponListData);    
         SaveGame();
     }
 }

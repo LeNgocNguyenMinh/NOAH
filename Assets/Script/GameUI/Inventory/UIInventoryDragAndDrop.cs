@@ -19,6 +19,7 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
     
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(!UIInventoryController.inventoryOpen)return;
         UIInventoryPage.Instance.OnlyClickOneSlot();
         UIInventoryPage.Instance.OnlySellectOneSlot();
         UIInventoryPage.Instance.CloseDescriptionPanel();
@@ -31,10 +32,12 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
     }
     public void OnDrag(PointerEventData eventData)
     {
+        if(!UIInventoryController.inventoryOpen)return;
         transform.position = eventData.position;
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+        if(!UIInventoryController.inventoryOpen)return;
         //Make item visible
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;

@@ -12,14 +12,14 @@ public class PlayerMeleeHit : MonoBehaviour
             EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
             PlayerMagazine.Instance.HitCountIncrease();
             direct = (hitInfo.transform.position - Player.Instance.transform.position).normalized;
-            enemy.DamageReceive(PlayerStatus.Instance.playerCurrentDamage/2, direct);//Enemy hurt
+            enemy.DamageReceive(PlayerStatus.Instance.playerCurrentDamage, direct);//Enemy hurt
         }
         else if(hitInfo.tag == "Boss")
         {
             BossHurt bossHurt = hitInfo.GetComponent<BossHurt>();
             PlayerMagazine.Instance.HitCountIncrease();
             direct = (hitInfo.transform.position - Player.Instance.transform.position).normalized;
-            bossHurt.DamageReceive(PlayerStatus.Instance.playerCurrentDamage/2, direct);
+            bossHurt.DamageReceive(PlayerStatus.Instance.playerCurrentDamage, direct);
         }
     }
 }

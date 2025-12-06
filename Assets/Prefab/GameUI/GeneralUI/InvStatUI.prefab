@@ -429,7 +429,7 @@ MonoBehaviour:
   ismPanel: {fileID: 6677328955270883746}
   invPanel: {fileID: 2042781956660265261}
   invBtn: {fileID: 1623992325798324261}
-  hiddenPosition: {x: -91, y: -940}
+  hiddenPosition: {x: -91, y: -990}
   visiblePosition: {x: -91, y: 0}
   moveDuration: 0.5
   invCanvasGroup: {fileID: 7401656538679212954}
@@ -2408,7 +2408,7 @@ GameObject:
   - component: {fileID: 2834937759221164408}
   - component: {fileID: 3025436514065734193}
   m_Layer: 0
-  m_Name: Button
+  m_Name: ExpandBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4658,7 +4658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -91, y: -940}
+  m_AnchoredPosition: {x: -91, y: -990}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &903312029816026439
@@ -6678,6 +6678,7 @@ MonoBehaviour:
   hiddenPositionSmall: {x: -1153, y: 35}
   visiblePositionSmall: {x: -840, y: 35}
   moveDuration: 0.5
+  expandBtn: {fileID: 3025436514065734193}
 --- !u!114 &7213982522873855707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8282,7 +8283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 605, y: 355}
+  m_AnchoredPosition: {x: 518, y: 379}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &193052396752890292

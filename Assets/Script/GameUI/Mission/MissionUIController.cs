@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening; 
+using DG.Tweening;
+using UnityEngine.UI;
 
 public class MissionUIController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MissionUIController : MonoBehaviour
     [SerializeField]private Vector2 hiddenPositionSmall;
     [SerializeField]private Vector2 visiblePositionSmall;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
+    [SerializeField]private Button expandBtn;
     private bool isMissSmallShown = true;
     private void Update()
     {
@@ -23,6 +25,10 @@ public class MissionUIController : MonoBehaviour
                 ShowSmallMissionUI();
             }
         }
+    }
+    private void OnEnable()
+    {
+        expandBtn.onClick.AddListener(HideButtonInteract);
     }
     private void ShowSmallMissionUI()
     {

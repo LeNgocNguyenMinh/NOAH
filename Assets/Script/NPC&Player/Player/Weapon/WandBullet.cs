@@ -40,21 +40,21 @@ using UnityEngine;
         } 
         private void OnTriggerEnter2D(Collider2D hitInfo)
         {
-            damageAmount = (Random.Range(0, 5) == 0) ? 0 : (int)Random.Range(PlayerStatus.Instance.playerCurrentDamage, PlayerStatus.Instance.playerCurrentDamage);
-            if(hitInfo.tag == "Boss")
+            damageAmount = PlayerStatus.Instance.playerCurrentDamage + WeaponManager.Instance.GetWeaponInfo(PlayerStatus.Instance.currentWeapon.itemID).weaponDamage;
+            if(hitInfo.CompareTag("Boss"))
             {
                 BossHurt bossHurt = hitInfo.GetComponent<BossHurt>();
                 bossHurt.DamageReceive(damageAmount);
                 BulletDestroy();
             }
-            else if (hitInfo.tag == "Enemy")
+            else if (hitInfo.CompareTag("Enemy"))
             {
                 EnemyHurt enemy = hitInfo.GetComponent<EnemyHurt>();
                 direction = (hitInfo.gameObject.transform.position - Player.Instance.transform.position).normalized;
                 enemy.DamageReceive(damageAmount, direction);//Enemy hurt
                 BulletDestroy();
             }
-            else if(hitInfo.tag == "ForeGround" || hitInfo.tag == "NPC")
+            else if(hitInfo.CompareTag("ForeGround") || hitInfo.CompareTag("NPC"))
             {
                 BulletDestroy();
             }

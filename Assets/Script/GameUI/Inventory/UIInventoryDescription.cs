@@ -37,13 +37,14 @@ public class UIInventoryDescription : MonoBehaviour
             itemDescriptionBox.text = item.itemDescription + ""; 
             if(item.itemID.Contains("WP"))//Mean only weapon has upgrade function available
             {
+                WeaponData wpInfo = WeaponManager.Instance.GetWeaponInfo(item.itemID);
                 itemFunction.gameObject.SetActive(true);
                 weaponLevelBox.SetActive(true);
                 requireForUpgrade.SetActive(true);
                 wpUpgradeBtn.gameObject.SetActive(true);
-                weaponLevelText.text = "Level " + item.weaponLevel;
-                requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + item.materialNeedToUpgrade;
-                itemFunction.text = "Damage + " + item.weaponDamage;
+                weaponLevelText.text = "Level " + wpInfo.weaponLevel;
+                requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + wpInfo.materialNeedToUpgrade;
+                itemFunction.text = "Damage + " + wpInfo.weaponDamage;
                 RectTransform rectTransform = itemImageBox.rectTransform;
                 rectTransform.sizeDelta = new Vector2(
                 itemImageBox.sprite.rect.width * 4f,
@@ -72,14 +73,15 @@ public class UIInventoryDescription : MonoBehaviour
     }
     public void UpgradeThisWeapon()
     {
-        if(itemInDescription.materialNeedToUpgrade <= PlayerStatus.Instance.playerCoin)
+        WeaponData wpData = WeaponManager.Instance.GetWeaponInfo(itemInDescription.itemID);
+        if(wpData.materialNeedToUpgrade <= PlayerStatus.Instance.playerCoin)
         {
-            PlayerStatus.Instance.AddCoin(-itemInDescription.materialNeedToUpgrade);//Remove the coin player own
-            itemInDescription.SetWeaponLevel(); //Add level weapon by 1 
-            itemFunction.text = "Damage + " + itemInDescription.weaponDamage;//Update the damage
-            requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + itemInDescription.materialNeedToUpgrade; //Update the requirement for upgrade
-            weaponLevelText.text = "Level " + itemInDescription.weaponLevel;// Update the level text
-            NotifPopUp.Instance.ShowNotification("Update " + itemInDescription.itemName + " succes to level " + itemInDescription.weaponLevel);
+            PlayerStatus.Instance.AddCoin(-wpData.materialNeedToUpgrade);//Remove the coin player own
+            WeaponManager.Instance.WeaponUpgrade(wpData.weaponID); //Add level weapon by 1 
+            itemFunction.text = "Damage + " + wpData.weaponDamage;//Update the damage
+            requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + wpData.materialNeedToUpgrade; //Update the requirement for upgrade
+            weaponLevelText.text = "Level " + wpData.weaponLevel;// Update the level text
+            NotifPopUp.Instance.ShowNotification("Update " + itemInDescription.itemName + " succes to level " + wpData.weaponLevel);
         }
         else{
             NotifPopUp.Instance.ShowNotification("Not enough material!!");
