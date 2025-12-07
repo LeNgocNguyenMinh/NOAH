@@ -11,9 +11,8 @@ public class AOBossAwakeState : AOBossState
     {
         base.EnterState();
         aoBoss.AOBossAnimator.SetTrigger("Awake");
-        aoBoss.Gate.SetActive(true);
+        aoBoss.InFightGate.SetActive(true);
         aoBoss.HealthBarCV.SetActive(true);
-
     }
     public override void FrameUpdate()
     {

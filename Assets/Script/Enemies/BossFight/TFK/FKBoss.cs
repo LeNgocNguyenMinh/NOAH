@@ -4,7 +4,7 @@ public class FKBoss : MonoBehaviour
 {
     public static FKBoss Instance { get; private set; }
     [field: Header("General attribute")]
-    [field: SerializeField]public GameObject Gate { get; set; }
+    [field: SerializeField]public GameObject InFightGate { get; set; }
     [field: SerializeField]public GameObject BossBody { get; set; }
     [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public Animator FKBossAnimator { get; set; }

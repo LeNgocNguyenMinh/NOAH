@@ -26,6 +26,7 @@ public class PlayerEXPControl : MonoBehaviour
     {
         if(expCurrentValue + expValue >= expMaxValue)//If enough exp or more than for level up
         {
+            Player.Instance.PlayerAnimator.SetTrigger("LevelUp");//Play Level Up Animation
             float expExtend = expCurrentValue + expValue - expMaxValue;//calculate the extend exp Point 
             expCurrentValue = expExtend;//Set the current exp = expExtend
 

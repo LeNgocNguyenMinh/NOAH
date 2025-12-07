@@ -8,15 +8,15 @@ public class Player : MonoBehaviour, IPlayerMoveable
     public static Player Instance; 
     public Vector3 MousePos { get; set; }
     public bool CanChangeState { get; set; }
-    public Animator PlayerAnimator { get; set; }
-    [SerializeField] private Transform BodyPartTrans;
-    [SerializeField] private Transform BodyPartShadowTrans;
+    [field: SerializeField]public Animator PlayerAnimator { get; set; }
+    [field: SerializeField] private Transform BodyPartTrans { get; set; }
+    [field: SerializeField] private Transform BodyPartShadowTrans { get; set; }
     public PlayerStateMachine StateMachine { get; private set;}
     public PlayerIdleState IdleState { get; private set; }
     public PlayerWalkState WalkState { get; private set; }
     public PlayerDeadState DeadState { get; private set; }
     public PlayerDashState DashState { get; private set; }
-    public Rigidbody2D RB { get; set; }
+    [field: SerializeField]public Rigidbody2D RB { get; set; }
     [field: SerializeField]public float WalkSpeed { get; set; } 
     [field: SerializeField]public float DashSpeed { get; set; }
     public bool IsFacingRight { get; set; }
@@ -53,8 +53,6 @@ public class Player : MonoBehaviour, IPlayerMoveable
     private void Start()
     {
         GotHit = false;
-        RB = GetComponent<Rigidbody2D>();
-        PlayerAnimator = GetComponent<Animator>();
         StateMachine.Initialize(IdleState);
     }
     private void Update()

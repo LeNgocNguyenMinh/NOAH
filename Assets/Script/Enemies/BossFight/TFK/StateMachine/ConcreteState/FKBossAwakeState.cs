@@ -11,7 +11,7 @@ public class FKBossAwakeState : FKBossState
     {
         base.EnterState();
         fkBoss.FKBossAnimator.SetTrigger("Awake");
-        fkBoss.Gate.SetActive(true);
+        fkBoss.InFightGate.SetActive(true);
         fkBoss.HealthBarCV.SetActive(true);
 
     }

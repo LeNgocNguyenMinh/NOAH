@@ -11,18 +11,13 @@ TagManager:
   - Item
   - PlayerWand
   - PlayerSprite
-  - LightManager
   - PlayerHitCollider
   - Boss
   - Enemy
-  - FireBullet
-  - WoodBullet
-  - DashCDImage
+  - Sword
   - SFX
   - Music
-  - LightBullet
-  - WaterBullet
-  - Sword
+  - Bullet
   layers:
   - Default
   - TransparentFX

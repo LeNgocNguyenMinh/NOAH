@@ -404,6 +404,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3967416504445873582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4361082490633337965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3573519354705369839}
+  - component: {fileID: 7407664472944120951}
+  m_Layer: 0
+  m_Name: GateBeforeFight
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3573519354705369839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361082490633337965}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9, y: 5.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7988432081212188052}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7407664472944120951
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361082490633337965}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 50, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4384806998288403773
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +814,7 @@ Transform:
   - {fileID: 5595521706983103875}
   - {fileID: 6664933543458671798}
   - {fileID: 2114313892035136336}
+  - {fileID: 3573519354705369839}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7742729473396297831
@@ -857,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56df03e391e2af24d968b33757cd9162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Gate>k__BackingField: {fileID: 9007307929671254233}
+  <InFightGate>k__BackingField: {fileID: 9007307929671254233}
   <BossStatus>k__BackingField: {fileID: 11400000, guid: 8c476e80427bd6d48af59e75c7ea3c91, type: 2}
   <BossBody>k__BackingField: {fileID: 7669869676042543480}
   <AOBossAnimator>k__BackingField: {fileID: 5116757026331256259}
@@ -899,7 +978,7 @@ SortingGroup:
   m_GameObject: {fileID: 8020734684888473651}
   m_Enabled: 1
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_SortAtRoot: 0
 --- !u!1 &8577957589259770324
@@ -1035,7 +1114,7 @@ GameObject:
   - component: {fileID: 2114313892035136336}
   - component: {fileID: 2307325808297792456}
   m_Layer: 0
-  m_Name: Gate
+  m_Name: GateInFight
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
