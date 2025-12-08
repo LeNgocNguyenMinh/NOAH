@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening; // Nhớ import DOTween
 
-public class FloatTextEffect : MonoBehaviour
+public class FloatEffect : MonoBehaviour
 {
     public float amplitude = 10f;       // Biên độ dao động (độ cao trôi nổi)
     public float duration = 1f;         // Thời gian một chu kỳ đi lên/đi xuống

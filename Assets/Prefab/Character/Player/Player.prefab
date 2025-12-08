@@ -384,6 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wandSprite: {fileID: 272388184679947372}
+  wandShadowSprite: {fileID: 7831488680842348314}
   physicATKSprite: {fileID: 4894745358226231263}
   wandRotate: {fileID: 3658691024834985903}
   wandShadowRotate: {fileID: 3595186348209831946}

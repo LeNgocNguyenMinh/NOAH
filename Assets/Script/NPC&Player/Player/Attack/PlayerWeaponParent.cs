@@ -9,6 +9,7 @@ public class PlayerWeaponParent : MonoBehaviour
     [Header("----General----")]
     public static PlayerWeaponParent Instance;
     public SpriteRenderer wandSprite;
+    public SpriteRenderer wandShadowSprite;
     public SpriteRenderer physicATKSprite;
     [SerializeField]private Transform wandRotate;   
     [SerializeField]private Transform wandShadowRotate;
@@ -79,6 +80,7 @@ public class PlayerWeaponParent : MonoBehaviour
     {
         currentWeapon = newWeapon;
         wandSprite.sprite = newWeapon.itemSprite;
+        wandShadowSprite.sprite = newWeapon.itemSprite;
     }
     public void UpdateMagazine()//Trigger when player Spend point in magazine
     {

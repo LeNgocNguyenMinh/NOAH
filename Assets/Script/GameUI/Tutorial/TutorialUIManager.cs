@@ -1,23 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections.Generic;
+using TMPro;
 
 public class TutorialUIManager : MonoBehaviour
 {
     public static TutorialUIManager Instance;
     public static bool panelActive = false;
     [SerializeField]private RectTransform tutorialPanel;
-    [SerializeField]private CanvasGroup keyBoardCG;
-    [SerializeField]private CanvasGroup energyCG;
-    [SerializeField]private CanvasGroup bossFightCG;
-    [SerializeField]private GameObject KeyBoardGO;
-    [SerializeField]private GameObject EnergyGO;
-    [SerializeField]private GameObject BossFightGO;
-    [SerializeField]private Button toEnergy;
-    [SerializeField]private Button toBossFight;
-    [SerializeField]private Button backToKeyBoard;
-    [SerializeField]private Button endTutorial;
-    [SerializeField]private Button backToEnergy;
+    [SerializeField]private List<GameObject> tutorialUIs = new List<GameObject>();
+    [SerializeField]private Button nextButton;
+    [SerializeField]private TextMeshProUGUI nextButtonText;
+    [SerializeField]private Button previousButton;
+    private GameObject currentPanel;
+    public int currentPanelIndex;
     private void Awake()
     {
         if (Instance == null)
@@ -31,69 +28,46 @@ public class TutorialUIManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        toEnergy.onClick.AddListener(ShowEnergyTutorial);
-        toBossFight.onClick.AddListener(ShowBossFightTutorial);
-        backToKeyBoard.onClick.AddListener(ShowKeyBoardTutorial);
-        backToEnergy.onClick.AddListener(ShowEnergyTutorial);
-        endTutorial.onClick.AddListener(EndTutorial);
+        nextButton.onClick.AddListener(NextPanel);
+        previousButton.onClick.AddListener(PreviousPanel);
     }
-    private void ShowEnergyTutorial()
+    public void NextPanel()
     {
-        /* keyBoardCG.alpha = 0;
-        keyBoardCG.interactable = false;
-        keyBoardCG.blocksRaycasts = false;
-
-        energyCG.alpha = 1;
-        energyCG.interactable = true;
-        energyCG.blocksRaycasts = true;
-
-        bossFightCG.alpha = 0;
-        bossFightCG.interactable = false;
-        bossFightCG.blocksRaycasts = false; */
-        EnergyGO.SetActive(true);
-        KeyBoardGO.SetActive(false);
-        BossFightGO.SetActive(false);
+        currentPanelIndex++;
+        previousButton.gameObject.SetActive(true);
+        if (currentPanelIndex >= tutorialUIs.Count)
+        {
+            EndTutorial();
+        }
+        else{
+            currentPanel.SetActive(false);
+            currentPanel = tutorialUIs[currentPanelIndex];
+            currentPanel.SetActive(true);
+        }
     }
-    private void ShowBossFightTutorial()
+    public void PreviousPanel()
     {
-        /* keyBoardCG.alpha = 0;
-        keyBoardCG.interactable = false;
-        keyBoardCG.blocksRaycasts = false;
-
-        energyCG.alpha = 0;
-        energyCG.interactable = false;
-        energyCG.blocksRaycasts = false;
-
-        bossFightCG.alpha = 1;
-        bossFightCG.interactable = true;
-        bossFightCG.blocksRaycasts = true; */
-        EnergyGO.SetActive(false);
-        KeyBoardGO.SetActive(false);
-        BossFightGO.SetActive(true);
-    }
-    private void ShowKeyBoardTutorial()
-    {
-        /* keyBoardCG.alpha = 1;
-        keyBoardCG.interactable = true;
-        keyBoardCG.blocksRaycasts = true;
-
-        energyCG.alpha = 0;
-        energyCG.interactable = false;
-        energyCG.blocksRaycasts = false;
-
-        bossFightCG.alpha = 0;
-        bossFightCG.interactable = false;
-        bossFightCG.blocksRaycasts = false; */
-        EnergyGO.SetActive(false);
-        KeyBoardGO.SetActive(true);
-        BossFightGO.SetActive(false);
+        currentPanelIndex--;
+        if (currentPanelIndex <=0)
+        {
+            currentPanelIndex = 0;
+            previousButton.gameObject.SetActive(false);
+        }
+        else{
+            previousButton.gameObject.SetActive(true);
+        }
+        currentPanel.SetActive(false);
+        currentPanel = tutorialUIs[currentPanelIndex];
+        currentPanel.SetActive(true);
     }
     public void StartTutorial()
     {
+        currentPanelIndex = 0;
+        currentPanel = tutorialUIs[0];
         tutorialPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             panelActive = true;
-            ShowKeyBoardTutorial();
+            PreviousPanel();
             Time.timeScale = 0f;
         });
     }
@@ -104,3 +78,5 @@ public class TutorialUIManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 }
+
+
