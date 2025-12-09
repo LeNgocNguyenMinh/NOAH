@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerMeleeState : MonoBehaviour
 {
-    protected Player player;
-    protected PlayerStateMachine playerStateMachine;
+    protected PlayerMeleeATK playerMeleeATK;
+    protected PlayerMeleeStateMachine playerMeleeStateMachine;
 
-    public PlayerMeleeState(Player player, PlayerStateMachine playerStateMachine)
+    public PlayerMeleeState(PlayerMeleeATK playerMeleeATK, PlayerMeleeStateMachine playerMeleeStateMachine)
     {
-        this.player = player;
-        this.playerStateMachine = playerStateMachine;
+        this.playerMeleeATK = playerMeleeATK;
+        this.playerMeleeStateMachine = playerMeleeStateMachine;
     }
     public virtual void EnterState()
     {
@@ -28,7 +28,7 @@ public class PlayerMeleeState : MonoBehaviour
     {
         
     }
-    public virtual void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
+    public virtual void AnimationTriggerEvent(PlayerMeleeATK.AnimationTriggerType triggerType)
     {
         
     }

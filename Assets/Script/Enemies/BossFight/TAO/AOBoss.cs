@@ -13,6 +13,7 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public Rigidbody2D RHandRB { get; set; }
     [field: SerializeField]public Rigidbody2D LHandRB { get; set; }
     [field: SerializeField]public Rigidbody2D HeadRB { get; set; }
+    [field: SerializeField]public GameObject BossCounterUI { get; set; }
     public bool IsDead { get; set; } = false;
     public Vector3 RightHandOriginTrans { get; set; }
     public Vector3 LeftHandOriginTrans { get; set; }

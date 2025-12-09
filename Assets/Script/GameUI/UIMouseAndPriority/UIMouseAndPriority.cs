@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIMouseAndPriority : MonoBehaviour
 {
     public static UIMouseAndPriority Instance;
-
+    public bool canOpenUI = true;
     private void Awake()
     {
         Instance = this;   
@@ -34,31 +34,31 @@ public class UIMouseAndPriority : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C) && !IsInLimitInteractPanel()) 
+        if(Input.GetKeyDown(KeyCode.C) && !IsInLimitInteractPanel() && canOpenUI) 
         {
             UIInventoryController.Instance.StatusUIInteract();
             return;
         } 
-        if(Input.GetKeyDown(KeyCode.J) && !IsInLimitInteractPanel())  
+        if(Input.GetKeyDown(KeyCode.J) && !IsInLimitInteractPanel() && canOpenUI)  
         {
             UIInventoryController.Instance.MissionBoardInteract();
             return;
         }  
-        if(Input.GetKeyDown(KeyCode.I) && !IsInLimitInteractPanel()) 
+        if(Input.GetKeyDown(KeyCode.I) && !IsInLimitInteractPanel() && canOpenUI) 
         {
             UIInventoryController.Instance.InventoryInteract();
             return;
         } 
-        if(Input.GetKeyDown(KeyCode.Escape) && !IsInLimitInteractPanel() && OtherPanelIsActive())
+        if(Input.GetKeyDown(KeyCode.Escape) && !IsInLimitInteractPanel() && OtherPanelIsActive() && canOpenUI)
         {
             CloseAllUI();
             return;
         }
-        if(Input.GetKeyDown(KeyCode.Escape) && TutorialUIManager.panelActive)
+        if(Input.GetKeyDown(KeyCode.Escape) && TutorialUIManager.panelActive && canOpenUI)
         {
             return;
         }
-        if(Input.GetKeyDown(KeyCode.Escape) && !PauseMenu.isOver)
+        if(Input.GetKeyDown(KeyCode.Escape) && !PauseMenu.isOver && canOpenUI)
         {
             if(PauseMenu.isPaused)
             {

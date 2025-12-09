@@ -11,9 +11,10 @@ public class PlayerWeaponParent : MonoBehaviour
     public SpriteRenderer wandSprite;
     public SpriteRenderer wandShadowSprite;
     public SpriteRenderer physicATKSprite;
+    public float delayMeleeCount;
     [SerializeField]private Transform wandRotate;   
     [SerializeField]private Transform wandShadowRotate;
-    public float delayWandCount = 0f; // Delay count for wand attack, used to prevent multiple attacks in a short time
+    public float delayWandCount; // Delay count for wand attack, used to prevent multiple attacks in a short time
     [Header("----EnergyBar----")]
     [SerializeField]private int requireHit;
     private int currentHitCount = 0;//Hit count
@@ -45,8 +46,7 @@ public class PlayerWeaponParent : MonoBehaviour
     {
         if(UIMouseAndPriority.Instance.OtherPanelIsActive() || UIMouseAndPriority.Instance.IsInLimitInteractPanel()) return;
         WeaponRotate();
-        PlayerWandATK.Instance.CheckWandATK();  
-        PlayerMeleeATK.Instance.CheckMeleeATK();
+        PlayerWandATK.Instance.CheckWandATK();
     }
     public void ActiveWandATK()
     {

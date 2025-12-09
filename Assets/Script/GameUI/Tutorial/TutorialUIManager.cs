@@ -11,7 +11,6 @@ public class TutorialUIManager : MonoBehaviour
     [SerializeField]private RectTransform tutorialPanel;
     [SerializeField]private List<GameObject> tutorialUIs = new List<GameObject>();
     [SerializeField]private Button nextButton;
-    [SerializeField]private TextMeshProUGUI nextButtonText;
     [SerializeField]private Button previousButton;
     private GameObject currentPanel;
     public int currentPanelIndex;

@@ -24,7 +24,6 @@ public class BossHealthControl : MonoBehaviour
         bossHealthBar.SetMaxHealth(maxHealth);
         bossHealthBar.SetHealth(maxHealth);
         bossHealthBar.UpdateHealthText();
-        UpdateLevelText();
     }
     private void UpdateLevelText() //Update Health Text only when something change
     {
@@ -47,8 +46,8 @@ public class BossHealthControl : MonoBehaviour
                 FKBoss.Instance.BossDeath();
             }       
         }
-        bossHealthBar.UpdateHealthText();
         bossHealthBar.SetHealth(currentHealth);
+        bossHealthBar.UpdateHealthText();
     }
     public float GetCurrentHealth()
     {

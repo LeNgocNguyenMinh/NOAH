@@ -7,7 +7,7 @@ public class PlayerWandATK : MonoBehaviour
 {
     public static PlayerWandATK Instance;
     [SerializeField]private Animator wandATKAnimator;
-    [SerializeField]private float delayWandATK = 0.5f;
+    private float delayWandATK = 0f;
     [SerializeField]private Transform firePoint;
     [SerializeField]private float wandBulletSpeed;
     [SerializeField]private float canShootRadius;
@@ -27,17 +27,17 @@ public class PlayerWandATK : MonoBehaviour
     public void CheckWandATK()
     {
         bulletPrefap = PlayerStatus.Instance.currentWeapon.weaponBulletType;
-        if(PlayerWeaponParent.Instance.delayWandCount > 0) PlayerWeaponParent.Instance.delayWandCount-=Time.deltaTime;
+        if(delayWandATK > 0) delayWandATK-=Time.deltaTime;
         if(!PlayerWeaponParent.Instance.playerCanATK)return;   
 
-        if(Input.GetMouseButtonDown(0) && PlayerWeaponParent.Instance.delayWandCount <= 0 )
+        if(Input.GetMouseButtonDown(0) && delayWandATK <= 0 )
         {
             WandShoot();
         }
     }
     private void WandShoot()
     {
-        PlayerWeaponParent.Instance.delayWandCount = delayWandATK;//Set up delay time between each shoot
+        delayWandATK = PlayerWeaponParent.Instance.delayWandCount;//Set up delay time between each shoot
         PlayerWeaponParent.Instance.wandSprite.enabled = true;
         PlayerWeaponParent.Instance.physicATKSprite.enabled = false;
         if(PlayerWeaponParent.Instance.GetCurrentBullet()<=0)

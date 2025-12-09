@@ -6128,7 +6128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 0905e038c56845e4aa60cea9d51f60ee, type: 2}
-  gameMusic: {fileID: 8300000, guid: c325a35c8cec00d48a683abefa29b00e, type: 3}
   musicSlider: {fileID: 1038159013383409482}
   sfxSlider: {fileID: 340746844240254214}
 --- !u!1 &8175633205434461786

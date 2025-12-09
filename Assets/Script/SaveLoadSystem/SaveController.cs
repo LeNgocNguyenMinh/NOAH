@@ -34,7 +34,6 @@ public class SaveController : MonoBehaviour
             new SaveData();
         SaveData saveData = new SaveData
         {
-            saveScene = SceneManager.GetActiveScene().name,
             playerPosition = Player.Instance.transform.position,
             inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
             mapBoundary = existingData.mapBoundary,
@@ -58,7 +57,6 @@ public class SaveController : MonoBehaviour
             new SaveData();
         SaveData saveData = new SaveData
         {
-            saveScene = SceneManager.GetActiveScene().name,
             playerPosition = Player.Instance.transform.position,
             inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
             mapBoundary = existingData.mapBoundary,
@@ -90,7 +88,8 @@ public class SaveController : MonoBehaviour
             BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
             PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
             MissionManager.Instance.SetMissionList(saveData.missionSaveData);    
-            WeaponManager.Instance.SetWeaponData(saveData.weaponListData);      
+            WeaponManager.Instance.SetWeaponData(saveData.weaponListData);    
+            UIMouseAndPriority.Instance.canOpenUI = true;  
         }
     }
 
@@ -99,7 +98,6 @@ public class SaveController : MonoBehaviour
         newGameSaveLocation = Path.Combine(Application.persistentDataPath, "newGameData.json");
         
         string defaultNewGameJson = @"{
-        ""saveScene"": ""Level1"",
         ""playerPosition"": { ""x"": -26.4, ""y"": 6.7, ""z"": 0.0 },
         ""mapBoundary"": ""L1"",
         ""inventorySaveData"": [],
@@ -178,7 +176,8 @@ public class SaveController : MonoBehaviour
         BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
         PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
         MissionManager.Instance.SetMissionList(saveData.missionSaveData);   
-        WeaponManager.Instance.SetWeaponData(saveData.weaponListData);    
+        WeaponManager.Instance.SetWeaponData(saveData.weaponListData);   
+        UIMouseAndPriority.Instance.canOpenUI = true; 
         SaveGame();
     }
 }

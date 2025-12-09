@@ -30,6 +30,7 @@ public class BossHealthBar : MonoBehaviour
     }
     public void UpdateHealthText()
     {
+        Debug.Log(currentHealth + "/" + maxHealth);
         healthText.text = $"{(int)currentHealth}/{(int)maxHealth}";
     }
 }

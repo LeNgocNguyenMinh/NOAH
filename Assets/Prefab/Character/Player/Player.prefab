@@ -347,6 +347,8 @@ GameObject:
   - component: {fileID: 6093137392262755821}
   - component: {fileID: 7340317130336529593}
   - component: {fileID: 1014023350954573310}
+  - component: {fileID: 2526593599560435531}
+  - component: {fileID: 8931337702014645476}
   m_Layer: 0
   m_Name: WeaponParent
   m_TagString: Untagged
@@ -386,9 +388,10 @@ MonoBehaviour:
   wandSprite: {fileID: 272388184679947372}
   wandShadowSprite: {fileID: 7831488680842348314}
   physicATKSprite: {fileID: 4894745358226231263}
+  delayMeleeCount: 1
   wandRotate: {fileID: 3658691024834985903}
   wandShadowRotate: {fileID: 3595186348209831946}
-  delayWandCount: 0
+  delayWandCount: 0.5
   requireHit: 3
   playerCanATK: 1
 --- !u!95 &7340317130336529593
@@ -425,6 +428,35 @@ SortingGroup:
   m_SortingLayer: 5
   m_SortingOrder: 1
   m_SortAtRoot: 0
+--- !u!114 &2526593599560435531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482345255195021705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814b69818d36eb642aa4d98fb9f6a9c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7340317130336529593}
+--- !u!114 &8931337702014645476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482345255195021705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7032c1a319b95ed4aac6885a893ce392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wandATKAnimator: {fileID: 7340317130336529593}
+  firePoint: {fileID: 1616526034875243648}
+  wandBulletSpeed: 30
+  canShootRadius: 0
 --- !u!1 &2781196189683914338
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +742,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2898318391121279503}
   - component: {fileID: 272388184679947372}
-  - component: {fileID: 4340426658622895907}
   m_Layer: 0
   m_Name: WandATK
   m_TagString: PlayerWand
@@ -791,23 +822,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4340426658622895907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3185582970882447335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7032c1a319b95ed4aac6885a893ce392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wandATKAnimator: {fileID: 7340317130336529593}
-  delayWandATK: 0.5
-  firePoint: {fileID: 1616526034875243648}
-  wandBulletSpeed: 30
-  canShootRadius: 0
 --- !u!1 &3428682367209950311
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3658691024834985903}
   m_Layer: 0
-  m_Name: WandRotate
+  m_Name: WeaponRotate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1119,9 +1133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3473589523961898901}
-  - component: {fileID: 7174763027849699301}
   - component: {fileID: 4894745358226231263}
-  - component: {fileID: 2039614898298277861}
   m_Layer: 6
   m_Name: MeleeAttack
   m_TagString: Untagged
@@ -1145,28 +1157,6 @@ Transform:
   - {fileID: 5555739916717662871}
   m_Father: {fileID: 3658691024834985903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &7174763027849699301
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5368803173298936163}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 479743546997e3c40919c3cf421c0785, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &4894745358226231263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1219,27 +1209,12 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.0625, y: 6}
+  m_Size: {x: 3.125, y: 6.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2039614898298277861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5368803173298936163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 814b69818d36eb642aa4d98fb9f6a9c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitParticlePrefab: {fileID: 6327989095721312782, guid: 69125d2b709f170418257c4dea070250, type: 3}
-  delayMelee: 1.5
-  delayMeleeCount: 0
 --- !u!1 &5747169393855891283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,7 +1226,7 @@ GameObject:
   - component: {fileID: 6684569439048374003}
   - component: {fileID: 7831488680842348314}
   m_Layer: 0
-  m_Name: WandShadow
+  m_Name: WandReflect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1508,7 +1483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3595186348209831946}
   m_Layer: 0
-  m_Name: WandShadowRotate
+  m_Name: WeaponReflectRotate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

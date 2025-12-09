@@ -8,6 +8,8 @@ public class FKBoss : MonoBehaviour
     [field: SerializeField]public GameObject BossBody { get; set; }
     [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public Animator FKBossAnimator { get; set; }
+    
+    [field: SerializeField]public GameObject BossCounterUI { get; set; }
     public FKBossStateMachine StateMachine { get; private set;}
     public FKBossRestState RestState { get; private set; }
     public FKBossAwakeState AwakeState { get; private set; }

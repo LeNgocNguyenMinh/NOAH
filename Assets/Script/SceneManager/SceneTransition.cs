@@ -6,6 +6,7 @@ public class SceneTransition : MonoBehaviour
 {
     public static SceneTransition Instance;
     [SerializeField]private Animator animator;
+    public bool inAnim;
     private void Awake()
     {
         if (Instance == null)
@@ -20,19 +21,16 @@ public class SceneTransition : MonoBehaviour
     }
     public void SceneOut()
     {
+        inAnim = true;
         animator.SetTrigger("sceneOut");
     }
     public void SceneIn()
     {
+        inAnim = true;
         animator.SetTrigger("sceneIn");
     }
-    public bool SceneTransFinish()
+    public void SceneTransFinish()
     {
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        if (stateInfo.length > 0f)
-        {
-           return false;
-        }
-        return true;
+        inAnim = false;
     }
 }

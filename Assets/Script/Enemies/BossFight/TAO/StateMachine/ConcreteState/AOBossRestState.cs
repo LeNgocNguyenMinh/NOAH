@@ -15,6 +15,7 @@ public class AOBossRestState : AOBossState
         aoBoss.HeadRB.bodyType = RigidbodyType2D.Static;
         aoBoss.BossIsAwake = false;
         aoBoss.InFightGate.SetActive(false);
+        aoBoss.BossCounterUI.SetActive(false);
         aoBoss.AOBossAnimator.SetTrigger("Rest");
     }
     public override void FrameUpdate()

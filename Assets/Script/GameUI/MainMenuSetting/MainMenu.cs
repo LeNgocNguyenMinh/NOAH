@@ -113,7 +113,7 @@ public class MainMenu : MonoBehaviour
             float targetProgress = Mathf.Clamp01(operation.progress / 0.9f);
             progressText.text = "Loading " + targetProgress * 100 + "%";
             // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
-            if (operation.progress >= 0.9f)
+            if (operation.progress >= 0.9f && !SceneTransition.Instance.inAnim) 
             {
                 progressText.text = "Press F to enter game >> ";
                 if(Input.GetKeyDown(KeyCode.F))
@@ -147,7 +147,7 @@ public class MainMenu : MonoBehaviour
             SceneTransition.Instance.SceneOut();
             // Trả về giá trị saveScene
             progressText.gameObject.SetActive(true);
-            StartCoroutine(LoadSceneAsync(saveData.saveScene));
+            StartCoroutine(LoadSceneAsync("Level1"));
         }
         else{
             NotifPopUp.Instance.ShowNotification("No save file found!");
@@ -166,7 +166,7 @@ public class MainMenu : MonoBehaviour
             float targetProgress = Mathf.Clamp01(operation.progress / 0.9f);
             progressText.text = "Loading " + targetProgress * 100 + "%";
             // Khi progress đạt 0.9 có nghĩa là scene đã load xong, chỉ còn chờ active
-            if (operation.progress >= 0.9f)
+            if (operation.progress >= 0.9f && !SceneTransition.Instance.inAnim)
             {
                 progressText.text = "Press F to enter game >> ";
                 if(Input.GetKeyDown(KeyCode.F))

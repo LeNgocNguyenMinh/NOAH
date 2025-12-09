@@ -12,6 +12,7 @@ public class FKBossRestState : FKBossState
         base.EnterState();
         fkBoss.FKBossAnimator.SetTrigger("Rest");
         fkBoss.InFightGate.SetActive(false);
+        fkBoss.BossCounterUI.SetActive(false);
         fkBoss.BossIsAwake = false;        
     }
     public override void FrameUpdate()
