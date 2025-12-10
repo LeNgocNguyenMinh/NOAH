@@ -14,6 +14,8 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public Rigidbody2D LHandRB { get; set; }
     [field: SerializeField]public Rigidbody2D HeadRB { get; set; }
     [field: SerializeField]public GameObject BossCounterUI { get; set; }
+    [field: SerializeField]public GameObject HealthBarCV{ get; set; }
+    [field: SerializeField]public BossStatusController AOBossStatusController;
     public bool IsDead { get; set; } = false;
     public Vector3 RightHandOriginTrans { get; set; }
     public Vector3 LeftHandOriginTrans { get; set; }
@@ -60,7 +62,9 @@ public class AOBoss : MonoBehaviour
     public AOBossATK2IdleState ATK2IdleState { get; private set; }
     public AOBossATK2EndState ATK2EndState { get; private set; }
     public bool BossIsAwake { get; set; }
-    [field: SerializeField]public GameObject HealthBarCV{ get; set; }
+    public int BossLevel {get; set;}
+    public float BossDamage {get; set;}
+    public float BossMaxHealth {get; set;}
 
     public enum AnimationTriggerType
     {

@@ -24,6 +24,7 @@ public class AOBossDeadState : AOBossState
     {
         if(triggerType == AOBoss.AnimationTriggerType.DeadAnimFinish)
         {
+            
             aoBoss.IsDead = true;
             aoBoss.BossVanish();
         }

@@ -10,6 +10,7 @@ public class FKBossAwakeState : FKBossState
     public override void EnterState()
     {
         base.EnterState();
+        fkBoss.FKBossStatusController.BossUpdateInfo();
         fkBoss.BossCounterUI.SetActive(true);
         UIMouseAndPriority.Instance.canOpenUI = false;
         fkBoss.BossCounterUI.GetComponent<Animator>().SetTrigger("BossCounter");
@@ -21,7 +22,7 @@ public class FKBossAwakeState : FKBossState
         if(fkBoss.BossCounterUI.GetComponent<BossCounterUI>().GetAnimFinish())
         {
             fkBoss.BossCounterUI.GetComponent<BossCounterUI>().SetAnimFinishFalse();
-            UIMouseAndPriority.Instance.canOpenUI = false;
+            UIMouseAndPriority.Instance.canOpenUI = true;
             fkBoss.FKBossAnimator.SetTrigger("Awake");
             fkBoss.InFightGate.SetActive(true);
             fkBoss.HealthBarCV.SetActive(true);

@@ -15,7 +15,6 @@ public class FKBossATK1LHBigBullet : MonoBehaviour
     private float damage;
     private bool isShoot = false;
     private float rotateSpeed;
-    
 
     public void SetValue(float wmSpeed,float wmFlyDist, float wmpSpeed, float wmpFlyDist, float damage, float rotateSpeed)
     {

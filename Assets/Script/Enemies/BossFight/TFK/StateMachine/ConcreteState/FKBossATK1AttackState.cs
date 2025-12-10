@@ -26,11 +26,11 @@ public class FKBossATK1AttackState : FKBossState
     {
         if(triggerType == FKBoss.AnimationTriggerType.ATK1RHThrow && (fkBoss.ATKTestType == FKBoss.TestType.ATK1RH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))
         {
-            Instantiate(fkBoss.Banana, fkBoss.RHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1RHBullet>().SetValue(fkBoss.ATK1RHFlyTime, fkBoss.ATK1RhRotateSpeed);
+            Instantiate(fkBoss.Banana, fkBoss.RHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1RHBullet>().SetValue(fkBoss.ATK1RHFlyTime, fkBoss.ATK1RhRotateSpeed, fkBoss.FKBossStatusController.GetBossDamage());
         }
         if(triggerType == FKBoss.AnimationTriggerType.ATK1LHThrow && (fkBoss.ATKTestType == FKBoss.TestType.ATK1LH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))
         {
-            Instantiate(fkBoss.WaterMelon, fkBoss.LHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1LHBigBullet>().SetValue(fkBoss.ATK1LHWMSpeed, fkBoss.ATK1LHWMFlyDist, fkBoss.ATK1LHWMPSpeed, fkBoss.ATK1LHWMPFlyDist, fkBoss.BossStatus.bossDamage, fkBoss.ATK1RtSpeed);
+            Instantiate(fkBoss.WaterMelon, fkBoss.LHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1LHBigBullet>().SetValue(fkBoss.ATK1LHWMSpeed, fkBoss.ATK1LHWMFlyDist, fkBoss.ATK1LHWMPSpeed, fkBoss.ATK1LHWMPFlyDist, fkBoss.FKBossStatusController.GetBossDamage(), fkBoss.ATK1RtSpeed);
         }
         if(triggerType == FKBoss.AnimationTriggerType.ATK1AttackAnimFinish)
         {

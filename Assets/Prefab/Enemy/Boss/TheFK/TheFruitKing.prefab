@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5501048020493130078}
   - component: {fileID: 8549682667463811723}
-  - component: {fileID: 2662283555747595887}
+  - component: {fileID: 3794781035943053541}
   m_Layer: 0
   m_Name: BossManager
   m_TagString: Untagged
@@ -374,9 +374,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealthControl
   bossStatus: {fileID: 11400000, guid: fe6e8555f278eb24b9a51d1d60ba576e, type: 2}
-  bossHealthBar: {fileID: 2662283555747595887}
   levelText: {fileID: 9163189951987536356}
---- !u!114 &2662283555747595887
+  healthBarFrontImage: {fileID: 8651088553440952317}
+  healthBarBackImage: {fileID: 3703687491283960618}
+  healthText: {fileID: 9163189951987536356}
+--- !u!114 &3794781035943053541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -385,12 +387,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5819241105853148710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73bf2009fb440e241aed779dce33a59e, type: 3}
+  m_Script: {fileID: 11500000, guid: 44f3d055e23f0034bac63691ebcec221, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BossHealthBar
-  healthBarFrontImage: {fileID: 8651088553440952317}
-  healthBarBackImage: {fileID: 3703687491283960618}
-  healthText: {fileID: 8635303103247692397}
+  m_EditorClassIdentifier: Assembly-CSharp::BossStatusController
+  bossBaseStatus: {fileID: 11400000, guid: fe6e8555f278eb24b9a51d1d60ba576e, type: 2}
+  bossHealthControl: {fileID: 8549682667463811723}
+  levelText: {fileID: 9163189951987536356}
 --- !u!1 &6146506033495010675
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +917,7 @@ MonoBehaviour:
   <BossStatus>k__BackingField: {fileID: 11400000, guid: 9767c92b69c92bb43bf691f5b4443713, type: 2}
   <FKBossAnimator>k__BackingField: {fileID: 1005052120821581274}
   <BossCounterUI>k__BackingField: {fileID: 4529092185705919519}
+  FKBossStatusController: {fileID: 3794781035943053541}
   <HealthBarCV>k__BackingField: {fileID: 3850944648587721439}
   <ATK1AtttackNum>k__BackingField: 2
   <ATK1RtSpeed>k__BackingField: 200
@@ -1273,17 +1276,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6957146050685978119, guid: c1f1c2e35d274c64185a9ec824bd8267, type: 3}
   m_PrefabInstance: {fileID: 6411271630098942963}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8635303103247692397 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3400125359327181214, guid: c1f1c2e35d274c64185a9ec824bd8267, type: 3}
-  m_PrefabInstance: {fileID: 6411271630098942963}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8651088553440952317 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2375576924792419342, guid: c1f1c2e35d274c64185a9ec824bd8267, type: 3}

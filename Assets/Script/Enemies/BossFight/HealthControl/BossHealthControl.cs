@@ -1,33 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
+using UnityEngine.UI;
 
 public class BossHealthControl : MonoBehaviour
 {
     [SerializeField]private BossStatus bossStatus;
-    [SerializeField]private BossHealthBar bossHealthBar;
     private float currentHealth;
     private float maxHealth;
     [SerializeField]private TextMeshProUGUI levelText;
     // Start is called before the first frame update
-    void Start()
+    [SerializeField]private Image healthBarFrontImage;
+    [SerializeField]private Image healthBarBackImage;
+    [SerializeField]private TextMeshProUGUI healthText;
+
+    public void SetMaxHealth(float health)
     {
-        bossStatus.UpdateLevel();
-        bossStatus.UpdateMaxHealth();
-        bossStatus.UpdateDamage();
-        UpdateLevelText();
-
-        maxHealth = bossStatus.bossMaxHealth;
-        currentHealth = maxHealth;
-
-        bossHealthBar.SetMaxHealth(maxHealth);
-        bossHealthBar.SetHealth(maxHealth);
-        bossHealthBar.UpdateHealthText();
+        healthBarFrontImage.fillAmount = 1f;
+        healthBarBackImage.fillAmount = 1f;
+        currentHealth = health;
+        maxHealth = health;
+        UpdateHealthText();
     }
-    private void UpdateLevelText() //Update Health Text only when something change
+
+    public void SetHealth(float health)
     {
-        levelText.text = $"LEVEL {bossStatus.bossLevel}";
+        currentHealth = health;
+        float target = health / maxHealth;
+        if(healthBarFrontImage.fillAmount > healthBarBackImage.fillAmount)
+        {
+            healthBarBackImage.fillAmount = healthBarFrontImage.fillAmount;
+        }
+        healthBarFrontImage.DOFillAmount(target, .1f).SetEase(Ease.Linear).SetUpdate(true);
+        healthBarBackImage.DOFillAmount(target, .5f).SetEase(Ease.Linear).SetUpdate(true);
+    }
+    public void UpdateHealthText()
+    {
+        Debug.Log(currentHealth + "/" + maxHealth);
+        healthText.text = $"{(int)currentHealth}/{(int)maxHealth}";
     }
     public void BossHurt(float damage)
     {
@@ -35,8 +45,8 @@ public class BossHealthControl : MonoBehaviour
         if(currentHealth <=0)
         {
             currentHealth = 0;
-            bossHealthBar.UpdateHealthText();
-            bossHealthBar.SetHealth(currentHealth);    
+            UpdateHealthText();
+            SetHealth(currentHealth);    
             if(bossStatus.bossID == "B_01")//The Ancient One
             {
                 AOBoss.Instance.BossDeath();
@@ -46,8 +56,8 @@ public class BossHealthControl : MonoBehaviour
                 FKBoss.Instance.BossDeath();
             }       
         }
-        bossHealthBar.SetHealth(currentHealth);
-        bossHealthBar.UpdateHealthText();
+        SetHealth(currentHealth);
+        UpdateHealthText();
     }
     public float GetCurrentHealth()
     {

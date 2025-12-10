@@ -12,8 +12,10 @@ public class FKBossATK1RHBullet : MonoBehaviour
     private float rotateSpeed;
     private Vector3 startPoint;
     private Vector3[] controlPoints;
-    public void SetValue(float flyTime, float rotateSpeed)
+    private float damage;
+    public void SetValue(float flyTime, float rotateSpeed, float damage)
     {
+        this.damage = damage;
         this.rotateSpeed = rotateSpeed;
         startPoint = transform.position;
         direct = (Player.Instance.transform.position - transform.position).normalized;
@@ -41,7 +43,7 @@ public class FKBossATK1RHBullet : MonoBehaviour
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
-            PlayerHealthControl.Instance.PlayerHurt(1f);
+            PlayerHealthControl.Instance.PlayerHurt(damage);
             Vector3 hitDirect = (Player.Instance.transform.position - transform.position).normalized;
             PlayerEffect.Instance.PushBack(hitDirect);
             PlayerEffect.Instance.HitFlash();

@@ -4,12 +4,14 @@ public class FKBossATK2RHBullet : MonoBehaviour
 {
     [SerializeField]private Projectile projectile;
     [SerializeField]private Animator animator;
+    private float damage;
     private Vector3 target;
     private bool isFly = true;
     
-    public void SetValue(float maxSpeed, float maxHeight)
+    public void SetValue(float maxSpeed, float maxHeight, float damage)
     {
         target = Player.Instance.transform.position;
+        this.damage = damage;
         projectile.InitializeProjectile(target, maxSpeed, maxHeight);
     }
     public void Update()
@@ -24,7 +26,7 @@ public class FKBossATK2RHBullet : MonoBehaviour
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
-            PlayerHealthControl.Instance.PlayerHurt(1f);
+            PlayerHealthControl.Instance.PlayerHurt(damage);
             Vector3 hitDirect = (Player.Instance.transform.position - transform.position).normalized;
             PlayerEffect.Instance.PushBack(hitDirect);
             PlayerEffect.Instance.HitFlash();

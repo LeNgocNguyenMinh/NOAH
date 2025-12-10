@@ -12,8 +12,10 @@ public class FKBossATK2LHRoute : MonoBehaviour
     private float delay;
     [SerializeField]private GameObject carrot;
     private Vector3 sizeChange;
-    public void SetValue(Vector3 pointA, float delay, float disBet)
+    private float damage;
+    public void SetValue(Vector3 pointA, float delay, float disBet, float damage)
     {
+        this.damage = damage;
         this.pointA = pointA;
         this.delay = delay;
         this.disBet = disBet;
@@ -29,6 +31,7 @@ public class FKBossATK2LHRoute : MonoBehaviour
         while( disFromA < routeLength)
         {
             GameObject tmp = Instantiate(carrot, currentSpawnPos, Quaternion.identity);
+            tmp.GetComponent<FKBossATK2LHBullet>().SetInitValue(damage);
             yield return new WaitForSeconds(delay);
             currentSpawnPos += direct * disBet;
             disFromA = Vector3.Distance(currentSpawnPos, pointA);

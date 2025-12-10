@@ -46,34 +46,10 @@ public class AOBossATK2IdleState : AOBossState
     }
     public void RHandBulletSpawn()
     {
-        Instantiate(aoBoss.ATK2RHBulletPref, aoBoss.ATK2RHShootPos.position, Quaternion.identity).GetComponent<AOBossATK2RHBullet>().SetValue(rhDirect, aoBoss.ATK2RHBulletSpeed, aoBoss.ATK2RHBoundLimit, aoBoss.BossStatus.bossDamage/2);
+        Instantiate(aoBoss.ATK2RHBulletPref, aoBoss.ATK2RHShootPos.position, Quaternion.identity).GetComponent<AOBossATK2RHBullet>().SetValue(rhDirect, aoBoss.ATK2RHBulletSpeed, aoBoss.ATK2RHBoundLimit, aoBoss.AOBossStatusController.GetBossDamage());
     }
     public void LHandBulletSpawn()
     {
-        Instantiate(aoBoss.ATK2LHBulletPref, aoBoss.ATK2LHShootPos.position, Quaternion.identity).GetComponent<AOBossATK2LHBullet>().SetValue(lhDirect, aoBoss.ATK2LHBulletSpeed, aoBoss.ATK2LHBoundLimit, aoBoss.BossStatus.bossDamage/2);
+        Instantiate(aoBoss.ATK2LHBulletPref, aoBoss.ATK2LHShootPos.position, Quaternion.identity).GetComponent<AOBossATK2LHBullet>().SetValue(lhDirect, aoBoss.ATK2LHBulletSpeed, aoBoss.ATK2LHBoundLimit, aoBoss.AOBossStatusController.GetBossDamage());
     }
-    /* private IEnumerator RHandLoop()
-    {
-        yield return new WaitForSeconds(1f); // delay ban đầu
-        while (true)
-        {
-            atkCount++;
-            if(atkCount > aoBoss.ATK2MaxAtk)
-            {
-                aoBoss.StateMachine.ChangeState(aoBoss.ATK2EndState);
-                yield break;
-            }
-            RHandBulletSpawn();
-            yield return new WaitForSeconds(2f); // lặp lại
-        }
-    }
-    private IEnumerator LHandLoop()
-    {
-        yield return new WaitForSeconds(1f); // delay ban đầu
-        while (true)
-        {
-            LHandBulletSpawn();
-            yield return new WaitForSeconds(2f); // lặp lại
-        }
-    } */
 }

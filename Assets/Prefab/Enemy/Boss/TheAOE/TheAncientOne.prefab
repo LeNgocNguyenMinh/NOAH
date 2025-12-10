@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5595521706983103875}
   - component: {fileID: 8546079636946162697}
-  - component: {fileID: 5601213393671280259}
+  - component: {fileID: 749851391937405332}
   m_Layer: 0
   m_Name: BossManager
   m_TagString: Untagged
@@ -78,9 +78,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossStatus: {fileID: 11400000, guid: 8c476e80427bd6d48af59e75c7ea3c91, type: 2}
-  bossHealthBar: {fileID: 5601213393671280259}
   levelText: {fileID: 9204456340288106074}
---- !u!114 &5601213393671280259
+  healthBarFrontImage: {fileID: 8689743603781075011}
+  healthBarBackImage: {fileID: 3742729705017212052}
+  healthText: {fileID: 8592936928427085267}
+--- !u!114 &749851391937405332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,12 +91,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1106490401752348805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73bf2009fb440e241aed779dce33a59e, type: 3}
+  m_Script: {fileID: 11500000, guid: 44f3d055e23f0034bac63691ebcec221, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarFrontImage: {fileID: 8689743603781075011}
-  healthBarBackImage: {fileID: 3742729705017212052}
-  healthText: {fileID: 8592936928427085267}
+  m_EditorClassIdentifier: Assembly-CSharp::BossStatusController
+  bossBaseStatus: {fileID: 11400000, guid: 8c476e80427bd6d48af59e75c7ea3c91, type: 2}
+  bossHealthControl: {fileID: 8546079636946162697}
+  levelText: {fileID: 9204456340288106074}
 --- !u!1 &1782769537053217961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1008,8 @@ MonoBehaviour:
   <LHandRB>k__BackingField: {fileID: 4223958608492417837}
   <HeadRB>k__BackingField: {fileID: 2408575447692442512}
   <BossCounterUI>k__BackingField: {fileID: 5954164121320816316}
+  <HealthBarCV>k__BackingField: {fileID: 3884268029589095777}
+  AOBossStatusController: {fileID: 749851391937405332}
   <ATK1MaxAtk>k__BackingField: 3
   <ATK1SitePref>k__BackingField: {fileID: 1964090138540030929, guid: 5003ceaa61a2cbb42b0758fb38c1c7bf, type: 3}
   <ATK1RHReadyTime>k__BackingField: 2
@@ -1029,7 +1033,6 @@ MonoBehaviour:
   <ATK2LHBoundLimit>k__BackingField: 4
   <ATK2LHShootPos>k__BackingField: {fileID: 2570956926415527685}
   ATK1Direct: {x: 0, y: 0, z: 0}
-  <HealthBarCV>k__BackingField: {fileID: 3884268029589095777}
 --- !u!210 &2615655959968479055
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1560,7 +1563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7892598296375816492, guid: c1f1c2e35d274c64185a9ec824bd8267, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

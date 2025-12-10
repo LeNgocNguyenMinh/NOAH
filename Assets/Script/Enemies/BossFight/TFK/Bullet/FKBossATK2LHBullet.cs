@@ -4,6 +4,11 @@ using UnityEngine;
 public class FKBossATK2LHBullet : MonoBehaviour
 {
     private Vector3 direct;
+    private float damage;
+    public void SetInitValue(float damage)
+    {
+        this.damage = damage;
+    }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.CompareTag("PlayerHitCollider"))

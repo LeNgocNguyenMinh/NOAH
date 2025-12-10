@@ -25,11 +25,11 @@ public class FKBossATK2AttackState : FKBossState
     {
         if(triggerType == FKBoss.AnimationTriggerType.ATK2RHShoot && (fkBoss.ATKTestType == FKBoss.TestType.ATK2RH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))
         {
-            Instantiate(fkBoss.ATK2RHBullet, fkBoss.ATK2RHShootPoint.position, Quaternion.identity).GetComponent<FKBossATK2RHBullet>().SetValue(fkBoss.ATK2RHBulletMaxSpeed, fkBoss.ATK2RHBulletMaxHeight);
+            Instantiate(fkBoss.ATK2RHBullet, fkBoss.ATK2RHShootPoint.position, Quaternion.identity).GetComponent<FKBossATK2RHBullet>().SetValue(fkBoss.ATK2RHBulletMaxSpeed, fkBoss.ATK2RHBulletMaxHeight, fkBoss.FKBossStatusController.GetBossDamage());
         }
         if(triggerType == FKBoss.AnimationTriggerType.ATK2LHAttack && (fkBoss.ATKTestType == FKBoss.TestType.ATK2LH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))
         {
-            Instantiate(fkBoss.ATK2LHObject, fkBoss.ATK2LHStartPoint.position, Quaternion.identity).GetComponent<FKBossATK2LHRoute>().SetValue(fkBoss.ATK2LHStartPoint.position, fkBoss.ATK2LHSpawnDelay, fkBoss.ATK2LHDisBet);
+            Instantiate(fkBoss.ATK2LHObject, fkBoss.ATK2LHStartPoint.position, Quaternion.identity).GetComponent<FKBossATK2LHRoute>().SetValue(fkBoss.ATK2LHStartPoint.position, fkBoss.ATK2LHSpawnDelay, fkBoss.ATK2LHDisBet, fkBoss.FKBossStatusController.GetBossDamage());
         }
         if(triggerType == FKBoss.AnimationTriggerType.ATK2AttackAnimFinish)
         {

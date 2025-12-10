@@ -10,6 +10,7 @@ public class AOBossAwakeState : AOBossState
     public override void EnterState()
     {
         base.EnterState();
+        aoBoss.AOBossStatusController.BossUpdateInfo();
         aoBoss.BossCounterUI.SetActive(true);
         UIMouseAndPriority.Instance.canOpenUI = false;
         aoBoss.BossCounterUI.GetComponent<Animator>().SetTrigger("BossCounter");
@@ -20,7 +21,7 @@ public class AOBossAwakeState : AOBossState
         if(aoBoss.BossCounterUI.GetComponent<BossCounterUI>().GetAnimFinish())
         {
             aoBoss.BossCounterUI.GetComponent<BossCounterUI>().SetAnimFinishFalse();
-            UIMouseAndPriority.Instance.canOpenUI = false;
+            UIMouseAndPriority.Instance.canOpenUI = true;
             aoBoss.AOBossAnimator.SetTrigger("Awake");
             aoBoss.InFightGate.SetActive(true);
             aoBoss.HealthBarCV.SetActive(true);
