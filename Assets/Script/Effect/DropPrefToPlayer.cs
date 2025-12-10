@@ -41,7 +41,7 @@ public class DropPrefToPlayer : MonoBehaviour
             else if(dropType == DropType.Coin)
             {
                 SoundControl.Instance.CoinCollectPlay();
-                CoinControl.Instance.AddCoin(2);
+                PlayerCoinControl.Instance.AddCoin(2);
                 Destroy(gameObject);
             }
         }

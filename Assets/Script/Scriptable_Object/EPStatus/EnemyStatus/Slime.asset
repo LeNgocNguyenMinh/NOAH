@@ -12,9 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f77a1d537621a41a3afa125195c3a7, type: 3}
   m_Name: Slime
   m_EditorClassIdentifier: 
-  enemyLevel: 1
-  enemyName: Slime
-  enemyBaseDamage: 2
-  enemyDamage: 3
-  enemyBaseHealth: 30
-  enemyMaxHealth: 30
+  enemyBaseDamage: 10
+  enemyBaseMaxHealth: 50

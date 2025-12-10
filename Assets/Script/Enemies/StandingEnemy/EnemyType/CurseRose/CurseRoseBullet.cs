@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CurseRoseBullet : MonoBehaviour
 {
-    [SerializeField]private EnemyStatus enemyStatus;
+    [SerializeField]private EnemyBaseStatus enemyStatus;
     private Transform playerTransform;
     private Vector3 direction;
     private bool bulletBreak = false;
@@ -42,7 +42,6 @@ public class CurseRoseBullet : MonoBehaviour
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
-            PlayerHealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
             rb.linearVelocity = Vector2.zero;
             bulletBreak = true;
             animator.SetTrigger("break");

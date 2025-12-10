@@ -49,7 +49,7 @@ public class CollectableItems : MonoBehaviour
                 isCollected = true;
                 UIInventoryPage.Instance.AddItemPopUp(item, itemQuantity);
                 ItemInGroundController.Instance.SetItemIsCollect(item.itemID, transform.position);
-                Destroy(gameObject, .5f);
+                Destroy(transform.root.gameObject, .5f);
             }
         }
     }

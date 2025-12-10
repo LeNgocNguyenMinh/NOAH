@@ -18,6 +18,10 @@ public class ObjectInteraction : MonoBehaviour
         if(collider.CompareTag("Player"))
         {
             canInteract = true;
+            if(!Player.Instance.InteractRemind.activeSelf)
+            {
+                Player.Instance.InteractRemind.SetActive(true);
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collider)
@@ -25,6 +29,10 @@ public class ObjectInteraction : MonoBehaviour
         if(collider.CompareTag("Player"))
         {
             canInteract = false;
+            if(Player.Instance.InteractRemind.activeSelf)
+            {
+                Player.Instance.InteractRemind.SetActive(false);
+            }
         }
     }
 }

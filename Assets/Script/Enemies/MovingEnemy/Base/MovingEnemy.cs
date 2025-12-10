@@ -41,7 +41,7 @@ public class MovingEnemy : MonoBehaviour, IEnemyMoveable , ITriggerCheckable, ID
     }
     private void Start()
     {
-        StateMachine.Initialize(WalkState);   
+        StateMachine.Initialize(IdleState);   
     }
     private void Update()
     {

@@ -5,18 +5,19 @@ using UnityEngine;
 
 public class BlueSlimeBullet : MonoBehaviour
 {
-    [SerializeField]private EnemyStatus enemyStatus;
     [SerializeField]private Rigidbody2D rb;
     [SerializeField]private Animator animator;
+    private float enemyDamage;
     private Vector2 direction;
     private bool bulletBreak = false;
     private float speed = 5.0f;
     private float timeCount;
     
-    public void SetInitValue(float speed, float chaseTime)
+    public void SetInitValue(float speed, float chaseTime, float enemyDamage)
     {
         this.speed = speed;
         timeCount = chaseTime;
+        this.enemyDamage = enemyDamage;
         bulletBreak = false;
     }
     public void FixedUpdate()
@@ -42,7 +43,7 @@ public class BlueSlimeBullet : MonoBehaviour
         {
             PlayerEffect.Instance.PushBack(direction);
             PlayerEffect.Instance.HitFlash();   
-            PlayerHealthControl.Instance.PlayerHurt(enemyStatus.enemyDamage);
+            PlayerHealthControl.Instance.PlayerHurt(enemyDamage);
             bulletBreak = true;
             animator.SetTrigger("break");
         }

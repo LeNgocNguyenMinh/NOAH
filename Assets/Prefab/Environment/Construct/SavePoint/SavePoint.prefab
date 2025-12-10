@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d11e3c7d54f1184da64d7833b2cdf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectInteraction: {fileID: 8146189773787018515}
   isBed: 0
 --- !u!114 &8146189773787018515
 MonoBehaviour:
@@ -330,7 +331,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: -1218036411, guid: b163d6a8bd66faf4383864e1f166445e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

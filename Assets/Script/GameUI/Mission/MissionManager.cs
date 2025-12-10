@@ -99,7 +99,7 @@ public class MissionManager : MonoBehaviour
     {
         if(currentMission.missionReward.coin > 0)
         {
-            CoinControl.Instance.AddCoin(currentMission.missionReward.coin);
+            PlayerCoinControl.Instance.AddCoin(currentMission.missionReward.coin);
             NotifPopUp.Instance.ShowNotification("Add " + currentMission.missionReward.coin + " coins.");
         }
         foreach(ItemAmount itemAmount in currentMission.missionReward.items)

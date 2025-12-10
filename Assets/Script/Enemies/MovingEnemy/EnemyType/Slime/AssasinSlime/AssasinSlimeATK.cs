@@ -8,6 +8,7 @@ public class AssasinSlimeATK : MonoBehaviour
     private Vector3 bulletSpawnPoint;
     [SerializeField]private Transform mainBody;
     [SerializeField]private GameObject blade;
+    [SerializeField]private EnemyStatusInfo enemyStatus;
     public void Attack()
     {
         bulletSpawnPoint = new Vector3(
@@ -15,6 +16,7 @@ public class AssasinSlimeATK : MonoBehaviour
                                     Player.Instance.transform.position.y - .5f,
                                     0f);
         GameObject tmp = Instantiate(blade, bulletSpawnPoint, Quaternion.identity);
+        tmp.GetComponentInChildren<AssasinSlimeBlade>().SetInitValue(enemyStatus.GetEnemyDamage());
         if(FlipSprite())
         {
             tmp.transform.localScale = new Vector3(-1, 1, 1);

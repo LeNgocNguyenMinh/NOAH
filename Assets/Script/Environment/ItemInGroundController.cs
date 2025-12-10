@@ -57,9 +57,9 @@ public class ItemInGroundController : MonoBehaviour
         {
             if(!itemGroundData[i].isCollect)
             {
-                GameObject tmpItem;
-                itemInGroudPrefab.Add(tmpItem = Instantiate(ItemDictionary.Instance.GetItemInfo(itemGroundData[i].itemID).itemPrefab, itemGroundData[i].itemPos, Quaternion.identity));
+                GameObject tmpItem = Instantiate(ItemDictionary.Instance.GetItemInfo(itemGroundData[i].itemID).itemPrefab, itemGroundData[i].itemPos, Quaternion.identity);
                 tmpItem.GetComponentInChildren<CollectableItems>().SetItemQuantity(itemGroundData[i].itemQuantity);
+                itemInGroudPrefab.Add(tmpItem);
             }
         }
     }

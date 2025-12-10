@@ -692,6 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YSlimeATKHit
   enemyTrans: {fileID: 4922278761936341463}
+  enemyStatus: {fileID: 8257251744876346766}
 --- !u!1 &8948891771955275171
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,8 +707,8 @@ GameObject:
   - component: {fileID: 782655299358372623}
   - component: {fileID: 4289366522790956879}
   - component: {fileID: 3615415505839671059}
-  - component: {fileID: 868374803316687637}
   - component: {fileID: 7678958436460752798}
+  - component: {fileID: 8257251744876346766}
   m_Layer: 0
   m_Name: SlimeBody
   m_TagString: Untagged
@@ -828,22 +829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222719b758d531c4fbb08763b94b19b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStatus: {fileID: 11400000, guid: d742d73e6ef1e814d9fcc5cd6b99f3f0, type: 2}
   moveEnemy: {fileID: 782655299358372623}
   standEnemy: {fileID: 0}
   levelText: {fileID: 4679925840622734382}
---- !u!114 &868374803316687637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8948891771955275171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e40f8780ba1303d40b058bd3bc21a188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   healthBarFrontImage: {fileID: 8675886660972979752}
   healthBarBackImage: {fileID: 3734738783921774040}
   healthText: {fileID: 6490127859142360117}
@@ -863,6 +851,21 @@ MonoBehaviour:
   sword: {fileID: 4041782974307767799}
   swordSprite: {fileID: 5492021198797107836}
   canRotate: 1
+--- !u!114 &8257251744876346766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8948891771955275171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887111d44c5ce742940b4ea2106b7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStatusInfo
+  enemyBaseStatus: {fileID: 11400000, guid: d742d73e6ef1e814d9fcc5cd6b99f3f0, type: 2}
+  enemyHealthControl: {fileID: 3615415505839671059}
+  levelText: {fileID: 4679925840622734382}
 --- !u!1 &8971548217084106164
 GameObject:
   m_ObjectHideFlags: 0

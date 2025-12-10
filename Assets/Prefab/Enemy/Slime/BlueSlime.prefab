@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 6028046122501504635}
   - component: {fileID: 4289366522790956879}
   - component: {fileID: 3615415505839671059}
-  - component: {fileID: 868374803316687637}
+  - component: {fileID: 5900835337624942733}
   m_Layer: 0
   m_Name: SlimeBody
   m_TagString: Untagged
@@ -607,6 +607,7 @@ MonoBehaviour:
   bulletChaseTime: 1
   slimeBullet: {fileID: 771724941929772602, guid: 0a5ce893eacd95c4a86ea662bd0052d6, type: 3}
   bulletSpawnPoint: {fileID: 386869493500471128}
+  enemyStatus: {fileID: 5900835337624942733}
 --- !u!114 &4289366522790956879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,11 +639,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222719b758d531c4fbb08763b94b19b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStatus: {fileID: 11400000, guid: d742d73e6ef1e814d9fcc5cd6b99f3f0, type: 2}
   moveEnemy: {fileID: 782655299358372623}
   standEnemy: {fileID: 0}
   levelText: {fileID: 1320195961106908563}
---- !u!114 &868374803316687637
+  healthBarFrontImage: {fileID: 3082388529960693653}
+  healthBarBackImage: {fileID: 7022340901646865509}
+  healthText: {fileID: 626484254416074120}
+--- !u!114 &5900835337624942733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,12 +654,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8948891771955275171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e40f8780ba1303d40b058bd3bc21a188, type: 3}
+  m_Script: {fileID: 11500000, guid: 4887111d44c5ce742940b4ea2106b7ef, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarFrontImage: {fileID: 3082388529960693653}
-  healthBarBackImage: {fileID: 7022340901646865509}
-  healthText: {fileID: 626484254416074120}
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStatusInfo
+  enemyBaseStatus: {fileID: 11400000, guid: d742d73e6ef1e814d9fcc5cd6b99f3f0, type: 2}
+  enemyHealthControl: {fileID: 3615415505839671059}
+  levelText: {fileID: 1320195961106908563}
 --- !u!1 &8971548217084106164
 GameObject:
   m_ObjectHideFlags: 0

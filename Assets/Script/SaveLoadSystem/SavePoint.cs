@@ -2,11 +2,7 @@ using UnityEngine;
 
 public class SavePoint : MonoBehaviour
 {
-    private Animator animator;
-    private Player playerControl;
-    private ObjectInteraction objectInteraction;
-    private bool triggerNearAnimation = false;
-    private bool triggerFarAnimation = false;
+    [SerializeField]private ObjectInteraction objectInteraction;
     [SerializeField]private bool isBed = false;
     private void Update()
     {
@@ -24,30 +20,6 @@ public class SavePoint : MonoBehaviour
                     SaveController.Instance.SaveGame();
                 }
             }
-            /* if(!triggerNearAnimation)
-            {
-                triggerNearAnimation = true;
-                triggerFarAnimation = false;
-                if(GetComponent<Animator>() != null)
-                {
-                    animator = GetComponent<Animator>();
-                    animator.SetTrigger("isNear");
-                }
-                
-            } */
         }
-        /* else
-        {
-            if(!triggerFarAnimation)
-            {
-                triggerNearAnimation = false;
-                triggerFarAnimation = true;
-                if(GetComponent<Animator>() != null)
-                {
-                    animator = GetComponent<Animator>();
-                    animator.SetTrigger("isFar");
-                }
-            }
-        } */
     }
 }

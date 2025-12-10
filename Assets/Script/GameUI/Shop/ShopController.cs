@@ -52,7 +52,7 @@ public class ShopController : MonoBehaviour
             NotifPopUp.Instance.ShowNotification("Shop open at 10 A.M and close at 10 P.M!!");
             return;
         }
-        UpdateWhenOpen();
+        UpdateShopCoinText();
         shopPanelIsOpen = true;
         panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
@@ -67,14 +67,14 @@ public class ShopController : MonoBehaviour
             Time.timeScale = 1f;
         });
     }
-    public void UpdateWhenOpen()
+    public void UpdateShopCoinText()
     {
         playerCoin.text = PlayerStatus.Instance.playerCoin.ToString();
     }
     public void CoinTextUpdateAfterBuy(int newValue)
     {
         PlayerStatus.Instance.AddCoin(-newValue);
-        playerCoin.text = PlayerStatus.Instance.playerCoin.ToString();
+        UpdateShopCoinText();
     }
     public void AddItemToShop()
     {

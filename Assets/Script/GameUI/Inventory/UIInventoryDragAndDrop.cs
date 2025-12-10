@@ -6,13 +6,12 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
 {
     private UIInventoryItem uiInventoryItem;
     private Transform originalParent;
-    private CanvasGroup canvasGroup;
+    [SerializeField]private CanvasGroup canvasGroup;
     private Canvas canvasParent;
     private Vector3 originalLocalPosition;
     private void Start()
     {
         canvasParent = GetComponentInParent<Canvas>();
-        canvasGroup = GetComponent<CanvasGroup>();
         uiInventoryItem = GetComponentInParent<UIInventoryItem>();
         originalParent = transform.parent;
     }
@@ -50,13 +49,6 @@ public class UIInventoryDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHan
         {
             if(newSlot.isHotBarSlot)
             {
-                if(previousSlot.GetItemID().Contains("Cloth"))
-                {
-                    NotifPopUp.Instance.ShowNotification("Can't add cloth to hot bar");
-                    transform.SetParent(originalParent, true);
-                    transform.localPosition = originalLocalPosition;
-                    return;
-                }
                 if(previousSlot.GetItemID().Contains("Note"))
                 {
                     NotifPopUp.Instance.ShowNotification("Can't add paper to hot bar");

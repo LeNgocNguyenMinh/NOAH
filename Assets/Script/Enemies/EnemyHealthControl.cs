@@ -2,42 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class EnemyHealthControl : MonoBehaviour
 {
-    [SerializeField]private EnemyStatus enemyStatus;
     [SerializeField]private MovingEnemy moveEnemy;
     [SerializeField]private StandingEnemy standEnemy;
-    private float enemyMaxHealth;
-    private float enemyCurrentHealth;
-    private EnemyHealthBar enemyHealthBar;
+    [Header("UI Elements")]
     [SerializeField]private TextMeshProUGUI levelText;
-    private void Start()
+    [SerializeField]private Image healthBarFrontImage;
+    [SerializeField]private Image healthBarBackImage;
+    [SerializeField]private TextMeshProUGUI healthText;
+    private float currentHealth;
+    private float maxHealth;
+ 
+    public void SetMaxHealth(float health)
     {
-        //In here, we control both Health, damage and level of enemy.
-        if(PlayerStatus.Instance.playerLevel % 3 == 0)//Mean only when player level is 3, 6, 9
-        {
-            enemyStatus.SetLevel(PlayerStatus.Instance.playerLevel / 2);//then enemy level is 1, 3, 4, ...
-            //then damage, maxHealth calculate to fit with the level 
-            enemyStatus.SetMaxHealth(enemyStatus.enemyBaseHealth * (1 + 0.4f * enemyStatus.enemyLevel));
-        }
-        enemyStatus.SetDamage(enemyStatus.enemyBaseDamage + enemyStatus.enemyLevel);
-        levelText.text = enemyStatus.enemyLevel + "";
-        enemyHealthBar = GetComponent<EnemyHealthBar>();
-
-        enemyMaxHealth = enemyStatus.enemyMaxHealth;
-        enemyCurrentHealth = enemyMaxHealth;
-
-        enemyHealthBar.SetMaxHealth(enemyMaxHealth);
-        /* enemyHealthBar.UpdateHealthText(); */
+        healthBarFrontImage.fillAmount = 1f;
+        healthBarBackImage.fillAmount = 1f;
+        currentHealth = health;
+        maxHealth = health;
+        UpdateHealthText();
     }
-    
+
+    public void SetHealth()
+    {
+        float target = currentHealth / maxHealth;
+        if(healthBarFrontImage.fillAmount > healthBarBackImage.fillAmount)
+        {
+            healthBarBackImage.fillAmount = healthBarFrontImage.fillAmount;
+        }
+        healthBarFrontImage.DOFillAmount(target, .1f).SetEase(Ease.Linear).SetUpdate(true);
+        healthBarBackImage.DOFillAmount(target, .5f).SetEase(Ease.Linear).SetUpdate(true);
+    }
+    public void UpdateHealthText() //Update Health Text only when something change
+    {
+        healthText.text = $"{currentHealth} / {maxHealth}";
+    }
     public void EnemyHurt(float damage)
     {
-        enemyCurrentHealth -= damage;
-        if(enemyCurrentHealth <= 0)
+        currentHealth -= damage;
+        if(currentHealth <= 0)
         {
-            enemyCurrentHealth = 0;
+            currentHealth = 0;
             if(moveEnemy != null)
             {
                 moveEnemy.Die();
@@ -47,7 +55,7 @@ public class EnemyHealthControl : MonoBehaviour
                 standEnemy.Die();
             }
         }
-        enemyHealthBar.UpdateHealthText();
-        enemyHealthBar.SetHealth(enemyCurrentHealth);
+        UpdateHealthText();
+        SetHealth();
     }
 }

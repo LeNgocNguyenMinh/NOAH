@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IPlayerMoveable
     [field: SerializeField]public Animator PlayerAnimator { get; set; }
     [field: SerializeField] private Transform BodyPartTrans { get; set; }
     [field: SerializeField] private Transform BodyPartShadowTrans { get; set; }
+    [field: SerializeField]public GameObject InteractRemind { get; set; }
     public PlayerStateMachine StateMachine { get; private set;}
     public PlayerIdleState IdleState { get; private set; }
     public PlayerWalkState WalkState { get; private set; }
