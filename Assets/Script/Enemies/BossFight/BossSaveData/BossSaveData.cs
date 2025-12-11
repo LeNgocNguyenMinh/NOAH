@@ -4,10 +4,7 @@ using UnityEngine;
 public class BossSaveData : MonoBehaviour
 {
     public static BossSaveData Instance;
-    public bool isAOBossDead;
-    public bool isFKBossDead;
     public List<GameObject> bossPrefab;
-    public List<BossCurrentStatus> bossPrefList;
     private void Awake()
     {
         if (Instance == null)
@@ -28,7 +25,7 @@ public class BossSaveData : MonoBehaviour
         {
             bossID = "B_01",
             isDead = AOBoss.Instance.IsDead,
-            bossPos = new Vector3(-16.73f, 75.6f, 0.0f )
+            bossPos = new Vector3(-14.79f, 69.27f, 0.0f )
         };
         bossStatus.Add(aoStatus);
 
@@ -36,34 +33,28 @@ public class BossSaveData : MonoBehaviour
         {
             bossID = "B_03",
             isDead = FKBoss.Instance.IsDead,
-            bossPos = new Vector3(114.32f, 6.04f, 0.0f)
+            bossPos = new Vector3(118, 4.4f, 0.0f)
         };
         bossStatus.Add(fkStatus);
 
         return bossStatus;
     }
     public void SetBossCurrentStatus(List<BossCurrentStatus> bossCurrentStatus)
-    {      
-        foreach (BossCurrentStatus status in bossCurrentStatus)
+    {
+        AOBoss.Instance = null;
+        FKBoss.Instance = null;
+        foreach (GameObject boss in bossPrefab)
         {
-            if (status.bossID == "B_01")
-            {
-                isAOBossDead = status.isDead;
-            }
-            else if (status.bossID == "B_03")
-            {
-                isFKBossDead = status.isDead;
-            }
+            Destroy(boss);
         }
-        bossPrefList = bossCurrentStatus;
-        for(int i = 0; i < bossPrefab.Count; i++)
-        {
-            Destroy(bossPrefab[i]);
-        }
+        
+        bossPrefab.Clear();
+        Debug.Log(bossCurrentStatus.Count);
         for(int i = 0; i < bossCurrentStatus.Count; i++)
         {
             if(!bossCurrentStatus[i].isDead)
             {
+                Debug.Log("43434343434");
                 bossPrefab.Add(Instantiate(ItemDictionary.Instance.GetBossInfo(bossCurrentStatus[i].bossID).bossPrefab, bossCurrentStatus[i].bossPos, Quaternion.identity));
             }
         }

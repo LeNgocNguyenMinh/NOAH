@@ -78,7 +78,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossStatus: {fileID: 11400000, guid: 8c476e80427bd6d48af59e75c7ea3c91, type: 2}
-  levelText: {fileID: 9204456340288106074}
   healthBarFrontImage: {fileID: 8689743603781075011}
   healthBarBackImage: {fileID: 3742729705017212052}
   healthText: {fileID: 8592936928427085267}
@@ -179,7 +178,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 686130243
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 2
   m_Sprite: {fileID: -622027142, guid: 55ec4534d69971141a8f4120e46f594e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -318,7 +317,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 686130243
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 2
   m_Sprite: {fileID: -649534387, guid: 23aef7b5ab906bd4f943c69f91dde8d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -433,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 4361082490633337965}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 5.1, z: 0}
+  m_LocalPosition: {x: 0.9, y: 10.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -625,7 +624,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 686130243
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 1
   m_Sprite: {fileID: 1820104447, guid: 4a7b8c99af8aa94479f7013eb3af89f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1136,6 +1135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ade44426ec2854f9a031bcca5fa297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossStatusController: {fileID: 749851391937405332}
 --- !u!1 &8965790560160633924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1194,7 @@ Transform:
   m_GameObject: {fileID: 9007307929671254233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: -20.82, z: 0}
+  m_LocalPosition: {x: 0.9, y: -13.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1563,7 +1563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7892598296375816492, guid: c1f1c2e35d274c64185a9ec824bd8267, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -79,14 +79,14 @@ TagManager:
   - name: Player
     uniqueID: 2642180123
     locked: 0
+  - name: House
+    uniqueID: 1271831277
+    locked: 0
   - name: Mouse
     uniqueID: 23295885
     locked: 0
   - name: Boss
     uniqueID: 686130243
-    locked: 0
-  - name: House
-    uniqueID: 1271831277
     locked: 0
   - name: UIText
     uniqueID: 2087403631

@@ -26,6 +26,7 @@ public class PlayerHealthControl : MonoBehaviour
         if(healthCurrentValue <= 0)
         {
             healthCurrentValue = 0;
+            PlayerHealthBar.Instance.UpdateHealthText();
             Player.Instance.PlayerDead();// Mean player Dead
             return;
         }

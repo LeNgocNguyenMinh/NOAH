@@ -8,7 +8,6 @@ public class BossHealthControl : MonoBehaviour
     [SerializeField]private BossStatus bossStatus;
     private float currentHealth;
     private float maxHealth;
-    [SerializeField]private TextMeshProUGUI levelText;
     // Start is called before the first frame update
     [SerializeField]private Image healthBarFrontImage;
     [SerializeField]private Image healthBarBackImage;

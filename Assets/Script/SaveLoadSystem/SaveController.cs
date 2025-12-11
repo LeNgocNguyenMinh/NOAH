@@ -36,7 +36,6 @@ public class SaveController : MonoBehaviour
         {
             playerPosition = Player.Instance.transform.position,
             inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
-            mapBoundary = existingData.mapBoundary,
             hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
             shopSaveData = ShopController.Instance.GetListItemInShop(),
             itemInGroundSaveData = ItemInGroundController.Instance.GetListItemInGround(),
@@ -59,7 +58,6 @@ public class SaveController : MonoBehaviour
         {
             playerPosition = Player.Instance.transform.position,
             inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
-            mapBoundary = existingData.mapBoundary,
             hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
             shopSaveData = existingData.shopSaveData,
             itemInGroundSaveData = existingData.itemInGroundSaveData,
@@ -80,7 +78,6 @@ public class SaveController : MonoBehaviour
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
             Player.Instance.transform.position = saveData.playerPosition;
             UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
-            UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
             HotBarManager.Instance.SetHotBarItems(saveData.hotBarSaveData);
             ShopController.Instance.SetListItemInShop(saveData.shopSaveData);
             TimeManager.Instance.SetTime(saveData.timeSaveData);
@@ -95,11 +92,10 @@ public class SaveController : MonoBehaviour
 
     public void LoadNewGame()
     {
-        newGameSaveLocation = Path.Combine(Application.persistentDataPath, "newGameData.json");
+        newGameSaveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         
         string defaultNewGameJson = @"{
         ""playerPosition"": { ""x"": -26.4, ""y"": 6.7, ""z"": 0.0 },
-        ""mapBoundary"": ""L1"",
         ""inventorySaveData"": [],
         ""hotBarSaveData"": [],
         ""shopSaveData"": [
@@ -121,8 +117,8 @@ public class SaveController : MonoBehaviour
             { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": -1.31, ""y"": 1.46, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false }
         ],
         ""bossSaveData"": [
-            { ""bossID"": ""B_01"", ""isDead"": ""false"", ""bossPos"": { ""x"": -16.73, ""y"": 75.6, ""z"": 0.0 }},
-            { ""bossID"": ""B_03"", ""isDead"": ""false"", ""bossPos"": { ""x"": 118.42, ""y"": 6.6, ""z"": 0.0 }}
+            { ""bossID"": ""B_01"", ""isDead"": ""false"", ""bossPos"": { ""x"": -14.79, ""y"": 69.27, ""z"": 0.0 }},
+            { ""bossID"": ""B_03"", ""isDead"": ""false"", ""bossPos"": { ""x"": 118, ""y"": 4.4, ""z"": 0.0 }}
         ],
         ""timeSaveData"": { ""minData"": 0.0, ""hourData"": 0.0, ""dateData"": 0 },
         ""playerSaveData"": {
@@ -133,8 +129,8 @@ public class SaveController : MonoBehaviour
             ""playerCoinData"": 50,
             ""maxExpData"": 40.0,
             ""currentExpData"": 0.0,
-            ""maxHealthData"": 200.0,
-            ""currentHealthData"": 200.0,
+            ""maxHealthData"": 50.0,
+            ""currentHealthData"": 50.0,
             ""currentWeaponID"": ""WP_03""
         },
         ""missionSaveData"": {
@@ -167,7 +163,6 @@ public class SaveController : MonoBehaviour
         File.WriteAllText(newGameSaveLocation, defaultNewGameJson);
         SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(newGameSaveLocation));    
         Player.Instance.transform.position = saveData.playerPosition;
-        UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
         UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
         HotBarManager.Instance.SetHotBarItems(saveData.hotBarSaveData);
         ShopController.Instance.SetListItemInShop(saveData.shopSaveData);

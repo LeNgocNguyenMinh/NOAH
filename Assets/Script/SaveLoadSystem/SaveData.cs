@@ -6,7 +6,6 @@ using UnityEngine;
 public class SaveData 
 {
     public Vector3 playerPosition;
-    public string mapBoundary;
     public List<InventorySaveData> inventorySaveData;
     public List<InventorySaveData> hotBarSaveData;
     public List<ShopSaveData> shopSaveData; 

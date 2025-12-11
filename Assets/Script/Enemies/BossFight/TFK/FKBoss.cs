@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FKBoss : MonoBehaviour
 {
-    public static FKBoss Instance { get; private set; }
+    public static FKBoss Instance { get; set; }
     [field: Header("General attribute")]
     [field: SerializeField]public GameObject InFightGate { get; set; }
     [field: SerializeField]public GameObject BossBody { get; set; }
@@ -100,7 +100,7 @@ public class FKBoss : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(BossBody);
         }
         StateMachine = new FKBossStateMachine();
         RestState = new FKBossRestState(this, StateMachine);

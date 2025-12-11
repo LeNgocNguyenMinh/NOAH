@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AOBoss : MonoBehaviour
 {
-    public static AOBoss Instance { get; private set; }
+    public static AOBoss Instance { get; set; }
     [field: Header("General attribute")]
     [field: SerializeField]public GameObject InFightGate { get; set; }
     [field: SerializeField]public BossStatus BossStatus { get; set; }
@@ -85,7 +85,7 @@ public class AOBoss : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(BossBody);
         }
         StateMachine = new AOBossStateMachine();
         RestState = new AOBossRestState(this, StateMachine);

@@ -374,10 +374,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealthControl
   bossStatus: {fileID: 11400000, guid: fe6e8555f278eb24b9a51d1d60ba576e, type: 2}
-  levelText: {fileID: 9163189951987536356}
   healthBarFrontImage: {fileID: 8651088553440952317}
   healthBarBackImage: {fileID: 3703687491283960618}
-  healthText: {fileID: 9163189951987536356}
+  healthText: {fileID: 8635303103247692397}
 --- !u!114 &3794781035943053541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,6 +1275,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6957146050685978119, guid: c1f1c2e35d274c64185a9ec824bd8267, type: 3}
   m_PrefabInstance: {fileID: 6411271630098942963}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8635303103247692397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3400125359327181214, guid: c1f1c2e35d274c64185a9ec824bd8267, type: 3}
+  m_PrefabInstance: {fileID: 6411271630098942963}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8651088553440952317 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2375576924792419342, guid: c1f1c2e35d274c64185a9ec824bd8267, type: 3}

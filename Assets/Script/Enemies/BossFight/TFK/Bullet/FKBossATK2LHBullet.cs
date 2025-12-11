@@ -13,7 +13,7 @@ public class FKBossATK2LHBullet : MonoBehaviour
     {
         if(collider.CompareTag("PlayerHitCollider"))
         {
-            PlayerHealthControl.Instance.PlayerHurt(1f);
+            PlayerHealthControl.Instance.PlayerHurt(damage);
             Vector3 hitDirect = (Player.Instance.transform.position - transform.position).normalized;
             PlayerEffect.Instance.PushBack(hitDirect);
             PlayerEffect.Instance.HitFlash();
