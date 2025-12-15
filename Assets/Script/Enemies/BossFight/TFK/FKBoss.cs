@@ -8,6 +8,7 @@ public class FKBoss : MonoBehaviour
     [field: SerializeField]public GameObject BossBody { get; set; }
     [field: SerializeField]public BossStatus BossStatus { get; set; }
     [field: SerializeField]public Animator FKBossAnimator { get; set; }
+    [field: SerializeField]public BossDropAfterDead BossDropAfterDead { get; private set; }
     
     [field: SerializeField]public GameObject BossCounterUI { get; set; }
     [field: SerializeField]public BossStatusController FKBossStatusController;
@@ -133,6 +134,7 @@ public class FKBoss : MonoBehaviour
     {
         if(!IsDead)
         {
+            Debug.Log("BossChet02");
             IsDead = true;
             StateMachine.ChangeState(DeadState);
         }

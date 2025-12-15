@@ -6,9 +6,11 @@ public class ItemDictionary : MonoBehaviour
 {
     public static ItemDictionary Instance;
     [SerializeField]private List<Item> itemList;
-    [SerializeField]private List<BossStatus> boss;
+    [SerializeField]private List<BossStatus> bossList;
+    [SerializeField]private List<PuzzleStatus> puzzleList;
     private Dictionary<string, Item> itemDictionary;
     private Dictionary<string, BossStatus> bossDictionary;
+    private Dictionary<string, PuzzleStatus> puzzleDictionary;
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -31,7 +33,7 @@ public class ItemDictionary : MonoBehaviour
     public BossStatus GetBossInfo(string bossID)
     {
         bossDictionary = new Dictionary<string, BossStatus>();
-        foreach(BossStatus bossStat in boss)
+        foreach(BossStatus bossStat in bossList)
         {
             bossDictionary[bossStat.bossID] = bossStat;
         }
@@ -40,6 +42,23 @@ public class ItemDictionary : MonoBehaviour
             return bossStatus;
         }
         Debug.LogWarning($"Không tìm thấy Boss ID {bossID} trong dictionary");
+        return null; // Trả về null nếu không tìm thấy
+    }
+    public PuzzleStatus GetPuzzleInfo(string puzzleID)
+    {
+        Debug.Log("11111"); 
+        Debug.Log(puzzleID);
+        puzzleDictionary = new Dictionary<string, PuzzleStatus>();
+        foreach(PuzzleStatus puzzleStat in puzzleList)
+        {
+            puzzleDictionary[puzzleStat.puzzleID] = puzzleStat;
+        }
+       
+        if (puzzleDictionary.TryGetValue(puzzleID, out PuzzleStatus puzzleStatus))
+        {
+            return puzzleStatus;
+        }
+        Debug.LogWarning($"Không tìm thấy Puzzle ID {puzzleID} trong dictionary");
         return null; // Trả về null nếu không tìm thấy
     }
 }

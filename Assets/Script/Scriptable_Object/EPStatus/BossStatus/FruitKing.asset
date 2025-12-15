@@ -12,12 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac46b774ef156794b91fe794fa4f82aa, type: 3}
   m_Name: FruitKing
   m_EditorClassIdentifier: 
-  bossLevel: 3
   bossName: The Fruit King
   bossID: B_03
   bossBaseDamage: 2
-  bossDamage: 2
-  bossBaseHealth: 200
   bossMaxHealth: 400
   bossPrefab: {fileID: 6366584042058615158, guid: 20584180828a48347a9a784ce555c690, type: 3}
-  playerStatus: {fileID: 11400000, guid: a81679a04ae3e26478afffe31e4a38ed, type: 2}

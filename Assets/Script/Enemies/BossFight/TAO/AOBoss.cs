@@ -16,6 +16,7 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public GameObject BossCounterUI { get; set; }
     [field: SerializeField]public GameObject HealthBarCV{ get; set; }
     [field: SerializeField]public BossStatusController AOBossStatusController;
+    [field: SerializeField]public BossDropAfterDead BossDropAfterDead { get; private set; }
     public bool IsDead { get; set; } = false;
     public Vector3 RightHandOriginTrans { get; set; }
     public Vector3 LeftHandOriginTrans { get; set; }

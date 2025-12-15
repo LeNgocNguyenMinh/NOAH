@@ -24,7 +24,7 @@ public class FKBossDeadState : FKBossState
     {
         if(triggerType == FKBoss.AnimationTriggerType.DeadAnimFinish)
         {
-            fkBoss.IsDead = true;
+            fkBoss.BossDropAfterDead.DropOnDead();
             fkBoss.BossVanish();
         }
     }

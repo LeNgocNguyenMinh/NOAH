@@ -53,6 +53,7 @@ public class ItemInGroundController : MonoBehaviour
         {
             Destroy(itemInGroudPrefab[i]);
         }
+        itemInGroudPrefab.Clear();
         for(int i = 0; i < itemGroundData.Count; i++)
         {
             if(!itemGroundData[i].isCollect)

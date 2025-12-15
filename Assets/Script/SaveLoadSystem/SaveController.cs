@@ -1,10 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using Cinemachine;
-using UnityEngine.SceneManagement;
-using UnityEditor;
 
 public class SaveController : MonoBehaviour
 {
@@ -43,6 +39,7 @@ public class SaveController : MonoBehaviour
             timeSaveData = TimeManager.Instance.GetTime(),
             playerSaveData = PlayerStatus.Instance.GetPlayerInfo(),
             missionSaveData = MissionManager.Instance.GetMissionList(),
+            puzzleSaveData = PuzzleManager.Instance.GetPuzzleData(),
             weaponListData = WeaponManager.Instance.GetWeaponData()
         };
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
@@ -59,12 +56,13 @@ public class SaveController : MonoBehaviour
             playerPosition = Player.Instance.transform.position,
             inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
             hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
-            shopSaveData = existingData.shopSaveData,
-            itemInGroundSaveData = existingData.itemInGroundSaveData,
-            bossSaveData = existingData.bossSaveData,
+            shopSaveData = ShopController.Instance.GetListItemInShop(),
+            itemInGroundSaveData = ItemInGroundController.Instance.GetListItemInGround(),
+            bossSaveData = BossSaveData.Instance.GetAllBossCurrentStatus(),
             timeSaveData = TimeManager.Instance.GetTimeSkip(),
             playerSaveData = PlayerStatus.Instance.GetPlayerInfo(),
             missionSaveData = MissionManager.Instance.GetMissionList(),
+            puzzleSaveData = PuzzleManager.Instance.GetPuzzleData(),
             weaponListData = WeaponManager.Instance.GetWeaponData()
         };
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData, true));
@@ -85,6 +83,7 @@ public class SaveController : MonoBehaviour
             BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
             PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
             MissionManager.Instance.SetMissionList(saveData.missionSaveData);    
+            PuzzleManager.Instance.SetPuzzleData(saveData.puzzleSaveData);
             WeaponManager.Instance.SetWeaponData(saveData.weaponListData);    
             UIMouseAndPriority.Instance.canOpenUI = true;  
         }
@@ -114,7 +113,7 @@ public class SaveController : MonoBehaviour
             { ""itemID"": ""HPPotion_01"", ""itemPos"": { ""x"": -23.83, ""y"": -1.7, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
             { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": 145.9, ""y"": 0.3, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
             { ""itemID"": ""WP_01"", ""itemPos"": { ""x"": -13.88, ""y"": 88.34, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
-            { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": -1.31, ""y"": 1.46, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false }
+            { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": 44.97, ""y"": -4.55, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false }
         ],
         ""bossSaveData"": [
             { ""bossID"": ""B_01"", ""isDead"": ""false"", ""bossPos"": { ""x"": -14.79, ""y"": 69.27, ""z"": 0.0 }},
@@ -125,12 +124,12 @@ public class SaveController : MonoBehaviour
             ""playerLevelData"": 1,
             ""availablePointData"": 3,
             ""playerCurrentDamageData"": 5.0,
-            ""playerBulletData"": 3,
+            ""playerBulletData"": 4,
             ""playerCoinData"": 50,
             ""maxExpData"": 40.0,
             ""currentExpData"": 0.0,
-            ""maxHealthData"": 50.0,
-            ""currentHealthData"": 50.0,
+            ""maxHealthData"": 200.0,
+            ""currentHealthData"": 200.0,
             ""currentWeaponID"": ""WP_03""
         },
         ""missionSaveData"": {
@@ -153,6 +152,9 @@ public class SaveController : MonoBehaviour
             ],
             ""currentMissionID"": """"
         },
+        ""puzzleSaveData"": [
+            { ""puzzleID"": ""Puzzle_01"", ""puzzleSolve"": false }
+        ],
         ""weaponListData"": [
             { ""weaponID"": ""WP_01"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 2.0 },
             { ""weaponID"": ""WP_02"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 2.0 },
@@ -170,7 +172,8 @@ public class SaveController : MonoBehaviour
         ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
         BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
         PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
-        MissionManager.Instance.SetMissionList(saveData.missionSaveData);   
+        MissionManager.Instance.SetMissionList(saveData.missionSaveData);
+        PuzzleManager.Instance.SetPuzzleData(saveData.puzzleSaveData);   
         WeaponManager.Instance.SetWeaponData(saveData.weaponListData);   
         UIMouseAndPriority.Instance.canOpenUI = true; 
         SaveGame();

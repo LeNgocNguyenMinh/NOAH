@@ -8,24 +8,36 @@ public class BossDropAfterDead : MonoBehaviour
     [SerializeField]private GameObject gemDrop;
     [SerializeField]private GameObject expPrefab;
     [SerializeField]private GameObject coinPrefab;
-    public void DropOEC(Vector3 pos)
+    [SerializeField]private float maxSpeed;
+    [SerializeField]private float maxHeight;
+    [SerializeField]private int numDropExp;
+    [SerializeField]private int numDropCoin;
+    public void DropOnDead()
     {
         Vector3 gemOffset = new Vector3(2, 0, 2);
-        Instantiate(gemDrop, transform.position + gemOffset, Quaternion.identity);
-        Instantiate(weaponDrop, transform.position, Quaternion.identity);
-        int expPoint = 15;
-        int coinPoint = 30;
-        for (int i =0; i < expPoint; i++)
+        if(gemDrop != null)
         {
-            Vector3 randomOffset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
-            Vector3 spawnPosition = pos + randomOffset;
-            Instantiate(expPrefab, spawnPosition, Quaternion.identity);
+            Instantiate(gemDrop, transform.position + gemOffset, Quaternion.identity);
         }
-        for (int i =0; i < coinPoint; i++)
+        if(weaponDrop != null)
         {
-            Vector3 randomOffset = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
-            Vector3 spawnPosition = pos + randomOffset;
-            Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
+            Instantiate(weaponDrop, transform.position, Quaternion.identity);
+        }
+        for (int i =0; i < numDropExp; i++)
+        {
+            float xE = (Random.value < 0.5f) ? Random.Range(2f, 3f) : Random.Range(-3f, -2f);
+            float yE = (Random.value < 0.5f) ? Random.Range(1f, 2f) : Random.Range(-2f, -1f);
+            Vector3 offsetE = new Vector3(xE, yE, 0f);
+            Projectile EXPPro = Instantiate(expPrefab, transform.position, Quaternion.identity).GetComponent<Projectile>();
+            EXPPro.InitializeProjectile(transform.position + offsetE, maxSpeed, maxHeight);
+        }
+        for (int i =0; i < numDropCoin; i++)
+        {
+            float xC = (Random.value < 0.5f) ? Random.Range(2f, 3f) : Random.Range(-3f, -2f);
+            float yC = (Random.value < 0.5f) ? Random.Range(1f, 2f) : Random.Range(-2f, -1f);
+            Vector3 offsetC = new Vector3(xC, yC, 0f);
+            Projectile coinPro = Instantiate(coinPrefab, transform.position, Quaternion.identity).GetComponent<Projectile>();
+            coinPro.InitializeProjectile(transform.position + offsetC, maxSpeed, maxHeight);
         }
     }
 }

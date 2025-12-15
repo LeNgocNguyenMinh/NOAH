@@ -17,7 +17,7 @@ public class PillarInteract : MonoBehaviour
         if(collider.CompareTag("Bullet"))
         {
             puzzle01Interact.AddToPassWord(text);
-            lightOnTopInteractive.LightOnTopActive();
+            lightOnTopInteractive.TurnOnLight();
         }
     }
 }

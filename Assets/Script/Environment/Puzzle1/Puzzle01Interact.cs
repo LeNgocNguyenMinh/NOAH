@@ -1,52 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Puzzle01Interact : MonoBehaviour
 {
-    public static Puzzle01Interact instance;
-    private bool chestIsSpawn = false;
-    private string passWord = "";
-    [SerializeField]private Transform chestSpawn;
-    [SerializeField]private GameObject chestPrefab;
-
-    [SerializeField]private LightOnTopInteractive[] listLightOnTop;
-    private string rightPassWord = "22134";
+    private bool puzzleSolve;
+    [SerializeField]private string puzzleID;
+    private string passWord;
+    [SerializeField]private Transform itemSpawn;
+    [SerializeField]private GameObject itemPrefab;    
+    private string rightPassWord = "2213";
     private void Start()
     {
-        chestPrefab.SetActive(false);
+        puzzleSolve = false;
+        passWord = "";
     }
-
     public void AddToPassWord(string text)
     {
-        if(passWord.Length < rightPassWord.Length)
+        if(text == "")
         {
-            if(text == "")
-            {
-                passWord = "";
-                return;
-            }
-            passWord += text;
+            passWord = "";
+            return;
         }
-        else if(passWord.Length == 5)
+        passWord += text;
+        Debug.Log(passWord);
+        if(passWord.Length == rightPassWord.Length)
         {
-            if(passWord != rightPassWord)
+            if(passWord == rightPassWord)
             {
-                passWord = "";
-                foreach(LightOnTopInteractive x in listLightOnTop)
+                if(!puzzleSolve)
                 {
-                    x.LightOnTopDeactive();
+                    CollectableItems item = Instantiate(itemPrefab, itemSpawn.position, Quaternion.identity).GetComponentInChildren<CollectableItems>();
+                    Debug.Log("Spawned Item ID: " + item.GetItemID());
+                    ItemInGroundController.Instance.AddNewItemInGround(item.GetItemID(), itemSpawn.position, 1);
+                    puzzleSolve = true;
+                    PuzzleManager.Instance.SetPuzzleSolve(puzzleID);
+                    Destroy(gameObject);
                 }
             }
-            else 
-            {
-                if(!chestIsSpawn)
-                {
-                    chestIsSpawn = true;
-                    chestPrefab.SetActive(true);
-                }           
-            }
         }
-        Debug.Log("Pass word: " + passWord);
     }
 }

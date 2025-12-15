@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5595521706983103875}
   - component: {fileID: 8546079636946162697}
   - component: {fileID: 749851391937405332}
+  - component: {fileID: 5706955404002589809}
   m_Layer: 0
   m_Name: BossManager
   m_TagString: Untagged
@@ -96,6 +97,26 @@ MonoBehaviour:
   bossBaseStatus: {fileID: 11400000, guid: 8c476e80427bd6d48af59e75c7ea3c91, type: 2}
   bossHealthControl: {fileID: 8546079636946162697}
   levelText: {fileID: 9204456340288106074}
+--- !u!114 &5706955404002589809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106490401752348805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54a9c8a56bf5984a96407f41155701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossDropAfterDead
+  weaponDrop: {fileID: 0}
+  gemDrop: {fileID: 0}
+  expPrefab: {fileID: 3192577251028670781, guid: 7eb29ef071e86b64098fc19bf79e5b33, type: 3}
+  coinPrefab: {fileID: 2226808372654750378, guid: 7ef5462f482b7fd45af094ccc773212d, type: 3}
+  maxSpeed: 2
+  maxHeight: 1
+  numDropExp: 15
+  numDropCoin: 10
 --- !u!1 &1782769537053217961
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +984,10 @@ MonoBehaviour:
   gemDrop: {fileID: 7201876602067210802, guid: 73ba0a86a0fd47d44858b11945e2ac39, type: 3}
   expPrefab: {fileID: 3192577251028670781, guid: 7eb29ef071e86b64098fc19bf79e5b33, type: 3}
   coinPrefab: {fileID: 2226808372654750378, guid: 7ef5462f482b7fd45af094ccc773212d, type: 3}
+  maxSpeed: 0
+  maxHeight: 0
+  numDropExp: 0
+  numDropCoin: 0
 --- !u!95 &5116757026331256259
 Animator:
   serializedVersion: 7
@@ -1009,6 +1034,7 @@ MonoBehaviour:
   <BossCounterUI>k__BackingField: {fileID: 5954164121320816316}
   <HealthBarCV>k__BackingField: {fileID: 3884268029589095777}
   AOBossStatusController: {fileID: 749851391937405332}
+  <BossDropAfterDead>k__BackingField: {fileID: 5706955404002589809}
   <ATK1MaxAtk>k__BackingField: 3
   <ATK1SitePref>k__BackingField: {fileID: 1964090138540030929, guid: 5003ceaa61a2cbb42b0758fb38c1c7bf, type: 3}
   <ATK1RHReadyTime>k__BackingField: 2

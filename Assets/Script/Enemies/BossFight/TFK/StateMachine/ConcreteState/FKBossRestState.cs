@@ -10,6 +10,7 @@ public class FKBossRestState : FKBossState
     public override void EnterState()
     {
         base.EnterState();
+        fkBoss.IsDead = false;
         fkBoss.FKBossAnimator.SetTrigger("Rest");
         fkBoss.InFightGate.SetActive(false);
         fkBoss.BossCounterUI.SetActive(false);

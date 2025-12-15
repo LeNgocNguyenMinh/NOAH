@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09966fb64dd87b438b125b272b86727, type: 3}
+  m_Name: PuzzlePillar
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleStatus
+  puzzleID: Puzzle_01
+  puzzlePos: {x: 56.05, y: 3.94, z: 0}
+  puzzlePrefab: {fileID: 3583241558717531985, guid: 0b3c59f35dfe40e40bde22e289210555, type: 3}

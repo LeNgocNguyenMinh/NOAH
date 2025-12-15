@@ -4,43 +4,57 @@ using UnityEngine;
 
 public class LightOnTopInteractive : MonoBehaviour
 {
-    private Animator animator;
-    private PillarInteract pillarInteract;
-    private int lightStatus; //1 is Idle, 2 is Light Up
-    private float lightCountDown;
-    private void Start()
+    [SerializeField]private Animator animator;
+    [SerializeField]private PillarInteract pillarInteract;
+    private bool lightIsOn;
+    private bool lightIsIdle;
+    [SerializeField]private float lightIdleTime;
+    private float lightCount;
+
+    void Start()
     {
-        animator = GetComponent<Animator>();
-        pillarInteract = GetComponentInParent<PillarInteract>();
-        lightStatus = 1;
+        lightIsOn = false;
+        lightIsIdle = false;
     }
-    private void Update()
+    public void Update()
     {
-        if(lightStatus == 2)
+        if(lightIsIdle)
         {
-            lightCountDown -= Time.deltaTime;
-            if(lightCountDown <= 0)
+            if(lightCount <=0 )
             {
-                LightOnTopDeactive();
+                lightCount = 0;
+                TurnOffLight();
+            }
+            else
+            {
+                lightCount -= Time.deltaTime;
             }
         }
     }
-    public void LightOnTopActive()
+    public void TurnOnLight()
     {
-        lightCountDown = 5f;
-        if(lightStatus != 2)
+        if (!lightIsOn)
         {
-            lightStatus = 2;
-            animator.SetTrigger("LightUp");
+            lightIsIdle = false;
+            lightIsOn = true;
+            animator.SetTrigger("LightOn");
         }
     }
-    public void LightOnTopDeactive()
+    public void LightIdle()
     {
-        if(lightStatus != 1)
+        lightIsIdle = true;
+        lightCount = lightIdleTime;
+        animator.SetTrigger("LightIdle");
+    }
+    public void TurnOffLight()
+    {
+        if (lightIsOn)
         {
-            lightStatus = 1;
+            lightIsIdle = false;
+            lightIsOn = false;
             pillarInteract.ResetEnterPass();
-            animator.SetTrigger("LightDown");
+            animator.SetTrigger("LightOut");
         }
     }
+
 }

@@ -6,28 +6,25 @@ public class EnemySpawn : MonoBehaviour
 {
     [SerializeField]private GameObject[] enemyPrefab;
     [SerializeField]private Transform[] spawnPoints;
+    public List<GameObject> listEnemyOnField;
  
     [SerializeField]private float spawnTime;
-    public int enemyNumberOnField = 0;
     public int maxEnemyOnField;
     private float timeUntilSpawn = 0f;
 
     void Update()
     {
-        if(enemyNumberOnField >= maxEnemyOnField)return;
+        listEnemyOnField.RemoveAll(item => item == null);
+        if(listEnemyOnField.Count >= maxEnemyOnField)return;
         timeUntilSpawn -= Time.deltaTime;
         if(timeUntilSpawn <= 0)
         {
             int randomIndex = Random.Range(0, enemyPrefab.Length);
             int randomPlace = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemyPrefab[randomIndex], spawnPoints[randomPlace].position, Quaternion.identity);
-            enemyNumberOnField++;
-            SetTimeUntilSpawn();
+            GameObject tmp = Instantiate(enemyPrefab[randomIndex], spawnPoints[randomPlace].position, Quaternion.identity);
+            listEnemyOnField.Add(tmp);
+            timeUntilSpawn = spawnTime;
         }
     }
-    private void SetTimeUntilSpawn()
-    {
-        timeUntilSpawn = spawnTime;
-    }
-    
+   
 }

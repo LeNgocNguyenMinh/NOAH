@@ -9,10 +9,6 @@ public class ObjectInteraction : MonoBehaviour
     {
         return canInteract;
     }
-    public void SetCanInteract(bool newValue)
-    {
-        canInteract = newValue;
-    }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.CompareTag("Player"))

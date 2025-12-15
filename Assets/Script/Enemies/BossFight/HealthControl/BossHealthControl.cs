@@ -50,8 +50,9 @@ public class BossHealthControl : MonoBehaviour
             {
                 AOBoss.Instance.BossDeath();
             }  
-            if(bossStatus.bossName == "B_03")//FruitKing
+            if(bossStatus.bossID == "B_03")//FruitKing
             {
+                Debug.Log("BossChet");
                 FKBoss.Instance.BossDeath();
             }       
         }
