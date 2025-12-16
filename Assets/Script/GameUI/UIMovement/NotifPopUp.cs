@@ -10,7 +10,6 @@ public class NotifPopUp : MonoBehaviour
 
     [SerializeField] private GameObject notificationPrefab;
     [SerializeField] private RectTransform notificationPanel;
-    [SerializeField] private float notificationDuration = 2f;
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private int maxPopups = 3;
     private readonly Queue<GameObject> activePopup = new();

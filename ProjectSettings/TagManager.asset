@@ -6,11 +6,8 @@ TagManager:
   tags:
   - ForeGround
   - BackGround
-  - Audio
   - NPC
   - Item
-  - PlayerWand
-  - PlayerSprite
   - PlayerHitCollider
   - Boss
   - Enemy
@@ -18,6 +15,7 @@ TagManager:
   - SFX
   - Music
   - Bullet
+  - PlayerWand
   layers:
   - Default
   - TransparentFX

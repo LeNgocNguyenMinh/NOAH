@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovingEnemyAttackState : MovingEnemyState
 {
-    private bool finishATKAnim = false;
     public MovingEnemyAttackState(MovingEnemy enemy, MovingEnemyStateMachine stateMachine) : base(enemy, stateMachine)
     {
     }

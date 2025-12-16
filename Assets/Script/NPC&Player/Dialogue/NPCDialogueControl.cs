@@ -10,7 +10,7 @@ public class NPCDialogueControl : MonoBehaviour
     [SerializeField]private NPCDialogue dialogueData;
     private int dialogueIndex;
     public static bool isDialogueActive = false;
-    private ObjectInteraction objectInteraction;
+    [SerializeField]private ObjectInteraction objectInteraction;
     private Tween typewriterTween; 
     private DialogueChoice currentChoice;
     private string currentRespondLine;
@@ -37,11 +37,10 @@ public class NPCDialogueControl : MonoBehaviour
     private DialogueMissionState missionState = DialogueMissionState.NoMission;
     private void Update()
     {
-        objectInteraction = GetComponent<ObjectInteraction>();
-        if(objectInteraction.GetCanInteract())
-        {
-            if(Input.GetKeyDown(KeyCode.F))
-            {  
+        if(Input.GetKeyDown(KeyCode.F))
+        {  
+            if(objectInteraction.GetCanInteract())
+            {
                 Interact();
             }
         }

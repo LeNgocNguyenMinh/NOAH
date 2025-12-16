@@ -9,12 +9,13 @@ public class ShopInteractive : MonoBehaviour
     
     private void Update()
     {
-        if(objectInteraction.GetCanInteract())
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if(objectInteraction.GetCanInteract())
             {
                 ShopController.Instance.ShopUIInteract();
-            }     
-        }
+            }
+        }  
+        
     }
 }
