@@ -29,6 +29,7 @@ public class AOBossATK1AttackState : AOBossState
         if(Vector3.Distance(aoBoss.RightHand.position, readyPos) <= 0.1f && !hasHitGround)
         {
             hasHitGround = true;
+            SoundControl.Instance.AOBossHitGroundSoundPlay();
             aoBoss.AOBossAnimator.SetTrigger("ATK1RHHitGround");
             aoBoss.RightHand.position = readyPos;
         }
@@ -48,6 +49,7 @@ public class AOBossATK1AttackState : AOBossState
     }
     public void LHandBulletSpawn()
     {
+        SoundControl.Instance.AOBossShootSoundPlay();
         Instantiate(aoBoss.ATK1LHBulletPref, aoBoss.ATK1LHShootPos.position, Quaternion.identity)
         .GetComponent<AOBossATK1LHBullet>().SetValue(aoBoss.ATK1LHBulletSpeed, aoBoss.ATK1LHBulletTime, aoBoss.AOBossStatusController.GetBossDamage());
     }

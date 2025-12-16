@@ -17,7 +17,8 @@ public class BossDropAfterDead : MonoBehaviour
         Vector3 gemOffset = new Vector3(2, 0, 2);
         if(gemDrop != null)
         {
-            Instantiate(gemDrop, transform.position + gemOffset, Quaternion.identity);
+            CollectableItems item = Instantiate(gemDrop, transform.position, Quaternion.identity).GetComponentInChildren<CollectableItems>();
+            ItemInGroundController.Instance.AddNewItemInGround(item.GetItemID(), transform.position, 1);
         }
         if(weaponDrop != null)
         {

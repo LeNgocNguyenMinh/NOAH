@@ -24,6 +24,7 @@ public class AOBossDeadState : AOBossState
     {
         if(triggerType == AOBoss.AnimationTriggerType.DeadAnimFinish)
         {
+            SoundControl.Instance.InGameMusicPlay();
             aoBoss.BossDropAfterDead.DropOnDead();
             aoBoss.BossVanish();
         }

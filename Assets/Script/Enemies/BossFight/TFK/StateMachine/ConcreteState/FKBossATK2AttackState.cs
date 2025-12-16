@@ -25,6 +25,7 @@ public class FKBossATK2AttackState : FKBossState
     {
         if(triggerType == FKBoss.AnimationTriggerType.ATK2RHShoot && (fkBoss.ATKTestType == FKBoss.TestType.ATK2RH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))
         {
+            SoundControl.Instance.FKBossThrowSoundPlay();
             Instantiate(fkBoss.ATK2RHBullet, fkBoss.ATK2RHShootPoint.position, Quaternion.identity).GetComponent<FKBossATK2RHBullet>().SetValue(fkBoss.ATK2RHBulletMaxSpeed, fkBoss.ATK2RHBulletMaxHeight, fkBoss.FKBossStatusController.GetBossDamage());
         }
         if(triggerType == FKBoss.AnimationTriggerType.ATK2LHAttack && (fkBoss.ATKTestType == FKBoss.TestType.ATK2LH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))

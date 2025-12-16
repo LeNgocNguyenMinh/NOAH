@@ -14,13 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Small HP Potion
   itemDescription: Recover small of health. Can use like a painkiller.
-  itemLitmitBuyQuantity: 2
   itemID: HPPotion_01
-  itemPrice: 5
+  itemPrice: 15
   itemSprite: {fileID: 21300000, guid: 02147a82dfc6a164d944e5722d1581ca, type: 3}
   itemPrefab: {fileID: 7547224070579580989, guid: 2f30e9455b87d4846a0241433eea9f9b, type: 3}
-  healthRecover: 10
-  weaponLevel: 0
-  materialNeedToUpgrade: 0
-  weaponDamage: 0
+  healthRecover: 30
   weaponBulletType: {fileID: 0}

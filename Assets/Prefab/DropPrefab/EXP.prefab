@@ -78,7 +78,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 199
   m_Time: 0.1
   m_PreviewTimeScale: 1
@@ -253,7 +253,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.0019889076}
-  m_Radius: 0.4741437
+  m_Radius: 0.5
 --- !u!114 &1144017747409013975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c8b57e87dadc765409fa146ec6e434c5, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
@@ -585,7 +585,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1549724067
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c8b57e87dadc765409fa146ec6e434c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

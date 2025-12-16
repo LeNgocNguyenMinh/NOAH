@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AOBossATK1IdleState : AOBossState
 {
-    private float timer = 0f;
+    private float timer;
     private Vector3 lhDirect;
     private Vector3 readyPos;
     public AOBossATK1IdleState(AOBoss aoBoss, AOBossStateMachine aoBossStateMachine) : base(aoBoss, aoBossStateMachine)
@@ -19,10 +19,6 @@ public class AOBossATK1IdleState : AOBossState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        if(timer>0)
-        {
-            timer -= Time.deltaTime;
-        }
         lhDirect = (Player.Instance.transform.position - aoBoss.LeftHand.position).normalized;
         float lAngle = Mathf.Atan2(lhDirect.y, lhDirect.x) * Mathf.Rad2Deg;
         aoBoss.LeftHand.rotation = Quaternion.Euler(0f, 0f, lAngle);
@@ -40,6 +36,7 @@ public class AOBossATK1IdleState : AOBossState
             }
         }
         else{
+            timer -= Time.deltaTime;
             readyPos = Player.Instance.transform.position;
             readyPos = new Vector3(readyPos.x + 1.5f, readyPos.y + 5f, readyPos.z);
             if(Vector3.Distance(aoBoss.RightHand.position, readyPos) > 0.1f)

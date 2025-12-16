@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class FKBossATK1AttackState : FKBossState
 {
-    private float coolDown;
-
     public FKBossATK1AttackState(FKBoss fkBoss, FKBossStateMachine fkBossStateMachine) : base(fkBoss, fkBossStateMachine)
     {
     }
@@ -26,6 +24,7 @@ public class FKBossATK1AttackState : FKBossState
     {
         if(triggerType == FKBoss.AnimationTriggerType.ATK1RHThrow && (fkBoss.ATKTestType == FKBoss.TestType.ATK1RH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))
         {
+            SoundControl.Instance.FKBossShootSoundPlay();
             Instantiate(fkBoss.Banana, fkBoss.RHThrowPoint.position, Quaternion.identity).GetComponent<FKBossATK1RHBullet>().SetValue(fkBoss.ATK1RHFlyTime, fkBoss.ATK1RhRotateSpeed, fkBoss.FKBossStatusController.GetBossDamage());
         }
         if(triggerType == FKBoss.AnimationTriggerType.ATK1LHThrow && (fkBoss.ATKTestType == FKBoss.TestType.ATK1LH || fkBoss.ATKTestType == FKBoss.TestType.AllATK))

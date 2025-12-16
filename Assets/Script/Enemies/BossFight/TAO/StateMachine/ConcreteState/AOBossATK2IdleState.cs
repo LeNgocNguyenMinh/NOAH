@@ -46,6 +46,7 @@ public class AOBossATK2IdleState : AOBossState
     }
     public void RHandBulletSpawn()
     {
+        SoundControl.Instance.AOBossShootSoundPlay();
         Instantiate(aoBoss.ATK2RHBulletPref, aoBoss.ATK2RHShootPos.position, Quaternion.identity).GetComponent<AOBossATK2RHBullet>().SetValue(rhDirect, aoBoss.ATK2RHBulletSpeed, aoBoss.ATK2RHBoundLimit, aoBoss.AOBossStatusController.GetBossDamage());
     }
     public void LHandBulletSpawn()

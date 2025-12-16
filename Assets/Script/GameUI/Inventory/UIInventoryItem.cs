@@ -58,15 +58,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         this.itemImage.enabled = true;
         this.itemImage.sprite = this.itemSprite;
         
-        if(itemID.Contains("Cloth"))
-        {
-            RectTransform rectTransform = this.itemImage.rectTransform;
-            rectTransform.sizeDelta = new Vector2(
-            this.itemImage.sprite.rect.width * 3f,
-            this.itemImage.sprite.rect.height * 3f);
-            this.quantityText.enabled = false;
-        }
-        else if(itemID.Contains("WP"))
+        if(itemID.Contains("WP"))
         {
             this.quantityText.enabled = false;
             RectTransform rectTransform = this.itemImage.rectTransform;
@@ -93,8 +85,8 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         {
             RectTransform rectTransform = this.itemImage.rectTransform;
             rectTransform.sizeDelta = new Vector2(
-            this.itemImage.sprite.rect.width * 1f,
-            this.itemImage.sprite.rect.height * 1f);
+            this.itemImage.sprite.rect.width * 2f,
+            this.itemImage.sprite.rect.height * 2f);
             this.quantityText.enabled = false;
         }
         else{

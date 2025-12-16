@@ -13,14 +13,10 @@ MonoBehaviour:
   m_Name: FireGem
   m_EditorClassIdentifier: 
   itemName: Fire Gem
-  itemDescription: Drop fom the dragon. You feel a bit hot.
-  itemLitmitBuyQuantity: 0
+  itemDescription: Drop from the boss. You feel a bit hot. Pretty sure not for eat.
   itemID: Gem_01
   itemPrice: 0
   itemSprite: {fileID: 21300000, guid: cdc49dd9466721044a51a15e083db2e3, type: 3}
   itemPrefab: {fileID: 7201876602067210802, guid: 1302f8e783af11e4398832f8ab3992a5, type: 3}
   healthRecover: 0
-  weaponLevel: 0
-  materialNeedToUpgrade: 0
-  weaponDamage: 0
   weaponBulletType: {fileID: 0}

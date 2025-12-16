@@ -84,7 +84,8 @@ public class SaveController : MonoBehaviour
             PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
             MissionManager.Instance.SetMissionList(saveData.missionSaveData);    
             PuzzleManager.Instance.SetPuzzleData(saveData.puzzleSaveData);
-            WeaponManager.Instance.SetWeaponData(saveData.weaponListData);    
+            WeaponManager.Instance.SetWeaponData(saveData.weaponListData);   
+            SoundControl.Instance.InGameMusicPlay(); 
             UIMouseAndPriority.Instance.canOpenUI = true;  
         }
     }
@@ -176,6 +177,7 @@ public class SaveController : MonoBehaviour
         PuzzleManager.Instance.SetPuzzleData(saveData.puzzleSaveData);   
         WeaponManager.Instance.SetWeaponData(saveData.weaponListData);   
         UIMouseAndPriority.Instance.canOpenUI = true; 
+        SoundControl.Instance.InGameMusicPlay();
         SaveGame();
     }
 }

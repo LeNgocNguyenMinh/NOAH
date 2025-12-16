@@ -9,19 +9,26 @@ public class SoundControl : MonoBehaviour
     [SerializeField]private AudioSource musicSrc;
     [SerializeField]private AudioSource sfxSrc;
     [Header("----------Game Music----------")]
-    public AudioClip mainMenuMusic;
-    public AudioClip inGameMusic;
+    [SerializeField]public AudioClip mainMenuMusic;
+    [SerializeField]public AudioClip inGameMusic;
+    [SerializeField]public AudioClip bossFightMusic;
     [Header("----------Player Audio Clips----------")]
-    public AudioClip playerShootSound;
-    public AudioClip PlayerMeleeSound;
-    public AudioClip playerWalkSound;
-    public AudioClip playerDashSound;
-    public AudioClip playerDeathSound;
-    public AudioClip coinSound;
-    public AudioClip expSound;
+    [SerializeField]public AudioClip playerShootSound;
+    [SerializeField]public AudioClip PlayerMeleeSound;
+    [SerializeField]public AudioClip playerWalkSound;
+    [SerializeField]public AudioClip playerDashSound;
+    [SerializeField]public AudioClip playerDeathSound;
+    [SerializeField]public AudioClip coinSound;
+    [SerializeField]public AudioClip expSound;
     [Header("----------FD Audio Clips----------")]
-    public AudioClip dragonRoar;
-    public AudioClip dragonFire;
+    [SerializeField]public AudioClip dragonRoar;
+    [SerializeField]public AudioClip dragonFire;
+    [Header("----------FruitKing Audio Clips----------")]
+    [SerializeField]public AudioClip fkBossThrow;
+    [SerializeField]public AudioClip fkBossShoot;
+    [Header("----------AncientOne Audio Clips----------")]
+    [SerializeField]public AudioClip aoBossHitGround;
+    [SerializeField]public AudioClip aoBossShoot;
     private void Awake()
     {
         if (Instance == null)
@@ -37,12 +44,7 @@ public class SoundControl : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 		string sceneName = currentScene.name;
-        if(sceneName == "Level1")
-        {
-            Debug.Log("Level1MusicPlay");
-            InGameMusicPlay();
-        }
-        else if(sceneName == "MainMenu")
+        if(sceneName == "MainMenu")
         {
             Debug.Log("mainMenuMusicPlay");
             MainMenuMusicPlay();
@@ -103,5 +105,25 @@ public class SoundControl : MonoBehaviour
     public void MainMenuMusicPlay()
     {
         PlayMusic(mainMenuMusic);
+    }
+    public void AOBossHitGroundSoundPlay()
+    {
+        PlaySFX(aoBossHitGround);
+    }
+    public void AOBossShootSoundPlay()
+    {
+        PlaySFX(aoBossShoot);
+    }
+    public void FKBossShootSoundPlay()
+    {
+        PlaySFX(fkBossShoot);
+    }
+    public void FKBossThrowSoundPlay()
+    {
+        PlaySFX(fkBossThrow);
+    }
+    public void BossFightMusicPlay()
+    {
+        PlayMusic(bossFightMusic);
     }
 }

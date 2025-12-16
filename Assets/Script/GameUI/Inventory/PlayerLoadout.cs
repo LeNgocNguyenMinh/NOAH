@@ -118,7 +118,7 @@ public class PlayerLoadout : MonoBehaviour
         weaponSlotImage.sprite = weapon.itemSprite; 
         RectTransform rectTransform = weaponSlotImage.rectTransform;
             rectTransform.sizeDelta = new Vector2(
-            weaponSlotImage.sprite.rect.width * 3f,
-            weaponSlotImage.sprite.rect.height * 3f);
+            weaponSlotImage.sprite.rect.width * 4f,
+            weaponSlotImage.sprite.rect.height * 4f);
     }
 }

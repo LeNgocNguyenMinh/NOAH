@@ -10,6 +10,7 @@ public class AOBossAwakeState : AOBossState
     public override void EnterState()
     {
         base.EnterState();
+        SoundControl.Instance.BossFightMusicPlay();
         aoBoss.AOBossStatusController.BossUpdateInfo();
         aoBoss.BossCounterUI.SetActive(true);
         UIMouseAndPriority.Instance.canOpenUI = false;

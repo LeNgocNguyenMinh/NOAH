@@ -12,15 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d27fc1f97eb4c44b52f89818d02dbe, type: 3}
   m_Name: BigPotion
   m_EditorClassIdentifier: 
-  itemName: Big HP Potion
+  itemName: Large HP Potion
   itemDescription: Recover 100 Health. Use it carefully cause it's very expensive.
-  itemLitmitBuyQuantity: 0
   itemID: HPPotion_03
-  itemPrice: 30
+  itemPrice: 50
   itemSprite: {fileID: 21300000, guid: 80793010ef1a73842a0922c3d2d6f3c4, type: 3}
   itemPrefab: {fileID: 7547224070579580989, guid: c3e121e655f113546b2cb6e036eb39c1, type: 3}
-  healthRecover: 100
-  weaponLevel: 0
-  materialNeedToUpgrade: 0
-  weaponDamage: 0
+  healthRecover: 200
   weaponBulletType: {fileID: 0}

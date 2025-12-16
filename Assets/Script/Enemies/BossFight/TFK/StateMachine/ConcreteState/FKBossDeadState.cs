@@ -24,6 +24,7 @@ public class FKBossDeadState : FKBossState
     {
         if(triggerType == FKBoss.AnimationTriggerType.DeadAnimFinish)
         {
+            SoundControl.Instance.InGameMusicPlay();
             fkBoss.BossDropAfterDead.DropOnDead();
             fkBoss.BossVanish();
         }

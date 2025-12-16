@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d27fc1f97eb4c44b52f89818d02dbe, type: 3}
   m_Name: PaperNote#1
   m_EditorClassIdentifier: 
-  itemName: Stange Note
+  itemName: Strange Note
   itemDescription: Everything blur. Only strange number array "2213" is clearly.
   itemID: Stuff_Note_01
   itemPrice: 0

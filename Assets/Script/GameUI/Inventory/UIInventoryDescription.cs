@@ -8,7 +8,8 @@ public class UIInventoryDescription : MonoBehaviour
     public static UIInventoryDescription Instance;
     [SerializeField]private TMP_Text itemNameBox;
     [SerializeField]private TMP_Text itemDescriptionBox;
-    [SerializeField]private TMP_Text itemFunction;
+    [SerializeField]private TMP_Text itemFunctionText;
+    [SerializeField]private GameObject itemFunctionBox;
     [SerializeField]private Image itemImageBox;
     [SerializeField]private GameObject requireForUpgrade;
     [SerializeField]private TMP_Text requireForUpgradeText;
@@ -38,13 +39,13 @@ public class UIInventoryDescription : MonoBehaviour
             if(item.itemID.Contains("WP"))//Mean only weapon has upgrade function available
             {
                 WeaponData wpInfo = WeaponManager.Instance.GetWeaponInfo(item.itemID);
-                itemFunction.gameObject.SetActive(true);
+                itemFunctionText.gameObject.SetActive(true);
                 weaponLevelBox.SetActive(true);
                 requireForUpgrade.SetActive(true);
                 wpUpgradeBtn.gameObject.SetActive(true);
                 weaponLevelText.text = "Level " + wpInfo.weaponLevel;
                 requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + wpInfo.materialNeedToUpgrade;
-                itemFunction.text = "Damage + " + wpInfo.weaponDamage;
+                itemFunctionText.text = "Damage + " + wpInfo.weaponDamage;
                 RectTransform rectTransform = itemImageBox.rectTransform;
                 rectTransform.sizeDelta = new Vector2(
                 itemImageBox.sprite.rect.width * 4f,
@@ -52,19 +53,19 @@ public class UIInventoryDescription : MonoBehaviour
             }
             else if(item.itemID.Contains("HP"))//else then show the item information
             {
-                itemFunction.gameObject.SetActive(true);
+                itemFunctionText.gameObject.SetActive(true);
                 weaponLevelBox.SetActive(false);
                 requireForUpgrade.SetActive(false);
                 wpUpgradeBtn.gameObject.SetActive(false);
-                itemFunction.text = "Health recover + " + item.healthRecover;
+                itemFunctionText.text = "Health recover + " + item.healthRecover;
             }
             else
             {
                 weaponLevelBox.SetActive(false);
                 requireForUpgrade.SetActive(false);
                 wpUpgradeBtn.gameObject.SetActive(false);
-                itemFunction.text = null;
-                itemFunction.gameObject.SetActive(false);
+                itemFunctionText.text = null;
+                itemFunctionBox.SetActive(false);
             }
         }
         else{
@@ -78,7 +79,7 @@ public class UIInventoryDescription : MonoBehaviour
         {
             PlayerStatus.Instance.AddCoin(-wpData.materialNeedToUpgrade);//Remove the coin player own
             WeaponManager.Instance.WeaponUpgrade(wpData.weaponID); //Add level weapon by 1 
-            itemFunction.text = "Damage + " + wpData.weaponDamage;//Update the damage
+            itemFunctionText.text = "Damage + " + wpData.weaponDamage;//Update the damage
             requireForUpgradeText.text = PlayerStatus.Instance.playerCoin + "/" + wpData.materialNeedToUpgrade; //Update the requirement for upgrade
             weaponLevelText.text = "Level " + wpData.weaponLevel;// Update the level text
             NotifPopUp.Instance.ShowNotification("Update " + itemInDescription.itemName + " succes to level " + wpData.weaponLevel);
@@ -92,7 +93,7 @@ public class UIInventoryDescription : MonoBehaviour
         weaponLevelBox.SetActive(false);
         requireForUpgrade.SetActive(false);
         wpUpgradeBtn.gameObject.SetActive(false);
-        itemFunction.text = null;
+        itemFunctionText.text = null;
         itemImageBox.enabled = false;
         itemNameBox.text = null;
         itemDescriptionBox.text = null;

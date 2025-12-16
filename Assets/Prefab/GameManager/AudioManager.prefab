@@ -179,6 +179,7 @@ MonoBehaviour:
   sfxSrc: {fileID: 904745784423894396}
   mainMenuMusic: {fileID: 8300000, guid: ee9285d40f672e94890c9778b6ed6b20, type: 3}
   inGameMusic: {fileID: 8300000, guid: e22ac09973cd92744939e3067fba0b59, type: 3}
+  bossFightMusic: {fileID: 8300000, guid: 3f890a8ed91c5354ab2ae1d453b81318, type: 3}
   playerShootSound: {fileID: 8300000, guid: 0be70ded609e5ee4fa32b855f92def9d, type: 3}
   PlayerMeleeSound: {fileID: 8300000, guid: ab98ab4937eb6164a9c03584dfdf097a, type: 3}
   playerWalkSound: {fileID: 8300000, guid: 209aab29d584cfe49b5400540fb6551b, type: 3}
@@ -188,6 +189,10 @@ MonoBehaviour:
   expSound: {fileID: 8300000, guid: 4d2e945190d1c2749b295e0f6512ffa6, type: 3}
   dragonRoar: {fileID: 8300000, guid: d1726cfa8ae26d8429bba6f16ee57480, type: 3}
   dragonFire: {fileID: 8300000, guid: 3785741d231857d498ae8b9fb96278b3, type: 3}
+  fkBossThrow: {fileID: 8300000, guid: 13ca9432297da26499251f0d7566a446, type: 3}
+  fkBossShoot: {fileID: 8300000, guid: f575ef2dfa93bbd4dad9c32e32ce6de6, type: 3}
+  aoBossHitGround: {fileID: 8300000, guid: 13ca9432297da26499251f0d7566a446, type: 3}
+  aoBossShoot: {fileID: 8300000, guid: f575ef2dfa93bbd4dad9c32e32ce6de6, type: 3}
 --- !u!1 &8742115598949056843
 GameObject:
   m_ObjectHideFlags: 0

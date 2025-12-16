@@ -10,6 +10,7 @@ public class FKBossAwakeState : FKBossState
     public override void EnterState()
     {
         base.EnterState();
+        SoundControl.Instance.BossFightMusicPlay();
         fkBoss.FKBossStatusController.BossUpdateInfo();
         fkBoss.BossCounterUI.SetActive(true);
         UIMouseAndPriority.Instance.canOpenUI = false;

@@ -12,15 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d27fc1f97eb4c44b52f89818d02dbe, type: 3}
   m_Name: MediumHPPotion
   m_EditorClassIdentifier: 
-  itemName: Medium  HP Potion
+  itemName: Medium HP Potion
   itemDescription: Recover 50 Health. Superrrrrrr!!!!
-  itemLitmitBuyQuantity: 3
   itemID: HPPotion_02
-  itemPrice: 20
+  itemPrice: 30
   itemSprite: {fileID: 21300000, guid: 9f8cab6573a7a3b4e9cf23c7883d9be0, type: 3}
   itemPrefab: {fileID: 7547224070579580989, guid: 9a36d95a2dfb13e40bb39c06fc153806, type: 3}
-  healthRecover: 50
-  weaponLevel: 0
-  materialNeedToUpgrade: 0
-  weaponDamage: 0
+  healthRecover: 100
   weaponBulletType: {fileID: 0}
