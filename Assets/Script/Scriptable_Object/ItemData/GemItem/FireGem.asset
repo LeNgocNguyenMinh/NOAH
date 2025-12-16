@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireGem
   m_EditorClassIdentifier: 
   itemName: Fire Gem
-  itemDescription: Drop from the boss. You feel a bit hot. Pretty sure not for eat.
+  itemDescription: Drop from the boss. You feel a bit hot.
   itemID: Gem_01
   itemPrice: 0
   itemSprite: {fileID: 21300000, guid: cdc49dd9466721044a51a15e083db2e3, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LightGem
   m_EditorClassIdentifier: 
   itemName: Light Gem
-  itemDescription: Drop fom the boss. You feel a strange power come from this stone.
+  itemDescription: Drop fom the boss. You feel a strange power.
   itemID: Gem_02
   itemPrice: 0
   itemSprite: {fileID: 21300000, guid: 59fa21061b9780149bed55a4fa0b1aa6, type: 3}
