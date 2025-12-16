@@ -1,5 +1,9 @@
-# Game demo
-https://lengocnguyenminh.itch.io/noah
+# itch.io
+Check this link for best gameplay and details.
+<p align="center">
+  https://lengocnguyenminh.itch.io/noah
+</p>
+
 # NOAH
 Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collect all 5 stones to revive the god HAON - the god of protection!!!
 <p align="center">
@@ -15,7 +19,8 @@ Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collec
   <img width="794" height="472" alt="image" src="https://github.com/user-attachments/assets/a25ebb29-c487-48de-ae6e-97016af3827b" />
   <img width="794" height="505" alt="image" src="https://github.com/user-attachments/assets/6b8486dc-335d-4018-bb54-27778fb36ae1" />
 </p>
-I. Game features:<br>
+
+# Game features
 - Player level: Player when level up gain points and can spend that point to health, damage or bullet in player status panel.<br>
 - Player status panel: Check player information and change attributes.(press C)<br>
 - Inventory: Collect items and they will be here. you can also check item information or add they to hot bar.(press I)<br>
@@ -28,6 +33,6 @@ I. Game features:<br>
 - Shop: Player can buy item at 7 A.M. (press F near shop)<br>
 - Environment: All draw by hand with animation, shader.<br>
 - Player: Have health system and level system, can shoot and dash.<br>
-- Demo:<br>
-https://youtu.be/STet1GGkSsc
+
+
 
