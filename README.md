@@ -4,6 +4,9 @@ Check this link for best gameplay and details.
   https://lengocnguyenminh.itch.io/noah
 </p>
 
+# Check Game Demo On Youtube
+[![IMAGE ALT TEXT HERE](https://github.com/user-attachments/assets/e9633cf2-332d-4b45-898f-c93466f0f8b8)](https://www.youtube.com/watch?v=STet1GGkSsc)
+
 # NOAH
 Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collect all 5 stones to revive the god HAON - the god of protection!!!
 <p align="center">
