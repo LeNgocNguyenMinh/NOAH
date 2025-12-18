@@ -168,7 +168,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
+        width: 96
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -188,9 +188,9 @@ TextureImporter:
       name: RHShock_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 0
-        width: 80
+        width: 96
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -210,9 +210,9 @@ TextureImporter:
       name: RHShock_2
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 0
-        width: 80
+        width: 96
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -232,9 +232,9 @@ TextureImporter:
       name: RHShock_3
       rect:
         serializedVersion: 2
-        x: 240
+        x: 288
         y: 0
-        width: 80
+        width: 96
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -254,9 +254,9 @@ TextureImporter:
       name: RHShock_4
       rect:
         serializedVersion: 2
-        x: 320
+        x: 384
         y: 0
-        width: 80
+        width: 96
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -286,7 +286,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":80.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       RHShock_0: -6884566050708265293
       RHShock_1: 4049020240368171139

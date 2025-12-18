@@ -24,7 +24,6 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public int ATK1MaxAtk { get; set; }
     public int AttackCount { get; set; }
     [field: Header("----Right Hand")]
-    [field: SerializeField]public GameObject ATK1SitePref { get; set; }
     [field: SerializeField]public float ATK1RHReadyTime { get; set; }
     [field: SerializeField]public float ATK1RHFlySpeed { get; set; }
     [field: SerializeField]public float ATK1RHFallSpeed { get; set; }
