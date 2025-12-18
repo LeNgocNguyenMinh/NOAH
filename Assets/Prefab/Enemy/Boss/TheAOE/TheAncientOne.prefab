@@ -127,7 +127,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2647690485999298322}
   - component: {fileID: 6979187634390786940}
-  - component: {fileID: 785369736546637944}
   - component: {fileID: 3234374968259930056}
   m_Layer: 0
   m_Name: RH
@@ -212,23 +211,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &785369736546637944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782769537053217961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5859ac7b12379fd40b6261f59a2f43e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthControl: {fileID: 8546079636946162697}
-  currentBoss: 0
-  dmgPopUpTrans: {fileID: 2535275078249216255}
-  damagePopUpPref: {fileID: 2722009802675096760, guid: 405543868e778f449bd8daf304bf740b, type: 3}
-  enemyHitEffect: {fileID: 0}
 --- !u!50 &3234374968259930056
 Rigidbody2D:
   serializedVersion: 5
@@ -266,7 +248,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3967416504445873582}
   - component: {fileID: 2453027938132712456}
-  - component: {fileID: 3370553245881713016}
   - component: {fileID: 4223958608492417837}
   m_Layer: 0
   m_Name: LH
@@ -351,23 +332,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &3370553245881713016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029699909554019877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5859ac7b12379fd40b6261f59a2f43e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthControl: {fileID: 8546079636946162697}
-  currentBoss: 0
-  dmgPopUpTrans: {fileID: 6968899789170482789}
-  damagePopUpPref: {fileID: 2722009802675096760, guid: 405543868e778f449bd8daf304bf740b, type: 3}
-  enemyHitEffect: {fileID: 0}
 --- !u!50 &4223958608492417837
 Rigidbody2D:
   serializedVersion: 5
@@ -1015,7 +979,8 @@ MonoBehaviour:
   AOBossStatusController: {fileID: 749851391937405332}
   <BossDropAfterDead>k__BackingField: {fileID: 5706955404002589809}
   <ATK1MaxAtk>k__BackingField: 3
-  <ATK1SitePref>k__BackingField: {fileID: 1964090138540030929, guid: 5003ceaa61a2cbb42b0758fb38c1c7bf, type: 3}
+  <ATK1RHShock>k__BackingField: {fileID: 2313619389788234794, guid: 7e775579ae8c82e4f9ce085333240123, type: 3}
+  <ATK1RHShockPos>k__BackingField: {fileID: 8770755758799849464}
   <ATK1RHReadyTime>k__BackingField: 2
   <ATK1RHFlySpeed>k__BackingField: 10
   <ATK1RHFallSpeed>k__BackingField: 15

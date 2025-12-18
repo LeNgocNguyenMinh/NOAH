@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 639016698442028099
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -129,16 +129,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: RHATK2Ready_Frame_0
     originalName: 
-    pivot: {x: 0.45945945, y: -0.91176474}
+    pivot: {x: 0.45945945, y: -0.8857143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 198
+      y: 202
       width: 74
-      height: 34
+      height: 35
     spriteID: 6bcce1f88d24d6d4b93d6acd076a8c7d
     spriteBone: []
     spriteOutline: []
@@ -147,19 +147,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 198}
+    uvTransform: {x: 4, y: 202}
   - name: RHATK2Ready_Frame_1
     originalName: 
-    pivot: {x: 0.47368422, y: -0.775}
+    pivot: {x: 0.47368422, y: -0.75609756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 150
+      y: 153
       width: 76
-      height: 40
+      height: 41
     spriteID: d61397b351beb354db403ec657ba43c8
     spriteBone: []
     spriteOutline: []
@@ -168,19 +168,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 150}
+    uvTransform: {x: 4, y: 153}
   - name: RHATK2Ready_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.7948718}
+    pivot: {x: 0.5, y: -0.775}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 103
+      y: 105
       width: 80
-      height: 39
+      height: 40
     spriteID: 47b6bac44e16ac84993f4ca37d58e71d
     spriteBone: []
     spriteOutline: []
@@ -189,10 +189,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 103}
+    uvTransform: {x: 4, y: 105}
   - name: RHATK2Ready_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.7209302}
+    pivot: {x: 0.5, y: -0.70454544}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -201,7 +201,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 80
-      height: 43
+      height: 44
     spriteID: 1d1ee19ba8f318946972df8370d71a87
     spriteBone: []
     spriteOutline: []
@@ -213,16 +213,16 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: RHATK2Ready_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.775}
+    pivot: {x: 0.5, y: -0.75609756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 55
+      y: 56
       width: 80
-      height: 40
+      height: 41
     spriteID: bdb59e4b4cc8c574a8c276e90cb3f8ad
     spriteBone: []
     spriteOutline: []
@@ -231,7 +231,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 55}
+    uvTransform: {x: 4, y: 56}
   spriteSheetImportData: []
   tileSetImportData: []
   asepriteLayers:
@@ -254,7 +254,7 @@ ScriptedImporter:
         x: 6
         y: 31
         width: 74
-        height: 34
+        height: 35
       spriteId: 6bcce1f88d24d6d4b93d6acd076a8c7d
     - name: Frame_1
       frameIndex: 1
@@ -263,7 +263,7 @@ ScriptedImporter:
         x: 4
         y: 31
         width: 76
-        height: 40
+        height: 41
       spriteId: d61397b351beb354db403ec657ba43c8
     - name: Frame_2
       frameIndex: 2
@@ -272,7 +272,7 @@ ScriptedImporter:
         x: 0
         y: 31
         width: 80
-        height: 39
+        height: 40
       spriteId: 47b6bac44e16ac84993f4ca37d58e71d
     - name: Frame_3
       frameIndex: 3
@@ -281,7 +281,7 @@ ScriptedImporter:
         x: 0
         y: 31
         width: 80
-        height: 43
+        height: 44
       spriteId: 1d1ee19ba8f318946972df8370d71a87
     - name: Frame_4
       frameIndex: 4
@@ -290,7 +290,7 @@ ScriptedImporter:
         x: 0
         y: 31
         width: 80
-        height: 40
+        height: 41
       spriteId: bdb59e4b4cc8c574a8c276e90cb3f8ad
     linkedCells: []
     tileCells: []
@@ -302,6 +302,30 @@ ScriptedImporter:
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0

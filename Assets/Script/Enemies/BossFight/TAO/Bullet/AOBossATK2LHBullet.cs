@@ -4,8 +4,8 @@ public class AOBossATK2LHBullet : MonoBehaviour
 {
     private Vector3 direct;
     private float speed;
-    private Animator animator;
-    private Rigidbody2D rb;
+    [SerializeField]private Animator animator;
+    [SerializeField]private Rigidbody2D rb;
     private int flyTime;
     private bool animTrigger = false;
     private float damage;
@@ -15,8 +15,6 @@ public class AOBossATK2LHBullet : MonoBehaviour
         this.speed = speed;
         this.flyTime = flyTime;
         this.damage = damage;
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         Shoot();
     }
     public void Shoot()

@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 639016704270360572
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -136,7 +136,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 97
+      y: 99
       width: 79
       height: 34
     spriteID: 5b1c0458c2dd32e45bd9130ff5c66bd9
@@ -147,7 +147,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 97}
+    uvTransform: {x: 4, y: 99}
   - name: LHATK1Idle_Frame_1
     originalName: 
     pivot: {x: 0.5063291, y: -0.91176474}
@@ -157,7 +157,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 139
+      y: 141
       width: 79
       height: 34
     spriteID: e4573145c1aaefe459cd17380a4c1dc3
@@ -168,19 +168,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 139}
+    uvTransform: {x: 4, y: 141}
   - name: LHATK1Idle_Frame_2
     originalName: 
-    pivot: {x: 0.5063291, y: -0.81578946}
+    pivot: {x: 0.5063291, y: -0.7948718}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 51
+      y: 52
       width: 79
-      height: 38
+      height: 39
     spriteID: 0deb1f7d1337f094da74eee92e721016
     spriteBone: []
     spriteOutline: []
@@ -189,7 +189,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 51}
+    uvTransform: {x: 4, y: 52}
   - name: LHATK1Idle_Frame_3
     originalName: 
     pivot: {x: 0.5063291, y: -0.91176474}
@@ -199,7 +199,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 181
+      y: 183
       width: 79
       height: 34
     spriteID: 17c13a9089679e3488684930a1a62a73
@@ -210,10 +210,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 181}
+    uvTransform: {x: 4, y: 183}
   - name: LHATK1Idle_Frame_4
     originalName: 
-    pivot: {x: 0.5063291, y: -0.6666667}
+    pivot: {x: 0.5063291, y: -0.625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -222,7 +222,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 79
-      height: 39
+      height: 40
     spriteID: a9b0afa739b1e25478815ade7b1b2969
     spriteBone: []
     spriteOutline: []
@@ -272,7 +272,7 @@ ScriptedImporter:
         x: 0
         y: 31
         width: 79
-        height: 38
+        height: 39
       spriteId: 0deb1f7d1337f094da74eee92e721016
     - name: Frame_3
       frameIndex: 3
@@ -288,9 +288,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 26
+        y: 25
         width: 79
-        height: 39
+        height: 40
       spriteId: a9b0afa739b1e25478815ade7b1b2969
     linkedCells: []
     tileCells: []
@@ -302,6 +302,30 @@ ScriptedImporter:
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0

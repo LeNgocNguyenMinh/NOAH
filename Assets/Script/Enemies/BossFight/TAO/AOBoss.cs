@@ -24,6 +24,8 @@ public class AOBoss : MonoBehaviour
     [field: SerializeField]public int ATK1MaxAtk { get; set; }
     public int AttackCount { get; set; }
     [field: Header("----Right Hand")]
+    [field: SerializeField]public GameObject ATK1RHShock { get; set; }
+    [field: SerializeField]public Transform ATK1RHShockPos { get; set; }
     [field: SerializeField]public float ATK1RHReadyTime { get; set; }
     [field: SerializeField]public float ATK1RHFlySpeed { get; set; }
     [field: SerializeField]public float ATK1RHFallSpeed { get; set; }
@@ -72,6 +74,7 @@ public class AOBoss : MonoBehaviour
         AwakeAnimFinish, 
         IdleAnimFinish,
         ATK1ReadyAnimFinish,
+        ATK1RHAnimFinish,
         ATK2ReadyAnimFinish,
         ATK2EndAnimFinish,
         DeadAnimFinish,

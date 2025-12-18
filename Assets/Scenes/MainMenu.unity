@@ -1462,7 +1462,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notificationPrefab: {fileID: 7429168638888554668, guid: 397ad4bba1630204bbacdb267481e67d, type: 3}
   notificationPanel: {fileID: 338852472}
-  notificationDuration: 2
   fadeDuration: 0.5
   maxPopups: 3
 --- !u!114 &163526074

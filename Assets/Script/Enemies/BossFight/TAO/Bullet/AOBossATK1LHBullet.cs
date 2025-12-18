@@ -4,8 +4,8 @@ public class AOBossATK1LHBullet : MonoBehaviour
 {
     private Vector3 direct;
     private float speed;
-    private Animator animator;
-    private Rigidbody2D rb;
+    [SerializeField]private Animator animator;
+    [SerializeField]private Rigidbody2D rb;
     private float flyTime;
     private bool breaking = false;
     private float damage;
@@ -42,8 +42,6 @@ public class AOBossATK1LHBullet : MonoBehaviour
     }
     public void Shoot()
     {
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
         animator.SetTrigger("Fly");
     }
     private void OnTriggerEnter2D(Collider2D collider)

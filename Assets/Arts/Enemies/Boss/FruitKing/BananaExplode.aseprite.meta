@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 639016751043580381
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -135,8 +135,8 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 74
-      y: 4
+      x: 198
+      y: 64
       width: 44
       height: 23
     spriteID: 68c77971c8d326c4a87920799886e808
@@ -147,18 +147,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 74, y: 4}
+    uvTransform: {x: 198, y: 64}
   - name: BananaExplode_Frame_1
     originalName: 
-    pivot: {x: 0.5227273, y: -0.65217394}
+    pivot: {x: 0.5, y: -0.47826087}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 149
-      width: 44
+      x: 198
+      y: 95
+      width: 42
       height: 23
     spriteID: 91b6b08e22ed2174e953539d386cb993
     spriteBone: []
@@ -168,19 +168,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 149}
+    uvTransform: {x: 198, y: 95}
   - name: BananaExplode_Frame_2
     originalName: 
-    pivot: {x: 0.5121951, y: -0.8333333}
+    pivot: {x: 0.5, y: -0.13513514}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 180
-      width: 41
-      height: 18
+      x: 140
+      y: 64
+      width: 50
+      height: 37
     spriteID: 7e2b7b1232fea3d41bb5d67b45916df6
     spriteBone: []
     spriteOutline: []
@@ -189,19 +189,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 180}
+    uvTransform: {x: 140, y: 64}
   - name: BananaExplode_Frame_3
     originalName: 
-    pivot: {x: 0.53846157, y: -1}
+    pivot: {x: 0.5, y: -0.022727273}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 206
-      width: 39
-      height: 17
+      x: 146
+      y: 4
+      width: 58
+      height: 44
     spriteID: 0ade3b520323c8e46949622647b324a4
     spriteBone: []
     spriteOutline: []
@@ -210,19 +210,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 206}
+    uvTransform: {x: 146, y: 4}
   - name: BananaExplode_Frame_4
     originalName: 
-    pivot: {x: 0.5217391, y: -0.6086957}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 69
-      y: 56
-      width: 46
-      height: 23
+      x: 4
+      y: 73
+      width: 62
+      height: 50
     spriteID: a8e1fb0dc53d65f47bc785a1f720eb8c
     spriteBone: []
     spriteOutline: []
@@ -231,19 +231,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 69, y: 56}
+    uvTransform: {x: 4, y: 73}
   - name: BananaExplode_Frame_5
     originalName: 
-    pivot: {x: 0.5178572, y: -0.22222222}
+    pivot: {x: 0.5, y: -0.03846154}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 105
-      width: 56
-      height: 36
+      x: 74
+      y: 4
+      width: 64
+      height: 52
     spriteID: cd3a84f0ce7778a448e56dfef4d80789
     spriteBone: []
     spriteOutline: []
@@ -252,19 +252,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 105}
+    uvTransform: {x: 74, y: 4}
   - name: BananaExplode_Frame_6
     originalName: 
-    pivot: {x: 0.50877196, y: -0.14634146}
+    pivot: {x: 0.5, y: -0.018181818}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 56
-      width: 57
-      height: 41
+      x: 74
+      y: 64
+      width: 58
+      height: 55
     spriteID: 357109f943a48ec4b8709f1b84b6035c
     spriteBone: []
     spriteOutline: []
@@ -273,10 +273,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 56}
+    uvTransform: {x: 74, y: 64}
   - name: BananaExplode_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: -0.09090909}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -285,7 +285,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 62
-      height: 44
+      height: 61
     spriteID: 19570b17dea7c904fa73a02ae37067b0
     spriteBone: []
     spriteOutline: []
@@ -323,64 +323,64 @@ ScriptedImporter:
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 15
-        width: 44
+        x: 11
+        y: 11
+        width: 42
         height: 23
       spriteId: 91b6b08e22ed2174e953539d386cb993
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 11
-        y: 15
-        width: 41
-        height: 18
+        x: 7
+        y: 5
+        width: 50
+        height: 37
       spriteId: 7e2b7b1232fea3d41bb5d67b45916df6
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 11
-        y: 17
-        width: 39
-        height: 17
+        x: 3
+        y: 1
+        width: 58
+        height: 44
       spriteId: 0ade3b520323c8e46949622647b324a4
     - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 14
-        width: 46
-        height: 23
+        x: 1
+        y: 0
+        width: 62
+        height: 50
       spriteId: a8e1fb0dc53d65f47bc785a1f720eb8c
     - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 8
-        width: 56
-        height: 36
+        x: 0
+        y: 2
+        width: 64
+        height: 52
       spriteId: cd3a84f0ce7778a448e56dfef4d80789
     - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
         x: 3
-        y: 6
-        width: 57
-        height: 41
+        y: 1
+        width: 58
+        height: 55
       spriteId: 357109f943a48ec4b8709f1b84b6035c
     - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
         x: 1
-        y: 4
+        y: 0
         width: 62
-        height: 44
+        height: 61
       spriteId: 19570b17dea7c904fa73a02ae37067b0
     linkedCells: []
     tileCells: []
@@ -400,8 +400,32 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
-  previousTextureSize: {x: 128, y: 256}
+  previousTextureSize: {x: 256, y: 128}

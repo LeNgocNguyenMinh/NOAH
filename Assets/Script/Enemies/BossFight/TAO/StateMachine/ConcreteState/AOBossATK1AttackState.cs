@@ -45,7 +45,10 @@ public class AOBossATK1AttackState : AOBossState
     }
     public override void AnimationTriggerEvent(AOBoss.AnimationTriggerType triggerType)
     {
-        
+        if(triggerType == AOBoss.AnimationTriggerType.ATK1RHAnimFinish)
+        {
+            Instantiate(aoBoss.ATK1RHShock, aoBoss.ATK1RHShockPos.position, Quaternion.identity).GetComponent<AOBossATK1RHShock>().SetValue(aoBoss.AOBossStatusController.GetBossDamage());
+        }
     }
     public void LHandBulletSpawn()
     {
@@ -53,4 +56,5 @@ public class AOBossATK1AttackState : AOBossState
         Instantiate(aoBoss.ATK1LHBulletPref, aoBoss.ATK1LHShootPos.position, Quaternion.identity)
         .GetComponent<AOBossATK1LHBullet>().SetValue(aoBoss.ATK1LHBulletSpeed, aoBoss.ATK1LHBulletTime, aoBoss.AOBossStatusController.GetBossDamage());
     }
+    
 }
