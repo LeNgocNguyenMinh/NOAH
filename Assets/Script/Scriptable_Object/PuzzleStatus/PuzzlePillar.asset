@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PuzzlePillar
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleStatus
   puzzleID: Puzzle_01
-  puzzlePos: {x: 56.05, y: 3.94, z: 0}
+  puzzlePos: {x: 56.12, y: 0.88, z: 0}
   puzzlePrefab: {fileID: 3583241558717531985, guid: 0b3c59f35dfe40e40bde22e289210555, type: 3}

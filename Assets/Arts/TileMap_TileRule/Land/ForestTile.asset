@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: ForestTile
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: -1917387833, guid: f4931225b2fc73c499faa7d51e7ec153, type: 3}
+  m_DefaultSprite: {fileID: 2918565149622113277, guid: f4931225b2fc73c499faa7d51e7ec153, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
