@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
+using UnityEngine.EventSystems;
 
-public class PlayerLoadout : MonoBehaviour
+public class PlayerLoadout : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public static PlayerLoadout Instance;
     [SerializeField]private Image weaponSlotImage;
+    [SerializeField]private RectTransform weaponSlotRect;
     private Item currentEquipWeapon;
+    private bool isSelect = false;
     private PlayerCurrentClothChange playerCurrentClothChange;
     private void Awake()
     {
@@ -120,5 +124,35 @@ public class PlayerLoadout : MonoBehaviour
             rectTransform.sizeDelta = new Vector2(
             weaponSlotImage.sprite.rect.width * 4f,
             weaponSlotImage.sprite.rect.height * 4f);
+    }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        weaponSlotRect.DOKill();
+        weaponSlotRect.DOScale(1.25f, .5f)
+                    .SetEase(Ease.OutBack).SetUpdate(true);
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        weaponSlotRect.DOKill(); // 🔥 Kill tween đang chạy
+        weaponSlotRect.DOScale(Vector3.one, 0.15f)
+            .SetEase(Ease.OutQuad).SetUpdate(true);
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if(eventData.button == PointerEventData.InputButton.Left)
+        {
+            if(isSelect)
+            {
+                UIInventoryPage.Instance.CloseDescriptionPanel();
+                isSelect = false;
+            }
+            else{
+                UIInventoryPage.Instance.OnlyClickOneSlot();
+                UIInventoryPage.Instance.OnlySellectOneSlot();
+                UIInventoryDescription.Instance.ItemShowInformation(currentEquipWeapon);
+                UIInventoryPage.Instance.OpenDescriptionPanel();
+                isSelect = true;
+            }
+        }
     }
 }

@@ -128,12 +128,13 @@ public class UIInventoryController : MonoBehaviour
         {
             return;
         }
-        UIInventoryPage.Instance.InventoryUpdateClose();
+        UIInventoryPage.Instance.CloseDescriptionPanel();
         animator.SetTrigger("Stop");
         MoveDown();
     }
     public void MoveUp()
     {
+        ismPanel.DOKill();
         ismPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             Time.timeScale = 0f;
@@ -141,6 +142,7 @@ public class UIInventoryController : MonoBehaviour
     }
     public void MoveDown()
     {
+        ismPanel.DOKill();
         ismPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             missionBoardOpen = false;

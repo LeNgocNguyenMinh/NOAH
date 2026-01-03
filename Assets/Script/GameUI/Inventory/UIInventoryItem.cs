@@ -5,9 +5,10 @@ using TMPro;
 using System;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 using Unity.VisualScripting;
 
-public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
+public class UIInventoryItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     ////////////////////Item data
     private string itemName;
@@ -19,7 +20,9 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     private Item item;
     [SerializeField]private TMP_Text quantityText;
     [SerializeField]private Image itemImage;
+    [SerializeField]private RectTransform itemImageRect;
     [SerializeField]private GameObject choicePanel;
+    [SerializeField]private RectTransform rectTransform;
     public bool isHotBarSlot;
     public GameObject border;
     private bool isSelect;
@@ -85,8 +88,8 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         {
             RectTransform rectTransform = this.itemImage.rectTransform;
             rectTransform.sizeDelta = new Vector2(
-            this.itemImage.sprite.rect.width * 2f,
-            this.itemImage.sprite.rect.height * 2f);
+            this.itemImage.sprite.rect.width * 5f,
+            this.itemImage.sprite.rect.height * 5f);
             this.quantityText.enabled = false;
         }
         else{
@@ -167,6 +170,25 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         choicePanel.SetActive(false);
         UIInventoryDescription.Instance.ItemHideInformation();
     }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("Enter");
+        if(isHotBarSlot)return;
+        if(this.isEmpty) return;
+        Debug.Log("Interact");
+        itemImageRect.DOKill();
+        itemImageRect.DOScale(1.25f, .5f)
+                    .SetEase(Ease.OutBack).SetUpdate(true);
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (isHotBarSlot) return;
+        if (isEmpty) return;
+
+        itemImageRect.DOKill(); // 🔥 Kill tween đang chạy
+        itemImageRect.DOScale(Vector3.one, 0.15f)
+            .SetEase(Ease.OutQuad).SetUpdate(true);
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         if(isHotBarSlot)return;
@@ -202,7 +224,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
     public void OnLeftClick()//Show this item information 
     {
         if(isHotBarSlot)return;
-        if(this.isEmpty) return;
+        if(isEmpty) return;
         if(isSelect)
         {
             choicePanel.SetActive(false);
@@ -213,7 +235,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
         else{
             UIInventoryPage.Instance.OnlyClickOneSlot();
             UIInventoryPage.Instance.OnlySellectOneSlot();
-            UIInventoryDescription.Instance.ItemShowInformation(this.item);
+            UIInventoryDescription.Instance.ItemShowInformation(item);
             border.SetActive(true);
             UIInventoryPage.Instance.OpenDescriptionPanel();
             isSelect = true;

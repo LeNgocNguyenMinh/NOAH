@@ -16,8 +16,8 @@ public class UIInventoryPage : MonoBehaviour
     [SerializeField]private Vector2 hiddenPosition;
     [SerializeField]private Vector2 visiblePosition;
     [SerializeField]private float moveDuration = 0.5f; // Thời gian di chuyển
-    public bool descriptionPanelOpen = false;
     [SerializeField]private int inventorySize;
+    public bool desPanelOpen;
 
     private void Awake()
     {
@@ -26,6 +26,7 @@ public class UIInventoryPage : MonoBehaviour
     }
     private void Start()
     {
+        desPanelOpen = false;
         if(listOfUIItems == null)
         {
             InitializeInventoryUI();
@@ -43,8 +44,13 @@ public class UIInventoryPage : MonoBehaviour
         listOfUIItems = new List<UIInventoryItem>();
         for (int i = 0; i < inventorySize; i++)
         {
-            UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
-            uiItem.transform.SetParent(contentPanel);
+            UIInventoryItem uiItem = Instantiate(itemPrefab, contentPanel);
+
+            // đảm bảo local transform sạch
+            RectTransform rect = uiItem.GetComponent<RectTransform>();
+            rect.localScale = Vector3.one;
+            rect.localRotation = Quaternion.identity;
+            rect.anchoredPosition3D = Vector3.zero;
             listOfUIItems.Add(uiItem);
         }
     }
@@ -63,17 +69,17 @@ public class UIInventoryPage : MonoBehaviour
     }
     public void OpenDescriptionPanel()
     {
-        descriptionPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
-        {
-            descriptionPanelOpen = true;
-        });
+        desPanelOpen = true;
+        descriptionPanel.DOKill();
+        descriptionPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true);
     }
     public void CloseDescriptionPanel()
     {
-        UIInventoryDescription.Instance.ItemHideInformation();
-        descriptionPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
+        desPanelOpen = false;
+        descriptionPanel.DOKill();
+        descriptionPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(()=>
         {
-            descriptionPanelOpen = false;
+            UIInventoryDescription.Instance.ItemHideInformation();
         });
     }
     //Find slot for new item
@@ -156,10 +162,7 @@ public class UIInventoryPage : MonoBehaviour
         uiInventoryDescription = GetComponent<UIInventoryDescription>();
         uiInventoryDescription.ItemHideInformation();
     }
-    public void InventoryUpdateClose()
-    {
-        CloseDescriptionPanel();
-    }
+
     public List<InventorySaveData> GetInventoryItems()
     {
         List<InventorySaveData> invData = new List<InventorySaveData>();

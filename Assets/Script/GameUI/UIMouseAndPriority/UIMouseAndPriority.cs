@@ -34,6 +34,7 @@ public class UIMouseAndPriority : MonoBehaviour
     }
     private void Update()
     {
+        if(SceneTransition.Instance.inAnim) return;
         if(Input.GetKeyDown(KeyCode.C) && !IsInLimitInteractPanel() && canOpenUI) 
         {
             UIInventoryController.Instance.StatusUIInteract();

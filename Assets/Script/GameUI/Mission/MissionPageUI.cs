@@ -26,17 +26,19 @@ public class MissionPageUI : MonoBehaviour
         ClearMissionBoard();
         for (int i = 0; i < listOfMission.Count; i++)
         {
-            MissionUIPrefab missionPrefab = Instantiate(missionUIPrefab, Vector3.zero, Quaternion.identity);
             if(!listOfMission[i].isFinish)
             {
-                missionPrefab.transform.SetParent(activeMissContent);
+                MissionUIPrefab missionPrefab = Instantiate(missionUIPrefab, activeMissContent);
+                missionPrefab.SetMissionInfo(listOfMission[i]);
+                listOfMissionPrefab.Add(missionPrefab);
             }
             else{
-                missionPrefab.transform.SetParent(finishMissContent);
+                MissionUIPrefab missionPrefab = Instantiate(missionUIPrefab, finishMissContent);
                 missionPrefab.HideToggle();
+                missionPrefab.SetMissionInfo(listOfMission[i]);
+                listOfMissionPrefab.Add(missionPrefab);
             }
-            missionPrefab.SetMissionInfo(listOfMission[i]);
-            listOfMissionPrefab.Add(missionPrefab);
+            
         }
     }
     public void UnCheckOther(string missionID)

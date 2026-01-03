@@ -54,6 +54,7 @@ public class ShopController : MonoBehaviour
         }
         UpdateShopCoinText();
         shopPanelIsOpen = true;
+        panel.DOKill();
         panel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             Time.timeScale = 0f;
@@ -62,6 +63,7 @@ public class ShopController : MonoBehaviour
     public void ShopUIClose()
     {
         shopPanelIsOpen = false;
+        panel.DOKill();
         panel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             Time.timeScale = 1f;

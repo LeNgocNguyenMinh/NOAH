@@ -32,6 +32,7 @@ public class MissionUIController : MonoBehaviour
     }
     private void ShowSmallMissionUI()
     {
+        smallPanel.DOKill();
         smallPanel.DOAnchorPos(visiblePositionSmall, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             isMissSmallShown = true;
@@ -39,6 +40,7 @@ public class MissionUIController : MonoBehaviour
     }
     private void HideSmallMissionUI()
     {
+        smallPanel.DOKill();
         smallPanel.DOAnchorPos(hiddenPositionSmall, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             isMissSmallShown = false;

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6005780578427711950}
-  - component: {fileID: 2691204497989851579}
   - component: {fileID: 4980654971411697111}
   m_Layer: 5
   m_Name: PopUpSpace
@@ -38,14 +37,6 @@ RectTransform:
   m_AnchoredPosition: {x: 25, y: 156}
   m_SizeDelta: {x: 1, y: 530.9396}
   m_Pivot: {x: 0, y: 0}
---- !u!222 &2691204497989851579
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2402549040274543608}
-  m_CullTransparentMesh: 1
 --- !u!114 &4980654971411697111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +109,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notificationPrefab: {fileID: 7429168638888554668, guid: 397ad4bba1630204bbacdb267481e67d, type: 3}
   notificationPanel: {fileID: 6005780578427711950}
-  notificationDuration: 2
   fadeDuration: 1
   maxPopups: 3

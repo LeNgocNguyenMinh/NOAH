@@ -139,11 +139,6 @@ public class MainMenu : MonoBehaviour
         if (File.Exists(saveLocation))
         {
             OnLoading();
-            // Đọc nội dung của file save
-            string jsonContent = File.ReadAllText(saveLocation);
-
-            // Chuyển nội dung JSON thành đối tượng SaveData
-            SaveData saveData = JsonUtility.FromJson<SaveData>(jsonContent);
             SceneTransition.Instance.SceneOut();
             // Trả về giá trị saveScene
             progressText.gameObject.SetActive(true);
@@ -152,6 +147,24 @@ public class MainMenu : MonoBehaviour
         else{
             NotifPopUp.Instance.ShowNotification("No save file found!");
         }
+        /* #if UNITY_WEBGL
+        if (!PlayerPrefs.HasKey("SaveData"))
+        {
+            NotifPopUp.Instance.ShowNotification("No save file found!");
+            return;
+        }
+        #else
+        if (!File.Exists(saveLocation))
+        {
+            NotifPopUp.Instance.ShowNotification("No save file found!");
+            return;
+        }
+        #endif
+        OnLoading();
+        SceneTransition.Instance.SceneOut();
+        progressText.gameObject.SetActive(true);
+        StartCoroutine(LoadSceneAsync("Level1"));
+        */
     }
     private IEnumerator LoadSceneAsync(string sceneName)
     {

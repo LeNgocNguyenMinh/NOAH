@@ -127,4 +127,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6918783322542563943}
+  pillarInteract: {fileID: 0}
   lightIdleTime: 0

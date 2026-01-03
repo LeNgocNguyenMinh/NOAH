@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 6.9999695, y: 0}
+  m_AnchoredPosition: {x: 7, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &477665825138842087
@@ -417,7 +417,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4397738642221099747}
-  - component: {fileID: 6853719013505607777}
   - component: {fileID: 1627083424435747283}
   m_Layer: 5
   m_Name: HotBarUI
@@ -448,14 +447,6 @@ RectTransform:
   m_AnchoredPosition: {x: -591, y: -381}
   m_SizeDelta: {x: 531.56, y: 120.400024}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6853719013505607777
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8877310692037483790}
-  m_CullTransparentMesh: 1
 --- !u!114 &1627083424435747283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,11 +472,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMax.x
@@ -541,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 167
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -558,6 +549,10 @@ PrefabInstance:
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281605845659868315, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
+      propertyPath: isHotBarSlot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2923581674269281419, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -621,15 +616,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMax.y
@@ -637,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMin.y
@@ -685,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 162
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -698,6 +693,10 @@ PrefabInstance:
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281605845659868315, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
+      propertyPath: isHotBarSlot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2923581674269281419, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -761,11 +760,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMax.x
@@ -773,7 +772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMin.x
@@ -781,7 +780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_SizeDelta.x
@@ -838,6 +837,10 @@ PrefabInstance:
     - target: {fileID: 1017517719626201208, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281605845659868315, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
+      propertyPath: isHotBarSlot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2923581674269281419, guid: 1009a8491991e4149bb9658aecdabd40, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'

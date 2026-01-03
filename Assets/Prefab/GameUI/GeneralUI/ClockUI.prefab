@@ -79,10 +79,6 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 7
     m_NumAlphaKeys: 3
-  lightSource: {fileID: 0}
-  fireFly: {fileID: 0}
-  sunLight:
-  - {fileID: 0}
   tick: 50
 --- !u!1 &3872967272446393879
 GameObject:
@@ -893,7 +889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7497307580271149877}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

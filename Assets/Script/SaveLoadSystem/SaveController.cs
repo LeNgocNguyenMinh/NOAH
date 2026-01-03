@@ -7,8 +7,7 @@ public class SaveController : MonoBehaviour
     public static SaveController Instance;
     private string saveLocation;
     private string newGameSaveLocation;
-    private SaveData existingData;
-    [SerializeField]private List<Item> weaponList;
+    private const string SAVE_KEY = "SaveData";
     void Awake()
     {
         if(Instance == null)
@@ -25,9 +24,6 @@ public class SaveController : MonoBehaviour
     public void SaveGame()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
-        existingData = File.Exists(saveLocation) ? 
-            JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation)) : 
-            new SaveData();
         SaveData saveData = new SaveData
         {
             playerPosition = Player.Instance.transform.position,
@@ -48,9 +44,6 @@ public class SaveController : MonoBehaviour
     public void SaveGameByBed()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
-        existingData = File.Exists(saveLocation) ? 
-            JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation)) : 
-            new SaveData();
         SaveData saveData = new SaveData
         {
             playerPosition = Player.Instance.transform.position,
@@ -180,4 +173,202 @@ public class SaveController : MonoBehaviour
         SoundControl.Instance.InGameMusicPlay();
         SaveGame();
     }
+    //Load save for WebGL
+    /* public void SaveGame()
+    {
+        SaveData saveData = new SaveData
+        {
+            playerPosition = Player.Instance.transform.position,
+            inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
+            hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
+            shopSaveData = ShopController.Instance.GetListItemInShop(),
+            itemInGroundSaveData = ItemInGroundController.Instance.GetListItemInGround(),
+            bossSaveData = BossSaveData.Instance.GetAllBossCurrentStatus(),
+            timeSaveData = TimeManager.Instance.GetTime(),
+            playerSaveData = PlayerStatus.Instance.GetPlayerInfo(),
+            missionSaveData = MissionManager.Instance.GetMissionList(),
+            puzzleSaveData = PuzzleManager.Instance.GetPuzzleData(),
+            weaponListData = WeaponManager.Instance.GetWeaponData()
+        };
+        
+        string json = JsonUtility.ToJson(saveData, true);
+        
+        // For WebGL, use PlayerPrefs or IndexedDB
+        #if UNITY_WEBGL
+            PlayerPrefs.SetString(SAVE_KEY, json);
+            PlayerPrefs.Save();
+        #else
+            saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
+            File.WriteAllText(saveLocation, json);
+        #endif
+        
+        NotifPopUp.Instance.ShowNotification("Save success.");
+    }
+
+    public void SaveGameByBed()
+    {
+        SaveData saveData = new SaveData
+        {
+            playerPosition = Player.Instance.transform.position,
+            inventorySaveData = UIInventoryPage.Instance.GetInventoryItems(),
+            hotBarSaveData = HotBarManager.Instance.GetHotBarItems(),
+            shopSaveData = ShopController.Instance.GetListItemInShop(),
+            itemInGroundSaveData = ItemInGroundController.Instance.GetListItemInGround(),
+            bossSaveData = BossSaveData.Instance.GetAllBossCurrentStatus(),
+            timeSaveData = TimeManager.Instance.GetTimeSkip(),
+            playerSaveData = PlayerStatus.Instance.GetPlayerInfo(),
+            missionSaveData = MissionManager.Instance.GetMissionList(),
+            puzzleSaveData = PuzzleManager.Instance.GetPuzzleData(),
+            weaponListData = WeaponManager.Instance.GetWeaponData()
+        };
+        
+        string json = JsonUtility.ToJson(saveData, true);
+        
+        #if UNITY_WEBGL
+            PlayerPrefs.SetString(SAVE_KEY, json);
+            PlayerPrefs.Save();
+        #else
+            saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
+            File.WriteAllText(saveLocation, json);
+        #endif
+        
+        NotifPopUp.Instance.ShowNotification("Save success.");
+    }
+
+    public void LoadSave()
+    {
+        string json = "";
+        
+        #if UNITY_WEBGL
+            if (PlayerPrefs.HasKey(SAVE_KEY))
+            {
+                json = PlayerPrefs.GetString(SAVE_KEY);
+            }
+            else
+            {
+                return;
+            }
+        #else
+            saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
+            if(File.Exists(saveLocation))
+            {
+                json = File.ReadAllText(saveLocation);
+            }
+            else
+            {
+                return;
+            }
+        #endif
+        
+        SaveData saveData = JsonUtility.FromJson<SaveData>(json);
+        Player.Instance.transform.position = saveData.playerPosition;
+        UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
+        HotBarManager.Instance.SetHotBarItems(saveData.hotBarSaveData);
+        ShopController.Instance.SetListItemInShop(saveData.shopSaveData);
+        TimeManager.Instance.SetTime(saveData.timeSaveData);
+        ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
+        BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
+        PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
+        MissionManager.Instance.SetMissionList(saveData.missionSaveData);    
+        PuzzleManager.Instance.SetPuzzleData(saveData.puzzleSaveData);
+        WeaponManager.Instance.SetWeaponData(saveData.weaponListData);   
+        SoundControl.Instance.InGameMusicPlay(); 
+        UIMouseAndPriority.Instance.canOpenUI = true;  
+    }
+
+    public void LoadNewGame()
+    {
+        string defaultNewGameJson = @"{
+        ""playerPosition"": { ""x"": -26.4, ""y"": 6.7, ""z"": 0.0 },
+        ""inventorySaveData"": [],
+        ""hotBarSaveData"": [],
+        ""shopSaveData"": [
+            { ""itemID"": ""HPFruit_05"", ""itemLeftNumber"": 5 },
+            { ""itemID"": ""HPFruit_06"", ""itemLeftNumber"": 5 },
+            { ""itemID"": ""HPFruit_07"", ""itemLeftNumber"": 5 },
+            { ""itemID"": ""HPPotion_03"", ""itemLeftNumber"": 5 },
+            { ""itemID"": ""HPPotion_02"", ""itemLeftNumber"": 5 }
+        ],
+        ""itemInGroundSaveData"": [
+            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -15.3, ""y"": 3.2, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -23.05, ""y"": -2.18, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -22.03, ""y"": -2.16, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPFruit_01"", ""itemPos"": { ""x"": -3.53, ""y"": -8.92, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPPotion_03"", ""itemPos"": { ""x"": -2.29, ""y"": -8.72, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""HPPotion_01"", ""itemPos"": { ""x"": -23.83, ""y"": -1.7, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""WP_04"", ""itemPos"": { ""x"": 145.9, ""y"": 0.3, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""WP_01"", ""itemPos"": { ""x"": -13.88, ""y"": 88.34, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false },
+            { ""itemID"": ""Stuff_Note_01"", ""itemPos"": { ""x"": 44.97, ""y"": -4.55, ""z"": 0.0 }, ""itemQuantity"": 1, ""isCollect"": false }
+        ],
+        ""bossSaveData"": [
+            { ""bossID"": ""B_01"", ""isDead"": ""false"", ""bossPos"": { ""x"": -14.79, ""y"": 69.27, ""z"": 0.0 }},
+            { ""bossID"": ""B_03"", ""isDead"": ""false"", ""bossPos"": { ""x"": 118, ""y"": 4.4, ""z"": 0.0 }}
+        ],
+        ""timeSaveData"": { ""minData"": 0.0, ""hourData"": 0.0, ""dateData"": 0 },
+        ""playerSaveData"": {
+            ""playerLevelData"": 1,
+            ""availablePointData"": 3,
+            ""playerCurrentDamageData"": 5.0,
+            ""playerBulletData"": 4,
+            ""playerCoinData"": 50,
+            ""maxExpData"": 40.0,
+            ""currentExpData"": 0.0,
+            ""maxHealthData"": 200.0,
+            ""currentHealthData"": 200.0,
+            ""currentWeaponID"": ""WP_03""
+        },
+        ""missionSaveData"": {
+            ""missionList"": [
+                {
+                    ""currentAmount"": 0,
+                    ""isFinish"": false,
+                    ""missionID"": ""MS01""
+                },
+                {
+                    ""currentAmount"": 0,
+                    ""isFinish"": false,
+                    ""missionID"": ""MS02""
+                },
+                {
+                    ""currentAmount"": 0,
+                    ""isFinish"": false,
+                    ""missionID"": ""MS03""
+                }
+            ],
+            ""currentMissionID"": """"
+        },
+        ""puzzleSaveData"": [
+            { ""puzzleID"": ""Puzzle_01"", ""puzzleSolve"": false }
+        ],
+        ""weaponListData"": [
+            { ""weaponID"": ""WP_01"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 2.0 },
+            { ""weaponID"": ""WP_02"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 2.0 },
+            { ""weaponID"": ""WP_03"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 75, ""weaponDamage"": 2.0 },
+            { ""weaponID"": ""WP_04"", ""weaponLevel"": 1, ""materialNeedToUpgrade"": 50, ""weaponDamage"": 2.0 }
+        ]
+        }";
+        
+        #if UNITY_WEBGL
+            PlayerPrefs.SetString(SAVE_KEY, defaultNewGameJson);
+            PlayerPrefs.Save();
+        #else
+            newGameSaveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
+            File.WriteAllText(newGameSaveLocation, defaultNewGameJson);
+        #endif
+        
+        SaveData saveData = JsonUtility.FromJson<SaveData>(defaultNewGameJson);    
+        Player.Instance.transform.position = saveData.playerPosition;
+        UIInventoryPage.Instance.SetInventoryItems(saveData.inventorySaveData);
+        HotBarManager.Instance.SetHotBarItems(saveData.hotBarSaveData);
+        ShopController.Instance.SetListItemInShop(saveData.shopSaveData);
+        TimeManager.Instance.SetTime(saveData.timeSaveData);
+        ItemInGroundController.Instance.SetItemInGround(saveData.itemInGroundSaveData);
+        BossSaveData.Instance.SetBossCurrentStatus(saveData.bossSaveData);
+        PlayerStatus.Instance.SetPlayerInfo(saveData.playerSaveData);
+        MissionManager.Instance.SetMissionList(saveData.missionSaveData);
+        PuzzleManager.Instance.SetPuzzleData(saveData.puzzleSaveData);   
+        WeaponManager.Instance.SetWeaponData(saveData.weaponListData);   
+        UIMouseAndPriority.Instance.canOpenUI = true; 
+        SoundControl.Instance.InGameMusicPlay();
+    } */
 }

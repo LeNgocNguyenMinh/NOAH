@@ -77,14 +77,15 @@ public class PauseMenu : MonoBehaviour
             pauseImage.sprite = pauseSprite;
             resumeButtonImage.sprite = resumeSprite;
         }
-        pauseMenuPanel.gameObject.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        pauseMenuPanel.DOKill();
         pauseMenuPanel.DOAnchorPos(visiblePosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true);
     }
     //Resume button function, if player dead then respawn if player choose continue
     public void PauseMenuPanelOff()
     {
+        pauseMenuPanel.DOKill();
         pauseMenuPanel.DOAnchorPos(hiddenPosition, moveDuration).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             if(isOver)
@@ -93,14 +94,12 @@ public class PauseMenu : MonoBehaviour
                 isOver = false;
             }
             isPaused = false;
-            pauseMenuPanel.gameObject.SetActive(false);
             Time.timeScale = 1f;
         });
     }
     private void MainMenuAskPanelShow()
     {
         otherPanel.SetActive(false);
-        mainMenuAskPanel.gameObject.SetActive(true);
         mainMenuAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
     }
     private void MainMenuAskPanelOff()
@@ -108,13 +107,11 @@ public class PauseMenu : MonoBehaviour
         mainMenuAskPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             otherPanel.SetActive(true);
-            mainMenuAskPanel.gameObject.SetActive(false);
         }); 
     }
     private void QuitAskPanelShow()
     {
         otherPanel.SetActive(false);
-        quitAskPanel.gameObject.SetActive(true);
         quitAskPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
     }
     private void QuitAskPanelOff()
@@ -122,13 +119,11 @@ public class PauseMenu : MonoBehaviour
         quitAskPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             otherPanel.SetActive(true);
-            quitAskPanel.gameObject.SetActive(false);
         }); 
     }
     private void SettingPanelShow()
     {
         otherPanel.SetActive(false);
-        settingPanel.gameObject.SetActive(true);
         settingBtnFunction.ActiveGameSettingPanel();
         settingPanel.DOScaleX(1f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true);
     }
@@ -137,7 +132,6 @@ public class PauseMenu : MonoBehaviour
         settingPanel.DOScaleX(0f, 0.5f).SetEase(Ease.OutQuad).SetUpdate(true).OnComplete(() =>
         {
             otherPanel.SetActive(true);
-            settingPanel.gameObject.SetActive(false);
         });
     }
     public void MoveToMainMenu()
