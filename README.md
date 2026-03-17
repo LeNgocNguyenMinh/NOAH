@@ -1,18 +1,30 @@
-# itch.io
-Check this link for best gameplay and details.
+#
+## <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/d410e124-7abd-4b13-8ed9-306fea916b22" /> itch.io
 <p align="center">
-  https://lengocnguyenminh.itch.io/noah
+  <b>
+    Check this link for best gameplay and details.
+  </b><br>
+  <i>
+    <a href="https://lengocnguyenminh.itch.io/noah">
+      [https://lengocnguyenminh.itch.io/bluexsky](https://lengocnguyenminh.itch.io/noah)
+    </a>
+  </i>
+
+#
+## <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/5a57ee43-ffaf-43dc-9ff0-3540c079745a" /> Demo On Youtube (click image below)
+<p align="center">
+  <a href="https://youtu.be/a9o4cCMHIQw">
+    <img src="https://github.com/user-attachments/assets/4fb5ed65-5590-48ca-8504-0581be63c902" />
+  </a>
 </p>
 
-# Check Game Demo On Youtube
-[![IMAGE ALT TEXT HERE](https://github.com/user-attachments/assets/e9633cf2-332d-4b45-898f-c93466f0f8b8)](https://youtu.be/a9o4cCMHIQw)
-
-# NOAH
-Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collect all 5 stones to revive the god HAON - the god of protection!!!
+#
+## <img width="63" height="50" alt="image" src="https://github.com/user-attachments/assets/96b150e1-2e5e-4b7a-a620-eb5989c966c6" /> NOAH
 <p align="center">
-  <img width="705" height="400" alt="image" src="https://github.com/user-attachments/assets/a1ba6f23-f4a0-4493-b5e6-4c0f5f9ab8ff" />
+  <i>
+    "Welcome to the journey, adventurer!!! Cross the roads, kill the monsters, collect all 5 stones to revive the god HAON - the god of protection!!!"
+  </i>
 </p>
-
 
 # Let see some image in Game
 <p align="center">
